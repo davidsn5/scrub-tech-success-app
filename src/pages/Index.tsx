@@ -16,17 +16,17 @@ const Index = () => {
   const [correctAnswers, setCorrectAnswers] = useState(180);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-pink-50 to-sky-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-100">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white via-violet-50 to-pink-50 shadow-sm border-b border-violet-100">
+      <div className="bg-gradient-to-r from-white via-slate-50 to-blue-50 shadow-sm border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-violet-400 to-pink-400 p-2 rounded-lg shadow-lg">
+              <div className="bg-gradient-to-br from-slate-500 to-blue-500 p-2 rounded-lg shadow-lg">
                 <BookOpen className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">SurgTech Study</h1>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent">SurgTech Study</h1>
                 <p className="text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
               </div>
             </div>
@@ -47,9 +47,9 @@ const Index = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <Card className="p-6 bg-gradient-to-br from-white via-sky-50 to-sky-100 backdrop-blur-sm border-sky-200 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white via-cyan-50 to-cyan-100 backdrop-blur-sm border-cyan-200 shadow-lg">
             <div className="flex items-center space-x-3">
-              <Brain className="h-8 w-8 text-sky-500" />
+              <Brain className="h-8 w-8 text-cyan-500" />
               <div>
                 <p className="text-2xl font-bold text-gray-900">{totalQuestions}</p>
                 <p className="text-sm text-gray-600">Questions Attempted</p>
@@ -74,9 +74,9 @@ const Index = () => {
               </div>
             </div>
           </Card>
-          <Card className="p-6 bg-gradient-to-br from-white via-violet-50 to-violet-100 backdrop-blur-sm border-violet-200 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white via-slate-50 to-slate-100 backdrop-blur-sm border-slate-200 shadow-lg">
             <div className="flex items-center space-x-3">
-              <BookOpen className="h-8 w-8 text-violet-500" />
+              <BookOpen className="h-8 w-8 text-slate-500" />
               <div>
                 <p className="text-2xl font-bold text-gray-900">8</p>
                 <p className="text-sm text-gray-600">Study Categories</p>
@@ -94,18 +94,18 @@ const Index = () => {
         </div>
 
         {/* Main Study Interface */}
-        <Card className="bg-gradient-to-br from-white via-violet-50 to-pink-50 backdrop-blur-sm border-violet-200 shadow-xl">
+        <Card className="bg-gradient-to-br from-white via-slate-50 to-blue-50 backdrop-blur-sm border-slate-200 shadow-xl">
           <Tabs defaultValue="flashcards" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-violet-100 to-pink-100">
-              <TabsTrigger value="flashcards" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-violet-400 data-[state=active]:to-pink-400 data-[state=active]:text-white">
+            <TabsList className="grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
+              <TabsTrigger value="flashcards" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
                 <BookOpen className="h-4 w-4" />
                 <span>Flashcards</span>
               </TabsTrigger>
-              <TabsTrigger value="quiz" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-violet-400 data-[state=active]:to-pink-400 data-[state=active]:text-white">
+              <TabsTrigger value="quiz" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
                 <Brain className="h-4 w-4" />
                 <span>Practice Quiz</span>
               </TabsTrigger>
-              <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-violet-400 data-[state=active]:to-pink-400 data-[state=active]:text-white">
+              <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
                 <Trophy className="h-4 w-4" />
                 <span>Progress</span>
               </TabsTrigger>
