@@ -18,14 +18,14 @@ interface CategorySelectorProps {
 }
 
 const categories = [
-  { id: 'anatomy', name: 'Anatomy & Physiology', icon: Heart, color: 'from-rose-400 to-pink-500' },
-  { id: 'instruments', name: 'Surgical Instruments', icon: Scissors, color: 'from-blue-400 to-cyan-500' },
-  { id: 'procedures', name: 'Surgical Procedures', icon: Activity, color: 'from-green-400 to-emerald-500' },
-  { id: 'sterile', name: 'Sterile Technique', icon: Shield, color: 'from-purple-400 to-violet-500' },
-  { id: 'patient-care', name: 'Patient Care', icon: Users, color: 'from-orange-400 to-amber-500' },
-  { id: 'pharmacology', name: 'Pharmacology', icon: Zap, color: 'from-yellow-400 to-orange-500' },
-  { id: 'pathology', name: 'Pathology', icon: Brain, color: 'from-pink-400 to-rose-500' },
-  { id: 'technology', name: 'Surgical Technology', icon: Stethoscope, color: 'from-teal-400 to-cyan-500' }
+  { id: 'anatomy', name: 'Anatomy & Physiology', icon: Heart, iconColor: 'text-rose-500', bgColor: 'bg-rose-100' },
+  { id: 'instruments', name: 'Surgical Instruments', icon: Scissors, iconColor: 'text-blue-500', bgColor: 'bg-blue-100' },
+  { id: 'procedures', name: 'Surgical Procedures', icon: Activity, iconColor: 'text-green-500', bgColor: 'bg-green-100' },
+  { id: 'sterile', name: 'Sterile Technique', icon: Shield, iconColor: 'text-purple-500', bgColor: 'bg-purple-100' },
+  { id: 'patient-care', name: 'Patient Care', icon: Users, iconColor: 'text-orange-500', bgColor: 'bg-orange-100' },
+  { id: 'pharmacology', name: 'Pharmacology', icon: Zap, iconColor: 'text-yellow-500', bgColor: 'bg-yellow-100' },
+  { id: 'pathology', name: 'Pathology', icon: Brain, iconColor: 'text-pink-500', bgColor: 'bg-pink-100' },
+  { id: 'technology', name: 'Surgical Technology', icon: Stethoscope, iconColor: 'text-teal-500', bgColor: 'bg-teal-100' }
 ];
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({ 
@@ -52,12 +52,12 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
               <div className={`p-2 rounded-lg ${
                 selectedCategory === category.id 
                   ? 'bg-white/20 backdrop-blur-sm' 
-                  : `bg-gradient-to-br ${category.color}`
+                  : category.bgColor
               }`}>
                 <Icon className={`h-5 w-5 ${
                   selectedCategory === category.id 
                     ? 'text-white' 
-                    : 'text-white'
+                    : category.iconColor
                 }`} />
               </div>
               <span className="text-xs font-medium text-center leading-tight">
