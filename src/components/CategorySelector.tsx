@@ -18,14 +18,14 @@ interface CategorySelectorProps {
 }
 
 const categories = [
-  { id: 'anatomy', name: 'Anatomy & Physiology', icon: Heart, iconColor: 'text-rose-500', bgColor: 'bg-rose-100' },
-  { id: 'instruments', name: 'Surgical Instruments', icon: Scissors, iconColor: 'text-blue-500', bgColor: 'bg-blue-100' },
-  { id: 'procedures', name: 'Surgical Procedures', icon: Activity, iconColor: 'text-green-500', bgColor: 'bg-green-100' },
-  { id: 'sterile', name: 'Sterile Technique', icon: Shield, iconColor: 'text-purple-500', bgColor: 'bg-purple-100' },
-  { id: 'patient-care', name: 'Patient Care', icon: Users, iconColor: 'text-orange-500', bgColor: 'bg-orange-100' },
-  { id: 'pharmacology', name: 'Pharmacology', icon: Zap, iconColor: 'text-yellow-500', bgColor: 'bg-yellow-100' },
-  { id: 'pathology', name: 'Pathology', icon: Brain, iconColor: 'text-pink-500', bgColor: 'bg-pink-100' },
-  { id: 'technology', name: 'Surgical Technology', icon: Stethoscope, iconColor: 'text-teal-500', bgColor: 'bg-teal-100' }
+  { id: 'anatomy', name: 'Anatomy & Physiology', icon: Heart, iconColor: 'text-rose-400', bgColor: 'bg-rose-50' },
+  { id: 'instruments', name: 'Surgical Instruments', icon: Scissors, iconColor: 'text-sky-400', bgColor: 'bg-sky-50' },
+  { id: 'procedures', name: 'Surgical Procedures', icon: Activity, iconColor: 'text-emerald-400', bgColor: 'bg-emerald-50' },
+  { id: 'sterile', name: 'Sterile Technique', icon: Shield, iconColor: 'text-violet-400', bgColor: 'bg-violet-50' },
+  { id: 'patient-care', name: 'Patient Care', icon: Users, iconColor: 'text-amber-400', bgColor: 'bg-amber-50' },
+  { id: 'pharmacology', name: 'Pharmacology', icon: Zap, iconColor: 'text-lime-400', bgColor: 'bg-lime-50' },
+  { id: 'pathology', name: 'Pathology', icon: Brain, iconColor: 'text-pink-400', bgColor: 'bg-pink-50' },
+  { id: 'technology', name: 'Surgical Technology', icon: Stethoscope, iconColor: 'text-teal-400', bgColor: 'bg-teal-50' }
 ];
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({ 
@@ -34,7 +34,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
 }) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-xl font-semibold bg-gradient-to-r from-teal-600 to-orange-600 bg-clip-text text-transparent">Study Categories</h2>
+      <h2 className="text-xl font-semibold bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">Study Categories</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {categories.map((category) => {
           const Icon = category.icon;
@@ -44,8 +44,8 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
               variant={selectedCategory === category.id ? "default" : "outline"}
               className={`p-4 h-auto flex flex-col items-center space-y-2 transition-all duration-300 border-2 ${
                 selectedCategory === category.id 
-                  ? 'bg-gradient-to-br from-teal-500 to-orange-500 hover:from-teal-600 hover:to-orange-600 border-transparent shadow-lg' 
-                  : 'hover:bg-gradient-to-br hover:from-white hover:to-orange-50 border-orange-200 hover:border-teal-300 hover:shadow-md'
+                  ? 'bg-gradient-to-br from-violet-300 to-pink-300 hover:from-violet-400 hover:to-pink-400 border-transparent shadow-lg' 
+                  : 'hover:bg-gradient-to-br hover:from-white hover:to-violet-50 border-violet-200 hover:border-pink-300 hover:shadow-md'
               }`}
               onClick={() => onCategoryChange(category.id)}
             >
