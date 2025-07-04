@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -13,6 +12,128 @@ interface QuizModeProps {
 }
 
 const quizData = {
+  microbiology: [
+    {
+      question: "Which of the following microorganisms is classified as a prokaryote?",
+      options: ["Fungi", "Algae", "Bacteria", "Protozoa"],
+      correct: 2,
+      explanation: "Bacteria are prokaryotes because they lack a membrane-bound nucleus and organelles."
+    },
+    {
+      question: "The term 'asepsis' refers to:",
+      options: ["The destruction of all microbial life", "The presence of disease-causing organisms", "The absence of disease-causing organisms", "A method of sterilization"],
+      correct: 2,
+      explanation: "Asepsis specifically means the absence of disease-causing microorganisms, not all microorganisms."
+    },
+    {
+      question: "The powerhouse of the cell is the:",
+      options: ["Nucleus", "Ribosome", "Golgi apparatus", "Mitochondrion"],
+      correct: 3,
+      explanation: "Mitochondria are called the powerhouse because they produce ATP, the cell's main energy currency."
+    },
+    {
+      question: "Which structure provides motility to certain bacteria?",
+      options: ["Pili", "Flagella", "Capsule", "Cell wall"],
+      correct: 1,
+      explanation: "Flagella are whip-like structures that enable bacterial movement through liquid environments."
+    },
+    {
+      question: "True or False: Viruses are considered living organisms because they can reproduce independently.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Viruses cannot reproduce independently; they require a host cell to replicate."
+    },
+    {
+      question: "Which term describes a relationship where one organism benefits and the other is harmed?",
+      options: ["Mutualism", "Commensalism", "Parasitism", "Synergism"],
+      correct: 2,
+      explanation: "Parasitism is defined as a relationship where the parasite benefits while the host is harmed."
+    },
+    {
+      question: "Fill in the blank: _________ is the process by which microorganisms reproduce asexually by splitting into two identical cells.",
+      options: ["Binary fission", "Mitosis", "Meiosis", "Budding"],
+      correct: 0,
+      explanation: "Binary fission is the primary method of asexual reproduction in bacteria."
+    },
+    {
+      question: "Which of the following is NOT a portal of entry for microorganisms?",
+      options: ["Intact skin", "Respiratory tract", "Gastrointestinal tract", "Genitourinary tract"],
+      correct: 0,
+      explanation: "Intact skin serves as a barrier to prevent microbial entry, while broken skin can be a portal of entry."
+    },
+    {
+      question: "The bacterium Clostridium tetani causes disease by producing:",
+      options: ["Endotoxins", "Neurotoxins", "Spores", "Capsules"],
+      correct: 1,
+      explanation: "C. tetani produces neurotoxins that cause the muscle spasms characteristic of tetanus."
+    },
+    {
+      question: "Which microbial form is most resistant to destruction?",
+      options: ["Vegetative bacteria", "Fungi", "Spores", "Viruses"],
+      correct: 2,
+      explanation: "Bacterial spores are extremely resistant to heat, chemicals, and radiation."
+    },
+    {
+      question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+      options: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+      correct: 1,
+      explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+    },
+    {
+      question: "The semipermeable membrane within cells is called the:",
+      options: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+      correct: 1,
+      explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+    },
+    {
+      question: "Clostridium perfringens is known to cause:",
+      options: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+      correct: 2,
+      explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+    },
+    {
+      question: "Which immunity is passed from mother to fetus through the placenta?",
+      options: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+      correct: 3,
+      explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+    },
+    {
+      question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+      options: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+      correct: 2,
+      explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+    },
+    {
+      question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+      options: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+      correct: 0,
+      explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+    },
+    {
+      question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+      options: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+      correct: 2,
+      explanation: "S. aureus is one of the most common causes of surgical site infections."
+    },
+    {
+      question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+      options: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+      correct: 1,
+      explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+    },
+    {
+      question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+    },
+    {
+      question: "Which of the following is used to test the effectiveness of steam sterilization?",
+      options: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+      correct: 2,
+      explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+    }
+  ],
   anatomy: [
     {
       question: "Which bone is commonly called the 'collarbone'?",
