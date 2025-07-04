@@ -1,9 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, XCircle, Clock, Award } from 'lucide-react';
+import { CheckCircle, XCircle, Clock, Award, Shuffle } from 'lucide-react';
 
 interface QuizModeProps {
   category: string;
@@ -198,11 +199,13 @@ const QuizMode: React.FC<QuizModeProps> = ({
   const [timeLeft, setTimeLeft] = useState(30);
   const [isActive, setIsActive] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof quizData[keyof typeof quizData]>([]);
+  const [isShuffled, setIsShuffled] = useState(false);
 
-  const questions = quizData[category] || [];
-  const currentQuestion = questions[currentQuestionIndex];
+  const originalQuestions = quizData[category] || [];
 
   useEffect(() => {
+    setShuffledQuestions(originalQuestions);
     setCurrentQuestionIndex(0);
     setScore(0);
     setQuizCompleted(false);
@@ -210,7 +213,33 @@ const QuizMode: React.FC<QuizModeProps> = ({
     setSelectedAnswer(null);
     setTimeLeft(30);
     setIsActive(false);
-  }, [category]);
+    setIsShuffled(false);
+  }, [category, originalQuestions]);
+
+  const questions = isShuffled ? shuffledQuestions : originalQuestions;
+  const currentQuestion = questions[currentQuestionIndex];
+
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  const handleShuffle = () => {
+    const shuffled = shuffleArray(originalQuestions);
+    setShuffledQuestions(shuffled);
+    setIsShuffled(true);
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setQuizCompleted(false);
+    setShowResult(false);
+    setSelectedAnswer(null);
+    setTimeLeft(30);
+    setIsActive(false);
+  };
 
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
@@ -293,9 +322,15 @@ const QuizMode: React.FC<QuizModeProps> = ({
           <p className="text-4xl font-bold text-blue-600">{percentage}%</p>
           <p className="text-gray-600">You scored {score} out of {questions.length} questions</p>
         </div>
-        <Button onClick={resetQuiz} className="bg-blue-600 hover:bg-blue-700">
-          Take Quiz Again
-        </Button>
+        <div className="flex justify-center space-x-3">
+          <Button onClick={resetQuiz} className="bg-blue-600 hover:bg-blue-700">
+            Take Quiz Again
+          </Button>
+          <Button onClick={handleShuffle} variant="outline" className="flex items-center space-x-2">
+            <Shuffle className="h-4 w-4" />
+            <span>Shuffle & Restart</span>
+          </Button>
+        </div>
       </div>
     );
   }
@@ -312,12 +347,29 @@ const QuizMode: React.FC<QuizModeProps> = ({
           <Badge variant="outline" className="capitalize">
             {category.replace('-', ' ')}
           </Badge>
+          {isShuffled && (
+            <Badge variant="outline" className="bg-orange-50 text-orange-700">
+              Shuffled
+            </Badge>
+          )}
         </div>
-        <div className="flex items-center space-x-2">
-          <Clock className="h-4 w-4 text-gray-500" />
-          <span className={`font-mono ${timeLeft <= 10 ? 'text-red-600' : 'text-gray-700'}`}>
-            {timeLeft}s
-          </span>
+        <div className="flex items-center space-x-4">
+          <Button 
+            onClick={handleShuffle} 
+            variant="outline" 
+            size="sm"
+            className="flex items-center space-x-2"
+            disabled={isActive}
+          >
+            <Shuffle className="h-4 w-4" />
+            <span>Shuffle</span>
+          </Button>
+          <div className="flex items-center space-x-2">
+            <Clock className="h-4 w-4 text-gray-500" />
+            <span className={`font-mono ${timeLeft <= 10 ? 'text-red-600' : 'text-gray-700'}`}>
+              {timeLeft}s
+            </span>
+          </div>
         </div>
       </div>
 
