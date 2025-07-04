@@ -2,21 +2,54 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BookOpen, Brain, Trophy, Target } from 'lucide-react';
-import Flashcards from '@/components/Flashcards';
-import QuizMode from '@/components/QuizMode';
-import StudyProgress from '@/components/StudyProgress';
-import CategorySelector from '@/components/CategorySelector';
+import { BookOpen, Brain, Trophy, Target, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const [selectedCategory, setSelectedCategory] = useState('anatomy');
   const [studyStreak, setStudyStreak] = useState(7);
   const [totalQuestions, setTotalQuestions] = useState(245);
   const [correctAnswers, setCorrectAnswers] = useState(180);
 
+  const sections = [
+    {
+      title: "Study Center",
+      description: "Interactive flashcards and practice quizzes across all surgical technologist topics",
+      icon: BookOpen,
+      color: "from-blue-500 to-indigo-500",
+      bgColor: "from-blue-50 to-indigo-50",
+      link: "/study"
+    },
+    {
+      title: "Practice Tests",
+      description: "Full-length mock exams to prepare for your certification",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-50 to-pink-50",
+      link: "/practice-tests",
+      comingSoon: true
+    },
+    {
+      title: "Progress Tracking",
+      description: "Monitor your learning progress and identify areas for improvement",
+      icon: Trophy,
+      color: "from-emerald-500 to-teal-500",
+      bgColor: "from-emerald-50 to-teal-50",
+      link: "/progress",
+      comingSoon: true
+    },
+    {
+      title: "Reference Materials",
+      description: "Quick access to important surgical terminology and procedures",
+      icon: Target,
+      color: "from-amber-500 to-orange-500",
+      bgColor: "from-amber-50 to-orange-50",
+      link: "/reference",
+      comingSoon: true
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
       <div className="bg-gradient-to-r from-white via-slate-50 to-blue-50 shadow-sm border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 py-6">
@@ -47,16 +80,16 @@ const Index = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <Card className="p-6 bg-gradient-to-br from-white via-cyan-50 to-cyan-100 backdrop-blur-sm border-cyan-200 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white via-blue-50 to-indigo-100 backdrop-blur-sm border-blue-200 shadow-lg">
             <div className="flex items-center space-x-3">
-              <Brain className="h-8 w-8 text-cyan-500" />
+              <Brain className="h-8 w-8 text-blue-500" />
               <div>
                 <p className="text-2xl font-bold text-gray-900">{totalQuestions}</p>
                 <p className="text-sm text-gray-600">Questions Attempted</p>
               </div>
             </div>
           </Card>
-          <Card className="p-6 bg-gradient-to-br from-white via-emerald-50 to-emerald-100 backdrop-blur-sm border-emerald-200 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white via-emerald-50 to-teal-100 backdrop-blur-sm border-emerald-200 shadow-lg">
             <div className="flex items-center space-x-3">
               <Target className="h-8 w-8 text-emerald-500" />
               <div>
@@ -65,7 +98,7 @@ const Index = () => {
               </div>
             </div>
           </Card>
-          <Card className="p-6 bg-gradient-to-br from-white via-amber-50 to-amber-100 backdrop-blur-sm border-amber-200 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white via-amber-50 to-orange-100 backdrop-blur-sm border-amber-200 shadow-lg">
             <div className="flex items-center space-x-3">
               <Trophy className="h-8 w-8 text-amber-500" />
               <div>
@@ -74,69 +107,59 @@ const Index = () => {
               </div>
             </div>
           </Card>
-          <Card className="p-6 bg-gradient-to-br from-white via-slate-50 to-slate-100 backdrop-blur-sm border-slate-200 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white via-slate-50 to-blue-100 backdrop-blur-sm border-slate-200 shadow-lg">
             <div className="flex items-center space-x-3">
               <BookOpen className="h-8 w-8 text-slate-500" />
               <div>
-                <p className="text-2xl font-bold text-gray-900">8</p>
+                <p className="text-2xl font-bold text-gray-900">12</p>
                 <p className="text-sm text-gray-600">Study Categories</p>
               </div>
             </div>
           </Card>
         </div>
 
-        {/* Category Selector */}
-        <div className="mb-8">
-          <CategorySelector 
-            selectedCategory={selectedCategory}
-            onCategoryChange={setSelectedCategory}
-          />
-        </div>
+        {/* Main Sections */}
+        <div className="space-y-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              Study Sections
+            </h2>
+            <p className="text-gray-600">Choose a section to begin your surgical technologist exam preparation</p>
+          </div>
 
-        {/* Main Study Interface */}
-        <Card className="bg-gradient-to-br from-white via-slate-50 to-blue-50 backdrop-blur-sm border-slate-200 shadow-xl">
-          <Tabs defaultValue="flashcards" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
-              <TabsTrigger value="flashcards" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                <BookOpen className="h-4 w-4" />
-                <span>Flashcards</span>
-              </TabsTrigger>
-              <TabsTrigger value="quiz" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                <Brain className="h-4 w-4" />
-                <span>Practice Quiz</span>
-              </TabsTrigger>
-              <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                <Trophy className="h-4 w-4" />
-                <span>Progress</span>
-              </TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="flashcards" className="p-6">
-              <Flashcards 
-                category={selectedCategory}
-                onAnswerCorrect={() => setCorrectAnswers(prev => prev + 1)}
-                onQuestionAttempt={() => setTotalQuestions(prev => prev + 1)}
-              />
-            </TabsContent>
-            
-            <TabsContent value="quiz" className="p-6">
-              <QuizMode 
-                category={selectedCategory}
-                onAnswerCorrect={() => setCorrectAnswers(prev => prev + 1)}
-                onQuestionAttempt={() => setTotalQuestions(prev => prev + 1)}
-              />
-            </TabsContent>
-            
-            <TabsContent value="progress" className="p-6">
-              <StudyProgress 
-                streak={studyStreak}
-                totalQuestions={totalQuestions}
-                correctAnswers={correctAnswers}
-                category={selectedCategory}
-              />
-            </TabsContent>
-          </Tabs>
-        </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {sections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <Card key={index} className={`p-6 bg-gradient-to-br ${section.bgColor} backdrop-blur-sm border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className={`p-2 rounded-lg bg-gradient-to-r ${section.color}`}>
+                          <Icon className="h-6 w-6 text-white" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
+                      </div>
+                      <p className="text-gray-600 mb-4">{section.description}</p>
+                      {section.comingSoon ? (
+                        <Button disabled variant="outline" className="w-full">
+                          Coming Soon
+                        </Button>
+                      ) : (
+                        <Link to={section.link}>
+                          <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity`}>
+                            <span>Start Learning</span>
+                            <ArrowRight className="h-4 w-4 ml-2" />
+                          </Button>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
