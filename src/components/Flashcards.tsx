@@ -729,6 +729,213 @@ const flashcardData = {
       answer: "An area free from all microorganisms",
       explanation: "The sterile field is a designated area that has been prepared to be free of all microorganisms and must be maintained throughout surgery."
     }
+  ],
+  asepsis: [
+    {
+      question: "What is Asepsis?",
+      answer: "Absence of pathogenic microorganisms or disease",
+      explanation: "Asepsis is the fundamental principle of preventing infection by eliminating disease-causing microorganisms."
+    },
+    {
+      question: "What are the Principles of asepsis?",
+      answer: "Use of sterile techniques to prevent contamination of the sterile field and prevent surgical site infection (SSI)",
+      explanation: "These principles guide all sterile procedures to maintain a safe surgical environment."
+    },
+    {
+      question: "What does Bactericidal mean?",
+      answer: "Substance that kills bacteria",
+      explanation: "Bactericidal agents destroy bacterial cells completely, providing definitive elimination."
+    },
+    {
+      question: "What does Bacteriostatic mean?",
+      answer: "Substance that inhibits growth and reproduction of bacteria",
+      explanation: "Bacteriostatic agents prevent bacterial multiplication without necessarily killing the organisms."
+    },
+    {
+      question: "What is Bioburden?",
+      answer: "The total number of microbes or organic debris on an object at a given time; gross contamination",
+      explanation: "Understanding bioburden helps determine appropriate cleaning and sterilization protocols."
+    },
+    {
+      question: "What is Concurrent decontamination?",
+      answer: "Cleaning/decontaminating a spill during surgery rather than waiting until after",
+      explanation: "This immediate response prevents contamination from spreading during the procedure."
+    },
+    {
+      question: "What is Contamination?",
+      answer: "Presence of pathogenic microorganisms; violation of sterility",
+      explanation: "Any breach of sterile technique that introduces harmful microorganisms to a sterile area."
+    },
+    {
+      question: "What is Cross-contamination?",
+      answer: "Contamination transferred from one source to another (person, object, or environment)",
+      explanation: "This can occur through direct contact, airborne particles, or contaminated instruments."
+    },
+    {
+      question: "What is Decontamination?",
+      answer: "Reduction of microbial population on a surface/item to a sub-pathogenic level",
+      explanation: "The first step in processing reusable medical devices before sterilization."
+    },
+    {
+      question: "What is a Disinfectant?",
+      answer: "Chemical agent that kills most microbes (not spores); used on inanimate objects",
+      explanation: "Disinfectants are used on surfaces and equipment but are not safe for living tissue."
+    },
+    {
+      question: "What is Event-related sterility?",
+      answer: "Sterility determined by handling & storage rather than by time",
+      explanation: "Modern sterility assurance focuses on package integrity rather than arbitrary time limits."
+    },
+    {
+      question: "What is a Fomite?",
+      answer: "Inanimate object that carries microorganisms (e.g., dust, lint, surfaces)",
+      explanation: "Fomites are non-living carriers that can transmit infections between people."
+    },
+    {
+      question: "What is a Fungicide?",
+      answer: "Agent that kills fungi",
+      explanation: "Specifically designed to eliminate fungal organisms and spores."
+    },
+    {
+      question: "What is HAI (Healthcare–Associated Infection)?",
+      answer: "Infection acquired in a healthcare setting (formerly 'nosocomial infection')",
+      explanation: "These infections occur during medical care and are a major patient safety concern."
+    },
+    {
+      question: "What is Indigenous microflora?",
+      answer: "Microbes normally residing in body tissues or systems (normal/resident flora)",
+      explanation: "These beneficial microorganisms are part of the body's natural defense system."
+    },
+    {
+      question: "What is Infection?",
+      answer: "Invasion of tissue by pathogens that reproduce & cause disease",
+      explanation: "Occurs when harmful microorganisms successfully establish themselves in host tissue."
+    },
+    {
+      question: "What is Package integrity?",
+      answer: "Intact wrapping of a sterile package, free of punctures, tears, moisture, or broken seals",
+      explanation: "Compromised packaging can allow microorganisms to contaminate sterile contents."
+    },
+    {
+      question: "What is a Pathogen?",
+      answer: "Any microbe capable of causing disease",
+      explanation: "Pathogens can be bacteria, viruses, fungi, or parasites that harm their host."
+    },
+    {
+      question: "What is Sepsis?",
+      answer: "Serious, systemic infection with fever, caused by pathogenic microorganisms",
+      explanation: "A life-threatening condition requiring immediate medical intervention."
+    },
+    {
+      question: "What is a Spore?",
+      answer: "Resistant bacterial form that can survive adverse conditions and become active later",
+      explanation: "Spores are extremely difficult to destroy and require special sterilization methods."
+    },
+    {
+      question: "What is a Sporicide?",
+      answer: "Agent that kills bacterial spores",
+      explanation: "The highest level of antimicrobial activity, destroying the most resistant microbial forms."
+    },
+    {
+      question: "What does Sterile mean?",
+      answer: "Free of all living microorganisms, including spores",
+      explanation: "The complete absence of all forms of microbial life, including the most resistant spores."
+    },
+    {
+      question: "What is the Sterile field?",
+      answer: "Area around the patient kept free of microorganisms through sterile technique",
+      explanation: "This protected area is maintained throughout surgery to prevent infection."
+    },
+    {
+      question: "What is Sterile technique?",
+      answer: "Practices to create & maintain sterility, and correct contamination if it occurs",
+      explanation: "A set of procedures designed to prevent microbial contamination during invasive procedures."
+    },
+    {
+      question: "What is Strike-through contamination?",
+      answer: "Contamination from fluid passing through a sterile barrier by wicking",
+      explanation: "Moisture can carry microorganisms through protective barriers, compromising sterility."
+    },
+    {
+      question: "What does Surgically clean mean?",
+      answer: "Mechanically cleaned & disinfected (but not sterile); describes skin after scrub",
+      explanation: "The highest level of cleanliness achievable on living tissue, but not completely sterile."
+    },
+    {
+      question: "What is Terminal disinfection?",
+      answer: "High-level disinfection to make items safe for handling before sterilization",
+      explanation: "Prepares contaminated items for safe processing by eliminating most pathogens."
+    },
+    {
+      question: "What is Terminal sterilization?",
+      answer: "Washer-sterilizer process that sterilizes unwrapped items for later use",
+      explanation: "Final sterilization step that renders items completely free of microorganisms."
+    },
+    {
+      question: "What is Transient microflora?",
+      answer: "Microbes picked up on skin; removed with handwashing",
+      explanation: "Temporary surface contamination that can be eliminated through proper hygiene."
+    },
+    {
+      question: "What is a Vector?",
+      answer: "Living carrier that transmits disease",
+      explanation: "Organisms like mosquitoes or ticks that carry pathogens from one host to another."
+    },
+    {
+      question: "What is a Virucide?",
+      answer: "Agent that destroys viruses",
+      explanation: "Specifically formulated to inactivate viral particles and prevent viral transmission."
+    },
+    {
+      question: "What is Wicking action (Capillary action)?",
+      answer: "Absorption and spread of fluid through porous material (causing strike-through)",
+      explanation: "The mechanism by which moisture compromises sterile barriers through absorption."
+    },
+    {
+      question: "What is Disinfection?",
+      answer: "Destroys most microorganisms on inanimate surfaces (not all)",
+      explanation: "Intermediate level of microbial control that eliminates most but not all pathogens."
+    },
+    {
+      question: "What is Antisepsis?",
+      answer: "Destroys most microorganisms on living tissue (skin)",
+      explanation: "The process of reducing microbial load on living tissue to prevent infection."
+    },
+    {
+      question: "What is an Antiseptic?",
+      answer: "Chemical agent used for surgical hand scrub or skin prep",
+      explanation: "Safe for use on living tissue to reduce microbial contamination before surgery."
+    },
+    {
+      question: "What are Critical items?",
+      answer: "Used in invasive procedures or vascular access; must be sterilized (e.g., instruments, catheters)",
+      explanation: "These items penetrate sterile tissue and require the highest level of processing."
+    },
+    {
+      question: "What are Semi-critical items?",
+      answer: "Contact mucous membranes or non-intact skin; high-level disinfection preferred (e.g., laryngoscopes)",
+      explanation: "These items require high-level disinfection or sterilization due to infection risk."
+    },
+    {
+      question: "What are Non-critical items?",
+      answer: "Contact intact skin only; intermediate- or low-level disinfection (e.g., BP cuffs)",
+      explanation: "Lowest risk items that only contact intact skin and require minimal processing."
+    },
+    {
+      question: "What is High-level disinfection?",
+      answer: "Kills all microorganisms except spores and prions",
+      explanation: "The highest level of disinfection achievable without sterilization."
+    },
+    {
+      question: "What is Intermediate-level disinfection?",
+      answer: "Kills most microorganisms, including M. tuberculosis and HBV, but not spores",
+      explanation: "Effective against vegetative bacteria, viruses, and fungi but not spores."
+    },
+    {
+      question: "What is Low-level disinfection?",
+      answer: "Kills some bacteria, fungi, and viruses, but not spores or M. tuberculosis",
+      explanation: "Basic level of disinfection suitable for non-critical items and environmental surfaces."
+    }
   ]
 };
 

@@ -425,6 +425,98 @@ const quizData = {
       correct: 1,
       explanation: "Steam sterilization requires a minimum temperature of 270°F (132°C) for effective sterilization."
     }
+  ],
+  asepsis: [
+    {
+      question: "What is the best definition of asepsis?",
+      options: ["Complete destruction of all microorganisms including spores", "Use of chemical agents on skin", "Absence of pathogenic microorganisms or disease", "Reduction of bioburden to a safe level"],
+      correct: 2,
+      explanation: "Asepsis refers to the absence of disease-causing microorganisms, which is the foundation of infection prevention."
+    },
+    {
+      question: "Which term refers to killing bacteria?",
+      options: ["Bacteriostatic", "Bactericidal", "Fungicide", "Virucide"],
+      correct: 1,
+      explanation: "Bactericidal agents kill bacteria, while bacteriostatic agents only inhibit their growth."
+    },
+    {
+      question: "What is the purpose of the sterile field?",
+      options: ["A semi-clean area to prepare instruments", "An area kept free of all microorganisms", "An area cleaned with intermediate-level disinfectant", "A place where non-critical items are stored"],
+      correct: 1,
+      explanation: "The sterile field is maintained completely free of microorganisms to prevent surgical site infections."
+    },
+    {
+      question: "The presence of pathogenic microorganisms on a sterile item is called:",
+      options: ["Contamination", "Decontamination", "Sterilization", "Package integrity"],
+      correct: 0,
+      explanation: "Contamination is any violation of sterility through the presence of pathogenic microorganisms."
+    },
+    {
+      question: "A resistant form of bacteria that can survive harsh conditions is known as a:",
+      options: ["Pathogen", "Spore", "Fomite", "Vector"],
+      correct: 1,
+      explanation: "Bacterial spores are highly resistant forms that can survive extreme conditions and require special sterilization methods."
+    },
+    {
+      question: "What is the term for microorganisms normally residing in or on the body?",
+      options: ["Indigenous microflora", "Transient microflora", "Pathogens", "Bioburden"],
+      correct: 0,
+      explanation: "Indigenous (or resident) microflora are the beneficial microorganisms that naturally live in and on the human body."
+    },
+    {
+      question: "The term strike-through contamination refers to:",
+      options: ["Microbes transferred by a living carrier", "Contamination from a dirty instrument", "Fluid passing through a sterile barrier by wicking", "Introduction of indigenous microflora into a wound"],
+      correct: 2,
+      explanation: "Strike-through occurs when moisture carries microorganisms through sterile barriers via capillary action."
+    },
+    {
+      question: "Which term describes an object that harbors microorganisms and can transfer them?",
+      options: ["Fomite", "Vector", "Pathogen", "Sepsis"],
+      correct: 0,
+      explanation: "A fomite is any inanimate object that can carry and transmit microorganisms between people."
+    },
+    {
+      question: "Which process destroys all microorganisms, including spores?",
+      options: ["Disinfection", "Sterilization", "Antisepsis", "Decontamination"],
+      correct: 1,
+      explanation: "Sterilization is the only process that eliminates all forms of microbial life, including resistant spores."
+    },
+    {
+      question: "What is the classification for items that contact mucous membranes or non-intact skin?",
+      options: ["Critical", "Non-critical", "Semi-critical", "Sterile"],
+      correct: 2,
+      explanation: "Semi-critical items require high-level disinfection or sterilization due to their contact with mucous membranes."
+    },
+    {
+      question: "Which of the following destroys microorganisms on living tissue?",
+      options: ["Sterilant", "Antiseptic", "Disinfectant", "Sporicide"],
+      correct: 1,
+      explanation: "Antiseptics are safe for use on living tissue to reduce microbial contamination."
+    },
+    {
+      question: "What is the best definition of event-related sterility?",
+      options: ["Package is sterile as long as it is unopened and intact", "Package is sterile for 30 days after sterilization", "Package is sterile until bioburden exceeds safe levels", "Package is sterile only while within the sterile field"],
+      correct: 0,
+      explanation: "Event-related sterility means items remain sterile based on package integrity rather than time limits."
+    },
+    {
+      question: "Which level of disinfection kills most microbes, including M. tuberculosis, but not spores?",
+      options: ["High-level", "Intermediate-level", "Low-level", "Sterilization"],
+      correct: 1,
+      explanation: "Intermediate-level disinfection is effective against most pathogens including TB but cannot kill spores."
+    },
+    {
+      question: "What is the purpose of terminal sterilization?",
+      options: ["Clean the surgical field after a case", "Prepare unwrapped items for immediate use", "Render unwrapped items safe for handling before packaging", "Decontaminate living tissue before surgery"],
+      correct: 2,
+      explanation: "Terminal sterilization makes contaminated items safe to handle during the cleaning and packaging process."
+    },
+    {
+      question: "Microorganisms picked up from the environment and easily removed with washing are called:",
+      options: ["Resident flora", "Pathogens", "Transient microflora", "Indigenous microflora"],
+      correct: 2,
+      explanation: "Transient microflora are temporary surface contaminants that can be removed through proper handwashing."
+    }
   ]
 };
 
