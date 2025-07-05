@@ -907,6 +907,11 @@ const flashcardData = {
       explanation: "Safe for use on living tissue to reduce microbial contamination before surgery."
     },
     {
+      question: "What is Sterilization?",
+      answer: "Destruction of all microorganisms (including spores) on inanimate surfaces",
+      explanation: "The highest level of microbial control, eliminating all forms of life."
+    },
+    {
       question: "What are Critical items?",
       answer: "Used in invasive procedures or vascular access; must be sterilized (e.g., instruments, catheters)",
       explanation: "These items penetrate sterile tissue and require the highest level of processing."
@@ -936,7 +941,8 @@ const flashcardData = {
       answer: "Kills some bacteria, fungi, and viruses, but not spores or M. tuberculosis",
       explanation: "Basic level of disinfection suitable for non-critical items and environmental surfaces."
     }
-  ]
+  ],
+  sterilization: []
 };
 
 const Flashcards: React.FC<FlashcardsProps> = ({ 

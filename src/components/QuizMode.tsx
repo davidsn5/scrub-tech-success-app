@@ -431,7 +431,7 @@ const quizData = {
       question: "What is the best definition of asepsis?",
       options: ["Complete destruction of all microorganisms including spores", "Use of chemical agents on skin", "Absence of pathogenic microorganisms or disease", "Reduction of bioburden to a safe level"],
       correct: 2,
-      explanation: "Asepsis refers to the absence of disease-causing microorganisms, which is the foundation of infection prevention."
+      explanation: "Asepsis is the fundamental principle of preventing infection by eliminating disease-causing microorganisms."
     },
     {
       question: "Which term refers to killing bacteria?",
