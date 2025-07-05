@@ -517,7 +517,8 @@ const quizData = {
       correct: 2,
       explanation: "Transient microflora are temporary surface contaminants that can be removed through proper handwashing."
     }
-  ]
+  ],
+  sterilization: []
 };
 
 const QuizMode: React.FC<QuizModeProps> = ({ 
