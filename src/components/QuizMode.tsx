@@ -12,6 +12,248 @@ interface QuizModeProps {
 }
 
 const quizData = {
+  'medical-terminology': [
+    {
+      question: "What does the term adduction mean?",
+      options: ["Away from the midline of the body", "Toward the midline of the body", "Upper, above", "Near the point of attachment to the body"],
+      correct: 1,
+      explanation: "Adduction refers to movement that brings a body part toward the center line of the body."
+    },
+    {
+      question: "The position lying on the back is called:",
+      options: ["Prone", "Supine", "Lateral", "Anterior"],
+      correct: 1,
+      explanation: "Supine position is lying on the back with face upward."
+    },
+    {
+      question: "Which of the following means pertaining to the skull?",
+      options: ["Cephal/o", "Crani/o", "Encephal/o", "Mening/o"],
+      correct: 1,
+      explanation: "Crani/o is the combining form that refers to the skull."
+    },
+    {
+      question: "The excision of a breast lesion with surrounding tissue is called:",
+      options: ["Lumpectomy", "Radical mastectomy", "Wire localization", "Modified radical mastectomy"],
+      correct: 0,
+      explanation: "A lumpectomy is the surgical removal of a tumor and small amount of surrounding healthy tissue."
+    },
+    {
+      question: "Which suffix means vomiting?",
+      options: ["-emesis", "-megaly", "-rhea", "-cele"],
+      correct: 0,
+      explanation: "The suffix -emesis refers to vomiting or the act of bringing up stomach contents."
+    },
+    {
+      question: "Which of these refers to joint?",
+      options: ["Chondr/o", "Oste/o", "Arthr/o", "Tend/o"],
+      correct: 2,
+      explanation: "Arthr/o is the combining form that refers to joints."
+    },
+    {
+      question: "The term tend/o refers to:",
+      options: ["Cartilage", "Tendon", "Hand bones", "Joint"],
+      correct: 1,
+      explanation: "Tend/o is the combining form that refers to tendons."
+    },
+    {
+      question: "What does retin/o refer to?",
+      options: ["Eyelid", "Iris", "Tear duct", "Retina"],
+      correct: 3,
+      explanation: "Retin/o is the combining form that refers to the retina of the eye."
+    },
+    {
+      question: "Which suffix means enlargement?",
+      options: ["-oma", "-megaly", "-pathy", "-cele"],
+      correct: 1,
+      explanation: "The suffix -megaly indicates abnormal enlargement of an organ or body part."
+    },
+    {
+      question: "Which of the following means pregnancy outside the uterus?",
+      options: ["Placenta previa", "Ectopic", "Abruptio placentae", "Atresia"],
+      correct: 1,
+      explanation: "An ectopic pregnancy occurs when a fertilized egg implants outside the uterus."
+    },
+    {
+      question: "What is the meaning of rectocele?",
+      options: ["Lack of normal body opening", "Bulging of an arterial wall", "Protrusion of the rectum into the vagina", "Condition caused by oxygen deficiency"],
+      correct: 2,
+      explanation: "A rectocele is a condition where the rectum protrudes into the vagina due to weakened tissue."
+    },
+    {
+      question: "Which of the following refers to abnormal passage between two structures?",
+      options: ["Fistula", "Fibroid", "Atresia", "Aneurysm"],
+      correct: 0,
+      explanation: "A fistula is an abnormal connection or passageway between two organs or structures."
+    },
+    {
+      question: "The removal of the fallopian tube is called:",
+      options: ["Oophorectomy", "Salpingectomy", "Hysterectomy", "Myomectomy"],
+      correct: 1,
+      explanation: "Salpingectomy is the surgical removal of one or both fallopian tubes."
+    },
+    {
+      question: "What is the bicuspid valve also called?",
+      options: ["Aneurysm", "Mitral valve", "Aortic valve", "Tricuspid valve"],
+      correct: 1,
+      explanation: "The bicuspid valve is also known as the mitral valve."
+    },
+    {
+      question: "Which of these is defined as resting heart rate below 60 bpm?",
+      options: ["Bradycardia", "Arrhythmia", "Tachycardia", "Cyanosis"],
+      correct: 0,
+      explanation: "Bradycardia is a condition where the heart rate is slower than normal (below 60 bpm)."
+    },
+    {
+      question: "The term cyanosis refers to:",
+      options: ["Lack of normal opening", "Irregular heartbeat", "Condition caused by oxygen deficiency", "Pain in a limb"],
+      correct: 2,
+      explanation: "Cyanosis is a bluish discoloration of the skin due to lack of oxygen in the blood."
+    },
+    {
+      question: "A clot of blood, air, or fat that moves through the vascular system is called:",
+      options: ["Thrombus", "Embolism", "Ischemia", "Claudication"],
+      correct: 1,
+      explanation: "An embolism is a blockage of a blood vessel by a clot or material that has traveled from elsewhere."
+    },
+    {
+      question: "The term ischemia refers to:",
+      options: ["Lack of normal opening", "Pain in a limb", "Abnormally low blood flow to tissues", "Irregular heartbeat"],
+      correct: 2,
+      explanation: "Ischemia occurs when blood flow to tissues is restricted, reducing oxygen delivery."
+    },
+    {
+      question: "The congenital defect that includes 4 cardiac abnormalities is called:",
+      options: ["Patent ductus arteriosus", "Aneurysm", "Tetralogy of Fallot", "Mitral valve prolapse"],
+      correct: 2,
+      explanation: "Tetralogy of Fallot is a complex heart defect involving four abnormalities that occur together."
+    },
+    {
+      question: "Which of the following means high blood pressure?",
+      options: ["Hypotension", "Cyanosis", "Arrhythmia", "Hypertension"],
+      correct: 3,
+      explanation: "Hypertension is a condition where blood pressure is persistently elevated."
+    },
+    {
+      question: "The bulging of an arterial wall is called:",
+      options: ["Aneurysm", "Embolism", "Fistula", "Atresia"],
+      correct: 0,
+      explanation: "An aneurysm is a weakened area in a blood vessel wall that balloons outward."
+    },
+    {
+      question: "The suffix -otomy means:",
+      options: ["Cutting into", "Surgical repair", "Fixation of", "Puncture to remove fluid"],
+      correct: 0,
+      explanation: "The suffix -otomy indicates a surgical incision or cutting into an organ or tissue."
+    },
+    {
+      question: "The suffix -plasty means:",
+      options: ["Fixation of", "Puncture to remove fluid", "Surgical repair", "Cutting into"],
+      correct: 2,
+      explanation: "The suffix -plasty indicates surgical repair or reconstruction."
+    },
+    {
+      question: "The suffix -centesis means:",
+      options: ["Cutting into", "Fixation of", "Surgical repair", "Puncture to remove fluid"],
+      correct: 3,
+      explanation: "The suffix -centesis indicates surgical puncture to remove fluid or gas."
+    },
+    {
+      question: "The term poly- means:",
+      options: ["High", "Many", "Low", "Enlarged"],
+      correct: 1,
+      explanation: "The prefix poly- means many, much, or multiple."
+    },
+    {
+      question: "Presence of air in the pleural cavity causing lung collapse is called:",
+      options: ["Pneumoperitoneum", "Pneumothorax", "Thoracocentesis", "Pneumonectomy"],
+      correct: 1,
+      explanation: "Pneumothorax occurs when air leaks into the space between the lung and chest wall."
+    },
+    {
+      question: "Temporary loss of breathing is called:",
+      options: ["Apnea", "Dyspnea", "Cyanosis", "Ischemia"],
+      correct: 0,
+      explanation: "Apnea is a temporary cessation of breathing, especially during sleep."
+    },
+    {
+      question: "Surgical puncture and drainage of the pleural cavity is called:",
+      options: ["Pneumonectomy", "Pneumothorax", "Thoracocentesis", "Apnea"],
+      correct: 2,
+      explanation: "Thoracocentesis involves inserting a needle into the chest to remove fluid or air."
+    },
+    {
+      question: "Surgical removal of the lung or a segment of the lung is called:",
+      options: ["Pneumonectomy", "Pneumoperitoneum", "Apnea", "Thoracocentesis"],
+      correct: 0,
+      explanation: "Pneumonectomy is the surgical removal of part or all of a lung."
+    },
+    {
+      question: "What does encephal/o mean?",
+      options: ["Pertaining to neurological tissue", "Pertaining to the brain", "Pertaining to speech", "Pertaining to pain"],
+      correct: 1,
+      explanation: "Encephal/o is a combining form relating to the brain."
+    },
+    {
+      question: "What does mening/o mean?",
+      options: ["Pertaining to pain", "Pertaining to the brain", "Pertaining to covering of brain & spinal cord", "Pertaining to speech"],
+      correct: 2,
+      explanation: "Mening/o refers to the meninges, the protective membranes covering the brain and spinal cord."
+    },
+    {
+      question: "What does the suffix -algia mean?",
+      options: ["Pertaining to pain", "Pertaining to speech", "Pertaining to neurological tissue", "Pertaining to brain"],
+      correct: 0,
+      explanation: "The suffix -algia indicates pain in a specified part of the body."
+    },
+    {
+      question: "What does the suffix -phasia mean?",
+      options: ["Pertaining to pain", "Pertaining to neurological tissue", "Pertaining to speech", "Pertaining to brain"],
+      correct: 2,
+      explanation: "The suffix -phasia relates to speech or the ability to speak."
+    },
+    {
+      question: "The combining form gli/o means:",
+      options: ["Pertaining to pain", "Pertaining to neurological tissue", "Pertaining to speech", "Pertaining to the skull"],
+      correct: 1,
+      explanation: "Gli/o refers to the supportive tissue (glial cells) in the nervous system."
+    },
+    {
+      question: "The term arthr/o refers to:",
+      options: ["Joint", "Bone", "Cartilage", "Tendon"],
+      correct: 0,
+      explanation: "Arthr/o is the combining form that refers to joints."
+    },
+    {
+      question: "Which of the following means cartilage?",
+      options: ["Oste/o", "Arthr/o", "Chondr/o", "Tend/o"],
+      correct: 2,
+      explanation: "Chondr/o is the combining form relating to cartilage tissue."
+    },
+    {
+      question: "What does oste/o mean?",
+      options: ["Bone", "Cartilage", "Joint", "Hand bones"],
+      correct: 0,
+      explanation: "Oste/o is the combining form relating to bone tissue."
+    },
+    {
+      question: "What does metacarp/o mean?",
+      options: ["Tendon", "Hand bones", "Joint", "Bone"],
+      correct: 1,
+      explanation: "Metacarp/o refers to the metacarpal bones in the hand."
+    },
+    {
+      question: "The term dacry/o refers to:",
+      options: ["Tear duct", "Iris", "Eyelid", "Cornea"],
+      correct: 0,
+      explanation: "Dacry/o relates to tears or the tear ducts of the eye."
+    },
+    {
+      question: "Which of the following means cornea?",
+      options: ["Kerat/o", "Irid/o", "Blephar/o", "Retin/o"],
+      correct: 0,
+      explanation: "Kerat/o refers to the cornea, the clear front layer of the eye."
+    }
+  ],
   microbiology: [
     {
       question: "Which of the following microorganisms is classified as a prokaryote?",
@@ -92,12 +334,6 @@ const quizData = {
       explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
     },
     {
-      question: "Clostridium perfringens is known to cause:",
-      options: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
-      correct: 2,
-      explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
-    },
-    {
       question: "Which immunity is passed from mother to fetus through the placenta?",
       options: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
       correct: 3,
@@ -122,36 +358,6 @@ const quizData = {
       explanation: "S. aureus is one of the most common causes of surgical site infections."
     },
     {
-      question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
-      options: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
-      correct: 1,
-      explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
-    },
-    {
-      question: "Which of the following is used to test the effectiveness of steam sterilization?",
-      options: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
-      correct: 2,
-      explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
-    },
-    {
-      question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
-      options: ["Prion", "Viroid", "Virus", "Bacteriophage"],
-      correct: 0,
-      explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
-    },
-    {
-      question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
-      options: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
-      correct: 2,
-      explanation: "S. aureus is one of the most common causes of surgical site infections."
-    },
-    {
-      question: "Which term describes an agent that inhibits bacterial growth without killing them?",
-      options: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
-      correct: 2,
-      explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
-    },
-    {
       question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
       options: ["Bacteria", "Protozoa", "Fungi", "Algae"],
       correct: 1,
@@ -168,210 +374,6 @@ const quizData = {
       options: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
       correct: 2,
       explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
-    },
-    {
-      question: "Which immunity is passed from mother to fetus through the placenta?",
-      options: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
-      correct: 3,
-      explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
-    },
-    {
-      question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
-      options: ["True", "False"],
-      correct: 1,
-      explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
-    },
-    {
-      question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
-      options: ["Bacteria", "Protozoa", "Fungi", "Algae"],
-      correct: 1,
-      explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
-    },
-    {
-      question: "The semipermeable membrane within cells is called the:",
-      options: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
-      correct: 1,
-      explanation: "The cytoplasmic membrane controls what enters and exits the cell."
-    },
-    {
-      question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
-      options: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
-      correct: 1,
-      explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
-    },
-    {
-      question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
-      options: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
-      correct: 2,
-      explanation: "S. aureus is one of the most common causes of surgical site infections."
-    },
-    {
-      question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
-      options: ["True", "False"],
-      correct: 1,
-      explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
-    },
-    {
-      question: "Which immunity is passed from mother to fetus through the placenta?",
-      options: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
-      correct: 3,
-      explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
-    },
-    {
-      question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
-      options: ["Bacteria", "Protozoa", "Fungi", "Algae"],
-      correct: 1,
-      explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
-    },
-    {
-      question: "Which term describes an agent that inhibits bacterial growth without killing them?",
-      options: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
-      correct: 2,
-      explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
-    },
-    {
-      question: "The semipermeable membrane within cells is called the:",
-      options: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
-      correct: 1,
-      explanation: "The cytoplasmic membrane controls what enters and exits the cell."
-    },
-    {
-      question: "Clostridium perfringens is known to cause:",
-      options: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
-      correct: 2,
-      explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
-    },
-    {
-      question: "Which of the following is used to test the effectiveness of steam sterilization?",
-      options: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
-      correct: 2,
-      explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
-    },
-    {
-      question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
-      options: ["Prion", "Viroid", "Virus", "Bacteriophage"],
-      correct: 0,
-      explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
-    },
-    {
-      question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
-      options: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
-      correct: 1,
-      explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
-    },
-    {
-      question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
-      options: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
-      correct: 2,
-      explanation: "S. aureus is one of the most common causes of surgical site infections."
-    },
-    {
-      question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
-      options: ["True", "False"],
-      correct: 1,
-      explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
-    },
-    {
-      question: "Which immunity is passed from mother to fetus through the placenta?",
-      options: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
-      correct: 3,
-      explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
-    },
-    {
-      question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
-      options: ["Bacteria", "Protozoa", "Fungi", "Algae"],
-      correct: 1,
-      explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
-    },
-    {
-      question: "Which term describes an agent that inhibits bacterial growth without killing them?",
-      options: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
-      correct: 2,
-      explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
-    },
-    {
-      question: "The semipermeable membrane within cells is called the:",
-      options: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
-      correct: 1,
-      explanation: "The cytoplasmic membrane controls what enters and exits the cell."
-    },
-    {
-      question: "Clostridium perfringens is known to cause:",
-      options: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
-      correct: 2,
-      explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
-    },
-    {
-      question: "Which of the following is used to test the effectiveness of steam sterilization?",
-      options: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
-      correct: 2,
-      explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
-    },
-    {
-      question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
-      options: ["Prion", "Viroid", "Virus", "Bacteriophage"],
-      correct: 0,
-      explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
-    },
-    {
-      question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
-      options: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
-      correct: 1,
-      explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
-    },
-    {
-      question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
-      options: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
-      correct: 2,
-      explanation: "S. aureus is one of the most common causes of surgical site infections."
-    },
-    {
-      question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
-      options: ["True", "False"],
-      correct: 1,
-      explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
-    },
-    {
-      question: "Which immunity is passed from mother to fetus through the placenta?",
-      options: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
-      correct: 3,
-      explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
-    },
-    {
-      question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
-      options: ["Bacteria", "Protozoa", "Fungi", "Algae"],
-      correct: 1,
-      explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
-    },
-    {
-      question: "Which term describes an agent that inhibits bacterial growth without killing them?",
-      options: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
-      correct: 2,
-      explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
-    },
-    {
-      question: "The semipermeable membrane within cells is called the:",
-      options: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
-      correct: 1,
-      explanation: "The cytoplasmic membrane controls what enters and exits the cell."
-    },
-    {
-      question: "Clostridium perfringens is known to cause:",
-      options: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
-      correct: 2,
-      explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
-    },
-    {
-      question: "Which of the following is used to test the effectiveness of steam sterilization?",
-      options: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
-      correct: 2,
-      explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
-    },
-    {
-      question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
-      options: ["Prion", "Viroid", "Virus", "Bacteriophage"],
-      correct: 0,
-      explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
     }
   ],
   anatomy: [
