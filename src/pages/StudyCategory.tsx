@@ -18,13 +18,17 @@ const StudyCategory = () => {
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
       'medical-terminology': 'Medical Terminology',
+      'surgical-technologist-role': 'Role of Surgical Technologist',
+      'legal-ethics-risk': 'Legal Concepts, Ethics, Risk Management',
+      'surgical-patient': 'Surgical Patient',
+      'physical-environment-safety': 'Physical Environment and Safety',
+      'technological-science': 'Technological Science Concepts',
       'microbiology': 'Microbiology',
-      'anatomy': 'Anatomy & Physiology',
-      'instruments': 'Surgical Instruments',
-      'procedures': 'Surgical Procedures',
-      'sterile': 'Sterile Technique',
-      'asepsis': 'Asepsis',
-      'sterilization': 'Sterilization'
+      'surgical-asepsis-sterility': 'Surgical Asepsis and Sterility',
+      'emergency-situations': 'Emergency Situations',
+      'pharmacology-anesthesia': 'Pharmacology and Anesthesia',
+      'instrumentation-equipment': 'Instrumentation Equipment and Supplies',
+      'hemostasis-wound-healing': 'Hemostasis Wound Healing and Closure'
     };
     return categoryNames[category || ''] || 'Unknown Category';
   };
