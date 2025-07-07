@@ -9,6 +9,7 @@ import Study from "./pages/Study";
 import StudyCategory from "./pages/StudyCategory";
 import IntroSurgicalTech from "./pages/IntroSurgicalTech";
 import PrinciplesPractice from "./pages/PrinciplesPractice";
+import MedicalTerminology from "./pages/MedicalTerminology";
 import FireQuiz from "./pages/FireQuiz";
 import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/study/:category" element={<StudyCategory />} />
           <Route path="/intro-surgical-tech" element={<IntroSurgicalTech />} />
           <Route path="/principles-practice" element={<PrinciplesPractice />} />
+          <Route path="/medical-terminology" element={<MedicalTerminology />} />
           <Route path="/fire-quiz" element={<FireQuiz />} />
           <Route path="/missed-questions" element={<MissedQuestions />} />
           <Route path="/exam-simulation" element={<ExamSimulation />} />
