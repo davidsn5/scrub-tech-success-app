@@ -50,7 +50,7 @@ const Index = () => {
       bgColor: "from-purple-50/90 to-purple-100/90",
       borderColor: "border-purple-200/60",
       link: "/medical-terminology",
-      questionCount: 0
+      questionCount: 40
     }
   ];
 
