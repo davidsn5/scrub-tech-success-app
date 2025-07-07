@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Study from "./pages/Study";
 import StudyCategory from "./pages/StudyCategory";
+import IntroSurgicalTech from "./pages/IntroSurgicalTech";
 import FireQuiz from "./pages/FireQuiz";
 import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/study" element={<Study />} />
           <Route path="/study/:category" element={<StudyCategory />} />
+          <Route path="/intro-surgical-tech" element={<IntroSurgicalTech />} />
           <Route path="/fire-quiz" element={<FireQuiz />} />
           <Route path="/missed-questions" element={<MissedQuestions />} />
           <Route path="/exam-simulation" element={<ExamSimulation />} />

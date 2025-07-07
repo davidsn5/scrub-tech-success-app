@@ -19,8 +19,8 @@ const Index = () => {
       color: "from-orange-500/80 to-orange-600/80",
       bgColor: "from-orange-50/90 to-orange-100/90",
       borderColor: "border-orange-200/60",
-      link: "/study/intro-surgical-tech",
-      questionCount: 0
+      link: "/intro-surgical-tech",
+      questionCount: 15
     },
     {
       title: "Principles and Practice of Surgical Technology",
