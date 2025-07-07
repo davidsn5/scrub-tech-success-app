@@ -29,8 +29,8 @@ const Index = () => {
       color: "from-teal-500/80 to-teal-600/80",
       bgColor: "from-teal-50/90 to-teal-100/90",
       borderColor: "border-teal-200/60",
-      link: "/study/principles-practice",
-      questionCount: 0
+      link: "/principles-practice",
+      questionCount: 100
     },
     {
       title: "Surgical Procedures",
