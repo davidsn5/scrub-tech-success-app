@@ -11,13 +11,14 @@ const MedicalTerminology = () => {
   const [missedQuestions, setMissedQuestions] = useState<any[]>([]);
 
   const handleMissedQuestion = (question: any) => {
-    setMissedQuestions(prev => {
-      const exists = prev.find(q => q.question === question.question);
-      if (!exists) {
-        return [...prev, question];
-      }
-      return prev;
-    });
+    // Store missed questions in localStorage for now
+    const missedQuestions = JSON.parse(localStorage.getItem('missedQuestions') || '[]');
+    const isAlreadyMissed = missedQuestions.some((q: any) => q.id === question.id);
+    
+    if (!isAlreadyMissed) {
+      missedQuestions.push({ ...question, category: 'Medical Terminology' });
+      localStorage.setItem('missedQuestions', JSON.stringify(missedQuestions));
+    }
   };
 
   return (
