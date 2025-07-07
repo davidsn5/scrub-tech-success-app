@@ -1,3 +1,4 @@
+
 export interface Question {
   id: number;
   question: string;
@@ -188,5 +189,523 @@ export const principlesPracticeQuestions: Question[] = [
     choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
     correctAnswer: 2,
     explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 27,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 28,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 29,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 30,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 31,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 32,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 33,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 34,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 35,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 36,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 37,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 38,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 39,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 40,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+  },
+  {
+    id: 41,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 42,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 43,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 44,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 45,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 46,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 47,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 48,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 49,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 50,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+  },
+  {
+    id: 51,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 52,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 53,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 54,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 55,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 56,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 57,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 58,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 59,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 60,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+  },
+  {
+    id: 61,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 62,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 63,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 64,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 65,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 66,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 67,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 68,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 69,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 70,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+  },
+  {
+    id: 71,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 72,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 73,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 74,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 75,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 76,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 77,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 78,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 79,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 80,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+  },
+  {
+    id: 81,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 82,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 83,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 84,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 85,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 86,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 87,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 88,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 89,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 90,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
+  },
+  {
+    id: 91,
+    question: "Which of the following is the correct term for an infection acquired in a healthcare setting?",
+    choices: ["Opportunistic infection", "Nosocomial infection", "Community-acquired infection", "Latent infection"],
+    correctAnswer: 1,
+    explanation: "Nosocomial infections are healthcare-associated infections acquired during medical care."
+  },
+  {
+    id: 92,
+    question: "Which microorganism is commonly associated with surgical site infections (SSI)?",
+    choices: ["Mycobacterium tuberculosis", "Clostridium difficile", "Staphylococcus aureus", "Treponema pallidum"],
+    correctAnswer: 2,
+    explanation: "S. aureus is one of the most common causes of surgical site infections."
+  },
+  {
+    id: 93,
+    question: "True or False: Gram-negative bacteria stain purple in a Gram stain.",
+    choices: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "False. Gram-negative bacteria stain red/pink because they don't retain the primary crystal violet stain."
+  },
+  {
+    id: 94,
+    question: "Which immunity is passed from mother to fetus through the placenta?",
+    choices: ["Artificial active", "Natural active", "Artificial passive", "Natural passive"],
+    correctAnswer: 3,
+    explanation: "Natural passive immunity occurs when maternal antibodies cross the placenta to protect the fetus."
+  },
+  {
+    id: 95,
+    question: "Fill in the blank: _________ are single-celled eukaryotes that often live in water and can cause disease.",
+    choices: ["Bacteria", "Protozoa", "Fungi", "Algae"],
+    correctAnswer: 1,
+    explanation: "Protozoa are single-celled eukaryotic organisms, some of which are pathogenic."
+  },
+  {
+    id: 96,
+    question: "Which term describes an agent that inhibits bacterial growth without killing them?",
+    choices: ["Bactericide", "Fungicide", "Bacteriostatic", "Virucide"],
+    correctAnswer: 2,
+    explanation: "Bacteriostatic agents stop bacterial growth and reproduction without necessarily killing the bacteria."
+  },
+  {
+    id: 97,
+    question: "The semipermeable membrane within cells is called the:",
+    choices: ["Cell wall", "Cytoplasmic membrane", "Nuclear envelope", "Endoplasmic reticulum"],
+    correctAnswer: 1,
+    explanation: "The cytoplasmic membrane controls what enters and exits the cell."
+  },
+  {
+    id: 98,
+    question: "Clostridium perfringens is known to cause:",
+    choices: ["Tetanus", "Tuberculosis", "Gas gangrene", "Food poisoning"],
+    correctAnswer: 2,
+    explanation: "C. perfringens produces gas and toxins that cause gas gangrene in wounds."
+  },
+  {
+    id: 99,
+    question: "Which of the following is used to test the effectiveness of steam sterilization?",
+    choices: ["Bacillus subtilis", "Mycobacterium tuberculosis", "Geobacillus stearothermophilus", "Staphylococcus aureus"],
+    correctAnswer: 2,
+    explanation: "Geobacillus stearothermophilus spores are highly heat-resistant and used as biological indicators for steam sterilization."
+  },
+  {
+    id: 100,
+    question: "What is the smallest infectious particle, neither viral nor bacterial, called?",
+    choices: ["Prion", "Viroid", "Virus", "Bacteriophage"],
+    correctAnswer: 0,
+    explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
   }
 ];
