@@ -153,7 +153,7 @@ export const technologicalScience: FlashcardItem[] = [
     explanation: "Precision medicine uses genetic and molecular information to optimize therapy."
   },
   {
-    query: "What is bioprinting?",
+    question: "What is bioprinting?",
     answer: "3D printing of living cells and biomaterials to create tissue constructs",
     explanation: "Bioprinting aims to create functional tissues and organs for transplantation."
   },
@@ -223,7 +223,7 @@ export const technologicalScience: FlashcardItem[] = [
     explanation: "OCT provides microscopic detail of tissue architecture in real-time."
   },
   {
-    query: "What is confocal microscopy?",
+    question: "What is confocal microscopy?",
     answer: "Advanced imaging technique providing high-resolution, three-dimensional tissue images",
     explanation: "Confocal microscopy enables detailed visualization of cellular structures."
   },
