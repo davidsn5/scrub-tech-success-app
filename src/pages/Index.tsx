@@ -33,16 +33,6 @@ const Index = () => {
       questionCount: 100
     },
     {
-      title: "Medical Terminology",
-      description: "Essential medical terms and vocabulary for surgical technology practice",
-      icon: FileText,
-      color: "from-purple-500/80 to-purple-600/80",
-      bgColor: "from-purple-50/90 to-purple-100/90",
-      borderColor: "border-purple-200/60",
-      link: "/medical-terminology",
-      questionCount: 0
-    },
-    {
       title: "Surgical Procedures",
       description: "Comprehensive coverage of various surgical procedures and techniques",
       icon: Target,
@@ -50,6 +40,16 @@ const Index = () => {
       bgColor: "from-blue-50/90 to-blue-100/90",
       borderColor: "border-blue-200/60",
       link: "/study/surgical-procedures",
+      questionCount: 0
+    },
+    {
+      title: "Medical Terminology",
+      description: "Essential medical terms and vocabulary for surgical technology practice",
+      icon: FileText,
+      color: "from-purple-500/80 to-purple-600/80",
+      bgColor: "from-purple-50/90 to-purple-100/90",
+      borderColor: "border-purple-200/60",
+      link: "/medical-terminology",
       questionCount: 0
     }
   ];
