@@ -677,60 +677,7 @@ const flashcardData = {
       explanation: "Prions are misfolded proteins that can cause other proteins to misfold, leading to neurodegenerative diseases."
     }
   ],
-  anatomy: [
-    {
-      question: "What is the largest organ in the human body?",
-      answer: "The skin",
-      explanation: "The skin covers the entire body and regulates temperature, protects internal organs, and prevents infection."
-    },
-    {
-      question: "Which chamber of the heart pumps blood to the lungs?",
-      answer: "Right ventricle",
-      explanation: "The right ventricle pumps deoxygenated blood through the pulmonary artery to the lungs for oxygenation."
-    },
-    {
-      question: "What are the three layers of the heart wall?",
-      answer: "Epicardium, Myocardium, Endocardium",
-      explanation: "From outer to inner: Epicardium (outer protective layer), Myocardium (muscle layer), Endocardium (inner lining)."
-    }
-  ],
-  instruments: [
-    {
-      question: "What is a Kelly forceps primarily used for?",
-      answer: "Clamping blood vessels and tissue",
-      explanation: "Kelly forceps are curved hemostatic clamps used to control bleeding by clamping blood vessels during surgery."
-    },
-    {
-      question: "What distinguishes a Mayo scissors from Metzenbaum scissors?",
-      answer: "Mayo scissors are heavier and used for cutting tough tissue, while Metzenbaum are lighter for delicate tissue",
-      explanation: "Mayo scissors have thick, strong blades for cutting fascia and heavy tissue. Metzenbaum scissors are more delicate for fine dissection."
-    }
-  ],
-  procedures: [
-    {
-      question: "What is the purpose of the 'time out' before surgery?",
-      answer: "To verify correct patient, procedure, and surgical site",
-      explanation: "The time out is a standardized safety protocol to prevent wrong-site, wrong-procedure, and wrong-patient surgery."
-    },
-    {
-      question: "What position is used for most abdominal surgeries?",
-      answer: "Supine position",
-      explanation: "The supine position (lying on back) provides the best access to the abdomen while maintaining patient safety and comfort."
-    }
-  ],
-  sterile: [
-    {
-      question: "How long should surgical hand scrub last?",
-      answer: "3-5 minutes for initial scrub",
-      explanation: "The initial surgical scrub should last 3-5 minutes to effectively remove transient and some resident bacteria from hands and arms."
-    },
-    {
-      question: "What is the sterile field?",
-      answer: "An area free from all microorganisms",
-      explanation: "The sterile field is a designated area that has been prepared to be free of all microorganisms and must be maintained throughout surgery."
-    }
-  ],
-  asepsis: [
+  'surgical-asepsis-sterility': [
     {
       question: "What is Asepsis?",
       answer: "Absence of pathogenic microorganisms or disease",
@@ -940,6 +887,59 @@ const flashcardData = {
       question: "What is Low-level disinfection?",
       answer: "Kills some bacteria, fungi, and viruses, but not spores or M. tuberculosis",
       explanation: "Basic level of disinfection suitable for non-critical items and environmental surfaces."
+    }
+  ],
+  anatomy: [
+    {
+      question: "What is the largest organ in the human body?",
+      answer: "The skin",
+      explanation: "The skin covers the entire body and regulates temperature, protects internal organs, and prevents infection."
+    },
+    {
+      question: "Which chamber of the heart pumps blood to the lungs?",
+      answer: "Right ventricle",
+      explanation: "The right ventricle pumps deoxygenated blood through the pulmonary artery to the lungs for oxygenation."
+    },
+    {
+      question: "What are the three layers of the heart wall?",
+      answer: "Epicardium, Myocardium, Endocardium",
+      explanation: "From outer to inner: Epicardium (outer protective layer), Myocardium (muscle layer), Endocardium (inner lining)."
+    }
+  ],
+  instruments: [
+    {
+      question: "What is a Kelly forceps primarily used for?",
+      answer: "Clamping blood vessels and tissue",
+      explanation: "Kelly forceps are curved hemostatic clamps used to control bleeding by clamping blood vessels during surgery."
+    },
+    {
+      question: "What distinguishes a Mayo scissors from Metzenbaum scissors?",
+      answer: "Mayo scissors are heavier and used for cutting tough tissue, while Metzenbaum are lighter for delicate tissue",
+      explanation: "Mayo scissors have thick, strong blades for cutting fascia and heavy tissue. Metzenbaum scissors are more delicate for fine dissection."
+    }
+  ],
+  procedures: [
+    {
+      question: "What is the purpose of the 'time out' before surgery?",
+      answer: "To verify correct patient, procedure, and surgical site",
+      explanation: "The time out is a standardized safety protocol to prevent wrong-site, wrong-procedure, and wrong-patient surgery."
+    },
+    {
+      question: "What position is used for most abdominal surgeries?",
+      answer: "Supine position",
+      explanation: "The supine position (lying on back) provides the best access to the abdomen while maintaining patient safety and comfort."
+    }
+  ],
+  sterile: [
+    {
+      question: "How long should surgical hand scrub last?",
+      answer: "3-5 minutes for initial scrub",
+      explanation: "The initial surgical scrub should last 3-5 minutes to effectively remove transient and some resident bacteria from hands and arms."
+    },
+    {
+      question: "What is the sterile field?",
+      answer: "An area free from all microorganisms",
+      explanation: "The sterile field is a designated area that has been prepared to be free of all microorganisms and must be maintained throughout surgery."
     }
   ],
   sterilization: []
