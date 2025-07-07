@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -31,6 +31,16 @@ const Index = () => {
       borderColor: "border-teal-200/60",
       link: "/principles-practice",
       questionCount: 100
+    },
+    {
+      title: "Medical Terminology",
+      description: "Essential medical terms and vocabulary for surgical technology practice",
+      icon: FileText,
+      color: "from-purple-500/80 to-purple-600/80",
+      bgColor: "from-purple-50/90 to-purple-100/90",
+      borderColor: "border-purple-200/60",
+      link: "/medical-terminology",
+      questionCount: 0
     },
     {
       title: "Surgical Procedures",
@@ -105,9 +115,9 @@ const Index = () => {
                 </div>
               </div>
             </Card>
-            <Card className="p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-red-100/70 backdrop-blur-sm border-red-200/50 shadow-lg">
+            <Card className="p-6 bg-gradient-to-br from-white/90 via-pink-50/80 to-pink-100/70 backdrop-blur-sm border-pink-200/50 shadow-lg">
               <div className="flex items-center space-x-3">
-                <RotateCcw className="h-8 w-8 text-red-600/90" />
+                <RotateCcw className="h-8 w-8 text-pink-600/90" />
                 <div>
                   <p className="text-2xl font-bold text-gray-900">{missedQuestions}</p>
                   <p className="text-sm text-gray-600">Missed Questions</p>
@@ -122,7 +132,7 @@ const Index = () => {
           <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-6">
             Study Categories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {sections.map((section, index) => {
               const Icon = section.icon;
               return (
@@ -132,9 +142,9 @@ const Index = () => {
                       <div className={`p-3 rounded-lg bg-gradient-to-r ${section.color}`}>
                         <Icon className="h-6 w-6 text-white" />
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900">{section.title}</h3>
                     </div>
-                    <p className="text-gray-600 mb-4 flex-grow">{section.description}</p>
+                    <p className="text-gray-600 mb-4 flex-grow text-sm">{section.description}</p>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-gray-500">{section.questionCount} Questions Available</span>
                     </div>
@@ -170,9 +180,9 @@ const Index = () => {
           </Card>
 
           {/* Missed Questions */}
-          <Card className="p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
+          <Card className="p-6 bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-lg">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/90 to-cyan-600/90">
                 <RotateCcw className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Missed Questions</h3>
@@ -182,7 +192,7 @@ const Index = () => {
               <span className="text-sm text-gray-500">{missedQuestions} questions to review</span>
             </div>
             <Link to="/missed-questions">
-              <Button className="w-full bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white">
+              <Button className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white">
                 <RotateCcw className="h-4 w-4 mr-2" />
                 Review Missed Questions
               </Button>
