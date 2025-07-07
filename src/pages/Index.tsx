@@ -53,12 +53,16 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-orange-500/90 to-teal-500/90 p-3 rounded-xl shadow-lg">
-                <BookOpen className="h-7 w-7 text-white" />
+              <div className="w-12 h-12 rounded-xl shadow-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/a97d37e9-2975-4012-992a-008ee35274c1.png" 
+                  alt="Surgical Tech Review Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600/90 to-teal-600/90 bg-clip-text text-transparent">
-                  SurgTech Study
+                  Surgical Tech Review and Study
                 </h1>
                 <p className="text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
               </div>
