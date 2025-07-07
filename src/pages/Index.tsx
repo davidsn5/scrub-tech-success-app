@@ -1,147 +1,226 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
-import { BookOpen, Brain, GraduationCap, Flame, ClipboardList, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const stats = [
-  { label: 'Flashcards', value: '250+', icon: BookOpen },
-  { label: 'Practice Questions', value: '500+', icon: ClipboardList },
-  { label: 'Exam Simulations', value: '3', icon: GraduationCap },
-  { label: 'Fire Quizzes', value: 'Endless', icon: Flame },
-];
-
-const features = [
-  {
-    title: 'Study Mode',
-    description: 'Explore flashcards and practice questions by category.',
-    href: '/study',
-    icon: BookOpen,
-  },
-  {
-    title: 'Exam Simulation',
-    description: 'Simulate the actual CST exam with timed questions.',
-    href: '/exam-simulation',
-    icon: GraduationCap,
-  },
-  {
-    title: 'Fire Quiz',
-    description: 'Test your knowledge with a rapid-fire quiz format.',
-    href: '/fire-quiz',
-    icon: Flame,
-  },
-  {
-    title: 'Missed Questions',
-    description: 'Review questions you\'ve missed in practice quizzes.',
-    href: '/missed-questions',
-    icon: ClipboardList,
-  },
-];
-
 const Index = () => {
+  const [totalQuestions, setTotalQuestions] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [missedQuestions, setMissedQuestions] = useState(12);
+  const [studyStreak, setStudyStreak] = useState(5);
+
+  const sections = [
+    {
+      title: "Intro to Surgical Technology",
+      description: "Fundamental concepts and foundational knowledge for surgical technologists",
+      icon: BookOpen,
+      color: "from-orange-500/80 to-orange-600/80",
+      bgColor: "from-orange-50/90 to-orange-100/90",
+      borderColor: "border-orange-200/60",
+      link: "/intro-surgical-tech",
+      questionCount: 15
+    },
+    {
+      title: "Principles and Practice of Surgical Technology",
+      description: "Core principles, techniques, and best practices in surgical technology",
+      icon: Brain,
+      color: "from-teal-500/80 to-teal-600/80",
+      bgColor: "from-teal-50/90 to-teal-100/90",
+      borderColor: "border-teal-200/60",
+      link: "/study/principles-practice",
+      questionCount: 0
+    },
+    {
+      title: "Surgical Procedures",
+      description: "Comprehensive coverage of various surgical procedures and techniques",
+      icon: Target,
+      color: "from-blue-500/80 to-blue-600/80",
+      bgColor: "from-blue-50/90 to-blue-100/90",
+      borderColor: "border-blue-200/60",
+      link: "/study/surgical-procedures",
+      questionCount: 0
+    }
+  ];
+
+  const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-orange-50/90 to-teal-100/85">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-orange-50/90 to-teal-50/85 shadow-sm border-b border-orange-200/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/lovable-uploads/a97d37e9-2975-4012-992a-008ee35274c1.png" 
-              alt="Logo" 
-              className="h-12 w-12 object-contain rounded-lg"
-            />
-            <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600/90 to-teal-600/90 bg-clip-text text-transparent">
-                Surgical Tech Review and Study
-              </h1>
-              <p className="text-gray-600">Master Your CST/CFA Certification</p>
+      <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 rounded-xl shadow-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/a97d37e9-2975-4012-992a-008ee35274c1.png" 
+                  alt="Surgical Tech Review Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600/90 to-teal-600/90 bg-clip-text text-transparent">
+                  Surgical Tech Review and Study
+                </h1>
+                <p className="text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          {stats.map((stat, index) => (
-            <Card key={index} className="p-6 bg-gradient-to-br from-white/80 via-orange-50/60 to-teal-50/60 backdrop-blur-sm border-orange-200/30 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* Progress Tracker */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-6">
+            Your Progress
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <Card className="p-6 bg-gradient-to-br from-white/90 via-green-50/80 to-emerald-100/70 backdrop-blur-sm border-green-200/50 shadow-lg">
               <div className="flex items-center space-x-3">
-                <div className="bg-gradient-to-br from-orange-500/80 to-teal-500/80 p-2 rounded-lg">
-                  <stat.icon className="h-5 w-5 text-white" />
-                </div>
+                <Target className="h-8 w-8 text-green-600/90" />
                 <div>
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                  <p className="text-sm text-gray-600">{stat.label}</p>
+                  <p className="text-2xl font-bold text-gray-900">{accuracy}%</p>
+                  <p className="text-sm text-gray-600">Accuracy Rate</p>
                 </div>
               </div>
             </Card>
-          ))}
-        </div>
-
-        {/* Main Navigation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {features.map((feature, index) => (
-            <Link key={index} to={feature.href}>
-              <Card className="group p-6 h-full bg-gradient-to-br from-white/80 via-orange-50/40 to-teal-50/40 backdrop-blur-sm border-orange-200/30 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105">
-                <div className="flex flex-col h-full">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="bg-gradient-to-br from-orange-500/80 to-teal-500/80 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 flex-grow">{feature.description}</p>
+            <Card className="p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
+              <div className="flex items-center space-x-3">
+                <Brain className="h-8 w-8 text-purple-600/90" />
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{totalQuestions}</p>
+                  <p className="text-sm text-gray-600">Questions Completed</p>
                 </div>
-              </Card>
-            </Link>
-          ))}
+              </div>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-white/90 via-orange-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
+              <div className="flex items-center space-x-3">
+                <TrendingUp className="h-8 w-8 text-orange-600/90" />
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{studyStreak}</p>
+                  <p className="text-sm text-gray-600">Day Streak</p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-red-100/70 backdrop-blur-sm border-red-200/50 shadow-lg">
+              <div className="flex items-center space-x-3">
+                <RotateCcw className="h-8 w-8 text-red-600/90" />
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{missedQuestions}</p>
+                  <p className="text-sm text-gray-600">Missed Questions</p>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
 
-        {/* Study Categories Section */}
-        <Card className="p-8 bg-gradient-to-br from-white/80 via-orange-50/40 to-teal-50/40 backdrop-blur-sm border-orange-200/30 shadow-xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Practice Question Categories
+        {/* Main Study Sections */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-6">
+            Study Categories
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Intro to Surgical Technology */}
-            <Link to="/intro-surgical-tech">
-              <Card className="group p-6 bg-gradient-to-br from-white/90 via-blue-50/60 to-purple-50/60 border-blue-200/40 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="bg-gradient-to-br from-blue-500/80 to-purple-500/80 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <BookOpen className="h-6 w-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {sections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <Card key={index} className={`p-6 bg-gradient-to-br ${section.bgColor} backdrop-blur-sm ${section.borderColor} border shadow-lg hover:shadow-xl transition-all duration-300`}>
+                  <div className="flex flex-col">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className={`p-3 rounded-lg bg-gradient-to-r ${section.color}`}>
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
+                    </div>
+                    <p className="text-gray-600 mb-4 flex-grow">{section.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-gray-500">{section.questionCount} Questions Available</span>
+                    </div>
+                    <Link to={section.link}>
+                      <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white`}>
+                        Start Studying
+                      </Button>
+                    </Link>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Intro to Surgical Technology</h3>
-                    <p className="text-sm text-gray-600">15 Practice Questions</p>
-                  </div>
-                </div>
-                <p className="text-gray-600">Foundation concepts and basic principles</p>
-                <div className="mt-4 flex items-center text-blue-600 group-hover:text-blue-700">
-                  <span className="font-medium">Start Studying</span>
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Card>
-            </Link>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
 
-            {/* Principles and Practice of Surgical Technology */}
-            <Link to="/principles-practice">
-              <Card className="group p-6 bg-gradient-to-br from-white/90 via-emerald-50/60 to-cyan-50/60 border-emerald-200/40 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="bg-gradient-to-br from-emerald-500/80 to-cyan-500/80 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Brain className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Principles and Practice of Surgical Technology</h3>
-                    <p className="text-sm text-gray-600">200 Practice Questions</p>
-                  </div>
-                </div>
-                <p className="text-gray-600">Advanced concepts and practical applications</p>
-                <div className="mt-4 flex items-center text-emerald-600 group-hover:text-emerald-700">
-                  <span className="font-medium">Start Studying</span>
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Card>
+        {/* Fire Quiz and Quick Actions */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Fire Quiz */}
+          <Card className="p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-red-500/90 to-orange-500/90">
+                <Zap className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Fire Quiz</h3>
+            </div>
+            <p className="text-gray-600 mb-4">Quick 5-question quiz with random questions from all categories</p>
+            <Link to="/fire-quiz">
+              <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white">
+                <Zap className="h-4 w-4 mr-2" />
+                Start Fire Quiz
+              </Button>
+            </Link>
+          </Card>
+
+          {/* Missed Questions */}
+          <Card className="p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90">
+                <RotateCcw className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Missed Questions</h3>
+            </div>
+            <p className="text-gray-600 mb-4">Review and retry questions you've missed</p>
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-sm text-gray-500">{missedQuestions} questions to review</span>
+            </div>
+            <Link to="/missed-questions">
+              <Button className="w-full bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white">
+                <RotateCcw className="h-4 w-4 mr-2" />
+                Review Missed Questions
+              </Button>
+            </Link>
+          </Card>
+        </div>
+
+        {/* Exam Simulation */}
+        <Card className="p-8 bg-gradient-to-br from-white/90 via-blue-50/80 to-indigo-100/70 backdrop-blur-sm border-blue-200/50 shadow-xl">
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-blue-500/90 to-indigo-500/90">
+                <Award className="h-8 w-8 text-white" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Full Exam Simulation</h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Take a comprehensive 150-question practice exam that simulates the actual certification test experience
+            </p>
+            <div className="flex items-center justify-center space-x-6 mb-6 text-sm text-gray-500">
+              <div className="flex items-center space-x-2">
+                <Clock className="h-4 w-4" />
+                <span>150 Questions</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Target className="h-4 w-4" />
+                <span>Timed Practice</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Award className="h-4 w-4" />
+                <span>Detailed Results</span>
+              </div>
+            </div>
+            <Link to="/exam-simulation">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-8 py-3">
+                <Award className="h-5 w-5 mr-2" />
+                Start Exam Simulation
+              </Button>
             </Link>
           </div>
         </Card>
