@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { BookOpen, Brain, GraduationCap, Flame, ClipboardList, ArrowRight } from 'lucide-react';
@@ -132,7 +133,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">Principles and Practice of Surgical Technology</h3>
-                    <p className="text-sm text-gray-600">100 Practice Questions</p>
+                    <p className="text-sm text-gray-600">200 Practice Questions</p>
                   </div>
                 </div>
                 <p className="text-gray-600">Advanced concepts and practical applications</p>
