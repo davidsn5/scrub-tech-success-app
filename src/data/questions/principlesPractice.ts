@@ -2367,827 +2367,277 @@ export const principlesPracticeQuestions: Question[] = [
     correctAnswer: 0
   },
   {
-    id: 246,
-    question: "Which drug is used to stimulate uterine contraction and control bleeding?",
+    id: 371,
+    question: "Which of the following is not a desirable property of surgical drapes?",
     choices: [
-      "Rhogam",
-      "Pitocin",
-      "Dantrolene",
-      "Narcan"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 247,
-    question: "What is the main use of Rhogam?",
-    choices: [
-      "Induce labor",
-      "Treat malignant hyperthermia",
-      "Prevent Rh sensitization",
-      "Reverse narcotic analgesics"
+      "Lint-free",
+      "Tear and puncture resistant",
+      "Fluid absorbent",
+      "Antistatic"
     ],
     correctAnswer: 2
   },
   {
-    id: 248,
-    question: "Which of the following drugs is used as a vasoconstrictor to reduce bleeding in the cervix?",
+    id: 372,
+    question: "Nonwoven disposable drapes are made of:",
     choices: [
-      "Pitressin",
-      "Papaverine",
-      "Epinephrine",
-      "Lugol's solution"
+      "Cotton",
+      "Nylon, rayon, polyester",
+      "Silk",
+      "Linen"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 373,
+    question: "A laparotomy drape is most commonly used on the:",
+    choices: [
+      "Neck",
+      "Abdomen",
+      "Perineum",
+      "Hip"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 374,
+    question: "Which drape is a clear plastic sticky sheet applied directly to the skin?",
+    choices: [
+      "Aperture drape",
+      "Incise drape",
+      "Split sheet",
+      "Utility drape"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 375,
+    question: "The purpose of a stockinette is to:",
+    choices: [
+      "Absorb wound drainage",
+      "Immobilize extremities",
+      "Cover extremities",
+      "Support surgical instruments"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 376,
+    question: "Which drape has a small opening surrounded by adhesive and is used for eyes or ears?",
+    choices: [
+      "Thyroid sheet",
+      "Aperture drape",
+      "Split sheet",
+      "Transverse drape"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 377,
+    question: "A pressure dressing is:",
+    choices: [
+      "A one-layer dressing",
+      "A type of bolster dressing",
+      "Used only on burns",
+      "Non-absorbent"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 378,
+    question: "The intermediate layer of a three-layer dressing serves to:",
+    choices: [
+      "Secure the dressing",
+      "Wicks drainage away",
+      "Absorb drainage",
+      "Provide airtight seal"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 379,
+    question: "When prepping a patient's skin, the prep should begin:",
+    choices: [
+      "At the periphery and move to the incision site",
+      "At the incision site and move outward",
+      "Only on the incision site",
+      "Wherever is most contaminated"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 380,
+    question: "Which prep solution contains 70% isopropyl alcohol and iodophor?",
+    choices: [
+      "Betadine",
+      "Hibiclens",
+      "Dura-Prep",
+      "Collodion"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 381,
+    question: "Chlorhexidine gluconate is preferred because:",
+    choices: [
+      "It is flammable",
+      "It is an eye irritant",
+      "It lasts 5–6 hours",
+      "It must be rinsed off"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 382,
+    question: "Which of the following should not be shaved?",
+    choices: [
+      "Scalp",
+      "Eyebrows",
+      "Arm hair",
+      "Leg hair"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 383,
+    question: "The rule of nines assigns what percentage to the head and neck?",
+    choices: [
+      "1%",
+      "4.5%",
+      "9%",
+      "18%"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 384,
+    question: "Which wound healing complication is the separation of wound layers after closure?",
+    choices: [
+      "Fistula",
+      "Evisceration",
+      "Dehiscence",
+      "Sinus tract"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 385,
+    question: "A sinus tract is best described as:",
+    choices: [
+      "Open at both ends",
+      "An abnormal tube to another cavity",
+      "Open at one end only",
+      "A separation of wound layers"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 386,
+    question: "Which type of burn affects only the epidermis?",
+    choices: [
+      "First-degree",
+      "Second-degree",
+      "Third-degree",
+      "Fourth-degree"
     ],
     correctAnswer: 0
   },
   {
-    id: 249,
-    question: "Which steroid is commonly used to decrease inflammation?",
+    id: 387,
+    question: "Which biologic dressing is manufactured from human fibroblast cells?",
     choices: [
-      "Pitocin",
-      "Decadron",
-      "Thrombin",
-      "Papaverine"
+      "Integra",
+      "Dermagraft",
+      "Xenograft",
+      "Autograft"
     ],
     correctAnswer: 1
   },
   {
-    id: 250,
-    question: "Which topical stain is used to detect cervical cancer?",
+    id: 388,
+    question: "Autologous skin grafts come from:",
     choices: [
-      "Lugol's",
-      "Papaverine",
-      "Fluroescein",
-      "Gentian violet"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 251,
-    question: "Which solution is appropriate for irrigating the body cavity?",
-    choices: [
-      "Sterile water",
-      "Lugol's solution",
-      "Rhogam",
-      "Gentian violet"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 252,
-    question: "Which of the following is a vasodilator used to relax smooth muscle and reduce blood pressure?",
-    choices: [
-      "Epinephrine",
-      "Papaverine",
-      "Pitressin",
-      "Decadron"
+      "A cadaver",
+      "The patient's own body",
+      "Another species",
+      "Pig skin"
     ],
     correctAnswer: 1
   },
   {
-    id: 253,
-    question: "What is the purpose of microfibrillar collagen?",
+    id: 389,
+    question: "The main purpose of draping is to:",
     choices: [
-      "Vasoconstrictor",
-      "Anti-inflammatory",
-      "Hemostatic agent",
-      "Antibiotic"
+      "Protect the surgeon",
+      "Preserve the sterile field",
+      "Reduce lighting glare",
+      "Provide warmth"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 390,
+    question: "What is the recommended thread count for woven fabric drapes?",
+    choices: [
+      "150–200",
+      "270–280",
+      "300–350",
+      "200–250"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 391,
+    question: "When prepping a breast, the axilla is prepped:",
+    choices: [
+      "First",
+      "Last",
+      "Before the chest",
+      "At the same time as the chest"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 392,
+    question: "Montgomery straps are used because they:",
+    choices: [
+      "Act as a stockinette",
+      "Are impervious",
+      "Allow frequent dressing changes",
+      "Provide airtight seal"
     ],
     correctAnswer: 2
   },
   {
-    id: 254,
-    question: "Which drug is contraindicated for injection due to risk of death?",
+    id: 393,
+    question: "Which type of sponge is used in neurosurgery?",
     choices: [
-      "Papaverine",
-      "Thrombin",
-      "Pitocin",
-      "Dantrolene"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 255,
-    question: "What is the content of fresh-frozen plasma?",
-    choices: [
-      "Red blood cells",
-      "Platelets",
-      "Clotting factors",
-      "All components of blood"
+      "Raytec",
+      "Tonsil sponge",
+      "Cottonoid",
+      "Dental sponge"
     ],
     correctAnswer: 2
   },
   {
-    id: 256,
-    question: "Which type of blood is most commonly used to restore oxygen capacity?",
+    id: 394,
+    question: "The three phases of wound healing include all except:",
     choices: [
-      "Whole blood",
-      "Platelets",
-      "Packed red blood cells",
-      "Fresh frozen plasma"
+      "Inflammatory",
+      "Proliferation",
+      "Calcification",
+      "Maturation"
     ],
     correctAnswer: 2
   },
   {
-    id: 257,
-    question: "Cell Saver blood cannot be used if it contains:",
-    choices: [
-      "Red blood cells",
-      "Heparinized saline",
-      "Cancer cells",
-      "Normal saline"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 258,
-    question: "During which phase of general anesthesia does the patient lose consciousness?",
-    choices: [
-      "Induction",
-      "Maintenance",
-      "Emergence",
-      "Recovery"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 259,
-    question: "Hearing is the last sense to disappear during:",
-    choices: [
-      "Induction",
-      "Maintenance",
-      "Emergence",
-      "Recovery"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 260,
-    question: "In which anesthesia phase is the patient closely monitored while anesthesia is maintained?",
-    choices: [
-      "Induction",
-      "Maintenance",
-      "Emergence",
-      "Recovery"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 261,
-    question: "What is administered at the end of surgery to reverse anesthesia?",
-    choices: [
-      "Antibiotics",
-      "Rhogam",
-      "Reversal agents",
-      "Steroids"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 262,
-    question: "Which irrigation fluid is used to wash surgical instruments?",
-    choices: [
-      "Normal saline",
-      "Lugol's",
-      "Rhogam",
-      "Epinephrine"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 263,
-    question: "What does Pitressin do when injected into the cervix?",
-    choices: [
-      "Stimulates labor",
-      "Relieves Rh sensitization",
-      "Constricts blood vessels to reduce bleeding",
-      "Relaxes smooth muscle"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 264,
-    question: "Which of the following is a hemostatic agent made of beeswax?",
-    choices: [
-      "Gelfoam",
-      "Bone wax",
-      "Surgicel",
-      "Avitene"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 265,
-    question: "What is the role of Avitene in surgery?",
-    choices: [
-      "Anti-inflammatory",
-      "Antibiotic",
-      "Hemostatic agent",
-      "Vasodilator"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 266,
-    question: "Thrombin is used to:",
-    choices: [
-      "Stimulate uterine contractions",
-      "Control bleeding as a topical hemostatic agent",
-      "Reverse narcotics",
-      "Treat malignant hyperthermia"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 267,
-    question: "Which drug is specifically used to treat malignant hyperthermia?",
-    choices: [
-      "Dantrolene",
-      "Narcan",
-      "Pitocin",
-      "Papaverine"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 268,
-    question: "What is the main purpose of platelet transfusion?",
-    choices: [
-      "Replace oxygen",
-      "Replace clotting ability",
-      "Treat trauma",
-      "Increase red blood cell count"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 269,
-    question: "Which drug is a vasodilator that also dilates blood vessels and relaxes smooth muscle?",
-    choices: [
-      "Papaverine",
-      "Pitressin",
-      "Epinephrine",
-      "Dantrolene"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 270,
-    question: "Which irrigation fluid is used for the bladder?",
-    choices: [
-      "Normal saline",
-      "Sterile water",
-      "Lugol's",
-      "Epinephrine"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 271,
-    question: "Which grade of surgical instrument is made from the highest quality stainless steel, resistant to corrosion, and intended for repeated sterilization?",
-    choices: [
-      "Floor-grade",
-      "Surgical-grade",
-      "Disposable-grade",
-      "Lab-grade"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 272,
-    question: "What material is preferred for surgical instruments because it is nonmagnetic, lightweight, and corrosion-resistant?",
-    choices: [
-      "Stainless steel",
-      "Titanium",
-      "Tungsten carbide",
-      "Gold"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 273,
-    question: "What is the advantage of an ebonized finish on surgical instruments?",
-    choices: [
-      "Improves cutting edge",
-      "Reduces glare",
-      "Increases sterilization time",
-      "Makes them disposable"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 274,
-    question: "Tungsten carbide inserts in scissors help to:",
-    choices: [
-      "Make the instrument lighter",
-      "Sharpen cutting edges longer",
-      "Reduce the cost",
-      "Make the scissors nonmagnetic"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 275,
-    question: "Which instrument part is the working end that comes into contact with tissue?",
-    choices: [
-      "Box lock",
-      "Shank",
-      "Jaw",
-      "Ratchet"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 276,
-    question: "Scissors designed for delicate tissue dissection often have what type of blades?",
-    choices: [
-      "Tungsten carbide blades",
-      "Serrated blades",
-      "Curved, sharp blades",
-      "Straight, dull blades"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 277,
-    question: "Which of the following is NOT a classification of surgical instruments by function?",
-    choices: [
-      "Grasping and holding",
-      "Retracting",
-      "Finishing and polishing",
-      "Cutting and dissecting"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 278,
-    question: "What is the most commonly used scalpel blade for general surgical procedures?",
-    choices: [
-      "#11",
-      "#15",
-      "#12",
-      "#10"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 279,
-    question: "The term \"blunt dissection\" refers to:",
-    choices: [
-      "Cutting bone",
-      "Incising delicate tissue",
-      "Spreading and opening tissue planes",
-      "Removing foreign material"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 280,
-    question: "Which type of forceps is typically used on delicate tissues such as vascular or bowel tissue?",
-    choices: [
-      "Adson with teeth",
-      "Russian",
-      "Smooth or serrated thumb forceps",
-      "Kocher"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 281,
-    question: "A tenaculum is used to:",
-    choices: [
-      "Hold bone fragments",
-      "Hold fibrous tissue during dissection",
-      "Cut heavy tissue",
-      "Spread tissue planes"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 282,
-    question: "Which clamp is specifically designed to occlude blood vessels?",
-    choices: [
-      "Kocher",
-      "Bulldog",
-      "Kelly",
-      "Babcock"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 283,
-    question: "Self-retaining retractors:",
-    choices: [
-      "Require constant hand-holding",
-      "Are double-ended",
-      "Stay in place using mechanical means",
-      "Are single-use only"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 284,
-    question: "The primary purpose of a viewing instrument is to:",
-    choices: [
-      "Retract and expose tissue",
-      "Visualize internal structures",
-      "Cut tissue",
-      "Stabilize bone"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 285,
-    question: "Probes are commonly used to explore:",
-    choices: [
-      "Skin incisions",
-      "Cavities, ducts, or vessels",
-      "Bone fractures",
-      "Deep muscle layers"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 286,
-    question: "Dilators are used to:",
-    choices: [
-      "Cut and excise tissue",
-      "Gradually enlarge an orifice or duct",
-      "Occlude a blood vessel",
-      "Visualize internal structures"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 287,
-    question: "Which instrument holds a curved suture needle during suturing?",
-    choices: [
-      "Scalpel",
-      "Needle holder",
-      "Tenaculum",
-      "Forceps"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 288,
-    question: "Which suction tip is commonly used for pharyngeal suctioning in a tonsillectomy?",
-    choices: [
-      "Poole",
-      "Yankauer",
-      "Frazier",
-      "Baron"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 289,
-    question: "The trocar and cannula assembly is used to:",
-    choices: [
-      "Cut tissue",
-      "Visualize deep structures",
-      "Drain fluid or allow endoscope insertion",
-      "Spread tissue planes"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 290,
-    question: "Microinstruments are usually made of titanium because:",
-    choices: [
-      "They are disposable",
-      "They are heavier and more stable",
-      "They reduce glare and are lightweight",
-      "They cut more effectively"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 291,
-    question: "Power saws use which type of motion to cut?",
-    choices: [
-      "Rotary only",
-      "Oscillating or reciprocating",
-      "Serrating",
-      "Blunt"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 292,
-    question: "The instrument cycle includes all of the following EXCEPT:",
-    choices: [
-      "Sterilization",
-      "Storage",
-      "Use of for unauthorized purposes",
-      "Cleaning and decontamination"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 293,
-    question: "Why is an instrument list count sheet important?",
-    choices: [
-      "It ensures the instruments are sterilized",
-      "It minimizes errors and tracks missing instruments",
-      "It determines the type of surgery",
-      "It guides the surgeon"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 294,
-    question: "Instruments should always be passed with:",
-    choices: [
-      "Tips pointing upward",
-      "Safety mechanisms off",
-      "The safety switch in the \"off\" position",
-      "Clean gloves only"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 295,
-    question: "Which of the following is a recommended best practice for delicate instruments like microinstruments?",
-    choices: [
-      "Use for multiple purposes",
-      "Handle with care to avoid damage",
-      "Skip sterilization to prevent misalignment",
-      "Always polish to a high shine"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 296,
-    question: "What is the primary function of a pulse lavage irrigator?",
-    choices: [
-      "Remove smoke from the surgical field",
-      "Warm sterile fluids",
-      "Irrigate and debride wounds",
-      "Deliver cryogenic gases"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 297,
-    question: "Pulse lavage irrigators are most commonly powered by:",
-    choices: [
-      "Oxygen tanks",
-      "AA or AAA batteries",
-      "Wall suction",
-      "Manual pump"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 298,
-    question: "What type of shield can be used with a pulse lavage irrigator to protect the surgical team?",
-    choices: [
-      "Face shield",
-      "Conical splash guard",
-      "Lead apron",
-      "Surgical drape"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 299,
-    question: "Cryotherapy units work by delivering:",
-    choices: [
-      "Heat",
-      "Radiation",
-      "Extreme cold",
-      "High-frequency sound"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 300,
-    question: "Which of the following is NOT a use for cryotherapy?",
-    choices: [
-      "Extract cataracts",
-      "Repair retinal detachment",
-      "Resect vascular tumors",
-      "Remove orthopedic hardware"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 301,
-    question: "What does a nerve stimulator deliver to tissue?",
-    choices: [
-      "Laser light",
-      "High pressure",
-      "Small electric currents",
-      "Cryogenic gas"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 302,
-    question: "What is the purpose of a nerve stimulator during surgery?",
-    choices: [
-      "To destroy nerves",
-      "To identify and preserve nerves",
-      "To coagulate tissue",
-      "To warm tissues"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 303,
-    question: "Cell salvage systems return which component to the patient?",
-    choices: [
-      "Plasma",
-      "Platelets",
-      "Washed red blood cells",
-      "White blood cells"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 304,
-    question: "Slush machines are used primarily to:",
-    choices: [
-      "Irrigate wounds",
-      "Warm irrigation fluids",
-      "Cool organs and tissues",
-      "Deliver medications"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 305,
-    question: "Which component of a suction system removes fluid from the source?",
-    choices: [
-      "Collection unit",
-      "Tubing",
-      "Vacuum source",
-      "Suction tip"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 306,
-    question: "How many suction units are required per OR at minimum?",
-    choices: [
-      "One",
-      "Two",
-      "Three",
-      "Four"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 307,
-    question: "The pneumatic tourniquet improves surgical site visualization by:",
-    choices: [
-      "Increasing blood flow",
-      "Restricting blood flow",
-      "Raising blood pressure",
-      "Reducing patient movement"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 308,
-    question: "Excessive tourniquet pressure may result in:",
-    choices: [
-      "Hemorrhage",
-      "Neuromuscular damage",
-      "Faster healing",
-      "Lower infection risk"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 309,
-    question: "The recommended maximum inflation time for a lower extremity tourniquet is:",
-    choices: [
-      "30 minutes",
-      "60 minutes",
-      "90 minutes",
-      "120 minutes"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 310,
-    question: "What does the pressure device in a pneumatic tourniquet do?",
-    choices: [
-      "Controls electric current",
-      "Measures and controls pressure",
-      "Provides vacuum suction",
-      "Generates heat"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 311,
-    question: "What is the purpose of sequential compression devices (SCDs)?",
-    choices: [
-      "Prevent hypothermia",
-      "Prevent venous stasis and DVT",
-      "Improve oxygenation",
-      "Deliver anesthesia"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 312,
-    question: "Which fluid is moved proximally in the limb by SCDs?",
-    choices: [
-      "Plasma",
-      "Lymph and blood",
-      "Cerebrospinal fluid",
-      "Saline irrigation"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 313,
-    question: "Which condition do SCDs help prevent?",
-    choices: [
-      "Pulmonary embolism",
-      "Heart block",
-      "Cataracts",
-      "Hypoglycemia"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 314,
-    question: "Smoke evacuation systems are used to remove:",
-    choices: [
-      "Sterile drapes",
-      "Bacterial contamination",
-      "Surgical smoke",
-      "Excess irrigation fluid"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 315,
-    question: "Surgical smoke may contain all of the following EXCEPT:",
-    choices: [
-      "Microorganisms",
-      "Carcinogenic particles",
-      "Cellular debris",
-      "Sterile saline"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 316,
-    question: "The traditional method for removing surgical smoke used:",
-    choices: [
-      "Smoke wand",
-      "Standard suction tip",
-      "Bovie pencil",
-      "HEPA filter"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 317,
-    question: "Which specialty suction tip is used for ear procedures?",
-    choices: [
-      "Rosen",
-      "Poole",
-      "Yankauer",
-      "Baron"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 318,
-    question: "Which equipment preserves adjacent tissue while removing diseased tissue without hemorrhage?",
-    choices: [
-      "Cryotherapy unit",
-      "Smoke evacuator",
-      "Pulse lavage",
-      "SCD"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 319,
-    question: "What is a risk associated with improper tourniquet use?",
-    choices: [
-      "Skin necrosis",
-      "Bone fracture",
-      "Retinal detachment",
-      "Muscle hypertrophy"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 320,
-    question: "Which equipment delivers extreme cold through an insulated probe?",
-    choices: [
-      "Cryotherapy unit",
-      "Nerve stimulator",
-      "Sequential compression device",
-      "Smoke evacuator"
+    id: 395,
+    question: "A split sheet or U-drape is designed to:",
+    choices: [
+      "Wrap around a limb or body part",
+      "Cover the abdomen",
+      "Cover the face",
+      "Protect the eyes"
     ],
     correctAnswer: 0
   }
