@@ -16,4 +16,4 @@ export const principlesPracticeQuestions: Question[] = [
   ...duplicateQuestions
 ];
 
-export { Question };
+export type { Question };
