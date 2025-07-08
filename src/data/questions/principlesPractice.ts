@@ -2640,5 +2640,280 @@ export const principlesPracticeQuestions: Question[] = [
       "Epinephrine"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 271,
+    question: "Which grade of surgical instrument is made from the highest quality stainless steel and intended for repeated sterilization?",
+    choices: [
+      "Floor-grade",
+      "Disposable-grade",
+      "Surgical-grade",
+      "Laboratory-grade"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 272,
+    question: "Titanium instruments are preferred over stainless steel because they are:",
+    choices: [
+      "Heavier and less durable",
+      "Magnetic and prone to corrosion",
+      "Nonmagnetic and resistant to corrosion",
+      "Less expensive and disposable"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 273,
+    question: "A highly polished finish on surgical instruments is beneficial because:",
+    choices: [
+      "It eliminates all glare",
+      "It increases corrosion resistance",
+      "It prevents staining",
+      "It reflects laser beams"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 274,
+    question: "An ebonized finish is especially useful because it:",
+    choices: [
+      "Strengthens the instrument",
+      "Resists breakage",
+      "Reduces laser beam deflection",
+      "Creates a polished shine"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 275,
+    question: "Which material is used to strengthen the jaws of needle holders and extend cutting edge life of scissors?",
+    choices: [
+      "Stainless steel",
+      "Carbon steel",
+      "Tungsten carbide",
+      "Titanium oxide"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 276,
+    question: "Instruments coated with diamond dust have improved:",
+    choices: [
+      "Magnetism",
+      "Durability of jaws",
+      "Weight reduction",
+      "Corrosion"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 277,
+    question: "The most common type of handle found on surgical instruments is:",
+    choices: [
+      "Pistol grip",
+      "Finger rings",
+      "Spring-loaded",
+      "Box lock"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 278,
+    question: "Which part of a surgical instrument locks together to keep it closed?",
+    choices: [
+      "Ratchet",
+      "Shank",
+      "Serration",
+      "Tip"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 279,
+    question: "The shank of a surgical instrument refers to:",
+    choices: [
+      "The sharp working end",
+      "The handles and rings",
+      "The long shaft from handle to tip",
+      "The serrated jaws"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 280,
+    question: "Scissors are different from clamps because:",
+    choices: [
+      "Scissors have ratchets",
+      "Scissors have blades instead of jaws",
+      "Scissors are used for holding",
+      "Scissors have box locks"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 281,
+    question: "Which of the following is not a common function classification of instruments?",
+    choices: [
+      "Cutting and dissecting",
+      "Grasping and holding",
+      "Imaging and scanning",
+      "Suturing"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 282,
+    question: "Which instrument is used specifically to make small incisions and hold small blades, like #69?",
+    choices: [
+      "Scalpel with #3 handle",
+      "Beaver blade handle",
+      "Mayo scissors",
+      "Ring forceps"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 283,
+    question: "The #10 blade is most commonly loaded onto which handle?",
+    choices: [
+      "#7",
+      "#4",
+      "Beaver",
+      "#3"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 284,
+    question: "Which blade is specifically used for tonsillectomy?",
+    choices: [
+      "#15",
+      "#11",
+      "#12",
+      "#20"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 285,
+    question: "Which scalpel blade is commonly used for long and deep abdominal incisions?",
+    choices: [
+      "#10",
+      "#12",
+      "#20",
+      "#11"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 286,
+    question: "Which type of finish is least reflective and recommended for laser procedures?",
+    choices: [
+      "Satin",
+      "Ebonized",
+      "Polished",
+      "Gold plated"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 287,
+    question: "Ring forceps are considered:",
+    choices: [
+      "Cutting and dissecting",
+      "Accessory instruments",
+      "Suction and aspiration",
+      "Viewing instruments"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 288,
+    question: "A cottonoid is classified as:",
+    choices: [
+      "An accessory instrument",
+      "A dressing",
+      "A towel clip",
+      "A scalpel blade"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 289,
+    question: "The tips of an instrument may have all of the following except:",
+    choices: [
+      "Rounded ends",
+      "Teeth",
+      "Ratchets",
+      "Sharp points"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 290,
+    question: "Serrations are located:",
+    choices: [
+      "At the tips for gripping",
+      "On the handle for decoration",
+      "Inside the shank for locking",
+      "On the blade edge for cutting"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 291,
+    question: "Scalpel blades must be loaded onto handles using:",
+    choices: [
+      "Gloves",
+      "Fingers",
+      "Needle holder",
+      "Cottonoid"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 292,
+    question: "Which of the following is true about tungsten carbide scissors?",
+    choices: [
+      "They are lighter and more flexible",
+      "They dull faster than stainless steel",
+      "They maintain sharpness longer",
+      "They cannot be used in surgery"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 293,
+    question: "Which classification of instrument is used to widen a body opening?",
+    choices: [
+      "Cutting and dissecting",
+      "Dilating",
+      "Suturing",
+      "Suctioning"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 294,
+    question: "The part of a clamp where the two shank pieces cross is called:",
+    choices: [
+      "Serration",
+      "Box lock",
+      "Shank",
+      "Jaw"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 295,
+    question: "Which scalpel handle is longer and used for deep wounds?",
+    choices: [
+      "#4",
+      "#7",
+      "#3",
+      "Beaver"
+    ],
+    correctAnswer: 1
   }
 ];
