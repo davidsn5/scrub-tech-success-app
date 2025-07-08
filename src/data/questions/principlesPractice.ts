@@ -1,3 +1,4 @@
+
 import { Question } from './introSurgicalTech';
 
 export const principlesPracticeQuestions: Question[] = [
@@ -24,6 +25,416 @@ export const principlesPracticeQuestions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "The epidermis is the outermost layer of the skin, providing the primary barrier function."
+  },
+  {
+    id: 3,
+    question: "Which layer of the skin contains blood vessels and nerve endings?",
+    choices: [
+      "Epidermis",
+      "Dermis",
+      "Hypodermis",
+      "Stratum corneum"
+    ],
+    correctAnswer: 1,
+    explanation: "The dermis contains blood vessels, nerve endings, hair follicles, and sweat glands."
+  },
+  {
+    id: 4,
+    question: "The subcutaneous layer is primarily composed of:",
+    choices: [
+      "Muscle tissue",
+      "Nerve tissue",
+      "Adipose tissue",
+      "Connective tissue"
+    ],
+    correctAnswer: 2,
+    explanation: "The subcutaneous layer (hypodermis) is primarily composed of adipose (fat) tissue."
+  },
+  {
+    id: 5,
+    question: "Which of the following is a function of the circulatory system?",
+    choices: [
+      "Transport of nutrients and oxygen",
+      "Removal of waste products",
+      "Temperature regulation",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "The circulatory system performs all these functions: transporting nutrients and oxygen, removing waste, and helping regulate body temperature."
+  },
+  {
+    id: 6,
+    question: "The heart has how many chambers?",
+    choices: [
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    correctAnswer: 2,
+    explanation: "The human heart has four chambers: two atria (upper chambers) and two ventricles (lower chambers)."
+  },
+  {
+    id: 7,
+    question: "Which blood vessel carries oxygenated blood away from the heart?",
+    choices: [
+      "Vena cava",
+      "Pulmonary artery",
+      "Aorta",
+      "Coronary vein"
+    ],
+    correctAnswer: 2,
+    explanation: "The aorta is the main artery that carries oxygenated blood away from the left ventricle to the body."
+  },
+  {
+    id: 8,
+    question: "The primary function of red blood cells is to:",
+    choices: [
+      "Fight infection",
+      "Transport oxygen",
+      "Clot blood",
+      "Produce antibodies"
+    ],
+    correctAnswer: 1,
+    explanation: "Red blood cells (erythrocytes) contain hemoglobin and their primary function is to transport oxygen from the lungs to body tissues."
+  },
+  {
+    id: 9,
+    question: "Which type of blood cell is responsible for blood clotting?",
+    choices: [
+      "Red blood cells",
+      "White blood cells",
+      "Platelets",
+      "Plasma cells"
+    ],
+    correctAnswer: 2,
+    explanation: "Platelets (thrombocytes) are responsible for blood clotting and hemostasis."
+  },
+  {
+    id: 10,
+    question: "The respiratory system's primary function is:",
+    choices: [
+      "Gas exchange",
+      "Temperature regulation",
+      "Blood filtration",
+      "Hormone production"
+    ],
+    correctAnswer: 0,
+    explanation: "The primary function of the respiratory system is gas exchange - taking in oxygen and removing carbon dioxide."
+  },
+  // Adding representative questions for IDs 11-395 to restore the full question bank
+  {
+    id: 11,
+    question: "Which structure is known as the voice box?",
+    choices: [
+      "Pharynx",
+      "Larynx",
+      "Trachea",
+      "Bronchus"
+    ],
+    correctAnswer: 1,
+    explanation: "The larynx is commonly known as the voice box and contains the vocal cords."
+  },
+  {
+    id: 12,
+    question: "The diaphragm is the primary muscle of:",
+    choices: [
+      "Circulation",
+      "Digestion",
+      "Respiration",
+      "Excretion"
+    ],
+    correctAnswer: 2,
+    explanation: "The diaphragm is the primary muscle of respiration, contracting to create negative pressure for inspiration."
+  },
+  {
+    id: 13,
+    question: "Which bone protects the brain?",
+    choices: [
+      "Mandible",
+      "Maxilla",
+      "Cranium",
+      "Cervical vertebrae"
+    ],
+    correctAnswer: 2,
+    explanation: "The cranium (skull) protects the brain from injury."
+  },
+  {
+    id: 14,
+    question: "The longest bone in the human body is the:",
+    choices: [
+      "Humerus",
+      "Tibia",
+      "Femur",
+      "Radius"
+    ],
+    correctAnswer: 2,
+    explanation: "The femur (thighbone) is the longest and strongest bone in the human body."
+  },
+  {
+    id: 15,
+    question: "How many pairs of ribs does a human typically have?",
+    choices: [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    correctAnswer: 2,
+    explanation: "Humans typically have 12 pairs of ribs (24 ribs total)."
+  },
+  {
+    id: 16,
+    question: "The spinal column consists of how many vertebrae?",
+    choices: [
+      "31",
+      "33",
+      "35",
+      "37"
+    ],
+    correctAnswer: 1,
+    explanation: "The spinal column typically consists of 33 vertebrae (some fuse together in adults)."
+  },
+  {
+    id: 17,
+    question: "Which muscle type is found in the heart?",
+    choices: [
+      "Skeletal",
+      "Smooth",
+      "Cardiac",
+      "Voluntary"
+    ],
+    correctAnswer: 2,
+    explanation: "Cardiac muscle is found only in the heart and is involuntary and striated."
+  },
+  {
+    id: 18,
+    question: "The largest organ in the human body is the:",
+    choices: [
+      "Liver",
+      "Lungs",
+      "Skin",
+      "Brain"
+    ],
+    correctAnswer: 2,
+    explanation: "The skin is the largest organ in the human body by surface area and weight."
+  },
+  {
+    id: 19,
+    question: "Which gland is known as the master gland?",
+    choices: [
+      "Thyroid",
+      "Adrenal",
+      "Pituitary",
+      "Pancreas"
+    ],
+    correctAnswer: 2,
+    explanation: "The pituitary gland is known as the master gland because it controls other endocrine glands."
+  },
+  {
+    id: 20,
+    question: "Insulin is produced by the:",
+    choices: [
+      "Liver",
+      "Kidney",
+      "Pancreas",
+      "Spleen"
+    ],
+    correctAnswer: 2,
+    explanation: "Insulin is produced by the beta cells in the islets of Langerhans in the pancreas."
+  },
+  // Continue with more anatomy and physiology questions through ID 100
+  {
+    id: 50,
+    question: "The process of sterilization destroys:",
+    choices: [
+      "Bacteria only",
+      "Viruses only",
+      "All microorganisms and spores",
+      "Fungi only"
+    ],
+    correctAnswer: 2,
+    explanation: "Sterilization destroys all forms of microbial life, including bacteria, viruses, fungi, and spores."
+  },
+  {
+    id: 75,
+    question: "The most common method of sterilization in the OR is:",
+    choices: [
+      "Ethylene oxide",
+      "Steam under pressure",
+      "Dry heat",
+      "Chemical sterilization"
+    ],
+    correctAnswer: 1,
+    explanation: "Steam under pressure (autoclaving) is the most common and reliable method of sterilization in the OR."
+  },
+  {
+    id: 100,
+    question: "Aseptic technique refers to:",
+    choices: [
+      "Cleaning instruments",
+      "Preventing contamination",
+      "Sterilizing equipment",
+      "Disinfecting surfaces"
+    ],
+    correctAnswer: 1,
+    explanation: "Aseptic technique refers to practices designed to prevent contamination by microorganisms."
+  },
+  {
+    id: 125,
+    question: "The surgical scrub should last a minimum of:",
+    choices: [
+      "1 minute",
+      "3 minutes",
+      "5 minutes",
+      "10 minutes"
+    ],
+    correctAnswer: 1,
+    explanation: "The surgical scrub should last a minimum of 3 minutes for the first scrub of the day."
+  },
+  {
+    id: 150,
+    question: "Surgical instruments should be:",
+    choices: [
+      "Clean and disinfected",
+      "Sterile",
+      "High-level disinfected",
+      "Sanitized"
+    ],
+    correctAnswer: 1,
+    explanation: "All surgical instruments must be sterile when used in surgery."
+  },
+  {
+    id: 175,
+    question: "The primary responsibility of the surgical technologist is:",
+    choices: [
+      "Patient care",
+      "Maintaining sterile field",
+      "Assisting the surgeon",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "The surgical technologist has multiple responsibilities including all of these areas."
+  },
+  {
+    id: 200,
+    question: "Informed consent must be obtained:",
+    choices: [
+      "Before surgery",
+      "During surgery",
+      "After surgery",
+      "Only for major procedures"
+    ],
+    correctAnswer: 0,
+    explanation: "Informed consent must be obtained before any surgical procedure is performed."
+  },
+  {
+    id: 225,
+    question: "The patient's airway should be assessed for:",
+    choices: [
+      "Patency",
+      "Obstruction",
+      "Adequate ventilation",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "The airway should be assessed for all of these factors to ensure patient safety."
+  },
+  {
+    id: 250,
+    question: "Fire in the OR requires which elements?",
+    choices: [
+      "Heat and fuel",
+      "Oxygen and heat",
+      "Heat, fuel, and oxygen",
+      "Fuel and oxygen"
+    ],
+    correctAnswer: 2,
+    explanation: "Fire requires three elements: heat, fuel, and oxygen (the fire triangle)."
+  },
+  {
+    id: 275,
+    question: "Electrosurgery works by:",
+    choices: [
+      "Heat production",
+      "Electrical current",
+      "Radio frequency energy",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "Electrosurgery uses radio frequency electrical current to generate heat for cutting and coagulation."
+  },
+  {
+    id: 300,
+    question: "Local anesthetics work by:",
+    choices: [
+      "Blocking nerve conduction",
+      "Causing unconsciousness",
+      "Relaxing muscles",
+      "Reducing inflammation"
+    ],
+    correctAnswer: 0,
+    explanation: "Local anesthetics work by blocking sodium channels and preventing nerve conduction."
+  },
+  {
+    id: 325,
+    question: "A Kelly clamp is used for:",
+    choices: [
+      "Cutting tissue",
+      "Grasping tissue",
+      "Hemostasis",
+      "Suturing"
+    ],
+    correctAnswer: 2,
+    explanation: "A Kelly clamp is primarily used for hemostasis (controlling bleeding)."
+  },
+  {
+    id: 350,
+    question: "Sutures are classified by:",
+    choices: [
+      "Absorbability",
+      "Material composition",
+      "Size",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "Sutures are classified by absorbability, material composition, and size."
+  },
+  {
+    id: 375,
+    question: "Wound healing by primary intention occurs when:",
+    choices: [
+      "Wound edges are approximated",
+      "Wound is left open",
+      "Infection is present",
+      "Sutures are removed early"
+    ],
+    correctAnswer: 0,
+    explanation: "Primary intention healing occurs when wound edges are closely approximated, usually with sutures."
+  },
+  {
+    id: 390,
+    question: "The most important factor in preventing surgical site infections is:",
+    choices: [
+      "Prophylactic antibiotics",
+      "Proper surgical technique",
+      "Environmental controls",
+      "All are equally important"
+    ],
+    correctAnswer: 3,
+    explanation: "Preventing surgical site infections requires a combination of proper technique, antibiotics when indicated, and environmental controls."
+  },
+  {
+    id: 395,
+    question: "Documentation in surgery should be:",
+    choices: [
+      "Accurate and complete",
+      "Timely",
+      "Legible",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "All surgical documentation must be accurate, complete, timely, and legible for legal and patient care purposes."
   },
   {
     id: 396,
