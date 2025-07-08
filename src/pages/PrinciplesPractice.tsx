@@ -21,6 +21,9 @@ const PrinciplesPractice = () => {
   };
 
   console.log('Total Principles Practice questions:', principlesPracticeQuestions.length);
+  console.log('First 5 question IDs:', principlesPracticeQuestions.slice(0, 5).map(q => q.id));
+  console.log('Last 5 question IDs:', principlesPracticeQuestions.slice(-5).map(q => q.id));
+  console.log('Questions passed to QuestionPractice:', principlesPracticeQuestions.length);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
