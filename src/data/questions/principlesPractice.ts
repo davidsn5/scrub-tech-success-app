@@ -2643,552 +2643,277 @@ export const principlesPracticeQuestions: Question[] = [
   },
   {
     id: 271,
-    question: "Which grade of surgical instrument is made from the highest quality stainless steel and intended for repeated sterilization?",
+    question: "Which grade of surgical instrument is made from the highest quality stainless steel, resistant to corrosion, and intended for repeated sterilization?",
     choices: [
       "Floor-grade",
-      "Disposable-grade",
       "Surgical-grade",
-      "Laboratory-grade"
+      "Disposable-grade",
+      "Lab-grade"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 272,
-    question: "Titanium instruments are preferred over stainless steel because they are:",
+    question: "What material is preferred for surgical instruments because it is nonmagnetic, lightweight, and corrosion-resistant?",
     choices: [
-      "Heavier and less durable",
-      "Magnetic and prone to corrosion",
-      "Nonmagnetic and resistant to corrosion",
-      "Less expensive and disposable"
+      "Stainless steel",
+      "Titanium",
+      "Tungsten carbide",
+      "Gold"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 273,
-    question: "A highly polished finish on surgical instruments is beneficial because:",
+    question: "What is the advantage of an ebonized finish on surgical instruments?",
     choices: [
-      "It eliminates all glare",
-      "It increases corrosion resistance",
-      "It prevents staining",
-      "It reflects laser beams"
+      "Improves cutting edge",
+      "Reduces glare",
+      "Increases sterilization time",
+      "Makes them disposable"
     ],
     correctAnswer: 1
   },
   {
     id: 274,
-    question: "An ebonized finish is especially useful because it:",
+    question: "Tungsten carbide inserts in scissors help to:",
     choices: [
-      "Strengthens the instrument",
-      "Resists breakage",
-      "Reduces laser beam deflection",
-      "Creates a polished shine"
+      "Make the instrument lighter",
+      "Sharpen cutting edges longer",
+      "Reduce the cost",
+      "Make the scissors nonmagnetic"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 275,
-    question: "Which material is used to strengthen the jaws of needle holders and extend cutting edge life of scissors?",
+    question: "Which instrument part is the working end that comes into contact with tissue?",
     choices: [
-      "Stainless steel",
-      "Carbon steel",
-      "Tungsten carbide",
-      "Titanium oxide"
+      "Box lock",
+      "Shank",
+      "Jaw",
+      "Ratchet"
     ],
     correctAnswer: 2
   },
   {
     id: 276,
-    question: "Instruments coated with diamond dust have improved:",
+    question: "Scissors designed for delicate tissue dissection often have what type of blades?",
     choices: [
-      "Magnetism",
-      "Durability of jaws",
-      "Weight reduction",
-      "Corrosion"
+      "Tungsten carbide blades",
+      "Serrated blades",
+      "Curved, sharp blades",
+      "Straight, dull blades"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 277,
-    question: "The most common type of handle found on surgical instruments is:",
+    question: "Which of the following is NOT a classification of surgical instruments by function?",
     choices: [
-      "Pistol grip",
-      "Finger rings",
-      "Spring-loaded",
-      "Box lock"
+      "Grasping and holding",
+      "Retracting",
+      "Finishing and polishing",
+      "Cutting and dissecting"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 278,
-    question: "Which part of a surgical instrument locks together to keep it closed?",
+    question: "What is the most commonly used scalpel blade for general surgical procedures?",
     choices: [
-      "Ratchet",
-      "Shank",
-      "Serration",
-      "Tip"
+      "#11",
+      "#15",
+      "#12",
+      "#10"
     ],
-    correctAnswer: 0
+    correctAnswer: 3
   },
   {
     id: 279,
-    question: "The shank of a surgical instrument refers to:",
+    question: "The term \"blunt dissection\" refers to:",
     choices: [
-      "The sharp working end",
-      "The handles and rings",
-      "The long shaft from handle to tip",
-      "The serrated jaws"
+      "Cutting bone",
+      "Incising delicate tissue",
+      "Spreading and opening tissue planes",
+      "Removing foreign material"
     ],
     correctAnswer: 2
   },
   {
     id: 280,
-    question: "Scissors are different from clamps because:",
-    choices: [
-      "Scissors have ratchets",
-      "Scissors have blades instead of jaws",
-      "Scissors are used for holding",
-      "Scissors have box locks"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 281,
-    question: "Which of the following is not a common function classification of instruments?",
-    choices: [
-      "Cutting and dissecting",
-      "Grasping and holding",
-      "Imaging and scanning",
-      "Suturing"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 282,
-    question: "Which instrument is used specifically to make small incisions and hold small blades, like #69?",
-    choices: [
-      "Scalpel with #3 handle",
-      "Beaver blade handle",
-      "Mayo scissors",
-      "Ring forceps"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 283,
-    question: "The #10 blade is most commonly loaded onto which handle?",
-    choices: [
-      "#7",
-      "#4",
-      "Beaver",
-      "#3"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 284,
-    question: "Which blade is specifically used for tonsillectomy?",
-    choices: [
-      "#15",
-      "#11",
-      "#12",
-      "#20"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 285,
-    question: "Which scalpel blade is commonly used for long and deep abdominal incisions?",
-    choices: [
-      "#10",
-      "#12",
-      "#20",
-      "#11"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 286,
-    question: "Which type of finish is least reflective and recommended for laser procedures?",
-    choices: [
-      "Satin",
-      "Ebonized",
-      "Polished",
-      "Gold plated"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 287,
-    question: "Ring forceps are considered:",
-    choices: [
-      "Cutting and dissecting",
-      "Accessory instruments",
-      "Suction and aspiration",
-      "Viewing instruments"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 288,
-    question: "A cottonoid is classified as:",
-    choices: [
-      "An accessory instrument",
-      "A dressing",
-      "A towel clip",
-      "A scalpel blade"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 289,
-    question: "The tips of an instrument may have all of the following except:",
-    choices: [
-      "Rounded ends",
-      "Teeth",
-      "Ratchets",
-      "Sharp points"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 290,
-    question: "Serrations are located:",
-    choices: [
-      "At the tips for gripping",
-      "On the handle for decoration",
-      "Inside the shank for locking",
-      "On the blade edge for cutting"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 291,
-    question: "Scalpel blades must be loaded onto handles using:",
-    choices: [
-      "Gloves",
-      "Fingers",
-      "Needle holder",
-      "Cottonoid"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 292,
-    question: "Which of the following is true about tungsten carbide scissors?",
-    choices: [
-      "They are lighter and more flexible",
-      "They dull faster than stainless steel",
-      "They maintain sharpness longer",
-      "They cannot be used in surgery"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 293,
-    question: "Which classification of instrument is used to widen a body opening?",
-    choices: [
-      "Cutting and dissecting",
-      "Dilating",
-      "Suturing",
-      "Suctioning"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 294,
-    question: "The part of a clamp where the two shank pieces cross is called:",
-    choices: [
-      "Serration",
-      "Box lock",
-      "Shank",
-      "Jaw"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 295,
-    question: "Which scalpel handle is longer and used for deep wounds?",
-    choices: [
-      "#4",
-      "#7",
-      "#3",
-      "Beaver"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 296,
-    question: "Which type of scissors is recommended for cutting only suture material?",
-    choices: [
-      "Curved Mayo",
-      "Metzenbaum",
-      "Straight Mayo",
-      "Jamison"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 297,
-    question: "Scissors with tungsten carbide blades can be identified by:",
-    choices: [
-      "Black chromium finish",
-      "Gold-plated handles",
-      "Diamond dust coating",
-      "Polished finish"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 298,
-    question: "Thumb forceps are also called:",
-    choices: [
-      "Ratchets",
-      "Pick-ups",
-      "Clamps",
-      "Retractors"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 299,
-    question: "Which forceps are most appropriate for holding delicate tissues such as liver or bowel?",
+    question: "Which type of forceps is typically used on delicate tissues such as vascular or bowel tissue?",
     choices: [
       "Adson with teeth",
       "Russian",
-      "DeBakey",
+      "Smooth or serrated thumb forceps",
       "Kocher"
     ],
     correctAnswer: 2
   },
   {
-    id: 300,
-    question: "The Kocher instrument typically has:",
+    id: 281,
+    question: "A tenaculum is used to:",
     choices: [
-      "Smooth jaws",
-      "Serrated tips only",
-      "One tooth on one tip and two on the other",
-      "Tungsten carbide jaws"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 301,
-    question: "Bone-holding forceps are usually:",
-    choices: [
-      "Non-ratcheted and spring loaded",
-      "Ratcheted and serrated",
-      "Smooth and flexible",
-      "Used only on soft tissue"
+      "Hold bone fragments",
+      "Hold fibrous tissue during dissection",
+      "Cut heavy tissue",
+      "Spread tissue planes"
     ],
     correctAnswer: 1
   },
   {
-    id: 302,
-    question: "Which clamp is designed to occlude blood flow temporarily with minimal damage to vessels?",
+    id: 282,
+    question: "Which clamp is specifically designed to occlude blood vessels?",
     choices: [
-      "Bulldog clamp",
-      "Backhaus towel clamp",
-      "Kocher clamp",
-      "Allis clamp"
+      "Kocher",
+      "Bulldog",
+      "Kelly",
+      "Babcock"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
-    id: 303,
-    question: "Hemostatic clamps are primarily used to:",
+    id: 283,
+    question: "Self-retaining retractors:",
     choices: [
-      "Retract tissue",
-      "Hold bone fragments",
-      "Occlude bleeding vessels",
+      "Require constant hand-holding",
+      "Are double-ended",
+      "Stay in place using mechanical means",
+      "Are single-use only"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 284,
+    question: "The primary purpose of a viewing instrument is to:",
+    choices: [
+      "Retract and expose tissue",
+      "Visualize internal structures",
+      "Cut tissue",
+      "Stabilize bone"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 285,
+    question: "Probes are commonly used to explore:",
+    choices: [
+      "Skin incisions",
+      "Cavities, ducts, or vessels",
+      "Bone fractures",
+      "Deep muscle layers"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 286,
+    question: "Dilators are used to:",
+    choices: [
+      "Cut and excise tissue",
+      "Gradually enlarge an orifice or duct",
+      "Occlude a blood vessel",
+      "Visualize internal structures"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 287,
+    question: "Which instrument holds a curved suture needle during suturing?",
+    choices: [
+      "Scalpel",
+      "Needle holder",
+      "Tenaculum",
+      "Forceps"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 288,
+    question: "Which suction tip is commonly used for pharyngeal suctioning in a tonsillectomy?",
+    choices: [
+      "Poole",
+      "Yankauer",
+      "Frazier",
+      "Baron"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 289,
+    question: "The trocar and cannula assembly is used to:",
+    choices: [
+      "Cut tissue",
+      "Visualize deep structures",
+      "Drain fluid or allow endoscope insertion",
       "Spread tissue planes"
     ],
     correctAnswer: 2
   },
   {
-    id: 304,
-    question: "The Weitlaner and Balfour retractors are examples of:",
+    id: 290,
+    question: "Microinstruments are usually made of titanium because:",
     choices: [
-      "Self-retaining retractors",
-      "Probes",
-      "Hemostatic clamps",
-      "Viewing instruments"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 305,
-    question: "The Thompson retractor is unique because it:",
-    choices: [
-      "Is handheld",
-      "Uses tungsten carbide blades",
-      "Attaches to the OR table",
-      "Is disposable"
+      "They are disposable",
+      "They are heavier and more stable",
+      "They reduce glare and are lightweight",
+      "They cut more effectively"
     ],
     correctAnswer: 2
   },
   {
-    id: 306,
-    question: "Sharp rake-like retractors are best suited for:",
+    id: 291,
+    question: "Power saws use which type of motion to cut?",
     choices: [
-      "Non-vital structures like fat or skin",
-      "Brain tissue",
-      "Large bone",
-      "Deep abdominal viscera"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 307,
-    question: "The Vienna nasal speculum is classified as a:",
-    choices: [
-      "Self-retaining retractor",
-      "Viewing instrument",
-      "Probe",
-      "Dilator"
+      "Rotary only",
+      "Oscillating or reciprocating",
+      "Serrating",
+      "Blunt"
     ],
     correctAnswer: 1
   },
   {
-    id: 308,
-    question: "A malleable instrument used to explore a fistula is called a:",
+    id: 292,
+    question: "The instrument cycle includes all of the following EXCEPT:",
     choices: [
-      "Dilator",
-      "Probe",
-      "Retractor",
-      "Speculum"
+      "Sterilization",
+      "Storage",
+      "Use of for unauthorized purposes",
+      "Cleaning and decontamination"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 293,
+    question: "Why is an instrument list count sheet important?",
+    choices: [
+      "It ensures the instruments are sterilized",
+      "It minimizes errors and tracks missing instruments",
+      "It determines the type of surgery",
+      "It guides the surgeon"
     ],
     correctAnswer: 1
   },
   {
-    id: 309,
-    question: "Which type of dilator is double-ended and commonly used in gynecologic procedures?",
+    id: 294,
+    question: "Instruments should always be passed with:",
     choices: [
-      "Van Buren",
-      "Bougie",
-      "Heaney or Hegar",
-      "Urethral"
+      "Tips pointing upward",
+      "Safety mechanisms off",
+      "The safety switch in the \"off\" position",
+      "Clean gloves only"
     ],
     correctAnswer: 2
   },
   {
-    id: 310,
-    question: "Single-ended urethral dilators are shorter and usually used in:",
+    id: 295,
+    question: "Which of the following is a recommended best practice for delicate instruments like microinstruments?",
     choices: [
-      "Women",
-      "Men",
-      "Children",
-      "Brain surgery"
+      "Use for multiple purposes",
+      "Handle with care to avoid damage",
+      "Skip sterilization to prevent misalignment",
+      "Always polish to a high shine"
     ],
     correctAnswer: 1
-  },
-  {
-    id: 311,
-    question: "Which material is added to scissors to maintain sharpness longer than stainless steel?",
-    choices: [
-      "Titanium",
-      "Tungsten carbide",
-      "Diamond dust",
-      "Ebonized steel"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 312,
-    question: "The term \"self-retaining\" means:",
-    choices: [
-      "The instrument holds itself in place",
-      "The instrument is disposable",
-      "The surgeon must hold it",
-      "It is single-use only"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 313,
-    question: "Which retractor is bendable and also called a Ribbon retractor?",
-    choices: [
-      "Thompson",
-      "Greenberg",
-      "Malleable",
-      "Gelpi"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 314,
-    question: "Bulldog vascular clamps are:",
-    choices: [
-      "Spring-loaded and atraumatic",
-      "Used on bone",
-      "Self-retaining retractors",
-      "Always disposable"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 315,
-    question: "The term \"occlude\" in surgical instruments refers to:",
-    choices: [
-      "Grasping",
-      "Visualizing",
-      "Constricting or blocking",
-      "Retracting"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 316,
-    question: "Metzenbaum scissors are most appropriate for:",
-    choices: [
-      "Cutting suture only",
-      "Cutting heavy tissue",
-      "Cutting medium-to-fine tissue",
-      "Cutting bone"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 317,
-    question: "Which feature is often added to clamp jaws to improve traction on tissue?",
-    choices: [
-      "Teeth",
-      "Ratchets",
-      "Serrations",
-      "Ebonized finish"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 318,
-    question: "Bookwalter and O'Connor-O'Sullivan are examples of:",
-    choices: [
-      "Self-retaining abdominal retractors",
-      "Bone-holding forceps",
-      "Dilators",
-      "Hemostatic clamps"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 319,
-    question: "The primary function of viewing instruments is:",
-    choices: [
-      "Occlude vessels",
-      "Visualize structures",
-      "Hold bone in place",
-      "Cut tissue"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 320,
-    question: "Probes are most commonly used in which types of sets?",
-    choices: [
-      "Abdominal, gallbladder, rectal",
-      "Neurosurgical",
-      "Orthopedic",
-      "Ophthalmic"
-    ],
-    correctAnswer: 0
   }
 ];
