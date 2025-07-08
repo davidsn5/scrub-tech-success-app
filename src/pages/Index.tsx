@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -20,7 +19,7 @@ const Index = () => {
       bgColor: "from-orange-50/90 to-orange-100/90",
       borderColor: "border-orange-200/60",
       link: "/intro-surgical-tech",
-      questionCount: 15
+      questionCount: 40
     },
     {
       title: "Principles and Practice of Surgical Technology",
