@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -50,7 +49,7 @@ const Index = () => {
       bgColor: "from-purple-50/90 to-purple-100/90",
       borderColor: "border-purple-200/60",
       link: "/medical-terminology",
-      questionCount: 100
+      questionCount: 40
     }
   ];
 
