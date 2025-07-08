@@ -2915,5 +2915,280 @@ export const principlesPracticeQuestions: Question[] = [
       "Beaver"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 296,
+    question: "Which type of scissors is recommended for cutting only suture material?",
+    choices: [
+      "Curved Mayo",
+      "Metzenbaum",
+      "Straight Mayo",
+      "Jamison"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 297,
+    question: "Scissors with tungsten carbide blades can be identified by:",
+    choices: [
+      "Black chromium finish",
+      "Gold-plated handles",
+      "Diamond dust coating",
+      "Polished finish"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 298,
+    question: "Thumb forceps are also called:",
+    choices: [
+      "Ratchets",
+      "Pick-ups",
+      "Clamps",
+      "Retractors"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 299,
+    question: "Which forceps are most appropriate for holding delicate tissues such as liver or bowel?",
+    choices: [
+      "Adson with teeth",
+      "Russian",
+      "DeBakey",
+      "Kocher"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 300,
+    question: "The Kocher instrument typically has:",
+    choices: [
+      "Smooth jaws",
+      "Serrated tips only",
+      "One tooth on one tip and two on the other",
+      "Tungsten carbide jaws"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 301,
+    question: "Bone-holding forceps are usually:",
+    choices: [
+      "Non-ratcheted and spring loaded",
+      "Ratcheted and serrated",
+      "Smooth and flexible",
+      "Used only on soft tissue"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 302,
+    question: "Which clamp is designed to occlude blood flow temporarily with minimal damage to vessels?",
+    choices: [
+      "Bulldog clamp",
+      "Backhaus towel clamp",
+      "Kocher clamp",
+      "Allis clamp"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 303,
+    question: "Hemostatic clamps are primarily used to:",
+    choices: [
+      "Retract tissue",
+      "Hold bone fragments",
+      "Occlude bleeding vessels",
+      "Spread tissue planes"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 304,
+    question: "The Weitlaner and Balfour retractors are examples of:",
+    choices: [
+      "Self-retaining retractors",
+      "Probes",
+      "Hemostatic clamps",
+      "Viewing instruments"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 305,
+    question: "The Thompson retractor is unique because it:",
+    choices: [
+      "Is handheld",
+      "Uses tungsten carbide blades",
+      "Attaches to the OR table",
+      "Is disposable"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 306,
+    question: "Sharp rake-like retractors are best suited for:",
+    choices: [
+      "Non-vital structures like fat or skin",
+      "Brain tissue",
+      "Large bone",
+      "Deep abdominal viscera"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 307,
+    question: "The Vienna nasal speculum is classified as a:",
+    choices: [
+      "Self-retaining retractor",
+      "Viewing instrument",
+      "Probe",
+      "Dilator"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 308,
+    question: "A malleable instrument used to explore a fistula is called a:",
+    choices: [
+      "Dilator",
+      "Probe",
+      "Retractor",
+      "Speculum"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 309,
+    question: "Which type of dilator is double-ended and commonly used in gynecologic procedures?",
+    choices: [
+      "Van Buren",
+      "Bougie",
+      "Heaney or Hegar",
+      "Urethral"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 310,
+    question: "Single-ended urethral dilators are shorter and usually used in:",
+    choices: [
+      "Women",
+      "Men",
+      "Children",
+      "Brain surgery"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 311,
+    question: "Which material is added to scissors to maintain sharpness longer than stainless steel?",
+    choices: [
+      "Titanium",
+      "Tungsten carbide",
+      "Diamond dust",
+      "Ebonized steel"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 312,
+    question: "The term \"self-retaining\" means:",
+    choices: [
+      "The instrument holds itself in place",
+      "The instrument is disposable",
+      "The surgeon must hold it",
+      "It is single-use only"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 313,
+    question: "Which retractor is bendable and also called a Ribbon retractor?",
+    choices: [
+      "Thompson",
+      "Greenberg",
+      "Malleable",
+      "Gelpi"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 314,
+    question: "Bulldog vascular clamps are:",
+    choices: [
+      "Spring-loaded and atraumatic",
+      "Used on bone",
+      "Self-retaining retractors",
+      "Always disposable"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 315,
+    question: "The term \"occlude\" in surgical instruments refers to:",
+    choices: [
+      "Grasping",
+      "Visualizing",
+      "Constricting or blocking",
+      "Retracting"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 316,
+    question: "Metzenbaum scissors are most appropriate for:",
+    choices: [
+      "Cutting suture only",
+      "Cutting heavy tissue",
+      "Cutting medium-to-fine tissue",
+      "Cutting bone"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 317,
+    question: "Which feature is often added to clamp jaws to improve traction on tissue?",
+    choices: [
+      "Teeth",
+      "Ratchets",
+      "Serrations",
+      "Ebonized finish"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 318,
+    question: "Bookwalter and O'Connor-O'Sullivan are examples of:",
+    choices: [
+      "Self-retaining abdominal retractors",
+      "Bone-holding forceps",
+      "Dilators",
+      "Hemostatic clamps"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 319,
+    question: "The primary function of viewing instruments is:",
+    choices: [
+      "Occlude vessels",
+      "Visualize structures",
+      "Hold bone in place",
+      "Cut tissue"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 320,
+    question: "Probes are most commonly used in which types of sets?",
+    choices: [
+      "Abdominal, gallbladder, rectal",
+      "Neurosurgical",
+      "Orthopedic",
+      "Ophthalmic"
+    ],
+    correctAnswer: 0
   }
 ];
