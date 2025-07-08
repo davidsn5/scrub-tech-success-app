@@ -20,6 +20,8 @@ const PrinciplesPractice = () => {
     });
   };
 
+  console.log('Total Principles Practice questions:', principlesPracticeQuestions.length);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
       {/* Header */}
@@ -41,7 +43,9 @@ const PrinciplesPractice = () => {
                   <span>Back to Home</span>
                 </Button>
               </Link>
-              <p className="text-sm text-gray-600">Exam Style Practice Questions</p>
+              <p className="text-sm text-gray-600">
+                Exam Style Practice Questions ({principlesPracticeQuestions.length} Questions Available)
+              </p>
             </div>
           </div>
         </div>
