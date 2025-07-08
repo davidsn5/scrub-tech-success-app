@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle } from 'lucide-react';
 import { Question } from '@/data/questions/introSurgicalTech';
 
 interface QuestionPracticeProps {
@@ -16,14 +16,30 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   categoryName, 
   onMissedQuestion 
 }) => {
+  const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [isComplete, setIsComplete] = useState(false);
 
-  const currentQuestion = questions[currentQuestionIndex];
+  // Initialize shuffled questions on component mount
+  useEffect(() => {
+    setShuffledQuestions([...questions]);
+  }, [questions]);
+
+  const currentQuestion = shuffledQuestions[currentQuestionIndex];
   const isCorrect = selectedAnswer === currentQuestion?.correctAnswer;
+
+  const shuffleQuestions = () => {
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    setShuffledQuestions(shuffled);
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setScore({ correct: 0, total: 0 });
+    setIsComplete(false);
+  };
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return;
@@ -44,7 +60,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < shuffledQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null);
       setShowResult(false);
@@ -61,7 +77,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
     setIsComplete(false);
   };
 
-  if (questions.length === 0) {
+  if (shuffledQuestions.length === 0) {
     return (
       <Card className="p-8 text-center">
         <p className="text-gray-600">No questions available for this category yet.</p>
@@ -89,6 +105,14 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
             <RotateCcw className="h-4 w-4 mr-2" />
             Try Again
           </Button>
+          <Button 
+            onClick={shuffleQuestions}
+            variant="outline"
+            className="border-teal-300 hover:bg-teal-50"
+          >
+            <Shuffle className="h-4 w-4 mr-2" />
+            Shuffle & Restart
+          </Button>
         </div>
       </Card>
     );
@@ -96,19 +120,33 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
 
   return (
     <div className="space-y-6">
+      {/* Controls Section */}
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="text-center sm:text-left">
+          <span className="text-sm text-gray-600">
+            Question {currentQuestionIndex + 1} of {shuffledQuestions.length}
+          </span>
+          <p className="text-xs text-gray-500 mt-1">
+            Total questions available: {shuffledQuestions.length}
+          </p>
+        </div>
+        <Button 
+          onClick={shuffleQuestions}
+          variant="outline"
+          size="sm"
+          className="border-teal-300 hover:bg-teal-50"
+        >
+          <Shuffle className="h-4 w-4 mr-2" />
+          Shuffle Questions
+        </Button>
+      </div>
+
       {/* Progress Bar */}
       <div className="bg-gray-200/60 rounded-full h-2">
         <div 
           className="bg-gradient-to-r from-orange-500/80 to-teal-500/80 h-2 rounded-full transition-all duration-300"
-          style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+          style={{ width: `${((currentQuestionIndex + 1) / shuffledQuestions.length) * 100}%` }}
         />
-      </div>
-
-      {/* Question Counter */}
-      <div className="text-center">
-        <span className="text-sm text-gray-600">
-          Question {currentQuestionIndex + 1} of {questions.length}
-        </span>
       </div>
 
       {/* Question Card */}
@@ -185,7 +223,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
                   onClick={handleNextQuestion}
                   className="bg-gradient-to-r from-orange-500/90 to-teal-500/90 hover:opacity-90 transition-opacity text-white"
                 >
-                  {currentQuestionIndex < questions.length - 1 ? (
+                  {currentQuestionIndex < shuffledQuestions.length - 1 ? (
                     <>
                       Next Question
                       <ArrowRight className="h-4 w-4 ml-2" />
