@@ -2367,6 +2367,1711 @@ export const principlesPracticeQuestions: Question[] = [
     correctAnswer: 0
   },
   {
+    id: 216,
+    question: "Which type of suture is non-absorbable?",
+    choices: [
+      "Catgut",
+      "Vicryl",
+      "Silk",
+      "PDS"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 217,
+    question: "What is the primary function of hemostats?",
+    choices: [
+      "Cut tissue",
+      "Control bleeding",
+      "Retract tissue",
+      "Suture wounds"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 218,
+    question: "Which scissors are used for cutting heavy tissue?",
+    choices: [
+      "Mayo scissors",
+      "Metzenbaum scissors",
+      "Iris scissors",
+      "Suture scissors"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 219,
+    question: "What is the most commonly used retractor in abdominal surgery?",
+    choices: [
+      "Deaver retractor",
+      "Richardson retractor",
+      "Bookwalter retractor",
+      "Balfour retractor"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 220,
+    question: "Which forceps are used for grasping delicate tissue?",
+    choices: [
+      "Tissue forceps",
+      "Adson forceps",
+      "Russian forceps",
+      "Allis forceps"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 221,
+    question: "What is the purpose of a trocar?",
+    choices: [
+      "Create pneumoperitoneum",
+      "Provide laparoscopic access",
+      "Insufflate abdomen",
+      "All of the above"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 222,
+    question: "Which electrosurgical unit setting is used for cutting?",
+    choices: [
+      "Coagulation",
+      "Blend",
+      "Cut",
+      "Fulguration"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 223,
+    question: "What is the primary advantage of robotic surgery?",
+    choices: [
+      "Reduced cost",
+      "Faster procedures",
+      "Enhanced precision",
+      "Shorter learning curve"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 224,
+    question: "Which imaging technique is commonly used intraoperatively?",
+    choices: [
+      "CT scan",
+      "MRI",
+      "Fluoroscopy",
+      "Ultrasound"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 225,
+    question: "What is the standard for surgical instrument cleaning?",
+    choices: [
+      "Manual cleaning only",
+      "Ultrasonic cleaning",
+      "Both manual and ultrasonic",
+      "Steam cleaning"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 226,
+    question: "Which material is preferred for surgical mesh?",
+    choices: [
+      "Silk",
+      "Polypropylene",
+      "Cotton",
+      "Nylon"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 227,
+    question: "What is the primary concern with tourniquet use?",
+    choices: [
+      "Infection",
+      "Ischemia",
+      "Bleeding",
+      "Pain"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 228,
+    question: "Which laser is commonly used in surgery?",
+    choices: [
+      "CO2 laser",
+      "Argon laser",
+      "Nd:YAG laser",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 229,
+    question: "What is the purpose of surgical counts?",
+    choices: [
+      "Inventory management",
+      "Prevent retained items",
+      "Quality control",
+      "Cost tracking"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 230,
+    question: "Which solution is used for irrigation in surgery?",
+    choices: [
+      "Normal saline",
+      "Sterile water",
+      "Lactated Ringer's",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 231,
+    question: "What is the primary function of surgical staplers?",
+    choices: [
+      "Cut tissue",
+      "Anastomose tissue",
+      "Retract tissue",
+      "Coagulate tissue"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 232,
+    question: "Which type of endoscope is used for arthroscopy?",
+    choices: [
+      "Flexible endoscope",
+      "Rigid endoscope",
+      "Semi-rigid endoscope",
+      "Capsule endoscope"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 233,
+    question: "What is the standard for surgical hand hygiene?",
+    choices: [
+      "2 minutes",
+      "3-5 minutes",
+      "10 minutes",
+      "15 minutes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 234,
+    question: "Which material is commonly used for surgical clips?",
+    choices: [
+      "Stainless steel",
+      "Titanium",
+      "Absorbable polymer",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 235,
+    question: "What is the purpose of surgical drains?",
+    choices: [
+      "Prevent fluid accumulation",
+      "Monitor bleeding",
+      "Provide medication delivery",
+      "All of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 236,
+    question: "Which type of anesthesia affects the entire body?",
+    choices: [
+      "Local anesthesia",
+      "Regional anesthesia",
+      "General anesthesia",
+      "Topical anesthesia"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 237,
+    question: "What is the primary goal of minimally invasive surgery?",
+    choices: [
+      "Reduce surgical time",
+      "Reduce patient trauma",
+      "Reduce costs",
+      "Improve visualization"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 238,
+    question: "Which technology is used for image-guided surgery?",
+    choices: [
+      "GPS navigation",
+      "Computer navigation",
+      "Robotic systems",
+      "All of the above"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 239,
+    question: "What is the standard for surgical specimen handling?",
+    choices: [
+      "Immediate fixation",
+      "Proper labeling",
+      "Chain of custody",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 240,
+    question: "Which factor is most important for surgical team communication?",
+    choices: [
+      "Hierarchy",
+      "Clarity",
+      "Speed",
+      "Volume"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 241,
+    question: "What is the primary purpose of surgical simulation?",
+    choices: [
+      "Entertainment",
+      "Cost reduction",
+      "Training and education",
+      "Research only"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 242,
+    question: "Which type of surgical approach is used for cardiac surgery?",
+    choices: [
+      "Median sternotomy",
+      "Thoracotomy",
+      "Minimally invasive",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 243,
+    question: "What is the standard for surgical instrument processing?",
+    choices: [
+      "Cleaning only",
+      "Sterilization only",
+      "Cleaning and sterilization",
+      "Disinfection only"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 244,
+    question: "Which material is preferred for surgical sutures in contaminated wounds?",
+    choices: [
+      "Silk",
+      "Nylon",
+      "Absorbable sutures",
+      "Non-absorbable sutures"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 245,
+    question: "What is the primary concern with surgical smoke?",
+    choices: [
+      "Visibility",
+      "Odor",
+      "Health hazards",
+      "Equipment damage"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 246,
+    question: "Which technology is used for tissue welding?",
+    choices: [
+      "Ultrasonic energy",
+      "Radiofrequency energy",
+      "Plasma energy",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 247,
+    question: "What is the standard for surgical site marking?",
+    choices: [
+      "Verbal confirmation",
+      "Written documentation",
+      "Indelible marking",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 248,
+    question: "Which type of closure is preferred for cosmetic surgery?",
+    choices: [
+      "Staples",
+      "Sutures",
+      "Adhesive strips",
+      "Tissue adhesive"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 249,
+    question: "What is the primary advantage of single-use instruments?",
+    choices: [
+      "Cost savings",
+      "Convenience",
+      "Sterility assurance",
+      "Performance"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 250,
+    question: "Which monitoring device is essential for patient safety?",
+    choices: [
+      "Pulse oximeter",
+      "Capnography",
+      "ECG",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 251,
+    question: "What is the primary goal of enhanced recovery protocols?",
+    choices: [
+      "Reduce costs",
+      "Improve patient outcomes",
+      "Increase efficiency",
+      "All of the above"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 252,
+    question: "Which technique is used for tissue approximation?",
+    choices: [
+      "Suturing",
+      "Stapling",
+      "Adhesive bonding",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 253,
+    question: "What is the standard for surgical team briefing?",
+    choices: [
+      "Before first case",
+      "Between cases",
+      "Before each case",
+      "End of day"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 254,
+    question: "Which factor affects surgical wound healing?",
+    choices: [
+      "Patient age",
+      "Nutrition status",
+      "Comorbidities",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 255,
+    question: "What is the primary purpose of surgical quality metrics?",
+    choices: [
+      "Regulatory compliance",
+      "Performance improvement",
+      "Cost control",
+      "All of the above"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 256,
+    question: "Which technology is used for precision surgery?",
+    choices: [
+      "Image guidance",
+      "Robotics",
+      "Navigation systems",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 257,
+    question: "What is the standard for surgical instrument tracking?",
+    choices: [
+      "Manual logs",
+      "Barcode systems",
+      "RFID technology",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 258,
+    question: "Which approach is preferred for hernia repair?",
+    choices: [
+      "Open repair",
+      "Laparoscopic repair",
+      "Robotic repair",
+      "Depends on patient factors"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 259,
+    question: "What is the primary concern with surgical positioning?",
+    choices: [
+      "Comfort",
+      "Access",
+      "Patient safety",
+      "All of the above"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 260,
+    question: "Which material is commonly used for surgical implants?",
+    choices: [
+      "Titanium",
+      "Stainless steel",
+      "Ceramics",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 261,
+    question: "What is the standard for surgical case documentation?",
+    choices: [
+      "Operative report",
+      "Procedure notes",
+      "Billing codes",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 262,
+    question: "Which factor is most critical for surgical success?",
+    choices: [
+      "Technology",
+      "Technique",
+      "Teamwork",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 263,
+    question: "What is the primary goal of surgical education?",
+    choices: [
+      "Technical skills",
+      "Knowledge acquisition",
+      "Professional development",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 264,
+    question: "Which technology is revolutionizing surgery?",
+    choices: [
+      "Artificial intelligence",
+      "Virtual reality",
+      "3D printing",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 265,
+    question: "What is the future of surgical practice?",
+    choices: [
+      "Personalized medicine",
+      "Precision surgery",
+      "Minimally invasive techniques",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 266,
+    question: "Which type of surgical needle is used for vascular surgery?",
+    choices: [
+      "Cutting needle",
+      "Taper needle",
+      "Blunt needle",
+      "Reverse cutting needle"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 267,
+    question: "What is the primary function of surgical clips?",
+    choices: [
+      "Tissue approximation",
+      "Hemostasis",
+      "Tissue marking",
+      "Wound closure"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 268,
+    question: "Which imaging modality is best for soft tissue visualization?",
+    choices: [
+      "X-ray",
+      "CT scan",
+      "MRI",
+      "Ultrasound"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 269,
+    question: "What is the standard for surgical instrument handling?",
+    choices: [
+      "Single-handed technique",
+      "Two-handed technique",
+      "Depends on instrument",
+      "Either technique"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 270,
+    question: "Which factor affects electrosurgical performance?",
+    choices: [
+      "Tissue impedance",
+      "Power setting",
+      "Electrode contact",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 271,
+    question: "What is the primary advantage of biodegradable implants?",
+    choices: [
+      "Cost effectiveness",
+      "No removal required",
+      "Better biocompatibility",
+      "Easier implantation"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 272,
+    question: "Which technique is used for microsurgery?",
+    choices: [
+      "Loupe magnification",
+      "Microscope visualization",
+      "Robotic assistance",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 273,
+    question: "What is the standard for surgical specimen preservation?",
+    choices: [
+      "Refrigeration",
+      "Freezing",
+      "Formalin fixation",
+      "Depends on test required"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 274,
+    question: "Which material is preferred for cardiovascular surgery?",
+    choices: [
+      "Silk sutures",
+      "Polypropylene sutures",
+      "Absorbable sutures",
+      "Steel sutures"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 275,
+    question: "What is the primary concern with surgical adhesions?",
+    choices: [
+      "Pain",
+      "Infection",
+      "Bowel obstruction",
+      "Bleeding"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 276,
+    question: "Which technology improves surgical outcomes?",
+    choices: [
+      "Enhanced imaging",
+      "Improved instruments",
+      "Better techniques",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 277,
+    question: "What is the standard for surgical team training?",
+    choices: [
+      "Didactic learning",
+      "Hands-on practice",
+      "Simulation training",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 278,
+    question: "Which approach minimizes surgical trauma?",
+    choices: [
+      "Smaller incisions",
+      "Gentle tissue handling",
+      "Precise dissection",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 279,
+    question: "What is the primary goal of surgical innovation?",
+    choices: [
+      "Improved outcomes",
+      "Reduced complications",
+      "Enhanced recovery",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 280,
+    question: "Which factor is essential for surgical excellence?",
+    choices: [
+      "Continuous learning",
+      "Quality improvement",
+      "Patient focus",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 281,
+    question: "What is the primary benefit of surgical checklists?",
+    choices: [
+      "Improved communication",
+      "Reduced errors",
+      "Enhanced safety",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 282,
+    question: "Which technique is used for tissue reconstruction?",
+    choices: [
+      "Grafting",
+      "Flap surgery",
+      "Tissue engineering",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 283,
+    question: "What is the standard for surgical infection prevention?",
+    choices: [
+      "Antibiotic prophylaxis",
+      "Sterile technique",
+      "Proper preparation",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 284,
+    question: "Which material is used for temporary surgical support?",
+    choices: [
+      "Absorbable mesh",
+      "Non-absorbable mesh",
+      "Biologic mesh",
+      "All of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 285,
+    question: "What is the primary advantage of outpatient surgery?",
+    choices: [
+      "Cost savings",
+      "Patient convenience",
+      "Reduced infection risk",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 286,
+    question: "Which technology enhances surgical precision?",
+    choices: [
+      "Computer assistance",
+      "Robotic systems",
+      "Image guidance",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 287,
+    question: "What is the standard for surgical quality assurance?",
+    choices: [
+      "Peer review",
+      "Outcome monitoring",
+      "Continuous improvement",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 288,
+    question: "Which approach is best for complex procedures?",
+    choices: [
+      "Multidisciplinary team",
+      "Staged procedures",
+      "Advanced technology",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 289,
+    question: "What is the future direction of surgery?",
+    choices: [
+      "Personalized approaches",
+      "Minimally invasive techniques",
+      "Technology integration",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 290,
+    question: "Which principle guides surgical practice?",
+    choices: [
+      "First, do no harm",
+      "Patient safety first",
+      "Continuous improvement",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 291,
+    question: "What is the primary concern when administering blood products?",
+    choices: [
+      "Compatibility testing",
+      "Proper identification",
+      "Monitoring for reactions",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 292,
+    question: "Which technique is used for nerve repair?",
+    choices: [
+      "Primary repair",
+      "Nerve grafting",
+      "Nerve transfer",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 293,
+    question: "What is the standard for surgical wound classification?",
+    choices: [
+      "Clean wounds only",
+      "Four-class system",
+      "Simple vs complex",
+      "Acute vs chronic"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 294,
+    question: "Which factor affects surgical decision-making?",
+    choices: [
+      "Patient factors",
+      "Surgical factors",
+      "Environmental factors",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 295,
+    question: "What is the primary goal of surgical research?",
+    choices: [
+      "Improved techniques",
+      "Better outcomes",
+      "New technologies",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 296,
+    question: "Which approach is used for emergency surgery?",
+    choices: [
+      "Rapid assessment",
+      "Life-saving priorities",
+      "Damage control",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 297,
+    question: "What is the standard for surgical consent?",
+    choices: [
+      "Informed consent",
+      "Written documentation",
+      "Witness verification",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 298,
+    question: "Which technology is used for surgical navigation?",
+    choices: [
+      "GPS systems",
+      "Computer guidance",
+      "Image integration",
+      "All of the above"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 299,
+    question: "What is the primary benefit of surgical specialization?",
+    choices: [
+      "Expertise development",
+      "Improved outcomes",
+      "Efficient care",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 300,
+    question: "Which principle is fundamental to surgery?",
+    choices: [
+      "Sterile technique",
+      "Gentle handling",
+      "Precise execution",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 301,
+    question: "What is the primary purpose of surgical drapes?",
+    choices: [
+      "Patient warmth",
+      "Sterile barrier",
+      "Fluid collection",
+      "Equipment organization"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 302,
+    question: "Which technique is used for laparoscopic surgery?",
+    choices: [
+      "Pneumoperitoneum",
+      "Trocar placement",
+      "Camera visualization",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 303,
+    question: "What is the standard for surgical instrument care?",
+    choices: [
+      "Proper cleaning",
+      "Appropriate sterilization",
+      "Careful handling",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 304,
+    question: "Which factor is critical for surgical success?",
+    choices: [
+      "Proper planning",
+      "Skilled execution",
+      "Team coordination",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 305,
+    question: "What is the primary goal of surgical education?",
+    choices: [
+      "Skill development",
+      "Knowledge transfer",
+      "Professional growth",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 306,
+    question: "Which approach ensures surgical quality?",
+    choices: [
+      "Standardized procedures",
+      "Continuous monitoring",
+      "Regular assessment",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 307,
+    question: "What is the foundation of surgical practice?",
+    choices: [
+      "Scientific knowledge",
+      "Clinical experience",
+      "Ethical principles",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 308,
+    question: "Which technology advances surgical care?",
+    choices: [
+      "Imaging systems",
+      "Robotic platforms",
+      "Navigation tools",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 309,
+    question: "What is the essence of surgical excellence?",
+    choices: [
+      "Technical proficiency",
+      "Patient focus",
+      "Continuous improvement",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 310,
+    question: "Which principle guides surgical innovation?",
+    choices: [
+      "Patient benefit",
+      "Safety first",
+      "Evidence-based practice",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 311,
+    question: "What is the primary benefit of minimally invasive techniques?",
+    choices: [
+      "Smaller incisions",
+      "Reduced pain",
+      "Faster recovery",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 312,
+    question: "Which factor enhances surgical outcomes?",
+    choices: [
+      "Advanced technology",
+      "Skilled techniques",
+      "Team collaboration",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 313,
+    question: "What is the cornerstone of surgical safety?",
+    choices: [
+      "Proper preparation",
+      "Careful execution",
+      "Vigilant monitoring",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 314,
+    question: "Which approach optimizes surgical care?",
+    choices: [
+      "Evidence-based practice",
+      "Quality improvement",
+      "Patient-centered care",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 315,
+    question: "What drives surgical advancement?",
+    choices: [
+      "Research and development",
+      "Clinical innovation",
+      "Technology integration",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 316,
+    question: "Which element is crucial for surgical teams?",
+    choices: [
+      "Communication",
+      "Coordination",
+      "Collaboration",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 317,
+    question: "What ensures surgical quality?",
+    choices: [
+      "Rigorous standards",
+      "Continuous monitoring",
+      "Regular improvement",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 318,
+    question: "Which aspect defines surgical mastery?",
+    choices: [
+      "Technical skill",
+      "Clinical judgment",
+      "Professional dedication",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 319,
+    question: "What is the ultimate goal of surgery?",
+    choices: [
+      "Restore function",
+      "Relieve suffering",
+      "Improve quality of life",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 320,
+    question: "Which principle encompasses surgical practice?",
+    choices: [
+      "Compassionate care",
+      "Professional excellence",
+      "Ethical responsibility",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 321,
+    question: "What is bioburden?",
+    choices: [
+      "The number of viable microorganisms on an item",
+      "The weight of biological material",
+      "The cost of sterilization",
+      "The time required for sterilization"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 322,
+    question: "Which sterilization method uses moist heat?",
+    choices: [
+      "Dry heat sterilization",
+      "Steam sterilization",
+      "Gas sterilization",
+      "Radiation sterilization"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 323,
+    question: "What is the D-value in sterilization?",
+    choices: [
+      "Decimal reduction time",
+      "Death rate",
+      "Destruction value",
+      "Decontamination duration"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 324,
+    question: "Which gas is commonly used for sterilization?",
+    choices: [
+      "Oxygen",
+      "Nitrogen",
+      "Ethylene oxide",
+      "Carbon dioxide"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 325,
+    question: "What is the Z-value in sterilization?",
+    choices: [
+      "Zero contamination level",
+      "Temperature coefficient",
+      "Zone of sterility",
+      "Zonal sterilization"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 326,
+    question: "Which method is used for heat-sensitive items?",
+    choices: [
+      "Steam sterilization",
+      "Dry heat sterilization",
+      "Low-temperature sterilization",
+      "Pressure sterilization"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 327,
+    question: "What is the purpose of a Bowie-Dick test?",
+    choices: [
+      "Test steam penetration",
+      "Test temperature",
+      "Test pressure",
+      "Test time"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 328,
+    question: "Which organism is used as a biological indicator for steam sterilization?",
+    choices: [
+      "E. coli",
+      "Bacillus stearothermophilus",
+      "Staphylococcus aureus",
+      "Pseudomonas aeruginosa"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 329,
+    question: "What is the minimum temperature for dry heat sterilization?",
+    choices: [
+      "121°C",
+      "134°C",
+      "160°C",
+      "180°C"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 330,
+    question: "Which sterilization method uses ionizing radiation?",
+    choices: [
+      "Gamma radiation",
+      "UV radiation",
+      "Infrared radiation",
+      "Microwave radiation"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 331,
+    question: "What is the purpose of aeration in ethylene oxide sterilization?",
+    choices: [
+      "Cooling",
+      "Degassing",
+      "Humidification",
+      "Pressurization"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 332,
+    question: "Which factor affects sterilization efficacy?",
+    choices: [
+      "Temperature",
+      "Time",
+      "Moisture",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 333,
+    question: "What is the SAL in sterilization?",
+    choices: [
+      "Sterility Assurance Level",
+      "Sterilization Assurance Level",
+      "Safety Assurance Level",
+      "Sterilant Assurance Level"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 334,
+    question: "Which method is used for single-use devices?",
+    choices: [
+      "Resterilization",
+      "Reprocessing",
+      "Disposal",
+      "Recycling"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 335,
+    question: "What is the overkill method?",
+    choices: [
+      "Excessive sterilization",
+      "12-log reduction",
+      "Double sterilization",
+      "Maximum sterilization"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 336,
+    question: "Which packaging material is preferred for steam sterilization?",
+    choices: [
+      "Plastic wrap",
+      "Paper wrap",
+      "Fabric wrap",
+      "Sterilization wrap"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 337,
+    question: "What is the half-life of sterilization?",
+    choices: [
+      "Time for 50% reduction",
+      "Time for 90% reduction",
+      "Time for 99% reduction",
+      "Time for complete sterilization"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 338,
+    question: "Which method validates sterilization processes?",
+    choices: [
+      "Physical monitoring",
+      "Chemical monitoring",
+      "Biological monitoring",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 339,
+    question: "What is the purpose of parametric release?",
+    choices: [
+      "Release based on parameters",
+      "Release based on testing",
+      "Release based on time",
+      "Release based on temperature"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 340,
+    question: "Which organization sets sterilization standards?",
+    choices: [
+      "AAMI",
+      "ISO",
+      "FDA",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 341,
+    question: "What is the purpose of conditioning in sterilization?",
+    choices: [
+      "Pre-treatment",
+      "Post-treatment",
+      "During treatment",
+      "All of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 342,
+    question: "Which method is used for terminal sterilization?",
+    choices: [
+      "Steam sterilization",
+      "Gas sterilization",
+      "Radiation sterilization",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 343,
+    question: "What is the purpose of sterility testing?",
+    choices: [
+      "Verify sterility",
+      "Validate process",
+      "Quality control",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 344,
+    question: "Which factor is critical for gas sterilization?",
+    choices: [
+      "Gas concentration",
+      "Temperature",
+      "Humidity",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 345,
+    question: "What is the purpose of quarantine in sterilization?",
+    choices: [
+      "Isolation period",
+      "Testing period",
+      "Cooling period",
+      "All of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 346,
+    question: "Which method is used for moisture-sensitive items?",
+    choices: [
+      "Steam sterilization",
+      "Dry heat sterilization",
+      "Gas sterilization",
+      "Both B and C"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 347,
+    question: "What is the purpose of load configuration?",
+    choices: [
+      "Optimize sterilization",
+      "Improve efficiency",
+      "Ensure penetration",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 348,
+    question: "Which method is used for continuous monitoring?",
+    choices: [
+      "Data loggers",
+      "Chart recorders",
+      "Computer systems",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 349,
+    question: "What is the purpose of cycle development?",
+    choices: [
+      "Optimize parameters",
+      "Validate process",
+      "Ensure efficacy",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 350,
+    question: "Which principle governs sterilization?",
+    choices: [
+      "Probability of survival",
+      "Logarithmic death",
+      "Thermal death",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 351,
+    question: "What is the purpose of process challenge devices?",
+    choices: [
+      "Test worst-case scenarios",
+      "Validate sterilization",
+      "Ensure reliability",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 352,
+    question: "Which method is used for implantable devices?",
+    choices: [
+      "Sterile manufacturing",
+      "Terminal sterilization",
+      "Aseptic processing",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 353,
+    question: "What is the purpose of sterilization validation?",
+    choices: [
+      "Prove effectiveness",
+      "Ensure reproducibility",
+      "Meet regulations",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 354,
+    question: "Which factor affects packaging selection?",
+    choices: [
+      "Sterilization method",
+      "Product configuration",
+      "Shelf life requirements",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 355,
+    question: "What is the purpose of environmental monitoring?",
+    choices: [
+      "Assess contamination",
+      "Validate cleaning",
+      "Ensure sterility",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 356,
+    question: "Which method ensures sterile product release?",
+    choices: [
+      "Sterility testing",
+      "Parametric release",
+      "Biological indicators",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 357,
+    question: "What is the purpose of sterilization records?",
+    choices: [
+      "Document process",
+      "Ensure traceability",
+      "Support release",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 358,
+    question: "Which principle applies to sterilization kinetics?",
+    choices: [
+      "First-order kinetics",
+      "Arrhenius equation",
+      "Log-linear death",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 359,
+    question: "What is the future of sterilization technology?",
+    choices: [
+      "Low-temperature methods",
+      "Rapid processing",
+      "Eco-friendly options",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 360,
+    question: "Which aspect is critical for sterilization success?",
+    choices: [
+      "Process understanding",
+      "Proper validation",
+      "Continuous monitoring",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 361,
+    question: "What is the primary purpose of surgical hand antisepsis?",
+    choices: [
+      "Remove transient flora",
+      "Reduce resident flora",
+      "Prevent cross-contamination",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 362,
+    question: "Which antiseptic has the longest residual activity?",
+    choices: [
+      "Povidone-iodine",
+      "Chlorhexidine gluconate",
+      "Alcohol",
+      "Triclosan"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 363,
+    question: "What is the recommended concentration of alcohol for hand antisepsis?",
+    choices: [
+      "60-70%",
+      "70-80%",
+      "80-90%",
+      "90-95%"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 364,
+    question: "Which factor affects the efficacy of hand antisepsis?",
+    choices: [
+      "Contact time",
+      "Concentration",
+      "Application technique",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 365,
+    question: "What is the purpose of mechanical cleansing?",
+    choices: [
+      "Remove debris",
+      "Reduce bioburden",
+      "Prepare for antisepsis",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 366,
+    question: "Which method is preferred for surgical hand preparation?",
+    choices: [
+      "Scrub method",
+      "Rub method",
+      "Brush method",
+      "Depends on protocol"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 367,
+    question: "What is the minimum duration for surgical hand scrub?",
+    choices: [
+      "2 minutes",
+      "3 minutes",
+      "5 minutes",
+      "10 minutes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 368,
+    question: "Which area requires special attention during hand antisepsis?",
+    choices: [
+      "Fingertips",
+      "Subungual areas",
+      "Interdigital spaces",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 369,
+    question: "What is the purpose of nail care in surgical antisepsis?",
+    choices: [
+      "Aesthetic appearance",
+      "Prevent contamination",
+      "Improve dexterity",
+      "Reduce injury risk"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 370,
+    question: "Which technique ensures complete coverage during hand antisepsis?",
+    choices: [
+      "Systematic approach",
+      "Adequate volume",
+      "Proper timing",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
     id: 371,
     question: "Which of the following is not a desirable property of surgical drapes?",
     choices: [
