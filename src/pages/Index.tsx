@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,7 +20,7 @@ const Index = () => {
       bgColor: "from-orange-50/90 to-orange-100/90",
       borderColor: "border-orange-200/60",
       link: "/intro-surgical-tech",
-      questionCount: 40
+      questionCount: 200
     },
     {
       title: "Principles and Practice of Surgical Technology",
@@ -29,7 +30,7 @@ const Index = () => {
       bgColor: "from-teal-50/90 to-teal-100/90",
       borderColor: "border-teal-200/60",
       link: "/principles-practice",
-      questionCount: 140
+      questionCount: 270
     },
     {
       title: "Surgical Procedures",
@@ -49,7 +50,7 @@ const Index = () => {
       bgColor: "from-purple-50/90 to-purple-100/90",
       borderColor: "border-purple-200/60",
       link: "/medical-terminology",
-      questionCount: 40
+      questionCount: 100
     }
   ];
 
@@ -70,7 +71,7 @@ const Index = () => {
                 />
               </div>
               <div>
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600/90 to-teal-600/90 bg-clip-text text-transparent">
+                <h1 className="text-3xl font-bold text-orange-600">
                   Surgical Tech Review and Study
                 </h1>
                 <p className="text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
