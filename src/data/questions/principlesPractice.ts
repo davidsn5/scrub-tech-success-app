@@ -2915,5 +2915,280 @@ export const principlesPracticeQuestions: Question[] = [
       "Always polish to a high shine"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 296,
+    question: "What is the primary function of a pulse lavage irrigator?",
+    choices: [
+      "Remove smoke from the surgical field",
+      "Warm sterile fluids",
+      "Irrigate and debride wounds",
+      "Deliver cryogenic gases"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 297,
+    question: "Pulse lavage irrigators are most commonly powered by:",
+    choices: [
+      "Oxygen tanks",
+      "AA or AAA batteries",
+      "Wall suction",
+      "Manual pump"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 298,
+    question: "What type of shield can be used with a pulse lavage irrigator to protect the surgical team?",
+    choices: [
+      "Face shield",
+      "Conical splash guard",
+      "Lead apron",
+      "Surgical drape"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 299,
+    question: "Cryotherapy units work by delivering:",
+    choices: [
+      "Heat",
+      "Radiation",
+      "Extreme cold",
+      "High-frequency sound"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 300,
+    question: "Which of the following is NOT a use for cryotherapy?",
+    choices: [
+      "Extract cataracts",
+      "Repair retinal detachment",
+      "Resect vascular tumors",
+      "Remove orthopedic hardware"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 301,
+    question: "What does a nerve stimulator deliver to tissue?",
+    choices: [
+      "Laser light",
+      "High pressure",
+      "Small electric currents",
+      "Cryogenic gas"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 302,
+    question: "What is the purpose of a nerve stimulator during surgery?",
+    choices: [
+      "To destroy nerves",
+      "To identify and preserve nerves",
+      "To coagulate tissue",
+      "To warm tissues"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 303,
+    question: "Cell salvage systems return which component to the patient?",
+    choices: [
+      "Plasma",
+      "Platelets",
+      "Washed red blood cells",
+      "White blood cells"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 304,
+    question: "Slush machines are used primarily to:",
+    choices: [
+      "Irrigate wounds",
+      "Warm irrigation fluids",
+      "Cool organs and tissues",
+      "Deliver medications"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 305,
+    question: "Which component of a suction system removes fluid from the source?",
+    choices: [
+      "Collection unit",
+      "Tubing",
+      "Vacuum source",
+      "Suction tip"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 306,
+    question: "How many suction units are required per OR at minimum?",
+    choices: [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 307,
+    question: "The pneumatic tourniquet improves surgical site visualization by:",
+    choices: [
+      "Increasing blood flow",
+      "Restricting blood flow",
+      "Raising blood pressure",
+      "Reducing patient movement"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 308,
+    question: "Excessive tourniquet pressure may result in:",
+    choices: [
+      "Hemorrhage",
+      "Neuromuscular damage",
+      "Faster healing",
+      "Lower infection risk"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 309,
+    question: "The recommended maximum inflation time for a lower extremity tourniquet is:",
+    choices: [
+      "30 minutes",
+      "60 minutes",
+      "90 minutes",
+      "120 minutes"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 310,
+    question: "What does the pressure device in a pneumatic tourniquet do?",
+    choices: [
+      "Controls electric current",
+      "Measures and controls pressure",
+      "Provides vacuum suction",
+      "Generates heat"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 311,
+    question: "What is the purpose of sequential compression devices (SCDs)?",
+    choices: [
+      "Prevent hypothermia",
+      "Prevent venous stasis and DVT",
+      "Improve oxygenation",
+      "Deliver anesthesia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 312,
+    question: "Which fluid is moved proximally in the limb by SCDs?",
+    choices: [
+      "Plasma",
+      "Lymph and blood",
+      "Cerebrospinal fluid",
+      "Saline irrigation"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 313,
+    question: "Which condition do SCDs help prevent?",
+    choices: [
+      "Pulmonary embolism",
+      "Heart block",
+      "Cataracts",
+      "Hypoglycemia"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 314,
+    question: "Smoke evacuation systems are used to remove:",
+    choices: [
+      "Sterile drapes",
+      "Bacterial contamination",
+      "Surgical smoke",
+      "Excess irrigation fluid"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 315,
+    question: "Surgical smoke may contain all of the following EXCEPT:",
+    choices: [
+      "Microorganisms",
+      "Carcinogenic particles",
+      "Cellular debris",
+      "Sterile saline"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 316,
+    question: "The traditional method for removing surgical smoke used:",
+    choices: [
+      "Smoke wand",
+      "Standard suction tip",
+      "Bovie pencil",
+      "HEPA filter"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 317,
+    question: "Which specialty suction tip is used for ear procedures?",
+    choices: [
+      "Rosen",
+      "Poole",
+      "Yankauer",
+      "Baron"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 318,
+    question: "Which equipment preserves adjacent tissue while removing diseased tissue without hemorrhage?",
+    choices: [
+      "Cryotherapy unit",
+      "Smoke evacuator",
+      "Pulse lavage",
+      "SCD"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 319,
+    question: "What is a risk associated with improper tourniquet use?",
+    choices: [
+      "Skin necrosis",
+      "Bone fracture",
+      "Retinal detachment",
+      "Muscle hypertrophy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 320,
+    question: "Which equipment delivers extreme cold through an insulated probe?",
+    choices: [
+      "Cryotherapy unit",
+      "Nerve stimulator",
+      "Sequential compression device",
+      "Smoke evacuator"
+    ],
+    correctAnswer: 0
   }
 ];
