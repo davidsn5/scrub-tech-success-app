@@ -29,7 +29,7 @@ const Index = () => {
       bgColor: "from-teal-50/90 to-teal-100/90",
       borderColor: "border-teal-200/60",
       link: "/principles-practice",
-      questionCount: 100
+      questionCount: 140
     },
     {
       title: "Surgical Procedures",
