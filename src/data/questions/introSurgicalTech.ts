@@ -964,5 +964,742 @@ export const introSurgicalTechQuestions: Question[] = [
       "Six"
     ],
     correctAnswer: 2
+  },
+  {
+    id: 88,
+    question: "Sterilization refers to:",
+    choices: [
+      "Destroying most microorganisms",
+      "Destroying all microorganisms including spores",
+      "Cleaning mechanically only",
+      "Using antiseptics on skin"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 89,
+    question: "Asepsis means:",
+    choices: [
+      "Free of bacteria but not viruses",
+      "Absence of disease-causing microorganisms",
+      "Chemically disinfected",
+      "Using sterile gloves only"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 90,
+    question: "Surgically clean means:",
+    choices: [
+      "Mechanically cleaned and sterile",
+      "Mechanically and chemically disinfected but not sterile",
+      "Free of all spores",
+      "Only washed with water"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 91,
+    question: "Strike-through contamination occurs when:",
+    choices: [
+      "A sterile field is covered completely",
+      "Fluid soaks through drapes",
+      "A sterilized package is opened",
+      "The sterilizer fails"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 92,
+    question: "Aeration is a process used to:",
+    choices: [
+      "Dry instruments",
+      "Remove ethylene oxide gas",
+      "Improve HEPA filter efficiency",
+      "Remove dust from air"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 93,
+    question: "Anaerobes are microorganisms that:",
+    choices: [
+      "Require oxygen to survive",
+      "Cannot live without oxygen",
+      "Survive without oxygen",
+      "Only live on surfaces"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 94,
+    question: "Binary fission refers to:",
+    choices: [
+      "Sexual reproduction of fungi",
+      "Asexual reproduction of bacteria",
+      "Viral replication",
+      "Spore formation"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 95,
+    question: "Bactericidal agents:",
+    choices: [
+      "Prevent bacteria from growing",
+      "Kill bacteria",
+      "Kill viruses",
+      "Kill fungi"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 96,
+    question: "Bacteriostatic agents:",
+    choices: [
+      "Kill bacteria",
+      "Kill fungi",
+      "Prevent bacterial growth",
+      "Kill spores"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 97,
+    question: "Bioburden is defined as:",
+    choices: [
+      "The weight of a package",
+      "Number of microorganisms on an item before sterilization",
+      "Number of spores in the air",
+      "Indicator of humidity"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 98,
+    question: "The biological indicator for steam sterilizers is:",
+    choices: [
+      "Bacillus subtilis",
+      "Geobacillus stearothermophilus",
+      "MRSA",
+      "C. difficile"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 99,
+    question: "The biological indicator for ETO sterilizers is:",
+    choices: [
+      "G. stearothermophilus",
+      "B. atrophaeus",
+      "C. perfringens",
+      "S. aureus"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 100,
+    question: "An SSI is:",
+    choices: [
+      "Secondary site infection",
+      "Sterile surgical instrument",
+      "Surgical site infection",
+      "Spore sterilization indicator"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 101,
+    question: "High-level disinfection destroys:",
+    choices: [
+      "Some bacteria and viruses",
+      "All microorganisms if contact time is sufficient",
+      "Only vegetative bacteria",
+      "Only fungi"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 102,
+    question: "Intermediate-level disinfection destroys:",
+    choices: [
+      "Bacterial endospores",
+      "Inactive vegetative bacteria, fungi, most viruses",
+      "All microorganisms",
+      "Only viruses"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 103,
+    question: "Low-level disinfection destroys:",
+    choices: [
+      "All microorganisms",
+      "Only spores",
+      "Most bacteria, some viruses, some fungi",
+      "Only fungi"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 104,
+    question: "Flash sterilization is typically done:",
+    choices: [
+      "In a washer-sterilizer",
+      "For immediate use instruments",
+      "For long-term storage",
+      "Using dry heat"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 105,
+    question: "Fungicide kills:",
+    choices: [
+      "Viruses",
+      "Bacteria",
+      "Spores",
+      "Fungi"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 106,
+    question: "Naturally acquired active immunity occurs:",
+    choices: [
+      "When vaccinated",
+      "When exposed to disease and develop immunity",
+      "Through mother to fetus",
+      "By injection of gamma globulin"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 107,
+    question: "Artificially acquired active immunity occurs:",
+    choices: [
+      "Through mother to fetus",
+      "By exposure to disease",
+      "By vaccination",
+      "By injection of antibodies"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 108,
+    question: "Naturally acquired passive immunity occurs:",
+    choices: [
+      "Through vaccination",
+      "Through gamma globulin injection",
+      "Through maternal antibodies",
+      "By exposure to disease"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 109,
+    question: "Artificially acquired passive immunity occurs:",
+    choices: [
+      "By exposure to disease",
+      "Through maternal antibodies",
+      "By vaccination",
+      "By injection of antibodies"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 110,
+    question: "A nosocomial infection is:",
+    choices: [
+      "Community-acquired",
+      "Hospital-acquired",
+      "Viral",
+      "Bacterial only"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 111,
+    question: "Pasteurization destroys microorganisms in:",
+    choices: [
+      "Milk or wine",
+      "Air",
+      "Skin",
+      "Operating room"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 112,
+    question: "Parasites that depend on living tissue are called:",
+    choices: [
+      "Facultative",
+      "Obligatory",
+      "Aerobic",
+      "Anaerobic"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 113,
+    question: "Virucide is a chemical that:",
+    choices: [
+      "Kills bacteria",
+      "Kills fungi",
+      "Kills viruses",
+      "Kills spores"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 114,
+    question: "MRSA is resistant to most antibiotics except:",
+    choices: [
+      "Amoxicillin",
+      "Vancomycin",
+      "Penicillin",
+      "Cephalosporin"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 115,
+    question: "Prion diseases include:",
+    choices: [
+      "MRSA",
+      "Creutzfeldt–Jakob",
+      "TB",
+      "SSI"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 116,
+    question: "Which sterilization method is used for oils and petroleum products?",
+    choices: [
+      "Steam under pressure",
+      "ETO",
+      "Dry heat",
+      "Plasma"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 117,
+    question: "Wooden-handled instruments should be:",
+    choices: [
+      "Packaged with metals",
+      "Never sterilized",
+      "Packaged separately",
+      "Used only once"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 118,
+    question: "The preferred method for rubber goods is:",
+    choices: [
+      "ETO",
+      "Dry heat",
+      "Steam",
+      "Radiation"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 119,
+    question: "A critical item must be:",
+    choices: [
+      "Rinsed only",
+      "Sterile",
+      "High-level disinfected",
+      "Wiped with alcohol"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 120,
+    question: "An example of a critical item is:",
+    choices: [
+      "Blood pressure cuff",
+      "Endoscope",
+      "Surgical instrument",
+      "Stethoscope"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 121,
+    question: "A semicritical item comes in contact with:",
+    choices: [
+      "Only skin",
+      "Sterile body tissue",
+      "Mucous membranes",
+      "Room air"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 122,
+    question: "An example of a noncritical item is:",
+    choices: [
+      "Bronchoscope",
+      "Needle",
+      "Blood pressure cuff",
+      "Endoscope"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 123,
+    question: "Which is considered a high-level disinfectant?",
+    choices: [
+      "Alcohol",
+      "Formaldehyde",
+      "Chlorine",
+      "Iodophor"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 124,
+    question: "What is the shelf life of glutaraldehyde (Cidex)?",
+    choices: [
+      "3–5 days",
+      "7–10 days",
+      "14–30 days",
+      "60 days"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 125,
+    question: "Formaldehyde is sporicidal when soaked for:",
+    choices: [
+      "5 minutes",
+      "10 minutes",
+      "12 minutes",
+      "20 minutes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 126,
+    question: "Which disinfectant is irritating to mucous membranes and eyes?",
+    choices: [
+      "Chlorine",
+      "Alcohol",
+      "Formaldehyde",
+      "Hydrogen peroxide"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 127,
+    question: "Which disinfectant is also called household bleach?",
+    choices: [
+      "Alcohol",
+      "Formaldehyde",
+      "Sodium hypochlorite",
+      "Iodophor"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 128,
+    question: "A washer-sterilizer combines:",
+    choices: [
+      "Steam only",
+      "Manual and mechanical decontamination",
+      "Dry heat",
+      "Alcohol"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 129,
+    question: "An ultrasonic cleaner works by:",
+    choices: [
+      "Radiation",
+      "Cavitation",
+      "Steam",
+      "Dry heat"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 130,
+    question: "Which test checks for air removal in a prevacuum sterilizer?",
+    choices: [
+      "Biological indicator",
+      "Bowie–Dick test",
+      "Chemical indicator tape",
+      "Visual inspection"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 131,
+    question: "What color does chemical indicator tape turn when exposed to steam?",
+    choices: [
+      "Blue",
+      "Green",
+      "Tan with dark stripes",
+      "Red"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 132,
+    question: "Instruments with lumens must be flushed with:",
+    choices: [
+      "Alcohol",
+      "Hydrogen peroxide then rinsed",
+      "Detergent",
+      "Air"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 133,
+    question: "The biological indicator must be incubated for:",
+    choices: [
+      "12 hours",
+      "24 hours",
+      "48 hours",
+      "72 hours"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 134,
+    question: "ETO sterilization is preferred for:",
+    choices: [
+      "Heat-sensitive items",
+      "Wood",
+      "Glassware",
+      "Linens"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 135,
+    question: "The gas used in ETO sterilization is mixed with:",
+    choices: [
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 136,
+    question: "The sterilant used in plasma sterilization is:",
+    choices: [
+      "Gamma rays",
+      "Hydrogen peroxide",
+      "ETO",
+      "Steam"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 137,
+    question: "Radiation sterilization uses:",
+    choices: [
+      "UV light",
+      "Gamma and beta rays",
+      "Microwave",
+      "Dry heat"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 138,
+    question: "Steam sterilization is effective because:",
+    choices: [
+      "Dry heat",
+      "Cavitation",
+      "Moist heat under pressure",
+      "UV light"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 139,
+    question: "No living thing can withstand steam at 270°F for:",
+    choices: [
+      "10 minutes",
+      "15 minutes",
+      "20 minutes",
+      "30 minutes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 140,
+    question: "The recommended maximum size for a linen pack is:",
+    choices: [
+      "10 × 10 × 15",
+      "12 × 12 × 20",
+      "15 × 15 × 20",
+      "20 × 20 × 20"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 141,
+    question: "A Julian date indicates:",
+    choices: [
+      "Expiration date",
+      "Date of sterilization",
+      "Load number",
+      "Room number"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 142,
+    question: "Which microorganism is used as the biological indicator in dry heat?",
+    choices: [
+      "G. stearothermophilus",
+      "B. atrophaeus",
+      "MRSA",
+      "E. coli"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 143,
+    question: "The incubation period for a biological indicator is:",
+    choices: [
+      "12 hours",
+      "24 hours",
+      "48 hours",
+      "72 hours"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 144,
+    question: "The recommended thread count for woven fabrics is:",
+    choices: [
+      "100",
+      "120",
+      "140",
+      "160"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 145,
+    question: "Sterilization refers to:",
+    choices: [
+      "Destroying most microorganisms",
+      "Destroying all microorganisms including spores",
+      "Cleaning mechanically only",
+      "Using antiseptics on skin"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 146,
+    question: "Asepsis means:",
+    choices: [
+      "Free of bacteria but not viruses",
+      "Absence of disease-causing microorganisms",
+      "Chemically disinfected",
+      "Using sterile gloves only"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 147,
+    question: "Surgically clean means:",
+    choices: [
+      "Mechanically cleaned and sterile",
+      "Mechanically and chemically disinfected but not sterile",
+      "Free of all spores",
+      "Only washed with water"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 148,
+    question: "Strike-through contamination occurs when:",
+    choices: [
+      "A sterile field is covered completely",
+      "Fluid soaks through drapes",
+      "A sterilized package is opened",
+      "The sterilizer fails"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 149,
+    question: "Aeration is a process used to:",
+    choices: [
+      "Dry instruments",
+      "Remove ethylene oxide gas",
+      "Improve HEPA filter efficiency",
+      "Remove dust from air"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 150,
+    question: "Anaerobes are microorganisms that:",
+    choices: [
+      "Require oxygen to survive",
+      "Cannot live without oxygen",
+      "Survive without oxygen",
+      "Only live on surfaces"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 151,
+    question: "Binary fission refers to:",
+    choices: [
+      "Sexual reproduction of fungi",
+      "Asexual reproduction of bacteria",
+      "Viral replication",
+      "Spore formation"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 152,
+    question: "Bactericidal agents:",
+    choices: [
+      "Prevent bacteria from growing",
+      "Kill bacteria",
+      "Kill viruses",
+      "Kill fungi"  
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 153,
+    question: "Bacteriostatic agents:",
+    choices: [
+      "Kill bacteria",
+      "Kill fungi",
+      "Prevent bacterial growth",
+      "Kill spores"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 154,
+    question: "Bioburden is defined as:",
+    choices: [
+      "The weight of a package",
+      "Number of microorganisms on an item before sterilization",
+      "Number of spores in the air",
+      "Indicator of humidity"
+    ],
+    correctAnswer: 1
   }
 ];
