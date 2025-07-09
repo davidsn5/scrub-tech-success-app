@@ -1701,5 +1701,335 @@ export const introSurgicalTechQuestions: Question[] = [
       "Indicator of humidity"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 155,
+    question: "Which of the following is a chemical substance used in x-rays to make target structures stand out?",
+    choices: [
+      "Renografin",
+      "Barium sulfate",
+      "Penicillin",
+      "Lidocaine"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 156,
+    question: "Contrast media can be introduced into the body by all of the following routes EXCEPT:",
+    choices: [
+      "Intravenously",
+      "Intra-arterially",
+      "Intrathecally",
+      "Oral ingestion"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 157,
+    question: "What is the primary purpose of wearing a lead apron during fluoroscopy?",
+    choices: [
+      "To enhance image clarity",
+      "To protect against radiation exposure",
+      "To reduce heat damage",
+      "To maintain sterility"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 158,
+    question: "What is the minimum recommended lead apron thickness for protection?",
+    choices: [
+      "0.2 mm",
+      "0.3 mm",
+      "0.5 mm",
+      "1.0 mm"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 159,
+    question: "Which diagnostic tool is a mobile image intensifier used to take pictures during surgery?",
+    choices: [
+      "MRI",
+      "C-arm",
+      "CT scan",
+      "PET scan"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 160,
+    question: "Which diagnostic imaging technique does NOT use radiation?",
+    choices: [
+      "MRI",
+      "CT scan",
+      "X-ray",
+      "PET scan"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 161,
+    question: "What type of x-ray is used to diagnose breast tumors?",
+    choices: [
+      "Myelography",
+      "Mammography",
+      "Arthrography",
+      "Ventriculography"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 162,
+    question: "What is the purpose of myelography?",
+    choices: [
+      "To image the ventricles of the brain",
+      "To evaluate blood vessels",
+      "To image the spine using contrast media",
+      "To examine the joints"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 163,
+    question: "Which of the following is used to detect coronary artery obstruction?",
+    choices: [
+      "Electrocardiogram (ECG)",
+      "Angiography",
+      "Cardiac catheterization",
+      "Plethysmography"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 164,
+    question: "Which x-ray involves drinking barium to visualize the esophagus, stomach, and small intestines?",
+    choices: [
+      "Upper GI series",
+      "Lower GI series",
+      "IVP",
+      "KUB"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 165,
+    question: "What does IVP stand for?",
+    choices: [
+      "Intravenous perfusion",
+      "Intravenous pyelogram",
+      "Internal vascular picture",
+      "Interventional pulmonary"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 166,
+    question: "What imaging uses a radioactive \"tracer\" to assess how organs function?",
+    choices: [
+      "MRI",
+      "PET scan",
+      "Ultrasound",
+      "CT scan"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 167,
+    question: "Which imaging uses high-frequency sound waves and does NOT work on lungs?",
+    choices: [
+      "CT scan",
+      "PET scan",
+      "Ultrasound",
+      "MRI"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 168,
+    question: "What is the purpose of a radionuclide scan?",
+    choices: [
+      "To assess bones using sound waves",
+      "To evaluate heart and organ function with radioactive chemicals",
+      "To measure lung capacity",
+      "To identify muscle disorders"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 169,
+    question: "A biopsy in which a portion of tissue is removed and sent for immediate frozen diagnosis is called:",
+    choices: [
+      "Permanent biopsy",
+      "Aspiration biopsy",
+      "Frozen biopsy",
+      "Brush biopsy"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 170,
+    question: "Gram-positive bacteria retain which dye color?",
+    choices: [
+      "Red",
+      "Pink",
+      "Blue/violet",
+      "Green"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 171,
+    question: "What is the purpose of a spinal tap?",
+    choices: [
+      "To remove fluid from the pleural cavity",
+      "To remove cerebrospinal fluid for diagnosis",
+      "To evaluate the bladder",
+      "To visualize blood vessels"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 172,
+    question: "Which test measures the electrical activity of the brain?",
+    choices: [
+      "EMG",
+      "EEG",
+      "ECG",
+      "Doppler"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 173,
+    question: "Which consent is signed upon hospital admission for day-to-day treatment?",
+    choices: [
+      "Informed consent",
+      "General consent",
+      "Emergency consent",
+      "Advanced directive"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 174,
+    question: "What information is NOT typically included in informed consent?",
+    choices: [
+      "Risks involved",
+      "Benefits",
+      "Surgeon's name",
+      "Patient's insurance policy"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 175,
+    question: "Which of the following patients cannot sign their own informed consent?",
+    choices: [
+      "Mentally competent adult",
+      "Minor child",
+      "Unconscious adult",
+      "Both B and C"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 176,
+    question: "Who is responsible for obtaining informed consent?",
+    choices: [
+      "Circulating nurse",
+      "Surgeon",
+      "Patient's family",
+      "Hospital administrator"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 177,
+    question: "When must informed consent be signed?",
+    choices: [
+      "After preoperative medication is given",
+      "After surgery",
+      "Before any preoperative medication",
+      "During surgery"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 178,
+    question: "If a patient refuses surgery, what must happen?",
+    choices: [
+      "They must leave the hospital immediately",
+      "The surgeon and nurse must document the refusal and have the patient sign",
+      "Surgery must proceed anyway",
+      "A family member must sign instead"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 179,
+    question: "What is an advanced directive?",
+    choices: [
+      "A legal document outlining medical care if the patient becomes incapacitated",
+      "A consent form for minor procedures",
+      "A verbal order for surgery",
+      "A general admission form"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 180,
+    question: "A living will typically specifies:",
+    choices: [
+      "Who can make decisions for the patient",
+      "Which hospital the patient prefers",
+      "Medical interventions the patient does NOT want",
+      "Payment options for care"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 181,
+    question: "What does DNR mean?",
+    choices: [
+      "Do Not Revise",
+      "Do Not Record",
+      "Do Not Resuscitate",
+      "Do Not Refuse"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 182,
+    question: "What is a power of attorney?",
+    choices: [
+      "A physician's right to override consent",
+      "A document giving someone else authority to make medical decisions",
+      "A type of biopsy",
+      "A type of imaging study"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 183,
+    question: "Which of the following is an example of an incident that should be reported?",
+    choices: [
+      "Patient signing informed consent",
+      "Loss of an instrument during surgery",
+      "Completion of an MRI",
+      "Removal of a biopsy specimen"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 184,
+    question: "Who verifies the patient's mental state and voluntary signature during consent?",
+    choices: [
+      "The surgeon",
+      "A witness (nurse or facility employee)",
+      "Hospital CEO",
+      "Another patient"
+    ],
+    correctAnswer: 1
   }
 ];
