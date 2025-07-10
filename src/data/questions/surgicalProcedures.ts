@@ -2756,5 +2756,830 @@ export const surgicalProceduresQuestions: Question[] = [
       "Manage side effects"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 251,
+    question: "Which procedure is performed to repair carcinoma of the vulva?",
+    choices: [
+      "LEEP",
+      "Vulvectomy",
+      "Episiotomy",
+      "Uterine ablation"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 252,
+    question: "Radical vulvectomy involves removal of which additional structures if nodes are positive?",
+    choices: [
+      "Vagina, urethra, anus",
+      "Uterus, fallopian tubes, ovaries",
+      "Cervix, vagina, bladder",
+      "Bladder, rectum, perineum"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 253,
+    question: "Vaginectomy and vaginoplasty are indicated for which condition?",
+    choices: [
+      "Pelvic inflammatory disease",
+      "Vaginal cancer",
+      "Endometriosis",
+      "Stress incontinence"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 254,
+    question: "An amnion graft comes from what source?",
+    choices: [
+      "Placenta",
+      "Umbilical cord",
+      "Fetal membrane",
+      "Maternal uterine lining"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 255,
+    question: "Cystocele is defined as a herniation of which structure into the vaginal wall?",
+    choices: [
+      "Rectum",
+      "Bladder",
+      "Uterus",
+      "Small intestine"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 256,
+    question: "Marshall-Marchetti-Krantz procedure is done to correct:",
+    choices: [
+      "Rectocele",
+      "Urinary incontinence",
+      "Vaginal atresia",
+      "Vesicovaginal fistula"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 257,
+    question: "An enterocele involves herniation of which organ?",
+    choices: [
+      "Rectum",
+      "Bladder",
+      "Small intestine",
+      "Uterus"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 258,
+    question: "A vesicovaginal fistula is a connection between:",
+    choices: [
+      "Rectum and vagina",
+      "Ureter and vagina",
+      "Bladder and vagina",
+      "Urethra and vagina"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 259,
+    question: "Which procedure extends the perineal area during delivery?",
+    choices: [
+      "Uterine ablation",
+      "Episiotomy",
+      "Vaginal hysterectomy",
+      "Cesarean section"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 260,
+    question: "Endometrial ablation destroys what to treat abnormal bleeding?",
+    choices: [
+      "Myometrium",
+      "Endometrium",
+      "Cervix",
+      "Uterine artery"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 261,
+    question: "LAVH refers to:",
+    choices: [
+      "Laparoscopic-assisted vaginal hysterectomy",
+      "Laparoscopic anterior vaginal hernia",
+      "Laparoscopic vaginal atresia",
+      "Laparoscopic vulvectomy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 262,
+    question: "TAH BSO involves removal of all except:",
+    choices: [
+      "Uterus",
+      "Fallopian tubes",
+      "Ovaries",
+      "Rectum"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 263,
+    question: "The term \"en bloc\" means:",
+    choices: [
+      "Piece-by-piece removal",
+      "Single-unit removal",
+      "Microsurgical excision",
+      "Partial resection"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 264,
+    question: "What does \"seeding\" refer to during cancer surgery?",
+    choices: [
+      "Hemorrhage",
+      "Accidental cancer cell spread",
+      "Retained surgical sponge",
+      "Inadvertent nerve injury"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 265,
+    question: "Which procedure removes all reproductive organs, bladder, rectum, and perineum?",
+    choices: [
+      "TAH BSO",
+      "Radical hysterectomy",
+      "Pelvic exenteration",
+      "Vaginal hysterectomy"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 266,
+    question: "Oophorectomy removes:",
+    choices: [
+      "Uterus",
+      "Ovary",
+      "Fallopian tube",
+      "Cervix"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 267,
+    question: "Dermoid cyst is also called:",
+    choices: [
+      "Fibroid",
+      "Teratoma",
+      "Leiomyoma",
+      "Hematoma"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 268,
+    question: "Salpingo-oophorectomy removes:",
+    choices: [
+      "Uterus and cervix",
+      "Ovary and uterus",
+      "Fallopian tube and ovary",
+      "Bladder and urethra"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 269,
+    question: "Cervical cerclage prevents:",
+    choices: [
+      "Placental abruption",
+      "Preterm labor",
+      "Preeclampsia",
+      "Endometrial cancer"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 270,
+    question: "Shirodkar/McDonald are types of:",
+    choices: [
+      "Hysterectomies",
+      "Cerclage",
+      "Episiotomies",
+      "Abortions"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 271,
+    question: "A complete abortion means:",
+    choices: [
+      "Pregnancy continues",
+      "Uterus is completely emptied",
+      "Uterus is perforated",
+      "Fetus is viable"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 272,
+    question: "What is meconium?",
+    choices: [
+      "Amniotic sac",
+      "First fetal bowel movement",
+      "Vernix",
+      "Placenta"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 273,
+    question: "The term \"gravida\" refers to:",
+    choices: [
+      "Number of births",
+      "Number of pregnancies",
+      "First pregnancy",
+      "Uterine contractions"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 274,
+    question: "Oxytocin/Pitocin is used to:",
+    choices: [
+      "Prevent bleeding only",
+      "Induce labor and contract uterus",
+      "Treat hypertension",
+      "Reverse anesthesia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 275,
+    question: "What is the most common reason for C-section?",
+    choices: [
+      "Placenta previa",
+      "Cephalopelvic disproportion",
+      "Breech",
+      "Cord prolapse"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 276,
+    question: "Which drape is used in OB/GYN procedures?",
+    choices: [
+      "Fenestrated abdominal",
+      "Eye sheet",
+      "Laparotomy sheet",
+      "Neurosurgical sheet"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 277,
+    question: "Cornea is the:",
+    choices: [
+      "White part of the eye",
+      "Transparent window of the eye",
+      "Retina layer",
+      "Iris muscle"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 278,
+    question: "Miotic drugs do what?",
+    choices: [
+      "Dilate pupil",
+      "Constrict pupil",
+      "Relax muscles",
+      "Numb cornea"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 279,
+    question: "Which of the following is a mydriatic?",
+    choices: [
+      "Pilocarpine",
+      "Miochol",
+      "Neo-Synephrine",
+      "Miostat"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 280,
+    question: "What is removed in enucleation?",
+    choices: [
+      "Cornea",
+      "Lens",
+      "Globe with muscles and optic nerve",
+      "Retina only"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 281,
+    question: "Dacryocystorhinostomy treats:",
+    choices: [
+      "Cataract",
+      "Blocked nasolacrimal duct",
+      "Retinal detachment",
+      "Corneal ulcer"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 282,
+    question: "Strabismus means:",
+    choices: [
+      "Eyes focused properly",
+      "Drooping eyelid",
+      "Misaligned eyes",
+      "Blindness"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 283,
+    question: "Which surgery reshapes the cornea with a laser?",
+    choices: [
+      "Keratoplasty",
+      "LASIK",
+      "Blepharoplasty",
+      "Vitrectomy"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 284,
+    question: "Which laser passes through clear tissue without heating?",
+    choices: [
+      "CO₂",
+      "Argon/Nd:YAG",
+      "Excimer",
+      "Helium"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 285,
+    question: "Le Fort I fracture is also called:",
+    choices: [
+      "Blowout fracture",
+      "Mustache fracture",
+      "Orbital fracture",
+      "Zygomatic fracture"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 286,
+    question: "Arch bars are used for:",
+    choices: [
+      "Orbital floor repair",
+      "Maxillomandibular fixation",
+      "Zygomatic plating",
+      "Mandibular resection"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 287,
+    question: "Orbital floor fracture is repaired with all except:",
+    choices: [
+      "Silastic sheet",
+      "Nylon",
+      "Metal implants",
+      "T-tube"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 288,
+    question: "TMJ surgery is done to improve:",
+    choices: [
+      "Swallowing",
+      "Hearing",
+      "Joint mobility",
+      "Vision"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 289,
+    question: "The cochlea contains:",
+    choices: [
+      "Eustachian tube",
+      "Ossicles",
+      "Organ of Corti",
+      "Cerumen"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 290,
+    question: "The auricle is part of the:",
+    choices: [
+      "Middle ear",
+      "Inner ear",
+      "External ear",
+      "Eustachian tube"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 291,
+    question: "What does cerumen refer to?",
+    choices: [
+      "Eardrum",
+      "Earwax",
+      "Hearing aid",
+      "Semicircular canal"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 292,
+    question: "Which sinus is above the ethmoid sinus?",
+    choices: [
+      "Frontal",
+      "Maxillary",
+      "Sphenoid",
+      "Antrum"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 293,
+    question: "Choanal atresia repair requires what scope?",
+    choices: [
+      "10-degree",
+      "30-degree",
+      "90-degree",
+      "None"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 294,
+    question: "Parotidectomy requires caution to avoid injury to:",
+    choices: [
+      "Trigeminal nerve",
+      "Optic nerve",
+      "Facial nerve",
+      "Vestibulocochlear nerve"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 295,
+    question: "Wharton's duct belongs to which gland?",
+    choices: [
+      "Parotid",
+      "Submandibular",
+      "Sublingual",
+      "Lacrimal"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 296,
+    question: "What is the Adam's apple?",
+    choices: [
+      "Cricoid",
+      "Epiglottis",
+      "Thyroid cartilage",
+      "Arytenoid"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 297,
+    question: "What is laryngitis?",
+    choices: [
+      "Malignant tumor",
+      "Inflammation of vocal cords",
+      "Swelling of epiglottis",
+      "Blockage of airway"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 298,
+    question: "A stoma is created during:",
+    choices: [
+      "Laser laryngeal surgery",
+      "Total laryngectomy",
+      "Bronchoscopy",
+      "Tracheoscopy"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 299,
+    question: "Which laser is NOT used on the larynx?",
+    choices: [
+      "CO₂",
+      "Helium",
+      "Argon",
+      "Nitrogen"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 300,
+    question: "What are tracheal rings made of?",
+    choices: [
+      "Fibrous cartilage",
+      "Hyaline cartilage",
+      "Elastic cartilage",
+      "Bone"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 301,
+    question: "Tracheostomy is performed through an incision below the:",
+    choices: [
+      "Thyroid cartilage",
+      "Cricoid cartilage",
+      "Arytenoid cartilage",
+      "Epiglottis"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 302,
+    question: "Rigid bronchoscopy is performed with the patient in what position?",
+    choices: [
+      "Sitting",
+      "Prone",
+      "Supine",
+      "Lateral"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 303,
+    question: "Which type of lymph node drains the outer half of the breast?",
+    choices: [
+      "Internal thoracic nodes",
+      "Axillary nodes",
+      "Cervical nodes",
+      "Mediastinal nodes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 304,
+    question: "What is the most common screening tool for breast cancer?",
+    choices: [
+      "Ultrasound",
+      "PET scan",
+      "Mammogram",
+      "MRI"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 305,
+    question: "Which type of carcinoma originates from the lobules of the breast?",
+    choices: [
+      "Intraductal carcinoma",
+      "Lobular carcinoma",
+      "Squamous cell carcinoma",
+      "Adenocarcinoma"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 306,
+    question: "What does lymph fluid drain into?",
+    choices: [
+      "Lymph nodes",
+      "Arteries",
+      "Veins",
+      "Capillaries"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 307,
+    question: "What is the yellow fluid that flows through the lymphatic system called?",
+    choices: [
+      "Plasma",
+      "Interstitial fluid",
+      "Lymph",
+      "Serum"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 308,
+    question: "What do micro-calcifications on a mammogram indicate?",
+    choices: [
+      "Malignant tumor in the muscle",
+      "Calcium deposits, often in ductal carcinoma in-situ",
+      "Benign fatty tumor",
+      "Fibrocystic disease"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 309,
+    question: "What imaging modality uses sound waves to examine breast tissue?",
+    choices: [
+      "PET scan",
+      "Mammogram",
+      "MRI",
+      "Ultrasound"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 310,
+    question: "What is the purpose of a digital stereotactic biopsy?",
+    choices: [
+      "Measure breast density",
+      "Diagnose possible breast cancer",
+      "Drain a cyst",
+      "Remove benign tissue"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 311,
+    question: "Which imaging test is useful for determining cancer spread beyond the breast?",
+    choices: [
+      "PET scan",
+      "Mammogram",
+      "Ultrasound",
+      "Core biopsy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 312,
+    question: "What is the term for breast cancer confined to the breast only?",
+    choices: [
+      "Regional",
+      "Distant",
+      "Local",
+      "Metastatic"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 313,
+    question: "Which gene mutations are tested for hereditary breast cancer risk?",
+    choices: [
+      "TP53 and RB1",
+      "BRCA1 and BRCA2",
+      "HER2 and EGFR",
+      "MYC and BCL2"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 314,
+    question: "Which type of biopsy uses a cutting needle to remove a plug of tissue?",
+    choices: [
+      "Excisional biopsy",
+      "Needle aspiration",
+      "Core biopsy",
+      "Incisional biopsy"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 315,
+    question: "What is the removal of a mass with a margin of normal tissue called?",
+    choices: [
+      "Lumpectomy",
+      "Mastectomy",
+      "Biopsy",
+      "Ablation"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 316,
+    question: "What is removed in a modified radical mastectomy?",
+    choices: [
+      "Breast only",
+      "Breast and pectoral muscles",
+      "Breast and axillary lymph nodes",
+      "Breast, lungs, and axillary nodes"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 317,
+    question: "What is the main risk of lymphedema after breast surgery?",
+    choices: [
+      "Excess drainage",
+      "Fluid accumulation in the arm",
+      "Infection of the chest wall",
+      "Metastasis"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 318,
+    question: "Which incision is used for an appendectomy?",
+    choices: [
+      "McBurney",
+      "Kocher",
+      "Pfannenstiel",
+      "Midline"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 319,
+    question: "Which uterine layer is shed during menstruation?",
+    choices: [
+      "Myometrium",
+      "Endometrium",
+      "Perimetrium",
+      "Serosa"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 320,
+    question: "What is the function of the fimbriae?",
+    choices: [
+      "Secrete estrogen",
+      "Guide egg into fallopian tube",
+      "Protect the uterus",
+      "Lubricate the vagina"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 321,
+    question: "What does ectopic pregnancy mean?",
+    choices: [
+      "Pregnancy in the uterus",
+      "Pregnancy outside the uterus",
+      "Multiple pregnancies",
+      "Miscarriage"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 322,
+    question: "What is the major complication of lithotomy position?",
+    choices: [
+      "Embolus or nerve damage",
+      "Blindness",
+      "Lymphedema",
+      "Cancer recurrence"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 323,
+    question: "Which diagnostic test is an X-ray of uterus and fallopian tubes?",
+    choices: [
+      "Hysterosalpingogram",
+      "Colposcopy",
+      "Hysteroscopy",
+      "Laparoscopy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 324,
+    question: "What is a cone biopsy of the cervix used for?",
+    choices: [
+      "Diagnose endometriosis",
+      "Rule out cervical cancer",
+      "Identify PID",
+      "Diagnose infertility"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 325,
+    question: "What does PID stand for?",
+    choices: [
+      "Pelvic inflammatory disease",
+      "Primary immune deficiency",
+      "Post-infectious disease",
+      "Peritoneal invasive disorder"
+    ],
+    correctAnswer: 0
   }
 ];
