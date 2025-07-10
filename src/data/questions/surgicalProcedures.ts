@@ -1931,5 +1931,830 @@ export const surgicalProceduresQuestions: Question[] = [
       "Kelly clamp"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 176,
+    question: "Which type of lymph node drains the outer half of the breast?",
+    choices: [
+      "Internal thoracic nodes",
+      "Axillary nodes",
+      "Cervical nodes",
+      "Mediastinal nodes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 177,
+    question: "What is the most common screening tool for breast cancer?",
+    choices: [
+      "Ultrasound",
+      "PET scan",
+      "Mammogram",
+      "MRI"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 178,
+    question: "Which type of carcinoma originates from the lobules of the breast?",
+    choices: [
+      "Intraductal carcinoma",
+      "Lobular carcinoma",
+      "Squamous cell carcinoma",
+      "Adenocarcinoma"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 179,
+    question: "What does lymph fluid drain into?",
+    choices: [
+      "Lymph nodes",
+      "Arteries",
+      "Veins",
+      "Capillaries"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 180,
+    question: "What is the yellow fluid that flows through the lymphatic system called?",
+    choices: [
+      "Plasma",
+      "Interstitial fluid",
+      "Lymph",
+      "Serum"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 181,
+    question: "What do micro-calcifications on a mammogram indicate?",
+    choices: [
+      "Malignant tumor in the muscle",
+      "Calcium deposits, often in ductal carcinoma in-situ",
+      "Benign fatty tumor",
+      "Fibrocystic disease"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 182,
+    question: "What imaging modality uses sound waves to examine breast tissue?",
+    choices: [
+      "PET scan",
+      "Mammogram",
+      "MRI",
+      "Ultrasound"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 183,
+    question: "What is the purpose of a digital stereotactic biopsy?",
+    choices: [
+      "Measure breast density",
+      "Diagnose possible breast cancer",
+      "Drain a cyst",
+      "Remove benign tissue"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 184,
+    question: "Which imaging test is useful for determining cancer spread beyond the breast?",
+    choices: [
+      "PET scan",
+      "Mammogram",
+      "Ultrasound",
+      "Core biopsy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 185,
+    question: "What is the term for breast cancer confined to the breast only?",
+    choices: [
+      "Regional",
+      "Distant",
+      "Local",
+      "Metastatic"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 186,
+    question: "Which gene mutations are tested for hereditary breast cancer risk?",
+    choices: [
+      "TP53 and RB1",
+      "BRCA1 and BRCA2",
+      "HER2 and EGFR",
+      "MYC and BCL2"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 187,
+    question: "Which type of biopsy uses a cutting needle to remove a plug of tissue?",
+    choices: [
+      "Excisional biopsy",
+      "Needle aspiration",
+      "Core biopsy",
+      "Incisional biopsy"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 188,
+    question: "What is the removal of a mass with a margin of normal tissue called?",
+    choices: [
+      "Lumpectomy",
+      "Mastectomy",
+      "Biopsy",
+      "Ablation"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 189,
+    question: "What is removed in a modified radical mastectomy?",
+    choices: [
+      "Breast only",
+      "Breast and pectoral muscles",
+      "Breast and axillary lymph nodes",
+      "Breast, lungs, and axillary nodes"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 190,
+    question: "What is the main risk of lymphedema after breast surgery?",
+    choices: [
+      "Excess drainage",
+      "Fluid accumulation in the arm",
+      "Infection of the chest wall",
+      "Metastasis"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 191,
+    question: "Which incision is used for an appendectomy?",
+    choices: [
+      "McBurney",
+      "Kocher",
+      "Pfannenstiel",
+      "Midline"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 192,
+    question: "Which uterine layer is shed during menstruation?",
+    choices: [
+      "Myometrium",
+      "Endometrium",
+      "Perimetrium",
+      "Serosa"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 193,
+    question: "What is the function of the fimbriae?",
+    choices: [
+      "Secrete estrogen",
+      "Guide egg into fallopian tube",
+      "Protect the uterus",
+      "Lubricate the vagina"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 194,
+    question: "What does ectopic pregnancy mean?",
+    choices: [
+      "Pregnancy in the uterus",
+      "Pregnancy outside the uterus",
+      "Multiple pregnancies",
+      "Miscarriage"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 195,
+    question: "What is the major complication of lithotomy position?",
+    choices: [
+      "Embolus or nerve damage",
+      "Blindness",
+      "Lymphedema",
+      "Cancer recurrence"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 196,
+    question: "Which diagnostic test is an X-ray of uterus and fallopian tubes?",
+    choices: [
+      "Hysterosalpingogram",
+      "Colposcopy",
+      "Hysteroscopy",
+      "Laparoscopy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 197,
+    question: "What is a cone biopsy of the cervix used for?",
+    choices: [
+      "Diagnose endometriosis",
+      "Rule out cervical cancer",
+      "Identify PID",
+      "Diagnose infertility"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 198,
+    question: "What does PID stand for?",
+    choices: [
+      "Pelvic inflammatory disease",
+      "Primary immune deficiency",
+      "Post-infectious disease",
+      "Peritoneal invasive disorder"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 199,
+    question: "What is amenorrhea?",
+    choices: [
+      "Painful menstruation",
+      "Excessive bleeding",
+      "Absence of menstruation",
+      "Irregular bleeding"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 200,
+    question: "What is the most common reason for a C-section?",
+    choices: [
+      "Placental abruption",
+      "Cephalopelvic disproportion",
+      "Breech presentation",
+      "Cord prolapse"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 201,
+    question: "What is meconium?",
+    choices: [
+      "First bowel movement of fetus",
+      "Waxy coating on newborn skin",
+      "Fluid in amniotic sac",
+      "Placental tissue"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 202,
+    question: "Which hormone is used to induce labor?",
+    choices: [
+      "Hemabate",
+      "Oxytocin",
+      "Methergine",
+      "Dextran"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 203,
+    question: "What is the medical term for the first pregnancy?",
+    choices: [
+      "Multigravida",
+      "Para gravida",
+      "Prima gravida",
+      "Nulligravida"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 204,
+    question: "Which uterine fibroid tumor is most common?",
+    choices: [
+      "Leiomyoma",
+      "Myoma",
+      "Sarcoma",
+      "Carcinoma"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 205,
+    question: "What is oophorectomy?",
+    choices: [
+      "Removal of ovary",
+      "Removal of uterus",
+      "Removal of fallopian tube",
+      "Removal of bladder"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 206,
+    question: "What is Marshall–Marchetti–Krantz procedure used to treat?",
+    choices: [
+      "Incontinence",
+      "Cancer",
+      "Prolapse",
+      "Hernia"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 207,
+    question: "What is cystocele?",
+    choices: [
+      "Bladder protrusion into vaginal wall",
+      "Rectal prolapse",
+      "Hernia of intestine",
+      "Fistula between bladder and vagina"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 208,
+    question: "What is uterine ablation used to treat?",
+    choices: [
+      "Cancer",
+      "Abnormal bleeding",
+      "Infertility",
+      "Prolapse"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 209,
+    question: "Which incision provides access to pelvic organs?",
+    choices: [
+      "Pfannenstiel",
+      "Kocher",
+      "McBurney",
+      "Midline"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 210,
+    question: "What is the function of the conjunctiva?",
+    choices: [
+      "Lubricate eyelids",
+      "Line the sclera and eyelids",
+      "Focus light",
+      "Control pupil size"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 211,
+    question: "Which part of the eye changes shape to focus?",
+    choices: [
+      "Retina",
+      "Cornea",
+      "Lens",
+      "Sclera"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 212,
+    question: "Which layer of the eye contains photoreceptors?",
+    choices: [
+      "Sclera",
+      "Retina",
+      "Lens",
+      "Cornea"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 213,
+    question: "What is the most common cause of color blindness?",
+    choices: [
+      "Corneal defect",
+      "Retinal defect",
+      "Lens defect",
+      "Scleral damage"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 214,
+    question: "What drug constricts the pupil?",
+    choices: [
+      "Mydriatic",
+      "Cycloplegic",
+      "Miotic",
+      "Corticosteroid"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 215,
+    question: "What drug dilates pupil but inhibits focusing?",
+    choices: [
+      "Miotic",
+      "Cycloplegic",
+      "Corticosteroid",
+      "Anti-inflammatory"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 216,
+    question: "What is balanced salt solution (BSS) used for?",
+    choices: [
+      "Irrigation",
+      "Lubrication",
+      "Anesthesia",
+      "Antibiotic"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 217,
+    question: "What is the removal of eye contents, leaving sclera intact?",
+    choices: [
+      "Enucleation",
+      "Evisceration",
+      "Exenteration",
+      "Keratoplasty"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 218,
+    question: "What is removal of entire eyeball including optic nerve?",
+    choices: [
+      "Evisceration",
+      "Enucleation",
+      "Keratoplasty",
+      "Exenteration"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 219,
+    question: "What is removal of entire orbital contents?",
+    choices: [
+      "Keratoplasty",
+      "Evisceration",
+      "Enucleation",
+      "Exenteration"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 220,
+    question: "What is a chalazion?",
+    choices: [
+      "Obstruction of lacrimal duct",
+      "Obstruction of meibomian gland",
+      "Benign growth on conjunctiva",
+      "Prolapse of eyelid"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 221,
+    question: "What is blepharoplasty?",
+    choices: [
+      "Eyelid repair for dermatochalasis",
+      "Removal of eye",
+      "Correction of strabismus",
+      "Lens transplant"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 222,
+    question: "What is pterygium?",
+    choices: [
+      "Growth on cornea",
+      "Growth on conjunctiva",
+      "Eyelid tumor",
+      "Cataract"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 223,
+    question: "What is esotropia?",
+    choices: [
+      "Cross eyes",
+      "Wall eyes",
+      "Lazy eye",
+      "Normal alignment"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 224,
+    question: "What is exotropia?",
+    choices: [
+      "Cross eyes",
+      "Wall eyes",
+      "Lazy eye",
+      "Normal alignment"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 225,
+    question: "What is the purpose of recession surgery?",
+    choices: [
+      "Strengthen eye muscle",
+      "Shorten lateral rectus",
+      "Weaken eye muscle",
+      "Remove eye muscle"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 226,
+    question: "What is keratoplasty?",
+    choices: [
+      "Lens transplant",
+      "Eyelid surgery",
+      "Corneal transplant",
+      "Cataract removal"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 227,
+    question: "What is radial keratotomy used to treat?",
+    choices: [
+      "Hyperopia",
+      "Myopia",
+      "Astigmatism",
+      "Cataracts"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 228,
+    question: "What is the purpose of LASIK?",
+    choices: [
+      "Replace lens",
+      "Remove cataract",
+      "Reshape cornea",
+      "Transplant retina"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 229,
+    question: "What is the benefit of Nd:YAG laser in eye surgery?",
+    choices: [
+      "Heats tissues directly",
+      "Passes through clear tissue without heating",
+      "Used only on eyelids",
+      "Treats color blindness"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 230,
+    question: "What is dacryocystorhinostomy?",
+    choices: [
+      "Remove eyelid growth",
+      "Relieve nasolacrimal duct blockage",
+      "Treat cataract",
+      "Correct strabismus"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 231,
+    question: "What is the purpose of lacrimal duct dilation?",
+    choices: [
+      "Remove eyelid growth",
+      "Treat excessive tearing",
+      "Correct cross eyes",
+      "Treat glaucoma"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 232,
+    question: "What do Bowman lacrimal duct probes do?",
+    choices: [
+      "Block lacrimal duct",
+      "Dilate lacrimal duct",
+      "Transplant cornea",
+      "Strengthen eyelids"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 233,
+    question: "What is the purpose of viscoelastic agents?",
+    choices: [
+      "Lubricate and separate tissues",
+      "Irrigate the cornea",
+      "Treat infection",
+      "Provide anesthesia"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 234,
+    question: "Which medication prolongs anesthesia and reduces bleeding?",
+    choices: [
+      "Atropine",
+      "Epinephrine",
+      "Miotic",
+      "BSS"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 235,
+    question: "Which agent increases diffusion of anesthetic?",
+    choices: [
+      "Miotic",
+      "Hyaluronidase",
+      "Mydriatic",
+      "Betamethasone"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 236,
+    question: "What type of drug is betamethasone?",
+    choices: [
+      "Antibiotic",
+      "Miotic",
+      "Anti-inflammatory",
+      "Mydriatic"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 237,
+    question: "What type of drug is gentamicin?",
+    choices: [
+      "Antibiotic",
+      "Anti-inflammatory",
+      "Anesthetic",
+      "Mydriatic"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 238,
+    question: "What type of anesthetic is tetracaine?",
+    choices: [
+      "Injectable",
+      "Topical",
+      "Viscoelastic",
+      "Irrigant"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 239,
+    question: "What type of anesthetic is lidocaine?",
+    choices: [
+      "Injectable",
+      "Topical",
+      "Viscoelastic",
+      "Irrigant"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 240,
+    question: "Which type of lymph node drains the inner half of the breast?",
+    choices: [
+      "Internal thoracic nodes",
+      "Axillary nodes",
+      "Cervical nodes",
+      "Mediastinal nodes"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 241,
+    question: "What is carcinoma in-situ?",
+    choices: [
+      "Cancer that has spread",
+      "Cancer confined to original site",
+      "Benign tumor",
+      "Inflammatory condition"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 242,
+    question: "What is the most effective screening method for early breast cancer detection?",
+    choices: [
+      "Self-examination",
+      "Clinical examination",
+      "Mammography",
+      "Blood tests"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 243,
+    question: "What is the standard treatment for ductal carcinoma in-situ?",
+    choices: [
+      "Chemotherapy only",
+      "Radiation only",
+      "Lumpectomy with radiation",
+      "Observation only"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 244,
+    question: "What is hormone replacement therapy primarily used for?",
+    choices: [
+      "Breast cancer treatment",
+      "Osteoporosis prevention",
+      "Menopausal symptoms",
+      "Birth control"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 245,
+    question: "What is the most common complication of breast reconstruction?",
+    choices: [
+      "Infection",
+      "Capsular contracture",
+      "Bleeding",
+      "Nerve damage"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 246,
+    question: "What is the primary indication for prophylactic mastectomy?",
+    choices: [
+      "Family history of breast cancer",
+      "BRCA gene mutation",
+      "Previous breast cancer",
+      "Dense breast tissue"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 247,
+    question: "What is the purpose of sentinel lymph node biopsy?",
+    choices: [
+      "Remove all lymph nodes",
+      "Determine cancer spread",
+      "Treat lymphedema",
+      "Prevent infection"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 248,
+    question: "What is neoadjuvant therapy?",
+    choices: [
+      "Treatment after surgery",
+      "Treatment before surgery",
+      "Palliative treatment",
+      "Preventive treatment"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 249,
+    question: "What is the most common type of breast cancer?",
+    choices: [
+      "Lobular carcinoma",
+      "Inflammatory carcinoma",
+      "Ductal carcinoma",
+      "Medullary carcinoma"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 250,
+    question: "What is the purpose of adjuvant therapy in breast cancer treatment?",
+    choices: [
+      "Shrink tumor before surgery",
+      "Prevent cancer recurrence",
+      "Diagnose cancer stage",
+      "Manage side effects"
+    ],
+    correctAnswer: 1
   }
 ];
