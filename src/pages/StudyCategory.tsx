@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -54,10 +53,10 @@ const StudyCategory = () => {
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link to="/study">
+              <Link to="/">
                 <Button variant="outline" size="sm" className="flex items-center space-x-2">
                   <ArrowLeft className="h-4 w-4" />
-                  <span>Back to Categories</span>
+                  <span>Back to Home</span>
                 </Button>
               </Link>
               <div className="flex items-center space-x-3">
@@ -80,35 +79,13 @@ const StudyCategory = () => {
         {/* Main Study Interface */}
         <Card className="bg-gradient-to-br from-white via-slate-50 to-blue-50 backdrop-blur-sm border-slate-200 shadow-xl">
           {isSurgicalProcedures ? (
-            // For surgical procedures, show only question practice and progress
-            <Tabs defaultValue="questions" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
-                <TabsTrigger value="questions" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                  <Brain className="h-4 w-4" />
-                  <span>Practice Questions</span>
-                </TabsTrigger>
-                <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                  <Trophy className="h-4 w-4" />
-                  <span>Progress</span>
-                </TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="questions" className="p-6">
-                <QuestionPractice 
-                  questions={surgicalProceduresQuestions}
-                  categoryName="Surgical Procedures"
-                />
-              </TabsContent>
-              
-              <TabsContent value="progress" className="p-6">
-                <StudyProgress 
-                  streak={studyStreak}
-                  totalQuestions={totalQuestions}
-                  correctAnswers={correctAnswers}
-                  category={category}
-                />
-              </TabsContent>
-            </Tabs>
+            // For surgical procedures, show only question practice (no progress tab)
+            <div className="p-6">
+              <QuestionPractice 
+                questions={surgicalProceduresQuestions}
+                categoryName="Surgical Procedures"
+              />
+            </div>
           ) : (
             // For other categories, show all three tabs
             <Tabs defaultValue="flashcards" className="w-full">
