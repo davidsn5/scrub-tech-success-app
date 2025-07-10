@@ -1,8 +1,7 @@
-
 export interface Question {
   id: number;
   question: string;
-  options: string[];
+  choices: string[];
   correctAnswer: number;
   explanation?: string;
 }
@@ -11,7 +10,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 1,
     question: "What is the GI tract also called?",
-    options: [
+    choices: [
       "Mesentery tract",
       "Alimentary tract", 
       "Hepatic tract",
@@ -22,7 +21,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 2,
     question: "Which of the following is NOT a function of the GI tract?",
-    options: [
+    choices: [
       "Ingestion",
       "Digestion", 
       "Filtration",
@@ -33,7 +32,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 3,
     question: "Which part of the GI tract is responsible for transporting ingested material by peristalsis from pharynx to stomach?",
-    options: [
+    choices: [
       "Stomach",
       "Esophagus", 
       "Duodenum",
@@ -44,7 +43,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 4,
     question: "What is another name for EGD?",
-    options: [
+    choices: [
       "Colonoscopy",
       "Proctoscopy", 
       "Gastroscopy",
@@ -55,7 +54,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 5,
     question: "Endoscopes are classified as:",
-    options: [
+    choices: [
       "Disposable devices",
       "Sterile devices", 
       "Semicritical devices",
@@ -66,7 +65,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 6,
     question: "Which condition is caused by backflow of gastric contents into esophagus?",
-    options: [
+    choices: [
       "Barrett's esophagus",
       "GERD", 
       "Zenker's diverticulum",
@@ -77,7 +76,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 7,
     question: "Barrett's esophagus increases the risk for:",
-    options: [
+    choices: [
       "Ulcers",
       "Cancer", 
       "Diverticulitis",
@@ -88,7 +87,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 8,
     question: "Which is a weakening in the esophageal wall that traps food?",
-    options: [
+    choices: [
       "Hiatal hernia",
       "Zenker's diverticulum", 
       "Barrett's esophagus",
@@ -99,7 +98,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 9,
     question: "What is the purpose of a laparoscopic Nissen fundoplication?",
-    options: [
+    choices: [
       "Remove appendix",
       "Repair hernia", 
       "Prevent reflux",
@@ -110,7 +109,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 10,
     question: "Which instruments are used for esophageal dilation?",
-    options: [
+    choices: [
       "Bougie dilators",
       "Sigmoidoscope", 
       "Band ligators",
@@ -121,7 +120,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 11,
     question: "Which part of the stomach is located above the esophageal sphincter?",
-    options: [
+    choices: [
       "Pylorus",
       "Fundus", 
       "Cardia",
@@ -132,7 +131,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 12,
     question: "Which structure is attached to the greater curvature of the stomach?",
-    options: [
+    choices: [
       "Omentum",
       "Mesentery", 
       "Ligament of Treitz",
@@ -143,7 +142,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 13,
     question: "What connects the intestines to the posterior abdominal wall?",
-    options: [
+    choices: [
       "Omentum",
       "Mesentery", 
       "Serosa",
@@ -154,7 +153,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 14,
     question: "What is the main function of the stomach?",
-    options: [
+    choices: [
       "Eliminate waste",
       "Store ingested material", 
       "Produce insulin",
@@ -165,7 +164,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 15,
     question: "What does a vagotomy involve?",
-    options: [
+    choices: [
       "Cutting the mesentery",
       "Removing part of the stomach", 
       "Cutting vagus nerve branches",
@@ -176,7 +175,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 16,
     question: "Pyloromyotomy is more common in:",
-    options: [
+    choices: [
       "Adults with ulcers",
       "Infants with projectile vomiting", 
       "Adults with cancer",
@@ -187,7 +186,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 17,
     question: "What is the purpose of a PEG tube?",
-    options: [
+    choices: [
       "Remove gallstones",
       "Gastric decompression and feeding", 
       "Dilate esophagus",
@@ -198,7 +197,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 18,
     question: "Which procedure treats benign pyloric obstruction without removing GI tissue?",
-    options: [
+    choices: [
       "Gastrojejunostomy",
       "Billroth II", 
       "Nissen fundoplication",
@@ -209,7 +208,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 19,
     question: "Billroth I anastomoses the stomach to the:",
-    options: [
+    choices: [
       "Ileum",
       "Duodenum", 
       "Jejunum",
@@ -220,7 +219,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 20,
     question: "Total gastrectomy involves removal of:",
-    options: [
+    choices: [
       "Stomach and duodenum",
       "Entire stomach", 
       "Distal stomach",
@@ -231,7 +230,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 21,
     question: "Bariatric surgery is performed to:",
-    options: [
+    choices: [
       "Remove tumors",
       "Treat obesity", 
       "Treat ulcers",
@@ -242,7 +241,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 22,
     question: "Which bariatric procedure is adjustable and reversible?",
-    options: [
+    choices: [
       "Roux-en-Y bypass",
       "Billroth II", 
       "PEG",
@@ -253,7 +252,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 23,
     question: "Which part of the small intestine connects to the ileocecal valve?",
-    options: [
+    choices: [
       "Duodenum",
       "Ileum", 
       "Jejunum",
@@ -264,7 +263,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 24,
     question: "What is the function of the large intestine?",
-    options: [
+    choices: [
       "Produce bile",
       "Store ingested food", 
       "Reabsorb water",
@@ -275,7 +274,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 25,
     question: "What is the correct order of the colon parts?",
-    options: [
+    choices: [
       "Ascending, transverse, descending, sigmoid",
       "Transverse, ascending, sigmoid, descending", 
       "Ascending, descending, sigmoid, transverse",
@@ -286,7 +285,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 26,
     question: "Which muscle controls voluntary anal sphincter function?",
-    options: [
+    choices: [
       "Internal sphincter",
       "External sphincter", 
       "Circular muscle",
@@ -297,7 +296,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 27,
     question: "The appendix projects from the:",
-    options: [
+    choices: [
       "Cecum",
       "Sigmoid colon", 
       "Rectum",
@@ -308,18 +307,18 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 28,
     question: "What is an appendectomy commonly performed for?",
-    options: [
+    choices: [
       "Diverticulitis",
       "Ulcers", 
       "Acute inflammation",
       "Cancer"
     ],
-    correctAnswer: 0
+    correctAnswer: 2
   },
   {
     id: 29,
     question: "Which incision is used for an appendectomy?",
-    options: [
+    choices: [
       "Kocher",
       "Pfannenstiel", 
       "McBurney",
@@ -330,7 +329,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 30,
     question: "Which type of suture is commonly used on the appendix stump?",
-    options: [
+    choices: [
       "Figure-of-eight",
       "Purse-string", 
       "Interrupted",
@@ -341,7 +340,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 31,
     question: "What is the purpose of an intestinal stoma?",
-    options: [
+    choices: [
       "Remove stomach contents",
       "Divert bowel contents", 
       "Remove gallbladder",
@@ -352,40 +351,40 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 32,
     question: "A colostomy creates an opening in the:",
-    options: [
+    choices: [
       "Stomach",
       "Colon", 
       "Small intestine",
       "Rectum"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
   },
   {
     id: 33,
     question: "The Whipple procedure removes all EXCEPT:",
-    options: [
+    choices: [
       "Head of pancreas",
       "Entire duodenum", 
       "Proximal jejunum",
       "Entire stomach"
     ],
-    correctAnswer: 1
+    correctAnswer: 3
   },
   {
     id: 34,
     question: "Gallstones are sent to pathology:",
-    options: [
+    choices: [
       "In saline",
       "On a dry container", 
       "In formalin",
       "In sterile water"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
   },
   {
     id: 35,
     question: "What is the main function of the gallbladder?",
-    options: [
+    choices: [
       "Store insulin",
       "Store bile", 
       "Produce bile",
@@ -396,7 +395,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 36,
     question: "What is the preferred incision for an open cholecystectomy?",
-    options: [
+    choices: [
       "Midline",
       "Kocher", 
       "McBurney",
@@ -407,18 +406,18 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 37,
     question: "Which of the following is NOT part of the bowel technique?",
-    options: [
+    choices: [
       "Isolating contaminated instruments",
       "Using separate clean and dirty setups", 
       "Changing gloves",
       "Using the same suction for clean and dirty areas"
     ],
-    correctAnswer: 1
+    correctAnswer: 3
   },
   {
     id: 38,
     question: "An APR is performed to treat lesions of the:",
-    options: [
+    choices: [
       "Esophagus",
       "Rectum and anus", 
       "Stomach",
@@ -429,7 +428,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 39,
     question: "Adhesions are:",
-    options: [
+    choices: [
       "Dilated veins",
       "Bands of fibrous tissue", 
       "Stenotic pylorus",
@@ -440,7 +439,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 40,
     question: "Hemorrhoidectomy can be performed with:",
-    options: [
+    choices: [
       "Bougie",
       "Band suture or laser", 
       "PEG",
@@ -451,29 +450,29 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 41,
     question: "A fistulotomy involves:",
-    options: [
+    choices: [
       "Excision of the tract",
       "Drainage of the tract", 
       "Closure of the tract",
       "Repair of the sphincter"
     ],
-    correctAnswer: 2
+    correctAnswer: 0
   },
   {
     id: 42,
     question: "What is the first layer of the abdominal wall?",
-    options: [
+    choices: [
       "Fascia",
       "Skin", 
       "Peritoneum",
       "Subcutaneous tissue"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 43,
     question: "Which laparoscopic technique uses a blunt trocar?",
-    options: [
+    choices: [
       "Veress needle technique",
       "SIL technique", 
       "Hasson technique",
@@ -484,29 +483,29 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 44,
     question: "What is the normal intra-abdominal pressure during laparoscopy?",
-    options: [
+    choices: [
       "5-8 mmHg",
       "8-10 mmHg", 
       "12-15 mmHg",
       "18-20 mmHg"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 45,
     question: "What does the ligament of Treitz connect?",
-    options: [
+    choices: [
       "Duodenum and jejunum",
       "Ileum and cecum", 
       "Colon and rectum",
       "Stomach and duodenum"
     ],
-    correctAnswer: 2
+    correctAnswer: 0
   },
   {
     id: 46,
     question: "What are haustra?",
-    options: [
+    choices: [
       "Fat-filled pouches",
       "Bands on stomach", 
       "Outpouchings of intestines",
@@ -517,7 +516,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 47,
     question: "What is Meckel's diverticulum?",
-    options: [
+    choices: [
       "Outpouching of large intestine",
       "Outpouching of small intestine", 
       "Stricture of esophagus",
@@ -528,7 +527,7 @@ export const surgicalProceduresQuestions: Question[] = [
   {
     id: 48,
     question: "What is a pilonidal cyst?",
-    options: [
+    choices: [
       "Hernia at diaphragm",
       "Anal mucosa tear", 
       "Cyst near buttocks with hair",
