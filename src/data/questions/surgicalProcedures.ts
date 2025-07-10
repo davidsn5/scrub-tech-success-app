@@ -556,5 +556,555 @@ export const surgicalProceduresQuestions: Question[] = [
       "No anesthesia required"
     ],
     correctAnswer: 2
+  },
+  {
+    id: 51,
+    question: "What is the main function of the gastrointestinal (GI) tract?",
+    choices: [
+      "Absorb oxygen",
+      "Store bile",
+      "Ingestion, digestion, absorption",
+      "Produce hormones"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 52,
+    question: "Which of the following is NOT a part of the GI tract?",
+    choices: [
+      "Stomach",
+      "Rectum",
+      "Esophagus",
+      "Kidney"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 53,
+    question: "The GI tract is also called the:",
+    choices: [
+      "Respiratory tract",
+      "Circulatory tract",
+      "Alimentary tract",
+      "Endocrine tract"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 54,
+    question: "The esophagus transports material from the pharynx to the:",
+    choices: [
+      "Duodenum",
+      "Stomach",
+      "Rectum",
+      "Liver"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 55,
+    question: "Endoscopes are considered semicritical devices because:",
+    choices: [
+      "They enter sterile tissue",
+      "They never touch mucosa",
+      "They enter mucosa and must be disinfected",
+      "They are disposable"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 56,
+    question: "Barrett's esophagus is a precursor condition for:",
+    choices: [
+      "Colon cancer",
+      "Esophageal cancer",
+      "Stomach ulcers",
+      "GERD"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 57,
+    question: "A Zenker's diverticulum is a weakness in the:",
+    choices: [
+      "Diaphragm",
+      "Stomach wall",
+      "Esophagus",
+      "Rectum"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 58,
+    question: "Which of these procedures restores the function of the lower esophageal sphincter?",
+    choices: [
+      "Laparoscopic Nissen fundoplication",
+      "Esophagectomy",
+      "PEG tube placement",
+      "Esophageal dilation"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 59,
+    question: "The omentum attaches to the:",
+    choices: [
+      "Lesser curvature of stomach",
+      "Greater curvature of stomach",
+      "Duodenum",
+      "Pancreas"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 60,
+    question: "The stomach's storage and chemical digestion functions are aided by:",
+    choices: [
+      "Peristaltic waves",
+      "Villi",
+      "Cilia",
+      "Bile salts"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 61,
+    question: "Billroth I involves an anastomosis between the stomach and:",
+    choices: [
+      "Jejunum",
+      "Duodenum",
+      "Ileum",
+      "Rectum"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 62,
+    question: "What is the most common indication for a PEG tube?",
+    choices: [
+      "Liver failure",
+      "External feeding",
+      "Removal of stones",
+      "Hernia repair"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 63,
+    question: "A morbidly obese patient is defined as having a BMI of:",
+    choices: [
+      "25",
+      "30",
+      "35",
+      "40"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 64,
+    question: "Which of the following is an outpouching of the small intestine?",
+    choices: [
+      "Intussusception",
+      "Meckel's diverticulum",
+      "Zenker's diverticulum",
+      "Barrett's esophagus"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 65,
+    question: "What instrument is used to remove gallstones?",
+    choices: [
+      "Fogarty catheter",
+      "Randall stone forceps",
+      "Kelly clamp",
+      "Bakes dilator"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 66,
+    question: "A cholangiogram is performed to visualize:",
+    choices: [
+      "Bile ducts",
+      "Stomach",
+      "Colon",
+      "Esophagus"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 67,
+    question: "What dye is commonly used in cholangiograms?",
+    choices: [
+      "Methylene blue",
+      "Iodine",
+      "Diatrizoate sodium (Hypaque)",
+      "Barium"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 68,
+    question: "A T-tube is inserted into the:",
+    choices: [
+      "Common bile duct",
+      "Esophagus",
+      "Duodenum",
+      "Liver lobe"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 69,
+    question: "Liver biopsy commonly uses which needle?",
+    choices: [
+      "Kelly",
+      "True-cut",
+      "Veress",
+      "Fogarty"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 70,
+    question: "The Glisson's capsule is the:",
+    choices: [
+      "Outer covering of liver",
+      "Inner mucosa of stomach",
+      "Diaphragm muscle",
+      "Ligament of Treitz"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 71,
+    question: "Which of the following procedures removes the head of the pancreas?",
+    choices: [
+      "Whipple",
+      "Billroth II",
+      "Nissen fundoplication",
+      "PEG"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 72,
+    question: "The spleen is protected by which ribs?",
+    choices: [
+      "5th-7th",
+      "6th-8th",
+      "8th-10th",
+      "10th-12th"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 73,
+    question: "Hypersplenism is:",
+    choices: [
+      "Enlarged spleen with decreased blood cells",
+      "Tumor in the spleen",
+      "Liver failure",
+      "Blocked bile duct"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 74,
+    question: "Which hormone is produced by the pancreas?",
+    choices: [
+      "Insulin",
+      "Bile",
+      "Pepsin",
+      "Gastrin"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 75,
+    question: "The sphincter of Oddi controls flow into the:",
+    choices: [
+      "Stomach",
+      "Esophagus",
+      "Ampulla of Vater",
+      "Rectum"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 76,
+    question: "A diaphragmatic hernia is also called:",
+    choices: [
+      "Umbilical hernia",
+      "Hiatal hernia",
+      "Ventral hernia",
+      "Inguinal hernia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 77,
+    question: "A direct inguinal hernia passes through:",
+    choices: [
+      "Hesselbach's triangle",
+      "Internal ring",
+      "Umbilical ring",
+      "Diaphragm"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 78,
+    question: "A femoral hernia is more common in:",
+    choices: [
+      "Men",
+      "Women",
+      "Children",
+      "Infants"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 79,
+    question: "The most serious complication of a strangulated hernia is:",
+    choices: [
+      "Obstruction",
+      "Necrosis",
+      "Pain",
+      "GERD"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 80,
+    question: "A Richter's hernia is a type of:",
+    choices: [
+      "Umbilical hernia",
+      "Strangulated hernia",
+      "Indirect inguinal hernia",
+      "Hiatal hernia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 81,
+    question: "What is the common incision for an appendectomy?",
+    choices: [
+      "Midline",
+      "Kocher",
+      "McBurney",
+      "Subcostal"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 82,
+    question: "Which of these is used to retract the liver?",
+    choices: [
+      "Harrington",
+      "Kelly",
+      "Potts",
+      "Veress"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 83,
+    question: "What is used to dilate the common bile duct?",
+    choices: [
+      "Bakes dilators",
+      "Randall forceps",
+      "Kelly clamp",
+      "Fogarty catheter"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 84,
+    question: "A Whipple procedure removes all EXCEPT:",
+    choices: [
+      "Gallbladder",
+      "Head of pancreas",
+      "Distal stomach",
+      "Entire liver"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 85,
+    question: "Pancreatic transplantation candidates are usually:",
+    choices: [
+      "Older than 60",
+      "Between 20-40 years",
+      "Children",
+      "Any age"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 86,
+    question: "An indirect inguinal hernia is usually:",
+    choices: [
+      "Acquired",
+      "Congenital",
+      "Femoral",
+      "Ventral"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 87,
+    question: "The layers of the abdominal wall include all EXCEPT:",
+    choices: [
+      "Skin",
+      "Subcutaneous",
+      "Peritoneum",
+      "Pleura"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 88,
+    question: "Which is considered a minimally invasive surgery?",
+    choices: [
+      "Laparoscopy",
+      "Whipple",
+      "Appendectomy",
+      "Billroth I"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 89,
+    question: "What solution is used to preserve transplant organs?",
+    choices: [
+      "Hypaque",
+      "Collins",
+      "Methylene blue",
+      "Iodine"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 90,
+    question: "An internal anal sphincter is:",
+    choices: [
+      "Voluntary",
+      "Involuntary",
+      "Muscularis mucosa",
+      "Pleural muscle"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 91,
+    question: "Which repair involves Meckel's diverticulum?",
+    choices: [
+      "Maydl repair",
+      "Littre hernia repair",
+      "Bassini repair",
+      "Cooper repair"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 92,
+    question: "What artery supplies the breast?",
+    choices: [
+      "Internal thoracic",
+      "Hepatic",
+      "Renal",
+      "Coronary"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 93,
+    question: "A ventral hernia occurs:",
+    choices: [
+      "Through diaphragm",
+      "At umbilicus",
+      "Anywhere on abdominal wall except groin",
+      "Through femoral canal"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 94,
+    question: "A TEP hernia repair is:",
+    choices: [
+      "Totally extraperitoneal",
+      "Transabdominal preperitoneal",
+      "Tension repair",
+      "Transcutaneous endoscopic"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 95,
+    question: "Which incision is common in liver surgery?",
+    choices: [
+      "McBurney",
+      "Kocher",
+      "Right subcostal",
+      "Midline"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 96,
+    question: "A strangulated hernia becomes:",
+    choices: [
+      "Reducible",
+      "Incarcerated",
+      "Necrotic",
+      "Obstructed"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 97,
+    question: "The pancreas is also called:",
+    choices: [
+      "Wirsung gland",
+      "Vater gland",
+      "Oddi gland",
+      "Glisson gland"
+    ],
+    correctAnswer: 0
+  },
+    {
+    id: 98,
+    question: "Which type of hernia repair uses mesh?",
+    choices: [
+      "Bassini repair",
+      "Tension-free repair",
+      "McVay repair",
+      "Shouldice repair"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 99,
+    question: "What is the most common cause of small bowel obstruction?",
+    choices: [
+      "Tumors",
+      "Adhesions",
+      "Hernias",
+      "Volvulus"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 100,
+    question: "Which organ produces bile?",
+    choices: [
+      "Gallbladder",
+      "Liver",
+      "Pancreas",
+      "Spleen"
+    ],
+    correctAnswer: 1
   }
 ];
