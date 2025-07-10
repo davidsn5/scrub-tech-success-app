@@ -1074,7 +1074,7 @@ export const surgicalProceduresQuestions: Question[] = [
     ],
     correctAnswer: 0
   },
-    {
+  {
     id: 98,
     question: "Which type of hernia repair uses mesh?",
     choices: [
@@ -1104,6 +1104,831 @@ export const surgicalProceduresQuestions: Question[] = [
       "Liver",
       "Pancreas",
       "Spleen"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 101,
+    question: "What is the primary function of the lymph nodes in the breast?",
+    choices: [
+      "Produce hormones",
+      "Drain lymph fluid and filter pathogens",
+      "Produce milk",
+      "Connect muscle fibers"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 102,
+    question: "Which of the following is the most common screening tool for breast cancer?",
+    choices: [
+      "Ultrasound",
+      "MRI",
+      "Mammography",
+      "PET scan"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 103,
+    question: "In mammography, micro-calcifications often indicate which condition?",
+    choices: [
+      "Cyst",
+      "Intraductal carcinoma in-situ",
+      "Fibrocystic disease",
+      "Lobular carcinoma"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 104,
+    question: "Which imaging modality uses sound waves to create breast tissue images?",
+    choices: [
+      "MRI",
+      "PET scan",
+      "Ultrasound",
+      "Mammography"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 105,
+    question: "What is the purpose of a digital stereotactic biopsy?",
+    choices: [
+      "Remove the entire breast",
+      "Guide chemotherapy",
+      "Diagnose abnormal mammogram findings",
+      "Detect metastatic cancer"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 106,
+    question: "Which test is used to assess if breast cancer has spread to other organs?",
+    choices: [
+      "MRI",
+      "PET scan",
+      "Mammogram",
+      "Ultrasound"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 107,
+    question: "Which lymph node group is located under the armpit?",
+    choices: [
+      "Internal thoracic",
+      "Axillary",
+      "Supraclavicular",
+      "Cervical"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 108,
+    question: "A core needle biopsy removes tissue by:",
+    choices: [
+      "Aspirating fluid",
+      "Using radioactive dye",
+      "Cutting a plug of tissue",
+      "Removing the entire breast"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 109,
+    question: "What is a sentinel lymph node?",
+    choices: [
+      "Last lymph node in a chain",
+      "Closest node to a tumor",
+      "Only node in the thorax",
+      "Node removed during mastectomy"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 110,
+    question: "Lymphedema after breast surgery occurs because of:",
+    choices: [
+      "Radiation to the lung",
+      "Damaged muscle fibers",
+      "Removal of too many lymph nodes",
+      "Chemotherapy toxicity"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 111,
+    question: "Which procedure removes the entire breast and axillary nodes?",
+    choices: [
+      "Radical mastectomy",
+      "Simple mastectomy",
+      "Lumpectomy",
+      "Subcutaneous mastectomy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 112,
+    question: "A modified radical mastectomy spares which structure?",
+    choices: [
+      "Skin",
+      "Lymph nodes",
+      "Muscles",
+      "Entire breast"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 113,
+    question: "What is the main purpose of mammograms?",
+    choices: [
+      "Detect lumps/masses early",
+      "Treat cancer",
+      "Prevent breast cancer",
+      "Replace biopsy"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 114,
+    question: "What is the innermost layer of the abdominal wall?",
+    choices: [
+      "Peritoneum",
+      "Scarpa's fascia",
+      "Linea alba",
+      "Skin"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 115,
+    question: "The midline incision is preferred because it:",
+    choices: [
+      "Minimizes bleeding",
+      "Avoids muscle damage",
+      "Provides excellent exposure",
+      "Preserves lymphatic drainage"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 116,
+    question: "An incision above the umbilicus to the xiphoid is called:",
+    choices: [
+      "Midline",
+      "Epigastric",
+      "Paramedian",
+      "Subumbilical"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 117,
+    question: "Which incision is typically used for the appendix?",
+    choices: [
+      "Pfannenstiel",
+      "Kocher",
+      "McBurney",
+      "Upper transverse"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 118,
+    question: "A Pfannenstiel incision provides access to:",
+    choices: [
+      "Biliary tract",
+      "Spleen",
+      "Pelvic organs",
+      "Esophagus"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 119,
+    question: "Which incision is ideal for liver resection?",
+    choices: [
+      "Left subcostal",
+      "Right subcostal",
+      "Thoracoabdominal",
+      "Lower transverse"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 120,
+    question: "The thoracoabdominal incision provides access to:",
+    choices: [
+      "Brain",
+      "Pleural cavity",
+      "Ovaries",
+      "Appendix"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 121,
+    question: "Which glands secrete lubrication at the vaginal opening?",
+    choices: [
+      "Skene's",
+      "Bartholin's",
+      "Pituitary",
+      "Adrenal"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 122,
+    question: "The endometrium is:",
+    choices: [
+      "Muscle layer of the uterus",
+      "Outer covering of the uterus",
+      "Inner lining of the uterus",
+      "Support ligament"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 123,
+    question: "Which finger-like projections guide eggs into the fallopian tube?",
+    choices: [
+      "Endometrium",
+      "Fimbriae",
+      "Cervix",
+      "Os"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 124,
+    question: "An ectopic pregnancy occurs:",
+    choices: [
+      "Only in the uterus",
+      "Only in the cervix",
+      "Outside the uterus",
+      "Inside the ovary"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 125,
+    question: "The ovaries produce:",
+    choices: [
+      "Progesterone and estrogen",
+      "Testosterone",
+      "Insulin",
+      "Glucagon"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 126,
+    question: "The cervix connects the uterus to the:",
+    choices: [
+      "Ovaries",
+      "Fallopian tubes",
+      "Vagina",
+      "Rectum"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 127,
+    question: "Which uterine ligament is NOT paired?",
+    choices: [
+      "Broad",
+      "Round",
+      "Cardinal",
+      "All are paired"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 128,
+    question: "The lithotomy position is primarily used for:",
+    choices: [
+      "Laparoscopy",
+      "Abdominal surgery",
+      "Vaginal procedures",
+      "Thoracic surgery"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 129,
+    question: "Hysterosalpingogram is used to:",
+    choices: [
+      "Detect breast cancer",
+      "Assess infertility",
+      "Diagnose diabetes",
+      "Examine lungs"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 130,
+    question: "Colposcopy examines the:",
+    choices: [
+      "Uterus lining",
+      "Cervix, vagina, and vulva",
+      "Fallopian tubes",
+      "Endometrium"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 131,
+    question: "The fluid used to distend the uterus during hysteroscopy is:",
+    choices: [
+      "Saline",
+      "Sorbitol",
+      "Blood",
+      "Water"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 132,
+    question: "PID may result from infections by:",
+    choices: [
+      "Chlamydia",
+      "Streptococcus",
+      "E. coli",
+      "Influenza"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 133,
+    question: "What is the main complication of PID?",
+    choices: [
+      "Hypertension",
+      "Sterility",
+      "Diabetes",
+      "Obesity"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 134,
+    question: "A cone biopsy of the cervix rules out:",
+    choices: [
+      "Breast cancer",
+      "Endometriosis",
+      "Cervical cancer",
+      "Ovarian cysts"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 135,
+    question: "Culdocentesis is done to:",
+    choices: [
+      "Extract endometrial tissue",
+      "Visualize the uterus",
+      "Drain fluid from the rectouterine pouch",
+      "Remove ovarian cysts"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 136,
+    question: "Menorrhagia refers to:",
+    choices: [
+      "Painful menstruation",
+      "Heavy prolonged periods",
+      "Absence of menstruation",
+      "Irregular light bleeding"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 137,
+    question: "Dysmenorrhea means:",
+    choices: [
+      "Heavy bleeding",
+      "Painful periods",
+      "No periods",
+      "Short cycles"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 138,
+    question: "Chromopertubation checks:",
+    choices: [
+      "Fallopian tube patency",
+      "Uterine size",
+      "Endometrial thickness",
+      "Cervical os"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 139,
+    question: "Salpingectomy removes:",
+    choices: [
+      "Ovary",
+      "Fallopian tube",
+      "Uterus",
+      "Cervix"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 140,
+    question: "Which instrument is used in cervical conization?",
+    choices: [
+      "ESU only",
+      "Cervitome",
+      "Scalpel only",
+      "None"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 141,
+    question: "The most common type of hernia in men is:",
+    choices: [
+      "Umbilical",
+      "Direct inguinal",
+      "Indirect inguinal",
+      "Femoral"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 142,
+    question: "A femoral hernia is most common in:",
+    choices: [
+      "Men",
+      "Women",
+      "Children",
+      "Infants"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 143,
+    question: "An incisional hernia occurs:",
+    choices: [
+      "At birth",
+      "In the groin",
+      "After a surgical procedure",
+      "In the diaphragm"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 144,
+    question: "What is a Richter's hernia?",
+    choices: [
+      "Umbilical hernia",
+      "Strangulated hernia",
+      "Femoral hernia",
+      "Diaphragmatic hernia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 145,
+    question: "Which material is NOT used in hernia mesh repair?",
+    choices: [
+      "Gore-Tex",
+      "Teflon",
+      "Dacron",
+      "Insulin"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 146,
+    question: "Which hernia involves Meckel's diverticulum?",
+    choices: [
+      "Littre",
+      "Maydl",
+      "Richter",
+      "Spigelian"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 147,
+    question: "The Whipple procedure removes the:",
+    choices: [
+      "Gallbladder",
+      "Head of pancreas and duodenum",
+      "Liver",
+      "Spleen"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 148,
+    question: "A total pancreatectomy removes:",
+    choices: [
+      "Part of the pancreas",
+      "Entire pancreas and adjacent organs",
+      "Only tumors",
+      "Spleen only"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 149,
+    question: "The best candidates for pancreatic transplant are aged:",
+    choices: [
+      "10–20",
+      "20–40",
+      "50–70",
+      ">70"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 150,
+    question: "The bile duct is dilated with:",
+    choices: [
+      "T-tube",
+      "Bakes dilator",
+      "Fogarty catheter",
+      "Kelly clamp"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 151,
+    question: "Randall stone forceps are used for:",
+    choices: [
+      "Liver biopsy",
+      "Removing gallstones",
+      "Clamping vessels",
+      "Suturing"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 152,
+    question: "Kelly clamps can be used to:",
+    choices: [
+      "Decompress the gallbladder",
+      "Remove lymph nodes",
+      "Extend a port opening",
+      "Clamp bile ducts"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 153,
+    question: "The outer covering of the liver is called:",
+    choices: [
+      "Capsule of Vater",
+      "Glisson's capsule",
+      "Hepatic sheath",
+      "Peritoneum"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 154,
+    question: "Liver biopsy commonly uses a:",
+    choices: [
+      "Kelly clamp",
+      "True-Cut needle",
+      "ESU",
+      "Fogarty catheter"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 155,
+    question: "A subphrenic abscess occurs:",
+    choices: [
+      "In the kidney",
+      "In the liver",
+      "Beneath the diaphragm",
+      "In the pancreas"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 156,
+    question: "The most common reason for liver resection is:",
+    choices: [
+      "Trauma",
+      "Tumors",
+      "Gallstones",
+      "Hepatitis"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 157,
+    question: "Blunt needles are always used on the:",
+    choices: [
+      "Pancreas",
+      "Liver",
+      "Spleen",
+      "Bile duct"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 158,
+    question: "Bookwalter is a type of:",
+    choices: [
+      "Needle",
+      "Retractor",
+      "Clamp",
+      "Forceps"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 159,
+    question: "CUSA uses:",
+    choices: [
+      "Electric current",
+      "Ultrasonic waves",
+      "Radiation",
+      "Lasers"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 160,
+    question: "Intraoperative ultrasound helps in:",
+    choices: [
+      "Biopsy",
+      "Visualizing structures",
+      "Clamping vessels",
+      "Injecting dyes"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 161,
+    question: "A choledochojejunostomy joins:",
+    choices: [
+      "Gallbladder to jejunum",
+      "CBD to jejunum",
+      "CBD to duodenum",
+      "Liver to stomach"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 162,
+    question: "The sphincter of Oddi controls flow into the:",
+    choices: [
+      "Gallbladder",
+      "Pancreas",
+      "Ampulla of Vater",
+      "Duodenum"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 163,
+    question: "The ampulla of Vater is formed by:",
+    choices: [
+      "CBD and hepatic duct",
+      "Pancreatic and bile duct",
+      "Duodenum and jejunum",
+      "Gallbladder and CBD"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 164,
+    question: "Pancreaticojejunostomy is done for:",
+    choices: [
+      "Ectopic pregnancy",
+      "Pancreatic pseudocyst",
+      "Liver resection",
+      "Cholecystitis"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 165,
+    question: "The most common site of indirect inguinal hernia is:",
+    choices: [
+      "Femoral ring",
+      "Hesselbach's triangle",
+      "Internal inguinal ring",
+      "Umbilicus"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 166,
+    question: "The most common type of hernia in men is:",
+    choices: [
+      "Umbilical",
+      "Direct inguinal",
+      "Indirect inguinal",
+      "Femoral"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 167,
+    question: "A femoral hernia is most common in:",
+    choices: [
+      "Men",
+      "Women",
+      "Children",
+      "Infants"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 168,
+    question: "An incisional hernia occurs:",
+    choices: [
+      "At birth",
+      "In the groin",
+      "After a surgical procedure",
+      "In the diaphragm"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 169,
+    question: "What is a Richter's hernia?",
+    choices: [
+      "Umbilical hernia",
+      "Strangulated hernia",
+      "Femoral hernia",
+      "Diaphragmatic hernia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 170,
+    question: "Which material is NOT used in hernia mesh repair?",
+    choices: [
+      "Gore-Tex",
+      "Teflon",
+      "Dacron",
+      "Insulin"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 171,
+    question: "Which hernia involves Meckel's diverticulum?",
+    choices: [
+      "Littre",
+      "Maydl",
+      "Richter",
+      "Spigelian"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 172,
+    question: "The Whipple procedure removes the:",
+    choices: [
+      "Gallbladder",
+      "Head of pancreas and duodenum",
+      "Liver",
+      "Spleen"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 173,
+    question: "A total pancreatectomy removes:",
+    choices: [
+      "Part of the pancreas",
+      "Entire pancreas and adjacent organs",
+      "Only tumors",
+      "Spleen only"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 174,
+    question: "The best candidates for pancreatic transplant are aged:",
+    choices: [
+      "10–20",
+      "20–40",
+      "50–70",
+      ">70"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 175,
+    question: "The bile duct is dilated with:",
+    choices: [
+      "T-tube",
+      "Bakes dilator",
+      "Fogarty catheter",
+      "Kelly clamp"
     ],
     correctAnswer: 1
   }
