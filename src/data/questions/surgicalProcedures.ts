@@ -534,5 +534,27 @@ export const surgicalProceduresQuestions: Question[] = [
       "Gastric ulcer"
     ],
     correctAnswer: 2
+  },
+  {
+    id: 49,
+    question: "Which type of anesthesia is commonly used for laparoscopic procedures?",
+    choices: [
+      "Local anesthesia",
+      "General anesthesia", 
+      "Spinal anesthesia",
+      "Epidural anesthesia"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 50,
+    question: "What is the primary advantage of minimally invasive surgery?",
+    choices: [
+      "Lower cost",
+      "Faster procedure time", 
+      "Reduced patient recovery time",
+      "No anesthesia required"
+    ],
+    correctAnswer: 2
   }
 ];
