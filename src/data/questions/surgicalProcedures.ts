@@ -1,4 +1,3 @@
-
 export interface Question {
   id: number;
   question: string;
@@ -8,7 +7,6 @@ export interface Question {
 }
 
 export const surgicalProceduresQuestions: Question[] = [
-  // Original 35 questions
   {
     id: 1,
     question: "What is the first step in preparing a patient for surgery?",
@@ -219,8 +217,6 @@ export const surgicalProceduresQuestions: Question[] = [
     choices: ["Fifth", "Seventh", "Eighth", "Tenth"],
     correctAnswer: 3
   },
-  
-  // First batch of 75 questions (36-110)
   {
     id: 36,
     question: "Which procedure is performed to repair carcinoma of the vulva?",
@@ -533,8 +529,6 @@ export const surgicalProceduresQuestions: Question[] = [
     choices: ["Sitting", "Prone", "Supine", "Lateral"],
     correctAnswer: 2
   },
-  
-  // Continue with questions 88-162 (second batch of 75)
   {
     id: 88,
     question: "What is the primary purpose of a tonsillectomy and adenoidectomy?",
@@ -673,8 +667,6 @@ export const surgicalProceduresQuestions: Question[] = [
     choices: ["Hashimoto's", "Graves'", "Goiter", "Hypocalcemia"],
     correctAnswer: 0
   },
-  
-  // Continue with questions 111-335 (third batch of 225)
   {
     id: 111,
     question: "Which bone is also known as the malar bone?",
@@ -735,10 +727,6 @@ export const surgicalProceduresQuestions: Question[] = [
     choices: ["Malleus", "Incus", "Cochlea", "Stapes"],
     correctAnswer: 2
   },
-
-  // Continue adding the remaining questions up to 550...
-  // Due to length constraints, I'll add a few more key questions and indicate where the rest would go
-
   {
     id: 121,
     question: "What hormone controls the amount of calcium in the blood?",
@@ -769,15 +757,606 @@ export const surgicalProceduresQuestions: Question[] = [
     choices: ["Vagus nerve", "Hypoglossal nerve", "Recurrent laryngeal nerve", "Phrenic nerve"],
     correctAnswer: 2
   },
-
-  // Adding placeholder questions to reach 550 total
-  // In a real implementation, all 550 questions would be included here
-  ...Array.from({ length: 425 }, (_, index) => ({
-    id: 126 + index,
-    question: `Sample surgical procedure question ${126 + index}`,
-    choices: ["Option A", "Option B", "Option C", "Option D"],
+  {
+    id: 126,
+    question: "What is the primary purpose of the balloon in a Foley catheter?",
+    choices: ["To prevent urine leakage", "To secure the catheter in the bladder", "To drain the bladder faster", "To irrigate the bladder"],
+    correctAnswer: 1
+  },
+  {
+    id: 127,
+    question: "Which catheter is specifically designed with three ports for irrigation?",
+    choices: ["Two-way Foley", "Three-way Foley", "Pezzer", "Malecot"],
+    correctAnswer: 1
+  },
+  {
+    id: 128,
+    question: "Which of the following catheters is typically placed suprapubically?",
+    choices: ["Foley", "Pezzer", "Malecot", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 129,
+    question: "The Pezzer catheter stays in place by:",
+    choices: ["Inflatable balloon", "Suction tip", "Mushroom tip", "Irrigation port"],
+    correctAnswer: 2
+  },
+  {
+    id: 130,
+    question: "What is the Foley Goalie designed to prevent?",
+    choices: ["Infection at the catheter site", "The catheter from being pulled out", "Balloon rupture", "Urinary retention"],
+    correctAnswer: 1
+  },
+  {
+    id: 131,
+    question: "Nephrostomy tubes are placed to:",
+    choices: ["Drain urine from the bladder", "Remove kidney stones", "Drain urine from the kidney", "Monitor urine output"],
+    correctAnswer: 2
+  },
+  {
+    id: 132,
+    question: "Interventional radiology procedures often involve:",
+    choices: ["Open surgery", "Catheters and contrast media", "Only diagnostic imaging", "Removal of tumors"],
+    correctAnswer: 1
+  },
+  {
+    id: 133,
+    question: "Cystoscopy is indicated in all of the following EXCEPT:",
+    choices: ["Hematuria", "Urinary retention", "Fractured pelvis", "UTI"],
+    correctAnswer: 2
+  },
+  {
+    id: 134,
+    question: "Which table allows x-rays and fluoroscopy during urologic procedures?",
+    choices: ["Lithotomy table", "Operating room table", "Cysto table", "Trendelenburg table"],
+    correctAnswer: 2
+  },
+  {
+    id: 135,
+    question: "The most commonly used stirrups in cysto procedures are:",
+    choices: ["Candy cane", "Allen and yellowfin", "Lithotomy and knee crutch", "Boot-type"],
+    correctAnswer: 1
+  },
+  {
+    id: 136,
+    question: "The disinfectant known as Cidex is:",
+    choices: ["Ethanol", "Glutaraldehyde", "Betadine", "Chlorhexidine"],
+    correctAnswer: 1
+  },
+  {
+    id: 137,
+    question: "What is the shelf life of activated Cidex?",
+    choices: ["7 days", "10 days", "14 days", "30 days"],
+    correctAnswer: 2
+  },
+  {
+    id: 138,
+    question: "Laser ablation of condylomata is preferred over ESU because:",
+    choices: ["Lasers are faster", "Lasers distribute heat more evenly", "Lasers do not cause smoke", "Lasers are less expensive"],
+    correctAnswer: 1
+  },
+  {
+    id: 139,
+    question: "Which laser is known as the GREEN LIGHT laser?",
+    choices: ["Nd:YAG", "KTP", "CO₂", "Argon"],
+    correctAnswer: 1
+  },
+  {
+    id: 140,
+    question: "Circumcision is most commonly performed in males to treat:",
+    choices: ["Erectile dysfunction", "Phimosis", "Peyronie's disease", "Penile carcinoma"],
+    correctAnswer: 1
+  },
+  {
+    id: 141,
+    question: "Which of the following is NOT a cause of organic impotence?",
+    choices: ["Diabetes", "Priapism", "Neurological problems", "Urinary incontinence"],
+    correctAnswer: 3
+  },
+  {
+    id: 142,
+    question: "Vasectomy involves:",
+    choices: ["Removal of the testicles", "Tying or cauterizing the vas deferens", "Cutting the epididymis", "Implanting a contraceptive device"],
+    correctAnswer: 1
+  },
+  {
+    id: 143,
+    question: "A vasovasostomy is performed to:",
+    choices: ["Treat hydrocele", "Reverse a vasectomy", "Perform a biopsy", "Excise varicocele"],
+    correctAnswer: 1
+  },
+  {
+    id: 144,
+    question: "Which procedure removes fluid from a hydrocele?",
+    choices: ["Varicocelectomy", "Spermatocelectomy", "Hydrocelectomy", "Epididymectomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 145,
+    question: "Varicocelectomy is performed to:",
+    choices: ["Remove cysts", "Prevent rise in scrotal temperature", "Treat epididymitis", "Reverse a vasectomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 146,
+    question: "Which prostatectomy approach is through the urethra?",
+    choices: ["Suprapubic", "Retropubic", "TURP", "Perineal"],
+    correctAnswer: 2
+  },
+  {
+    id: 147,
+    question: "PSA stands for:",
+    choices: ["Prostate-specific antigen", "Prostate-specific antibody", "Prostate-specific analysis", "Prostatic serum assay"],
     correctAnswer: 0
-  }))
+  },
+  {
+    id: 148,
+    question: "What score is used to grade prostate cancer?",
+    choices: ["APGAR", "Glasgow", "Gleason", "Bishop"],
+    correctAnswer: 2
+  },
+  {
+    id: 149,
+    question: "In a TURP procedure, which instrument is used to evacuate prostatic chips?",
+    choices: ["Resectoscope", "Ellik evacuator", "Cystoscope", "Foley catheter"],
+    correctAnswer: 1
+  },
+  {
+    id: 150,
+    question: "What type of catheter is used at the end of a TURP?",
+    choices: ["Two-way Foley", "Suprapubic Malecot", "Triple-lumen Foley", "Pezzer"],
+    correctAnswer: 2
+  },
+  {
+    id: 151,
+    question: "Laser safety precautions include:",
+    choices: ["Posting warning signs", "Wearing proper eyewear", "Suctioning plume", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 152,
+    question: "Which approach in prostatectomy spares erectile function by preserving neurovascular bundles?",
+    choices: ["Simple perineal", "Radical retropubic with pelvic lymphadenectomy", "Laparoscopic radical", "TURP"],
+    correctAnswer: 1
+  },
+  {
+    id: 153,
+    question: "The robotic prostatectomy system consists of:",
+    choices: ["Surgeon console, robotic arms, 3D imaging", "Robotic arms only", "Console and camera", "Robotic arms and lasers"],
+    correctAnswer: 0
+  },
+  {
+    id: 154,
+    question: "Transrectal seed implantation is done for:",
+    choices: ["BPH", "Localized prostate cancer", "Penile carcinoma", "Hydrocele"],
+    correctAnswer: 1
+  },
+  {
+    id: 155,
+    question: "Which surgeon type is NOT typically involved in seed implantation?",
+    choices: ["Radiation oncologist", "GU surgeon", "Neurosurgeon", "Medical physicist"],
+    correctAnswer: 2
+  },
+  {
+    id: 156,
+    question: "The litholapaxy procedure is performed to:",
+    choices: ["Remove bladder tumors", "Excise the prostate", "Crush and irrigate bladder stones", "Treat stress incontinence"],
+    correctAnswer: 2
+  },
+  {
+    id: 157,
+    question: "Which position helps visualize abdominal organs in bladder surgery?",
+    choices: ["Supine", "Lithotomy", "Trendelenburg", "Prone"],
+    correctAnswer: 2
+  },
+  {
+    id: 158,
+    question: "A suprapubic cystostomy involves placing a catheter:",
+    choices: ["Through the urethra", "Through a low abdominal incision", "Through the rectum", "Through the perineum"],
+    correctAnswer: 1
+  },
+  {
+    id: 159,
+    question: "For bladder tumor resection, the preferred irrigating solution is:",
+    choices: ["Sterile water", "Saline", "Dextrose", "Lactated Ringer's"],
+    correctAnswer: 1
+  },
+  {
+    id: 160,
+    question: "The YAG laser is used to:",
+    choices: ["Excise lymph nodes", "Destroy bladder tumors", "Implant seeds", "Tie vas deferens"],
+    correctAnswer: 1
+  },
+  {
+    id: 161,
+    question: "The Pereyra needle is used in:",
+    choices: ["Stress incontinence repair", "Bladder tumor resection", "TURP", "Hydrocelectomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 162,
+    question: "A TVT sling is made of:",
+    choices: ["Catgut suture", "Polypropylene mesh", "Silk suture", "Nylon mesh"],
+    correctAnswer: 1
+  },
+  {
+    id: 163,
+    question: "The mesh in a TVT sling is positioned:",
+    choices: ["Inside the bladder", "Under the urethra", "In the epididymis", "Along the vas deferens"],
+    correctAnswer: 1
+  },
+  {
+    id: 164,
+    question: "Radical cystectomy involves removing:",
+    choices: ["Bladder only", "Bladder and pelvic lymph nodes", "Bladder and urethra", "Bladder and kidneys"],
+    correctAnswer: 1
+  },
+  {
+    id: 165,
+    question: "A vesicovaginal fistula connects the bladder to:",
+    choices: ["Rectum", "Intestines", "Vagina", "Urethra"],
+    correctAnswer: 2
+  },
+  {
+    id: 166,
+    question: "A vesicointestinal fistula connects the bladder to:",
+    choices: ["Urethra", "Intestines", "Vagina", "Kidneys"],
+    correctAnswer: 1
+  },
+  {
+    id: 167,
+    question: "Which of the following lasers is NOT commonly used in urology?",
+    choices: ["CO₂", "Nd:YAG", "KTP", "Ruby"],
+    correctAnswer: 3
+  },
+  {
+    id: 168,
+    question: "The resectoscope is used for:",
+    choices: ["Removing stones", "Resecting bladder or prostate tissue", "Dilating urethra", "Suctioning clots"],
+    correctAnswer: 1
+  },
+  {
+    id: 169,
+    question: "What is the main advantage of robotic prostatectomy?",
+    choices: ["Less expensive", "No need for anesthesia", "Greater precision and 3D imaging", "Does not require a surgeon"],
+    correctAnswer: 2
+  },
+  {
+    id: 170,
+    question: "What is the purpose of a smoke evacuator during laser procedures?",
+    choices: ["Cool the tissue", "Prevent inhalation of carcinogenic plume", "Increase laser power", "Sterilize the field"],
+    correctAnswer: 1
+  },
+  {
+    id: 171,
+    question: "What is the main purpose of the balloon on a Foley catheter?",
+    choices: ["Drain urine", "Provide irrigation", "Hold the catheter in place", "Prevent infection"],
+    correctAnswer: 2
+  },
+  {
+    id: 172,
+    question: "Which suprapubic catheter does not rely on a balloon to stay in place?",
+    choices: ["Foley", "Pezzer", "Three-way Foley", "Foley Goalie"],
+    correctAnswer: 1
+  },
+  {
+    id: 173,
+    question: "Nephrostomy tubes drain urine directly from the:",
+    choices: ["Ureter", "Bladder", "Kidney", "Urethra"],
+    correctAnswer: 2
+  },
+  {
+    id: 174,
+    question: "Interventional radiology procedures are often performed to:",
+    choices: ["Remove stones surgically", "Introduce contrast media and stents", "Irrigate the bladder", "Perform prostatectomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 175,
+    question: "A cystoscopy may be indicated for all except:",
+    choices: ["Urinary retention", "Hematuria", "UTI", "Nephrostomy"],
+    correctAnswer: 3
+  },
+  {
+    id: 176,
+    question: "The most common stirrups used in cystoscopy are:",
+    choices: ["Lithotomy and supine", "Allen and Yellofin", "Trendelenburg and Fowler", "Mayo and kidney rest"],
+    correctAnswer: 1
+  },
+  {
+    id: 177,
+    question: "What disinfectant is preferred for high-level cleaning of cystoscopy equipment?",
+    choices: ["Betadine", "Chlorhexidine", "Glutaraldehyde", "Alcohol"],
+    correctAnswer: 2
+  },
+  {
+    id: 178,
+    question: "Which laser is commonly used for ablation of condylomata?",
+    choices: ["YAG", "Argon", "Nd:YAG", "CO₂"],
+    correctAnswer: 3
+  },
+  {
+    id: 179,
+    question: "Phimosis is a condition where:",
+    choices: ["The urethra is blocked", "The foreskin is difficult to retract", "The prostate is enlarged", "The scrotum is infected"],
+    correctAnswer: 1
+  },
+  {
+    id: 180,
+    question: "The primary goal of a urethral meatotomy is to:",
+    choices: ["Repair a fistula", "Remove the foreskin", "Enlarge the urethral meatus", "Perform biopsy"],
+    correctAnswer: 2
+  },
+  {
+    id: 181,
+    question: "The purpose of Van Buren sounds is to:",
+    choices: ["Dilate the urethra", "Excise bladder tumors", "Biopsy prostate", "Crush stones"],
+    correctAnswer: 0
+  },
+  {
+    id: 182,
+    question: "A urethroplasty is indicated for all of the following except:",
+    choices: ["Strictures", "Trauma", "Infection", "Circumcision"],
+    correctAnswer: 3
+  },
+  {
+    id: 183,
+    question: "What condition can lead to placement of a penile implant?",
+    choices: ["Phimosis", "Diabetes", "Priapism", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 184,
+    question: "During a vasectomy, which structure is tied and cauterized?",
+    choices: ["Epididymis", "Vas deferens", "Prostate", "Ureter"],
+    correctAnswer: 1
+  },
+  {
+    id: 185,
+    question: "A hydrocelectomy is performed to remove:",
+    choices: ["Excess fluid from the scrotum", "The testicle", "The prostate", "A penile implant"],
+    correctAnswer: 0
+  },
+  {
+    id: 186,
+    question: "A varicocelectomy is performed primarily to:",
+    choices: ["Improve fertility", "Excise tumors", "Treat infections", "Drain urine"],
+    correctAnswer: 0
+  },
+  {
+    id: 187,
+    question: "The PSA test screens for:",
+    choices: ["Kidney failure", "Testicular cancer", "Prostate cancer", "UTI"],
+    correctAnswer: 2
+  },
+  {
+    id: 188,
+    question: "A needle biopsy of the prostate often uses a:",
+    choices: ["Tru-Cut needle", "Yankauer suction", "Foley catheter", "Punch biopsy"],
+    correctAnswer: 0
+  },
+  {
+    id: 189,
+    question: "Which of the following is a minimally invasive treatment for prostate cancer?",
+    choices: ["TURP", "Radical prostatectomy", "Transrectal seed implantation", "Nephroureterectomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 190,
+    question: "The Ellik evacuator is used to:",
+    choices: ["Remove stones", "Irrigate the bladder", "Evacuate chips and clots", "Inflate the Foley balloon"],
+    correctAnswer: 2
+  },
+  {
+    id: 191,
+    question: "Which of the following describes a radical prostatectomy?",
+    choices: ["Removal of prostate only", "Removal of prostate, seminal vesicles, and lymph nodes", "Removal of bladder and prostate", "Biopsy of the prostate"],
+    correctAnswer: 1
+  },
+  {
+    id: 192,
+    question: "Which urinary diversion reroutes the ureters into an ileum loop?",
+    choices: ["Ureterocystostomy", "Cutaneous ureterostomy", "Ileal conduit", "Ureteroureterostomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 193,
+    question: "What is the preferred way to send stones to pathology?",
+    choices: ["In saline", "In sterile water", "In a dry container", "In formalin"],
+    correctAnswer: 2
+  },
+  {
+    id: 194,
+    question: "Nephrostomy is indicated to:",
+    choices: ["Reroute urine through the intestine", "Open the urethra", "Drain urine directly from the kidney", "Crush stones"],
+    correctAnswer: 2
+  },
+  {
+    id: 195,
+    question: "The purpose of ESWL is to:",
+    choices: ["Remove stones percutaneously", "Crush stones with sound waves", "Evacuate clots", "Dilate the urethra"],
+    correctAnswer: 1
+  },
+  {
+    id: 196,
+    question: "Pyelotomy refers to:",
+    choices: ["Removal of kidney", "Incision into renal pelvis", "Removal of stones from ureter", "Diversion of urine"],
+    correctAnswer: 1
+  },
+  {
+    id: 197,
+    question: "Hydroureteronephrosis is treated by:",
+    choices: ["TURP", "Nephroureterectomy", "Urethral meatotomy", "Vasectomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 198,
+    question: "The most common diagnosis requiring kidney transplant is:",
+    choices: ["Diabetes", "Polycystic kidneys", "Renal trauma", "Prostate cancer"],
+    correctAnswer: 0
+  },
+  {
+    id: 199,
+    question: "Which kidney is usually harvested for transplant?",
+    choices: ["Left", "Right", "Either", "Neither"],
+    correctAnswer: 0
+  },
+  {
+    id: 200,
+    question: "What position is the recipient placed in for kidney transplant?",
+    choices: ["Right lateral", "Left lateral decubitus", "Supine", "Prone"],
+    correctAnswer: 2
+  },
+  {
+    id: 201,
+    question: "The adrenal glands secrete all of the following except:",
+    choices: ["Epinephrine", "Cortisol", "Testosterone", "Insulin"],
+    correctAnswer: 3
+  },
+  {
+    id: 202,
+    question: "A congenital malignant tumor of the kidney in children is called:",
+    choices: ["Wilm's tumor", "Varicocele", "Hydrocele", "Phimosis"],
+    correctAnswer: 0
+  },
+  {
+    id: 203,
+    question: "The thoracic cavity contains all of the following except:",
+    choices: ["Heart", "Lungs", "Kidneys", "Great vessels"],
+    correctAnswer: 2
+  },
+  {
+    id: 204,
+    question: "How many ribs are considered \"true\" ribs?",
+    choices: ["7", "5", "12", "10"],
+    correctAnswer: 0
+  },
+  {
+    id: 205,
+    question: "The diaphragm separates:",
+    choices: ["Left and right lungs", "Peritoneal and thoracic cavities", "Heart and lungs", "Upper and lower abdomen"],
+    correctAnswer: 1
+  },
+  {
+    id: 206,
+    question: "What is the purpose of a double-lumen endotracheal tube?",
+    choices: ["Evacuate air", "Provide suction", "Ventilate one lung while collapsing the other", "Visualize the trachea"],
+    correctAnswer: 2
+  },
+  {
+    id: 207,
+    question: "A bronchoscope is inserted through the:",
+    choices: ["Neck", "Chest wall", "Nose or mouth", "Tracheostomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 208,
+    question: "Myasthenia gravis is most commonly associated with:",
+    choices: ["Lung cancer", "Thymoma", "Diabetes", "Wilm's tumor"],
+    correctAnswer: 1
+  },
+  {
+    id: 209,
+    question: "Which instrument is used to retract the lung?",
+    choices: ["Duval clamp", "Allison retractor", "Tuffier rib retractor", "Sarot clamp"],
+    correctAnswer: 1
+  },
+  {
+    id: 210,
+    question: "What is the purpose of a chest tube and water seal system?",
+    choices: ["Provide oxygen", "Establish negative pressure", "Ventilate both lungs", "Collapse the lung"],
+    correctAnswer: 1
+  },
+  {
+    id: 211,
+    question: "Which thoracic procedure removes the entire lung?",
+    choices: ["Pneumonectomy", "Lobectomy", "Segmental resection", "Wedge resection"],
+    correctAnswer: 0
+  },
+  {
+    id: 212,
+    question: "What congenital chest deformity is also called \"funnel chest\"?",
+    choices: ["Pectus carinatum", "Pectus excavatum", "Bleb", "Thoracotomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 213,
+    question: "Hemoptysis refers to:",
+    choices: ["Difficulty breathing", "Coughing up blood", "Collapsed lung", "Fluid in the lung"],
+    correctAnswer: 1
+  },
+  {
+    id: 214,
+    question: "What nerve must be preserved during a pneumonectomy?",
+    choices: ["Median", "Recurrent laryngeal", "Phrenic", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 215,
+    question: "A wedge resection removes:",
+    choices: ["Entire lung", "One lobe", "Small portion of one lobe", "Segment of one lung"],
+    correctAnswer: 2
+  },
+  {
+    id: 216,
+    question: "What is the main purpose of mediastinoscopy?",
+    choices: ["Biopsy of lymph nodes", "Collapse a lung", "Dilate bronchi", "Insert chest tube"],
+    correctAnswer: 0
+  },
+  {
+    id: 217,
+    question: "Which thoracic procedure is minimally invasive and video-assisted?",
+    choices: ["VATS", "Thoracotomy", "Bronchoscopy", "Rib resection"],
+    correctAnswer: 0
+  },
+  {
+    id: 218,
+    question: "What is the primary purpose of a thoracentesis?",
+    choices: ["Remove air from pleural space", "Remove fluid from pleural space", "Insert chest tube", "Biopsy lung tissue"],
+    correctAnswer: 1
+  },
+  {
+    id: 219,
+    question: "Which condition requires immediate chest tube placement?",
+    choices: ["Pneumonia", "Tension pneumothorax", "Lung cancer", "Pleural effusion"],
+    correctAnswer: 1
+  },
+  {
+    id: 220,
+    question: "What is the correct chest tube insertion site?",
+    choices: ["Second intercostal space", "Fourth to sixth intercostal space", "Eighth intercostal space", "Above the clavicle"],
+    correctAnswer: 1
+  },
+  {
+    id: 221,
+    question: "Which thoracic approach provides the best exposure for lung resection?",
+    choices: ["Anterolateral", "Posterolateral", "Median sternotomy", "Supraclavicular"],
+    correctAnswer: 1
+  },
+  {
+    id: 222,
+    question: "What is the most common indication for lung transplant?",
+    choices: ["Lung cancer", "COPD", "Pneumonia", "Tuberculosis"],
+    correctAnswer: 1
+  },
+  {
+    id: 223,
+    question: "Which procedure is performed to treat empyema?",
+    choices: ["Decortication", "Pneumonectomy", "Wedge resection", "Bronchoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 224,
+    question: "What is the purpose of pleurodesis?",
+    choices: ["Remove lung", "Prevent recurrent pneumothorax", "Treat lung cancer", "Insert chest tube"],
+    correctAnswer: 1
+  },
+  {
+    id: 225,
+    question: "Which imaging study is most commonly used to evaluate the chest?",
+    choices: ["MRI", "CT scan", "Chest X-ray", "Ultrasound"],
+    correctAnswer: 2
+  }
 ];
 
 console.log(`Total Surgical Procedures questions: ${surgicalProceduresQuestions.length}`);
