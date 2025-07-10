@@ -8,6 +8,8 @@ import { Link, useParams } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import QuizMode from '@/components/QuizMode';
 import StudyProgress from '@/components/StudyProgress';
+import QuestionPractice from '@/components/QuestionPractice';
+import { surgicalProceduresQuestions } from '@/data/questions/surgicalProcedures';
 
 const StudyCategory = () => {
   const { category } = useParams<{ category: string }>();
@@ -28,7 +30,8 @@ const StudyCategory = () => {
       'emergency-situations': 'Emergency Situations',
       'pharmacology-anesthesia': 'Pharmacology and Anesthesia',
       'instrumentation-equipment': 'Instrumentation Equipment and Supplies',
-      'hemostasis-wound-healing': 'Hemostasis Wound Healing and Closure'
+      'hemostasis-wound-healing': 'Hemostasis Wound Healing and Closure',
+      'surgical-procedures': 'Surgical Procedures'
     };
     return categoryNames[category || ''] || 'Unknown Category';
   };
@@ -40,6 +43,9 @@ const StudyCategory = () => {
       </div>
     );
   }
+
+  // Check if this is the surgical procedures category
+  const isSurgicalProcedures = category === 'surgical-procedures';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -73,47 +79,80 @@ const StudyCategory = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Main Study Interface */}
         <Card className="bg-gradient-to-br from-white via-slate-50 to-blue-50 backdrop-blur-sm border-slate-200 shadow-xl">
-          <Tabs defaultValue="flashcards" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
-              <TabsTrigger value="flashcards" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                <BookOpen className="h-4 w-4" />
-                <span>Flashcards</span>
-              </TabsTrigger>
-              <TabsTrigger value="quiz" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                <Brain className="h-4 w-4" />
-                <span>Practice Quiz</span>
-              </TabsTrigger>
-              <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
-                <Trophy className="h-4 w-4" />
-                <span>Progress</span>
-              </TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="flashcards" className="p-6">
-              <Flashcards 
-                category={category}
-                onAnswerCorrect={() => setCorrectAnswers(prev => prev + 1)}
-                onQuestionAttempt={() => setTotalQuestions(prev => prev + 1)}
-              />
-            </TabsContent>
-            
-            <TabsContent value="quiz" className="p-6">
-              <QuizMode 
-                category={category}
-                onAnswerCorrect={() => setCorrectAnswers(prev => prev + 1)}
-                onQuestionAttempt={() => setTotalQuestions(prev => prev + 1)}
-              />
-            </TabsContent>
-            
-            <TabsContent value="progress" className="p-6">
-              <StudyProgress 
-                streak={studyStreak}
-                totalQuestions={totalQuestions}
-                correctAnswers={correctAnswers}
-                category={category}
-              />
-            </TabsContent>
-          </Tabs>
+          {isSurgicalProcedures ? (
+            // For surgical procedures, show only question practice and progress
+            <Tabs defaultValue="questions" className="w-full">
+              <TabsList className="grid w-full grid-cols-2 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
+                <TabsTrigger value="questions" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                  <Brain className="h-4 w-4" />
+                  <span>Practice Questions</span>
+                </TabsTrigger>
+                <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                  <Trophy className="h-4 w-4" />
+                  <span>Progress</span>
+                </TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="questions" className="p-6">
+                <QuestionPractice 
+                  questions={surgicalProceduresQuestions}
+                  categoryName="Surgical Procedures"
+                />
+              </TabsContent>
+              
+              <TabsContent value="progress" className="p-6">
+                <StudyProgress 
+                  streak={studyStreak}
+                  totalQuestions={totalQuestions}
+                  correctAnswers={correctAnswers}
+                  category={category}
+                />
+              </TabsContent>
+            </Tabs>
+          ) : (
+            // For other categories, show all three tabs
+            <Tabs defaultValue="flashcards" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
+                <TabsTrigger value="flashcards" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                  <BookOpen className="h-4 w-4" />
+                  <span>Flashcards</span>
+                </TabsTrigger>
+                <TabsTrigger value="quiz" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                  <Brain className="h-4 w-4" />
+                  <span>Practice Quiz</span>
+                </TabsTrigger>
+                <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                  <Trophy className="h-4 w-4" />
+                  <span>Progress</span>
+                </TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="flashcards" className="p-6">
+                <Flashcards 
+                  category={category}
+                  onAnswerCorrect={() => setCorrectAnswers(prev => prev + 1)}
+                  onQuestionAttempt={() => setTotalQuestions(prev => prev + 1)}
+                />
+              </TabsContent>
+              
+              <TabsContent value="quiz" className="p-6">
+                <QuizMode 
+                  category={category}
+                  onAnswerCorrect={() => setCorrectAnswers(prev => prev + 1)}
+                  onQuestionAttempt={() => setTotalQuestions(prev => prev + 1)}
+                />
+              </TabsContent>
+              
+              <TabsContent value="progress" className="p-6">
+                <StudyProgress 
+                  streak={studyStreak}
+                  totalQuestions={totalQuestions}
+                  correctAnswers={correctAnswers}
+                  category={category}
+                />
+              </TabsContent>
+            </Tabs>
+          )}
         </Card>
       </div>
     </div>

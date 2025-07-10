@@ -34,7 +34,8 @@ const categories = [
   { id: 'emergency-situations', name: 'Emergency Situations', icon: AlertTriangle, iconColor: 'text-red-500', bgColor: 'bg-red-50' },
   { id: 'pharmacology-anesthesia', name: 'Pharmacology and Anesthesia', icon: Pill, iconColor: 'text-violet-500', bgColor: 'bg-violet-50' },
   { id: 'instrumentation-equipment', name: 'Instrumentation Equipment and Supplies', icon: Scissors, iconColor: 'text-orange-500', bgColor: 'bg-orange-50' },
-  { id: 'hemostasis-wound-healing', name: 'Hemostasis Wound Healing and Closure', icon: Bandage, iconColor: 'text-pink-500', bgColor: 'bg-pink-50' }
+  { id: 'hemostasis-wound-healing', name: 'Hemostasis Wound Healing and Closure', icon: Bandage, iconColor: 'text-pink-500', bgColor: 'bg-pink-50' },
+  { id: 'surgical-procedures', name: 'Surgical Procedures', icon: Stethoscope, iconColor: 'text-teal-500', bgColor: 'bg-teal-50' }
 ];
 
 const StudyCategorySelector: React.FC<StudyCategorySelectorProps> = ({ 

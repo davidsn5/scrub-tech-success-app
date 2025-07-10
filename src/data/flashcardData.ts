@@ -34,5 +34,6 @@ export const flashcardData: FlashcardData = {
   'pharmacology-anesthesia': pharmacologyAnesthesia,
   'instrumentation-equipment': instrumentationEquipment,
   'hemostasis-wound-healing': hemostasisWoundHealing,
-  'microbiology': []
+  'microbiology': [],
+  'surgical-procedures': []
 };
