@@ -1,7 +1,7 @@
 export interface Question {
   id: number;
   question: string;
-  choices: string[];
+  options: string[];
   correctAnswer: number;
   explanation?: string;
 }
@@ -9,3577 +9,1352 @@ export interface Question {
 export const surgicalProceduresQuestions: Question[] = [
   {
     id: 1,
-    question: "What is the GI tract also called?",
-    choices: [
-      "Mesentery tract",
-      "Alimentary tract", 
-      "Hepatic tract",
-      "Respiratory tract"
-    ],
+    question: "What is the first step in preparing a patient for surgery?",
+    options: ["Administer anesthesia", "Obtain informed consent", "Sterilize surgical instruments", "Position the patient"],
     correctAnswer: 1
   },
   {
     id: 2,
-    question: "Which of the following is NOT a function of the GI tract?",
-    choices: [
-      "Ingestion",
-      "Digestion", 
-      "Filtration",
-      "Absorption"
-    ],
-    correctAnswer: 2
+    question: "Which instrument is used to cut tissue?",
+    options: ["Scalpel", "Forceps", "Retractor", "Clamp"],
+    correctAnswer: 0
   },
   {
     id: 3,
-    question: "Which part of the GI tract is responsible for transporting ingested material by peristalsis from pharynx to stomach?",
-    choices: [
-      "Stomach",
-      "Esophagus", 
-      "Duodenum",
-      "Rectum"
-    ],
-    correctAnswer: 1
+    question: "What is the purpose of a surgical sponge?",
+    options: ["To absorb blood", "To retract tissue", "To cut tissue", "To clamp vessels"],
+    correctAnswer: 0
   },
   {
     id: 4,
-    question: "What is another name for EGD?",
-    choices: [
-      "Colonoscopy",
-      "Proctoscopy", 
-      "Gastroscopy",
-      "Sigmoidoscopy"
-    ],
+    question: "Which suture material is absorbable?",
+    options: ["Silk", "Nylon", "Catgut", "Polypropylene"],
     correctAnswer: 2
   },
   {
     id: 5,
-    question: "Endoscopes are classified as:",
-    choices: [
-      "Disposable devices",
-      "Sterile devices", 
-      "Semicritical devices",
-      "Non-critical devices"
-    ],
-    correctAnswer: 2
+    question: "What is the normal range for body temperature?",
+    options: ["35-36°C", "36-37°C", "37-38°C", "38-39°C"],
+    correctAnswer: 1
   },
   {
     id: 6,
-    question: "Which condition is caused by backflow of gastric contents into esophagus?",
-    choices: [
-      "Barrett's esophagus",
-      "GERD", 
-      "Zenker's diverticulum",
-      "Intussusception"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 7,
-    question: "Barrett's esophagus increases the risk for:",
-    choices: [
-      "Ulcers",
-      "Cancer", 
-      "Diverticulitis",
-      "Appendicitis"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 8,
-    question: "Which is a weakening in the esophageal wall that traps food?",
-    choices: [
-      "Hiatal hernia",
-      "Zenker's diverticulum", 
-      "Barrett's esophagus",
-      "Pyloric stenosis"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 9,
-    question: "What is the purpose of a laparoscopic Nissen fundoplication?",
-    choices: [
-      "Remove appendix",
-      "Repair hernia", 
-      "Prevent reflux",
-      "Dilate esophagus"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 10,
-    question: "Which instruments are used for esophageal dilation?",
-    choices: [
-      "Bougie dilators",
-      "Sigmoidoscope", 
-      "Band ligators",
-      "Suction cannulas"
-    ],
+    question: "Which position is used for abdominal surgery?",
+    options: ["Supine", "Prone", "Lithotomy", "Trendelenburg"],
     correctAnswer: 0
   },
   {
-    id: 11,
-    question: "Which part of the stomach is located above the esophageal sphincter?",
-    choices: [
-      "Pylorus",
-      "Fundus", 
-      "Cardia",
-      "Body"
-    ],
+    id: 7,
+    question: "What is the function of a retractor?",
+    options: ["To hold tissue back", "To cut tissue", "To clamp vessels", "To suture wounds"],
+    correctAnswer: 0
+  },
+  {
+    id: 8,
+    question: "Which of the following is a sterile field?",
+    options: ["Surgical drapes", "Operating room floor", "Surgeon's gloves", "Patient's skin before prep"],
     correctAnswer: 2
   },
   {
+    id: 9,
+    question: "What is the main purpose of surgical asepsis?",
+    options: ["Prevent infection", "Reduce pain", "Speed healing", "Control bleeding"],
+    correctAnswer: 0
+  },
+  {
+    id: 10,
+    question: "Which type of anesthesia involves loss of consciousness?",
+    options: ["Local", "Regional", "General", "Topical"],
+    correctAnswer: 2
+  },
+  {
+    id: 11,
+    question: "Which bone is also known as the malar bone?",
+    options: ["Maxilla", "Zygomatic", "Mandible", "Frontal"],
+    correctAnswer: 1
+  },
+  {
     id: 12,
-    question: "Which structure is attached to the greater curvature of the stomach?",
-    choices: [
-      "Omentum",
-      "Mesentery", 
-      "Ligament of Treitz",
-      "Cecum"
-    ],
+    question: "The Le Fort I fracture is also called a:",
+    options: ["Mustache fracture", "Blowout fracture", "Craniofacial fracture", "Pyramid maxillary fracture"],
     correctAnswer: 0
   },
   {
     id: 13,
-    question: "What connects the intestines to the posterior abdominal wall?",
-    choices: [
-      "Omentum",
-      "Mesentery", 
-      "Serosa",
-      "Haustra"
-    ],
+    question: "Arch bars are primarily used to realign the:",
+    options: ["Zygomatic bone", "Mandible and maxilla", "Orbital floor", "Nasal septum"],
     correctAnswer: 1
   },
   {
     id: 14,
-    question: "What is the main function of the stomach?",
-    choices: [
-      "Eliminate waste",
-      "Store ingested material", 
-      "Produce insulin",
-      "Absorb water"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 15,
-    question: "What does a vagotomy involve?",
-    choices: [
-      "Cutting the mesentery",
-      "Removing part of the stomach", 
-      "Cutting vagus nerve branches",
-      "Closing the pylorus"
-    ],
+    question: "The orbital floor fracture is also known as:",
+    options: ["Le Fort I", "Le Fort III", "Blowout fracture", "Mustache fracture"],
     correctAnswer: 2
   },
   {
-    id: 16,
-    question: "Pyloromyotomy is more common in:",
-    choices: [
-      "Adults with ulcers",
-      "Infants with projectile vomiting", 
-      "Adults with cancer",
-      "Patients with hernias"
-    ],
+    id: 15,
+    question: "The surgeon protects the cornea during orbital floor surgery with:",
+    options: ["Plastic sheeting", "Corneal eye protectors", "Cotton pledgets", "Silicone shields"],
     correctAnswer: 1
+  },
+  {
+    id: 16,
+    question: "In a Le Fort II fracture, the neurosurgeon must be present because of possible damage to the:",
+    options: ["Orbital floor", "Nasal bone", "Brain tissue and CSF leakage", "Maxilla"],
+    correctAnswer: 2
   },
   {
     id: 17,
-    question: "What is the purpose of a PEG tube?",
-    choices: [
-      "Remove gallstones",
-      "Gastric decompression and feeding", 
-      "Dilate esophagus",
-      "Resect bowel"
-    ],
-    correctAnswer: 1
+    question: "The malocclusion that results from misalignment of the jaws can be corrected with:",
+    options: ["MMA", "MMF", "Arch bars", "Both A and B"],
+    correctAnswer: 3
   },
   {
     id: 18,
-    question: "Which procedure treats benign pyloric obstruction without removing GI tissue?",
-    choices: [
-      "Gastrojejunostomy",
-      "Billroth II", 
-      "Nissen fundoplication",
-      "Vagotomy"
-    ],
-    correctAnswer: 0
+    question: "Temporomandibular joint (TMJ) surgery is indicated for all of the following except:",
+    options: ["Muscle tension", "Malocclusion", "Trauma", "Sleep apnea"],
+    correctAnswer: 3
   },
   {
     id: 19,
-    question: "Billroth I anastomoses the stomach to the:",
-    choices: [
-      "Ileum",
-      "Duodenum", 
-      "Jejunum",
-      "Cecum"
-    ],
+    question: "The snail-shaped structure of the inner ear that contains the organ of Corti is the:",
+    options: ["Vestibule", "Cochlea", "Semicircular canal", "Eustachian tube"],
     correctAnswer: 1
   },
   {
     id: 20,
-    question: "Total gastrectomy involves removal of:",
-    choices: [
-      "Stomach and duodenum",
-      "Entire stomach", 
-      "Distal stomach",
-      "Proximal stomach"
-    ],
-    correctAnswer: 1
+    question: "The ossicles include all of the following except:",
+    options: ["Malleus", "Incus", "Cochlea", "Stapes"],
+    correctAnswer: 2
   },
   {
     id: 21,
-    question: "Bariatric surgery is performed to:",
-    choices: [
-      "Remove tumors",
-      "Treat obesity", 
-      "Treat ulcers",
-      "Repair hernias"
-    ],
-    correctAnswer: 1
+    question: "The external ear terminates at the:",
+    options: ["Tympanic membrane", "Eustachian tube", "Auricle", "Middle ear"],
+    correctAnswer: 0
   },
   {
     id: 22,
-    question: "Which bariatric procedure is adjustable and reversible?",
-    choices: [
-      "Roux-en-Y bypass",
-      "Billroth II", 
-      "PEG",
-      "LAP-BAND"
-    ],
-    correctAnswer: 3
+    question: "The nasal cavity is connected to the ear by the:",
+    options: ["Cochlea", "Vestibule", "Eustachian tube", "Tympanic membrane"],
+    correctAnswer: 2
   },
   {
     id: 23,
-    question: "Which part of the small intestine connects to the ileocecal valve?",
-    choices: [
-      "Duodenum",
-      "Ileum", 
-      "Jejunum",
-      "Colon"
-    ],
-    correctAnswer: 1
+    question: "Choanal atresia repair may involve the use of a:",
+    options: ["Microdebrider", "Stensen's duct probe", "Tuning fork", "Arch bar"],
+    correctAnswer: 0
   },
   {
     id: 24,
-    question: "What is the function of the large intestine?",
-    choices: [
-      "Produce bile",
-      "Store ingested food", 
-      "Reabsorb water",
-      "Produce insulin"
-    ],
+    question: "The paranasal sinuses located behind the lower forehead are the:",
+    options: ["Maxillary", "Ethmoid", "Frontal", "Sphenoid"],
     correctAnswer: 2
   },
   {
     id: 25,
-    question: "What is the correct order of the colon parts?",
-    choices: [
-      "Ascending, transverse, descending, sigmoid",
-      "Transverse, ascending, sigmoid, descending", 
-      "Ascending, descending, sigmoid, transverse",
-      "Sigmoid, ascending, descending, transverse"
-    ],
+    question: "The surgical opening into the maxillary sinus to treat chronic sinusitis is called an:",
+    options: ["Antrostomy", "Polypectomy", "Mastoidectomy", "Tympanoplasty"],
     correctAnswer: 0
   },
   {
     id: 26,
-    question: "Which muscle controls voluntary anal sphincter function?",
-    choices: [
-      "Internal sphincter",
-      "External sphincter", 
-      "Circular muscle",
-      "Oblique muscle"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 27,
-    question: "The appendix projects from the:",
-    choices: [
-      "Cecum",
-      "Sigmoid colon", 
-      "Rectum",
-      "Ileum"
-    ],
+    question: "During a parotidectomy, care must be taken to preserve the:",
+    options: ["Seventh cranial nerve", "Fifth cranial nerve", "Eighth cranial nerve", "Tenth cranial nerve"],
     correctAnswer: 0
   },
   {
+    id: 27,
+    question: "The largest of the salivary glands is the:",
+    options: ["Sublingual", "Submandibular", "Parotid", "Adenoid"],
+    correctAnswer: 2
+  },
+  {
     id: 28,
-    question: "What is an appendectomy commonly performed for?",
-    choices: [
-      "Diverticulitis",
-      "Ulcers", 
-      "Acute inflammation",
-      "Cancer"
-    ],
+    question: "The larynx has all of the following functions except:",
+    options: ["Passageway for respiration", "Prevents aspiration", "Houses the pituitary gland", "Source of vocalization"],
     correctAnswer: 2
   },
   {
     id: 29,
-    question: "Which incision is used for an appendectomy?",
-    choices: [
-      "Kocher",
-      "Pfannenstiel", 
-      "McBurney",
-      "Midline"
-    ],
+    question: "Which cartilage is also called the Adam's apple?",
+    options: ["Cricoid", "Arytenoid", "Thyroid", "Epiglottis"],
     correctAnswer: 2
   },
   {
     id: 30,
-    question: "Which type of suture is commonly used on the appendix stump?",
-    choices: [
-      "Figure-of-eight",
-      "Purse-string", 
-      "Interrupted",
-      "Running"
-    ],
-    correctAnswer: 1
+    question: "Laryngectomy is performed to treat:",
+    options: ["Sinusitis", "TMJ disorder", "Laryngeal cancer", "Sleep apnea"],
+    correctAnswer: 2
   },
   {
     id: 31,
-    question: "What is the purpose of an intestinal stoma?",
-    choices: [
-      "Remove stomach contents",
-      "Divert bowel contents", 
-      "Remove gallbladder",
-      "Biopsy bowel"
-    ],
-    correctAnswer: 1
+    question: "A permanent opening in the neck after a total laryngectomy is called a:",
+    options: ["Tracheostomy", "Fistula", "Stoma", "Anastomosis"],
+    correctAnswer: 2
   },
   {
     id: 32,
-    question: "A colostomy creates an opening in the:",
-    choices: [
-      "Stomach",
-      "Colon", 
-      "Small intestine",
-      "Rectum"
-    ],
+    question: "The purpose of wet gauze during laser laryngeal surgery is to:",
+    options: ["Clean the field", "Prevent a fire", "Keep the tissues moist", "Absorb bleeding"],
     correctAnswer: 1
   },
   {
     id: 33,
-    question: "The Whipple procedure removes all EXCEPT:",
-    choices: [
-      "Head of pancreas",
-      "Entire duodenum", 
-      "Proximal jejunum",
-      "Entire stomach"
-    ],
-    correctAnswer: 3
+    question: "The trachea is composed of:",
+    options: ["Solid bone rings", "Incomplete c-shaped cartilage rings", "Muscle only", "Connective tissue only"],
+    correctAnswer: 1
   },
   {
     id: 34,
-    question: "Gallstones are sent to pathology:",
-    choices: [
-      "In saline",
-      "On a dry container", 
-      "In formalin",
-      "In sterile water"
-    ],
+    question: "A tracheostomy is indicated for all of the following except:",
+    options: ["Chronic lung disease", "Sleep apnea", "Vocal cord paralysis", "Trauma"],
     correctAnswer: 1
   },
   {
     id: 35,
-    question: "What is the main function of the gallbladder?",
-    choices: [
-      "Store insulin",
-      "Store bile", 
-      "Produce bile",
-      "Digest fat"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 36,
-    question: "What is the preferred incision for an open cholecystectomy?",
-    choices: [
-      "Midline",
-      "Kocher", 
-      "McBurney",
-      "Pfannenstiel"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 37,
-    question: "Which of the following is NOT part of the bowel technique?",
-    choices: [
-      "Isolating contaminated instruments",
-      "Using separate clean and dirty setups", 
-      "Changing gloves",
-      "Using the same suction for clean and dirty areas"
-    ],
+    question: "The cranial nerve that supplies motor innervation to the pharynx and larynx is the:",
+    options: ["Fifth", "Seventh", "Eighth", "Tenth"],
     correctAnswer: 3
   },
   {
-    id: 38,
-    question: "An APR is performed to treat lesions of the:",
-    choices: [
-      "Esophagus",
-      "Rectum and anus", 
-      "Stomach",
-      "Cecum"
-    ],
+    id: 36,
+    question: "The vestibulocochlear nerve connects the inner ear to the:",
+    options: ["Lungs", "Nose", "Brain", "Larynx"],
+    correctAnswer: 2
+  },
+  {
+    id: 37,
+    question: "Otitis media is an inflammation of the:",
+    options: ["Inner ear", "Middle ear", "Outer ear", "Eustachian tube"],
     correctAnswer: 1
+  },
+  {
+    id: 38,
+    question: "Tympanoplasty is performed to repair the:",
+    options: ["Cochlea", "Semicircular canals", "Tympanic membrane", "Eustachian tube"],
+    correctAnswer: 2
   },
   {
     id: 39,
-    question: "Adhesions are:",
-    choices: [
-      "Dilated veins",
-      "Bands of fibrous tissue", 
-      "Stenotic pylorus",
-      "Herniated intestines"
-    ],
-    correctAnswer: 1
+    question: "Cholesteatoma is treated with a:",
+    options: ["Mastoidectomy", "Tympanoplasty", "Stapedectomy", "Antrostomy"],
+    correctAnswer: 0
   },
   {
     id: 40,
-    question: "Hemorrhoidectomy can be performed with:",
-    choices: [
-      "Bougie",
-      "Band suture or laser", 
-      "PEG",
-      "Veress needle"
-    ],
+    question: "The abnormal bone growth of the stapes is called:",
+    options: ["Meniere's disease", "Otosclerosis", "Bell's palsy", "Cholesteatoma"],
     correctAnswer: 1
   },
   {
     id: 41,
-    question: "A fistulotomy involves:",
-    choices: [
-      "Excision of the tract",
-      "Drainage of the tract", 
-      "Closure of the tract",
-      "Repair of the sphincter"
-    ],
-    correctAnswer: 0
+    question: "Stapedectomy prosthetic materials include all except:",
+    options: ["Stainless steel", "Platinum", "Teflon", "Bone cement"],
+    correctAnswer: 3
   },
   {
     id: 42,
-    question: "What is the first layer of the abdominal wall?",
-    choices: [
-      "Fascia",
-      "Skin", 
-      "Peritoneum",
-      "Subcutaneous tissue"
-    ],
+    question: "Meniere's disease primarily affects the:",
+    options: ["Middle ear", "Inner ear", "Eustachian tube", "Nasal cavity"],
     correctAnswer: 1
   },
   {
     id: 43,
-    question: "Which laparoscopic technique uses a blunt trocar?",
-    choices: [
-      "Veress needle technique",
-      "SIL technique", 
-      "Hasson technique",
-      "Kocher technique"
-    ],
+    question: "Bell's palsy affects which cranial nerve?",
+    options: ["Fifth", "Sixth", "Seventh", "Eighth"],
     correctAnswer: 2
   },
   {
     id: 44,
-    question: "What is the normal intra-abdominal pressure during laparoscopy?",
-    choices: [
-      "5-8 mmHg",
-      "8-10 mmHg", 
-      "12-15 mmHg",
-      "18-20 mmHg"
-    ],
+    question: "Facial nerve decompression surgery is done to treat all of the following except:",
+    options: ["Trauma", "Bell's palsy", "TMJ disorder", "Tumors"],
     correctAnswer: 2
   },
   {
     id: 45,
-    question: "What does the ligament of Treitz connect?",
-    choices: [
-      "Duodenum and jejunum",
-      "Ileum and cecum", 
-      "Colon and rectum",
-      "Stomach and duodenum"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 46,
-    question: "What are haustra?",
-    choices: [
-      "Fat-filled pouches",
-      "Bands on stomach", 
-      "Outpouchings of intestines",
-      "Layers of the peritoneum"
-    ],
+    question: "A cochlear implant receiver is placed in the:",
+    options: ["Cochlea", "Tympanic membrane", "Mastoid process", "Semicircular canals"],
     correctAnswer: 2
   },
   {
+    id: 46,
+    question: "Submucous resection is performed to correct problems of the:",
+    options: ["Vocal cords", "Nasal septum", "Maxilla", "Larynx"],
+    correctAnswer: 1
+  },
+  {
     id: 47,
-    question: "What is Meckel's diverticulum?",
-    choices: [
-      "Outpouching of large intestine",
-      "Outpouching of small intestine", 
-      "Stricture of esophagus",
-      "Obstruction of pylorus"
-    ],
+    question: "The moustache dressing is used after surgery on the:",
+    options: ["Trachea", "Nose", "Larynx", "Ear"],
     correctAnswer: 1
   },
   {
     id: 48,
-    question: "What is a pilonidal cyst?",
-    choices: [
-      "Hernia at diaphragm",
-      "Anal mucosa tear", 
-      "Cyst near buttocks with hair",
-      "Gastric ulcer"
-    ],
-    correctAnswer: 2
+    question: "Which instrument is used to retract the uvula during tonsillectomy?",
+    options: ["Freer elevator", "Robinson catheter", "Coblator", "Adenotome"],
+    correctAnswer: 1
   },
   {
     id: 49,
-    question: "Which type of anesthesia is commonly used for laparoscopic procedures?",
-    choices: [
-      "Local anesthesia",
-      "General anesthesia", 
-      "Spinal anesthesia",
-      "Epidural anesthesia"
-    ],
+    question: "Which nerve is responsible for movements of the facial muscles?",
+    options: ["Fifth", "Seventh", "Eighth", "Tenth"],
     correctAnswer: 1
   },
   {
     id: 50,
-    question: "What is the primary advantage of minimally invasive surgery?",
-    choices: [
-      "Lower cost",
-      "Faster procedure time", 
-      "Reduced patient recovery time",
-      "No anesthesia required"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 51,
-    question: "What is the main function of the gastrointestinal (GI) tract?",
-    choices: [
-      "Absorb oxygen",
-      "Store bile",
-      "Ingestion, digestion, absorption",
-      "Produce hormones"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 52,
-    question: "Which of the following is NOT a part of the GI tract?",
-    choices: [
-      "Stomach",
-      "Rectum",
-      "Esophagus",
-      "Kidney"
-    ],
+    question: "Myringotomy tubes are also called all of the following except:",
+    options: ["PETs", "Tympanostomy tubes", "Ventilation tubes", "Arch bars"],
     correctAnswer: 3
   },
   {
+    id: 51,
+    question: "Mastoiditis is an inflammation of the:",
+    options: ["Temporal bone", "Eustachian tube", "Parotid gland", "Semicircular canal"],
+    correctAnswer: 0
+  },
+  {
+    id: 52,
+    question: "Otosclerosis prevents the stapes from:",
+    options: ["Growing", "Vibrating", "Fusing", "Moving inward"],
+    correctAnswer: 1
+  },
+  {
     id: 53,
-    question: "The GI tract is also called the:",
-    choices: [
-      "Respiratory tract",
-      "Circulatory tract",
-      "Alimentary tract",
-      "Endocrine tract"
-    ],
+    question: "The labyrinth is made up of all of the following except:",
+    options: ["Vestibule", "Cochlea", "Eustachian tube", "Semicircular canals"],
     correctAnswer: 2
   },
   {
     id: 54,
-    question: "The esophagus transports material from the pharynx to the:",
-    choices: [
-      "Duodenum",
-      "Stomach",
-      "Rectum",
-      "Liver"
-    ],
+    question: "The Caldwell-Luc incision is made in the:",
+    options: ["Maxilla", "Canine fossa", "Orbital floor", "Inferior turbinate"],
     correctAnswer: 1
   },
   {
     id: 55,
-    question: "Endoscopes are considered semicritical devices because:",
-    choices: [
-      "They enter sterile tissue",
-      "They never touch mucosa",
-      "They enter mucosa and must be disinfected",
-      "They are disposable"
-    ],
+    question: "Thyroxine and triiodothyronine are produced by the:",
+    options: ["Parathyroid", "Pituitary", "Thyroid", "Adrenal"],
     correctAnswer: 2
   },
   {
     id: 56,
-    question: "Barrett's esophagus is a precursor condition for:",
-    choices: [
-      "Colon cancer",
-      "Esophageal cancer",
-      "Stomach ulcers",
-      "GERD"
-    ],
+    question: "TSH is produced by the:",
+    options: ["Thyroid", "Pituitary", "Parathyroid", "Adrenal"],
     correctAnswer: 1
   },
   {
     id: 57,
-    question: "A Zenker's diverticulum is a weakness in the:",
-    choices: [
-      "Diaphragm",
-      "Stomach wall",
-      "Esophagus",
-      "Rectum"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 58,
-    question: "Which of these procedures restores the function of the lower esophageal sphincter?",
-    choices: [
-      "Laparoscopic Nissen fundoplication",
-      "Esophagectomy",
-      "PEG tube placement",
-      "Esophageal dilation"
-    ],
+    question: "The middle portion of the thyroid gland that connects the two lobes is called the:",
+    options: ["Isthmus", "Node", "Fossa", "Pedicle"],
     correctAnswer: 0
   },
   {
+    id: 58,
+    question: "Thyroid scan radiotracers include:",
+    options: ["Technetium", "Iodine", "Both A and B", "Potassium"],
+    correctAnswer: 2
+  },
+  {
     id: 59,
-    question: "The omentum attaches to the:",
-    choices: [
-      "Lesser curvature of stomach",
-      "Greater curvature of stomach",
-      "Duodenum",
-      "Pancreas"
-    ],
+    question: "A goiter refers to an enlarged:",
+    options: ["Larynx", "Thyroid gland", "Parathyroid gland", "Pituitary gland"],
     correctAnswer: 1
   },
   {
     id: 60,
-    question: "The stomach's storage and chemical digestion functions are aided by:",
-    choices: [
-      "Peristaltic waves",
-      "Villi",
-      "Cilia",
-      "Bile salts"
-    ],
-    correctAnswer: 0
+    question: "Cold nodules appear on the scan as:",
+    options: ["Darker", "Lighter", "Hot", "Equal density"],
+    correctAnswer: 1
   },
   {
     id: 61,
-    question: "Billroth I involves an anastomosis between the stomach and:",
-    choices: [
-      "Jejunum",
-      "Duodenum",
-      "Ileum",
-      "Rectum"
-    ],
+    question: "The definitive diagnostic test for thyroid cancer is:",
+    options: ["CT scan", "Fine-needle aspiration", "MRI", "Thyroid scan"],
     correctAnswer: 1
   },
   {
     id: 62,
-    question: "What is the most common indication for a PEG tube?",
-    choices: [
-      "Liver failure",
-      "External feeding",
-      "Removal of stones",
-      "Hernia repair"
-    ],
-    correctAnswer: 1
+    question: "The most common cause of hyperthyroidism is:",
+    options: ["Graves disease", "Goiter", "Cold nodule", "Thyroid cancer"],
+    correctAnswer: 0
   },
   {
     id: 63,
-    question: "A morbidly obese patient is defined as having a BMI of:",
-    choices: [
-      "25",
-      "30",
-      "35",
-      "40"
-    ],
-    correctAnswer: 3
+    question: "The external ear is lined with glands that secrete:",
+    options: ["Saliva", "Cerumen", "Mucus", "Sebum"],
+    correctAnswer: 1
   },
   {
     id: 64,
-    question: "Which of the following is an outpouching of the small intestine?",
-    choices: [
-      "Intussusception",
-      "Meckel's diverticulum",
-      "Zenker's diverticulum",
-      "Barrett's esophagus"
-    ],
-    correctAnswer: 1
+    question: "The external opening of the nose is called the:",
+    options: ["Nares", "Septum", "Alar cartilage", "Turbinate"],
+    correctAnswer: 0
   },
   {
     id: 65,
-    question: "What instrument is used to remove gallstones?",
-    choices: [
-      "Fogarty catheter",
-      "Randall stone forceps",
-      "Kelly clamp",
-      "Bakes dilator"
-    ],
-    correctAnswer: 1
+    question: "The surgical scraping of the frontal sinus to drain pus is called:",
+    options: ["Trephination", "Polypectomy", "Antrostomy", "Caldwell-Luc"],
+    correctAnswer: 0
   },
   {
     id: 66,
-    question: "A cholangiogram is performed to visualize:",
-    choices: [
-      "Bile ducts",
-      "Stomach",
-      "Colon",
-      "Esophagus"
-    ],
-    correctAnswer: 0
+    question: "Rhinorrhea refers to:",
+    options: ["Nosebleed", "Discharge from the nose", "Nasal obstruction", "Deviated septum"],
+    correctAnswer: 1
   },
   {
     id: 67,
-    question: "What dye is commonly used in cholangiograms?",
-    choices: [
-      "Methylene blue",
-      "Iodine",
-      "Diatrizoate sodium (Hypaque)",
-      "Barium"
-    ],
-    correctAnswer: 2
+    question: "The ninth cranial nerve is responsible for:",
+    options: ["Hearing", "Balance", "Facial expression", "Not discussed"],
+    correctAnswer: 3
   },
   {
     id: 68,
-    question: "A T-tube is inserted into the:",
-    choices: [
-      "Common bile duct",
-      "Esophagus",
-      "Duodenum",
-      "Liver lobe"
-    ],
-    correctAnswer: 0
+    question: "The epiglottis functions to:",
+    options: ["Aid phonation", "Protect the airway during swallowing", "Support the trachea", "Open the vocal cords"],
+    correctAnswer: 1
   },
   {
     id: 69,
-    question: "Liver biopsy commonly uses which needle?",
-    choices: [
-      "Kelly",
-      "True-cut",
-      "Veress",
-      "Fogarty"
-    ],
+    question: "A rigid laryngoscope is used for:",
+    options: ["Tracheostomy", "Direct visualization of the larynx", "TMJ surgery", "Sinus surgery"],
     correctAnswer: 1
   },
   {
     id: 70,
-    question: "The Glisson's capsule is the:",
-    choices: [
-      "Outer covering of liver",
-      "Inner mucosa of stomach",
-      "Diaphragm muscle",
-      "Ligament of Treitz"
-    ],
-    correctAnswer: 0
+    question: "What is the name of the opening created by a tracheostomy?",
+    options: ["Fistula", "Stoma", "Nares", "Trephine"],
+    correctAnswer: 1
   },
   {
     id: 71,
-    question: "Which of the following procedures removes the head of the pancreas?",
-    choices: [
-      "Whipple",
-      "Billroth II",
-      "Nissen fundoplication",
-      "PEG"
-    ],
+    question: "Mastoidectomy is sometimes performed to treat:",
+    options: ["Cholesteatoma", "Otosclerosis", "Meniere's disease", "Tinnitus"],
     correctAnswer: 0
   },
   {
     id: 72,
-    question: "The spleen is protected by which ribs?",
-    choices: [
-      "5th-7th",
-      "6th-8th",
-      "8th-10th",
-      "10th-12th"
-    ],
-    correctAnswer: 3
+    question: "Otosclerosis results in which type of hearing loss?",
+    options: ["Conductive", "Sensorineural", "Mixed", "Central"],
+    correctAnswer: 0
   },
   {
     id: 73,
-    question: "Hypersplenism is:",
-    choices: [
-      "Enlarged spleen with decreased blood cells",
-      "Tumor in the spleen",
-      "Liver failure",
-      "Blocked bile duct"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 74,
-    question: "Which hormone is produced by the pancreas?",
-    choices: [
-      "Insulin",
-      "Bile",
-      "Pepsin",
-      "Gastrin"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 75,
-    question: "The sphincter of Oddi controls flow into the:",
-    choices: [
-      "Stomach",
-      "Esophagus",
-      "Ampulla of Vater",
-      "Rectum"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 76,
-    question: "A diaphragmatic hernia is also called:",
-    choices: [
-      "Umbilical hernia",
-      "Hiatal hernia",
-      "Ventral hernia",
-      "Inguinal hernia"
-    ],
+    question: "What is the primary purpose of a tonsillectomy and adenoidectomy?",
+    options: ["Remove fluid from the middle ear", "Remove enlarged infected lymphoid tissue", "Correct nasal fractures", "Drain sinus cavities"],
     correctAnswer: 1
   },
   {
-    id: 77,
-    question: "A direct inguinal hernia passes through:",
-    choices: [
-      "Hesselbach's triangle",
-      "Internal ring",
-      "Umbilical ring",
-      "Diaphragm"
-    ],
+    id: 74,
+    question: "Which type of tonsils are also known as adenoids?",
+    options: ["Palatine tonsils", "Pharyngeal tonsils", "Lingual tonsils", "Cervical tonsils"],
+    correctAnswer: 1
+  },
+  {
+    id: 75,
+    question: "Which instrument is used to grasp the tonsils during a tonsillectomy?",
+    options: ["Allis clamp", "Adson forceps", "Bayonet forceps", "Yankauer suction"],
     correctAnswer: 0
   },
   {
+    id: 76,
+    question: "What does the COBLATOR instrument use to remove tissue?",
+    options: ["Laser energy", "Ultrasonic waves", "Radiofrequency energy with saline", "Cryotherapy"],
+    correctAnswer: 2
+  },
+  {
+    id: 77,
+    question: "Which patient position is appropriate after a tonsillectomy and adenoidectomy?",
+    options: ["Trendelenburg", "Prone", "Supine with neck extended", "Lateral with head elevated"],
+    correctAnswer: 3
+  },
+  {
     id: 78,
-    question: "A femoral hernia is more common in:",
-    choices: [
-      "Men",
-      "Women",
-      "Children",
-      "Infants"
-    ],
+    question: "Which cranial nerve controls facial muscles?",
+    options: ["Fifth", "Seventh", "Eighth", "Tenth"],
     correctAnswer: 1
   },
   {
     id: 79,
-    question: "The most serious complication of a strangulated hernia is:",
-    choices: [
-      "Obstruction",
-      "Necrosis",
-      "Pain",
-      "GERD"
-    ],
+    question: "Which of the following is an abnormal fluid accumulation in the middle ear?",
+    options: ["Mastoiditis", "Effusion", "Cholesteatoma", "Tinnitus"],
     correctAnswer: 1
   },
   {
     id: 80,
-    question: "A Richter's hernia is a type of:",
-    choices: [
-      "Umbilical hernia",
-      "Strangulated hernia",
-      "Indirect inguinal hernia",
-      "Hiatal hernia"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 81,
-    question: "What is the common incision for an appendectomy?",
-    choices: [
-      "Midline",
-      "Kocher",
-      "McBurney",
-      "Subcostal"
-    ],
+    question: "What are the small hollow tubes placed in the tympanic membrane during a myringotomy called?",
+    options: ["Adenoids", "Grafts", "Tympanostomy tubes", "Splints"],
     correctAnswer: 2
   },
   {
+    id: 81,
+    question: "What is the primary purpose of a mastoidectomy?",
+    options: ["Treat otosclerosis", "Remove infected mastoid bone", "Place ear tubes", "Repair tympanic membrane"],
+    correctAnswer: 1
+  },
+  {
     id: 82,
-    question: "Which of these is used to retract the liver?",
-    choices: [
-      "Harrington",
-      "Kelly",
-      "Potts",
-      "Veress"
-    ],
-    correctAnswer: 0
+    question: "Otosclerosis affects which ossicle?",
+    options: ["Malleus", "Incus", "Stapes", "Cochlea"],
+    correctAnswer: 2
   },
   {
     id: 83,
-    question: "What is used to dilate the common bile duct?",
-    choices: [
-      "Bakes dilators",
-      "Randall forceps",
-      "Kelly clamp",
-      "Fogarty catheter"
-    ],
-    correctAnswer: 0
+    question: "Which disease is associated with dizziness and tinnitus?",
+    options: ["Bell's palsy", "Meniere's disease", "Cholesteatoma", "Otitis media"],
+    correctAnswer: 1
   },
   {
     id: 84,
-    question: "A Whipple procedure removes all EXCEPT:",
-    choices: [
-      "Gallbladder",
-      "Head of pancreas",
-      "Distal stomach",
-      "Entire liver"
-    ],
-    correctAnswer: 3
+    question: "Which procedure is performed for congenital or acquired deafness?",
+    options: ["Stapedectomy", "Cochlear implant", "Tympanoplasty", "Mastoidectomy"],
+    correctAnswer: 1
   },
   {
     id: 85,
-    question: "Pancreatic transplantation candidates are usually:",
-    choices: [
-      "Older than 60",
-      "Between 20-40 years",
-      "Children",
-      "Any age"
-    ],
+    question: "What is the proper treatment for Bell's palsy?",
+    options: ["Cochlear implant", "Facial nerve decompression", "Tympanoplasty", "Labyrinthectomy"],
     correctAnswer: 1
   },
   {
     id: 86,
-    question: "An indirect inguinal hernia is usually:",
-    choices: [
-      "Acquired",
-      "Congenital",
-      "Femoral",
-      "Ventral"
-    ],
-    correctAnswer: 1
+    question: "Which nerve is associated with trigeminal neuralgia?",
+    options: ["Vagus", "Facial", "Trigeminal", "Vestibulocochlear"],
+    correctAnswer: 2
   },
   {
     id: 87,
-    question: "The layers of the abdominal wall include all EXCEPT:",
-    choices: [
-      "Skin",
-      "Subcutaneous",
-      "Peritoneum",
-      "Pleura"
-    ],
-    correctAnswer: 3
+    question: "What is a submucous resection (SMR) performed for?",
+    options: ["Repair tympanic membrane", "Correct deviated nasal septum", "Remove nasal polyps", "Treat sinus infection"],
+    correctAnswer: 1
   },
   {
     id: 88,
-    question: "Which is considered a minimally invasive surgery?",
-    choices: [
-      "Laparoscopy",
-      "Whipple",
-      "Appendectomy",
-      "Billroth I"
-    ],
-    correctAnswer: 0
+    question: "What is the purpose of a moustache dressing?",
+    options: ["Close nasal septum", "Stabilize fractured nose", "Collect drainage under the nose", "Improve nasal airflow"],
+    correctAnswer: 2
   },
   {
     id: 89,
-    question: "What solution is used to preserve transplant organs?",
-    choices: [
-      "Hypaque",
-      "Collins",
-      "Methylene blue",
-      "Iodine"
-    ],
+    question: "What is the primary treatment for epistaxis?",
+    options: ["Cauterization", "Direct pressure", "Artery ligation", "Packing"],
     correctAnswer: 1
   },
   {
     id: 90,
-    question: "An internal anal sphincter is:",
-    choices: [
-      "Voluntary",
-      "Involuntary",
-      "Muscularis mucosa",
-      "Pleural muscle"
-    ],
-    correctAnswer: 1
+    question: "What is the most common scope angle used in FESS?",
+    options: ["0°", "30°", "70°", "90°"],
+    correctAnswer: 0
   },
   {
     id: 91,
-    question: "Which repair involves Meckel's diverticulum?",
-    choices: [
-      "Maydl repair",
-      "Littre hernia repair",
-      "Bassini repair",
-      "Cooper repair"
-    ],
+    question: "What is a Caldwell–Luc procedure performed for?",
+    options: ["Repair thyroid", "Drain maxillary sinus", "Remove nasal polyps", "Close tracheostomy"],
     correctAnswer: 1
   },
   {
     id: 92,
-    question: "What artery supplies the breast?",
-    choices: [
-      "Internal thoracic",
-      "Hepatic",
-      "Renal",
-      "Coronary"
-    ],
-    correctAnswer: 0
+    question: "Which hormone does the thyroid gland produce?",
+    options: ["TSH", "T4 and T3", "PTH", "ACTH"],
+    correctAnswer: 2
   },
   {
     id: 93,
-    question: "A ventral hernia occurs:",
-    choices: [
-      "Through diaphragm",
-      "At umbilicus",
-      "Anywhere on abdominal wall except groin",
-      "Through femoral canal"
-    ],
+    question: "What is a hot thyroid nodule?",
+    options: ["Hypofunctional", "Malignant", "Overactive and dark on scan", "Nonfunctional"],
     correctAnswer: 2
   },
   {
     id: 94,
-    question: "A TEP hernia repair is:",
-    choices: [
-      "Totally extraperitoneal",
-      "Transabdominal preperitoneal",
-      "Tension repair",
-      "Transcutaneous endoscopic"
-    ],
-    correctAnswer: 0
+    question: "Which disease is the most common cause of hyperthyroidism?",
+    options: ["Hashimoto's", "Graves'", "Goiter", "Hypocalcemia"],
+    correctAnswer: 1
   },
   {
     id: 95,
-    question: "Which incision is common in liver surgery?",
-    choices: [
-      "McBurney",
-      "Kocher",
-      "Right subcostal",
-      "Midline"
-    ],
-    correctAnswer: 2
+    question: "Which disease is an autoimmune cause of hypothyroidism?",
+    options: ["Hashimoto's", "Graves'", "Goiter", "Hypocalcemia"],
+    correctAnswer: 0
   },
   {
     id: 96,
-    question: "A strangulated hernia becomes:",
-    choices: [
-      "Reducible",
-      "Incarcerated",
-      "Necrotic",
-      "Obstructed"
-    ],
+    question: "What does the parathyroid hormone regulate?",
+    options: ["Sodium", "Potassium", "Calcium", "Iodine"],
     correctAnswer: 2
   },
   {
     id: 97,
-    question: "The pancreas is also called:",
-    choices: [
-      "Wirsung gland",
-      "Vater gland",
-      "Oddi gland",
-      "Glisson gland"
-    ],
-    correctAnswer: 0
+    question: "What is the biggest concern in parathyroid surgery?",
+    options: ["Hyperthyroidism", "Hypocalcemia", "Hypothyroidism", "Hyperkalemia"],
+    correctAnswer: 1
   },
   {
     id: 98,
-    question: "Which type of hernia repair uses mesh?",
-    choices: [
-      "Bassini repair",
-      "Tension-free repair",
-      "McVay repair",
-      "Shouldice repair"
-    ],
-    correctAnswer: 1
+    question: "Which nerve must be preserved during thyroid surgery?",
+    options: ["Facial", "Trigeminal", "Recurrent laryngeal", "Vestibulocochlear"],
+    correctAnswer: 2
   },
   {
     id: 99,
-    question: "What is the most common cause of small bowel obstruction?",
-    choices: [
-      "Tumors",
-      "Adhesions",
-      "Hernias",
-      "Volvulus"
-    ],
-    correctAnswer: 1
+    question: "Damage to both recurrent laryngeal nerves can cause:",
+    options: ["Hoarseness", "Difficulty swallowing", "Paralysis of tongue", "Inability to speak and breathe"],
+    correctAnswer: 3
   },
   {
     id: 100,
-    question: "Which organ produces bile?",
-    choices: [
-      "Gallbladder",
-      "Liver",
-      "Pancreas",
-      "Spleen"
-    ],
-    correctAnswer: 1
+    question: "What incision is used for a thyroidectomy?",
+    options: ["Midline", "Trifurcate", "Collar", "Lateral"],
+    correctAnswer: 2
   },
   {
     id: 101,
-    question: "What is the primary function of the lymph nodes in the breast?",
-    choices: [
-      "Produce hormones",
-      "Drain lymph fluid and filter pathogens",
-      "Produce milk",
-      "Connect muscle fibers"
-    ],
+    question: "What is a thyroglossal duct cyst?",
+    options: ["Acquired neck mass", "Congenital cyst in anterior neck", "Thyroid carcinoma", "Parathyroid adenoma"],
     correctAnswer: 1
   },
   {
     id: 102,
-    question: "Which of the following is the most common screening tool for breast cancer?",
-    choices: [
-      "Ultrasound",
-      "MRI",
-      "Mammography",
-      "PET scan"
-    ],
-    correctAnswer: 2
+    question: "What is a glossectomy?",
+    options: ["Remove part of tongue", "Remove larynx", "Remove thyroid", "Repair vocal cords"],
+    correctAnswer: 0
   },
   {
     id: 103,
-    question: "In mammography, micro-calcifications often indicate which condition?",
-    choices: [
-      "Cyst",
-      "Intraductal carcinoma in-situ",
-      "Fibrocystic disease",
-      "Lobular carcinoma"
-    ],
-    correctAnswer: 1
+    question: "What is the outermost layer of skin?",
+    options: ["Dermis", "Subcutaneous", "Fascia", "Epidermis"],
+    correctAnswer: 3
   },
   {
     id: 104,
-    question: "Which imaging modality uses sound waves to create breast tissue images?",
-    choices: [
-      "MRI",
-      "PET scan",
-      "Ultrasound",
-      "Mammography"
-    ],
-    correctAnswer: 2
+    question: "What layer contains connective tissue, nerves, and glands?",
+    options: ["Epidermis", "Dermis", "Fascia", "Subcutaneous"],
+    correctAnswer: 1
   },
   {
     id: 105,
-    question: "What is the purpose of a digital stereotactic biopsy?",
-    choices: [
-      "Remove the entire breast",
-      "Guide chemotherapy",
-      "Diagnose abnormal mammogram findings",
-      "Detect metastatic cancer"
-    ],
-    correctAnswer: 2
+    question: "What is a hypertrophic scar?",
+    options: ["Flat scar", "Raised but less than keloid", "Malignant scar", "Normal healing tissue"],
+    correctAnswer: 1
   },
   {
     id: 106,
-    question: "Which test is used to assess if breast cancer has spread to other organs?",
-    choices: [
-      "MRI",
-      "PET scan",
-      "Mammogram",
-      "Ultrasound"
-    ],
-    correctAnswer: 1
+    question: "Which burn damages only the epidermis?",
+    options: ["First-degree", "Second-degree", "Third-degree", "Fourth-degree"],
+    correctAnswer: 0
   },
   {
     id: 107,
-    question: "Which lymph node group is located under the armpit?",
-    choices: [
-      "Internal thoracic",
-      "Axillary",
-      "Supraclavicular",
-      "Cervical"
-    ],
-    correctAnswer: 1
+    question: "Which burn damages all skin layers and underlying tissue?",
+    options: ["First-degree", "Second-degree", "Third-degree", "Fourth-degree"],
+    correctAnswer: 2
   },
   {
     id: 108,
-    question: "A core needle biopsy removes tissue by:",
-    choices: [
-      "Aspirating fluid",
-      "Using radioactive dye",
-      "Cutting a plug of tissue",
-      "Removing the entire breast"
-    ],
-    correctAnswer: 2
+    question: "What is the purpose of a three-layer dressing?",
+    options: ["Apply pressure", "Provide airtight seal", "Wick away secretions", "Protect and absorb drainage"],
+    correctAnswer: 3
   },
   {
     id: 109,
-    question: "What is a sentinel lymph node?",
-    choices: [
-      "Last lymph node in a chain",
-      "Closest node to a tumor",
-      "Only node in the thorax",
-      "Node removed during mastectomy"
-    ],
-    correctAnswer: 1
+    question: "What is a split-thickness skin graft?",
+    options: ["Includes epidermis and full dermis", "Includes only epidermis", "Includes epidermis and partial dermis", "Includes epidermis and fascia"],
+    correctAnswer: 2
   },
   {
     id: 110,
-    question: "Lymphedema after breast surgery occurs because of:",
-    choices: [
-      "Radiation to the lung",
-      "Damaged muscle fibers",
-      "Removal of too many lymph nodes",
-      "Chemotherapy toxicity"
-    ],
-    correctAnswer: 2
+    question: "Which graft is taken from another person?",
+    options: ["Autograft", "Allograft", "Xenograft", "Pedicle flap"],
+    correctAnswer: 1
   },
   {
     id: 111,
-    question: "Which procedure removes the entire breast and axillary nodes?",
-    choices: [
-      "Radical mastectomy",
-      "Simple mastectomy",
-      "Lumpectomy",
-      "Subcutaneous mastectomy"
-    ],
-    correctAnswer: 0
+    question: "Which instrument is used to harvest skin grafts?",
+    options: ["Coblator", "Allis", "Dermabrader", "Dermatome"],
+    correctAnswer: 3
   },
   {
     id: 112,
-    question: "A modified radical mastectomy spares which structure?",
-    choices: [
-      "Skin",
-      "Lymph nodes",
-      "Muscles",
-      "Entire breast"
-    ],
-    correctAnswer: 2
+    question: "Which is the most serious type of skin cancer?",
+    options: ["Squamous cell", "Melanoma", "Basal cell", "Keloid"],
+    correctAnswer: 1
   },
   {
     id: 113,
-    question: "What is the main purpose of mammograms?",
-    choices: [
-      "Detect lumps/masses early",
-      "Treat cancer",
-      "Prevent breast cancer",
-      "Replace biopsy"
-    ],
-    correctAnswer: 0
+    question: "Which pressure ulcer stage involves full tissue breakdown to muscle or bone?",
+    options: ["Stage I", "Stage II", "Stage III", "Stage IV"],
+    correctAnswer: 3
   },
   {
     id: 114,
-    question: "What is the innermost layer of the abdominal wall?",
-    choices: [
-      "Peritoneum",
-      "Scarpa's fascia",
-      "Linea alba",
-      "Skin"
-    ],
+    question: "Which body site is most prone to pressure ulcers?",
+    options: ["Sacrum", "Abdomen", "Shoulder", "Neck"],
     correctAnswer: 0
   },
   {
     id: 115,
-    question: "The midline incision is preferred because it:",
-    choices: [
-      "Minimizes bleeding",
-      "Avoids muscle damage",
-      "Provides excellent exposure",
-      "Preserves lymphatic drainage"
-    ],
-    correctAnswer: 2
+    question: "What is a TRAM flap used for?",
+    options: ["Treat breast cancer", "Reconstruct breast after mastectomy", "Repair abdominal hernia", "Reduce breast size"],
+    correctAnswer: 1
   },
   {
     id: 116,
-    question: "An incision above the umbilicus to the xiphoid is called:",
-    choices: [
-      "Midline",
-      "Epigastric",
-      "Paramedian",
-      "Subumbilical"
-    ],
+    question: "What artery supplies a TRAM flap?",
+    options: ["Internal mammary", "Superior epigastric", "External iliac", "Subclavian"],
     correctAnswer: 1
   },
   {
     id: 117,
-    question: "Which incision is typically used for the appendix?",
-    choices: [
-      "Pfannenstiel",
-      "Kocher",
-      "McBurney",
-      "Upper transverse"
-    ],
+    question: "What is the most common incision for breast augmentation?",
+    options: ["Transumbilical", "Periareolar", "Inframammary", "Transaxillary"],
     correctAnswer: 2
   },
   {
     id: 118,
-    question: "A Pfannenstiel incision provides access to:",
-    choices: [
-      "Biliary tract",
-      "Spleen",
-      "Pelvic organs",
-      "Esophagus"
-    ],
-    correctAnswer: 2
+    question: "Which breast implant placement is below pectoralis major?",
+    options: ["Subglandular", "Subpectoral", "Subfascial", "Subcutaneous"],
+    correctAnswer: 1
   },
   {
     id: 119,
-    question: "Which incision is ideal for liver resection?",
-    choices: [
-      "Left subcostal",
-      "Right subcostal",
-      "Thoracoabdominal",
-      "Lower transverse"
-    ],
+    question: "What is the purpose of capsulotomy?",
+    options: ["Remove implant", "Reduce scar tissue around implant", "Increase breast size", "Place drain"],
     correctAnswer: 1
   },
   {
     id: 120,
-    question: "The thoracoabdominal incision provides access to:",
-    choices: [
-      "Brain",
-      "Pleural cavity",
-      "Ovaries",
-      "Appendix"
-    ],
+    question: "What is the rule of nines used for?",
+    options: ["Calculate blood loss", "Estimate burn area", "Determine graft size", "Measure ulcer depth"],
     correctAnswer: 1
   },
   {
     id: 121,
-    question: "Which glands secrete lubrication at the vaginal opening?",
-    choices: [
-      "Skene's",
-      "Bartholin's",
-      "Pituitary",
-      "Adrenal"
-    ],
-    correctAnswer: 1
+    question: "What is the Lund-Browder chart more accurate for?",
+    options: ["Adults", "Elderly", "Children", "Infants"],
+    correctAnswer: 2
   },
   {
     id: 122,
-    question: "The endometrium is:",
-    choices: [
-      "Muscle layer of the uterus",
-      "Outer covering of the uterus",
-      "Inner lining of the uterus",
-      "Support ligament"
-    ],
+    question: "What is used to secure a split-thickness graft?",
+    options: ["Sutures", "Dermabrader", "Stent dressing", "Compression wrap"],
     correctAnswer: 2
   },
   {
     id: 123,
-    question: "Which finger-like projections guide eggs into the fallopian tube?",
-    choices: [
-      "Endometrium",
-      "Fimbriae",
-      "Cervix",
-      "Os"
-    ],
+    question: "What does negative pressure wound therapy do?",
+    options: ["Delivers oxygen", "Removes bacteria and pulls wound edges", "Promotes edema", "Prevents scarring"],
     correctAnswer: 1
   },
   {
     id: 124,
-    question: "An ectopic pregnancy occurs:",
-    choices: [
-      "Only in the uterus",
-      "Only in the cervix",
-      "Outside the uterus",
-      "Inside the ovary"
-    ],
+    question: "Which dressing is used for clean closed wounds?",
+    options: ["Wet-to-dry", "Wet-to-wet", "One-layer", "Stent"],
     correctAnswer: 2
   },
   {
     id: 125,
-    question: "The ovaries produce:",
-    choices: [
-      "Progesterone and estrogen",
-      "Testosterone",
-      "Insulin",
-      "Glucagon"
-    ],
-    correctAnswer: 0
+    question: "Which type of dressing absorbs large amounts of drainage?",
+    options: ["One-layer", "Pressure dressing", "Wet-to-wet", "Occlusive"],
+    correctAnswer: 1
   },
   {
     id: 126,
-    question: "The cervix connects the uterus to the:",
-    choices: [
-      "Ovaries",
-      "Fallopian tubes",
-      "Vagina",
-      "Rectum"
-    ],
-    correctAnswer: 2
+    question: "Which type of graft is stretched using a mesh device?",
+    options: ["FTSG", "STSG", "Allograft", "Xenograft"],
+    correctAnswer: 1
   },
   {
     id: 127,
-    question: "Which uterine ligament is NOT paired?",
-    choices: [
-      "Broad",
-      "Round",
-      "Cardinal",
-      "All are paired"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 128,
-    question: "The lithotomy position is primarily used for:",
-    choices: [
-      "Laparoscopy",
-      "Abdominal surgery",
-      "Vaginal procedures",
-      "Thoracic surgery"
-    ],
+    question: "What is a pedicle flap?",
+    options: ["Free flap", "Graft from another species", "Attached flap maintaining blood supply", "Skin substitute"],
     correctAnswer: 2
   },
   {
+    id: 128,
+    question: "Which of the following is true about basal cell carcinoma?",
+    options: ["Most aggressive skin cancer", "Least risky and slow growing", "Spreads to organs", "Found in squamous layer"],
+    correctAnswer: 1
+  },
+  {
     id: 129,
-    question: "Hysterosalpingogram is used to:",
-    choices: [
-      "Detect breast cancer",
-      "Assess infertility",
-      "Diagnose diabetes",
-      "Examine lungs"
-    ],
+    question: "What is Mohs surgery?",
+    options: ["Removal of tumor and lymph nodes", "Thin layers of skin examined microscopically", "Skin grafting procedure", "Removal of entire skin lesion in one piece"],
     correctAnswer: 1
   },
   {
     id: 130,
-    question: "Colposcopy examines the:",
-    choices: [
-      "Uterus lining",
-      "Cervix, vagina, and vulva",
-      "Fallopian tubes",
-      "Endometrium"
-    ],
-    correctAnswer: 1
+    question: "What is the proper way to handle breast implants?",
+    options: ["Keep dry and powdered", "Use oil on gloves", "Place on lint-free surface", "Store in alcohol"],
+    correctAnswer: 2
   },
   {
     id: 131,
-    question: "The fluid used to distend the uterus during hysteroscopy is:",
-    choices: [
-      "Saline",
-      "Sorbitol",
-      "Blood",
-      "Water"
-    ],
-    correctAnswer: 0
+    question: "What is a fourth-degree burn?",
+    options: ["Only epidermis damaged", "Involves dermis", "White, dry, no sensation", "Extends to muscle and bone"],
+    correctAnswer: 3
   },
   {
     id: 132,
-    question: "PID may result from infections by:",
-    choices: [
-      "Chlamydia",
-      "Streptococcus",
-      "E. coli",
-      "Influenza"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 133,
-    question: "What is the main complication of PID?",
-    choices: [
-      "Hypertension",
-      "Sterility",
-      "Diabetes",
-      "Obesity"
-    ],
+    question: "Which of the following is used to recreate the areola?",
+    options: ["Skin graft", "Tattooing", "TRAM flap", "Pedicle flap"],
     correctAnswer: 1
   },
   {
+    id: 133,
+    question: "Which muscle is used in a TRAM flap?",
+    options: ["External oblique", "Internal oblique", "Rectus abdominis", "Pectoralis major"],
+    correctAnswer: 2
+  },
+  {
     id: 134,
-    question: "A cone biopsy of the cervix rules out:",
-    choices: [
-      "Breast cancer",
-      "Endometriosis",
-      "Cervical cancer",
-      "Ovarian cysts"
-    ],
+    question: "What is the recommended skin prep solution for a graft donor site?",
+    options: ["Betadine", "Alcohol", "Colorless solution", "Chlorhexidine"],
     correctAnswer: 2
   },
   {
     id: 135,
-    question: "Culdocentesis is done to:",
-    choices: [
-      "Extract endometrial tissue",
-      "Visualize the uterus",
-      "Drain fluid from the rectouterine pouch",
-      "Remove ovarian cysts"
-    ],
-    correctAnswer: 2
+    question: "What does a mesh graft allow?",
+    options: ["More durable graft", "Larger area coverage", "Faster healing", "Less scarring"],
+    correctAnswer: 1
   },
   {
     id: 136,
-    question: "Menorrhagia refers to:",
-    choices: [
-      "Painful menstruation",
-      "Heavy prolonged periods",
-      "Absence of menstruation",
-      "Irregular light bleeding"
-    ],
-    correctAnswer: 1
+    question: "What is the most effective barrier against infection?",
+    options: ["Dermis", "Fascia", "Epidermis", "Subcutaneous layer"],
+    correctAnswer: 2
   },
   {
     id: 137,
-    question: "Dysmenorrhea means:",
-    choices: [
-      "Heavy bleeding",
-      "Painful periods",
-      "No periods",
-      "Short cycles"
-    ],
-    correctAnswer: 1
+    question: "What is Langer's lines?",
+    options: ["Muscle fibers", "Scar lines", "Natural skin lines used for incisions", "Blood vessels"],
+    correctAnswer: 2
   },
   {
     id: 138,
-    question: "Chromopertubation checks:",
-    choices: [
-      "Fallopian tube patency",
-      "Uterine size",
-      "Endometrial thickness",
-      "Cervical os"
-    ],
-    correctAnswer: 0
+    question: "What is the deepest skin layer listed below?",
+    options: ["Skin", "Muscle", "Subcutaneous fat", "Fascia"],
+    correctAnswer: 2
   },
   {
     id: 139,
-    question: "Salpingectomy removes:",
-    choices: [
-      "Ovary",
-      "Fallopian tube",
-      "Uterus",
-      "Cervix"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 140,
-    question: "Which instrument is used in cervical conization?",
-    choices: [
-      "ESU only",
-      "Cervitome",
-      "Scalpel only",
-      "None"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 141,
-    question: "The most common type of hernia in men is:",
-    choices: [
-      "Umbilical",
-      "Direct inguinal",
-      "Indirect inguinal",
-      "Femoral"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 142,
-    question: "A femoral hernia is most common in:",
-    choices: [
-      "Men",
-      "Women",
-      "Children",
-      "Infants"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 143,
-    question: "An incisional hernia occurs:",
-    choices: [
-      "At birth",
-      "In the groin",
-      "After a surgical procedure",
-      "In the diaphragm"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 144,
-    question: "What is a Richter's hernia?",
-    choices: [
-      "Umbilical hernia",
-      "Strangulated hernia",
-      "Femoral hernia",
-      "Diaphragmatic hernia"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 145,
-    question: "Which material is NOT used in hernia mesh repair?",
-    choices: [
-      "Gore-Tex",
-      "Teflon",
-      "Dacron",
-      "Insulin"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 146,
-    question: "Which hernia involves Meckel's diverticulum?",
-    choices: [
-      "Littre",
-      "Maydl",
-      "Richter",
-      "Spigelian"
-    ],
+    question: "What is cicatrix?",
+    options: ["Scar tissue", "Dead tissue", "Healthy skin", "Tumor"],
     correctAnswer: 0
   },
   {
+    id: 140,
+    question: "What hormone controls the amount of calcium in the blood?",
+    options: ["Thyroid hormone", "Insulin", "Parathyroid hormone", "Calcitonin"],
+    correctAnswer: 2
+  },
+  {
+    id: 141,
+    question: "Which condition is caused by lower than normal calcium levels in the blood?",
+    options: ["Hypercalcemia", "Hypocalcemia", "Hyperthyroidism", "Hashimoto's disease"],
+    correctAnswer: 1
+  },
+  {
+    id: 142,
+    question: "Which of the following is a complication that can cause respiratory problems after thyroid surgery?",
+    options: ["Tetany", "Thyroid storm", "Laryngeal spasms", "Hypocalcemia"],
+    correctAnswer: 2
+  },
+  {
+    id: 143,
+    question: "Hashimoto's disease is associated with:",
+    options: ["Hyperthyroidism", "Hypothyroidism", "Hypercalcemia", "Diabetes"],
+    correctAnswer: 1
+  },
+  {
+    id: 144,
+    question: "During thyroid surgery, what nerve must be preserved to prevent hoarseness or breathing difficulty?",
+    options: ["Vagus nerve", "Hypoglossal nerve", "Recurrent laryngeal nerve", "Phrenic nerve"],
+    correctAnswer: 2
+  },
+  {
+    id: 145,
+    question: "A thyroid storm is best described as:",
+    options: ["Acute hypothyroid crisis", "Acute hyperthyroid crisis", "Hypercalcemic crisis", "Severe hypothermia"],
+    correctAnswer: 1
+  },
+  {
+    id: 146,
+    question: "What is the correct position for a thyroidectomy?",
+    options: ["Prone", "Lateral", "Supine with neck hyperextended", "Fowler's"],
+    correctAnswer: 2
+  },
+  {
     id: 147,
-    question: "The Whipple procedure removes the:",
-    choices: [
-      "Gallbladder",
-      "Head of pancreas and duodenum",
-      "Liver",
-      "Spleen"
-    ],
+    question: "What type of incision is used for a thyroidectomy?",
+    options: ["Median", "Transverse/collar", "Vertical", "Oblique"],
     correctAnswer: 1
   },
   {
     id: 148,
-    question: "A total pancreatectomy removes:",
-    choices: [
-      "Part of the pancreas",
-      "Entire pancreas and adjacent organs",
-      "Only tumors",
-      "Spleen only"
-    ],
-    correctAnswer: 1
+    question: "Damage to the recurrent laryngeal nerve on both sides can result in:",
+    options: ["Hoarseness", "Complete loss of smell", "Difficulty speaking and breathing", "Blindness"],
+    correctAnswer: 2
   },
   {
     id: 149,
-    question: "The best candidates for pancreatic transplant are aged:",
-    choices: [
-      "10–20",
-      "20–40",
-      "50–70",
-      ">70"
-    ],
-    correctAnswer: 1
+    question: "The classical radical neck dissection involves removal of which of the following?",
+    options: ["Thyroid gland", "Parathyroid gland", "Sternocleidomastoid muscle", "Cricoid cartilage"],
+    correctAnswer: 2
   },
   {
     id: 150,
-    question: "The bile duct is dilated with:",
-    choices: [
-      "T-tube",
-      "Bakes dilator",
-      "Fogarty catheter",
-      "Kelly clamp"
-    ],
+    question: "What is the most superficial layer of the skin?",
+    options: ["Dermis", "Epidermis", "Fascia", "Subcutaneous fat"],
     correctAnswer: 1
   },
   {
     id: 151,
-    question: "Randall stone forceps are used for:",
-    choices: [
-      "Liver biopsy",
-      "Removing gallstones",
-      "Clamping vessels",
-      "Suturing"
-    ],
+    question: "Langer's lines are important because:",
+    options: ["They mark nerve pathways", "Incisions made along them heal better cosmetically", "They identify arteries", "They prevent infection"],
     correctAnswer: 1
   },
   {
     id: 152,
-    question: "Kelly clamps can be used to:",
-    choices: [
-      "Decompress the gallbladder",
-      "Remove lymph nodes",
-      "Extend a port opening",
-      "Clamp bile ducts"
-    ],
+    question: "A hypertrophic scar is best described as:",
+    options: ["Normal scar tissue", "A raised, reddish, nodular scar", "A slightly raised but less pronounced scar", "A sunken scar"],
     correctAnswer: 2
   },
   {
     id: 153,
-    question: "The outer covering of the liver is called:",
-    choices: [
-      "Capsule of Vater",
-      "Glisson's capsule",
-      "Hepatic sheath",
-      "Peritoneum"
-    ],
+    question: "The \"rule of nines\" is used to:",
+    options: ["Calculate electrolyte replacement", "Estimate burn surface area in adults", "Measure BMI", "Diagnose thyroid storm"],
     correctAnswer: 1
   },
   {
     id: 154,
-    question: "Liver biopsy commonly uses a:",
-    choices: [
-      "Kelly clamp",
-      "True-Cut needle",
-      "ESU",
-      "Fogarty catheter"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 155,
-    question: "A subphrenic abscess occurs:",
-    choices: [
-      "In the kidney",
-      "In the liver",
-      "Beneath the diaphragm",
-      "In the pancreas"
-    ],
+    question: "A third-degree burn is described as:",
+    options: ["Superficial redness only", "Blistered and moist", "Full thickness, dry, white or charred", "Partial thickness, moist"],
     correctAnswer: 2
   },
   {
-    id: 156,
-    question: "The most common reason for liver resection is:",
-    choices: [
-      "Trauma",
-      "Tumors",
-      "Gallstones",
-      "Hepatitis"
-    ],
+    id: 155,
+    question: "Which dressing type applies even pressure and prevents edema?",
+    options: ["Wet-to-dry", "Pressure", "One-layer", "Occlusive"],
     correctAnswer: 1
+  },
+  {
+    id: 156,
+    question: "What is the purpose of a stent dressing?",
+    options: ["Immobilize the wound", "Eliminate dead space", "Hold a skin graft in place", "Protect against burns"],
+    correctAnswer: 2
   },
   {
     id: 157,
-    question: "Blunt needles are always used on the:",
-    choices: [
-      "Pancreas",
-      "Liver",
-      "Spleen",
-      "Bile duct"
-    ],
-    correctAnswer: 1
+    question: "A split-thickness skin graft includes:",
+    options: ["Epidermis only", "Epidermis and full dermis", "Epidermis and part of dermis", "Dermis only"],
+    correctAnswer: 2
   },
   {
     id: 158,
-    question: "Bookwalter is a type of:",
-    choices: [
-      "Needle",
-      "Retractor",
-      "Clamp",
-      "Forceps"
-    ],
-    correctAnswer: 1
+    question: "Which type of graft is from a donor of a different species?",
+    options: ["Autograft", "Allograft", "Heterograft", "Pedicle flap"],
+    correctAnswer: 2
   },
   {
     id: 159,
-    question: "CUSA uses:",
-    choices: [
-      "Electric current",
-      "Ultrasonic waves",
-      "Radiation",
-      "Lasers"
-    ],
+    question: "What instrument is used to cut thin slices of skin for grafting?",
+    options: ["Ferris-Smith", "Dermatome", "Tenotomy scissors", "Skin hook"],
     correctAnswer: 1
   },
   {
     id: 160,
-    question: "Intraoperative ultrasound helps in:",
-    choices: [
-      "Biopsy",
-      "Visualizing structures",
-      "Clamping vessels",
-      "Injecting dyes"
-    ],
+    question: "A TRAM flap uses which muscle?",
+    options: ["Sternocleidomastoid", "Rectus abdominis", "Platysma", "Brachialis"],
     correctAnswer: 1
   },
   {
     id: 161,
-    question: "A choledochojejunostomy joins:",
-    choices: [
-      "Gallbladder to jejunum",
-      "CBD to jejunum",
-      "CBD to duodenum",
-      "Liver to stomach"
-    ],
-    correctAnswer: 1
+    question: "The blood supply for a TRAM flap comes from the:",
+    options: ["Superior epigastric artery and vein", "Femoral artery", "Radial artery", "Inferior vena cava"],
+    correctAnswer: 0
   },
   {
     id: 162,
-    question: "The sphincter of Oddi controls flow into the:",
-    choices: [
-      "Gallbladder",
-      "Pancreas",
-      "Ampulla of Vater",
-      "Duodenum"
-    ],
-    correctAnswer: 2
+    question: "Which is NOT a placement option for breast implants?",
+    options: ["Subglandular", "Subfascial", "Submuscular", "Subperiosteal"],
+    correctAnswer: 3
   },
   {
     id: 163,
-    question: "The ampulla of Vater is formed by:",
-    choices: [
-      "CBD and hepatic duct",
-      "Pancreatic and bile duct",
-      "Duodenum and jejunum",
-      "Gallbladder and CBD"
-    ],
-    correctAnswer: 1
+    question: "Which incision is used for augmentation mammoplasty?",
+    options: ["Transumbilical", "Transoral", "Posterior", "Midline"],
+    correctAnswer: 0
   },
   {
     id: 164,
-    question: "Pancreaticojejunostomy is done for:",
-    choices: [
-      "Ectopic pregnancy",
-      "Pancreatic pseudocyst",
-      "Liver resection",
-      "Cholecystitis"
-    ],
+    question: "What does a capsulotomy treat?",
+    options: ["Tumor", "Scar tissue around breast implant", "Infected gland", "Carcinoma"],
     correctAnswer: 1
   },
   {
     id: 165,
-    question: "The most common site of indirect inguinal hernia is:",
-    choices: [
-      "Femoral ring",
-      "Hesselbach's triangle",
-      "Internal inguinal ring",
-      "Umbilicus"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 166,
-    question: "The most common type of hernia in men is:",
-    choices: [
-      "Umbilical",
-      "Direct inguinal",
-      "Indirect inguinal",
-      "Femoral"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 167,
-    question: "A femoral hernia is most common in:",
-    choices: [
-      "Men",
-      "Women",
-      "Children",
-      "Infants"
-    ],
+    question: "What is the purpose of a mentoplasty?",
+    options: ["Reshape ears", "Reshape chin", "Reshape nose", "Reshape eyelids"],
     correctAnswer: 1
   },
   {
+    id: 166,
+    question: "A rhytidectomy is another term for:",
+    options: ["Facelift", "Nose job", "Brow lift", "Liposuction"],
+    correctAnswer: 0
+  },
+  {
+    id: 167,
+    question: "Dermatochalasis refers to:",
+    options: ["Sagging of the eyelids", "Thickening of the skin", "Drooping of the mouth", "Overactive sebaceous glands"],
+    correctAnswer: 0
+  },
+  {
     id: 168,
-    question: "An incisional hernia occurs:",
-    choices: [
-      "At birth",
-      "In the groin",
-      "After a surgical procedure",
-      "In the diaphragm"
-    ],
-    correctAnswer: 2
+    question: "Which laser is most commonly used for skin resurfacing?",
+    options: ["Argon", "CO₂", "Nd:YAG", "Excimer"],
+    correctAnswer: 1
   },
   {
     id: 169,
-    question: "What is a Richter's hernia?",
-    choices: [
-      "Umbilical hernia",
-      "Strangulated hernia",
-      "Femoral hernia",
-      "Diaphragmatic hernia"
-    ],
+    question: "Liposuction removes fat through:",
+    options: ["Curettage", "High-pressure vacuum", "Laser ablation", "Radiofrequency ablation"],
     correctAnswer: 1
   },
   {
     id: 170,
-    question: "Which material is NOT used in hernia mesh repair?",
-    choices: [
-      "Gore-Tex",
-      "Teflon",
-      "Dacron",
-      "Insulin"
-    ],
-    correctAnswer: 3
+    question: "Which gland secretes mucous to aid ejaculation?",
+    options: ["Prostate", "Cowper's", "Seminal vesicle", "Adrenal"],
+    correctAnswer: 1
   },
   {
     id: 171,
-    question: "Which hernia involves Meckel's diverticulum?",
-    choices: [
-      "Littre",
-      "Maydl",
-      "Richter",
-      "Spigelian"
-    ],
-    correctAnswer: 0
+    question: "The glomerulus is located in:",
+    options: ["Medulla of kidney", "Cortex of kidney", "Bladder", "Ureter"],
+    correctAnswer: 1
   },
   {
     id: 172,
-    question: "The Whipple procedure removes the:",
-    choices: [
-      "Gallbladder",
-      "Head of pancreas and duodenum",
-      "Liver",
-      "Spleen"
-    ],
-    correctAnswer: 1
+    question: "The functional unit of the kidney is the:",
+    options: ["Glomerulus", "Loop of Henle", "Nephron", "Bowman's capsule"],
+    correctAnswer: 2
   },
   {
     id: 173,
-    question: "A total pancreatectomy removes:",
-    choices: [
-      "Part of the pancreas",
-      "Entire pancreas and adjacent organs",
-      "Only tumors",
-      "Spleen only"
-    ],
-    correctAnswer: 1
+    question: "The trigone of the bladder includes:",
+    options: ["Two ureter openings and one urethral opening", "Only ureter openings", "Only urethral opening", "None of the above"],
+    correctAnswer: 0
   },
   {
     id: 174,
-    question: "The best candidates for pancreatic transplant are aged:",
-    choices: [
-      "10–20",
-      "20–40",
-      "50–70",
-      ">70"
-    ],
-    correctAnswer: 1
+    question: "Which hormone is secreted by the adrenal medulla?",
+    options: ["Aldosterone", "Cortisol", "Epinephrine", "ACTH"],
+    correctAnswer: 2
   },
   {
     id: 175,
-    question: "The bile duct is dilated with:",
-    choices: [
-      "T-tube",
-      "Bakes dilator",
-      "Fogarty catheter",
-      "Kelly clamp"
-    ],
-    correctAnswer: 1
+    question: "Which hormone stimulates the adrenal cortex?",
+    options: ["ACTH", "TSH", "FSH", "LH"],
+    correctAnswer: 0
   },
   {
     id: 176,
-    question: "Which type of lymph node drains the outer half of the breast?",
-    choices: [
-      "Internal thoracic nodes",
-      "Axillary nodes",
-      "Cervical nodes",
-      "Mediastinal nodes"
-    ],
+    question: "Where is the prostate gland located?",
+    options: ["Surrounds ureters", "At the base of the bladder neck around urethra", "In the scrotum", "On the penis shaft"],
     correctAnswer: 1
   },
   {
     id: 177,
-    question: "What is the most common screening tool for breast cancer?",
-    choices: [
-      "Ultrasound",
-      "PET scan",
-      "Mammogram",
-      "MRI"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 178,
-    question: "Which type of carcinoma originates from the lobules of the breast?",
-    choices: [
-      "Intraductal carcinoma",
-      "Lobular carcinoma",
-      "Squamous cell carcinoma",
-      "Adenocarcinoma"
-    ],
+    question: "BPH is best described as:",
+    options: ["Malignant tumor", "Noncancerous overgrowth of prostate", "Cyst in the prostate", "Blockage in the ureters"],
     correctAnswer: 1
   },
   {
-    id: 179,
-    question: "What does lymph fluid drain into?",
-    choices: [
-      "Lymph nodes",
-      "Arteries",
-      "Veins",
-      "Capillaries"
-    ],
+    id: 178,
+    question: "What is the purpose of irrigation fluids during GU procedures?",
+    options: ["Cool tissues", "Prevent infection", "Distend bladder and prevent hypothermia", "Anesthetize the bladder"],
     correctAnswer: 2
   },
   {
+    id: 179,
+    question: "What is a common solution for TURP procedures?",
+    options: ["Saline", "Glycine", "Dextrose", "Ringer's lactate"],
+    correctAnswer: 1
+  },
+  {
     id: 180,
-    question: "What is the yellow fluid that flows through the lymphatic system called?",
-    choices: [
-      "Plasma",
-      "Interstitial fluid",
-      "Lymph",
-      "Serum"
-    ],
+    question: "Which catheter is designed to bypass an obstruction?",
+    options: ["Foley", "Red Robinson", "Stent", "Coude"],
     correctAnswer: 2
   },
   {
     id: 181,
-    question: "What do micro-calcifications on a mammogram indicate?",
-    choices: [
-      "Malignant tumor in the muscle",
-      "Calcium deposits, often in ductal carcinoma in-situ",
-      "Benign fatty tumor",
-      "Fibrocystic disease"
-    ],
-    correctAnswer: 1
+    question: "Which catheter is used to measure urine output with a drainage bag?",
+    options: ["Foley", "Plain", "Red Robinson", "Cone tip"],
+    correctAnswer: 0
   },
   {
     id: 182,
-    question: "What imaging modality uses sound waves to examine breast tissue?",
-    choices: [
-      "PET scan",
-      "Mammogram",
-      "MRI",
-      "Ultrasound"
-    ],
-    correctAnswer: 3
+    question: "Which of the following is a ureteral catheter tip?",
+    options: ["Whistle", "Robinson", "Foley", "Straight"],
+    correctAnswer: 0
   },
   {
     id: 183,
-    question: "What is the purpose of a digital stereotactic biopsy?",
-    choices: [
-      "Measure breast density",
-      "Diagnose possible breast cancer",
-      "Drain a cyst",
-      "Remove benign tissue"
-    ],
+    question: "Indwelling urethral stents include:",
+    options: ["Robinson and Coude", "Double J and double pigtail", "Foley and Garceau", "Olive and cone"],
     correctAnswer: 1
   },
   {
     id: 184,
-    question: "Which imaging test is useful for determining cancer spread beyond the breast?",
-    choices: [
-      "PET scan",
-      "Mammogram",
-      "Ultrasound",
-      "Core biopsy"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 185,
-    question: "What is the term for breast cancer confined to the breast only?",
-    choices: [
-      "Regional",
-      "Distant",
-      "Local",
-      "Metastatic"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 186,
-    question: "Which gene mutations are tested for hereditary breast cancer risk?",
-    choices: [
-      "TP53 and RB1",
-      "BRCA1 and BRCA2",
-      "HER2 and EGFR",
-      "MYC and BCL2"
-    ],
+    question: "What is the correct amount of water to fill a 5-cc Foley balloon?",
+    options: ["2–3 cc", "5 cc", "8–10 cc", "15 cc"],
     correctAnswer: 1
   },
   {
+    id: 185,
+    question: "The recurrent laryngeal nerve is a branch of which cranial nerve?",
+    options: ["VII", "X", "IX", "XI"],
+    correctAnswer: 1
+  },
+  {
+    id: 186,
+    question: "What muscle is incised during a thyroidectomy?",
+    options: ["Platysma", "Masseter", "Digastric", "Buccinator"],
+    correctAnswer: 0
+  },
+  {
     id: 187,
-    question: "Which type of biopsy uses a cutting needle to remove a plug of tissue?",
-    choices: [
-      "Excisional biopsy",
-      "Needle aspiration",
-      "Core biopsy",
-      "Incisional biopsy"
-    ],
+    question: "What dressing provides an airtight seal and prevents drying?",
+    options: ["Wet-to-dry", "Nonocclusive", "Occlusive", "Semiclusive"],
     correctAnswer: 2
   },
   {
     id: 188,
-    question: "What is the removal of a mass with a margin of normal tissue called?",
-    choices: [
-      "Lumpectomy",
-      "Mastectomy",
-      "Biopsy",
-      "Ablation"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 189,
-    question: "What is removed in a modified radical mastectomy?",
-    choices: [
-      "Breast only",
-      "Breast and pectoral muscles",
-      "Breast and axillary lymph nodes",
-      "Breast, lungs, and axillary nodes"
-    ],
+    question: "What is the purpose of moist peanuts in thyroid surgery?",
+    options: ["Grasp thyroid", "Retract muscles", "Blunt dissection", "Suture trachea"],
     correctAnswer: 2
   },
   {
+    id: 189,
+    question: "What is the proper position for neck dissection?",
+    options: ["Supine", "Lateral", "Prone", "Sitting"],
+    correctAnswer: 0
+  },
+  {
     id: 190,
-    question: "What is the main risk of lymphedema after breast surgery?",
-    choices: [
-      "Excess drainage",
-      "Fluid accumulation in the arm",
-      "Infection of the chest wall",
-      "Metastasis"
-    ],
+    question: "What incision is used for a neck dissection?",
+    options: ["Collar", "Trifurcate", "Midline", "Oblique"],
     correctAnswer: 1
   },
   {
     id: 191,
-    question: "Which incision is used for an appendectomy?",
-    choices: [
-      "McBurney",
-      "Kocher",
-      "Pfannenstiel",
-      "Midline"
-    ],
-    correctAnswer: 0
+    question: "What instrument is specifically used in blepharoplasty?",
+    options: ["Frazier suction", "Iris scissors", "Adson forceps", "Blepharoplasty calipers"],
+    correctAnswer: 3
   },
   {
     id: 192,
-    question: "Which uterine layer is shed during menstruation?",
-    choices: [
-      "Myometrium",
-      "Endometrium",
-      "Perimetrium",
-      "Serosa"
-    ],
-    correctAnswer: 1
+    question: "Which type of burn damages muscles and nerves?",
+    options: ["First-degree", "Second-degree", "Third-degree", "Fourth-degree"],
+    correctAnswer: 3
   },
   {
     id: 193,
-    question: "What is the function of the fimbriae?",
-    choices: [
-      "Secrete estrogen",
-      "Guide egg into fallopian tube",
-      "Protect the uterus",
-      "Lubricate the vagina"
-    ],
+    question: "What is the purpose of a Doppler in breast reconstruction?",
+    options: ["Measure implant volume", "Preserve artery", "Position flap", "Identify nerve"],
     correctAnswer: 1
   },
   {
     id: 194,
-    question: "What does ectopic pregnancy mean?",
-    choices: [
-      "Pregnancy in the uterus",
-      "Pregnancy outside the uterus",
-      "Multiple pregnancies",
-      "Miscarriage"
-    ],
-    correctAnswer: 1
+    question: "What laser is used for tattoo removal?",
+    options: ["Argon", "CO₂", "Q-switched", "Excimer"],
+    correctAnswer: 2
   },
   {
     id: 195,
-    question: "What is the major complication of lithotomy position?",
-    choices: [
-      "Embolus or nerve damage",
-      "Blindness",
-      "Lymphedema",
-      "Cancer recurrence"
-    ],
+    question: "What procedure is also called a nose job?",
+    options: ["Rhinoplasty", "Rhytidectomy", "Mentoplasty", "Otoplasty"],
     correctAnswer: 0
   },
   {
     id: 196,
-    question: "Which diagnostic test is an X-ray of uterus and fallopian tubes?",
-    choices: [
-      "Hysterosalpingogram",
-      "Colposcopy",
-      "Hysteroscopy",
-      "Laparoscopy"
-    ],
-    correctAnswer: 0
+    question: "The scrotum contains:",
+    options: ["Prostate and urethra", "Testes, epididymis, and spermatic cord", "Vas deferens and glans penis", "Bladder and prostate"],
+    correctAnswer: 1
   },
   {
     id: 197,
-    question: "What is a cone biopsy of the cervix used for?",
-    choices: [
-      "Diagnose endometriosis",
-      "Rule out cervical cancer",
-      "Identify PID",
-      "Diagnose infertility"
-    ],
-    correctAnswer: 1
+    question: "Which tissue fills with blood during erection?",
+    options: ["Corpus luteum", "Corpus callosum", "Corpus spongiosum and cavernosum", "Corpus albicans"],
+    correctAnswer: 2
   },
   {
     id: 198,
-    question: "What does PID stand for?",
-    choices: [
-      "Pelvic inflammatory disease",
-      "Primary immune deficiency",
-      "Post-infectious disease",
-      "Peritoneal invasive disorder"
-    ],
-    correctAnswer: 0
+    question: "Which part of the nephron reabsorbs sodium and water?",
+    options: ["Bowman's capsule", "Loop of Henle", "Glomerulus", "Renal pelvis"],
+    correctAnswer: 1
   },
   {
     id: 199,
-    question: "What is amenorrhea?",
-    choices: [
-      "Painful menstruation",
-      "Excessive bleeding",
-      "Absence of menstruation",
-      "Irregular bleeding"
-    ],
-    correctAnswer: 2
+    question: "Which scan is an x-ray with contrast of the entire urological system?",
+    options: ["KUB", "IVU", "MRI", "CT scan"],
+    correctAnswer: 1
   },
   {
     id: 200,
-    question: "What is the most common reason for a C-section?",
-    choices: [
-      "Placental abruption",
-      "Cephalopelvic disproportion",
-      "Breech presentation",
-      "Cord prolapse"
-    ],
-    correctAnswer: 1
+    question: "What is the name of the erectile tissue surrounding the urethra?",
+    options: ["Corpus spongiosum", "Corpus cavernosum", "Glans penis", "Urethral meatus"],
+    correctAnswer: 0
   },
   {
     id: 201,
-    question: "What is meconium?",
-    choices: [
-      "First bowel movement of fetus",
-      "Waxy coating on newborn skin",
-      "Fluid in amniotic sac",
-      "Placental tissue"
-    ],
-    correctAnswer: 0
+    question: "Which bone is also known as the malar bone?",
+    options: ["Maxilla", "Zygomatic", "Mandible", "Frontal"],
+    correctAnswer: 1
   },
   {
     id: 202,
-    question: "Which hormone is used to induce labor?",
-    choices: [
-      "Hemabate",
-      "Oxytocin",
-      "Methergine",
-      "Dextran"
-    ],
-    correctAnswer: 1
+    question: "The Le Fort I fracture is also called a:",
+    options: ["Mustache fracture", "Blowout fracture", "Craniofacial fracture", "Pyramid maxillary fracture"],
+    correctAnswer: 0
   },
   {
     id: 203,
-    question: "What is the medical term for the first pregnancy?",
-    choices: [
-      "Multigravida",
-      "Para gravida",
-      "Prima gravida",
-      "Nulligravida"
-    ],
-    correctAnswer: 2
+    question: "Arch bars are primarily used to realign the:",
+    options: ["Zygomatic bone", "Mandible and maxilla", "Orbital floor", "Nasal septum"],
+    correctAnswer: 1
   },
   {
     id: 204,
-    question: "Which uterine fibroid tumor is most common?",
-    choices: [
-      "Leiomyoma",
-      "Myoma",
-      "Sarcoma",
-      "Carcinoma"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 205,
-    question: "What is oophorectomy?",
-    choices: [
-      "Removal of ovary",
-      "Removal of uterus",
-      "Removal of fallopian tube",
-      "Removal of bladder"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 206,
-    question: "What is Marshall–Marchetti–Krantz procedure used to treat?",
-    choices: [
-      "Incontinence",
-      "Cancer",
-      "Prolapse",
-      "Hernia"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 207,
-    question: "What is cystocele?",
-    choices: [
-      "Bladder protrusion into vaginal wall",
-      "Rectal prolapse",
-      "Hernia of intestine",
-      "Fistula between bladder and vagina"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 208,
-    question: "What is uterine ablation used to treat?",
-    choices: [
-      "Cancer",
-      "Abnormal bleeding",
-      "Infertility",
-      "Prolapse"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 209,
-    question: "Which incision provides access to pelvic organs?",
-    choices: [
-      "Pfannenstiel",
-      "Kocher",
-      "McBurney",
-      "Midline"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 210,
-    question: "What is the function of the conjunctiva?",
-    choices: [
-      "Lubricate eyelids",
-      "Line the sclera and eyelids",
-      "Focus light",
-      "Control pupil size"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 211,
-    question: "Which part of the eye changes shape to focus?",
-    choices: [
-      "Retina",
-      "Cornea",
-      "Lens",
-      "Sclera"
-    ],
+    question: "The orbital floor fracture is also known as:",
+    options: ["Le Fort I", "Le Fort III", "Blowout fracture", "Mustache fracture"],
     correctAnswer: 2
   },
   {
-    id: 212,
-    question: "Which layer of the eye contains photoreceptors?",
-    choices: [
-      "Sclera",
-      "Retina",
-      "Lens",
-      "Cornea"
-    ],
+    id: 205,
+    question: "The surgeon protects the cornea during orbital floor surgery with:",
+    options: ["Plastic sheeting", "Corneal eye protectors", "Cotton pledgets", "Silicone shields"],
     correctAnswer: 1
+  },
+  {
+    id: 206,
+    question: "In a Le Fort II fracture, the neurosurgeon must be present because of possible damage to the:",
+    options: ["Orbital floor", "Nasal bone", "Brain tissue and CSF leakage", "Maxilla"],
+    correctAnswer: 2
+  },
+  {
+    id: 207,
+    question: "The malocclusion that results from misalignment of the jaws can be corrected with:",
+    options: ["MMA", "MMF", "Arch bars", "Both A and B"],
+    correctAnswer: 3
+  },
+  {
+    id: 208,
+    question: "Temporomandibular joint (TMJ) surgery is indicated for all of the following except:",
+    options: ["Muscle tension", "Malocclusion", "Trauma", "Sleep apnea"],
+    correctAnswer: 3
+  },
+  {
+    id: 209,
+    question: "The snail-shaped structure of the inner ear that contains the organ of Corti is the:",
+    options: ["Vestibule", "Cochlea", "Semicircular canal", "Eustachian tube"],
+    correctAnswer: 1
+  },
+  {
+    id: 210,
+    question: "The ossicles include all of the following except:",
+    options: ["Malleus", "Incus", "Cochlea", "Stapes"],
+    correctAnswer: 2
+  },
+  {
+    id: 211,
+    question: "The external ear terminates at the:",
+    options: ["Tympanic membrane", "Eustachian tube", "Auricle", "Middle ear"],
+    correctAnswer: 0
+  },
+  {
+    id: 212,
+    question: "The nasal cavity is connected to the ear by the:",
+    options: ["Cochlea", "Vestibule", "Eustachian tube", "Tympanic membrane"],
+    correctAnswer: 2
   },
   {
     id: 213,
-    question: "What is the most common cause of color blindness?",
-    choices: [
-      "Corneal defect",
-      "Retinal defect",
-      "Lens defect",
-      "Scleral damage"
-    ],
-    correctAnswer: 1
+    question: "Choanal atresia repair may involve the use of a:",
+    options: ["Microdebrider", "Stensen's duct probe", "Tuning fork", "Arch bar"],
+    correctAnswer: 0
   },
   {
     id: 214,
-    question: "What drug constricts the pupil?",
-    choices: [
-      "Mydriatic",
-      "Cycloplegic",
-      "Miotic",
-      "Corticosteroid"
-    ],
+    question: "The paranasal sinuses located behind the lower forehead are the:",
+    options: ["Maxillary", "Ethmoid", "Frontal", "Sphenoid"],
     correctAnswer: 2
   },
   {
     id: 215,
-    question: "What drug dilates pupil but inhibits focusing?",
-    choices: [
-      "Miotic",
-      "Cycloplegic",
-      "Corticosteroid",
-      "Anti-inflammatory"
-    ],
-    correctAnswer: 1
+    question: "The surgical opening into the maxillary sinus to treat chronic sinusitis is called an:",
+    options: ["Antrostomy", "Polypectomy", "Mastoidectomy", "Tympanoplasty"],
+    correctAnswer: 0
   },
   {
     id: 216,
-    question: "What is balanced salt solution (BSS) used for?",
-    choices: [
-      "Irrigation",
-      "Lubrication",
-      "Anesthesia",
-      "Antibiotic"
-    ],
+    question: "During a parotidectomy, care must be taken to preserve the:",
+    options: ["Seventh cranial nerve", "Fifth cranial nerve", "Eighth cranial nerve", "Tenth cranial nerve"],
     correctAnswer: 0
   },
   {
     id: 217,
-    question: "What is the removal of eye contents, leaving sclera intact?",
-    choices: [
-      "Enucleation",
-      "Evisceration",
-      "Exenteration",
-      "Keratoplasty"
-    ],
-    correctAnswer: 1
+    question: "The largest of the salivary glands is the:",
+    options: ["Sublingual", "Submandibular", "Parotid", "Adenoid"],
+    correctAnswer: 2
   },
   {
     id: 218,
-    question: "What is removal of entire eyeball including optic nerve?",
-    choices: [
-      "Evisceration",
-      "Enucleation",
-      "Keratoplasty",
-      "Exenteration"
-    ],
-    correctAnswer: 1
+    question: "The larynx has all of the following functions except:",
+    options: ["Passageway for respiration", "Prevents aspiration", "Houses the pituitary gland", "Source of vocalization"],
+    correctAnswer: 2
   },
   {
     id: 219,
-    question: "What is removal of entire orbital contents?",
-    choices: [
-      "Keratoplasty",
-      "Evisceration",
-      "Enucleation",
-      "Exenteration"
-    ],
-    correctAnswer: 3
+    question: "Which cartilage is also called the Adam's apple?",
+    options: ["Cricoid", "Arytenoid", "Thyroid", "Epiglottis"],
+    correctAnswer: 2
   },
   {
     id: 220,
-    question: "What is a chalazion?",
-    choices: [
-      "Obstruction of lacrimal duct",
-      "Obstruction of meibomian gland",
-      "Benign growth on conjunctiva",
-      "Prolapse of eyelid"
-    ],
-    correctAnswer: 1
+    question: "Laryngectomy is performed to treat:",
+    options: ["Sinusitis", "TMJ disorder", "Laryngeal cancer", "Sleep apnea"],
+    correctAnswer: 2
   },
   {
     id: 221,
-    question: "What is blepharoplasty?",
-    choices: [
-      "Eyelid repair for dermatochalasis",
-      "Removal of eye",
-      "Correction of strabismus",
-      "Lens transplant"
-    ],
-    correctAnswer: 0
+    question: "A permanent opening in the neck after a total laryngectomy is called a:",
+    options: ["Tracheostomy", "Fistula", "Stoma", "Anastomosis"],
+    correctAnswer: 2
   },
   {
     id: 222,
-    question: "What is pterygium?",
-    choices: [
-      "Growth on cornea",
-      "Growth on conjunctiva",
-      "Eyelid tumor",
-      "Cataract"
-    ],
+    question: "The purpose of wet gauze during laser laryngeal surgery is to:",
+    options: ["Clean the field", "Prevent a fire", "Keep the tissues moist", "Absorb bleeding"],
     correctAnswer: 1
   },
   {
     id: 223,
-    question: "What is esotropia?",
-    choices: [
-      "Cross eyes",
-      "Wall eyes",
-      "Lazy eye",
-      "Normal alignment"
-    ],
-    correctAnswer: 0
+    question: "The trachea is composed of:",
+    options: ["Solid bone rings", "Incomplete c-shaped cartilage rings", "Muscle only", "Connective tissue only"],
+    correctAnswer: 1
   },
   {
     id: 224,
-    question: "What is exotropia?",
-    choices: [
-      "Cross eyes",
-      "Wall eyes",
-      "Lazy eye",
-      "Normal alignment"
-    ],
+    question: "A tracheostomy is indicated for all of the following except:",
+    options: ["Chronic lung disease", "Sleep apnea", "Vocal cord paralysis", "Trauma"],
     correctAnswer: 1
   },
   {
     id: 225,
-    question: "What is the purpose of recession surgery?",
-    choices: [
-      "Strengthen eye muscle",
-      "Shorten lateral rectus",
-      "Weaken eye muscle",
-      "Remove eye muscle"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 226,
-    question: "What is keratoplasty?",
-    choices: [
-      "Lens transplant",
-      "Eyelid surgery",
-      "Corneal transplant",
-      "Cataract removal"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 227,
-    question: "What is radial keratotomy used to treat?",
-    choices: [
-      "Hyperopia",
-      "Myopia",
-      "Astigmatism",
-      "Cataracts"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 228,
-    question: "What is the purpose of LASIK?",
-    choices: [
-      "Replace lens",
-      "Remove cataract",
-      "Reshape cornea",
-      "Transplant retina"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 229,
-    question: "What is the benefit of Nd:YAG laser in eye surgery?",
-    choices: [
-      "Heats tissues directly",
-      "Passes through clear tissue without heating",
-      "Used only on eyelids",
-      "Treats color blindness"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 230,
-    question: "What is dacryocystorhinostomy?",
-    choices: [
-      "Remove eyelid growth",
-      "Relieve nasolacrimal duct blockage",
-      "Treat cataract",
-      "Correct strabismus"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 231,
-    question: "What is the purpose of lacrimal duct dilation?",
-    choices: [
-      "Remove eyelid growth",
-      "Treat excessive tearing",
-      "Correct cross eyes",
-      "Treat glaucoma"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 232,
-    question: "What do Bowman lacrimal duct probes do?",
-    choices: [
-      "Block lacrimal duct",
-      "Dilate lacrimal duct",
-      "Transplant cornea",
-      "Strengthen eyelids"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 233,
-    question: "What is the purpose of viscoelastic agents?",
-    choices: [
-      "Lubricate and separate tissues",
-      "Irrigate the cornea",
-      "Treat infection",
-      "Provide anesthesia"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 234,
-    question: "Which medication prolongs anesthesia and reduces bleeding?",
-    choices: [
-      "Atropine",
-      "Epinephrine",
-      "Miotic",
-      "BSS"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 235,
-    question: "Which agent increases diffusion of anesthetic?",
-    choices: [
-      "Miotic",
-      "Hyaluronidase",
-      "Mydriatic",
-      "Betamethasone"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 236,
-    question: "What type of drug is betamethasone?",
-    choices: [
-      "Antibiotic",
-      "Miotic",
-      "Anti-inflammatory",
-      "Mydriatic"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 237,
-    question: "What type of drug is gentamicin?",
-    choices: [
-      "Antibiotic",
-      "Anti-inflammatory",
-      "Anesthetic",
-      "Mydriatic"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 238,
-    question: "What type of anesthetic is tetracaine?",
-    choices: [
-      "Injectable",
-      "Topical",
-      "Viscoelastic",
-      "Irrigant"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 239,
-    question: "What type of anesthetic is lidocaine?",
-    choices: [
-      "Injectable",
-      "Topical",
-      "Viscoelastic",
-      "Irrigant"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 240,
-    question: "Which type of lymph node drains the inner half of the breast?",
-    choices: [
-      "Internal thoracic nodes",
-      "Axillary nodes",
-      "Cervical nodes",
-      "Mediastinal nodes"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 241,
-    question: "What is carcinoma in-situ?",
-    choices: [
-      "Cancer that has spread",
-      "Cancer confined to original site",
-      "Benign tumor",
-      "Inflammatory condition"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 242,
-    question: "What is the most effective screening method for early breast cancer detection?",
-    choices: [
-      "Self-examination",
-      "Clinical examination",
-      "Mammography",
-      "Blood tests"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 243,
-    question: "What is the standard treatment for ductal carcinoma in-situ?",
-    choices: [
-      "Chemotherapy only",
-      "Radiation only",
-      "Lumpectomy with radiation",
-      "Observation only"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 244,
-    question: "What is hormone replacement therapy primarily used for?",
-    choices: [
-      "Breast cancer treatment",
-      "Osteoporosis prevention",
-      "Menopausal symptoms",
-      "Birth control"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 245,
-    question: "What is the most common complication of breast reconstruction?",
-    choices: [
-      "Infection",
-      "Capsular contracture",
-      "Bleeding",
-      "Nerve damage"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 246,
-    question: "What is the primary indication for prophylactic mastectomy?",
-    choices: [
-      "Family history of breast cancer",
-      "BRCA gene mutation",
-      "Previous breast cancer",
-      "Dense breast tissue"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 247,
-    question: "What is the purpose of sentinel lymph node biopsy?",
-    choices: [
-      "Remove all lymph nodes",
-      "Determine cancer spread",
-      "Treat lymphedema",
-      "Prevent infection"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 248,
-    question: "What is neoadjuvant therapy?",
-    choices: [
-      "Treatment after surgery",
-      "Treatment before surgery",
-      "Palliative treatment",
-      "Preventive treatment"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 249,
-    question: "What is the most common type of breast cancer?",
-    choices: [
-      "Lobular carcinoma",
-      "Inflammatory carcinoma",
-      "Ductal carcinoma",
-      "Medullary carcinoma"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 250,
-    question: "What is the purpose of adjuvant therapy in breast cancer treatment?",
-    choices: [
-      "Shrink tumor before surgery",
-      "Prevent cancer recurrence",
-      "Diagnose cancer stage",
-      "Manage side effects"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 251,
-    question: "Which procedure is performed to repair carcinoma of the vulva?",
-    choices: [
-      "LEEP",
-      "Vulvectomy",
-      "Episiotomy",
-      "Uterine ablation"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 252,
-    question: "Radical vulvectomy involves removal of which additional structures if nodes are positive?",
-    choices: [
-      "Vagina, urethra, anus",
-      "Uterus, fallopian tubes, ovaries",
-      "Cervix, vagina, bladder",
-      "Bladder, rectum, perineum"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 253,
-    question: "Vaginectomy and vaginoplasty are indicated for which condition?",
-    choices: [
-      "Pelvic inflammatory disease",
-      "Vaginal cancer",
-      "Endometriosis",
-      "Stress incontinence"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 254,
-    question: "An amnion graft comes from what source?",
-    choices: [
-      "Placenta",
-      "Umbilical cord",
-      "Fetal membrane",
-      "Maternal uterine lining"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 255,
-    question: "Cystocele is defined as a herniation of which structure into the vaginal wall?",
-    choices: [
-      "Rectum",
-      "Bladder",
-      "Uterus",
-      "Small intestine"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 256,
-    question: "Marshall-Marchetti-Krantz procedure is done to correct:",
-    choices: [
-      "Rectocele",
-      "Urinary incontinence",
-      "Vaginal atresia",
-      "Vesicovaginal fistula"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 257,
-    question: "An enterocele involves herniation of which organ?",
-    choices: [
-      "Rectum",
-      "Bladder",
-      "Small intestine",
-      "Uterus"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 258,
-    question: "A vesicovaginal fistula is a connection between:",
-    choices: [
-      "Rectum and vagina",
-      "Ureter and vagina",
-      "Bladder and vagina",
-      "Urethra and vagina"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 259,
-    question: "Which procedure extends the perineal area during delivery?",
-    choices: [
-      "Uterine ablation",
-      "Episiotomy",
-      "Vaginal hysterectomy",
-      "Cesarean section"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 260,
-    question: "Endometrial ablation destroys what to treat abnormal bleeding?",
-    choices: [
-      "Myometrium",
-      "Endometrium",
-      "Cervix",
-      "Uterine artery"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 261,
-    question: "LAVH refers to:",
-    choices: [
-      "Laparoscopic-assisted vaginal hysterectomy",
-      "Laparoscopic anterior vaginal hernia",
-      "Laparoscopic vaginal atresia",
-      "Laparoscopic vulvectomy"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 262,
-    question: "TAH BSO involves removal of all except:",
-    choices: [
-      "Uterus",
-      "Fallopian tubes",
-      "Ovaries",
-      "Rectum"
-    ],
+    question: "The cranial nerve that supplies motor innervation to the pharynx and larynx is the:",
+    options: ["Fifth", "Seventh", "Eighth", "Tenth"],
     correctAnswer: 3
-  },
-  {
-    id: 263,
-    question: "The term \"en bloc\" means:",
-    choices: [
-      "Piece-by-piece removal",
-      "Single-unit removal",
-      "Microsurgical excision",
-      "Partial resection"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 264,
-    question: "What does \"seeding\" refer to during cancer surgery?",
-    choices: [
-      "Hemorrhage",
-      "Accidental cancer cell spread",
-      "Retained surgical sponge",
-      "Inadvertent nerve injury"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 265,
-    question: "Which procedure removes all reproductive organs, bladder, rectum, and perineum?",
-    choices: [
-      "TAH BSO",
-      "Radical hysterectomy",
-      "Pelvic exenteration",
-      "Vaginal hysterectomy"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 266,
-    question: "Oophorectomy removes:",
-    choices: [
-      "Uterus",
-      "Ovary",
-      "Fallopian tube",
-      "Cervix"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 267,
-    question: "Dermoid cyst is also called:",
-    choices: [
-      "Fibroid",
-      "Teratoma",
-      "Leiomyoma",
-      "Hematoma"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 268,
-    question: "Salpingo-oophorectomy removes:",
-    choices: [
-      "Uterus and cervix",
-      "Ovary and uterus",
-      "Fallopian tube and ovary",
-      "Bladder and urethra"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 269,
-    question: "Cervical cerclage prevents:",
-    choices: [
-      "Placental abruption",
-      "Preterm labor",
-      "Preeclampsia",
-      "Endometrial cancer"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 270,
-    question: "Shirodkar/McDonald are types of:",
-    choices: [
-      "Hysterectomies",
-      "Cerclage",
-      "Episiotomies",
-      "Abortions"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 271,
-    question: "A complete abortion means:",
-    choices: [
-      "Pregnancy continues",
-      "Uterus is completely emptied",
-      "Uterus is perforated",
-      "Fetus is viable"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 272,
-    question: "What is meconium?",
-    choices: [
-      "Amniotic sac",
-      "First fetal bowel movement",
-      "Vernix",
-      "Placenta"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 273,
-    question: "The term \"gravida\" refers to:",
-    choices: [
-      "Number of births",
-      "Number of pregnancies",
-      "First pregnancy",
-      "Uterine contractions"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 274,
-    question: "Oxytocin/Pitocin is used to:",
-    choices: [
-      "Prevent bleeding only",
-      "Induce labor and contract uterus",
-      "Treat hypertension",
-      "Reverse anesthesia"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 275,
-    question: "What is the most common reason for C-section?",
-    choices: [
-      "Placenta previa",
-      "Cephalopelvic disproportion",
-      "Breech",
-      "Cord prolapse"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 276,
-    question: "Which drape is used in OB/GYN procedures?",
-    choices: [
-      "Fenestrated abdominal",
-      "Eye sheet",
-      "Laparotomy sheet",
-      "Neurosurgical sheet"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 277,
-    question: "Cornea is the:",
-    choices: [
-      "White part of the eye",
-      "Transparent window of the eye",
-      "Retina layer",
-      "Iris muscle"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 278,
-    question: "Miotic drugs do what?",
-    choices: [
-      "Dilate pupil",
-      "Constrict pupil",
-      "Relax muscles",
-      "Numb cornea"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 279,
-    question: "Which of the following is a mydriatic?",
-    choices: [
-      "Pilocarpine",
-      "Miochol",
-      "Neo-Synephrine",
-      "Miostat"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 280,
-    question: "What is removed in enucleation?",
-    choices: [
-      "Cornea",
-      "Lens",
-      "Globe with muscles and optic nerve",
-      "Retina only"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 281,
-    question: "Dacryocystorhinostomy treats:",
-    choices: [
-      "Cataract",
-      "Blocked nasolacrimal duct",
-      "Retinal detachment",
-      "Corneal ulcer"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 282,
-    question: "Strabismus means:",
-    choices: [
-      "Eyes focused properly",
-      "Drooping eyelid",
-      "Misaligned eyes",
-      "Blindness"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 283,
-    question: "Which surgery reshapes the cornea with a laser?",
-    choices: [
-      "Keratoplasty",
-      "LASIK",
-      "Blepharoplasty",
-      "Vitrectomy"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 284,
-    question: "Which laser passes through clear tissue without heating?",
-    choices: [
-      "CO₂",
-      "Argon/Nd:YAG",
-      "Excimer",
-      "Helium"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 285,
-    question: "Le Fort I fracture is also called:",
-    choices: [
-      "Blowout fracture",
-      "Mustache fracture",
-      "Orbital fracture",
-      "Zygomatic fracture"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 286,
-    question: "Arch bars are used for:",
-    choices: [
-      "Orbital floor repair",
-      "Maxillomandibular fixation",
-      "Zygomatic plating",
-      "Mandibular resection"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 287,
-    question: "Orbital floor fracture is repaired with all except:",
-    choices: [
-      "Silastic sheet",
-      "Nylon",
-      "Metal implants",
-      "T-tube"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 288,
-    question: "TMJ surgery is done to improve:",
-    choices: [
-      "Swallowing",
-      "Hearing",
-      "Joint mobility",
-      "Vision"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 289,
-    question: "The cochlea contains:",
-    choices: [
-      "Eustachian tube",
-      "Ossicles",
-      "Organ of Corti",
-      "Cerumen"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 290,
-    question: "The auricle is part of the:",
-    choices: [
-      "Middle ear",
-      "Inner ear",
-      "External ear",
-      "Eustachian tube"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 291,
-    question: "What does cerumen refer to?",
-    choices: [
-      "Eardrum",
-      "Earwax",
-      "Hearing aid",
-      "Semicircular canal"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 292,
-    question: "Which sinus is above the ethmoid sinus?",
-    choices: [
-      "Frontal",
-      "Maxillary",
-      "Sphenoid",
-      "Antrum"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 293,
-    question: "Choanal atresia repair requires what scope?",
-    choices: [
-      "10-degree",
-      "30-degree",
-      "90-degree",
-      "None"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 294,
-    question: "Parotidectomy requires caution to avoid injury to:",
-    choices: [
-      "Trigeminal nerve",
-      "Optic nerve",
-      "Facial nerve",
-      "Vestibulocochlear nerve"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 295,
-    question: "Wharton's duct belongs to which gland?",
-    choices: [
-      "Parotid",
-      "Submandibular",
-      "Sublingual",
-      "Lacrimal"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 296,
-    question: "What is the Adam's apple?",
-    choices: [
-      "Cricoid",
-      "Epiglottis",
-      "Thyroid cartilage",
-      "Arytenoid"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 297,
-    question: "What is laryngitis?",
-    choices: [
-      "Malignant tumor",
-      "Inflammation of vocal cords",
-      "Swelling of epiglottis",
-      "Blockage of airway"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 298,
-    question: "A stoma is created during:",
-    choices: [
-      "Laser laryngeal surgery",
-      "Total laryngectomy",
-      "Bronchoscopy",
-      "Tracheoscopy"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 299,
-    question: "Which laser is NOT used on the larynx?",
-    choices: [
-      "CO₂",
-      "Helium",
-      "Argon",
-      "Nitrogen"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 300,
-    question: "What are tracheal rings made of?",
-    choices: [
-      "Fibrous cartilage",
-      "Hyaline cartilage",
-      "Elastic cartilage",
-      "Bone"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 301,
-    question: "Tracheostomy is performed through an incision below the:",
-    choices: [
-      "Thyroid cartilage",
-      "Cricoid cartilage",
-      "Arytenoid cartilage",
-      "Epiglottis"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 302,
-    question: "Rigid bronchoscopy is performed with the patient in what position?",
-    choices: [
-      "Sitting",
-      "Prone",
-      "Supine",
-      "Lateral"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 303,
-    question: "Which type of lymph node drains the outer half of the breast?",
-    choices: [
-      "Internal thoracic nodes",
-      "Axillary nodes",
-      "Cervical nodes",
-      "Mediastinal nodes"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 304,
-    question: "What is the most common screening tool for breast cancer?",
-    choices: [
-      "Ultrasound",
-      "PET scan",
-      "Mammogram",
-      "MRI"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 305,
-    question: "Which type of carcinoma originates from the lobules of the breast?",
-    choices: [
-      "Intraductal carcinoma",
-      "Lobular carcinoma",
-      "Squamous cell carcinoma",
-      "Adenocarcinoma"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 306,
-    question: "What does lymph fluid drain into?",
-    choices: [
-      "Lymph nodes",
-      "Arteries",
-      "Veins",
-      "Capillaries"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 307,
-    question: "What is the yellow fluid that flows through the lymphatic system called?",
-    choices: [
-      "Plasma",
-      "Interstitial fluid",
-      "Lymph",
-      "Serum"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 308,
-    question: "What do micro-calcifications on a mammogram indicate?",
-    choices: [
-      "Malignant tumor in the muscle",
-      "Calcium deposits, often in ductal carcinoma in-situ",
-      "Benign fatty tumor",
-      "Fibrocystic disease"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 309,
-    question: "What imaging modality uses sound waves to examine breast tissue?",
-    choices: [
-      "PET scan",
-      "Mammogram",
-      "MRI",
-      "Ultrasound"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 310,
-    question: "What is the purpose of a digital stereotactic biopsy?",
-    choices: [
-      "Measure breast density",
-      "Diagnose possible breast cancer",
-      "Drain a cyst",
-      "Remove benign tissue"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 311,
-    question: "Which imaging test is useful for determining cancer spread beyond the breast?",
-    choices: [
-      "PET scan",
-      "Mammogram",
-      "Ultrasound",
-      "Core biopsy"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 312,
-    question: "What is the term for breast cancer confined to the breast only?",
-    choices: [
-      "Regional",
-      "Distant",
-      "Local",
-      "Metastatic"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 313,
-    question: "Which gene mutations are tested for hereditary breast cancer risk?",
-    choices: [
-      "TP53 and RB1",
-      "BRCA1 and BRCA2",
-      "HER2 and EGFR",
-      "MYC and BCL2"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 314,
-    question: "Which type of biopsy uses a cutting needle to remove a plug of tissue?",
-    choices: [
-      "Excisional biopsy",
-      "Needle aspiration",
-      "Core biopsy",
-      "Incisional biopsy"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 315,
-    question: "What is the removal of a mass with a margin of normal tissue called?",
-    choices: [
-      "Lumpectomy",
-      "Mastectomy",
-      "Biopsy",
-      "Ablation"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 316,
-    question: "What is removed in a modified radical mastectomy?",
-    choices: [
-      "Breast only",
-      "Breast and pectoral muscles",
-      "Breast and axillary lymph nodes",
-      "Breast, lungs, and axillary nodes"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 317,
-    question: "What is the main risk of lymphedema after breast surgery?",
-    choices: [
-      "Excess drainage",
-      "Fluid accumulation in the arm",
-      "Infection of the chest wall",
-      "Metastasis"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 318,
-    question: "Which incision is used for an appendectomy?",
-    choices: [
-      "McBurney",
-      "Kocher",
-      "Pfannenstiel",
-      "Midline"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 319,
-    question: "Which uterine layer is shed during menstruation?",
-    choices: [
-      "Myometrium",
-      "Endometrium",
-      "Perimetrium",
-      "Serosa"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 320,
-    question: "What is the function of the fimbriae?",
-    choices: [
-      "Secrete estrogen",
-      "Guide egg into fallopian tube",
-      "Protect the uterus",
-      "Lubricate the vagina"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 321,
-    question: "What does ectopic pregnancy mean?",
-    choices: [
-      "Pregnancy in the uterus",
-      "Pregnancy outside the uterus",
-      "Multiple pregnancies",
-      "Miscarriage"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 322,
-    question: "What is the major complication of lithotomy position?",
-    choices: [
-      "Embolus or nerve damage",
-      "Blindness",
-      "Lymphedema",
-      "Cancer recurrence"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 323,
-    question: "Which diagnostic test is an X-ray of uterus and fallopian tubes?",
-    choices: [
-      "Hysterosalpingogram",
-      "Colposcopy",
-      "Hysteroscopy",
-      "Laparoscopy"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 324,
-    question: "What is a cone biopsy of the cervix used for?",
-    choices: [
-      "Diagnose endometriosis",
-      "Rule out cervical cancer",
-      "Identify PID",
-      "Diagnose infertility"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 325,
-    question: "What does PID stand for?",
-    choices: [
-      "Pelvic inflammatory disease",
-      "Primary immune deficiency",
-      "Post-infectious disease",
-      "Peritoneal invasive disorder"
-    ],
-    correctAnswer: 0
   }
 ];
