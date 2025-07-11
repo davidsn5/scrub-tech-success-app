@@ -25,8 +25,9 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
 
   // Initialize shuffled questions on component mount
   useEffect(() => {
+    console.log(`Total questions loaded for ${categoryName}:`, questions.length);
     setShuffledQuestions([...questions]);
-  }, [questions]);
+  }, [questions, categoryName]);
 
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
   const isCorrect = selectedAnswer === currentQuestion?.correctAnswer;
@@ -80,7 +81,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   if (shuffledQuestions.length === 0) {
     return (
       <Card className="p-8 text-center">
-        <p className="text-gray-600">No questions available for this category yet.</p>
+        <p className="text-gray-600">Loading questions...</p>
       </Card>
     );
   }
@@ -94,6 +95,9 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
           <h3 className="text-2xl font-semibold text-gray-900">Quiz Complete!</h3>
           <p className="text-gray-600">
             You answered {score.correct} out of {score.total} questions correctly.
+          </p>
+          <p className="text-sm text-gray-500">
+            Total questions available: {shuffledQuestions.length}
           </p>
         </div>
         
