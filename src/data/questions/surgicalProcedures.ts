@@ -1356,6 +1356,1092 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Which imaging study is most commonly used to evaluate the chest?",
     choices: ["MRI", "CT scan", "Chest X-ray", "Ultrasound"],
     correctAnswer: 2
+  },
+  {
+    id: 226,
+    question: "What is the most common type of surgical wound closure?",
+    choices: ["Primary intention", "Secondary intention", "Tertiary intention", "Delayed primary closure"],
+    correctAnswer: 0
+  },
+  {
+    id: 227,
+    question: "Which of the following is NOT a characteristic of malignant tumors?",
+    choices: ["Rapid growth", "Well-defined borders", "Metastasis", "Invasion of surrounding tissue"],
+    correctAnswer: 1
+  },
+  {
+    id: 228,
+    question: "The term 'anastomosis' refers to:",
+    choices: ["Cutting tissue", "Joining two structures", "Removing tissue", "Examining tissue"],
+    correctAnswer: 1
+  },
+  {
+    id: 229,
+    question: "Which position is used for kidney surgery?",
+    choices: ["Supine", "Prone", "Lateral", "Lithotomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 230,
+    question: "What is the primary function of the spleen?",
+    choices: ["Produce bile", "Filter blood", "Store glucose", "Produce insulin"],
+    correctAnswer: 1
+  },
+  {
+    id: 231,
+    question: "Which artery supplies blood to the heart muscle?",
+    choices: ["Carotid", "Coronary", "Pulmonary", "Aortic"],
+    correctAnswer: 1
+  },
+  {
+    id: 232,
+    question: "The appendix is attached to which part of the intestine?",
+    choices: ["Ileum", "Cecum", "Colon", "Rectum"],
+    correctAnswer: 1
+  },
+  {
+    id: 233,
+    question: "What is the medical term for gallbladder removal?",
+    choices: ["Cholecystectomy", "Choledochostomy", "Cholangiopancreatography", "Cholelithotomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 234,
+    question: "Which hormone regulates blood sugar levels?",
+    choices: ["Cortisol", "Insulin", "Thyroxine", "Adrenaline"],
+    correctAnswer: 1
+  },
+  {
+    id: 235,
+    question: "The femoral artery is located in the:",
+    choices: ["Arm", "Leg", "Neck", "Chest"],
+    correctAnswer: 1
+  },
+  {
+    id: 236,
+    question: "What is the normal body temperature in Fahrenheit?",
+    choices: ["96.8°F", "98.6°F", "100.4°F", "102.2°F"],
+    correctAnswer: 1
+  },
+  {
+    id: 237,
+    question: "Which of the following is a water-soluble vitamin?",
+    choices: ["Vitamin A", "Vitamin D", "Vitamin C", "Vitamin K"],
+    correctAnswer: 2
+  },
+  {
+    id: 238,
+    question: "The brachial pulse is palpated in the:",
+    choices: ["Wrist", "Neck", "Arm", "Ankle"],
+    correctAnswer: 2
+  },
+  {
+    id: 239,
+    question: "What is the term for difficulty swallowing?",
+    choices: ["Dysphagia", "Dyspnea", "Dysuria", "Dysphasia"],
+    correctAnswer: 0
+  },
+  {
+    id: 240,
+    question: "Which imaging study uses magnetic fields?",
+    choices: ["X-ray", "CT scan", "MRI", "Ultrasound"],
+    correctAnswer: 2
+  },
+  {
+    id: 241,
+    question: "The tricuspid valve is located between the:",
+    choices: ["Right atrium and right ventricle", "Left atrium and left ventricle", "Right ventricle and pulmonary artery", "Left ventricle and aorta"],
+    correctAnswer: 0
+  },
+  {
+    id: 242,
+    question: "What is the medical term for kidney stones?",
+    choices: ["Nephrolithiasis", "Nephritis", "Nephrosis", "Nephroma"],
+    correctAnswer: 0
+  },
+  {
+    id: 243,
+    question: "Which blood type is considered the universal donor?",
+    choices: ["Type A", "Type B", "Type AB", "Type O"],
+    correctAnswer: 3
+  },
+  {
+    id: 244,
+    question: "The epiglottis prevents food from entering the:",
+    choices: ["Esophagus", "Stomach", "Trachea", "Bronchi"],
+    correctAnswer: 2
+  },
+  {
+    id: 245,
+    question: "What is the term for surgical removal of the uterus?",
+    choices: ["Oophorectomy", "Hysterectomy", "Salpingectomy", "Mastectomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 246,
+    question: "Which nerve controls the diaphragm?",
+    choices: ["Vagus", "Phrenic", "Median", "Radial"],
+    correctAnswer: 1
+  },
+  {
+    id: 247,
+    question: "The Glasgow Coma Scale measures:",
+    choices: ["Blood pressure", "Heart rate", "Level of consciousness", "Respiratory rate"],
+    correctAnswer: 2
+  },
+  {
+    id: 248,
+    question: "What is the medical term for nosebleed?",
+    choices: ["Epistaxis", "Rhinitis", "Sinusitis", "Pharyngitis"],
+    correctAnswer: 0
+  },
+  {
+    id: 249,
+    question: "Which organ produces bile?",
+    choices: ["Pancreas", "Gallbladder", "Liver", "Stomach"],
+    correctAnswer: 2
+  },
+  {
+    id: 250,
+    question: "The patella is commonly known as the:",
+    choices: ["Ankle bone", "Knee cap", "Shin bone", "Thigh bone"],
+    correctAnswer: 1
+  },
+  {
+    id: 251,
+    question: "What is the medical term for difficulty breathing?",
+    choices: ["Dysphagia", "Dyspnea", "Dysuria", "Dysphasia"],
+    correctAnswer: 1
+  },
+  {
+    id: 252,
+    question: "Which electrolyte is most important for muscle function?",
+    choices: ["Sodium", "Potassium", "Chloride", "Magnesium"],
+    correctAnswer: 1
+  },
+  {
+    id: 253,
+    question: "The carotid pulse is palpated in the:",
+    choices: ["Wrist", "Neck", "Arm", "Ankle"],
+    correctAnswer: 1
+  },
+  {
+    id: 254,
+    question: "What is the term for surgical opening of the abdomen?",
+    choices: ["Laparotomy", "Thoracotomy", "Craniotomy", "Arthrotomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 255,
+    question: "Which hormone is produced by the adrenal glands?",
+    choices: ["Insulin", "Cortisol", "Thyroxine", "Growth hormone"],
+    correctAnswer: 1
+  },
+  {
+    id: 256,
+    question: "The deltoid muscle is located in the:",
+    choices: ["Leg", "Arm", "Back", "Chest"],
+    correctAnswer: 1
+  },
+  {
+    id: 257,
+    question: "What is the medical term for surgical removal of the appendix?",
+    choices: ["Appendicostomy", "Appendectomy", "Appendicectomy", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 258,
+    question: "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+    choices: ["Pulmonary artery", "Pulmonary vein", "Vena cava", "Aorta"],
+    correctAnswer: 1
+  },
+  {
+    id: 259,
+    question: "The term 'bradycardia' refers to:",
+    choices: ["Fast heart rate", "Slow heart rate", "Irregular heart rate", "Normal heart rate"],
+    correctAnswer: 1
+  },
+  {
+    id: 260,
+    question: "Which part of the brain controls balance?",
+    choices: ["Cerebrum", "Cerebellum", "Brainstem", "Medulla"],
+    correctAnswer: 1
+  },
+  {
+    id: 261,
+    question: "What is the medical term for gallstones?",
+    choices: ["Cholelithiasis", "Cholecystitis", "Choledocholithiasis", "Cholangitis"],
+    correctAnswer: 0
+  },
+  {
+    id: 262,
+    question: "The mitral valve is located between the:",
+    choices: ["Right atrium and right ventricle", "Left atrium and left ventricle", "Right ventricle and pulmonary artery", "Left ventricle and aorta"],
+    correctAnswer: 1
+  },
+  {
+    id: 263,
+    question: "Which imaging study uses sound waves?",
+    choices: ["X-ray", "CT scan", "MRI", "Ultrasound"],
+    correctAnswer: 3
+  },
+  {
+    id: 264,
+    question: "What is the term for surgical removal of a breast?",
+    choices: ["Mammoplasty", "Mastectomy", "Mammography", "Mastopexy"],
+    correctAnswer: 1
+  },
+  {
+    id: 265,
+    question: "The pancreas produces which digestive enzyme?",
+    choices: ["Pepsin", "Amylase", "Lipase", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 266,
+    question: "Which blood type is considered the universal recipient?",
+    choices: ["Type A", "Type B", "Type AB", "Type O"],
+    correctAnswer: 2
+  },
+  {
+    id: 267,
+    question: "The term 'tachycardia' refers to:",
+    choices: ["Fast heart rate", "Slow heart rate", "Irregular heart rate", "Normal heart rate"],
+    correctAnswer: 0
+  },
+  {
+    id: 268,
+    question: "Which organ filters waste from the blood?",
+    choices: ["Liver", "Lungs", "Kidneys", "Spleen"],
+    correctAnswer: 2
+  },
+  {
+    id: 269,
+    question: "What is the medical term for surgical removal of the thyroid?",
+    choices: ["Thyrotomy", "Thyroidectomy", "Thyroidoscopy", "Thyropexy"],
+    correctAnswer: 1
+  },
+  {
+    id: 270,
+    question: "The radial pulse is palpated in the:",
+    choices: ["Wrist", "Neck", "Arm", "Ankle"],
+    correctAnswer: 0
+  },
+  {
+    id: 271,
+    question: "Which part of the digestive system absorbs most nutrients?",
+    choices: ["Stomach", "Small intestine", "Large intestine", "Colon"],
+    correctAnswer: 1
+  },
+  {
+    id: 272,
+    question: "What is the term for inflammation of the gallbladder?",
+    choices: ["Cholelithiasis", "Cholecystitis", "Choledocholithiasis", "Cholangitis"],
+    correctAnswer: 1
+  },
+  {
+    id: 273,
+    question: "The aortic valve prevents backflow from the:",
+    choices: ["Right ventricle", "Left ventricle", "Aorta to left ventricle", "Pulmonary artery"],
+    correctAnswer: 2
+  },
+  {
+    id: 274,
+    question: "Which hormone regulates calcium levels?",
+    choices: ["Insulin", "Cortisol", "Parathyroid hormone", "Thyroxine"],
+    correctAnswer: 2
+  },
+  {
+    id: 275,
+    question: "What is the medical term for surgical opening of the chest?",
+    choices: ["Laparotomy", "Thoracotomy", "Craniotomy", "Arthrotomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 276,
+    question: "The quadriceps muscle is located in the:",
+    choices: ["Arm", "Thigh", "Calf", "Back"],
+    correctAnswer: 1
+  },
+  {
+    id: 277,
+    question: "What is the medical term for surgical removal of the spleen?",
+    choices: ["Splenectomy", "Splenorrhaphy", "Splenotomy", "Splenoplasty"],
+    correctAnswer: 0
+  },
+  {
+    id: 278,
+    question: "Which artery supplies blood to the brain?",
+    choices: ["Coronary", "Carotid", "Femoral", "Brachial"],
+    correctAnswer: 1
+  },
+  {
+    id: 279,
+    question: "The term 'anuria' refers to:",
+    choices: ["Excessive urination", "Painful urination", "Blood in urine", "Absence of urination"],
+    correctAnswer: 3
+  },
+  {
+    id: 280,
+    question: "Which part of the ear is responsible for hearing?",
+    choices: ["Outer ear", "Middle ear", "Inner ear", "Eustachian tube"],
+    correctAnswer: 2
+  },
+  {
+    id: 281,
+    question: "What is the medical term for inflammation of the liver?",
+    choices: ["Hepatitis", "Hepatoma", "Hepatectomy", "Hepatoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 282,
+    question: "The biceps muscle is located in the:",
+    choices: ["Leg", "Arm", "Back", "Chest"],
+    correctAnswer: 1
+  },
+  {
+    id: 283,
+    question: "Which imaging study uses ionizing radiation?",
+    choices: ["Ultrasound", "MRI", "X-ray", "Both A and B"],
+    correctAnswer: 2
+  },
+  {
+    id: 284,
+    question: "What is the term for surgical removal of part of the lung?",
+    choices: ["Pneumonectomy", "Lobectomy", "Thoracotomy", "Pleurodesis"],
+    correctAnswer: 1
+  },
+  {
+    id: 285,
+    question: "The gastrocnemius muscle is located in the:",
+    choices: ["Arm", "Thigh", "Calf", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 286,
+    question: "Which blood cell type fights infection?",
+    choices: ["Red blood cells", "White blood cells", "Platelets", "Plasma cells"],
+    correctAnswer: 1
+  },
+  {
+    id: 287,
+    question: "What is the medical term for difficulty urinating?",
+    choices: ["Dysuria", "Polyuria", "Oliguria", "Anuria"],
+    correctAnswer: 0
+  },
+  {
+    id: 288,
+    question: "The temporal pulse is located in the:",
+    choices: ["Wrist", "Temple", "Neck", "Ankle"],
+    correctAnswer: 1
+  },
+  {
+    id: 289,
+    question: "Which organ stores bile?",
+    choices: ["Liver", "Pancreas", "Gallbladder", "Duodenum"],
+    correctAnswer: 2
+  },
+  {
+    id: 290,
+    question: "What is the term for surgical repair of a hernia?",
+    choices: ["Hernioplasty", "Herniorrhaphy", "Herniotomy", "Both A and B"],
+    correctAnswer: 3
+  },
+  {
+    id: 291,
+    question: "The pectoralis major muscle is located in the:",
+    choices: ["Arm", "Leg", "Chest", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 292,
+    question: "Which hormone is produced by the pancreas?",
+    choices: ["Cortisol", "Thyroxine", "Insulin", "Adrenaline"],
+    correctAnswer: 2
+  },
+  {
+    id: 293,
+    question: "What is the medical term for surgical opening of the skull?",
+    choices: ["Craniotomy", "Craniectomy", "Cranioplasty", "Craniosynostosis"],
+    correctAnswer: 0
+  },
+  {
+    id: 294,
+    question: "The dorsalis pedis pulse is located in the:",
+    choices: ["Wrist", "Neck", "Foot", "Ankle"],
+    correctAnswer: 2
+  },
+  {
+    id: 295,
+    question: "Which part of the nervous system controls involuntary functions?",
+    choices: ["Central nervous system", "Peripheral nervous system", "Autonomic nervous system", "Somatic nervous system"],
+    correctAnswer: 2
+  },
+  {
+    id: 296,
+    question: "What is the term for inflammation of the pancreas?",
+    choices: ["Pancreatitis", "Pancreatoma", "Pancreatectomy", "Pancreatoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 297,
+    question: "The latissimus dorsi muscle is located in the:",
+    choices: ["Arm", "Leg", "Chest", "Back"],
+    correctAnswer: 3
+  },
+  {
+    id: 298,
+    question: "Which blood component is responsible for clotting?",
+    choices: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+    correctAnswer: 2
+  },
+  {
+    id: 299,
+    question: "What is the medical term for excessive urination?",
+    choices: ["Dysuria", "Polyuria", "Oliguria", "Anuria"],
+    correctAnswer: 1
+  },
+  {
+    id: 300,
+    question: "The popliteal pulse is located behind the:",
+    choices: ["Wrist", "Elbow", "Knee", "Ankle"],
+    correctAnswer: 2
+  },
+  {
+    id: 301,
+    question: "Which organ produces red blood cells?",
+    choices: ["Liver", "Spleen", "Bone marrow", "Kidneys"],
+    correctAnswer: 2
+  },
+  {
+    id: 302,
+    question: "What is the term for surgical removal of the colon?",
+    choices: ["Colectomy", "Colostomy", "Colonoscopy", "Coloplasty"],
+    correctAnswer: 0
+  },
+  {
+    id: 303,
+    question: "The trapezius muscle is located in the:",
+    choices: ["Arm", "Leg", "Chest", "Neck and shoulders"],
+    correctAnswer: 3
+  },
+  {
+    id: 304,
+    question: "Which vitamin is essential for blood clotting?",
+    choices: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    correctAnswer: 3
+  },
+  {
+    id: 305,
+    question: "What is the medical term for inflammation of the kidney?",
+    choices: ["Nephritis", "Nephrosis", "Nephroma", "Nephrostomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 306,
+    question: "The posterior tibial pulse is located in the:",
+    choices: ["Wrist", "Neck", "Ankle", "Foot"],
+    correctAnswer: 2
+  },
+  {
+    id: 307,
+    question: "Which part of the eye focuses light?",
+    choices: ["Cornea", "Lens", "Retina", "Iris"],
+    correctAnswer: 1
+  },
+  {
+    id: 308,
+    question: "What is the term for surgical creation of an opening in the colon?",
+    choices: ["Colectomy", "Colostomy", "Colonoscopy", "Coloplasty"],
+    correctAnswer: 1
+  },
+  {
+    id: 309,
+    question: "The gluteus maximus muscle is located in the:",
+    choices: ["Arm", "Thigh", "Buttocks", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 310,
+    question: "Which hormone regulates metabolism?",
+    choices: ["Insulin", "Cortisol", "Thyroxine", "Growth hormone"],
+    correctAnswer: 2
+  },
+  {
+    id: 311,
+    question: "What is the medical term for painful urination?",
+    choices: ["Dysuria", "Polyuria", "Oliguria", "Hematuria"],
+    correctAnswer: 0
+  },
+  {
+    id: 312,
+    question: "The apical pulse is located at the:",
+    choices: ["Wrist", "Neck", "Apex of the heart", "Temple"],
+    correctAnswer: 2
+  },
+  {
+    id: 313,
+    question: "Which organ detoxifies the blood?",
+    choices: ["Kidneys", "Liver", "Lungs", "Spleen"],
+    correctAnswer: 1
+  },
+  {
+    id: 314,
+    question: "What is the term for surgical removal of the stomach?",
+    choices: ["Gastrostomy", "Gastrectomy", "Gastroscopy", "Gastroplasty"],
+    correctAnswer: 1
+  },
+  {
+    id: 315,
+    question: "The soleus muscle is located in the:",
+    choices: ["Arm", "Thigh", "Calf", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 316,
+    question: "Which electrolyte is most abundant in extracellular fluid?",
+    choices: ["Potassium", "Sodium", "Chloride", "Magnesium"],
+    correctAnswer: 1
+  },
+  {
+    id: 317,
+    question: "What is the medical term for blood in urine?",
+    choices: ["Dysuria", "Polyuria", "Oliguria", "Hematuria"],
+    correctAnswer: 3
+  },
+  {
+    id: 318,
+    question: "The femoral pulse is located in the:",
+    choices: ["Wrist", "Groin", "Ankle", "Neck"],
+    correctAnswer: 1
+  },
+  {
+    id: 319,
+    question: "Which part of the digestive system produces hydrochloric acid?",
+    choices: ["Liver", "Pancreas", "Stomach", "Small intestine"],
+    correctAnswer: 2
+  },
+  {
+    id: 320,
+    question: "What is the term for surgical repair of the nose?",
+    choices: ["Rhinoplasty", "Rhinotomy", "Rhinoscopy", "Rhinorrhaphy"],
+    correctAnswer: 0
+  },
+  {
+    id: 321,
+    question: "The sartorius muscle is located in the:",
+    choices: ["Arm", "Thigh", "Calf", "Back"],
+    correctAnswer: 1
+  },
+  {
+    id: 322,
+    question: "Which vitamin is synthesized by the skin?",
+    choices: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    correctAnswer: 2
+  },
+  {
+    id: 323,
+    question: "What is the medical term for decreased urination?",
+    choices: ["Dysuria", "Polyuria", "Oliguria", "Anuria"],
+    correctAnswer: 2
+  },
+  {
+    id: 324,
+    question: "The ulnar pulse is located in the:",
+    choices: ["Wrist", "Elbow", "Ankle", "Neck"],
+    correctAnswer: 0
+  },
+  {
+    id: 325,
+    question: "Which organ produces insulin?",
+    choices: ["Liver", "Pancreas", "Adrenal glands", "Thyroid"],
+    correctAnswer: 1
+  },
+  {
+    id: 326,
+    question: "What is the term for surgical opening of the windpipe?",
+    choices: ["Tracheotomy", "Tracheostomy", "Laryngotomy", "Both A and B"],
+    correctAnswer: 3
+  },
+  {
+    id: 327,
+    question: "The hamstring muscles are located in the:",
+    choices: ["Arm", "Front of thigh", "Back of thigh", "Calf"],
+    correctAnswer: 2
+  },
+  {
+    id: 328,
+    question: "Which mineral is essential for bone formation?",
+    choices: ["Iron", "Calcium", "Potassium", "Sodium"],
+    correctAnswer: 1
+  },
+  {
+    id: 329,
+    question: "What is the medical term for surgical removal of tonsils?",
+    choices: ["Tonsillotomy", "Tonsillectomy", "Tonsilloplasty", "Tonsilloscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 330,
+    question: "The tibialis anterior muscle is located in the:",
+    choices: ["Arm", "Thigh", "Front of leg", "Back of leg"],
+    correctAnswer: 2
+  },
+  {
+    id: 331,
+    question: "Which blood vessel returns blood to the heart from the body?",
+    choices: ["Aorta", "Pulmonary artery", "Vena cava", "Pulmonary vein"],
+    correctAnswer: 2
+  },
+  {
+    id: 332,
+    question: "What is the term for inflammation of the bladder?",
+    choices: ["Cystitis", "Cystoma", "Cystectomy", "Cystoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 333,
+    question: "The peroneus muscle is located in the:",
+    choices: ["Arm", "Thigh", "Side of leg", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 334,
+    question: "Which hormone is produced by the thyroid gland?",
+    choices: ["Insulin", "Cortisol", "Thyroxine", "Growth hormone"],
+    correctAnswer: 2
+  },
+  {
+    id: 335,
+    question: "What is the medical term for surgical removal of the larynx?",
+    choices: ["Laryngotomy", "Laryngectomy", "Laryngoplasty", "Laryngoscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 336,
+    question: "The rhomboid muscle is located in the:",
+    choices: ["Arm", "Leg", "Chest", "Back"],
+    correctAnswer: 3
+  },
+  {
+    id: 337,
+    question: "Which part of the brain controls vital functions?",
+    choices: ["Cerebrum", "Cerebellum", "Brainstem", "Frontal lobe"],
+    correctAnswer: 2
+  },
+  {
+    id: 338,
+    question: "What is the term for surgical repair of the eardrum?",
+    choices: ["Tympanoplasty", "Tympanoscopy", "Tympanotomy", "Tympanectomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 339,
+    question: "The serratus anterior muscle is located in the:",
+    choices: ["Arm", "Leg", "Side of chest", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 340,
+    question: "Which electrolyte is most abundant in intracellular fluid?",
+    choices: ["Sodium", "Potassium", "Chloride", "Calcium"],
+    correctAnswer: 1
+  },
+  {
+    id: 341,
+    question: "What is the medical term for inflammation of the stomach?",
+    choices: ["Gastritis", "Gastroma", "Gastrectomy", "Gastroscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 342,
+    question: "The levator scapulae muscle is located in the:",
+    choices: ["Arm", "Leg", "Neck", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 343,
+    question: "Which organ stores vitamin B12?",
+    choices: ["Liver", "Kidney", "Spleen", "Pancreas"],
+    correctAnswer: 0
+  },
+  {
+    id: 344,
+    question: "What is the term for surgical creation of an opening in the stomach?",
+    choices: ["Gastrostomy", "Gastrectomy", "Gastroscopy", "Gastroplasty"],
+    correctAnswer: 0
+  },
+  {
+    id: 345,
+    question: "The infraspinatus muscle is located in the:",
+    choices: ["Arm", "Leg", "Shoulder", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 346,
+    question: "Which hormone controls water balance?",
+    choices: ["Insulin", "ADH", "Cortisol", "Thyroxine"],
+    correctAnswer: 1
+  },
+  {
+    id: 347,
+    question: "What is the medical term for surgical removal of the kidney?",
+    choices: ["Nephrotomy", "Nephrectomy", "Nephroscopy", "Nephroplasty"],
+    correctAnswer: 1
+  },
+  {
+    id: 348,
+    question: "The supraspinatus muscle is located in the:",
+    choices: ["Arm", "Leg", "Shoulder", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 349,
+    question: "Which part of the eye detects light?",
+    choices: ["Cornea", "Lens", "Retina", "Iris"],
+    correctAnswer: 2
+  },
+  {
+    id: 350,
+    question: "What is the term for inflammation of the small intestine?",
+    choices: ["Enteritis", "Enteroma", "Enterectomy", "Enteroscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 351,
+    question: "The teres major muscle is located in the:",
+    choices: ["Arm", "Leg", "Shoulder", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 352,
+    question: "Which vitamin is necessary for calcium absorption?",
+    choices: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    correctAnswer: 2
+  },
+  {
+    id: 353,
+    question: "What is the medical term for surgical repair of a blood vessel?",
+    choices: ["Angioplasty", "Angiectomy", "Angioscopy", "Angiotomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 354,
+    question: "The subscapularis muscle is located in the:",
+    choices: ["Arm", "Leg", "Shoulder", "Back"],
+    correctAnswer: 2
+  },
+  {
+    id: 355,
+    question: "Which organ produces erythropoietin?",
+    choices: ["Liver", "Kidneys", "Spleen", "Bone marrow"],
+    correctAnswer: 1
+  },
+  {
+    id: 356,
+    question: "What is the term for surgical removal of the ovary?",
+    choices: ["Oophorotomy", "Oophorectomy", "Oophoroplasty", "Oophoroscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 357,
+    question: "The coracobrachialis muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Shoulder", "Back"],
+    correctAnswer: 0
+  },
+  {
+    id: 358,
+    question: "Which hormone regulates potassium levels?",
+    choices: ["Insulin", "Cortisol", "Aldosterone", "Thyroxine"],
+    correctAnswer: 2
+  },
+  {
+    id: 359,
+    question: "What is the medical term for inflammation of the colon?",
+    choices: ["Colitis", "Coloma", "Colectomy", "Colonoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 360,
+    question: "The brachialis muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Shoulder", "Back"],
+    correctAnswer: 0
+  },
+  {
+    id: 361,
+    question: "Which part of the kidney filters blood?",
+    choices: ["Glomerulus", "Tubules", "Pelvis", "Cortex"],
+    correctAnswer: 0
+  },
+  {
+    id: 362,
+    question: "What is the term for surgical creation of an opening in the small intestine?",
+    choices: ["Enterostomy", "Enterectomy", "Enteroscopy", "Enteroplasty"],
+    correctAnswer: 0
+  },
+  {
+    id: 363,
+    question: "The brachioradialis muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Shoulder", "Back"],
+    correctAnswer: 1
+  },
+  {
+    id: 364,
+    question: "Which enzyme breaks down proteins?",
+    choices: ["Amylase", "Lipase", "Pepsin", "Lactase"],
+    correctAnswer: 2
+  },
+  {
+    id: 365,
+    question: "What is the medical term for surgical removal of the fallopian tube?",
+    choices: ["Salpingotomy", "Salpingectomy", "Salpingoplasty", "Salpingoscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 366,
+    question: "The extensor carpi radialis muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Wrist", "Hand"],
+    correctAnswer: 1
+  },
+  {
+    id: 367,
+    question: "Which hormone is produced by the pituitary gland?",
+    choices: ["Insulin", "Cortisol", "Growth hormone", "Thyroxine"],
+    correctAnswer: 2
+  },
+  {
+    id: 368,
+    question: "What is the term for inflammation of the rectum?",
+    choices: ["Proctitis", "Proctoma", "Proctectomy", "Proctoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 369,
+    question: "The flexor carpi ulnaris muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Wrist", "Hand"],
+    correctAnswer: 1
+  },
+  {
+    id: 370,
+    question: "Which part of the ear maintains balance?",
+    choices: ["Outer ear", "Middle ear", "Cochlea", "Semicircular canals"],
+    correctAnswer: 3
+  },
+  {
+    id: 371,
+    question: "What is the medical term for surgical repair of the bladder?",
+    choices: ["Cystoplasty", "Cystectomy", "Cystoscopy", "Cystotomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 372,
+    question: "The palmaris longus muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Wrist", "Hand"],
+    correctAnswer: 1
+  },
+  {
+    id: 373,
+    question: "Which vitamin is produced by bacteria in the colon?",
+    choices: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    correctAnswer: 3
+  },
+  {
+    id: 374,
+    question: "What is the term for surgical removal of the prostate?",
+    choices: ["Prostatotomy", "Prostatectomy", "Prostatoplasty", "Prostatoscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 375,
+    question: "The pronator teres muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Wrist", "Hand"],
+    correctAnswer: 1
+  },
+  {
+    id: 376,
+    question: "Which mineral is essential for oxygen transport?",
+    choices: ["Calcium", "Iron", "Potassium", "Sodium"],
+    correctAnswer: 1
+  },
+  {
+    id: 377,
+    question: "What is the medical term for inflammation of the appendix?",
+    choices: ["Appendicitis", "Appendoma", "Appendectomy", "Appendoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 378,
+    question: "The supinator muscle is located in the:",
+    choices: ["Upper arm", "Forearm", "Wrist", "Hand"],
+    correctAnswer: 1
+  },
+  {
+    id: 379,
+    question: "Which hormone stimulates milk production?",
+    choices: ["Estrogen", "Progesterone", "Prolactin", "Oxytocin"],
+    correctAnswer: 2
+  },
+  {
+    id: 380,
+    question: "What is the term for surgical creation of an opening in the windpipe?",
+    choices: ["Tracheotomy", "Tracheostomy", "Laryngotomy", "Bronchostomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 381,
+    question: "The abductor pollicis longus muscle controls:",
+    choices: ["Thumb movement", "Index finger", "Wrist flexion", "Elbow extension"],
+    correctAnswer: 0
+  },
+  {
+    id: 382,
+    question: "Which part of the pancreas produces hormones?",
+    choices: ["Acinar cells", "Islets of Langerhans", "Pancreatic duct", "Head of pancreas"],
+    correctAnswer: 1
+  },
+  {
+    id: 383,
+    question: "What is the medical term for surgical removal of hemorrhoids?",
+    choices: ["Hemorrhoidotomy", "Hemorrhoidectomy", "Hemorrhoidoplasty", "Hemorrhoidoscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 384,
+    question: "The extensor pollicis brevis muscle controls:",
+    choices: ["Thumb extension", "Thumb flexion", "Wrist extension", "Finger extension"],
+    correctAnswer: 0
+  },
+  {
+    id: 385,
+    question: "Which enzyme breaks down fats?",
+    choices: ["Amylase", "Lipase", "Pepsin", "Trypsin"],
+    correctAnswer: 1
+  },
+  {
+    id: 386,
+    question: "What is the term for inflammation of the esophagus?",
+    choices: ["Esophagitis", "Esophagoma", "Esophagectomy", "Esophagoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 387,
+    question: "The flexor pollicis longus muscle controls:",
+    choices: ["Thumb flexion", "Thumb extension", "Wrist flexion", "Finger flexion"],
+    correctAnswer: 0
+  },
+  {
+    id: 388,
+    question: "Which hormone is released during stress?",
+    choices: ["Insulin", "Cortisol", "Thyroxine", "Growth hormone"],
+    correctAnswer: 1
+  },
+  {
+    id: 389,
+    question: "What is the medical term for surgical repair of the diaphragm?",
+    choices: ["Diaphragmoplasty", "Diaphragmectomy", "Diaphragmoscopy", "Diaphragmotomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 390,
+    question: "The adductor pollicis muscle controls:",
+    choices: ["Thumb adduction", "Thumb abduction", "Thumb flexion", "Thumb extension"],
+    correctAnswer: 0
+  },
+  {
+    id: 391,
+    question: "Which part of the eye controls the amount of light entering?",
+    choices: ["Cornea", "Lens", "Iris", "Retina"],
+    correctAnswer: 2
+  },
+  {
+    id: 392,
+    question: "What is the term for surgical removal of the adrenal gland?",
+    choices: ["Adrenalotomy", "Adrenalectomy", "Adrenaloplasty", "Adrenaloscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 393,
+    question: "The opponens pollicis muscle controls:",
+    choices: ["Thumb opposition", "Thumb flexion", "Thumb extension", "Thumb abduction"],
+    correctAnswer: 0
+  },
+  {
+    id: 394,
+    question: "Which vitamin is necessary for proper blood clotting?",
+    choices: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    correctAnswer: 3
+  },
+  {
+    id: 395,
+    question: "What is the medical term for inflammation of the duodenum?",
+    choices: ["Duodenitis", "Duodenoma", "Duodenectomy", "Duodenoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 396,
+    question: "The flexor digitorum superficialis muscle controls:",
+    choices: ["Finger flexion", "Finger extension", "Wrist flexion", "Thumb movement"],
+    correctAnswer: 0
+  },
+  {
+    id: 397,
+    question: "Which hormone regulates sleep cycles?",
+    choices: ["Cortisol", "Melatonin", "Growth hormone", "Insulin"],
+    correctAnswer: 1
+  },
+  {
+    id: 398,
+    question: "What is the term for surgical repair of the spine?",
+    choices: ["Spinal fusion", "Laminectomy", "Discectomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 399,
+    question: "The extensor digitorum muscle controls:",
+    choices: ["Finger extension", "Finger flexion", "Wrist extension", "Thumb movement"],
+    correctAnswer: 0
+  },
+  {
+    id: 400,
+    question: "Which part of the brain controls memory?",
+    choices: ["Cerebellum", "Hippocampus", "Medulla", "Pons"],
+    correctAnswer: 1
+  },
+  {
+    id: 401,
+    question: "What is the medical term for surgical removal of the pancreas?",
+    choices: ["Pancreatotomy", "Pancreatectomy", "Pancreatoplasty", "Pancreatoscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 402,
+    question: "The lumbrical muscles are located in the:",
+    choices: ["Hand", "Foot", "Back", "Leg"],
+    correctAnswer: 0
+  },
+  {
+    id: 403,
+    question: "Which enzyme breaks down carbohydrates?",
+    choices: ["Amylase", "Lipase", "Pepsin", "Trypsin"],
+    correctAnswer: 0
+  },
+  {
+    id: 404,
+    question: "What is the term for inflammation of the jejunum?",
+    choices: ["Jejunitis", "Jejunoma", "Jejunectomy", "Jejunoscopy"],
+    correctAnswer: 0
+  },
+  {
+    id: 405,
+    question: "The interossei muscles are located in the:",
+    choices: ["Hand", "Foot", "Forearm", "Leg"],
+    correctAnswer: 0
+  },
+  {
+    id: 406,
+    question: "Which hormone is produced by the placenta?",
+    choices: ["Estrogen", "Progesterone", "hCG", "All of the above"],
+    correctAnswer: 3
   }
 ];
 
