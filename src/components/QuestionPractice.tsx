@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -26,6 +25,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   // Initialize shuffled questions on component mount
   useEffect(() => {
     console.log(`Total questions loaded for ${categoryName}:`, questions.length);
+    console.log(`First 3 questions preview:`, questions.slice(0, 3).map(q => q.question));
+    console.log(`Last 3 questions preview:`, questions.slice(-3).map(q => q.question));
     setShuffledQuestions([...questions]);
   }, [questions, categoryName]);
 
