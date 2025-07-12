@@ -8,4238 +8,4839 @@ export interface Question {
 export const surgicalProceduresQuestions: Question[] = [
   {
     id: 1,
-    question: "What is the most common position for laparoscopic cholecystectomy?",
-    choices: ["Supine", "Reverse Trendelenburg", "Trendelenburg", "Left lateral"],
+    question: "What is the primary purpose of surgical asepsis?",
+    choices: ["To reduce costs", "To prevent infection", "To speed up surgery", "To improve visibility"],
     correctAnswer: 1
   },
   {
     id: 2,
-    question: "Which trocar is typically placed first during laparoscopic surgery?",
-    choices: ["5mm trocar", "12mm trocar", "Umbilical trocar", "Epigastric trocar"],
-    correctAnswer: 2
+    question: "Which of the following is NOT a principle of sterile technique?",
+    choices: ["Sterile items touch only sterile items", "Sterile persons touch only sterile items", "Non-sterile persons avoid sterile areas", "Sterile items can touch non-sterile items if necessary"],
+    correctAnswer: 3
   },
   {
     id: 3,
-    question: "What is the standard insufflation pressure for laparoscopic procedures?",
-    choices: ["10-12 mmHg", "12-15 mmHg", "15-18 mmHg", "18-20 mmHg"],
-    correctAnswer: 1
+    question: "The sterile field should be established:",
+    choices: ["As close to surgery time as possible", "The night before surgery", "Several hours before surgery", "It doesn't matter when"],
+    correctAnswer: 0
   },
   {
     id: 4,
-    question: "Which instrument is used to grasp and manipulate the gallbladder during laparoscopic cholecystectomy?",
-    choices: ["Babcock forceps", "Allis clamp", "Grasping forceps", "Kocher clamp"],
-    correctAnswer: 2
+    question: "When opening a sterile package, which part should be opened first?",
+    choices: ["The side closest to you", "The side farthest from you", "Either side", "The left side"],
+    correctAnswer: 1
   },
   {
     id: 5,
-    question: "What is the critical view of safety in laparoscopic cholecystectomy?",
-    choices: ["Clear view of hepatocystic triangle", "Identification of two arteries", "Visualization of common bile duct", "Clear view of liver bed"],
+    question: "What is the minimum temperature for steam sterilization?",
+    choices: ["250°F (121°C)", "270°F (132°C)", "300°F (149°C)", "212°F (100°C)"],
     correctAnswer: 0
   },
   {
     id: 6,
-    question: "Which suture is commonly used for port site closure?",
-    choices: ["2-0 Vicryl", "0 PDS", "3-0 Monocryl", "2-0 Prolene"],
-    correctAnswer: 0
+    question: "Which of the following items requires high-level disinfection?",
+    choices: ["Surgical instruments", "Endoscopes", "Blood pressure cuffs", "Stethoscopes"],
+    correctAnswer: 1
   },
   {
     id: 7,
-    question: "What is the most common complication of laparoscopic surgery?",
-    choices: ["Bleeding", "Infection", "Gas embolism", "Trocar injury"],
-    correctAnswer: 3
+    question: "The Spaulding classification system categorizes medical devices based on:",
+    choices: ["Cost", "Size", "Risk of infection", "Material composition"],
+    correctAnswer: 2
   },
   {
     id: 8,
-    question: "Which gas is most commonly used for insufflation?",
-    choices: ["Nitrogen", "Argon", "Carbon dioxide", "Oxygen"],
+    question: "Critical items in the Spaulding classification:",
+    choices: ["Touch intact skin", "Touch mucous membranes", "Enter sterile tissue or bloodstream", "Don't touch the patient"],
     correctAnswer: 2
   },
   {
     id: 9,
-    question: "What is the proper angle for trocar insertion?",
-    choices: ["45 degrees", "60 degrees", "90 degrees", "30 degrees"],
+    question: "What is the most effective method for sterilizing heat-sensitive items?",
+    choices: ["Steam sterilization", "Dry heat", "Ethylene oxide", "Boiling water"],
     correctAnswer: 2
   },
   {
     id: 10,
-    question: "Which structure must be identified before clipping the cystic artery?",
-    choices: ["Common hepatic artery", "Right hepatic artery", "Hepatocystic triangle", "Common bile duct"],
-    correctAnswer: 2
+    question: "The sterile field extends how many inches around a draped patient?",
+    choices: ["6 inches", "12 inches", "18 inches", "24 inches"],
+    correctAnswer: 0
   },
   {
     id: 11,
-    question: "What is the standard incision for open appendectomy?",
-    choices: ["McBurney's incision", "Pfannenstiel incision", "Midline incision", "Kocher incision"],
-    correctAnswer: 0
+    question: "Which of the following is considered a breach of sterile technique?",
+    choices: ["Keeping hands above waist level", "Turning your back to the sterile field", "Wearing sterile gloves", "Using sterile instruments"],
+    correctAnswer: 1
   },
   {
     id: 12,
-    question: "Which layer is incised first in McBurney's incision?",
-    choices: ["Skin", "Subcutaneous tissue", "External oblique", "Internal oblique"],
-    correctAnswer: 0
+    question: "When should surgical hand antisepsis be performed?",
+    choices: ["Only before the first case", "Before each surgical procedure", "Once per day", "Only when hands are visibly soiled"],
+    correctAnswer: 1
   },
   {
     id: 13,
-    question: "What is the most important landmark for appendectomy?",
-    choices: ["Cecum", "Ileocecal valve", "Taeniae coli", "Terminal ileum"],
-    correctAnswer: 2
+    question: "The minimum time for surgical hand scrub is:",
+    choices: ["2 minutes", "3 minutes", "5 minutes", "10 minutes"],
+    correctAnswer: 1
   },
   {
     id: 14,
-    question: "Which suture technique is used for appendiceal stump closure?",
-    choices: ["Simple interrupted", "Purse string", "Running", "Mattress"],
+    question: "Which area of the surgical gown is considered sterile?",
+    choices: ["Entire gown", "Front from chest to waist, sleeves to 2 inches above elbow", "Back of gown", "Only the sleeves"],
     correctAnswer: 1
   },
   {
     id: 15,
-    question: "What is the most common position for appendectomy?",
-    choices: ["Supine", "Left lateral", "Trendelenburg", "Reverse Trendelenburg"],
-    correctAnswer: 0
-  },
-  {
-    id: 16,
-    question: "Which instrument is used to crush the appendiceal base?",
-    choices: ["Kelly clamp", "Kocher clamp", "Babcock forceps", "Allis clamp"],
-    correctAnswer: 0
-  },
-  {
-    id: 17,
-    question: "What type of suture is used for the appendiceal artery?",
-    choices: ["Absorbable", "Non-absorbable", "Either", "Clips only"],
-    correctAnswer: 0
-  },
-  {
-    id: 18,
-    question: "Which approach is preferred for complicated appendicitis?",
-    choices: ["Open", "Laparoscopic", "Either", "Depends on surgeon preference"],
+    question: "When gloving another person, you should:",
+    choices: ["Touch only the inside of the glove", "Touch only the outside of the glove", "Touch both inside and outside", "Use non-sterile technique"],
     correctAnswer: 1
   },
   {
+    id: 16,
+    question: "If a sterile item falls below waist level, it is considered:",
+    choices: ["Still sterile", "Contaminated", "Questionably sterile", "Sterile if picked up quickly"],
+    correctAnswer: 1
+  },
+  {
+    id: 17,
+    question: "The purpose of a biological indicator is to:",
+    choices: ["Indicate temperature", "Confirm sterilization", "Measure time", "Check pressure"],
+    correctAnswer: 1
+  },
+  {
+    id: 18,
+    question: "Which microorganism is most commonly used in biological indicators for steam sterilization?",
+    choices: ["E. coli", "Staphylococcus aureus", "Geobacillus stearothermophilus", "Pseudomonas aeruginosa"],
+    correctAnswer: 2
+  },
+  {
     id: 19,
-    question: "What is the most common complication of appendectomy?",
-    choices: ["Bleeding", "Infection", "Bowel obstruction", "Hernia"],
+    question: "Chemical indicators are used to:",
+    choices: ["Sterilize instruments", "Monitor sterilization parameters", "Clean instruments", "Disinfect surfaces"],
     correctAnswer: 1
   },
   {
     id: 20,
-    question: "Which antibiotic is commonly used for appendicitis prophylaxis?",
-    choices: ["Cefazolin", "Cefoxitin", "Gentamicin", "Vancomycin"],
+    question: "The flash sterilization cycle is used for:",
+    choices: ["Routine sterilization", "Emergency sterilization of unwrapped items", "Sterilizing large loads", "Sterilizing wrapped items"],
     correctAnswer: 1
   },
   {
     id: 21,
-    question: "What is the most common type of hernia repair?",
-    choices: ["Bassini", "Shouldice", "Lichtenstein", "McVay"],
+    question: "What is the primary difference between disinfection and sterilization?",
+    choices: ["Temperature used", "Time required", "Level of microbial kill", "Cost"],
     correctAnswer: 2
   },
   {
     id: 22,
-    question: "Which mesh is most commonly used for inguinal hernia repair?",
-    choices: ["Polypropylene", "Polyester", "PTFE", "Composite"],
-    correctAnswer: 0
+    question: "High-level disinfection kills:",
+    choices: ["Only bacteria", "All microorganisms except some spores", "Only viruses", "All microorganisms including all spores"],
+    correctAnswer: 1
   },
   {
     id: 23,
-    question: "What is the most important anatomical landmark in inguinal hernia repair?",
-    choices: ["Inguinal ligament", "Cooper's ligament", "Conjoint tendon", "Lateral femoral cutaneous nerve"],
-    correctAnswer: 0
-  },
-  {
-    id: 24,
-    question: "Which nerve should be avoided during inguinal hernia repair?",
-    choices: ["Femoral nerve", "Obturator nerve", "Lateral femoral cutaneous nerve", "Genitofemoral nerve"],
-    correctAnswer: 2
-  },
-  {
-    id: 25,
-    question: "What is the triangle of pain in laparoscopic hernia repair?",
-    choices: ["Area containing lateral femoral cutaneous nerve", "Area containing femoral vessels", "Area containing obturator nerve", "Area containing genitofemoral nerve"],
-    correctAnswer: 0
-  },
-  {
-    id: 26,
-    question: "Which laparoscopic technique is preferred for bilateral inguinal hernias?",
-    choices: ["TEP", "TAPP", "Either", "Open repair"],
-    correctAnswer: 2
-  },
-  {
-    id: 27,
-    question: "What size mesh is typically used for inguinal hernia repair?",
-    choices: ["6x4 inches", "8x6 inches", "10x8 inches", "12x10 inches"],
-    correctAnswer: 0
-  },
-  {
-    id: 28,
-    question: "Which suture is used for mesh fixation in laparoscopic hernia repair?",
-    choices: ["Absorbable tacks", "Non-absorbable tacks", "Sutures", "Fibrin glue"],
-    correctAnswer: 0
-  },
-  {
-    id: 29,
-    question: "What is the most common complication of mesh hernia repair?",
-    choices: ["Infection", "Chronic pain", "Recurrence", "Seroma"],
+    question: "The most heat-resistant microorganisms are:",
+    choices: ["Bacteria", "Viruses", "Fungi", "Spores"],
     correctAnswer: 3
   },
   {
+    id: 24,
+    question: "Prions are most effectively destroyed by:",
+    choices: ["Standard steam sterilization", "Ethylene oxide", "High-level disinfection", "Extended steam sterilization with sodium hydroxide"],
+    correctAnswer: 3
+  },
+  {
+    id: 25,
+    question: "The D-value represents:",
+    choices: ["Sterilization temperature", "Time to kill 90% of microorganisms", "Pressure required", "Chemical concentration"],
+    correctAnswer: 1
+  },
+  {
+    id: 26,
+    question: "Which of the following factors affects sterilization efficacy?",
+    choices: ["Temperature", "Time", "Moisture", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 27,
+    question: "The bioburden refers to:",
+    choices: ["Weight of instruments", "Number of microorganisms on an item", "Cost of sterilization", "Time for sterilization"],
+    correctAnswer: 1
+  },
+  {
+    id: 28,
+    question: "Immediate use steam sterilization (IUSS) should be used:",
+    choices: ["Routinely", "Only in emergency situations", "For all instruments", "To save time"],
+    correctAnswer: 1
+  },
+  {
+    id: 29,
+    question: "The sterile storage area should maintain what relative humidity?",
+    choices: ["30-60%", "70-80%", "80-90%", "90-100%"],
+    correctAnswer: 0
+  },
+  {
     id: 30,
-    question: "Which approach is preferred for recurrent inguinal hernia?",
-    choices: ["Same approach as primary", "Different approach", "Always open", "Always laparoscopic"],
+    question: "Sterile packages should be stored:",
+    choices: ["On the floor", "In closed cabinets", "In open areas", "In humid environments"],
     correctAnswer: 1
   },
   {
     id: 31,
-    question: "What is the most common indication for thyroidectomy?",
-    choices: ["Hyperthyroidism", "Goiter", "Cancer", "Nodules"],
-    correctAnswer: 2
+    question: "Event-related sterility means:",
+    choices: ["Items expire on a specific date", "Sterility is maintained until package integrity is compromised", "Items are sterile for 30 days", "Sterility depends on storage temperature"],
+    correctAnswer: 1
   },
   {
     id: 32,
-    question: "Which nerve is most at risk during thyroidectomy?",
-    choices: ["Vagus nerve", "Phrenic nerve", "Recurrent laryngeal nerve", "Hypoglossal nerve"],
-    correctAnswer: 2
+    question: "Which packaging material allows steam penetration?",
+    choices: ["Plastic", "Paper", "Metal", "Glass"],
+    correctAnswer: 1
   },
   {
     id: 33,
-    question: "What is the most serious complication of thyroidectomy?",
-    choices: ["Bleeding", "Hypocalcemia", "Voice changes", "Infection"],
+    question: "The purpose of a sterilization wrap is to:",
+    choices: ["Prevent steam penetration", "Allow sterilant penetration while maintaining sterility", "Speed up sterilization", "Reduce costs"],
     correctAnswer: 1
   },
   {
     id: 34,
-    question: "Which position is used for thyroidectomy?",
-    choices: ["Supine with neck extension", "Prone", "Lateral", "Sitting"],
-    correctAnswer: 0
+    question: "Double wrapping is recommended for:",
+    choices: ["All items", "Heavy instrument sets", "Single instruments", "Disposable items"],
+    correctAnswer: 1
   },
   {
     id: 35,
-    question: "What is the Berry ligament?",
-    choices: ["Lateral thyroid ligament", "Posterior thyroid ligament", "Superior thyroid ligament", "Inferior thyroid ligament"],
+    question: "The tape used to secure sterilization wraps should:",
+    choices: ["Be waterproof", "Change color when exposed to sterilant", "Be removed before sterilization", "Cover the entire package"],
     correctAnswer: 1
   },
   {
     id: 36,
-    question: "Which artery supplies the superior pole of the thyroid?",
-    choices: ["Superior thyroid artery", "Inferior thyroid artery", "Thyroidea ima", "Common carotid artery"],
-    correctAnswer: 0
+    question: "Rigid sterilization containers:",
+    choices: ["Cannot be sterilized", "Require special cycles", "Are single-use only", "Provide excellent protection for instruments"],
+    correctAnswer: 3
   },
   {
     id: 37,
-    question: "What is the most common type of thyroid cancer?",
-    choices: ["Follicular", "Papillary", "Medullary", "Anaplastic"],
-    correctAnswer: 1
+    question: "The minimum temperature for dry heat sterilization is:",
+    choices: ["250°F (121°C)", "320°F (160°C)", "340°F (171°C)", "375°F (190°C)"],
+    correctAnswer: 2
   },
   {
     id: 38,
-    question: "Which imaging study is most useful for thyroid surgery planning?",
-    choices: ["CT scan", "MRI", "Ultrasound", "Nuclear medicine scan"],
-    correctAnswer: 2
-  },
-  {
-    id: 39,
-    question: "What is the minimum margin for thyroid cancer resection?",
-    choices: ["1 mm", "2 mm", "5 mm", "1 cm"],
-    correctAnswer: 2
-  },
-  {
-    id: 40,
-    question: "Which suture is used for thyroid capsule closure?",
-    choices: ["2-0 Vicryl", "3-0 Vicryl", "4-0 Vicryl", "2-0 Silk"],
+    question: "Ethylene oxide sterilization is primarily used for:",
+    choices: ["Heat-stable items", "Heat-sensitive items", "Liquids", "Powders"],
     correctAnswer: 1
   },
   {
-    id: 41,
-    question: "What is the most common breast surgery procedure?",
-    choices: ["Lumpectomy", "Mastectomy", "Biopsy", "Reduction"],
+    id: 39,
+    question: "The aeration time after ethylene oxide sterilization is necessary to:",
+    choices: ["Cool items", "Remove toxic residues", "Complete sterilization", "Dry items"],
+    correctAnswer: 1
+  },
+  {
+    id: 40,
+    question: "Hydrogen peroxide plasma sterilization:",
+    choices: ["Requires aeration", "Leaves toxic residues", "Is environmentally friendly", "Takes longer than steam"],
     correctAnswer: 2
+  },
+  {
+    id: 41,
+    question: "Which sterilization method is fastest?",
+    choices: ["Steam", "Ethylene oxide", "Hydrogen peroxide plasma", "Dry heat"],
+    correctAnswer: 0
   },
   {
     id: 42,
-    question: "Which incision is preferred for breast biopsy?",
-    choices: ["Radial", "Circumareolar", "Curvilinear", "Transverse"],
-    correctAnswer: 2
+    question: "The Bowie-Dick test is used to detect:",
+    choices: ["Air leaks", "Temperature variations", "Pressure problems", "Air removal efficiency"],
+    correctAnswer: 3
   },
   {
     id: 43,
-    question: "What is the most important margin in breast cancer surgery?",
-    choices: ["1 mm", "2 mm", "5 mm", "1 cm"],
+    question: "Prevacuum sterilizers require:",
+    choices: ["No special tests", "Daily air removal tests", "Weekly tests only", "Monthly tests only"],
     correctAnswer: 1
   },
   {
     id: 44,
-    question: "Which technique is used for sentinel lymph node biopsy?",
-    choices: ["Blue dye only", "Radiotracer only", "Both blue dye and radiotracer", "Neither"],
-    correctAnswer: 2
-  },
-  {
-    id: 45,
-    question: "What is the most common complication of mastectomy?",
-    choices: ["Bleeding", "Infection", "Seroma", "Lymphedema"],
-    correctAnswer: 2
-  },
-  {
-    id: 46,
-    question: "Which position is used for breast surgery?",
-    choices: ["Supine", "Prone", "Lateral", "Semi-sitting"],
-    correctAnswer: 0
-  },
-  {
-    id: 47,
-    question: "What is the most common type of breast reconstruction?",
-    choices: ["Implant", "Autologous tissue", "Combination", "None"],
-    correctAnswer: 0
-  },
-  {
-    id: 48,
-    question: "Which drain is commonly used after mastectomy?",
-    choices: ["Penrose", "Jackson-Pratt", "Blake", "Chest tube"],
+    question: "The purpose of the conditioning phase in sterilization is to:",
+    choices: ["Cool items", "Heat items to sterilization temperature", "Remove air", "Add moisture"],
     correctAnswer: 1
   },
   {
+    id: 45,
+    question: "Superheated steam is:",
+    choices: ["More effective than saturated steam", "Less effective than saturated steam", "The same as saturated steam", "Not used in sterilization"],
+    correctAnswer: 1
+  },
+  {
+    id: 46,
+    question: "The most important factor in steam sterilization is:",
+    choices: ["Pressure", "Temperature", "Time", "Direct steam contact"],
+    correctAnswer: 3
+  },
+  {
+    id: 47,
+    question: "Wet packs after sterilization indicate:",
+    choices: ["Successful sterilization", "Inadequate drying", "Proper cooling", "Good steam quality"],
+    correctAnswer: 1
+  },
+  {
+    id: 48,
+    question: "The sterile processing department should be divided into:",
+    choices: ["Two areas", "Three areas", "Four areas", "Five areas"],
+    correctAnswer: 2
+  },
+  {
     id: 49,
-    question: "What is the most important factor in breast cancer prognosis?",
-    choices: ["Tumor size", "Lymph node status", "Grade", "Hormone receptor status"],
+    question: "The decontamination area should have:",
+    choices: ["Positive air pressure", "Negative air pressure", "No air pressure control", "Variable air pressure"],
     correctAnswer: 1
   },
   {
     id: 50,
-    question: "Which imaging study is most sensitive for breast cancer detection?",
-    choices: ["Mammography", "Ultrasound", "MRI", "CT scan"],
+    question: "Personal protective equipment in decontamination should include:",
+    choices: ["Gloves only", "Gown and gloves", "Full PPE including eye protection", "No PPE required"],
     correctAnswer: 2
   },
   {
     id: 51,
-    question: "What is the most common indication for colon resection?",
-    choices: ["Cancer", "Diverticulitis", "IBD", "Obstruction"],
-    correctAnswer: 0
+    question: "Ultrasonic cleaners work by:",
+    choices: ["Heat", "Chemicals", "Cavitation", "Pressure"],
+    correctAnswer: 2
   },
   {
     id: 52,
-    question: "Which anastomotic technique is preferred for colon surgery?",
-    choices: ["Hand-sewn", "Stapled", "Either", "Depends on location"],
+    question: "Enzymatic cleaners are most effective against:",
+    choices: ["Bacteria", "Viruses", "Protein soils", "Mineral deposits"],
     correctAnswer: 2
   },
   {
     id: 53,
-    question: "What is the most serious complication of colon surgery?",
-    choices: ["Bleeding", "Infection", "Anastomotic leak", "Obstruction"],
-    correctAnswer: 2
+    question: "The pH of most enzymatic cleaners is:",
+    choices: ["Acidic", "Neutral", "Alkaline", "Variable"],
+    correctAnswer: 1
   },
   {
     id: 54,
-    question: "Which position is used for sigmoid colectomy?",
-    choices: ["Supine", "Lithotomy", "Left lateral", "Prone"],
+    question: "Automated washers provide:",
+    choices: ["Inconsistent results", "Standardized cleaning", "No advantages", "Only cost savings"],
     correctAnswer: 1
   },
   {
     id: 55,
-    question: "What is the minimum margin for colon cancer resection?",
-    choices: ["2 cm", "5 cm", "10 cm", "15 cm"],
-    correctAnswer: 1
+    question: "The final rinse in automated washers should use:",
+    choices: ["Tap water", "Softened water", "Distilled water", "Deionized water"],
+    correctAnswer: 3
   },
   {
     id: 56,
-    question: "Which vessel is the primary blood supply to the sigmoid colon?",
-    choices: ["Superior mesenteric artery", "Inferior mesenteric artery", "Internal iliac artery", "Middle colic artery"],
+    question: "Instrument milk is used to:",
+    choices: ["Clean instruments", "Lubricate instruments", "Sterilize instruments", "Disinfect instruments"],
     correctAnswer: 1
   },
   {
     id: 57,
-    question: "What is the most common type of colostomy?",
-    choices: ["End colostomy", "Loop colostomy", "Double-barrel colostomy", "Mucous fistula"],
-    correctAnswer: 0
-  },
-  {
-    id: 58,
-    question: "Which approach is preferred for rectal cancer surgery?",
-    choices: ["Open", "Laparoscopic", "Robotic", "All are acceptable"],
-    correctAnswer: 3
-  },
-  {
-    id: 59,
-    question: "What is the most important plane in rectal cancer surgery?",
-    choices: ["Mesorectal plane", "Presacral plane", "Denonvilliers fascia", "Waldeyer fascia"],
-    correctAnswer: 0
-  },
-  {
-    id: 60,
-    question: "Which imaging study is most useful for rectal cancer staging?",
-    choices: ["CT scan", "MRI", "PET scan", "Ultrasound"],
-    correctAnswer: 1
-  },
-  {
-    id: 61,
-    question: "What is the most common gastric surgery procedure?",
-    choices: ["Gastrectomy", "Gastrojejunostomy", "Pyloroplasty", "Fundoplication"],
-    correctAnswer: 0
-  },
-  {
-    id: 62,
-    question: "Which approach is preferred for gastric cancer surgery?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Depends on stage"],
-    correctAnswer: 3
-  },
-  {
-    id: 63,
-    question: "What is the most common reconstruction after gastrectomy?",
-    choices: ["Billroth I", "Billroth II", "Roux-en-Y", "Jejunal interposition"],
+    question: "Water quality for final rinse should meet:",
+    choices: ["Tap water standards", "Softened water standards", "Critical water standards", "Any water standards"],
     correctAnswer: 2
   },
   {
+    id: 58,
+    question: "The drying process after cleaning should:",
+    choices: ["Be optional", "Remove all visible moisture", "Leave some moisture", "Use heat only"],
+    correctAnswer: 1
+  },
+  {
+    id: 59,
+    question: "Inspection of instruments should occur:",
+    choices: ["Before cleaning", "After cleaning and before sterilization", "After sterilization", "Only when problems are suspected"],
+    correctAnswer: 1
+  },
+  {
+    id: 60,
+    question: "Damaged instruments should be:",
+    choices: ["Used carefully", "Repaired immediately", "Removed from service", "Sterilized anyway"],
+    correctAnswer: 2
+  },
+  {
+    id: 61,
+    question: "Loaner instruments should be:",
+    choices: ["Used without inspection", "Cleaned and sterilized before use", "Returned immediately", "Used only in emergencies"],
+    correctAnswer: 1
+  },
+  {
+    id: 62,
+    question: "The assembly area should have:",
+    choices: ["Negative air pressure", "Positive air pressure", "No air pressure control", "Variable air pressure"],
+    correctAnswer: 1
+  },
+  {
+    id: 63,
+    question: "Instrument sets should be assembled:",
+    choices: ["Randomly", "According to standardized lists", "By surgeon preference only", "Without documentation"],
+    correctAnswer: 1
+  },
+  {
     id: 64,
-    question: "Which lymph node station is most important in gastric cancer?",
-    choices: ["Perigastric", "Celiac", "Hepatic", "Splenic"],
+    question: "Heavy instruments should be placed:",
+    choices: ["On top", "On bottom", "In the middle", "Separately"],
     correctAnswer: 1
   },
   {
     id: 65,
-    question: "What is the most serious complication of gastrectomy?",
-    choices: ["Bleeding", "Anastomotic leak", "Dumping syndrome", "Nutritional deficiency"],
-    correctAnswer: 1
+    question: "Hinged instruments should be:",
+    choices: ["Closed", "Slightly open", "Fully open", "Locked"],
+    correctAnswer: 2
   },
   {
     id: 66,
-    question: "Which position is used for gastric surgery?",
-    choices: ["Supine", "Reverse Trendelenburg", "Left lateral", "Prone"],
-    correctAnswer: 1
+    question: "The maximum weight for instrument sets is:",
+    choices: ["15 pounds", "20 pounds", "25 pounds", "30 pounds"],
+    correctAnswer: 2
   },
   {
     id: 67,
-    question: "What is the most common indication for splenectomy?",
-    choices: ["Trauma", "Hematologic disorders", "Malignancy", "Cysts"],
+    question: "Implants should be sterilized:",
+    choices: ["With other instruments", "Separately with biological indicators", "Without indicators", "Using flash sterilization"],
     correctAnswer: 1
   },
   {
     id: 68,
-    question: "Which approach is preferred for elective splenectomy?",
-    choices: ["Open", "Laparoscopic", "Hand-assisted", "Robotic"],
+    question: "The sterile storage area should be:",
+    choices: ["Open to all areas", "Restricted access", "Combined with clean areas", "Located anywhere"],
     correctAnswer: 1
   },
   {
     id: 69,
-    question: "What is the most important consideration after splenectomy?",
-    choices: ["Bleeding", "Infection", "Thrombosis", "Pain"],
+    question: "Sterile items should be stored:",
+    choices: ["On the floor", "At least 8-10 inches from floor", "At any height", "Only on top shelves"],
     correctAnswer: 1
   },
   {
     id: 70,
-    question: "Which vaccines are required before elective splenectomy?",
-    choices: ["Pneumococcal only", "Meningococcal only", "Haemophilus only", "All three"],
-    correctAnswer: 3
-  },
-  {
-    id: 71,
-    question: "What is the most common pancreatic surgery?",
-    choices: ["Pancreaticoduodenectomy", "Distal pancreatectomy", "Pancreaticojejunostomy", "Enucleation"],
+    question: "The FIFO system means:",
+    choices: ["First In, First Out", "First In, Final Out", "Final In, First Out", "Fast In, Fast Out"],
     correctAnswer: 0
   },
   {
+    id: 71,
+    question: "Quality assurance in sterile processing includes:",
+    choices: ["Only sterilization monitoring", "Only cleaning verification", "Comprehensive monitoring of all processes", "Random checks"],
+    correctAnswer: 2
+  },
+  {
     id: 72,
-    question: "Which reconstruction is performed after pancreaticoduodenectomy?",
-    choices: ["Pancreaticojejunostomy only", "Hepaticojejunostomy only", "Gastrojejunostomy only", "All three"],
-    correctAnswer: 3
+    question: "Sterilization records should be kept for:",
+    choices: ["1 year", "3 years", "5 years", "Permanently"],
+    correctAnswer: 1
   },
   {
     id: 73,
-    question: "What is the most serious complication of pancreaticoduodenectomy?",
-    choices: ["Bleeding", "Pancreatic fistula", "Delayed gastric emptying", "Infection"],
+    question: "Positive biological indicator results require:",
+    choices: ["No action", "Immediate investigation", "Routine documentation", "Repeat testing only"],
     correctAnswer: 1
   },
   {
     id: 74,
-    question: "Which imaging study is most useful for pancreatic surgery planning?",
-    choices: ["CT scan", "MRI", "ERCP", "All are important"],
-    correctAnswer: 3
+    question: "Recall procedures are necessary when:",
+    choices: ["Sterilization failure occurs", "New instruments arrive", "Staff changes", "Equipment is serviced"],
+    correctAnswer: 0
   },
   {
     id: 75,
-    question: "What is the most common indication for liver resection?",
-    choices: ["Hepatocellular carcinoma", "Metastases", "Benign tumors", "Trauma"],
-    correctAnswer: 1
+    question: "The most critical aspect of instrument reprocessing is:",
+    choices: ["Speed", "Cost", "Patient safety", "Convenience"],
+    correctAnswer: 2
   },
   {
     id: 76,
-    question: "Which technique is used to control bleeding during liver resection?",
-    choices: ["Pringle maneuver", "Vascular clamps", "Argon beam coagulator", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 77,
-    question: "What is the most important factor in liver resection?",
-    choices: ["Tumor size", "Liver function", "Patient age", "Surgical approach"],
+    question: "Standard precautions should be used:",
+    choices: ["Only with known infectious patients", "With all patients and specimens", "Only in isolation rooms", "Only during surgery"],
     correctAnswer: 1
   },
   {
-    id: 78,
-    question: "Which imaging study is most useful for liver surgery planning?",
-    choices: ["CT scan", "MRI", "Ultrasound", "All are important"],
+    id: 77,
+    question: "The hierarchy of controls for infection prevention includes:",
+    choices: ["Only PPE", "Engineering and administrative controls", "Only hand hygiene", "Elimination, substitution, engineering, administrative, PPE"],
     correctAnswer: 3
   },
   {
+    id: 78,
+    question: "Hand hygiene should be performed:",
+    choices: ["Only when hands are visibly soiled", "Before and after patient contact", "Once per shift", "Only before eating"],
+    correctAnswer: 1
+  },
+  {
     id: 79,
-    question: "What is the most common complication of liver resection?",
-    choices: ["Bleeding", "Bile leak", "Liver failure", "Infection"],
+    question: "Alcohol-based hand rubs are effective against:",
+    choices: ["All microorganisms", "Most bacteria and viruses", "Only bacteria", "Only viruses"],
     correctAnswer: 1
   },
   {
     id: 80,
-    question: "Which approach is preferred for liver resection?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Depends on location"],
-    correctAnswer: 3
+    question: "When should soap and water be used instead of alcohol-based hand rub?",
+    choices: ["Never", "When hands are visibly soiled", "Always", "Only in surgery"],
+    correctAnswer: 1
   },
   {
     id: 81,
-    question: "What is the most common cardiac surgery procedure?",
-    choices: ["CABG", "Valve replacement", "ASD repair", "Pacemaker insertion"],
-    correctAnswer: 0
+    question: "The purpose of environmental cleaning is to:",
+    choices: ["Make surfaces look clean", "Remove and reduce microorganisms", "Save money", "Meet regulations only"],
+    correctAnswer: 1
   },
   {
     id: 82,
-    question: "Which approach is used for CABG?",
-    choices: ["Median sternotomy", "Left thoracotomy", "Right thoracotomy", "Minimally invasive"],
-    correctAnswer: 0
+    question: "High-touch surfaces should be cleaned:",
+    choices: ["Weekly", "Daily", "Multiple times per day", "Monthly"],
+    correctAnswer: 2
   },
   {
     id: 83,
-    question: "What is the most commonly used conduit for CABG?",
-    choices: ["Saphenous vein", "Internal mammary artery", "Radial artery", "Gastroepiploic artery"],
+    question: "Terminal cleaning refers to:",
+    choices: ["Daily cleaning", "Cleaning after patient discharge", "Cleaning equipment", "Cleaning before admission"],
     correctAnswer: 1
   },
   {
     id: 84,
-    question: "Which valve is most commonly replaced?",
-    choices: ["Aortic", "Mitral", "Tricuspid", "Pulmonary"],
-    correctAnswer: 0
+    question: "Microfiber cloths are effective because they:",
+    choices: ["Are disposable", "Physically remove microorganisms", "Contain disinfectant", "Are colorful"],
+    correctAnswer: 1
   },
   {
     id: 85,
-    question: "What is the most serious complication of cardiac surgery?",
-    choices: ["Bleeding", "Stroke", "Infection", "Arrhythmia"],
+    question: "The two-step cleaning process involves:",
+    choices: ["Cleaning then rinsing", "Cleaning then disinfecting", "Sweeping then mopping", "Dusting then vacuuming"],
     correctAnswer: 1
   },
   {
     id: 86,
-    question: "Which position is used for cardiac surgery?",
-    choices: ["Supine", "Prone", "Lateral", "Semi-sitting"],
-    correctAnswer: 0
+    question: "Contact time for disinfectants refers to:",
+    choices: ["Time to apply", "Time surface must remain wet", "Time to dry", "Time to purchase"],
+    correctAnswer: 1
   },
   {
     id: 87,
-    question: "What is the most common thoracic surgery procedure?",
-    choices: ["Lobectomy", "Wedge resection", "Pneumonectomy", "Thoracotomy"],
+    question: "EPA-registered disinfectants are required for:",
+    choices: ["All surfaces", "Healthcare surfaces", "Home use only", "Industrial use only"],
     correctAnswer: 1
   },
   {
     id: 88,
-    question: "Which approach is preferred for lung cancer surgery?",
-    choices: ["Open thoracotomy", "VATS", "Robotic", "Depends on stage"],
-    correctAnswer: 3
+    question: "The most important factor in disinfectant efficacy is:",
+    choices: ["Cost", "Color", "Following label instructions", "Brand name"],
+    correctAnswer: 2
   },
   {
     id: 89,
-    question: "What is the most serious complication of lung surgery?",
-    choices: ["Bleeding", "Air leak", "Pneumonia", "Respiratory failure"],
-    correctAnswer: 3
+    question: "Quaternary ammonium compounds are:",
+    choices: ["High-level disinfectants", "Low-level disinfectants", "Sterilants", "Antiseptics only"],
+    correctAnswer: 1
   },
   {
     id: 90,
-    question: "Which position is used for thoracic surgery?",
-    choices: ["Supine", "Prone", "Lateral", "Semi-sitting"],
+    question: "Phenolic disinfectants should not be used on:",
+    choices: ["Metal surfaces", "Plastic surfaces", "Rubber and plastic in nurseries", "Glass surfaces"],
     correctAnswer: 2
   },
   {
     id: 91,
-    question: "What is the most common vascular surgery procedure?",
-    choices: ["Carotid endarterectomy", "Aortic aneurysm repair", "Peripheral bypass", "AV fistula creation"],
-    correctAnswer: 3
+    question: "Sodium hypochlorite (bleach) is effective against:",
+    choices: ["Only bacteria", "Most microorganisms including spores", "Only viruses", "Only fungi"],
+    correctAnswer: 1
   },
   {
     id: 92,
-    question: "Which approach is preferred for AAA repair?",
-    choices: ["Open", "Endovascular", "Hybrid", "Depends on anatomy"],
-    correctAnswer: 3
+    question: "The disadvantage of bleach is:",
+    choices: ["Low cost", "Broad spectrum", "Corrosive and unstable", "Pleasant odor"],
+    correctAnswer: 2
   },
   {
     id: 93,
-    question: "What is the most serious complication of aortic surgery?",
-    choices: ["Bleeding", "Spinal cord ischemia", "Renal failure", "MI"],
+    question: "Hydrogen peroxide disinfectants:",
+    choices: ["Are toxic", "Break down to water and oxygen", "Are expensive", "Stain surfaces"],
     correctAnswer: 1
   },
   {
     id: 94,
-    question: "Which graft material is preferred for vascular surgery?",
-    choices: ["Dacron", "PTFE", "Saphenous vein", "Depends on location"],
-    correctAnswer: 3
+    question: "UV-C light is used for:",
+    choices: ["Heating", "Lighting", "Disinfection", "Decoration"],
+    correctAnswer: 2
   },
   {
     id: 95,
-    question: "What is the most common neurosurgical procedure?",
-    choices: ["Craniotomy", "Laminectomy", "Burr holes", "Shunt placement"],
+    question: "The effectiveness of UV-C depends on:",
+    choices: ["Color of light", "Direct exposure and time", "Room temperature", "Humidity"],
     correctAnswer: 1
   },
   {
     id: 96,
-    question: "Which position is used for posterior spine surgery?",
-    choices: ["Supine", "Prone", "Lateral", "Sitting"],
+    question: "Electrostatic spraying:",
+    choices: ["Uses more chemical", "Provides even coverage", "Is less effective", "Only works on metal"],
     correctAnswer: 1
   },
   {
     id: 97,
-    question: "What is the most serious complication of spine surgery?",
-    choices: ["Bleeding", "Infection", "Nerve injury", "CSF leak"],
-    correctAnswer: 2
+    question: "Fogging should be used:",
+    choices: ["Routinely", "Only for outbreak situations", "Daily", "Never"],
+    correctAnswer: 1
   },
   {
     id: 98,
-    question: "Which imaging is used for spine surgery navigation?",
-    choices: ["Fluoroscopy", "CT", "MRI", "All of the above"],
-    correctAnswer: 3
+    question: "The most important aspect of environmental services is:",
+    choices: ["Speed", "Appearance", "Consistency and thoroughness", "Cost"],
+    correctAnswer: 2
   },
   {
     id: 99,
-    question: "What is the most common orthopedic surgery?",
-    choices: ["Hip replacement", "Knee replacement", "Arthroscopy", "Fracture repair"],
+    question: "Training for environmental services staff should include:",
+    choices: ["Only cleaning techniques", "Only safety", "Comprehensive infection prevention", "Only product knowledge"],
     correctAnswer: 2
   },
   {
     id: 100,
-    question: "Which approach is used for total hip replacement?",
-    choices: ["Anterior", "Posterior", "Lateral", "All are used"],
+    question: "Quality assurance for environmental cleaning should include:",
+    choices: ["Visual inspection only", "ATP testing", "Microbiological testing", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 101,
-    question: "What is the most common complication of joint replacement?",
-    choices: ["Infection", "Dislocation", "Loosening", "Wear"],
-    correctAnswer: 0
+    question: "What is the primary goal of preoperative patient preparation?",
+    choices: ["Speed up surgery", "Reduce surgical site infections", "Save money", "Improve visibility"],
+    correctAnswer: 1
   },
   {
     id: 102,
-    question: "Which cement is used for joint replacement?",
-    choices: ["PMMA", "Calcium phosphate", "Hydroxyapatite", "None"],
-    correctAnswer: 0
+    question: "Preoperative showering should use:",
+    choices: ["Regular soap", "Antimicrobial soap", "No soap", "Any available soap"],
+    correctAnswer: 1
   },
   {
     id: 103,
-    question: "What is the most common urological procedure?",
-    choices: ["Cystoscopy", "TURP", "Nephrectomy", "Prostatectomy"],
-    correctAnswer: 0
+    question: "Hair removal, if necessary, should be done:",
+    choices: ["The night before", "Immediately before surgery", "Several hours before", "A week before"],
+    correctAnswer: 1
   },
   {
     id: 104,
-    question: "Which approach is preferred for radical prostatectomy?",
-    choices: ["Open", "Laparoscopic", "Robotic", "All are acceptable"],
-    correctAnswer: 2
+    question: "The preferred method of hair removal is:",
+    choices: ["Shaving with razor", "Clipping", "Depilatory cream", "Laser removal"],
+    correctAnswer: 1
   },
   {
     id: 105,
-    question: "What is the most serious complication of prostatectomy?",
-    choices: ["Bleeding", "Incontinence", "Impotence", "Stricture"],
-    correctAnswer: 1
+    question: "Skin antisepsis should begin:",
+    choices: ["At the incision site", "At the periphery", "Anywhere", "At the bottom"],
+    correctAnswer: 0
   },
   {
     id: 106,
-    question: "Which position is used for urological procedures?",
-    choices: ["Supine", "Lithotomy", "Prone", "Lateral"],
-    correctAnswer: 1
+    question: "The most commonly used skin antiseptic is:",
+    choices: ["Alcohol", "Iodine", "Chlorhexidine", "Hydrogen peroxide"],
+    correctAnswer: 2
   },
   {
     id: 107,
-    question: "What is the most common gynecological surgery?",
-    choices: ["Hysterectomy", "Oophorectomy", "Myomectomy", "D&C"],
-    correctAnswer: 3
+    question: "Skin prep should be allowed to:",
+    choices: ["Dry completely", "Remain wet", "Be wiped off", "Be covered immediately"],
+    correctAnswer: 0
   },
   {
     id: 108,
-    question: "Which approach is preferred for hysterectomy?",
-    choices: ["Abdominal", "Vaginal", "Laparoscopic", "Depends on indication"],
-    correctAnswer: 3
+    question: "The purpose of surgical draping is to:",
+    choices: ["Keep patient warm", "Create sterile field", "Improve lighting", "Reduce costs"],
+    correctAnswer: 1
   },
   {
     id: 109,
-    question: "What is the most serious complication of hysterectomy?",
-    choices: ["Bleeding", "Infection", "Ureteral injury", "Bowel injury"],
+    question: "Drapes should be:",
+    choices: ["Reusable only", "Disposable only", "Either reusable or disposable", "Made of cotton only"],
     correctAnswer: 2
   },
   {
     id: 110,
-    question: "Which position is used for gynecological surgery?",
-    choices: ["Supine", "Lithotomy", "Trendelenburg", "All of the above"],
+    question: "The first drape placed should be:",
+    choices: ["Largest drape", "Smallest drape", "Closest to surgeon", "Farthest from surgeon"],
     correctAnswer: 3
   },
   {
     id: 111,
-    question: "What is the most common plastic surgery procedure?",
-    choices: ["Breast augmentation", "Rhinoplasty", "Liposuction", "Facelift"],
-    correctAnswer: 2
+    question: "Once a drape is placed, it should:",
+    choices: ["Be repositioned as needed", "Never be moved", "Be adjusted slightly", "Be removed and replaced"],
+    correctAnswer: 1
   },
   {
     id: 112,
-    question: "Which flap is most commonly used for reconstruction?",
-    choices: ["Random flap", "Axial flap", "Free flap", "Muscle flap"],
+    question: "Adhesive drapes:",
+    choices: ["Are always necessary", "May increase infection risk", "Should cover entire patient", "Are never used"],
     correctAnswer: 1
   },
   {
     id: 113,
-    question: "What is the most important factor in flap survival?",
-    choices: ["Size", "Blood supply", "Location", "Thickness"],
+    question: "The sterile field includes:",
+    choices: ["Only the incision site", "Draped patient and sterile surfaces", "Entire operating room", "Only instrument tables"],
     correctAnswer: 1
   },
   {
     id: 114,
-    question: "Which suture is preferred for plastic surgery?",
-    choices: ["Absorbable", "Non-absorbable", "Monofilament", "Depends on location"],
-    correctAnswer: 3
+    question: "Traffic in the operating room should be:",
+    choices: ["Unrestricted", "Minimized", "Encouraged", "Constant"],
+    correctAnswer: 1
   },
   {
     id: 115,
-    question: "What is the most common pediatric surgery?",
-    choices: ["Appendectomy", "Hernia repair", "Circumcision", "Tonsillectomy"],
-    correctAnswer: 2
+    question: "Doors to the operating room should be:",
+    choices: ["Always open", "Kept closed", "Opened frequently", "Removed"],
+    correctAnswer: 1
   },
   {
     id: 116,
-    question: "Which anesthesia is preferred for pediatric surgery?",
-    choices: ["General", "Regional", "Local", "Depends on procedure"],
-    correctAnswer: 3
+    question: "The temperature in the operating room should be:",
+    choices: ["68-73°F (20-23°C)", "75-80°F (24-27°C)", "60-65°F (15-18°C)", "80-85°F (27-29°C)"],
+    correctAnswer: 0
   },
   {
     id: 117,
-    question: "What is the most important consideration in pediatric surgery?",
-    choices: ["Size", "Age", "Development", "All of the above"],
-    correctAnswer: 3
+    question: "Relative humidity in the OR should be:",
+    choices: ["20-30%", "30-60%", "70-80%", "80-90%"],
+    correctAnswer: 1
   },
   {
     id: 118,
-    question: "Which position is safest for pediatric patients?",
-    choices: ["Supine", "Prone", "Lateral", "Depends on procedure"],
-    correctAnswer: 3
+    question: "Air changes per hour in the OR should be minimum:",
+    choices: ["10", "15", "20", "25"],
+    correctAnswer: 2
   },
   {
     id: 119,
-    question: "What is the most common emergency surgery?",
-    choices: ["Appendectomy", "Cholecystectomy", "Hernia repair", "Trauma surgery"],
-    correctAnswer: 3
+    question: "HEPA filters remove particles:",
+    choices: ["0.1 microns", "0.3 microns", "1.0 microns", "5.0 microns"],
+    correctAnswer: 1
   },
   {
     id: 120,
-    question: "Which principle is most important in trauma surgery?",
-    choices: ["Speed", "Accuracy", "Damage control", "All are important"],
-    correctAnswer: 3
+    question: "Positive air pressure in the OR:",
+    choices: ["Prevents air from entering", "Forces air out of the room", "Has no effect", "Increases contamination"],
+    correctAnswer: 1
   },
   {
     id: 121,
-    question: "What is the most common cause of surgical site infection?",
-    choices: ["Staphylococcus aureus", "E. coli", "Enterococcus", "Pseudomonas"],
-    correctAnswer: 0
+    question: "Laminar air flow provides:",
+    choices: ["Turbulent air", "Unidirectional air flow", "No air movement", "Circular air flow"],
+    correctAnswer: 1
   },
   {
     id: 122,
-    question: "Which factor most reduces surgical site infection?",
-    choices: ["Antibiotics", "Sterile technique", "Skin preparation", "All are important"],
-    correctAnswer: 3
+    question: "The recovery of the sterile field after disruption takes:",
+    choices: ["Immediately", "5 minutes", "15-20 minutes", "1 hour"],
+    correctAnswer: 2
   },
   {
     id: 123,
-    question: "What is the most effective skin preparation?",
-    choices: ["Iodine", "Chlorhexidine", "Alcohol", "Combination"],
-    correctAnswer: 3
+    question: "Surgical attire in the OR includes:",
+    choices: ["Street clothes", "Scrubs, head cover, mask", "Lab coat only", "Gown only"],
+    correctAnswer: 1
   },
   {
     id: 124,
-    question: "Which antibiotic is most commonly used for prophylaxis?",
-    choices: ["Cefazolin", "Cefoxitin", "Vancomycin", "Depends on procedure"],
-    correctAnswer: 3
+    question: "Surgical masks should:",
+    choices: ["Cover nose only", "Cover mouth only", "Cover nose and mouth", "Be worn loosely"],
+    correctAnswer: 2
   },
   {
     id: 125,
-    question: "What is the optimal timing for antibiotic prophylaxis?",
-    choices: ["1 hour before incision", "30 minutes before incision", "At induction", "After incision"],
-    correctAnswer: 1
+    question: "Masks should be changed:",
+    choices: ["Never", "Between cases", "Every hour", "When wet or soiled"],
+    correctAnswer: 3
   },
   {
     id: 126,
-    question: "Which dressing is best for surgical wounds?",
-    choices: ["Dry gauze", "Occlusive", "Semi-occlusive", "Depends on wound"],
-    correctAnswer: 3
+    question: "Head covers should:",
+    choices: ["Cover some hair", "Cover all hair", "Be optional", "Match scrubs"],
+    correctAnswer: 1
   },
   {
     id: 127,
-    question: "What is the most important factor in wound healing?",
-    choices: ["Age", "Nutrition", "Blood supply", "All are important"],
-    correctAnswer: 3
+    question: "Shoe covers are:",
+    choices: ["Always required", "Never required", "Required in some facilities", "Only for visitors"],
+    correctAnswer: 2
   },
   {
     id: 128,
-    question: "Which suture causes least tissue reaction?",
-    choices: ["Silk", "Nylon", "Prolene", "PDS"],
-    correctAnswer: 2
+    question: "Jewelry in the OR should be:",
+    choices: ["Covered", "Removed", "Disinfected", "Ignored"],
+    correctAnswer: 1
   },
   {
     id: 129,
-    question: "What is the most common cause of wound dehiscence?",
-    choices: ["Infection", "Poor technique", "Patient factors", "All contribute"],
-    correctAnswer: 3
+    question: "Artificial nails are:",
+    choices: ["Acceptable if short", "Never acceptable", "Acceptable if covered", "Required"],
+    correctAnswer: 1
   },
   {
     id: 130,
-    question: "Which closure technique is strongest?",
-    choices: ["Simple interrupted", "Running", "Mattress", "Subcuticular"],
-    correctAnswer: 2
+    question: "Nail polish should be:",
+    choices: ["Fresh or removed", "Any color", "Always worn", "Never mentioned"],
+    correctAnswer: 0
   },
   {
     id: 131,
-    question: "What is the most important principle of electrosurgery?",
-    choices: ["Power setting", "Electrode type", "Patient grounding", "All are important"],
-    correctAnswer: 3
+    question: "The surgical conscience refers to:",
+    choices: ["Feeling guilty", "Personal responsibility for sterile technique", "Religious beliefs", "Legal requirements"],
+    correctAnswer: 1
   },
   {
     id: 132,
-    question: "Which mode is used for cutting?",
-    choices: ["Pure cut", "Blend", "Coagulation", "Depends on tissue"],
-    correctAnswer: 0
+    question: "When in doubt about sterility:",
+    choices: ["Use the item", "Consider it contaminated", "Ask someone else", "Test it"],
+    correctAnswer: 1
   },
   {
     id: 133,
-    question: "What is the most serious complication of electrosurgery?",
-    choices: ["Burns", "Fire", "Interference", "All are serious"],
-    correctAnswer: 3
+    question: "Reporting breaches in sterile technique is:",
+    choices: ["Optional", "Required", "Discouraged", "Punishable"],
+    correctAnswer: 1
   },
   {
     id: 134,
-    question: "Which safety measure is most important with electrosurgery?",
-    choices: ["Proper grounding", "Dry field", "Appropriate settings", "All are important"],
-    correctAnswer: 3
+    question: "The 'sterile cockpit' concept means:",
+    choices: ["Only pilots can enter", "No talking during critical times", "Minimizing distractions during critical procedures", "Using airplane equipment"],
+    correctAnswer: 2
   },
   {
     id: 135,
-    question: "What is the most common laser used in surgery?",
-    choices: ["CO2", "Nd:YAG", "Argon", "Diode"],
-    correctAnswer: 0
+    question: "Multidisciplinary teamwork in infection prevention:",
+    choices: ["Is unnecessary", "Improves outcomes", "Increases costs", "Slows procedures"],
+    correctAnswer: 1
   },
   {
     id: 136,
-    question: "Which safety measure is most important with lasers?",
-    choices: ["Eye protection", "Fire prevention", "Proper settings", "All are important"],
-    correctAnswer: 3
+    question: "Continuous education in sterile technique should be:",
+    choices: ["One-time training", "Annual training", "Ongoing and regular", "Optional"],
+    correctAnswer: 2
   },
   {
     id: 137,
-    question: "What is the most important factor in instrument sterilization?",
-    choices: ["Temperature", "Time", "Pressure", "All are important"],
-    correctAnswer: 3
+    question: "Competency assessment should include:",
+    choices: ["Written tests only", "Practical demonstration only", "Both written and practical", "Neither"],
+    correctAnswer: 2
   },
   {
     id: 138,
-    question: "Which sterilization method is most common?",
-    choices: ["Steam", "ETO", "Plasma", "Radiation"],
-    correctAnswer: 0
+    question: "New staff orientation should include:",
+    choices: ["Basic procedures only", "Comprehensive sterile technique training", "On-the-job learning only", "Minimal training"],
+    correctAnswer: 1
   },
   {
     id: 139,
-    question: "What is the most important factor in surgical positioning?",
-    choices: ["Comfort", "Access", "Safety", "All are important"],
-    correctAnswer: 3
+    question: "Quality improvement in sterile processing should be:",
+    choices: ["Reactive only", "Proactive and continuous", "Annual activity", "Optional"],
+    correctAnswer: 1
   },
   {
     id: 140,
-    question: "Which complication is most common from positioning?",
-    choices: ["Nerve injury", "Pressure sores", "Compartment syndrome", "All can occur"],
-    correctAnswer: 3
+    question: "The most effective way to prevent surgical site infections is:",
+    choices: ["Antibiotics only", "Comprehensive infection prevention bundle", "Faster surgery", "Expensive equipment"],
+    correctAnswer: 1
   },
   {
     id: 141,
-    question: "What is the most important aspect of surgical draping?",
-    choices: ["Sterility", "Access", "Comfort", "All are important"],
-    correctAnswer: 0
+    question: "What is the primary purpose of anesthesia?",
+    choices: ["To speed up surgery", "To provide unconsciousness, analgesia, and muscle relaxation", "To reduce bleeding", "To improve visibility"],
+    correctAnswer: 1
   },
   {
     id: 142,
-    question: "Which drape material is most common?",
-    choices: ["Cloth", "Paper", "Plastic", "Combination"],
-    correctAnswer: 1
+    question: "General anesthesia affects:",
+    choices: ["Only consciousness", "Only pain sensation", "Consciousness, sensation, and reflexes", "Only muscle tone"],
+    correctAnswer: 2
   },
   {
     id: 143,
-    question: "What is the most important principle of aseptic technique?",
-    choices: ["Sterile field", "Hand hygiene", "Gowning and gloving", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 144,
-    question: "Which breach of sterility is most serious?",
-    choices: ["Contaminated instrument", "Torn glove", "Contaminated gown", "All are serious"],
-    correctAnswer: 3
-  },
-  {
-    id: 145,
-    question: "What is the most important factor in surgical team communication?",
-    choices: ["Clarity", "Timeliness", "Completeness", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 146,
-    question: "Which communication tool is most effective?",
-    choices: ["SBAR", "Checklists", "Time-outs", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 147,
-    question: "What is the most important aspect of surgical safety?",
-    choices: ["Checklists", "Communication", "Training", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 148,
-    question: "Which safety measure is most effective?",
-    choices: ["Time-out", "Marking", "Counting", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 149,
-    question: "What is the most common cause of wrong-site surgery?",
-    choices: ["Communication failure", "Documentation error", "Process failure", "All contribute"],
-    correctAnswer: 3
-  },
-  {
-    id: 150,
-    question: "Which prevention strategy is most effective?",
-    choices: ["Marking", "Time-out", "Verification", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 151,
-    question: "What is the most important factor in surgical quality?",
-    choices: ["Technique", "Outcomes", "Safety", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 152,
-    question: "Which quality measure is most important?",
-    choices: ["Mortality", "Morbidity", "Patient satisfaction", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 153,
-    question: "What is the most effective quality improvement method?",
-    choices: ["Data collection", "Process improvement", "Education", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 154,
-    question: "Which factor most affects surgical outcomes?",
-    choices: ["Surgeon skill", "Team performance", "System factors", "All affect outcomes"],
-    correctAnswer: 3
-  },
-  {
-    id: 155,
-    question: "What is the most important aspect of surgical education?",
-    choices: ["Knowledge", "Skills", "Attitudes", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 156,
-    question: "Which teaching method is most effective?",
-    choices: ["Didactic", "Simulation", "Clinical", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 157,
-    question: "What is the most important factor in surgical innovation?",
-    choices: ["Technology", "Evidence", "Safety", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 158,
-    question: "Which innovation has most improved surgery?",
-    choices: ["Minimally invasive techniques", "Robotics", "Imaging", "All have improved surgery"],
-    correctAnswer: 3
-  },
-  {
-    id: 159,
-    question: "What is the most important consideration in surgical ethics?",
-    choices: ["Autonomy", "Beneficence", "Justice", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 160,
-    question: "Which ethical principle is most fundamental?",
-    choices: ["Do no harm", "Respect persons", "Justice", "All are fundamental"],
-    correctAnswer: 3
-  },
-  {
-    id: 161,
-    question: "What is the most common minimally invasive approach?",
-    choices: ["Laparoscopy", "Thoracoscopy", "Arthroscopy", "All are common"],
-    correctAnswer: 0
-  },
-  {
-    id: 162,
-    question: "Which benefit is most significant with minimally invasive surgery?",
-    choices: ["Less pain", "Faster recovery", "Better cosmesis", "All are significant"],
-    correctAnswer: 3
-  },
-  {
-    id: 163,
-    question: "What is the most important limitation of minimally invasive surgery?",
-    choices: ["Learning curve", "Equipment cost", "Limited applications", "All are limitations"],
-    correctAnswer: 3
-  },
-  {
-    id: 164,
-    question: "Which skill is most important for minimally invasive surgery?",
-    choices: ["Hand-eye coordination", "Spatial awareness", "Technical skill", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 165,
-    question: "What is the most significant advantage of robotic surgery?",
-    choices: ["Precision", "Dexterity", "Visualization", "All are advantages"],
-    correctAnswer: 3
-  },
-  {
-    id: 166,
-    question: "Which limitation is most significant with robotic surgery?",
-    choices: ["Cost", "Learning curve", "Limited applications", "All are limitations"],
-    correctAnswer: 3
-  },
-  {
-    id: 167,
-    question: "What is the most important factor in surgical outcomes research?",
-    choices: ["Study design", "Data quality", "Statistical analysis", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 168,
-    question: "Which outcome measure is most important?",
-    choices: ["Mortality", "Morbidity", "Quality of life", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 169,
-    question: "What is the most effective way to improve surgical care?",
-    choices: ["Evidence-based practice", "Quality improvement", "Education", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 170,
-    question: "Which factor most influences surgical decision-making?",
-    choices: ["Evidence", "Experience", "Patient preference", "All influence decisions"],
-    correctAnswer: 3
-  },
-  {
-    id: 171,
-    question: "What is the most important aspect of perioperative care?",
-    choices: ["Preoperative preparation", "Intraoperative management", "Postoperative care", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 172,
-    question: "Which perioperative factor most affects outcomes?",
-    choices: ["Patient selection", "Surgical technique", "Postoperative care", "All affect outcomes"],
-    correctAnswer: 3
-  },
-  {
-    id: 173,
-    question: "What is the most effective perioperative protocol?",
-    choices: ["Enhanced recovery", "Fast-track", "Multimodal", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 174,
-    question: "Which intervention most reduces complications?",
-    choices: ["Prophylaxis", "Monitoring", "Early intervention", "All reduce complications"],
-    correctAnswer: 3
-  },
-  {
-    id: 175,
-    question: "What is the most important factor in surgical team performance?",
-    choices: ["Communication", "Coordination", "Competence", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 176,
-    question: "Which team factor most affects outcomes?",
-    choices: ["Experience", "Training", "Teamwork", "All affect outcomes"],
-    correctAnswer: 3
-  },
-  {
-    id: 177,
-    question: "What is the most effective team intervention?",
-    choices: ["Training", "Simulation", "Debriefing", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 178,
-    question: "Which leadership style is most effective in surgery?",
-    choices: ["Authoritarian", "Democratic", "Situational", "Depends on situation"],
-    correctAnswer: 3
-  },
-  {
-    id: 179,
-    question: "What is the most important aspect of surgical systems?",
-    choices: ["Efficiency", "Safety", "Quality", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 180,
-    question: "Which system factor most affects care?",
-    choices: ["Resources", "Processes", "Culture", "All affect care"],
-    correctAnswer: 3
-  },
-  {
-    id: 181,
-    question: "What is the most effective system improvement?",
-    choices: ["Standardization", "Automation", "Integration", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 182,
-    question: "Which technology most improves surgical systems?",
-    choices: ["Electronic records", "Decision support", "Communication systems", "All improve systems"],
-    correctAnswer: 3
-  },
-  {
-    id: 183,
-    question: "What is the most important consideration in surgical economics?",
-    choices: ["Cost", "Value", "Outcomes", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 184,
-    question: "Which economic factor most affects surgery?",
-    choices: ["Reimbursement", "Competition", "Regulation", "All affect surgery"],
-    correctAnswer: 3
-  },
-  {
-    id: 185,
-    question: "What is the most effective cost reduction strategy?",
-    choices: ["Efficiency", "Prevention", "Value-based care", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 186,
-    question: "Which value measure is most important?",
-    choices: ["Quality", "Cost", "Outcomes", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 187,
-    question: "What is the most important aspect of surgical policy?",
-    choices: ["Access", "Quality", "Safety", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 188,
-    question: "Which policy intervention is most effective?",
-    choices: ["Regulation", "Incentives", "Standards", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 189,
-    question: "What is the most important global surgical issue?",
-    choices: ["Access", "Quality", "Safety", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 190,
-    question: "Which intervention most improves global surgery?",
-    choices: ["Training", "Infrastructure", "Technology", "All are needed"],
-    correctAnswer: 3
-  },
-  {
-    id: 191,
-    question: "What is the most important future direction in surgery?",
-    choices: ["Technology", "Personalization", "Prevention", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 192,
-    question: "Which technology will most impact surgery?",
-    choices: ["Artificial intelligence", "Nanotechnology", "Gene therapy", "All will impact surgery"],
-    correctAnswer: 3
-  },
-  {
-    id: 193,
-    question: "What is the most important challenge facing surgery?",
-    choices: ["Aging population", "Healthcare costs", "Technology adoption", "All are challenges"],
-    correctAnswer: 3
-  },
-  {
-    id: 194,
-    question: "Which solution is most promising?",
-    choices: ["Innovation", "Collaboration", "Integration", "All are promising"],
-    correctAnswer: 3
-  },
-  {
-    id: 195,
-    question: "What is the most important principle of surgical practice?",
-    choices: ["Excellence", "Safety", "Compassion", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 196,
-    question: "Which value is most fundamental to surgery?",
-    choices: ["Healing", "Service", "Integrity", "All are fundamental"],
-    correctAnswer: 3
-  },
-  {
-    id: 197,
-    question: "What is the most important goal of surgical care?",
-    choices: ["Cure", "Care", "Comfort", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 198,
-    question: "Which outcome is most meaningful?",
-    choices: ["Survival", "Function", "Quality of life", "All are meaningful"],
-    correctAnswer: 3
-  },
-  {
-    id: 199,
-    question: "What is the most important measure of surgical success?",
-    choices: ["Technical success", "Clinical success", "Patient satisfaction", "All measure success"],
-    correctAnswer: 3
-  },
-  {
-    id: 200,
-    question: "Which factor most defines surgical excellence?",
-    choices: ["Skill", "Outcomes", "Character", "All define excellence"],
-    correctAnswer: 3
-  },
-  {
-    id: 201,
-    question: "What is the most common indication for emergency laparotomy?",
-    choices: ["Bowel obstruction", "Perforation", "Bleeding", "All are common"],
-    correctAnswer: 3
-  },
-  {
-    id: 202,
-    question: "Which diagnostic tool is most useful in acute abdomen?",
-    choices: ["Physical exam", "CT scan", "Laboratory tests", "All are useful"],
-    correctAnswer: 3
-  },
-  {
-    id: 203,
-    question: "What is the most important principle in damage control surgery?",
-    choices: ["Speed", "Hemostasis", "Contamination control", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 204,
-    question: "Which resuscitation strategy is preferred in trauma?",
-    choices: ["Crystalloid", "Colloid", "Blood products", "Balanced approach"],
-    correctAnswer: 3
-  },
-  {
-    id: 205,
-    question: "What is the most common cause of postoperative ileus?",
-    choices: ["Anesthesia", "Opioids", "Manipulation", "All contribute"],
-    correctAnswer: 3
-  },
-  {
-    id: 206,
-    question: "Which intervention most reduces ileus?",
-    choices: ["Early feeding", "Mobilization", "Prokinetics", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 207,
-    question: "What is the most effective DVT prophylaxis?",
-    choices: ["Mechanical", "Pharmacologic", "Combined", "Depends on risk"],
-    correctAnswer: 3
-  },
-  {
-    id: 208,
-    question: "Which factor most increases VTE risk?",
-    choices: ["Surgery type", "Patient factors", "Duration", "All increase risk"],
-    correctAnswer: 3
-  },
-  {
-    id: 209,
-    question: "What is the most common postoperative pulmonary complication?",
-    choices: ["Pneumonia", "Atelectasis", "PE", "Respiratory failure"],
+    question: "Regional anesthesia blocks:",
+    choices: ["All sensation", "Nerve conduction in specific area", "Only pain", "Only touch"],
     correctAnswer: 1
   },
   {
+    id: 144,
+    question: "Local anesthesia is administered:",
+    choices: ["Systemically", "At the surgical site", "Intravenously", "Intramuscularly"],
+    correctAnswer: 1
+  },
+  {
+    id: 145,
+    question: "MAC stands for:",
+    choices: ["Maximum Allowable Concentration", "Monitored Anesthesia Care", "Minimum Alveolar Concentration", "Medical Anesthesia Control"],
+    correctAnswer: 1
+  },
+  {
+    id: 146,
+    question: "The most commonly used inhalation anesthetic is:",
+    choices: ["Halothane", "Sevoflurane", "Ether", "Nitrous oxide"],
+    correctAnswer: 1
+  },
+  {
+    id: 147,
+    question: "Propofol is classified as:",
+    choices: ["Inhalation anesthetic", "Intravenous anesthetic", "Local anesthetic", "Muscle relaxant"],
+    correctAnswer: 1
+  },
+  {
+    id: 148,
+    question: "Succinylcholine is a:",
+    choices: ["Sedative", "Analgesic", "Muscle relaxant", "Anesthetic"],
+    correctAnswer: 2
+  },
+  {
+    id: 149,
+    question: "The most serious complication of succinylcholine is:",
+    choices: ["Nausea", "Malignant hyperthermia", "Headache", "Dizziness"],
+    correctAnswer: 1
+  },
+  {
+    id: 150,
+    question: "Rocuronium is reversed by:",
+    choices: ["Neostigmine", "Sugammadex", "Flumazenil", "Naloxone"],
+    correctAnswer: 1
+  },
+  {
+    id: 151,
+    question: "Lidocaine is a:",
+    choices: ["General anesthetic", "Local anesthetic", "Muscle relaxant", "Sedative"],
+    correctAnswer: 1
+  },
+  {
+    id: 152,
+    question: "The maximum dose of lidocaine without epinephrine is:",
+    choices: ["3 mg/kg", "5 mg/kg", "7 mg/kg", "10 mg/kg"],
+    correctAnswer: 1
+  },
+  {
+    id: 153,
+    question: "Epinephrine is added to local anesthetics to:",
+    choices: ["Increase potency", "Prolong duration and reduce bleeding", "Reduce toxicity", "Improve onset"],
+    correctAnswer: 1
+  },
+  {
+    id: 154,
+    question: "Bupivacaine has a:",
+    choices: ["Short duration", "Medium duration", "Long duration", "Variable duration"],
+    correctAnswer: 2
+  },
+  {
+    id: 155,
+    question: "Spinal anesthesia is injected into the:",
+    choices: ["Epidural space", "Subarachnoid space", "Muscle", "Vein"],
+    correctAnswer: 1
+  },
+  {
+    id: 156,
+    question: "Epidural anesthesia is injected into the:",
+    choices: ["Subarachnoid space", "Epidural space", "Intrathecal space", "Subdural space"],
+    correctAnswer: 1
+  },
+  {
+    id: 157,
+    question: "A common complication of spinal anesthesia is:",
+    choices: ["Hypertension", "Hypotension", "Tachycardia", "Fever"],
+    correctAnswer: 1
+  },
+  {
+    id: 158,
+    question: "Post-dural puncture headache is treated with:",
+    choices: ["Bed rest only", "Blood patch", "Surgery", "Antibiotics"],
+    correctAnswer: 1
+  },
+  {
+    id: 159,
+    question: "Nerve blocks are used for:",
+    choices: ["General anesthesia", "Regional anesthesia", "Sedation", "Muscle relaxation"],
+    correctAnswer: 1
+  },
+  {
+    id: 160,
+    question: "Ultrasound guidance for nerve blocks:",
+    choices: ["Is never used", "Improves accuracy and safety", "Is only for experts", "Increases complications"],
+    correctAnswer: 1
+  },
+  {
+    id: 161,
+    question: "Midazolam is a:",
+    choices: ["Analgesic", "Sedative", "Muscle relaxant", "Local anesthetic"],
+    correctAnswer: 1
+  },
+  {
+    id: 162,
+    question: "Fentanyl is:",
+    choices: ["100 times more potent than morphine", "Less potent than morphine", "Equal to morphine", "10 times more potent than morphine"],
+    correctAnswer: 0
+  },
+  {
+    id: 163,
+    question: "Naloxone reverses:",
+    choices: ["Benzodiazepines", "Opioids", "Muscle relaxants", "Local anesthetics"],
+    correctAnswer: 1
+  },
+  {
+    id: 164,
+    question: "Flumazenil reverses:",
+    choices: ["Opioids", "Benzodiazepines", "Muscle relaxants", "Local anesthetics"],
+    correctAnswer: 1
+  },
+  {
+    id: 165,
+    question: "The ASA physical status classification ranges from:",
+    choices: ["I-IV", "I-V", "I-VI", "I-III"],
+    correctAnswer: 2
+  },
+  {
+    id: 166,
+    question: "ASA I indicates:",
+    choices: ["Severe systemic disease", "Normal healthy patient", "Mild systemic disease", "Life-threatening disease"],
+    correctAnswer: 1
+  },
+  {
+    id: 167,
+    question: "Preoperative fasting guidelines for clear liquids:",
+    choices: ["2 hours", "4 hours", "6 hours", "8 hours"],
+    correctAnswer: 0
+  },
+  {
+    id: 168,
+    question: "Preoperative fasting for solid food:",
+    choices: ["2 hours", "4 hours", "6 hours", "8 hours"],
+    correctAnswer: 2
+  },
+  {
+    id: 169,
+    question: "Aspiration pneumonia is caused by:",
+    choices: ["Infection", "Gastric contents entering lungs", "Allergic reaction", "Drug overdose"],
+    correctAnswer: 1
+  },
+  {
+    id: 170,
+    question: "Cricoid pressure (Sellick maneuver) is used to:",
+    choices: ["Improve ventilation", "Prevent aspiration", "Facilitate intubation", "Reduce bleeding"],
+    correctAnswer: 1
+  },
+  {
+    id: 171,
+    question: "Rapid sequence induction is used for:",
+    choices: ["All patients", "Patients at risk for aspiration", "Pediatric patients only", "Outpatient surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 172,
+    question: "The laryngeal mask airway (LMA):",
+    choices: ["Replaces endotracheal intubation", "Is inserted into the trachea", "Sits above the larynx", "Is used for long surgeries only"],
+    correctAnswer: 2
+  },
+  {
+    id: 173,
+    question: "Endotracheal intubation provides:",
+    choices: ["Partial airway protection", "Complete airway protection", "No airway protection", "Temporary protection only"],
+    correctAnswer: 1
+  },
+  {
+    id: 174,
+    question: "Difficult airway management may require:",
+    choices: ["Standard intubation only", "Fiberoptic intubation", "No special equipment", "Delayed surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 175,
+    question: "Capnography measures:",
+    choices: ["Oxygen levels", "Carbon dioxide levels", "Blood pressure", "Heart rate"],
+    correctAnswer: 1
+  },
+  {
+    id: 176,
+    question: "Pulse oximetry measures:",
+    choices: ["Blood pressure", "Oxygen saturation", "Carbon dioxide", "Temperature"],
+    correctAnswer: 1
+  },
+  {
+    id: 177,
+    question: "Normal oxygen saturation is:",
+    choices: ["85-90%", "90-95%", "95-100%", "100%"],
+    correctAnswer: 2
+  },
+  {
+    id: 178,
+    question: "Hypoxemia is defined as:",
+    choices: ["Low oxygen in blood", "Low oxygen in tissues", "High carbon dioxide", "Low blood pressure"],
+    correctAnswer: 0
+  },
+  {
+    id: 179,
+    question: "Hypercapnia is:",
+    choices: ["Low carbon dioxide", "High carbon dioxide", "Low oxygen", "High oxygen"],
+    correctAnswer: 1
+  },
+  {
+    id: 180,
+    question: "Malignant hyperthermia is triggered by:",
+    choices: ["All anesthetics", "Volatile anesthetics and succinylcholine", "Local anesthetics", "Opioids"],
+    correctAnswer: 1
+  },
+  {
+    id: 181,
+    question: "The treatment for malignant hyperthermia is:",
+    choices: ["Cooling only", "Dantrolene", "Antibiotics", "Steroids"],
+    correctAnswer: 1
+  },
+  {
+    id: 182,
+    question: "Signs of malignant hyperthermia include:",
+    choices: ["Hypothermia", "Hyperthermia and muscle rigidity", "Low heart rate", "Low blood pressure"],
+    correctAnswer: 1
+  },
+  {
+    id: 183,
+    question: "Anaphylaxis during anesthesia is most commonly caused by:",
+    choices: ["Antibiotics", "Neuromuscular blocking agents", "Local anesthetics", "Opioids"],
+    correctAnswer: 1
+  },
+  {
+    id: 184,
+    question: "Treatment of anaphylaxis includes:",
+    choices: ["Antihistamines only", "Epinephrine", "Steroids only", "Fluids only"],
+    correctAnswer: 1
+  },
+  {
+    id: 185,
+    question: "Postoperative nausea and vomiting is most common after:",
+    choices: ["Local anesthesia", "General anesthesia", "Regional anesthesia", "Sedation"],
+    correctAnswer: 1
+  },
+  {
+    id: 186,
+    question: "Ondansetron is used to treat:",
+    choices: ["Pain", "Nausea and vomiting", "Anxiety", "Muscle spasms"],
+    correctAnswer: 1
+  },
+  {
+    id: 187,
+    question: "Postoperative shivering may be caused by:",
+    choices: ["Pain only", "Hypothermia and pain", "Infection", "Dehydration"],
+    correctAnswer: 1
+  },
+  {
+    id: 188,
+    question: "Emergence delirium is most common in:",
+    choices: ["Adults", "Elderly patients", "Children", "Teenagers"],
+    correctAnswer: 2
+  },
+  {
+    id: 189,
+    question: "Residual neuromuscular blockade can cause:",
+    choices: ["Hypertension", "Respiratory complications", "Cardiac arrest", "Seizures"],
+    correctAnswer: 1
+  },
+  {
+    id: 190,
+    question: "The train-of-four test evaluates:",
+    choices: ["Consciousness", "Neuromuscular function", "Cardiac function", "Respiratory function"],
+    correctAnswer: 1
+  },
+  {
+    id: 191,
+    question: "Patient-controlled analgesia (PCA) allows:",
+    choices: ["Nurse-controlled dosing", "Patient self-administration of pain medication", "Continuous infusion only", "No pain control"],
+    correctAnswer: 1
+  },
+  {
+    id: 192,
+    question: "Multimodal analgesia uses:",
+    choices: ["Single drug", "Multiple drugs with different mechanisms", "Only opioids", "Only non-opioids"],
+    correctAnswer: 1
+  },
+  {
+    id: 193,
+    question: "Enhanced recovery after surgery (ERAS) protocols:",
+    choices: ["Increase complications", "Reduce length of stay", "Are not evidence-based", "Only apply to major surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 194,
+    question: "Preemptive analgesia is given:",
+    choices: ["After surgery", "Before surgical stimulus", "Only for severe pain", "Never"],
+    correctAnswer: 1
+  },
+  {
+    id: 195,
+    question: "Regional anesthesia for postoperative pain:",
+    choices: ["Is ineffective", "Reduces opioid requirements", "Increases complications", "Is not recommended"],
+    correctAnswer: 1
+  },
+  {
+    id: 196,
+    question: "Chronic postsurgical pain occurs in:",
+    choices: ["No patients", "5-10% of patients", "10-50% of patients", "All patients"],
+    correctAnswer: 2
+  },
+  {
+    id: 197,
+    question: "Risk factors for chronic postsurgical pain include:",
+    choices: ["Young age", "Severe acute postoperative pain", "Short surgery", "Local anesthesia"],
+    correctAnswer: 1
+  },
+  {
+    id: 198,
+    question: "Gabapentin is used for:",
+    choices: ["Sedation", "Neuropathic pain", "Muscle relaxation", "Nausea"],
+    correctAnswer: 1
+  },
+  {
+    id: 199,
+    question: "The WHO pain ladder recommends:",
+    choices: ["Starting with strong opioids", "Stepwise approach to pain management", "Only non-opioid medications", "Surgery for all pain"],
+    correctAnswer: 1
+  },
+  {
+    id: 200,
+    question: "Breakthrough pain is:",
+    choices: ["Constant pain", "Pain that occurs despite baseline medication", "Mild pain", "Psychological pain"],
+    correctAnswer: 1
+  },
+  {
+    id: 201,
+    question: "What is the most common cause of surgical site infections?",
+    choices: ["Airborne bacteria", "Patient's own flora", "Contaminated instruments", "Poor hand hygiene"],
+    correctAnswer: 1
+  },
+  {
+    id: 202,
+    question: "Surgical site infections are classified into how many categories?",
+    choices: ["2", "3", "4", "5"],
+    correctAnswer: 1
+  },
+  {
+    id: 203,
+    question: "A superficial incisional SSI involves:",
+    choices: ["Deep tissues", "Organ/space", "Skin and subcutaneous tissue", "Muscle and fascia"],
+    correctAnswer: 2
+  },
+  {
+    id: 204,
+    question: "Deep incisional SSI involves:",
+    choices: ["Skin only", "Fascia and muscle", "Organ/space", "Subcutaneous tissue only"],
+    correctAnswer: 1
+  },
+  {
+    id: 205,
+    question: "The most important factor in preventing SSI is:",
+    choices: ["Antibiotics", "Proper surgical technique", "Room temperature", "Lighting"],
+    correctAnswer: 1
+  },
+  {
+    id: 206,
+    question: "Prophylactic antibiotics should be given:",
+    choices: ["After surgery", "During surgery", "Within 1 hour before incision", "The day before surgery"],
+    correctAnswer: 2
+  },
+  {
+    id: 207,
+    question: "The duration of prophylactic antibiotics should be:",
+    choices: ["7 days", "3 days", "24 hours or less", "Until discharge"],
+    correctAnswer: 2
+  },
+  {
+    id: 208,
+    question: "Wound classification helps determine:",
+    choices: ["Surgical approach", "Infection risk", "Healing time", "Suture type"],
+    correctAnswer: 1
+  },
+  {
+    id: 209,
+    question: "A clean wound has an infection rate of:",
+    choices: ["<2%", "2-5%", "5-10%", ">10%"],
+    correctAnswer: 0
+  },
+  {
     id: 210,
-    question: "Which intervention most reduces pulmonary complications?",
-    choices: ["Incentive spirometry", "Early mobilization", "Pain control", "All are effective"],
+    question: "A dirty/infected wound has an infection rate of:",
+    choices: ["<2%", "2-5%", "5-10%", ">10%"],
     correctAnswer: 3
   },
   {
     id: 211,
-    question: "What is the most important factor in surgical site preparation?",
-    choices: ["Antiseptic choice", "Application technique", "Contact time", "All are important"],
-    correctAnswer: 3
+    question: "Clean-contaminated wounds include:",
+    choices: ["Elective colon surgery", "Trauma surgery", "Appendectomy for perforated appendix", "Hernia repair"],
+    correctAnswer: 0
   },
   {
     id: 212,
-    question: "Which antiseptic is most effective?",
-    choices: ["Iodine", "Chlorhexidine", "Alcohol", "Combination products"],
-    correctAnswer: 3
+    question: "Contaminated wounds include:",
+    choices: ["Elective surgery", "Fresh traumatic wounds", "Chronic open wounds", "Sterile procedures"],
+    correctAnswer: 1
   },
   {
     id: 213,
-    question: "What is the most effective hair removal method?",
-    choices: ["Shaving", "Clipping", "Depilatory", "No removal"],
+    question: "The NNIS risk index includes:",
+    choices: ["Patient age only", "ASA score, wound class, and procedure duration", "Surgeon experience", "Hospital type"],
     correctAnswer: 1
   },
   {
     id: 214,
-    question: "Which timing is optimal for hair removal?",
-    choices: ["Night before", "Morning of surgery", "Just before surgery", "Depends on method"],
-    correctAnswer: 2
-  },
-  {
-    id: 215,
-    question: "What is the most important aspect of surgical hand hygiene?",
-    choices: ["Duration", "Technique", "Agent", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 216,
-    question: "Which hand hygiene method is preferred?",
-    choices: ["Traditional scrub", "Waterless scrub", "Either", "Depends on preference"],
-    correctAnswer: 2
-  },
-  {
-    id: 217,
-    question: "What is the most critical aspect of gowning and gloving?",
-    choices: ["Sterile technique", "Proper fit", "Material quality", "All are critical"],
-    correctAnswer: 3
-  },
-  {
-    id: 218,
-    question: "Which gloving technique is safest?",
-    choices: ["Open", "Closed", "Assisted", "Depends on situation"],
+    question: "Surveillance for SSI should continue for:",
+    choices: ["7 days", "30 days", "60 days", "90 days"],
     correctAnswer: 1
   },
   {
+    id: 215,
+    question: "For implant procedures, surveillance should continue for:",
+    choices: ["30 days", "90 days", "1 year", "2 years"],
+    correctAnswer: 2
+  },
+  {
+    id: 216,
+    question: "The most common organism causing SSI is:",
+    choices: ["E. coli", "Staphylococcus aureus", "Pseudomonas", "Enterococcus"],
+    correctAnswer: 1
+  },
+  {
+    id: 217,
+    question: "MRSA stands for:",
+    choices: ["Multiple Resistant Staph Aureus", "Methicillin-Resistant Staphylococcus Aureus", "Medical Resistant Staph Aureus", "Major Resistant Staph Aureus"],
+    correctAnswer: 1
+  },
+  {
+    id: 218,
+    question: "VRE stands for:",
+    choices: ["Vancomycin-Resistant Enterococcus", "Virus-Resistant Enterococcus", "Variable-Resistant Enterococcus", "Vaccine-Resistant Enterococcus"],
+    correctAnswer: 0
+  },
+  {
     id: 219,
-    question: "What is the most important principle of instrument handling?",
-    choices: ["Sterility", "Safety", "Efficiency", "All are important"],
+    question: "C. difficile infections are associated with:",
+    choices: ["Surgery", "Antibiotic use", "Age", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 220,
-    question: "Which instrument passing technique is safest?",
-    choices: ["Hand-to-hand", "Neutral zone", "Verbal announcement", "All are safe"],
-    correctAnswer: 1
+    question: "Hand hygiene compliance should be:",
+    choices: ["50%", "75%", "90%", "100%"],
+    correctAnswer: 3
   },
   {
     id: 221,
-    question: "What is the most important aspect of specimen handling?",
-    choices: ["Identification", "Preservation", "Transport", "All are important"],
+    question: "The five moments of hand hygiene include:",
+    choices: ["Before patient contact", "After patient contact", "After body fluid exposure", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 222,
-    question: "Which specimen container is most appropriate?",
-    choices: ["Formalin", "Saline", "Dry", "Depends on specimen"],
-    correctAnswer: 3
-  },
-  {
-    id: 223,
-    question: "What is the most critical aspect of frozen section?",
-    choices: ["Speed", "Accuracy", "Communication", "All are critical"],
-    correctAnswer: 3
-  },
-  {
-    id: 224,
-    question: "Which factor most affects frozen section quality?",
-    choices: ["Specimen handling", "Processing technique", "Interpretation", "All affect quality"],
-    correctAnswer: 3
-  },
-  {
-    id: 225,
-    question: "What is the most important consideration in surgical pathology?",
-    choices: ["Diagnosis", "Staging", "Margins", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 226,
-    question: "Which pathology report element is most critical?",
-    choices: ["Diagnosis", "Grade", "Stage", "All are critical"],
-    correctAnswer: 3
-  },
-  {
-    id: 227,
-    question: "What is the most important aspect of surgical imaging?",
-    choices: ["Quality", "Timing", "Interpretation", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 228,
-    question: "Which imaging modality is most versatile?",
-    choices: ["X-ray", "CT", "MRI", "Ultrasound"],
+    question: "Contact precautions are used for:",
+    choices: ["All patients", "Patients with multidrug-resistant organisms", "Surgical patients only", "ICU patients only"],
     correctAnswer: 1
   },
   {
+    id: 223,
+    question: "Droplet precautions are used for:",
+    choices: ["Tuberculosis", "Influenza", "C. difficile", "MRSA"],
+    correctAnswer: 1
+  },
+  {
+    id: 224,
+    question: "Airborne precautions require:",
+    choices: ["Surgical mask", "N95 respirator", "Face shield", "Gown only"],
+    correctAnswer: 1
+  },
+  {
+    id: 225,
+    question: "Tuberculosis requires:",
+    choices: ["Contact precautions", "Droplet precautions", "Airborne precautions", "Standard precautions only"],
+    correctAnswer: 2
+  },
+  {
+    id: 226,
+    question: "Healthcare-associated infections (HAI) affect:",
+    choices: ["1 in 10 patients", "1 in 25 patients", "1 in 50 patients", "1 in 100 patients"],
+    correctAnswer: 1
+  },
+  {
+    id: 227,
+    question: "The most common HAI is:",
+    choices: ["Surgical site infection", "Urinary tract infection", "Pneumonia", "Bloodstream infection"],
+    correctAnswer: 1
+  },
+  {
+    id: 228,
+    question: "Central line-associated bloodstream infections (CLABSI) can be prevented by:",
+    choices: ["Using maximum sterile barriers", "Hand hygiene", "Chlorhexidine skin prep", "All of the above"],
+    correctAnswer: 3
+  },
+  {
     id: 229,
-    question: "What is the most important consideration in intraoperative imaging?",
-    choices: ["Quality", "Speed", "Safety", "All are important"],
+    question: "Catheter-associated urinary tract infections (CAUTI) are prevented by:",
+    choices: ["Avoiding unnecessary catheters", "Early removal", "Sterile insertion", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 230,
-    question: "Which intraoperative imaging is most common?",
-    choices: ["Fluoroscopy", "Ultrasound", "CT", "MRI"],
-    correctAnswer: 0
+    question: "Ventilator-associated pneumonia (VAP) can be prevented by:",
+    choices: ["Head of bed elevation", "Oral care", "Sedation breaks", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 231,
-    question: "What is the most important aspect of surgical navigation?",
-    choices: ["Accuracy", "Reliability", "Ease of use", "All are important"],
+    question: "The infection prevention and control program should include:",
+    choices: ["Surveillance", "Education", "Policy development", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 232,
-    question: "Which navigation system is most accurate?",
-    choices: ["Optical", "Electromagnetic", "Mechanical", "All are accurate"],
+    question: "Outbreak investigation includes:",
+    choices: ["Case identification", "Source identification", "Control measures", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 233,
-    question: "What is the most important limitation of surgical navigation?",
-    choices: ["Cost", "Complexity", "Accuracy", "All are limitations"],
+    question: "Employee health programs should include:",
+    choices: ["Immunizations", "Exposure management", "Fit testing", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 234,
-    question: "Which specialty benefits most from navigation?",
-    choices: ["Neurosurgery", "Orthopedics", "ENT", "All benefit"],
-    correctAnswer: 3
+    question: "Occupational exposure to bloodborne pathogens requires:",
+    choices: ["Documentation only", "Immediate evaluation and follow-up", "Waiting 24 hours", "No action needed"],
+    correctAnswer: 1
   },
   {
     id: 235,
-    question: "What is the most important aspect of surgical robotics?",
-    choices: ["Precision", "Dexterity", "Visualization", "All are important"],
-    correctAnswer: 3
+    question: "Post-exposure prophylaxis for HIV should begin:",
+    choices: ["Within 72 hours", "Within 24 hours", "Within 2 hours", "Anytime"],
+    correctAnswer: 2
   },
   {
     id: 236,
-    question: "Which robotic system is most widely used?",
-    choices: ["da Vinci", "Zeus", "AESOP", "Others"],
-    correctAnswer: 0
+    question: "Hepatitis B vaccination is:",
+    choices: ["Optional", "Required for healthcare workers", "Not effective", "Only for high-risk workers"],
+    correctAnswer: 1
   },
   {
     id: 237,
-    question: "What is the most significant limitation of surgical robotics?",
-    choices: ["Cost", "Learning curve", "Limited applications", "All are limitations"],
-    correctAnswer: 3
+    question: "Influenza vaccination for healthcare workers is:",
+    choices: ["Optional", "Strongly recommended", "Not necessary", "Contraindicated"],
+    correctAnswer: 1
   },
   {
     id: 238,
-    question: "Which specialty has adopted robotics most widely?",
-    choices: ["Urology", "Gynecology", "General surgery", "All have adopted"],
-    correctAnswer: 0
+    question: "Fit testing is required for:",
+    choices: ["Surgical masks", "N95 respirators", "Face shields", "Gowns"],
+    correctAnswer: 1
   },
   {
     id: 239,
-    question: "What is the most important future development in surgery?",
-    choices: ["AI", "Nanotechnology", "Regenerative medicine", "All are important"],
-    correctAnswer: 3
+    question: "Construction in healthcare facilities requires:",
+    choices: ["No special precautions", "Infection control risk assessment", "Stopping all activities", "Moving all patients"],
+    correctAnswer: 1
   },
   {
     id: 240,
-    question: "Which AI application is most promising in surgery?",
-    choices: ["Diagnosis", "Planning", "Guidance", "All are promising"],
-    correctAnswer: 3
+    question: "Water quality in healthcare facilities should be monitored for:",
+    choices: ["Temperature only", "Legionella", "Color", "Taste"],
+    correctAnswer: 1
   },
   {
     id: 241,
-    question: "What is the most important ethical consideration in surgical AI?",
-    choices: ["Safety", "Accountability", "Privacy", "All are important"],
-    correctAnswer: 3
+    question: "What is the primary goal of hemostasis?",
+    choices: ["Speed up surgery", "Control bleeding", "Improve visibility", "Reduce infection"],
+    correctAnswer: 1
   },
   {
     id: 242,
-    question: "Which barrier is most significant for AI adoption?",
-    choices: ["Technical", "Regulatory", "Cultural", "All are significant"],
-    correctAnswer: 3
+    question: "The three phases of hemostasis are:",
+    choices: ["Vascular, platelet, coagulation", "Primary, secondary, tertiary", "Immediate, delayed, permanent", "Local, regional, systemic"],
+    correctAnswer: 0
   },
   {
     id: 243,
-    question: "What is the most important aspect of surgical simulation?",
-    choices: ["Realism", "Feedback", "Assessment", "All are important"],
-    correctAnswer: 3
+    question: "Primary hemostasis involves:",
+    choices: ["Coagulation cascade", "Platelet aggregation", "Fibrin formation", "Clot dissolution"],
+    correctAnswer: 1
   },
   {
     id: 244,
-    question: "Which simulation modality is most effective?",
-    choices: ["Virtual reality", "Physical models", "Cadaveric", "All are effective"],
-    correctAnswer: 3
+    question: "Secondary hemostasis involves:",
+    choices: ["Vasoconstriction", "Platelet plug", "Coagulation cascade", "Wound healing"],
+    correctAnswer: 2
   },
   {
     id: 245,
-    question: "What is the most important benefit of surgical simulation?",
-    choices: ["Skill development", "Safety", "Standardization", "All are benefits"],
-    correctAnswer: 3
+    question: "The coagulation cascade has how many pathways?",
+    choices: ["1", "2", "3", "4"],
+    correctAnswer: 1
   },
   {
     id: 246,
-    question: "Which assessment method is most reliable in simulation?",
-    choices: ["Objective metrics", "Expert evaluation", "Self-assessment", "All are reliable"],
-    correctAnswer: 3
+    question: "The intrinsic pathway is activated by:",
+    choices: ["Tissue factor", "Contact with collagen", "Thrombin", "Platelets"],
+    correctAnswer: 1
   },
   {
     id: 247,
-    question: "What is the most important aspect of surgical training?",
-    choices: ["Knowledge", "Skills", "Judgment", "All are important"],
-    correctAnswer: 3
+    question: "The extrinsic pathway is activated by:",
+    choices: ["Collagen", "Tissue factor", "Factor XII", "Platelets"],
+    correctAnswer: 1
   },
   {
     id: 248,
-    question: "Which training method is most effective?",
-    choices: ["Apprenticeship", "Simulation", "Didactic", "All are effective"],
-    correctAnswer: 3
+    question: "The final common pathway produces:",
+    choices: ["Platelets", "Fibrinogen", "Thrombin", "Prothrombin"],
+    correctAnswer: 2
   },
   {
     id: 249,
-    question: "What is the most important competency for surgeons?",
-    choices: ["Technical skill", "Clinical judgment", "Communication", "All are important"],
-    correctAnswer: 3
+    question: "Fibrinogen is converted to fibrin by:",
+    choices: ["Thrombin", "Factor X", "Platelets", "Calcium"],
+    correctAnswer: 0
   },
   {
     id: 250,
-    question: "Which assessment method is most comprehensive?",
-    choices: ["Written exams", "Practical exams", "Portfolio", "All are comprehensive"],
-    correctAnswer: 3
+    question: "Mechanical hemostasis includes:",
+    choices: ["Medications", "Direct pressure", "Electrical energy", "Chemical agents"],
+    correctAnswer: 1
   },
   {
     id: 251,
-    question: "What is the most important aspect of surgical research?",
-    choices: ["Methodology", "Ethics", "Translation", "All are important"],
-    correctAnswer: 3
+    question: "Electrocautery works by:",
+    choices: ["Chemical reaction", "Heat generation", "Pressure", "Cold temperature"],
+    correctAnswer: 1
   },
   {
     id: 252,
-    question: "Which research design is most appropriate for surgical studies?",
-    choices: ["RCT", "Cohort", "Case-control", "Depends on question"],
-    correctAnswer: 3
+    question: "Monopolar electrocautery requires:",
+    choices: ["Two electrodes", "Ground pad", "Special instruments", "Irrigation"],
+    correctAnswer: 1
   },
   {
     id: 253,
-    question: "What is the most important challenge in surgical research?",
-    choices: ["Methodology", "Ethics", "Funding", "All are challenges"],
-    correctAnswer: 3
+    question: "Bipolar electrocautery:",
+    choices: ["Requires ground pad", "Uses two electrodes in forceps", "Is less precise", "Cannot be used near pacemakers"],
+    correctAnswer: 1
   },
   {
     id: 254,
-    question: "Which outcome measure is most important in surgical research?",
-    choices: ["Mortality", "Morbidity", "Quality of life", "All are important"],
-    correctAnswer: 3
+    question: "The argon beam coagulator uses:",
+    choices: ["Laser energy", "Argon gas and electricity", "Ultrasound", "Radiofrequency"],
+    correctAnswer: 1
   },
   {
     id: 255,
-    question: "What is the most important aspect of evidence-based surgery?",
-    choices: ["Best evidence", "Clinical expertise", "Patient values", "All are important"],
-    correctAnswer: 3
+    question: "Harmonic scalpel uses:",
+    choices: ["Heat", "Ultrasonic energy", "Laser", "Radiofrequency"],
+    correctAnswer: 1
   },
   {
     id: 256,
-    question: "Which evidence source is most reliable?",
-    choices: ["Systematic reviews", "RCTs", "Cohort studies", "Depends on question"],
-    correctAnswer: 3
+    question: "LigaSure uses:",
+    choices: ["Ultrasound", "Bipolar energy and pressure", "Laser", "Heat only"],
+    correctAnswer: 1
   },
   {
     id: 257,
-    question: "What is the most important barrier to evidence implementation?",
-    choices: ["Quality", "Applicability", "Acceptance", "All are barriers"],
+    question: "Topical hemostatic agents include:",
+    choices: ["Gelfoam", "Surgicel", "Thrombin", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 258,
-    question: "Which strategy is most effective for evidence implementation?",
-    choices: ["Guidelines", "Education", "Incentives", "All are effective"],
-    correctAnswer: 3
+    question: "Gelfoam is made of:",
+    choices: ["Collagen", "Absorbable gelatin", "Cellulose", "Synthetic material"],
+    correctAnswer: 1
   },
   {
     id: 259,
-    question: "What is the most important aspect of surgical quality improvement?",
-    choices: ["Measurement", "Analysis", "Intervention", "All are important"],
-    correctAnswer: 3
+    question: "Surgicel is made of:",
+    choices: ["Gelatin", "Oxidized cellulose", "Collagen", "Thrombin"],
+    correctAnswer: 1
   },
   {
     id: 260,
-    question: "Which quality improvement method is most effective?",
-    choices: ["PDSA", "Lean", "Six Sigma", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 261,
-    question: "What is the most important quality indicator?",
-    choices: ["Process", "Outcome", "Structure", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 262,
-    question: "Which improvement strategy is most sustainable?",
-    choices: ["Top-down", "Bottom-up", "Collaborative", "All can be sustainable"],
-    correctAnswer: 3
-  },
-  {
-    id: 263,
-    question: "What is the most important aspect of surgical safety culture?",
-    choices: ["Leadership", "Communication", "Learning", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 264,
-    question: "Which safety intervention is most effective?",
-    choices: ["Checklists", "Training", "Systems", "All are effective"],
-    correctAnswer: 3
-  },
-  {
-    id: 265,
-    question: "What is the most important safety outcome?",
-    choices: ["Mortality", "Morbidity", "Near misses", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 266,
-    question: "Which safety measure is most predictive?",
-    choices: ["Leading indicators", "Lagging indicators", "Both", "Neither"],
+    question: "Avitene is made of:",
+    choices: ["Gelatin", "Cellulose", "Microfibrillar collagen", "Thrombin"],
     correctAnswer: 2
   },
   {
+    id: 261,
+    question: "Thrombin is derived from:",
+    choices: ["Plants", "Synthetic sources", "Bovine or human sources", "Minerals"],
+    correctAnswer: 2
+  },
+  {
+    id: 262,
+    question: "Bone wax is used to:",
+    choices: ["Seal soft tissue", "Control bone bleeding", "Strengthen bones", "Prevent infection"],
+    correctAnswer: 1
+  },
+  {
+    id: 263,
+    question: "Fibrin sealants contain:",
+    choices: ["Thrombin only", "Fibrinogen only", "Thrombin and fibrinogen", "Platelets only"],
+    correctAnswer: 2
+  },
+  {
+    id: 264,
+    question: "Tranexamic acid is a:",
+    choices: ["Procoagulant", "Anticoagulant", "Antifibrinolytic", "Platelet activator"],
+    correctAnswer: 2
+  },
+  {
+    id: 265,
+    question: "Aminocaproic acid works by:",
+    choices: ["Activating platelets", "Inhibiting fibrinolysis", "Promoting coagulation", "Vasoconstriction"],
+    correctAnswer: 1
+  },
+  {
+    id: 266,
+    question: "Desmopressin (DDAVP) is used for:",
+    choices: ["All bleeding disorders", "von Willebrand disease", "Hemophilia B", "Platelet disorders"],
+    correctAnswer: 1
+  },
+  {
     id: 267,
-    question: "What is the most important aspect of surgical leadership?",
-    choices: ["Vision", "Communication", "Execution", "All are important"],
-    correctAnswer: 3
+    question: "Factor VIII concentrate is used for:",
+    choices: ["Hemophilia A", "Hemophilia B", "von Willebrand disease", "All bleeding disorders"],
+    correctAnswer: 0
   },
   {
     id: 268,
-    question: "Which leadership style is most effective?",
-    choices: ["Transformational", "Transactional", "Situational", "Depends on context"],
-    correctAnswer: 3
+    question: "Factor IX concentrate is used for:",
+    choices: ["Hemophilia A", "Hemophilia B", "von Willebrand disease", "Platelet disorders"],
+    correctAnswer: 1
   },
   {
     id: 269,
-    question: "What is the most important leadership competency?",
-    choices: ["Technical skill", "Emotional intelligence", "Strategic thinking", "All are important"],
-    correctAnswer: 3
+    question: "Fresh frozen plasma contains:",
+    choices: ["Only platelets", "Only red blood cells", "All coagulation factors", "Only fibrinogen"],
+    correctAnswer: 2
   },
   {
     id: 270,
-    question: "Which leadership development method is most effective?",
-    choices: ["Formal training", "Mentoring", "Experience", "All are effective"],
-    correctAnswer: 3
+    question: "Cryoprecipitate contains high concentrations of:",
+    choices: ["All factors", "Factor VIII and fibrinogen", "Platelets", "Factor IX"],
+    correctAnswer: 1
   },
   {
     id: 271,
-    question: "What is the most important aspect of surgical teamwork?",
-    choices: ["Communication", "Coordination", "Cooperation", "All are important"],
-    correctAnswer: 3
+    question: "Platelet transfusions are indicated when:",
+    choices: ["Count <150,000", "Count <100,000", "Count <50,000 with bleeding", "Always before surgery"],
+    correctAnswer: 2
   },
   {
     id: 272,
-    question: "Which team intervention is most effective?",
-    choices: ["Training", "Simulation", "Debriefing", "All are effective"],
-    correctAnswer: 3
+    question: "Massive transfusion is defined as:",
+    choices: ["5 units in 24 hours", "10 units in 24 hours", "Patient's blood volume in 24 hours", "Any transfusion"],
+    correctAnswer: 2
   },
   {
     id: 273,
-    question: "What is the most important team outcome?",
-    choices: ["Performance", "Safety", "Satisfaction", "All are important"],
-    correctAnswer: 3
+    question: "The massive transfusion protocol uses a ratio of:",
+    choices: ["1:1:1", "2:1:1", "1:2:1", "Variable ratios"],
+    correctAnswer: 0
   },
   {
     id: 274,
-    question: "Which team factor is most predictive of success?",
-    choices: ["Composition", "Process", "Context", "All are predictive"],
+    question: "Complications of massive transfusion include:",
+    choices: ["Hypothermia", "Coagulopathy", "Electrolyte imbalance", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 275,
-    question: "What is the most important aspect of surgical communication?",
-    choices: ["Clarity", "Timeliness", "Completeness", "All are important"],
-    correctAnswer: 3
+    question: "Hypothermia affects coagulation by:",
+    choices: ["Improving function", "Impairing enzyme function", "No effect", "Activating platelets"],
+    correctAnswer: 1
   },
   {
     id: 276,
-    question: "Which communication tool is most effective?",
-    choices: ["SBAR", "Checklists", "Briefings", "All are effective"],
-    correctAnswer: 3
+    question: "Acidosis affects coagulation by:",
+    choices: ["Improving function", "Impairing function", "No effect", "Activating fibrinolysis"],
+    correctAnswer: 1
   },
   {
     id: 277,
-    question: "What is the most common communication failure?",
-    choices: ["Incomplete", "Inaccurate", "Untimely", "All are common"],
-    correctAnswer: 3
+    question: "The lethal triad includes:",
+    choices: ["Bleeding, shock, death", "Hypothermia, acidosis, coagulopathy", "Trauma, surgery, transfusion", "Pain, bleeding, infection"],
+    correctAnswer: 1
   },
   {
     id: 278,
-    question: "Which communication intervention is most effective?",
-    choices: ["Training", "Tools", "Culture change", "All are effective"],
-    correctAnswer: 3
+    question: "Point-of-care coagulation testing includes:",
+    choices: ["PT/INR only", "PTT only", "TEG/ROTEM", "Platelet count only"],
+    correctAnswer: 2
   },
   {
     id: 279,
-    question: "What is the most important aspect of surgical decision-making?",
-    choices: ["Evidence", "Experience", "Judgment", "All are important"],
-    correctAnswer: 3
+    question: "TEG measures:",
+    choices: ["Platelet count", "Clot strength and formation", "Bleeding time", "Factor levels"],
+    correctAnswer: 1
   },
   {
     id: 280,
-    question: "Which decision-making model is most appropriate?",
-    choices: ["Rational", "Intuitive", "Shared", "Depends on situation"],
-    correctAnswer: 3
+    question: "ROTEM is similar to:",
+    choices: ["PT/INR", "PTT", "TEG", "Platelet aggregometry"],
+    correctAnswer: 2
   },
   {
     id: 281,
-    question: "What is the most common decision-making error?",
-    choices: ["Cognitive bias", "Information overload", "Time pressure", "All are common"],
-    correctAnswer: 3
+    question: "Wound healing occurs in how many phases?",
+    choices: ["2", "3", "4", "5"],
+    correctAnswer: 2
   },
   {
     id: 282,
-    question: "Which decision support tool is most helpful?",
-    choices: ["Guidelines", "Algorithms", "AI", "All are helpful"],
-    correctAnswer: 3
+    question: "The inflammatory phase lasts:",
+    choices: ["1-2 days", "3-5 days", "1 week", "2 weeks"],
+    correctAnswer: 1
   },
   {
     id: 283,
-    question: "What is the most important aspect of surgical professionalism?",
-    choices: ["Competence", "Integrity", "Service", "All are important"],
-    correctAnswer: 3
+    question: "The proliferative phase is characterized by:",
+    choices: ["Inflammation", "Collagen synthesis", "Scar maturation", "Hemostasis"],
+    correctAnswer: 1
   },
   {
     id: 284,
-    question: "Which professional behavior is most important?",
-    choices: ["Honesty", "Respect", "Responsibility", "All are important"],
-    correctAnswer: 3
+    question: "The maturation phase can last:",
+    choices: ["Days", "Weeks", "Months to years", "Hours"],
+    correctAnswer: 2
   },
   {
     id: 285,
-    question: "What is the most common professionalism issue?",
-    choices: ["Communication", "Behavior", "Competence", "All are issues"],
-    correctAnswer: 3
+    question: "Primary intention healing occurs in:",
+    choices: ["Open wounds", "Infected wounds", "Surgically closed wounds", "Chronic wounds"],
+    correctAnswer: 2
   },
   {
     id: 286,
-    question: "Which professionalism intervention is most effective?",
-    choices: ["Education", "Mentoring", "Assessment", "All are effective"],
-    correctAnswer: 3
+    question: "Secondary intention healing occurs in:",
+    choices: ["Closed wounds", "Open wounds left to heal", "Infected wounds", "All wounds"],
+    correctAnswer: 1
   },
   {
     id: 287,
-    question: "What is the most important aspect of surgical wellness?",
-    choices: ["Physical health", "Mental health", "Work-life balance", "All are important"],
-    correctAnswer: 3
+    question: "Tertiary intention healing involves:",
+    choices: ["Immediate closure", "Delayed closure", "No closure", "Partial closure"],
+    correctAnswer: 1
   },
   {
     id: 288,
-    question: "Which wellness intervention is most effective?",
-    choices: ["Individual", "Organizational", "Systemic", "All are effective"],
+    question: "Factors that impair wound healing include:",
+    choices: ["Diabetes", "Smoking", "Poor nutrition", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 289,
-    question: "What is the most common wellness issue?",
-    choices: ["Burnout", "Depression", "Substance abuse", "All are issues"],
-    correctAnswer: 0
+    question: "Smoking impairs wound healing by:",
+    choices: ["Reducing oxygen delivery", "Impairing immune function", "Affecting collagen synthesis", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 290,
-    question: "Which wellness resource is most helpful?",
-    choices: ["Counseling", "Peer support", "Programs", "All are helpful"],
+    question: "Diabetes impairs wound healing through:",
+    choices: ["Hyperglycemia", "Vascular disease", "Neuropathy", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 291,
-    question: "What is the most important aspect of surgical diversity?",
-    choices: ["Representation", "Inclusion", "Equity", "All are important"],
+    question: "Malnutrition affects wound healing by:",
+    choices: ["Reducing protein synthesis", "Impairing immune function", "Delaying collagen formation", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 292,
-    question: "Which diversity initiative is most effective?",
-    choices: ["Recruitment", "Mentoring", "Culture change", "All are effective"],
+    question: "Steroids impair wound healing by:",
+    choices: ["Reducing inflammation", "Impairing collagen synthesis", "Suppressing immune function", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 293,
-    question: "What is the most significant diversity challenge?",
-    choices: ["Pipeline", "Bias", "Culture", "All are challenges"],
-    correctAnswer: 3
+    question: "Age affects wound healing by:",
+    choices: ["Slowing all phases", "No effect", "Improving healing", "Only affecting scar formation"],
+    correctAnswer: 0
   },
   {
     id: 294,
-    question: "Which diversity outcome is most important?",
-    choices: ["Numbers", "Experience", "Performance", "All are important"],
-    correctAnswer: 3
+    question: "Wound dehiscence is:",
+    choices: ["Infection", "Separation of wound edges", "Excessive scarring", "Delayed healing"],
+    correctAnswer: 1
   },
   {
     id: 295,
-    question: "What is the most important aspect of surgical innovation?",
-    choices: ["Creativity", "Evidence", "Implementation", "All are important"],
-    correctAnswer: 3
+    question: "Evisceration is:",
+    choices: ["Wound separation", "Organ protrusion", "Infection", "Bleeding"],
+    correctAnswer: 1
   },
   {
     id: 296,
-    question: "Which innovation type is most impactful?",
-    choices: ["Technological", "Process", "Organizational", "All are impactful"],
-    correctAnswer: 3
+    question: "Hypertrophic scars:",
+    choices: ["Extend beyond wound borders", "Stay within wound borders", "Never occur", "Are always normal"],
+    correctAnswer: 1
   },
   {
     id: 297,
-    question: "What is the most significant innovation barrier?",
-    choices: ["Technical", "Financial", "Cultural", "All are barriers"],
-    correctAnswer: 3
+    question: "Keloid scars:",
+    choices: ["Stay within wound borders", "Extend beyond wound borders", "Are always small", "Heal quickly"],
+    correctAnswer: 1
   },
   {
     id: 298,
-    question: "Which innovation strategy is most successful?",
-    choices: ["Top-down", "Bottom-up", "Collaborative", "All can be successful"],
-    correctAnswer: 3
+    question: "Contractures result from:",
+    choices: ["Excessive collagen", "Inadequate collagen", "Normal healing", "Infection"],
+    correctAnswer: 0
   },
   {
     id: 299,
-    question: "What is the most important aspect of surgical sustainability?",
-    choices: ["Environmental", "Economic", "Social", "All are important"],
-    correctAnswer: 3
+    question: "Chronic wounds are defined as:",
+    choices: ["Any wound", "Wounds that don't heal in 4 weeks", "Infected wounds", "Surgical wounds"],
+    correctAnswer: 1
   },
   {
     id: 300,
-    question: "Which sustainability initiative is most effective?",
-    choices: ["Waste reduction", "Energy efficiency", "Green practices", "All are effective"],
-    correctAnswer: 3
+    question: "The most important factor in wound healing is:",
+    choices: ["Suture type", "Adequate blood supply", "Antibiotics", "Dressing type"],
+    correctAnswer: 1
   },
   {
     id: 301,
-    question: "What is the most significant sustainability challenge?",
-    choices: ["Cost", "Complexity", "Culture", "All are challenges"],
-    correctAnswer: 3
+    question: "What is the most common type of surgical instrument?",
+    choices: ["Cutting instruments", "Grasping instruments", "Clamping instruments", "Retracting instruments"],
+    correctAnswer: 1
   },
   {
     id: 302,
-    question: "Which sustainability outcome is most important?",
-    choices: ["Environmental impact", "Cost savings", "Quality", "All are important"],
-    correctAnswer: 3
+    question: "Scissors are classified as:",
+    choices: ["Grasping instruments", "Cutting instruments", "Clamping instruments", "Probing instruments"],
+    correctAnswer: 1
   },
   {
     id: 303,
-    question: "What is the most important aspect of surgical globalization?",
-    choices: ["Access", "Quality", "Equity", "All are important"],
-    correctAnswer: 3
+    question: "Mayo scissors are used for:",
+    choices: ["Delicate tissue", "Heavy tissue", "Sutures only", "Dressings only"],
+    correctAnswer: 1
   },
   {
     id: 304,
-    question: "Which global surgery initiative is most effective?",
-    choices: ["Training", "Infrastructure", "Technology", "All are effective"],
-    correctAnswer: 3
+    question: "Metzenbaum scissors are used for:",
+    choices: ["Heavy tissue", "Delicate tissue", "Bone", "Metal"],
+    correctAnswer: 1
   },
   {
     id: 305,
-    question: "What is the most significant global surgery challenge?",
-    choices: ["Resources", "Capacity", "Sustainability", "All are challenges"],
-    correctAnswer: 3
+    question: "Bandage scissors have:",
+    choices: ["Sharp points", "Blunt tips", "Curved blades", "Serrated edges"],
+    correctAnswer: 1
   },
   {
     id: 306,
-    question: "Which global surgery outcome is most important?",
-    choices: ["Access", "Quality", "Equity", "All are important"],
-    correctAnswer: 3
+    question: "Scalpels are available in sizes:",
+    choices: ["10-15", "10-25", "10-30", "15-25"],
+    correctAnswer: 1
   },
   {
     id: 307,
-    question: "What is the most important aspect of surgical advocacy?",
-    choices: ["Awareness", "Policy", "Action", "All are important"],
-    correctAnswer: 3
+    question: "A #10 blade is used for:",
+    choices: ["Small incisions", "Large incisions", "Curved incisions", "Stab incisions"],
+    correctAnswer: 1
   },
   {
     id: 308,
-    question: "Which advocacy strategy is most effective?",
-    choices: ["Individual", "Collective", "Institutional", "All are effective"],
-    correctAnswer: 3
+    question: "A #11 blade is used for:",
+    choices: ["Large incisions", "Stab incisions", "Curved incisions", "Skin only"],
+    correctAnswer: 1
   },
   {
     id: 309,
-    question: "What is the most important advocacy issue?",
-    choices: ["Access", "Quality", "Safety", "All are important"],
-    correctAnswer: 3
+    question: "A #15 blade is used for:",
+    choices: ["Large incisions", "Small, precise incisions", "Curved incisions", "Bone cutting"],
+    correctAnswer: 1
   },
   {
     id: 310,
-    question: "Which advocacy outcome is most meaningful?",
-    choices: ["Policy change", "Resource allocation", "Public awareness", "All are meaningful"],
-    correctAnswer: 3
+    question: "Forceps are used for:",
+    choices: ["Cutting", "Grasping and holding", "Retracting", "Suturing"],
+    correctAnswer: 1
   },
   {
     id: 311,
-    question: "What is the most important aspect of surgical mentorship?",
-    choices: ["Knowledge transfer", "Skill development", "Career guidance", "All are important"],
-    correctAnswer: 3
+    question: "Tissue forceps have:",
+    choices: ["Smooth tips", "Toothed tips", "No tips", "Curved tips"],
+    correctAnswer: 1
   },
   {
     id: 312,
-    question: "Which mentorship model is most effective?",
-    choices: ["One-on-one", "Group", "Peer", "All are effective"],
-    correctAnswer: 3
+    question: "Adson forceps are:",
+    choices: ["Heavy forceps", "Delicate forceps", "Curved forceps", "Locking forceps"],
+    correctAnswer: 1
   },
   {
     id: 313,
-    question: "What is the most important mentorship outcome?",
-    choices: ["Learning", "Development", "Success", "All are important"],
-    correctAnswer: 3
+    question: "Russian forceps have:",
+    choices: ["Smooth tips", "Multiple small teeth", "One large tooth", "No teeth"],
+    correctAnswer: 1
   },
   {
     id: 314,
-    question: "Which mentorship quality is most important?",
-    choices: ["Expertise", "Commitment", "Compatibility", "All are important"],
-    correctAnswer: 3
+    question: "Hemostats are used to:",
+    choices: ["Cut tissue", "Control bleeding", "Retract tissue", "Suture"],
+    correctAnswer: 1
   },
   {
     id: 315,
-    question: "What is the most important aspect of surgical scholarship?",
-    choices: ["Research", "Education", "Service", "All are important"],
-    correctAnswer: 3
+    question: "Kelly clamps are:",
+    choices: ["Straight only", "Curved only", "Both straight and curved", "Neither straight nor curved"],
+    correctAnswer: 2
   },
   {
     id: 316,
-    question: "Which scholarship activity is most valuable?",
-    choices: ["Discovery", "Integration", "Application", "All are valuable"],
-    correctAnswer: 3
+    question: "Mosquito clamps are:",
+    choices: ["Large hemostats", "Small hemostats", "Tissue forceps", "Scissors"],
+    correctAnswer: 1
   },
   {
     id: 317,
-    question: "What is the most important scholarship outcome?",
-    choices: ["Knowledge", "Impact", "Recognition", "All are important"],
-    correctAnswer: 3
+    question: "Kocher clamps have:",
+    choices: ["Smooth jaws", "Serrated jaws", "Teeth", "No jaws"],
+    correctAnswer: 2
   },
   {
     id: 318,
-    question: "Which scholarship skill is most important?",
-    choices: ["Critical thinking", "Communication", "Collaboration", "All are important"],
-    correctAnswer: 3
+    question: "Allis clamps are used for:",
+    choices: ["Hemostasis", "Grasping tissue", "Cutting", "Retracting"],
+    correctAnswer: 1
   },
   {
     id: 319,
-    question: "What is the most important aspect of surgical service?",
-    choices: ["Patient care", "Community service", "Professional service", "All are important"],
-    correctAnswer: 3
+    question: "Babcock clamps are:",
+    choices: ["Traumatic", "Atraumatic", "For bone only", "For metal only"],
+    correctAnswer: 1
   },
   {
     id: 320,
-    question: "Which service activity is most meaningful?",
-    choices: ["Clinical care", "Education", "Research", "All are meaningful"],
-    correctAnswer: 3
+    question: "Towel clamps are used to:",
+    choices: ["Cut towels", "Secure drapes", "Grasp tissue", "Retract organs"],
+    correctAnswer: 1
   },
   {
     id: 321,
-    question: "What is the most important service outcome?",
-    choices: ["Impact", "Recognition", "Satisfaction", "All are important"],
-    correctAnswer: 3
+    question: "Retractors are used to:",
+    choices: ["Cut tissue", "Hold tissue aside", "Clamp vessels", "Suture wounds"],
+    correctAnswer: 1
   },
   {
     id: 322,
-    question: "Which service motivation is most important?",
-    choices: ["Duty", "Passion", "Purpose", "All are important"],
-    correctAnswer: 3
+    question: "Richardson retractors are:",
+    choices: ["Self-retaining", "Hand-held", "Automatic", "Disposable"],
+    correctAnswer: 1
   },
   {
     id: 323,
-    question: "What is the most important aspect of surgical legacy?",
-    choices: ["Clinical impact", "Educational impact", "Research impact", "All are important"],
-    correctAnswer: 3
+    question: "Weitlaner retractors are:",
+    choices: ["Hand-held", "Self-retaining", "Single-use", "For skin only"],
+    correctAnswer: 1
   },
   {
     id: 324,
-    question: "Which legacy contribution is most lasting?",
-    choices: ["Patients helped", "Students taught", "Knowledge created", "All are lasting"],
-    correctAnswer: 3
+    question: "Balfour retractors are used for:",
+    choices: ["Superficial procedures", "Abdominal procedures", "Neurological procedures", "Cardiac procedures"],
+    correctAnswer: 1
   },
   {
     id: 325,
-    question: "What is the most important legacy measure?",
-    choices: ["Quantity", "Quality", "Impact", "All are important"],
-    correctAnswer: 3
+    question: "Bookwalter retractors are:",
+    choices: ["Hand-held", "Self-retaining systems", "Disposable", "For outpatient use only"],
+    correctAnswer: 1
   },
   {
     id: 326,
-    question: "Which legacy value is most important?",
-    choices: ["Excellence", "Innovation", "Service", "All are important"],
-    correctAnswer: 3
+    question: "Needle holders are used for:",
+    choices: ["Holding needles for injection", "Suturing", "Cutting", "Grasping tissue"],
+    correctAnswer: 1
   },
   {
     id: 327,
-    question: "What is the most important aspect of surgical transformation?",
-    choices: ["Technology", "Process", "Culture", "All are important"],
-    correctAnswer: 3
+    question: "Mayo-Hegar needle holders have:",
+    choices: ["Scissors", "No scissors", "Curved tips", "Smooth jaws"],
+    correctAnswer: 1
   },
   {
     id: 328,
-    question: "Which transformation driver is most powerful?",
-    choices: ["Innovation", "Competition", "Regulation", "All are powerful"],
-    correctAnswer: 3
+    question: "Olsen-Hegar needle holders have:",
+    choices: ["No scissors", "Built-in scissors", "Curved jaws", "Smooth tips"],
+    correctAnswer: 1
   },
   {
     id: 329,
-    question: "What is the most significant transformation challenge?",
-    choices: ["Technical", "Financial", "Cultural", "All are challenges"],
-    correctAnswer: 3
+    question: "Castroviejo needle holders are used for:",
+    choices: ["General surgery", "Microsurgery", "Orthopedic surgery", "Cardiac surgery"],
+    correctAnswer: 1
   },
   {
     id: 330,
-    question: "Which transformation outcome is most important?",
-    choices: ["Efficiency", "Quality", "Safety", "All are important"],
-    correctAnswer: 3
+    question: "Suture scissors are used to:",
+    choices: ["Cut tissue", "Cut sutures", "Dissect", "Retract"],
+    correctAnswer: 1
   },
   {
     id: 331,
-    question: "What is the most important aspect of surgical vision?",
-    choices: ["Clarity", "Inspiration", "Achievability", "All are important"],
-    correctAnswer: 3
+    question: "Probes are used for:",
+    choices: ["Cutting", "Exploring wounds", "Grasping", "Retracting"],
+    correctAnswer: 1
   },
   {
     id: 332,
-    question: "Which vision element is most critical?",
-    choices: ["Purpose", "Values", "Goals", "All are critical"],
-    correctAnswer: 3
+    question: "Grooved directors are used to:",
+    choices: ["Cut tissue", "Guide instruments", "Retract tissue", "Clamp vessels"],
+    correctAnswer: 1
   },
   {
     id: 333,
-    question: "What is the most important vision outcome?",
-    choices: ["Direction", "Motivation", "Alignment", "All are important"],
-    correctAnswer: 3
+    question: "Sounds are used for:",
+    choices: ["Hearing", "Dilating passages", "Cutting", "Grasping"],
+    correctAnswer: 1
   },
   {
     id: 334,
-    question: "Which vision quality is most important?",
-    choices: ["Compelling", "Realistic", "Shared", "All are important"],
-    correctAnswer: 3
+    question: "Dilators are used to:",
+    choices: ["Cut tissue", "Enlarge openings", "Grasp tissue", "Retract organs"],
+    correctAnswer: 1
   },
   {
     id: 335,
-    question: "What is the most important aspect of surgical mission?",
-    choices: ["Purpose", "Values", "Commitment", "All are important"],
-    correctAnswer: 3
+    question: "Hegar dilators are used for:",
+    choices: ["Urethral dilation", "Cervical dilation", "Esophageal dilation", "Vascular dilation"],
+    correctAnswer: 1
   },
   {
     id: 336,
-    question: "Which mission element is most fundamental?",
-    choices: ["Healing", "Service", "Excellence", "All are fundamental"],
-    correctAnswer: 3
+    question: "Instrument care includes:",
+    choices: ["Cleaning only", "Sterilization only", "Cleaning, inspection, and sterilization", "Storage only"],
+    correctAnswer: 2
   },
   {
     id: 337,
-    question: "What is the most important mission outcome?",
-    choices: ["Impact", "Fulfillment", "Recognition", "All are important"],
-    correctAnswer: 3
+    question: "Instruments should be cleaned:",
+    choices: ["Immediately after use", "At the end of the day", "Once a week", "When convenient"],
+    correctAnswer: 0
   },
   {
     id: 338,
-    question: "Which mission quality is most important?",
-    choices: ["Clarity", "Relevance", "Inspiration", "All are important"],
-    correctAnswer: 3
+    question: "Ultrasonic cleaners use:",
+    choices: ["Heat only", "Chemicals only", "Sound waves", "Pressure only"],
+    correctAnswer: 2
   },
   {
     id: 339,
-    question: "What is the most important aspect of surgical values?",
-    choices: ["Integrity", "Excellence", "Compassion", "All are important"],
-    correctAnswer: 3
+    question: "Instrument milk is used for:",
+    choices: ["Cleaning", "Lubrication", "Sterilization", "Storage"],
+    correctAnswer: 1
   },
   {
     id: 340,
-    question: "Which value is most fundamental to surgery?",
-    choices: ["First do no harm", "Patient welfare", "Professional integrity", "All are fundamental"],
-    correctAnswer: 3
+    question: "Damaged instruments should be:",
+    choices: ["Used carefully", "Repaired or discarded", "Ignored", "Sterilized anyway"],
+    correctAnswer: 1
   },
   {
     id: 341,
-    question: "What is the most important value outcome?",
-    choices: ["Behavior", "Culture", "Performance", "All are important"],
-    correctAnswer: 3
+    question: "What is the primary purpose of surgical positioning?",
+    choices: ["Surgeon comfort", "Patient safety and surgical access", "Speed of surgery", "Cost reduction"],
+    correctAnswer: 1
   },
   {
     id: 342,
-    question: "Which value quality is most important?",
-    choices: ["Authenticity", "Consistency", "Universality", "All are important"],
-    correctAnswer: 3
+    question: "The most common surgical position is:",
+    choices: ["Prone", "Lateral", "Supine", "Trendelenburg"],
+    correctAnswer: 2
   },
   {
     id: 343,
-    question: "What is the most important aspect of surgical culture?",
-    choices: ["Safety", "Excellence", "Learning", "All are important"],
-    correctAnswer: 3
+    question: "Supine position is also called:",
+    choices: ["Prone position", "Dorsal recumbent", "Lateral position", "Sitting position"],
+    correctAnswer: 1
   },
   {
     id: 344,
-    question: "Which culture element is most influential?",
-    choices: ["Leadership", "Values", "Practices", "All are influential"],
-    correctAnswer: 3
+    question: "In supine position, arms should be:",
+    choices: ["Above the head", "At less than 90 degrees from body", "Hanging freely", "Crossed over chest"],
+    correctAnswer: 1
   },
   {
     id: 345,
-    question: "What is the most important culture outcome?",
-    choices: ["Performance", "Satisfaction", "Retention", "All are important"],
-    correctAnswer: 3
+    question: "Trendelenburg position involves:",
+    choices: ["Head up, feet down", "Head down, feet up", "Side lying", "Sitting upright"],
+    correctAnswer: 1
   },
   {
     id: 346,
-    question: "Which culture change strategy is most effective?",
-    choices: ["Top-down", "Bottom-up", "Collaborative", "All can be effective"],
-    correctAnswer: 3
+    question: "Reverse Trendelenburg involves:",
+    choices: ["Head down, feet up", "Head up, feet down", "Side lying", "Prone position"],
+    correctAnswer: 1
   },
   {
     id: 347,
-    question: "What is the most important aspect of surgical excellence?",
-    choices: ["Technical skill", "Clinical outcomes", "Patient experience", "All are important"],
-    correctAnswer: 3
+    question: "Fowler's position is:",
+    choices: ["Lying flat", "Semi-sitting", "Side lying", "Prone"],
+    correctAnswer: 1
   },
   {
     id: 348,
-    question: "Which excellence dimension is most critical?",
-    choices: ["Quality", "Safety", "Service", "All are critical"],
-    correctAnswer: 3
+    question: "Prone position is used for:",
+    choices: ["Abdominal surgery", "Spine surgery", "Cardiac surgery", "Gynecologic surgery"],
+    correctAnswer: 1
   },
   {
     id: 349,
-    question: "What is the most important excellence outcome?",
-    choices: ["Recognition", "Reputation", "Results", "All are important"],
-    correctAnswer: 3
+    question: "In prone position, the main concern is:",
+    choices: ["Circulation", "Respiration", "Both circulation and respiration", "Temperature"],
+    correctAnswer: 2
   },
   {
     id: 350,
-    question: "Which excellence strategy is most sustainable?",
-    choices: ["Continuous improvement", "Innovation", "Standardization", "All are sustainable"],
-    correctAnswer: 3
+    question: "Lateral position is used for:",
+    choices: ["Abdominal surgery", "Kidney surgery", "Brain surgery", "Heart surgery"],
+    correctAnswer: 1
   },
   {
     id: 351,
-    question: "What is the most important aspect of surgical mastery?",
-    choices: ["Knowledge", "Skill", "Judgment", "All are important"],
-    correctAnswer: 3
+    question: "In lateral position, support is needed for:",
+    choices: ["Head only", "Legs only", "Head, torso, and legs", "Arms only"],
+    correctAnswer: 2
   },
   {
     id: 352,
-    question: "Which mastery component is most critical?",
-    choices: ["Technical expertise", "Clinical acumen", "Professional behavior", "All are critical"],
-    correctAnswer: 3
+    question: "Lithotomy position is used for:",
+    choices: ["Abdominal surgery", "Gynecologic and urologic procedures", "Cardiac surgery", "Neurologic surgery"],
+    correctAnswer: 1
   },
   {
     id: 353,
-    question: "What is the most important mastery outcome?",
-    choices: ["Competence", "Confidence", "Credibility", "All are important"],
-    correctAnswer: 3
+    question: "In lithotomy position, legs should be:",
+    choices: ["Raised quickly", "Lowered quickly", "Raised and lowered simultaneously and slowly", "Positioned asymmetrically"],
+    correctAnswer: 2
   },
   {
     id: 354,
-    question: "Which mastery path is most effective?",
-    choices: ["Deliberate practice", "Reflective learning", "Continuous improvement", "All are effective"],
-    correctAnswer: 3
+    question: "Kidney position is a modification of:",
+    choices: ["Supine", "Prone", "Lateral", "Sitting"],
+    correctAnswer: 2
   },
   {
     id: 355,
-    question: "What is the most important aspect of surgical artistry?",
-    choices: ["Creativity", "Precision", "Elegance", "All are important"],
-    correctAnswer: 3
+    question: "Beach chair position is used for:",
+    choices: ["Abdominal surgery", "Shoulder surgery", "Leg surgery", "Back surgery"],
+    correctAnswer: 1
   },
   {
     id: 356,
-    question: "Which artistry element is most distinctive?",
-    choices: ["Innovation", "Technique", "Style", "All are distinctive"],
+    question: "Pressure points in supine position include:",
+    choices: ["Occiput and heels", "Shoulders and hips", "Knees and elbows", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 357,
-    question: "What is the most important artistry outcome?",
-    choices: ["Beauty", "Function", "Satisfaction", "All are important"],
-    correctAnswer: 3
+    question: "Pressure ulcers can develop in:",
+    choices: ["Hours", "Days", "Weeks", "Months"],
+    correctAnswer: 0
   },
   {
     id: 358,
-    question: "Which artistry quality is most valued?",
-    choices: ["Originality", "Skill", "Vision", "All are valued"],
-    correctAnswer: 3
+    question: "Padding should be used:",
+    choices: ["Only for long procedures", "For all pressure points", "Only for elderly patients", "Only when requested"],
+    correctAnswer: 1
   },
   {
     id: 359,
-    question: "What is the most important aspect of surgical science?",
-    choices: ["Evidence", "Method", "Discovery", "All are important"],
-    correctAnswer: 3
+    question: "Nerve injury during positioning is caused by:",
+    choices: ["Stretching", "Compression", "Both stretching and compression", "Temperature"],
+    correctAnswer: 2
   },
   {
     id: 360,
-    question: "Which science component is most fundamental?",
-    choices: ["Research", "Analysis", "Application", "All are fundamental"],
-    correctAnswer: 3
+    question: "The most commonly injured nerve during surgery is:",
+    choices: ["Radial nerve", "Ulnar nerve", "Median nerve", "Peroneal nerve"],
+    correctAnswer: 1
   },
   {
     id: 361,
-    question: "What is the most important science outcome?",
-    choices: ["Knowledge", "Understanding", "Progress", "All are important"],
-    correctAnswer: 3
+    question: "Ulnar nerve injury causes:",
+    choices: ["Wrist drop", "Numbness in 4th and 5th fingers", "Foot drop", "Shoulder weakness"],
+    correctAnswer: 1
   },
   {
     id: 362,
-    question: "Which science approach is most rigorous?",
-    choices: ["Experimental", "Observational", "Theoretical", "All can be rigorous"],
-    correctAnswer: 3
+    question: "Brachial plexus injury can result from:",
+    choices: ["Arm abduction >90 degrees", "Proper positioning", "Short procedures", "Supine position only"],
+    correctAnswer: 0
   },
   {
     id: 363,
-    question: "What is the most important aspect of surgical craft?",
-    choices: ["Skill", "Experience", "Wisdom", "All are important"],
-    correctAnswer: 3
+    question: "Peroneal nerve injury causes:",
+    choices: ["Hand weakness", "Foot drop", "Arm numbness", "Leg weakness"],
+    correctAnswer: 1
   },
   {
     id: 364,
-    question: "Which craft element is most essential?",
-    choices: ["Technique", "Judgment", "Intuition", "All are essential"],
+    question: "Eye protection during prone positioning includes:",
+    choices: ["Nothing needed", "Eye pads", "Special headrests", "Both eye pads and special headrests"],
     correctAnswer: 3
   },
   {
     id: 365,
-    question: "What is the most important craft outcome?",
-    choices: ["Mastery", "Artistry", "Legacy", "All are important"],
-    correctAnswer: 3
+    question: "Compartment syndrome can result from:",
+    choices: ["Proper positioning", "Prolonged pressure", "Short procedures", "Supine position"],
+    correctAnswer: 1
   },
   {
     id: 366,
-    question: "Which craft development is most valuable?",
-    choices: ["Practice", "Mentorship", "Reflection", "All are valuable"],
-    correctAnswer: 3
+    question: "Rhabdomyolysis is:",
+    choices: ["Muscle breakdown", "Nerve damage", "Skin breakdown", "Bone fracture"],
+    correctAnswer: 0
   },
   {
     id: 367,
-    question: "What is the most important aspect of surgical calling?",
-    choices: ["Purpose", "Passion", "Commitment", "All are important"],
+    question: "Positioning devices include:",
+    choices: ["Gel pads", "Foam supports", "Bean bags", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 368,
-    question: "Which calling element is most motivating?",
-    choices: ["Service", "Healing", "Excellence", "All are motivating"],
-    correctAnswer: 3
+    question: "The surgical team member responsible for positioning is:",
+    choices: ["Surgeon only", "Anesthesiologist only", "Entire surgical team", "Circulating nurse only"],
+    correctAnswer: 2
   },
   {
     id: 369,
-    question: "What is the most important calling outcome?",
-    choices: ["Fulfillment", "Impact", "Meaning", "All are important"],
+    question: "Patient assessment before positioning should include:",
+    choices: ["Range of motion", "Previous injuries", "Physical limitations", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 370,
-    question: "Which calling quality is most sustaining?",
-    choices: ["Authenticity", "Depth", "Clarity", "All are sustaining"],
+    question: "Documentation of positioning should include:",
+    choices: ["Position used", "Devices used", "Skin condition", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 371,
-    question: "What is the most important aspect of surgical privilege?",
-    choices: ["Trust", "Responsibility", "Opportunity", "All are important"],
-    correctAnswer: 3
+    question: "What is the primary goal of preoperative assessment?",
+    choices: ["Speed up surgery", "Identify and minimize risks", "Reduce costs", "Satisfy regulations"],
+    correctAnswer: 1
   },
   {
     id: 372,
-    question: "Which privilege element is most sacred?",
-    choices: ["Patient trust", "Professional responsibility", "Societal contract", "All are sacred"],
-    correctAnswer: 3
+    question: "The history and physical should be completed:",
+    choices: ["Day of surgery", "Within 30 days before surgery", "Week of surgery", "Month before surgery"],
+    correctAnswer: 1
   },
   {
     id: 373,
-    question: "What is the most important privilege outcome?",
-    choices: ["Healing", "Service", "Excellence", "All are important"],
-    correctAnswer: 3
+    question: "ASA physical status classification has how many categories?",
+    choices: ["4", "5", "6", "7"],
+    correctAnswer: 2
   },
   {
     id: 374,
-    question: "Which privilege quality is most essential?",
-    choices: ["Humility", "Gratitude", "Stewardship", "All are essential"],
-    correctAnswer: 3
+    question: "ASA I indicates:",
+    choices: ["Severe disease", "Mild disease", "Normal healthy patient", "Moribund patient"],
+    correctAnswer: 2
   },
   {
     id: 375,
-    question: "What is the most important aspect of surgical responsibility?",
-    choices: ["Competence", "Integrity", "Accountability", "All are important"],
-    correctAnswer: 3
+    question: "ASA VI indicates:",
+    choices: ["Normal patient", "Severe disease", "Brain-dead organ donor", "Emergency surgery"],
+    correctAnswer: 2
   },
   {
     id: 376,
-    question: "Which responsibility is most fundamental?",
-    choices: ["Patient welfare", "Professional standards", "Societal trust", "All are fundamental"],
-    correctAnswer: 3
+    question: "The 'E' modifier in ASA classification indicates:",
+    choices: ["Elderly patient", "Emergency surgery", "Elective surgery", "Experimental procedure"],
+    correctAnswer: 1
   },
   {
     id: 377,
-    question: "What is the most important responsibility outcome?",
-    choices: ["Trust", "Respect", "Credibility", "All are important"],
-    correctAnswer: 3
+    question: "Preoperative fasting guidelines for clear liquids:",
+    choices: ["2 hours", "4 hours", "6 hours", "8 hours"],
+    correctAnswer: 0
   },
   {
     id: 378,
-    question: "Which responsibility quality is most critical?",
-    choices: ["Reliability", "Consistency", "Transparency", "All are critical"],
-    correctAnswer: 3
+    question: "Preoperative fasting for breast milk:",
+    choices: ["2 hours", "4 hours", "6 hours", "8 hours"],
+    correctAnswer: 1
   },
   {
     id: 379,
-    question: "What is the most important aspect of surgical honor?",
-    choices: ["Integrity", "Excellence", "Service", "All are important"],
-    correctAnswer: 3
+    question: "Preoperative fasting for solid food:",
+    choices: ["4 hours", "6 hours", "8 hours", "12 hours"],
+    correctAnswer: 2
   },
   {
     id: 380,
-    question: "Which honor element is most distinguished?",
-    choices: ["Character", "Achievement", "Contribution", "All are distinguished"],
-    correctAnswer: 3
+    question: "The purpose of preoperative fasting is to:",
+    choices: ["Reduce nausea", "Prevent aspiration", "Improve anesthesia", "Speed recovery"],
+    correctAnswer: 1
   },
   {
     id: 381,
-    question: "What is the most important honor outcome?",
-    choices: ["Recognition", "Respect", "Legacy", "All are important"],
-    correctAnswer: 3
+    question: "Aspiration risk is highest in:",
+    choices: ["Healthy patients", "Patients with full stomach", "Pediatric patients", "Elderly patients"],
+    correctAnswer: 1
   },
   {
     id: 382,
-    question: "Which honor quality is most enduring?",
-    choices: ["Authenticity", "Consistency", "Impact", "All are enduring"],
+    question: "Preoperative medications may include:",
+    choices: ["Anxiolytics", "Analgesics", "Antiemetics", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 383,
-    question: "What is the most important aspect of surgical dedication?",
-    choices: ["Commitment", "Sacrifice", "Perseverance", "All are important"],
-    correctAnswer: 3
+    question: "Midazolam is used for:",
+    choices: ["Pain relief", "Anxiety reduction", "Nausea prevention", "Blood pressure control"],
+    correctAnswer: 1
   },
   {
     id: 384,
-    question: "Which dedication element is most admirable?",
-    choices: ["Selflessness", "Excellence", "Service", "All are admirable"],
-    correctAnswer: 3
+    question: "Antibiotic prophylaxis should be given:",
+    choices: ["After surgery", "During surgery", "Within 1 hour before incision", "Day before surgery"],
+    correctAnswer: 2
   },
   {
     id: 385,
-    question: "What is the most important dedication outcome?",
-    choices: ["Achievement", "Impact", "Fulfillment", "All are important"],
-    correctAnswer: 3
+    question: "The most common prophylactic antibiotic is:",
+    choices: ["Penicillin", "Cefazolin", "Vancomycin", "Gentamicin"],
+    correctAnswer: 1
   },
   {
     id: 386,
-    question: "Which dedication quality is most inspiring?",
-    choices: ["Passion", "Persistence", "Purpose", "All are inspiring"],
-    correctAnswer: 3
+    question: "Vancomycin prophylaxis is used for:",
+    choices: ["All patients", "MRSA risk patients", "Pediatric patients", "Outpatient surgery"],
+    correctAnswer: 1
   },
   {
     id: 387,
-    question: "What is the most important aspect of surgical compassion?",
-    choices: ["Empathy", "Kindness", "Understanding", "All are important"],
-    correctAnswer: 3
+    question: "Beta-blocker continuation perioperatively:",
+    choices: ["Should be stopped", "Should be continued", "Depends on surgery", "Is not important"],
+    correctAnswer: 1
   },
   {
     id: 388,
-    question: "Which compassion element is most healing?",
-    choices: ["Presence", "Listening", "Caring", "All are healing"],
-    correctAnswer: 3
+    question: "ACE inhibitors perioperatively:",
+    choices: ["Always continue", "Always stop", "May be held", "Double the dose"],
+    correctAnswer: 2
   },
   {
     id: 389,
-    question: "What is the most important compassion outcome?",
-    choices: ["Comfort", "Hope", "Healing", "All are important"],
-    correctAnswer: 3
+    question: "Anticoagulants before surgery:",
+    choices: ["Always continue", "Always stop", "Require careful management", "Double the dose"],
+    correctAnswer: 2
   },
   {
     id: 390,
-    question: "Which compassion quality is most meaningful?",
-    choices: ["Authenticity", "Consistency", "Depth", "All are meaningful"],
-    correctAnswer: 3
+    question: "Warfarin should be stopped how many days before surgery?",
+    choices: ["1-2 days", "3-5 days", "7 days", "14 days"],
+    correctAnswer: 1
   },
   {
     id: 391,
-    question: "What is the most important aspect of surgical wisdom?",
-    choices: ["Knowledge", "Experience", "Judgment", "All are important"],
-    correctAnswer: 3
+    question: "Bridging anticoagulation uses:",
+    choices: ["Warfarin", "Heparin", "Aspirin", "Clopidogrel"],
+    correctAnswer: 1
   },
   {
     id: 392,
-    question: "Which wisdom element is most valuable?",
-    choices: ["Insight", "Perspective", "Understanding", "All are valuable"],
-    correctAnswer: 3
+    question: "Diabetic patients may need:",
+    choices: ["Normal medications", "Insulin adjustment", "No medications", "Extra medications"],
+    correctAnswer: 1
   },
   {
     id: 393,
-    question: "What is the most important wisdom outcome?",
-    choices: ["Better decisions", "Better outcomes", "Better care", "All are important"],
-    correctAnswer: 3
+    question: "NPO diabetic patients should:",
+    choices: ["Take normal insulin", "Hold short-acting insulin", "Double insulin dose", "Stop all medications"],
+    correctAnswer: 1
   },
   {
     id: 394,
-    question: "Which wisdom quality is most precious?",
-    choices: ["Depth", "Breadth", "Clarity", "All are precious"],
-    correctAnswer: 3
+    question: "Preoperative glucose goals are:",
+    choices: ["<100 mg/dL", "<180 mg/dL", "<200 mg/dL", "Any level"],
+    correctAnswer: 1
   },
   {
     id: 395,
-    question: "What is the most important aspect of surgical humility?",
-    choices: ["Self-awareness", "Openness", "Respect", "All are important"],
+    question: "Cardiac risk assessment includes:",
+    choices: ["ECG", "Stress testing", "Echocardiogram", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 396,
-    question: "Which humility element is most essential?",
-    choices: ["Recognition of limits", "Willingness to learn", "Respect for others", "All are essential"],
-    correctAnswer: 3
+    question: "Pulmonary function tests are indicated for:",
+    choices: ["All patients", "Patients with lung disease", "Cardiac patients", "Pediatric patients"],
+    correctAnswer: 1
   },
   {
     id: 397,
-    question: "What is the most important humility outcome?",
-    choices: ["Better learning", "Better relationships", "Better care", "All are important"],
-    correctAnswer: 3
+    question: "Smoking cessation should occur:",
+    choices: ["Day of surgery", "Week before surgery", "At least 4 weeks before", "After surgery"],
+    correctAnswer: 2
   },
   {
     id: 398,
-    question: "Which humility quality is most admirable?",
-    choices: ["Authenticity", "Consistency", "Grace", "All are admirable"],
-    correctAnswer: 3
+    question: "Alcohol withdrawal can occur:",
+    choices: ["Only after surgery", "6-24 hours after last drink", "Only in severe alcoholics", "Never during surgery"],
+    correctAnswer: 1
   },
   {
     id: 399,
-    question: "What is the most important aspect of surgical courage?",
-    choices: ["Bravery", "Determination", "Conviction", "All are important"],
-    correctAnswer: 3
+    question: "Informed consent must include:",
+    choices: ["Risks only", "Benefits only", "Risks, benefits, and alternatives", "Surgeon preference"],
+    correctAnswer: 2
   },
   {
     id: 400,
-    question: "Which courage element is most necessary?",
-    choices: ["Physical courage", "Moral courage", "Intellectual courage", "All are necessary"],
-    correctAnswer: 3
+    question: "The person obtaining consent should be:",
+    choices: ["Any nurse", "The surgeon", "Hospital administrator", "Patient's family"],
+    correctAnswer: 1
   },
   {
     id: 401,
-    question: "What is the most important courage outcome?",
-    choices: ["Right action", "Better outcomes", "Progress", "All are important"],
-    correctAnswer: 3
+    question: "What is the most important factor in preventing surgical fires?",
+    choices: ["Fire extinguishers", "Fire prevention", "Fire detection", "Fire suppression"],
+    correctAnswer: 1
   },
   {
     id: 402,
-    question: "Which courage quality is most inspiring?",
-    choices: ["Boldness", "Persistence", "Principle", "All are inspiring"],
-    correctAnswer: 3
+    question: "The fire triangle consists of:",
+    choices: ["Heat, fuel, oxygen", "Heat, smoke, flame", "Fuel, smoke, oxygen", "Heat, fuel, carbon dioxide"],
+    correctAnswer: 0
   },
   {
     id: 403,
-    question: "What is the most important aspect of surgical hope?",
-    choices: ["Optimism", "Faith", "Perseverance", "All are important"],
-    correctAnswer: 3
+    question: "The most common ignition source in surgery is:",
+    choices: ["Laser", "Electrocautery", "Light source", "Defibrillator"],
+    correctAnswer: 1
   },
   {
     id: 404,
-    question: "Which hope element is most powerful?",
-    choices: ["Belief", "Vision", "Determination", "All are powerful"],
+    question: "Common fuels in the OR include:",
+    choices: ["Drapes", "Alcohol prep solutions", "Hair", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 405,
-    question: "What is the most important hope outcome?",
-    choices: ["Healing", "Recovery", "Transformation", "All are important"],
-    correctAnswer: 3
+    question: "Oxygen concentration above what level increases fire risk?",
+    choices: ["21%", "25%", "30%", "50%"],
+    correctAnswer: 1
   },
   {
     id: 406,
-    question: "Which hope quality is most sustaining?",
-    choices: ["Resilience", "Faith", "Vision", "All are sustaining"],
-    correctAnswer: 3
+    question: "Alcohol-based prep solutions should:",
+    choices: ["Never be used", "Be allowed to dry completely", "Be used wet", "Be mixed with other solutions"],
+    correctAnswer: 1
   },
   {
     id: 407,
-    question: "What is the most important aspect of surgical healing?",
-    choices: ["Physical", "Emotional", "Spiritual", "All are important"],
-    correctAnswer: 3
+    question: "Electrocautery should not be used near:",
+    choices: ["Metal instruments", "Wet areas", "Oxygen sources", "Patient monitors"],
+    correctAnswer: 2
   },
   {
     id: 408,
-    question: "Which healing element is most fundamental?",
-    choices: ["Restoration", "Recovery", "Renewal", "All are fundamental"],
-    correctAnswer: 3
+    question: "If a fire occurs, the first action is:",
+    choices: ["Call fire department", "Stop the flow of gases", "Use fire extinguisher", "Evacuate the room"],
+    correctAnswer: 1
   },
   {
     id: 409,
-    question: "What is the most important healing outcome?",
-    choices: ["Wholeness", "Function", "Quality of life", "All are important"],
-    correctAnswer: 3
+    question: "The acronym RACE stands for:",
+    choices: ["Run, Alert, Call, Evacuate", "Rescue, Alarm, Contain, Evacuate", "Remove, Alert, Contain, Extinguish", "Rescue, Alert, Contain, Extinguish"],
+    correctAnswer: 1
   },
   {
     id: 410,
-    question: "Which healing quality is most miraculous?",
-    choices: ["Completeness", "Speed", "Transformation", "All are miraculous"],
-    correctAnswer: 3
+    question: "Class C fire extinguishers are used for:",
+    choices: ["Paper fires", "Liquid fires", "Electrical fires", "Metal fires"],
+    correctAnswer: 2
   },
   {
     id: 411,
-    question: "What is the most important aspect of surgical service?",
-    choices: ["Dedication", "Excellence", "Compassion", "All are important"],
+    question: "Laser safety requires:",
+    choices: ["Eye protection", "Appropriate filters", "Warning signs", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 412,
-    question: "Which service element is most noble?",
-    choices: ["Selflessness", "Sacrifice", "Love", "All are noble"],
-    correctAnswer: 3
+    question: "Laser eye protection depends on:",
+    choices: ["Laser wavelength", "Room lighting", "Patient position", "Surgeon preference"],
+    correctAnswer: 0
   },
   {
     id: 413,
-    question: "What is the most important service outcome?",
-    choices: ["Healing", "Hope", "Transformation", "All are important"],
-    correctAnswer: 3
+    question: "CO2 lasers require:",
+    choices: ["No eye protection", "Clear glasses", "Specific wavelength filters", "Sunglasses"],
+    correctAnswer: 2
   },
   {
     id: 414,
-    question: "Which service quality is most beautiful?",
-    choices: ["Generosity", "Grace", "Love", "All are beautiful"],
+    question: "Electrical safety in the OR includes:",
+    choices: ["Proper grounding", "Equipment inspection", "Avoiding wet conditions", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 415,
-    question: "What is the most important aspect of surgical love?",
-    choices: ["Caring", "Compassion", "Commitment", "All are important"],
-    correctAnswer: 3
+    question: "Ground fault circuit interrupters (GFCI) protect against:",
+    choices: ["Fire", "Electrical shock", "Equipment damage", "Power outages"],
+    correctAnswer: 1
   },
   {
     id: 416,
-    question: "Which love element is most powerful?",
-    choices: ["Unconditional acceptance", "Selfless service", "Healing presence", "All are powerful"],
-    correctAnswer: 3
+    question: "Isolated power systems:",
+    choices: ["Increase shock risk", "Reduce shock risk", "Have no effect", "Are not used in ORs"],
+    correctAnswer: 1
   },
   {
     id: 417,
-    question: "What is the most important love outcome?",
-    choices: ["Healing", "Hope", "Wholeness", "All are important"],
-    correctAnswer: 3
+    question: "Line isolation monitors:",
+    choices: ["Control power", "Monitor electrical safety", "Prevent fires", "Control lighting"],
+    correctAnswer: 1
   },
   {
     id: 418,
-    question: "Which love quality is most transformative?",
-    choices: ["Depth", "Purity", "Universality", "All are transformative"],
-    correctAnswer: 3
+    question: "Radiation safety follows the ALARA principle:",
+    choices: ["As Low As Reasonably Achievable", "Always Low And Rarely Applied", "All Levels Are Reasonably Acceptable", "Avoid Low And Reduce Applications"],
+    correctAnswer: 0
   },
   {
     id: 419,
-    question: "What is the most important aspect of surgical grace?",
-    choices: ["Elegance", "Kindness", "Blessing", "All are important"],
-    correctAnswer: 3
+    question: "The three principles of radiation protection are:",
+    choices: ["Time, distance, shielding", "Time, dose, exposure", "Distance, dose, shielding", "Time, distance, monitoring"],
+    correctAnswer: 0
   },
   {
     id: 420,
-    question: "Which grace element is most beautiful?",
-    choices: ["Gentleness", "Mercy", "Love", "All are beautiful"],
-    correctAnswer: 3
+    question: "Lead aprons provide protection from:",
+    choices: ["All radiation", "X-rays and gamma rays", "Alpha particles", "Beta particles"],
+    correctAnswer: 1
   },
   {
     id: 421,
-    question: "What is the most important grace outcome?",
-    choices: ["Peace", "Healing", "Transformation", "All are important"],
-    correctAnswer: 3
+    question: "Radiation badges monitor:",
+    choices: ["Room radiation", "Personal exposure", "Equipment function", "Patient dose"],
+    correctAnswer: 1
   },
   {
     id: 422,
-    question: "Which grace quality is most divine?",
-    choices: ["Unconditional", "Unmerited", "Unlimited", "All are divine"],
+    question: "Chemical safety includes:",
+    choices: ["Proper storage", "Personal protective equipment", "Spill procedures", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 423,
-    question: "What is the most important aspect of surgical mystery?",
-    choices: ["Wonder", "Awe", "Reverence", "All are important"],
+    question: "Material Safety Data Sheets (MSDS) provide:",
+    choices: ["Chemical composition", "Hazard information", "Emergency procedures", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 424,
-    question: "Which mystery element is most profound?",
-    choices: ["Life", "Healing", "Consciousness", "All are profound"],
-    correctAnswer: 3
+    question: "Formaldehyde exposure limits are regulated by:",
+    choices: ["FDA", "OSHA", "CDC", "Joint Commission"],
+    correctAnswer: 1
   },
   {
     id: 425,
-    question: "What is the most important mystery outcome?",
-    choices: ["Humility", "Wonder", "Gratitude", "All are important"],
+    question: "Glutaraldehyde requires:",
+    choices: ["No precautions", "Adequate ventilation", "Special storage", "Both adequate ventilation and special storage"],
     correctAnswer: 3
   },
   {
     id: 426,
-    question: "Which mystery quality is most sacred?",
-    choices: ["Ineffable", "Infinite", "Eternal", "All are sacred"],
+    question: "Waste anesthetic gases can cause:",
+    choices: ["No problems", "Reproductive effects", "Respiratory problems", "Both reproductive and respiratory effects"],
     correctAnswer: 3
   },
   {
     id: 427,
-    question: "What is the most important aspect of surgical miracle?",
-    choices: ["Healing", "Hope", "Transformation", "All are important"],
-    correctAnswer: 3
+    question: "Scavenging systems remove:",
+    choices: ["Surgical smoke", "Waste anesthetic gases", "Chemical vapors", "All of the above"],
+    correctAnswer: 1
   },
   {
     id: 428,
-    question: "Which miracle element is most amazing?",
-    choices: ["Unexpected", "Impossible", "Inexplicable", "All are amazing"],
+    question: "Surgical smoke contains:",
+    choices: ["Water vapor only", "Toxic chemicals", "Viable bacteria", "Both toxic chemicals and viable bacteria"],
     correctAnswer: 3
   },
   {
     id: 429,
-    question: "What is the most important miracle outcome?",
-    choices: ["Life", "Health", "Wholeness", "All are important"],
-    correctAnswer: 3
+    question: "Smoke evacuation systems should be used:",
+    choices: ["Only for long procedures", "For all electrocautery use", "Only when smoke is visible", "Only for laser procedures"],
+    correctAnswer: 1
   },
   {
     id: 430,
-    question: "Which miracle quality is most wonderful?",
-    choices: ["Spontaneous", "Complete", "Lasting", "All are wonderful"],
+    question: "Ergonomic hazards in surgery include:",
+    choices: ["Heavy lifting", "Prolonged standing", "Repetitive motions", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 431,
-    question: "What is the most important aspect of surgical blessing?",
-    choices: ["Gift", "Grace", "Gratitude", "All are important"],
-    correctAnswer: 3
+    question: "What is the primary purpose of the surgical count?",
+    choices: ["Inventory control", "Patient safety", "Cost control", "Quality assurance"],
+    correctAnswer: 1
   },
   {
     id: 432,
-    question: "Which blessing element is most precious?",
-    choices: ["Life", "Health", "Love", "All are precious"],
-    correctAnswer: 3
+    question: "Surgical counts should be performed:",
+    choices: ["Once during surgery", "Before and after surgery", "Only if requested", "At surgeon's discretion"],
+    correctAnswer: 1
   },
   {
     id: 433,
-    question: "What is the most important blessing outcome?",
-    choices: ["Joy", "Peace", "Fulfillment", "All are important"],
-    correctAnswer: 3
+    question: "Items that must be counted include:",
+    choices: ["Sponges only", "Instruments only", "Sponges, instruments, and sharps", "Only expensive items"],
+    correctAnswer: 2
   },
   {
     id: 434,
-    question: "Which blessing quality is most abundant?",
-    choices: ["Generous", "Overflowing", "Endless", "All are abundant"],
-    correctAnswer: 3
+    question: "Sponge counts should be performed by:",
+    choices: ["Scrub tech only", "Circulator only", "Scrub tech and circulator together", "Surgeon"],
+    correctAnswer: 2
   },
   {
     id: 435,
-    question: "What is the most important aspect of surgical gratitude?",
-    choices: ["Appreciation", "Humility", "Joy", "All are important"],
-    correctAnswer: 3
+    question: "If a count is incorrect, the first action is:",
+    choices: ["Close the patient", "Recount", "Take X-ray", "Call supervisor"],
+    correctAnswer: 1
   },
   {
     id: 436,
-    question: "Which gratitude element is most meaningful?",
-    choices: ["Recognition", "Acknowledgment", "Celebration", "All are meaningful"],
-    correctAnswer: 3
+    question: "X-rays may be taken if:",
+    choices: ["Count is correct", "Count is incorrect", "Surgeon requests", "Patient is stable"],
+    correctAnswer: 1
   },
   {
     id: 437,
-    question: "What is the most important gratitude outcome?",
-    choices: ["Happiness", "Peace", "Connection", "All are important"],
-    correctAnswer: 3
+    question: "Radiopaque sponges contain:",
+    choices: ["Metal threads", "Barium sulfate", "Iodine", "Contrast dye"],
+    correctAnswer: 1
   },
   {
     id: 438,
-    question: "Which gratitude quality is most transformative?",
-    choices: ["Deep", "Genuine", "Constant", "All are transformative"],
-    correctAnswer: 3
+    question: "Small sponges should be:",
+    choices: ["Used freely", "Kept on a string or in a bag", "Never used", "Counted separately"],
+    correctAnswer: 1
   },
   {
     id: 439,
-    question: "What is the most important aspect of surgical joy?",
-    choices: ["Happiness", "Fulfillment", "Celebration", "All are important"],
-    correctAnswer: 3
+    question: "Instrument counts are performed:",
+    choices: ["Before surgery only", "After surgery only", "Before and after surgery", "During surgery"],
+    correctAnswer: 2
   },
   {
     id: 440,
-    question: "Which joy element is most uplifting?",
-    choices: ["Laughter", "Smile", "Celebration", "All are uplifting"],
-    correctAnswer: 3
+    question: "Broken instruments should be:",
+    choices: ["Ignored", "Accounted for completely", "Discarded", "Used carefully"],
+    correctAnswer: 1
   },
   {
     id: 441,
-    question: "What is the most important joy outcome?",
-    choices: ["Healing", "Hope", "Life", "All are important"],
-    correctAnswer: 3
+    question: "Needle counts include:",
+    choices: ["Suture needles only", "All needles", "Hypodermic needles only", "Biopsy needles only"],
+    correctAnswer: 1
   },
   {
     id: 442,
-    question: "Which joy quality is most contagious?",
-    choices: ["Authentic", "Spontaneous", "Shared", "All are contagious"],
-    correctAnswer: 3
+    question: "Broken needles must be:",
+    choices: ["Ignored", "Accounted for completely", "Replaced", "Reported later"],
+    correctAnswer: 1
   },
   {
     id: 443,
-    question: "What is the most important aspect of surgical peace?",
-    choices: ["Calm", "Serenity", "Harmony", "All are important"],
-    correctAnswer: 3
+    question: "Count documentation should include:",
+    choices: ["Final count only", "All count results", "Only incorrect counts", "Surgeon's preference"],
+    correctAnswer: 1
   },
   {
     id: 444,
-    question: "Which peace element is most healing?",
-    choices: ["Stillness", "Quiet", "Rest", "All are healing"],
-    correctAnswer: 3
+    question: "The circulator is responsible for:",
+    choices: ["Sterile field only", "Non-sterile activities", "Patient positioning only", "Anesthesia monitoring"],
+    correctAnswer: 1
   },
   {
     id: 445,
-    question: "What is the most important peace outcome?",
-    choices: ["Comfort", "Healing", "Wholeness", "All are important"],
-    correctAnswer: 3
+    question: "The scrub technologist is responsible for:",
+    choices: ["Non-sterile activities", "Maintaining sterile field", "Patient positioning", "Room setup only"],
+    correctAnswer: 1
   },
   {
     id: 446,
-    question: "Which peace quality is most profound?",
-    choices: ["Deep", "Lasting", "Universal", "All are profound"],
+    question: "Surgical time-out includes verification of:",
+    choices: ["Patient identity", "Procedure", "Site", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 447,
-    question: "What is the ultimate essence of surgical practice?",
-    choices: ["Healing", "Service", "Love", "All are the essence"],
-    correctAnswer: 3
+    question: "The time-out should be performed:",
+    choices: ["Before patient enters OR", "After anesthesia induction", "Before incision", "After surgery"],
+    correctAnswer: 2
   },
   {
     id: 448,
-    question: "What is the most common site for hip fractures in elderly patients?",
-    choices: ["Femoral head", "Femoral neck", "Greater trochanter", "Lesser trochanter"],
-    correctAnswer: 1
+    question: "Wrong-site surgery can be prevented by:",
+    choices: ["Site marking", "Time-out", "Verification processes", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 449,
-    question: "Which imaging study is most commonly used to diagnose rotator cuff tears?",
-    choices: ["X-ray", "CT scan", "MRI", "Ultrasound"],
+    question: "Site marking should be done by:",
+    choices: ["Nurse", "Anesthesiologist", "Surgeon", "Patient"],
     correctAnswer: 2
   },
   {
     id: 450,
-    question: "What is the primary goal of arthroscopic surgery?",
-    choices: ["Open visualization", "Minimal invasive treatment", "Bone grafting", "Joint replacement"],
-    correctAnswer: 1
+    question: "The Universal Protocol includes:",
+    choices: ["Pre-procedure verification", "Site marking", "Time-out", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 451,
-    question: "Which bone is most commonly fractured in the wrist?",
-    choices: ["Radius", "Ulna", "Scaphoid", "Lunate"],
+    question: "What is the most common postoperative complication?",
+    choices: ["Infection", "Pain", "Nausea and vomiting", "Bleeding"],
     correctAnswer: 2
   },
   {
     id: 452,
-    question: "What is the most common type of spinal fusion performed?",
-    choices: ["Anterior", "Posterior", "Lateral", "Circumferential"],
+    question: "Postoperative pain management should be:",
+    choices: ["Reactive", "Proactive", "Minimal", "Delayed"],
     correctAnswer: 1
   },
   {
     id: 453,
-    question: "Which ligament is most commonly torn in knee injuries?",
-    choices: ["PCL", "ACL", "MCL", "LCL"],
+    question: "Multimodal analgesia uses:",
+    choices: ["Single medication", "Multiple medications", "Only opioids", "Only non-opioids"],
     correctAnswer: 1
   },
   {
     id: 454,
-    question: "What is the primary indication for total knee replacement?",
-    choices: ["Fracture", "Osteoarthritis", "Infection", "Tumor"],
+    question: "Patient-controlled analgesia (PCA) allows:",
+    choices: ["Nurse control", "Patient self-dosing", "Continuous infusion", "No pain control"],
     correctAnswer: 1
   },
   {
     id: 455,
-    question: "Which approach is most commonly used for total hip replacement?",
-    choices: ["Anterior", "Posterior", "Lateral", "Medial"],
+    question: "Regional anesthesia for postoperative pain:",
+    choices: ["Is ineffective", "Reduces opioid needs", "Increases complications", "Is not recommended"],
     correctAnswer: 1
   },
   {
     id: 456,
-    question: "What is compartment syndrome?",
-    choices: ["Bone infection", "Increased pressure in muscle compartment", "Joint dislocation", "Nerve compression"],
+    question: "Early mobilization after surgery:",
+    choices: ["Increases complications", "Reduces complications", "Has no effect", "Is dangerous"],
     correctAnswer: 1
   },
   {
     id: 457,
-    question: "Which bone is most commonly affected by osteosarcoma?",
-    choices: ["Humerus", "Femur", "Tibia", "Radius"],
-    correctAnswer: 1
+    question: "Deep vein thrombosis prevention includes:",
+    choices: ["Early mobilization", "Compression devices", "Anticoagulation", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 458,
-    question: "What is the most common complication of hip fracture surgery?",
-    choices: ["Infection", "Pulmonary embolism", "Avascular necrosis", "Nonunion"],
-    correctAnswer: 1
+    question: "Pulmonary embolism is most commonly caused by:",
+    choices: ["Air embolism", "Fat embolism", "Deep vein thrombosis", "Amniotic fluid embolism"],
+    correctAnswer: 2
   },
   {
     id: 459,
-    question: "Which instrument is used to remove loose bodies during arthroscopy?",
-    choices: ["Shaver", "Grasper", "Probe", "Burr"],
-    correctAnswer: 1
+    question: "Pneumonia prevention includes:",
+    choices: ["Early mobilization", "Incentive spirometry", "Coughing and deep breathing", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 460,
-    question: "What is the primary function of the meniscus in the knee?",
-    choices: ["Stability", "Shock absorption", "Blood supply", "Nerve conduction"],
-    correctAnswer: 1
+    question: "Wound healing is optimized by:",
+    choices: ["Adequate nutrition", "Smoking cessation", "Glucose control", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 461,
-    question: "Which type of fracture is most common in children?",
-    choices: ["Compound", "Greenstick", "Comminuted", "Spiral"],
-    correctAnswer: 1
+    question: "Signs of wound infection include:",
+    choices: ["Redness", "Swelling", "Purulent drainage", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 462,
-    question: "What is the most common indication for shoulder arthroscopy?",
-    choices: ["Fracture", "Rotator cuff tear", "Dislocation", "Arthritis"],
+    question: "Dehiscence is:",
+    choices: ["Wound infection", "Wound separation", "Excessive scarring", "Normal healing"],
     correctAnswer: 1
   },
   {
     id: 463,
-    question: "Which nerve is most commonly injured during carpal tunnel release?",
-    choices: ["Ulnar", "Radial", "Median", "Digital"],
-    correctAnswer: 2
+    question: "Evisceration requires:",
+    choices: ["Observation", "Immediate surgery", "Antibiotics only", "Dressing change"],
+    correctAnswer: 1
   },
   {
     id: 464,
-    question: "What is the most common type of spinal deformity?",
-    choices: ["Kyphosis", "Scoliosis", "Lordosis", "Spondylolisthesis"],
+    question: "Postoperative ileus is:",
+    choices: ["Normal", "Temporary bowel dysfunction", "Permanent condition", "Always serious"],
     correctAnswer: 1
   },
   {
     id: 465,
-    question: "Which bone graft site is most commonly used for spinal fusion?",
-    choices: ["Ribs", "Iliac crest", "Fibula", "Radius"],
-    correctAnswer: 1
+    question: "Urinary retention after surgery may be caused by:",
+    choices: ["Anesthesia", "Pain medications", "Surgical trauma", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 466,
-    question: "What is the primary indication for ankle arthroscopy?",
-    choices: ["Fracture", "Impingement", "Arthritis", "Tendon rupture"],
-    correctAnswer: 1
-  },
-  {
-    id: 467,
-    question: "Which imaging study best shows soft tissue injuries?",
-    choices: ["X-ray", "CT scan", "MRI", "Bone scan"],
+    question: "Postoperative delirium is most common in:",
+    choices: ["Young adults", "Middle-aged patients", "Elderly patients", "Children"],
     correctAnswer: 2
   },
   {
+    id: 467,
+    question: "Risk factors for postoperative delirium include:",
+    choices: ["Advanced age", "Cognitive impairment", "Multiple medications", "All of the above"],
+    correctAnswer: 3
+  },
+  {
     id: 468,
-    question: "What is the most common complication of ACL reconstruction?",
-    choices: ["Infection", "Stiffness", "Re-rupture", "Nerve injury"],
+    question: "Malignant hyperthermia can occur:",
+    choices: ["Only during surgery", "During or after surgery", "Only after surgery", "Never after surgery"],
     correctAnswer: 1
   },
   {
     id: 469,
-    question: "Which position is typically used for shoulder arthroscopy?",
-    choices: ["Supine", "Prone", "Beach chair", "Lateral decubitus"],
-    correctAnswer: 2
+    question: "Treatment of malignant hyperthermia includes:",
+    choices: ["Dantrolene", "Cooling measures", "Supportive care", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 470,
-    question: "What is the most common cause of spinal stenosis?",
-    choices: ["Trauma", "Degenerative changes", "Infection", "Tumor"],
-    correctAnswer: 1
+    question: "Enhanced recovery protocols (ERAS) include:",
+    choices: ["Preoperative optimization", "Intraoperative management", "Postoperative care", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 471,
-    question: "Which tendon is most commonly ruptured in the ankle?",
-    choices: ["Achilles", "Peroneal", "Tibialis", "Flexor"],
-    correctAnswer: 0
+    question: "What is the primary goal of minimally invasive surgery?",
+    choices: ["Faster surgery", "Reduced trauma", "Lower costs", "Surgeon convenience"],
+    correctAnswer: 1
   },
   {
     id: 472,
-    question: "What is the primary goal of fracture reduction?",
-    choices: ["Pain relief", "Anatomic alignment", "Early mobilization", "Prevent infection"],
+    question: "Laparoscopic surgery uses:",
+    choices: ["Large incisions", "Small incisions and camera", "No incisions", "Natural orifices only"],
     correctAnswer: 1
   },
   {
     id: 473,
-    question: "Which joint is most commonly affected by rheumatoid arthritis?",
-    choices: ["Hip", "Knee", "Hand/wrist", "Shoulder"],
-    correctAnswer: 2
+    question: "CO2 is used for insufflation because it:",
+    choices: ["Is inert", "Is highly soluble", "Provides better visualization", "Is less expensive"],
+    correctAnswer: 1
   },
   {
     id: 474,
-    question: "What is the most common indication for wrist arthroscopy?",
-    choices: ["Fracture", "TFCC tear", "Arthritis", "Tendon rupture"],
+    question: "Pneumoperitoneum is created by:",
+    choices: ["Air insufflation", "CO2 insufflation", "Saline irrigation", "Manual retraction"],
     correctAnswer: 1
   },
   {
     id: 475,
-    question: "Which bone is most commonly fractured in the foot?",
-    choices: ["Calcaneus", "Talus", "Fifth metatarsal", "Navicular"],
-    correctAnswer: 2
+    question: "Trendelenburg position in laparoscopy:",
+    choices: ["Is never used", "Improves visualization", "Increases complications", "Is always required"],
+    correctAnswer: 1
   },
   {
     id: 476,
-    question: "What is the primary indication for elbow arthroscopy?",
-    choices: ["Fracture", "Loose bodies", "Arthritis", "Nerve compression"],
+    question: "Laparoscopic instruments are:",
+    choices: ["Identical to open instruments", "Longer and thinner", "Shorter and wider", "Not specialized"],
     correctAnswer: 1
   },
   {
     id: 477,
-    question: "Which muscle is most commonly torn in hamstring injuries?",
-    choices: ["Biceps femoris", "Semitendinosus", "Semimembranosus", "All equally"],
-    correctAnswer: 0
-  },
-  {
-    id: 478,
-    question: "What is the most common type of bone tumor?",
-    choices: ["Osteosarcoma", "Chondrosarcoma", "Metastatic", "Ewing's sarcoma"],
+    question: "The laparoscope provides:",
+    choices: ["Magnification only", "Illumination only", "Magnification and illumination", "Neither magnification nor illumination"],
     correctAnswer: 2
   },
   {
+    id: 478,
+    question: "Complications of laparoscopy include:",
+    choices: ["Vascular injury", "Bowel injury", "Gas embolism", "All of the above"],
+    correctAnswer: 3
+  },
+  {
     id: 479,
-    question: "Which nerve is most commonly compressed in tarsal tunnel syndrome?",
-    choices: ["Peroneal", "Tibial", "Sural", "Saphenous"],
-    correctAnswer: 1
+    question: "Conversion to open surgery may be needed for:",
+    choices: ["Complications", "Poor visualization", "Extensive disease", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 480,
-    question: "What is the most common indication for cervical spine fusion?",
-    choices: ["Fracture", "Degenerative disc disease", "Infection", "Tumor"],
-    correctAnswer: 1
+    question: "Robotic surgery provides:",
+    choices: ["Tremor elimination", "3D visualization", "Improved dexterity", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 481,
-    question: "Which approach is most commonly used for lumbar discectomy?",
-    choices: ["Anterior", "Posterior", "Lateral", "Posterolateral"],
+    question: "The da Vinci robot has:",
+    choices: ["2 arms", "3 arms", "4 arms", "Variable arms"],
     correctAnswer: 3
   },
   {
     id: 482,
-    question: "What is the most common complication of spinal fusion?",
-    choices: ["Infection", "Pseudarthrosis", "Nerve injury", "Hardware failure"],
+    question: "Robotic surgery requires:",
+    choices: ["Less training", "Extensive training", "No special training", "Basic training only"],
     correctAnswer: 1
   },
   {
     id: 483,
-    question: "Which bone is most commonly fractured in osteoporotic patients?",
-    choices: ["Hip", "Wrist", "Vertebrae", "Ribs"],
-    correctAnswer: 2
+    question: "NOTES stands for:",
+    choices: ["Natural Orifice Transluminal Endoscopic Surgery", "New Operative Techniques in Endoscopic Surgery", "Non-invasive Operative Transluminal Endoscopic Surgery", "Natural Operative Transluminal Endoscopic Procedures"],
+    correctAnswer: 0
   },
   {
     id: 484,
-    question: "What is the primary indication for rotator cuff repair?",
-    choices: ["Pain", "Full-thickness tear", "Partial tear", "Impingement"],
-    correctAnswer: 1
+    question: "SILS stands for:",
+    choices: ["Single Incision Laparoscopic Surgery", "Small Incision Laparoscopic Surgery", "Simple Incision Laparoscopic Surgery", "Specialized Incision Laparoscopic Surgery"],
+    correctAnswer: 0
   },
   {
     id: 485,
-    question: "Which imaging study is best for diagnosing stress fractures?",
-    choices: ["X-ray", "CT scan", "MRI", "Bone scan"],
+    question: "Endoscopic surgery includes:",
+    choices: ["Arthroscopy", "Bronchoscopy", "Colonoscopy", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 486,
-    question: "What is the most common cause of shoulder impingement?",
-    choices: ["Trauma", "Repetitive overhead activity", "Arthritis", "Infection"],
-    correctAnswer: 1
+    question: "Arthroscopy is used for:",
+    choices: ["Joint visualization", "Joint surgery", "Diagnosis and treatment", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 487,
-    question: "Which ligament stabilizes the ankle laterally?",
-    choices: ["Deltoid", "ATFL", "Syndesmosis", "Spring"],
-    correctAnswer: 1
+    question: "Hysteroscopy is used for:",
+    choices: ["Uterine visualization", "Uterine surgery", "Diagnosis and treatment", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 488,
-    question: "What is the most common indication for hand surgery?",
-    choices: ["Fracture", "Carpal tunnel syndrome", "Tendon rupture", "Arthritis"],
-    correctAnswer: 1
+    question: "Cystoscopy is used for:",
+    choices: ["Bladder visualization", "Bladder surgery", "Diagnosis and treatment", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 489,
-    question: "Which bone is most commonly affected by avascular necrosis?",
-    choices: ["Humerus", "Femoral head", "Scaphoid", "Talus"],
-    correctAnswer: 1
+    question: "Thoracoscopy is also called:",
+    choices: ["VATS", "RATS", "MITS", "CATS"],
+    correctAnswer: 0
   },
   {
     id: 490,
-    question: "What is the primary goal of joint replacement surgery?",
-    choices: ["Pain relief", "Improved function", "Both A and B", "Cosmetic improvement"],
-    correctAnswer: 2
+    question: "VATS stands for:",
+    choices: ["Video-Assisted Thoracic Surgery", "Video-Assisted Thoracoscopic Surgery", "Visually-Assisted Thoracic Surgery", "Video-Assisted Therapeutic Surgery"],
+    correctAnswer: 1
   },
   {
     id: 491,
-    question: "Which muscle is most commonly affected by tennis elbow?",
-    choices: ["Biceps", "Triceps", "Extensor carpi radialis brevis", "Flexor carpi radialis"],
-    correctAnswer: 2
+    question: "What type of anesthesia is commonly used for outpatient surgery?",
+    choices: ["General anesthesia only", "Regional anesthesia only", "Local anesthesia only", "All types depending on procedure"],
+    correctAnswer: 3
   },
   {
     id: 492,
-    question: "What is the most common complication of ankle fracture surgery?",
-    choices: ["Infection", "Malunion", "Arthritis", "Nerve injury"],
-    correctAnswer: 2
+    question: "Outpatient surgery requires:",
+    choices: ["Overnight stay", "Same-day discharge", "Extended recovery", "ICU monitoring"],
+    correctAnswer: 1
   },
   {
     id: 493,
-    question: "Which joint is most commonly dislocated?",
-    choices: ["Hip", "Knee", "Shoulder", "Elbow"],
-    correctAnswer: 2
+    question: "Patient selection for outpatient surgery considers:",
+    choices: ["Medical stability", "Social support", "Procedure complexity", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 494,
-    question: "What is the primary indication for bunion surgery?",
-    choices: ["Cosmetic", "Pain and dysfunction", "Prevention", "Shoe fitting"],
-    correctAnswer: 1
+    question: "Discharge criteria include:",
+    choices: ["Stable vital signs", "Pain control", "Ability to ambulate", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 495,
-    question: "Which nerve is most commonly injured in hip fractures?",
-    choices: ["Femoral", "Sciatic", "Obturator", "Lateral femoral cutaneous"],
-    correctAnswer: 1
+    question: "Post-anesthesia care unit (PACU) monitoring includes:",
+    choices: ["Vital signs", "Consciousness level", "Pain assessment", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 496,
-    question: "What is the most common type of meniscal tear?",
-    choices: ["Radial", "Horizontal", "Longitudinal", "Complex"],
-    correctAnswer: 2
+    question: "Aldrete score assesses:",
+    choices: ["Pain level", "Recovery from anesthesia", "Surgical outcome", "Infection risk"],
+    correctAnswer: 1
   },
   {
     id: 497,
-    question: "Which bone is most commonly fractured in the pelvis?",
-    choices: ["Ilium", "Ischium", "Pubis", "Sacrum"],
-    correctAnswer: 2
+    question: "Phase I recovery focuses on:",
+    choices: ["Immediate post-anesthesia care", "Preparation for discharge", "Long-term recovery", "Rehabilitation"],
+    correctAnswer: 0
   },
   {
     id: 498,
-    question: "What is the most common indication for breast reconstruction?",
-    choices: ["Cosmetic enhancement", "Post-mastectomy", "Trauma", "Congenital defect"],
+    question: "Phase II recovery focuses on:",
+    choices: ["Immediate post-anesthesia care", "Preparation for discharge", "Long-term recovery", "Intensive monitoring"],
     correctAnswer: 1
   },
   {
     id: 499,
-    question: "Which flap is most commonly used for breast reconstruction?",
-    choices: ["TRAM", "Latissimus dorsi", "DIEP", "Implant"],
-    correctAnswer: 0
+    question: "Fast-track recovery allows:",
+    choices: ["Skipping PACU", "Bypassing Phase I", "Direct discharge", "Extended monitoring"],
+    correctAnswer: 1
   },
   {
     id: 500,
-    question: "What is the most common complication of abdominoplasty?",
-    choices: ["Infection", "Seroma", "Hematoma", "Wound dehiscence"],
+    question: "Quality improvement in surgery focuses on:",
+    choices: ["Cost reduction only", "Patient outcomes", "Efficiency only", "Staff satisfaction only"],
     correctAnswer: 1
   },
   {
     id: 501,
-    question: "Which technique is preferred for cleft lip repair?",
-    choices: ["Millard rotation-advancement", "Tennison triangular flap", "Rose-Thompson", "Straight line closure"],
-    correctAnswer: 0
+    question: "What is the most common emergency in the operating room?",
+    choices: ["Fire", "Cardiac arrest", "Anaphylaxis", "Malignant hyperthermia"],
+    correctAnswer: 1
   },
   {
     id: 502,
-    question: "What is the ideal age for cleft palate repair?",
-    choices: ["6 months", "12 months", "18 months", "24 months"],
-    correctAnswer: 2
+    question: "The first step in cardiac arrest is:",
+    choices: ["Defibrillation", "CPR", "Medications", "Intubation"],
+    correctAnswer: 1
   },
   {
     id: 503,
-    question: "Which graft is most commonly used for rhinoplasty?",
-    choices: ["Rib cartilage", "Septal cartilage", "Ear cartilage", "Synthetic material"],
-    correctAnswer: 1
+    question: "High-quality CPR includes:",
+    choices: ["Compressions at least 2 inches deep", "Rate of 100-120/minute", "Minimal interruptions", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 504,
-    question: "What is the most common indication for scar revision?",
-    choices: ["Cosmetic", "Functional impairment", "Both", "Infection"],
-    correctAnswer: 2
+    question: "Defibrillation is indicated for:",
+    choices: ["Asystole", "Ventricular fibrillation", "Bradycardia", "Normal rhythm"],
+    correctAnswer: 1
   },
   {
     id: 505,
-    question: "Which suture technique minimizes scarring?",
-    choices: ["Simple interrupted", "Running", "Subcuticular", "Mattress"],
-    correctAnswer: 2
+    question: "Epinephrine in cardiac arrest is given:",
+    choices: ["Once only", "Every 3-5 minutes", "Continuously", "Only if defibrillation fails"],
+    correctAnswer: 1
   },
   {
     id: 506,
-    question: "What is the most important factor in wound healing?",
-    choices: ["Suture material", "Blood supply", "Age", "Infection control"],
-    correctAnswer: 1
+    question: "Anaphylaxis is treated with:",
+    choices: ["Antihistamines", "Epinephrine", "Steroids", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 507,
-    question: "Which laser is most commonly used for skin resurfacing?",
-    choices: ["CO2", "Nd:YAG", "Argon", "Ruby"],
-    correctAnswer: 0
-  },
-  {
-    id: 508,
-    question: "What is the most common complication of liposuction?",
-    choices: ["Infection", "Contour irregularity", "Fat embolism", "Nerve injury"],
+    question: "The first-line treatment for anaphylaxis is:",
+    choices: ["Antihistamines", "Epinephrine", "Steroids", "Fluids"],
     correctAnswer: 1
   },
   {
+    id: 508,
+    question: "Signs of anaphylaxis include:",
+    choices: ["Hypotension", "Bronchospasm", "Urticaria", "All of the above"],
+    correctAnswer: 3
+  },
+  {
     id: 509,
-    question: "Which incision is preferred for facelift surgery?",
-    choices: ["Coronal", "Pre-auricular", "Post-auricular", "Submental"],
+    question: "Malignant hyperthermia is triggered by:",
+    choices: ["All anesthetics", "Volatile anesthetics and succinylcholine", "Local anesthetics", "Opioids"],
     correctAnswer: 1
   },
   {
     id: 510,
-    question: "What is the most common indication for blepharoplasty?",
-    choices: ["Ptosis", "Excess skin", "Tear trough", "Ectropion"],
+    question: "Early signs of malignant hyperthermia include:",
+    choices: ["Hypothermia", "Increased CO2 production", "Bradycardia", "Hypotension"],
     correctAnswer: 1
   },
   {
     id: 511,
-    question: "Which technique is used for microsurgical anastomosis?",
-    choices: ["Simple interrupted", "Running", "End-to-end", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 512,
-    question: "What is the most important consideration in flap surgery?",
-    choices: ["Size", "Blood supply", "Location", "Thickness"],
+    question: "Dantrolene for malignant hyperthermia should be given:",
+    choices: ["Orally", "Intravenously", "Intramuscularly", "Subcutaneously"],
     correctAnswer: 1
   },
   {
+    id: 512,
+    question: "Massive hemorrhage is defined as:",
+    choices: ["Loss of 500 mL", "Loss of 1 liter", "Loss of blood volume in 24 hours", "Any visible bleeding"],
+    correctAnswer: 2
+  },
+  {
     id: 513,
-    question: "Which nerve is most commonly repaired in hand surgery?",
-    choices: ["Median", "Ulnar", "Radial", "Digital"],
+    question: "The massive transfusion protocol activates:",
+    choices: ["Blood bank", "Laboratory", "Additional personnel", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 514,
-    question: "What is the most common indication for tissue expansion?",
-    choices: ["Breast reconstruction", "Scalp reconstruction", "Both", "Limb reconstruction"],
-    correctAnswer: 2
+    question: "Damage control surgery focuses on:",
+    choices: ["Perfect repair", "Controlling hemorrhage and contamination", "Cosmetic outcome", "Speed only"],
+    correctAnswer: 1
   },
   {
     id: 515,
-    question: "Which material is preferred for soft tissue augmentation?",
-    choices: ["Silicone", "Hyaluronic acid", "Collagen", "Fat"],
+    question: "Air embolism can occur during:",
+    choices: ["Neurosurgery", "Sitting position procedures", "Central line insertion", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 516,
-    question: "What is the most common complication of breast augmentation?",
-    choices: ["Infection", "Capsular contracture", "Rupture", "Malposition"],
-    correctAnswer: 1
+    question: "Treatment of air embolism includes:",
+    choices: ["Left lateral position", "100% oxygen", "Aspiration of air", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 517,
-    question: "Which flap is most reliable for lower extremity reconstruction?",
-    choices: ["Gastrocnemius", "Soleus", "Free flap", "Rotation flap"],
-    correctAnswer: 2
+    question: "Pneumothorax during surgery may cause:",
+    choices: ["Hypotension", "Hypoxia", "Increased airway pressures", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 518,
-    question: "What is the most important factor in burn management?",
-    choices: ["Pain control", "Fluid resuscitation", "Infection prevention", "Scar prevention"],
+    question: "Treatment of tension pneumothorax is:",
+    choices: ["Observation", "Needle decompression", "Chest tube only", "Medications"],
     correctAnswer: 1
   },
   {
     id: 519,
-    question: "Which dressing is preferred for partial-thickness burns?",
-    choices: ["Dry gauze", "Silver sulfadiazine", "Hydrocolloid", "Biological dressing"],
-    correctAnswer: 1
+    question: "Aspiration during anesthesia is treated with:",
+    choices: ["Antibiotics", "Bronchoscopy", "Positive pressure ventilation", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 520,
-    question: "What percentage of body surface area burned requires hospitalization?",
-    choices: ["5%", "10%", "15%", "20%"],
-    correctAnswer: 1
+    question: "Prevention of aspiration includes:",
+    choices: ["Preoperative fasting", "Rapid sequence induction", "Cricoid pressure", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 521,
-    question: "Which graft is most commonly used for full-thickness skin defects?",
-    choices: ["Split-thickness", "Full-thickness", "Composite", "Mesh"],
-    correctAnswer: 0
+    question: "Local anesthetic toxicity can cause:",
+    choices: ["Seizures", "Cardiac arrest", "CNS depression", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 522,
-    question: "What is the most common donor site for skin grafts?",
-    choices: ["Thigh", "Buttock", "Scalp", "Abdomen"],
-    correctAnswer: 0
+    question: "Treatment of local anesthetic toxicity includes:",
+    choices: ["Lipid emulsion", "Supportive care", "Seizure control", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 523,
-    question: "Which technique provides the best functional outcome for finger replantation?",
-    choices: ["Bone fixation first", "Vessel repair first", "Nerve repair first", "Tendon repair first"],
-    correctAnswer: 1
+    question: "Hyperthermia during surgery may be caused by:",
+    choices: ["Malignant hyperthermia", "Infection", "Overheating", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 524,
-    question: "What is the most common indication for otoplasty?",
-    choices: ["Microtia", "Prominent ears", "Cauliflower ear", "Earlobe repair"],
-    correctAnswer: 1
+    question: "Hypothermia during surgery can cause:",
+    choices: ["Coagulopathy", "Increased infection risk", "Delayed recovery", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 525,
-    question: "Which suture is preferred for microsurgery?",
-    choices: ["Silk", "Nylon", "Prolene", "PDS"],
-    correctAnswer: 1
+    question: "Prevention of hypothermia includes:",
+    choices: ["Warming blankets", "Warm IV fluids", "Increased room temperature", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 526,
-    question: "What is the most important principle in scar management?",
-    choices: ["Early intervention", "Tension reduction", "Moisture maintenance", "All of the above"],
-    correctAnswer: 3
+    question: "Power failure in the OR requires:",
+    choices: ["Stopping surgery", "Emergency power", "Evacuation", "Calling maintenance"],
+    correctAnswer: 1
   },
   {
     id: 527,
-    question: "Which imaging study is most useful for flap planning?",
-    choices: ["CT scan", "MRI", "Angiography", "Doppler ultrasound"],
-    correctAnswer: 2
+    question: "Equipment failure during surgery requires:",
+    choices: ["Continuing with broken equipment", "Immediate replacement", "Stopping surgery", "Improvisation"],
+    correctAnswer: 1
   },
   {
     id: 528,
-    question: "What is the most common complication of Z-plasty?",
-    choices: ["Infection", "Necrosis", "Contracture", "Asymmetry"],
-    correctAnswer: 3
+    question: "Communication during emergencies should be:",
+    choices: ["Quiet", "Clear and direct", "Minimal", "Delayed"],
+    correctAnswer: 1
   },
   {
     id: 529,
-    question: "Which factor most affects graft survival?",
-    choices: ["Size", "Thickness", "Vascularity of bed", "Age of patient"],
+    question: "The team leader during emergencies is usually:",
+    choices: ["Circulating nurse", "Anesthesiologist", "Surgeon", "Whoever is available"],
     correctAnswer: 2
   },
   {
     id: 530,
-    question: "What is the preferred treatment for keloid scars?",
-    choices: ["Excision alone", "Steroid injection", "Radiation", "Combination therapy"],
-    correctAnswer: 3
+    question: "Emergency medications should be:",
+    choices: ["Locked away", "Readily available", "Expired", "Limited"],
+    correctAnswer: 1
   },
   {
     id: 531,
-    question: "Which nerve provides sensation to the thumb?",
-    choices: ["Median", "Ulnar", "Radial", "All of the above"],
-    correctAnswer: 3
+    question: "What is the primary purpose of surgical drains?",
+    choices: ["Decoration", "Remove fluid collections", "Prevent infection", "Speed healing"],
+    correctAnswer: 1
   },
   {
     id: 532,
-    question: "What is the most common indication for hand reconstruction?",
-    choices: ["Trauma", "Congenital defects", "Arthritis", "Tumors"],
-    correctAnswer: 0
+    question: "Passive drains work by:",
+    choices: ["Suction", "Gravity", "Pressure", "Electricity"],
+    correctAnswer: 1
   },
   {
     id: 533,
-    question: "Which technique is preferred for lip reconstruction?",
-    choices: ["Local flaps", "Free flaps", "Prosthetics", "Primary closure"],
-    correctAnswer: 0
+    question: "Active drains work by:",
+    choices: ["Gravity", "Suction", "Pressure", "Capillary action"],
+    correctAnswer: 1
   },
   {
     id: 534,
-    question: "What is the most important consideration in facial reconstruction?",
-    choices: ["Function", "Aesthetics", "Both equally", "Cost"],
-    correctAnswer: 2
+    question: "Penrose drains are:",
+    choices: ["Active drains", "Passive drains", "Suction drains", "Irrigation drains"],
+    correctAnswer: 1
   },
   {
     id: 535,
-    question: "Which material is preferred for cranial reconstruction?",
-    choices: ["Titanium mesh", "Bone graft", "PEEK", "All are acceptable"],
-    correctAnswer: 3
+    question: "Jackson-Pratt drains are:",
+    choices: ["Passive drains", "Active drains", "Gravity drains", "Irrigation drains"],
+    correctAnswer: 1
   },
   {
     id: 536,
-    question: "What is the most common complication of pressure sore surgery?",
-    choices: ["Infection", "Recurrence", "Flap necrosis", "Hematoma"],
+    question: "Hemovac drains use:",
+    choices: ["Gravity", "Spring-loaded suction", "Electric suction", "Pressure"],
     correctAnswer: 1
   },
   {
     id: 537,
-    question: "Which flap is most commonly used for breast reconstruction after mastectomy?",
-    choices: ["TRAM", "DIEP", "Latissimus dorsi", "All are common"],
+    question: "Chest tubes are used for:",
+    choices: ["Pneumothorax", "Hemothorax", "Pleural effusion", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 538,
-    question: "What is the ideal timing for scar revision?",
-    choices: ["Immediately", "6 weeks", "6-12 months", "2 years"],
+    question: "Chest tube drainage systems have:",
+    choices: ["One chamber", "Two chambers", "Three chambers", "Variable chambers"],
     correctAnswer: 2
   },
   {
     id: 539,
-    question: "Which factor most influences wound healing in the elderly?",
-    choices: ["Age", "Nutrition", "Blood supply", "Medications"],
-    correctAnswer: 2
-  },
-  {
-    id: 540,
-    question: "What is the most common indication for tissue expansion in children?",
-    choices: ["Burn reconstruction", "Congenital defects", "Tumor excision", "Trauma"],
+    question: "The water seal chamber prevents:",
+    choices: ["Drainage", "Air entry", "Suction", "Infection"],
     correctAnswer: 1
   },
   {
+    id: 540,
+    question: "Nasogastric tubes are used for:",
+    choices: ["Feeding only", "Decompression only", "Both feeding and decompression", "Medication administration only"],
+    correctAnswer: 2
+  },
+  {
     id: 541,
-    question: "Which technique provides the best outcome for syndactyly repair?",
-    choices: ["Simple division", "Z-plasty", "Skin grafts", "All techniques combined"],
+    question: "Foley catheters are used for:",
+    choices: ["Bladder drainage", "Bladder irrigation", "Medication instillation", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 542,
-    question: "What is the most important factor in preventing contractures?",
-    choices: ["Early surgery", "Physical therapy", "Splinting", "All of the above"],
-    correctAnswer: 3
+    question: "T-tubes are used for:",
+    choices: ["Gastric drainage", "Biliary drainage", "Chest drainage", "Wound drainage"],
+    correctAnswer: 1
   },
   {
     id: 543,
-    question: "Which nerve is most commonly injured in brachial plexus injuries?",
-    choices: ["C5-C6", "C7", "C8-T1", "All roots equally"],
-    correctAnswer: 0
+    question: "Drain removal timing depends on:",
+    choices: ["Output volume", "Output character", "Patient condition", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 544,
-    question: "What is the preferred treatment for fingertip amputations?",
-    choices: ["Revision amputation", "Composite graft", "Local flaps", "Healing by secondary intention"],
-    correctAnswer: 2
+    question: "Complications of drains include:",
+    choices: ["Infection", "Blockage", "Dislodgement", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 545,
-    question: "Which factor is most important in free flap survival?",
-    choices: ["Flap size", "Recipient vessels", "Surgical technique", "All equally important"],
+    question: "Drain care includes:",
+    choices: ["Monitoring output", "Maintaining patency", "Preventing infection", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 546,
-    question: "What is the most common donor site for free tissue transfer to the head and neck?",
-    choices: ["Radial forearm", "Fibula", "Latissimus dorsi", "Rectus abdominis"],
-    correctAnswer: 0
+    question: "Closed drainage systems:",
+    choices: ["Increase infection risk", "Decrease infection risk", "Have no effect on infection", "Are not recommended"],
+    correctAnswer: 1
   },
   {
     id: 547,
-    question: "Which imaging modality is most useful for perforator flap planning?",
-    choices: ["CT angiography", "MR angiography", "Doppler ultrasound", "All are useful"],
-    correctAnswer: 0
+    question: "Drain output should be:",
+    choices: ["Ignored", "Measured and recorded", "Estimated", "Discarded"],
+    correctAnswer: 1
   },
   {
     id: 548,
-    question: "What is the most common indication for circumcision?",
-    choices: ["Phimosis", "Religious reasons", "Hygiene", "All of the above"],
-    correctAnswer: 3
+    question: "Sudden cessation of drain output may indicate:",
+    choices: ["Healing", "Blockage", "Normal progression", "Improvement"],
+    correctAnswer: 1
   },
   {
     id: 549,
-    question: "Which approach is most commonly used for radical prostatectomy?",
-    choices: ["Open retropubic", "Laparoscopic", "Robotic", "Perineal"],
-    correctAnswer: 2
+    question: "Drain irrigation should be:",
+    choices: ["Routine", "Only when ordered", "Never performed", "Patient preference"],
+    correctAnswer: 1
   },
   {
     id: 550,
-    question: "What is the most common complication of TURP?",
-    choices: ["Bleeding", "Incontinence", "Retrograde ejaculation", "Stricture"],
+    question: "The most important aspect of drain management is:",
+    choices: ["Cost", "Patient comfort", "Preventing complications", "Appearance"],
     correctAnswer: 2
   },
   {
     id: 551,
-    question: "Which stone composition is most common in kidney stones?",
-    choices: ["Calcium oxalate", "Uric acid", "Struvite", "Cystine"],
-    correctAnswer: 0
+    question: "What is the most important factor in surgical team communication?",
+    choices: ["Volume", "Clarity", "Speed", "Frequency"],
+    correctAnswer: 1
   },
   {
     id: 552,
-    question: "What is the preferred treatment for small renal cell carcinoma?",
-    choices: ["Radical nephrectomy", "Partial nephrectomy", "Ablation", "Observation"],
-    correctAnswer: 1
+    question: "SBAR communication includes:",
+    choices: ["Situation, Background, Assessment, Recommendation", "Safety, Barriers, Actions, Results", "Surgery, Bleeding, Anesthesia, Recovery", "Sterile, Bacteria, Antiseptic, Rinse"],
+    correctAnswer: 0
   },
   {
     id: 553,
-    question: "Which approach is most commonly used for pyeloplasty?",
-    choices: ["Open", "Laparoscopic", "Robotic", "All equally common"],
-    correctAnswer: 2
+    question: "Closed-loop communication means:",
+    choices: ["Whispering", "Confirming receipt of information", "Speaking in circles", "Using codes"],
+    correctAnswer: 1
   },
   {
     id: 554,
-    question: "What is the most common cause of acute urinary retention in men?",
-    choices: ["BPH", "Prostate cancer", "Stricture", "Neurogenic bladder"],
-    correctAnswer: 0
+    question: "Critical language includes:",
+    choices: ["Please", "Thank you", "I need clarity", "All of the above"],
+    correctAnswer: 2
   },
   {
     id: 555,
-    question: "Which procedure is most commonly performed for stress incontinence in women?",
-    choices: ["Burch colposuspension", "Sling procedure", "Artificial sphincter", "Injectable bulking agents"],
-    correctAnswer: 1
+    question: "The two-challenge rule means:",
+    choices: ["Challenging twice", "Two people challenge", "Challenge until acknowledged", "No challenges allowed"],
+    correctAnswer: 2
   },
   {
     id: 556,
-    question: "What is the most common indication for nephrectomy?",
-    choices: ["Renal cell carcinoma", "Non-functioning kidney", "Trauma", "Stones"],
-    correctAnswer: 0
-  },
-  {
-    id: 557,
-    question: "Which imaging study is most useful for staging bladder cancer?",
-    choices: ["CT scan", "MRI", "Ultrasound", "IVP"],
-    correctAnswer: 0
-  },
-  {
-    id: 558,
-    question: "What is the most common complication of radical cystectomy?",
-    choices: ["Infection", "Bowel complications", "Urinary leak", "Bleeding"],
+    question: "Briefings should occur:",
+    choices: ["After surgery", "Before surgery", "During surgery", "Never"],
     correctAnswer: 1
   },
   {
+    id: 557,
+    question: "Debriefings should occur:",
+    choices: ["Before surgery", "During surgery", "After surgery", "Never"],
+    correctAnswer: 2
+  },
+  {
+    id: 558,
+    question: "Huddles are used for:",
+    choices: ["Team building", "Information sharing", "Problem solving", "All of the above"],
+    correctAnswer: 3
+  },
+  {
     id: 559,
-    question: "Which procedure is preferred for ureteropelvic junction obstruction?",
-    choices: ["Pyeloplasty", "Endopyelotomy", "Nephrectomy", "Stenting"],
-    correctAnswer: 0
+    question: "Handoff communication should include:",
+    choices: ["Patient condition", "Procedures performed", "Ongoing concerns", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 560,
-    question: "What is the most common cause of hematuria in children?",
-    choices: ["UTI", "Glomerulonephritis", "Trauma", "Hypercalciuria"],
+    question: "ISBAR adds what to SBAR?",
+    choices: ["Introduction", "Identification", "Information", "Instruction"],
     correctAnswer: 1
   },
   {
     id: 561,
-    question: "Which nerve controls bladder emptying?",
-    choices: ["Sympathetic", "Parasympathetic", "Somatic", "All of the above"],
-    correctAnswer: 3
+    question: "Conflict resolution in the OR should:",
+    choices: ["Be avoided", "Be addressed immediately", "Wait until after surgery", "Be ignored"],
+    correctAnswer: 1
   },
   {
     id: 562,
-    question: "What is the most common indication for ureteroscopy?",
-    choices: ["Stone removal", "Tumor biopsy", "Stricture treatment", "Stent placement"],
-    correctAnswer: 0
+    question: "Speaking up for patient safety is:",
+    choices: ["Optional", "Required", "Discouraged", "Punishable"],
+    correctAnswer: 1
   },
   {
     id: 563,
-    question: "Which approach is preferred for adrenalectomy?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Retroperitoneoscopic"],
+    question: "Hierarchy in the OR should:",
+    choices: ["Prevent communication", "Not affect safety communication", "Be absolute", "Discourage questions"],
     correctAnswer: 1
   },
   {
     id: 564,
-    question: "What is the most common complication of extracorporeal shock wave lithotripsy?",
-    choices: ["Steinstrasse", "Hematoma", "Infection", "Perforation"],
-    correctAnswer: 0
+    question: "Team training improves:",
+    choices: ["Communication", "Patient outcomes", "Job satisfaction", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 565,
-    question: "Which tumor marker is most specific for testicular cancer?",
-    choices: ["AFP", "beta-HCG", "LDH", "None are specific"],
+    question: "Simulation training is used for:",
+    choices: ["Technical skills", "Communication skills", "Emergency scenarios", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 566,
-    question: "What is the most common indication for orchiopexy?",
-    choices: ["Cryptorchidism", "Torsion", "Trauma", "Infection"],
-    correctAnswer: 0
+    question: "Just culture promotes:",
+    choices: ["Blame", "Learning from errors", "Punishment", "Secrecy"],
+    correctAnswer: 1
   },
   {
     id: 567,
-    question: "Which procedure is most commonly performed for varicocele?",
-    choices: ["Inguinal approach", "Retroperitoneal approach", "Laparoscopic", "Percutaneous embolization"],
+    question: "Error reporting should be:",
+    choices: ["Punitive", "Voluntary", "Mandatory", "Discouraged"],
     correctAnswer: 2
   },
   {
     id: 568,
-    question: "What is the most common cause of erectile dysfunction?",
-    choices: ["Psychological", "Vascular", "Neurogenic", "Hormonal"],
+    question: "Root cause analysis is used to:",
+    choices: ["Assign blame", "Identify system failures", "Punish individuals", "Ignore problems"],
     correctAnswer: 1
   },
   {
     id: 569,
-    question: "Which approach is preferred for vesicoureteral reflux repair?",
-    choices: ["Open reimplantation", "Laparoscopic", "Robotic", "Endoscopic injection"],
-    correctAnswer: 3
+    question: "High reliability organizations focus on:",
+    choices: ["Perfection", "Learning from failures", "Blame assignment", "Cost reduction"],
+    correctAnswer: 1
   },
   {
     id: 570,
-    question: "What is the most common complication of penile prosthesis implantation?",
-    choices: ["Infection", "Mechanical failure", "Erosion", "Pain"],
-    correctAnswer: 0
+    question: "The most effective way to improve surgical outcomes is:",
+    choices: ["Individual excellence", "Team-based care", "Technology", "Speed"],
+    correctAnswer: 1
   },
   {
     id: 571,
-    question: "Which imaging study is most useful for evaluating kidney function?",
-    choices: ["CT scan", "MRI", "Nuclear medicine scan", "Ultrasound"],
-    correctAnswer: 2
+    question: "What is the primary goal of quality improvement in surgery?",
+    choices: ["Cost reduction", "Patient safety and outcomes", "Efficiency", "Staff satisfaction"],
+    correctAnswer: 1
   },
   {
     id: 572,
-    question: "What is the most common indication for percutaneous nephrolithotomy?",
-    choices: ["Large stones", "Multiple stones", "Staghorn calculi", "All of the above"],
-    correctAnswer: 3
+    question: "The Plan-Do-Study-Act (PDSA) cycle is used for:",
+    choices: ["Planning surgery", "Quality improvement", "Staff scheduling", "Inventory management"],
+    correctAnswer: 1
   },
   {
     id: 573,
-    question: "Which procedure is most effective for recurrent UTIs in women?",
-    choices: ["Prophylactic antibiotics", "Behavioral modification", "Surgical intervention", "All approaches combined"],
-    correctAnswer: 3
+    question: "Lean methodology focuses on:",
+    choices: ["Reducing waste", "Increasing speed", "Reducing staff", "Increasing volume"],
+    correctAnswer: 0
   },
   {
     id: 574,
-    question: "What is the most common cause of chronic kidney disease?",
-    choices: ["Diabetes", "Hypertension", "Glomerulonephritis", "Polycystic kidney disease"],
+    question: "Six Sigma aims to:",
+    choices: ["Reduce variation", "Increase speed", "Reduce costs", "Increase volume"],
     correctAnswer: 0
   },
   {
     id: 575,
-    question: "Which approach is preferred for living donor nephrectomy?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Hand-assisted laparoscopic"],
+    question: "Surgical checklists improve:",
+    choices: ["Speed", "Safety", "Efficiency", "Costs"],
     correctAnswer: 1
   },
   {
     id: 576,
-    question: "What is the most important factor in kidney transplant success?",
-    choices: ["HLA matching", "ABO compatibility", "Age matching", "All equally important"],
-    correctAnswer: 3
+    question: "The WHO Surgical Safety Checklist has:",
+    choices: ["One phase", "Two phases", "Three phases", "Four phases"],
+    correctAnswer: 2
   },
   {
     id: 577,
-    question: "Which complication is most common after kidney transplantation?",
-    choices: ["Rejection", "Infection", "Cardiovascular disease", "Malignancy"],
+    question: "Surgical site infection rates are a measure of:",
+    choices: ["Efficiency", "Quality", "Speed", "Cost"],
     correctAnswer: 1
   },
   {
     id: 578,
-    question: "What is the most common indication for artificial urinary sphincter?",
-    choices: ["Post-prostatectomy incontinence", "Neurogenic bladder", "Congenital sphincter deficiency", "Trauma"],
-    correctAnswer: 0
+    question: "Benchmarking compares performance to:",
+    choices: ["Previous performance", "Best practices", "Average performance", "Minimum standards"],
+    correctAnswer: 1
   },
   {
     id: 579,
-    question: "Which procedure is most effective for overactive bladder?",
-    choices: ["Medications", "Botulinum toxin injection", "Sacral neuromodulation", "All can be effective"],
-    correctAnswer: 3
+    question: "Key performance indicators (KPIs) should be:",
+    choices: ["Numerous", "Measurable", "Complex", "Subjective"],
+    correctAnswer: 1
   },
   {
     id: 580,
-    question: "What is the most common cause of acute kidney injury?",
-    choices: ["Prerenal", "Intrinsic renal", "Postrenal", "All equally common"],
-    correctAnswer: 0
-  },
-  {
-    id: 581,
-    question: "Which imaging study is best for detecting renal masses?",
-    choices: ["CT scan", "MRI", "Ultrasound", "All are equally effective"],
-    correctAnswer: 0
-  },
-  {
-    id: 582,
-    question: "What is the most common complication of urinary diversion?",
-    choices: ["Infection", "Metabolic acidosis", "Stomal complications", "All are common"],
+    question: "Patient satisfaction is measured by:",
+    choices: ["Surveys", "Complaints", "Compliments", "All of the above"],
     correctAnswer: 3
   },
   {
+    id: 581,
+    question: "Surgical outcomes include:",
+    choices: ["Mortality", "Morbidity", "Length of stay", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 582,
+    question: "Risk adjustment accounts for:",
+    choices: ["Patient factors", "Surgeon factors", "Hospital factors", "All of the above"],
+    correctAnswer: 0
+  },
+  {
     id: 583,
-    question: "Which approach is preferred for retroperitoneal lymph node dissection?",
-    choices: ["Open", "Laparoscopic", "Robotic", "All are acceptable"],
+    question: "Continuous quality improvement is:",
+    choices: ["One-time effort", "Ongoing process", "Annual activity", "Optional"],
     correctAnswer: 1
   },
   {
     id: 584,
-    question: "What is the most important prognostic factor in prostate cancer?",
-    choices: ["PSA level", "Gleason score", "Clinical stage", "All are important"],
-    correctAnswer: 3
+    question: "Quality committees should include:",
+    choices: ["Surgeons only", "Nurses only", "Multidisciplinary members", "Administrators only"],
+    correctAnswer: 2
   },
   {
     id: 585,
-    question: "Which treatment is most effective for Peyronie's disease?",
-    choices: ["Medical therapy", "Surgery", "Combination therapy", "Depends on severity"],
-    correctAnswer: 3
+    question: "Data collection for quality improvement should be:",
+    choices: ["Sporadic", "Systematic", "Optional", "Minimal"],
+    correctAnswer: 1
   },
   {
     id: 586,
-    question: "What is the most common indication for urethroplasty?",
-    choices: ["Urethral stricture", "Hypospadias", "Trauma", "Cancer"],
-    correctAnswer: 0
+    question: "Transparency in quality reporting:",
+    choices: ["Should be avoided", "Improves outcomes", "Increases liability", "Is not important"],
+    correctAnswer: 1
   },
   {
     id: 587,
-    question: "Which approach is preferred for simple nephrectomy?",
-    choices: ["Open", "Laparoscopic", "Hand-assisted", "All are acceptable"],
+    question: "Pay-for-performance programs link:",
+    choices: ["Volume to payment", "Quality to payment", "Speed to payment", "Cost to payment"],
     correctAnswer: 1
   },
   {
     id: 588,
-    question: "What is the most common cause of male infertility?",
-    choices: ["Varicocele", "Obstruction", "Hormonal", "Idiopathic"],
-    correctAnswer: 3
-  },
-  {
-    id: 589,
-    question: "Which procedure is most effective for priapism?",
-    choices: ["Aspiration", "Shunting", "Medical therapy", "Depends on type"],
-    correctAnswer: 3
-  },
-  {
-    id: 590,
-    question: "What is the most common complication of urethral catheterization?",
-    choices: ["Infection", "Trauma", "Blockage", "All are common"],
+    question: "Accreditation standards focus on:",
+    choices: ["Minimum requirements", "Best practices", "Cost control", "Efficiency"],
     correctAnswer: 0
   },
   {
+    id: 589,
+    question: "The Joint Commission emphasizes:",
+    choices: ["Cost reduction", "Patient safety", "Efficiency", "Volume"],
+    correctAnswer: 1
+  },
+  {
+    id: 590,
+    question: "The most effective quality improvement involves:",
+    choices: ["Top-down mandates", "Bottom-up initiatives", "Both top-down and bottom-up", "External consultants"],
+    correctAnswer: 2
+  },
+  {
     id: 591,
-    question: "Which imaging study is most useful for trauma evaluation?",
-    choices: ["CT scan", "IVP", "Ultrasound", "MRI"],
+    question: "What is the most common type of surgical suture?",
+    choices: ["Absorbable", "Non-absorbable", "Monofilament", "Multifilament"],
     correctAnswer: 0
   },
   {
     id: 592,
-    question: "What is the most common indication for suprapubic catheter?",
-    choices: ["Urethral trauma", "Long-term drainage", "Patient comfort", "All of the above"],
-    correctAnswer: 3
+    question: "Vicryl suture is:",
+    choices: ["Non-absorbable", "Absorbable", "Permanent", "Metal"],
+    correctAnswer: 1
   },
   {
     id: 593,
-    question: "Which approach is preferred for pelvic organ prolapse repair?",
-    choices: ["Vaginal", "Abdominal", "Laparoscopic", "Depends on prolapse type"],
-    correctAnswer: 3
+    question: "Silk suture is:",
+    choices: ["Absorbable", "Non-absorbable", "Synthetic", "Monofilament"],
+    correctAnswer: 1
   },
   {
     id: 594,
-    question: "What is the most important factor in wound healing after urological surgery?",
-    choices: ["Age", "Nutrition", "Blood supply", "All are important"],
-    correctAnswer: 3
+    question: "Prolene suture is:",
+    choices: ["Absorbable", "Non-absorbable", "Natural", "Braided"],
+    correctAnswer: 1
   },
   {
     id: 595,
-    question: "Which complication is most serious after major urological surgery?",
-    choices: ["Bleeding", "Infection", "Organ injury", "All are serious"],
-    correctAnswer: 3
+    question: "PDS suture is:",
+    choices: ["Non-absorbable", "Absorbable monofilament", "Natural", "Braided"],
+    correctAnswer: 1
   },
   {
     id: 596,
-    question: "What is the most common indication for urinary diversion?",
-    choices: ["Bladder cancer", "Neurogenic bladder", "Trauma", "Congenital anomalies"],
-    correctAnswer: 0
+    question: "Chromic gut is absorbed in:",
+    choices: ["5-7 days", "10-14 days", "21-28 days", "60-90 days"],
+    correctAnswer: 1
   },
   {
     id: 597,
-    question: "Which factor most influences surgical outcome in urology?",
-    choices: ["Surgeon experience", "Patient selection", "Technical factors", "All are important"],
-    correctAnswer: 3
+    question: "Vicryl is absorbed in:",
+    choices: ["10-14 days", "56-70 days", "90-120 days", "180 days"],
+    correctAnswer: 1
   },
   {
     id: 598,
-    question: "What is the most common indication for tonsillectomy?",
-    choices: ["Recurrent tonsillitis", "Sleep apnea", "Peritonsillar abscess", "Malignancy"],
-    correctAnswer: 0
+    question: "Suture size 2-0 is:",
+    choices: ["Smaller than 3-0", "Larger than 3-0", "Same as 3-0", "Not a real size"],
+    correctAnswer: 1
   },
   {
     id: 599,
-    question: "Which approach is most commonly used for thyroidectomy?",
-    choices: ["Transcervical", "Endoscopic", "Robotic", "Open cervical"],
+    question: "The smallest suture size commonly used is:",
+    choices: ["6-0", "8-0", "10-0", "12-0"],
     correctAnswer: 3
   },
   {
     id: 600,
-    question: "What is the most common complication of thyroidectomy?",
-    choices: ["Bleeding", "Recurrent laryngeal nerve injury", "Hypocalcemia", "Infection"],
-    correctAnswer: 2
+    question: "Monofilament sutures:",
+    choices: ["Have multiple strands", "Have single strand", "Are always absorbable", "Are always non-absorbable"],
+    correctAnswer: 1
   },
   {
     id: 601,
-    question: "Which procedure is most effective for chronic sinusitis?",
-    choices: ["Medical therapy", "Balloon sinuplasty", "Endoscopic sinus surgery", "All can be effective"],
-    correctAnswer: 3
+    question: "Multifilament sutures:",
+    choices: ["Have single strand", "Have multiple strands", "Are always non-absorbable", "Are never used"],
+    correctAnswer: 1
   },
   {
     id: 602,
-    question: "What is the most common cause of hearing loss in children?",
-    choices: ["Congenital", "Otitis media", "Trauma", "Genetic"],
+    question: "Braided sutures:",
+    choices: ["Are monofilament", "Are multifilament", "Are always absorbable", "Are never used"],
     correctAnswer: 1
   },
   {
     id: 603,
-    question: "Which imaging study is most useful for temporal bone evaluation?",
-    choices: ["CT scan", "MRI", "X-ray", "Ultrasound"],
-    correctAnswer: 0
+    question: "Suture memory refers to:",
+    choices: ["Surgeon's memory", "Tendency to return to package shape", "Absorption time", "Strength"],
+    correctAnswer: 1
   },
   {
     id: 604,
-    question: "What is the most common indication for cochlear implantation?",
-    choices: ["Conductive hearing loss", "Sensorineural hearing loss", "Mixed hearing loss", "Tinnitus"],
+    question: "Tissue reactivity is:",
+    choices: ["Always good", "Body's response to suture", "Suture strength", "Absorption rate"],
     correctAnswer: 1
   },
   {
     id: 605,
-    question: "Which approach is preferred for parotidectomy?",
-    choices: ["Pre-auricular", "Post-auricular", "Cervical", "Endoscopic"],
-    correctAnswer: 0
+    question: "Capillarity is:",
+    choices: ["Suture strength", "Fluid wicking along suture", "Absorption rate", "Tissue reaction"],
+    correctAnswer: 1
   },
   {
     id: 606,
-    question: "What is the most important structure to preserve during parotidectomy?",
-    choices: ["Facial nerve", "Accessory nerve", "Hypoglossal nerve", "Vagus nerve"],
-    correctAnswer: 0
+    question: "Knot security depends on:",
+    choices: ["Suture material", "Knot technique", "Tissue type", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 607,
-    question: "Which procedure is most effective for obstructive sleep apnea?",
-    choices: ["UPPP", "CPAP", "Surgery", "Depends on severity"],
-    correctAnswer: 3
+    question: "The surgeon's knot has:",
+    choices: ["One throw", "Two throws on first loop", "Three throws", "No throws"],
+    correctAnswer: 1
   },
   {
     id: 608,
-    question: "What is the most common cause of epistaxis?",
-    choices: ["Trauma", "Hypertension", "Dry air", "Local irritation"],
-    correctAnswer: 3
+    question: "Square knots:",
+    choices: ["Are insecure", "Lie flat", "Are difficult to tie", "Are never used"],
+    correctAnswer: 1
   },
   {
     id: 609,
-    question: "Which area of the nose is most common for nosebleeds?",
-    choices: ["Kiesselbach's plexus", "Superior turbinate", "Middle meatus", "Sphenoethmoid recess"],
-    correctAnswer: 0
+    question: "Granny knots:",
+    choices: ["Are preferred", "Are insecure", "Are the same as square knots", "Are stronger"],
+    correctAnswer: 1
   },
   {
     id: 610,
-    question: "What is the most common benign laryngeal tumor?",
-    choices: ["Vocal cord polyp", "Vocal cord nodule", "Papilloma", "Granuloma"],
+    question: "Instrument ties are used when:",
+    choices: ["Sutures are long", "Sutures are short", "Speed is needed", "Precision is needed"],
     correctAnswer: 1
   },
   {
     id: 611,
-    question: "Which approach is preferred for vocal cord surgery?",
-    choices: ["Direct laryngoscopy", "Indirect laryngoscopy", "Endoscopic", "Open cervical"],
-    correctAnswer: 0
+    question: "Hand ties are used when:",
+    choices: ["Sutures are short", "Sutures are long", "Speed is needed", "Instruments are unavailable"],
+    correctAnswer: 1
   },
   {
     id: 612,
-    question: "What is the most common indication for tracheostomy?",
-    choices: ["Upper airway obstruction", "Prolonged ventilation", "Secretion management", "All are common"],
-    correctAnswer: 3
+    question: "Interrupted sutures:",
+    choices: ["Are continuous", "Are placed individually", "Are faster", "Are weaker"],
+    correctAnswer: 1
   },
   {
     id: 613,
-    question: "Which level is preferred for tracheostomy?",
-    choices: ["2nd tracheal ring", "3rd tracheal ring", "4th tracheal ring", "Between 2nd and 3rd rings"],
-    correctAnswer: 3
+    question: "Running sutures:",
+    choices: ["Are interrupted", "Are continuous", "Are slower", "Are always absorbable"],
+    correctAnswer: 1
   },
   {
     id: 614,
-    question: "What is the most common complication of mastoidectomy?",
-    choices: ["Hearing loss", "Facial nerve injury", "Infection", "Dizziness"],
+    question: "Mattress sutures:",
+    choices: ["Are simple", "Provide eversion", "Are weak", "Are never used"],
     correctAnswer: 1
   },
   {
     id: 615,
-    question: "Which approach is used for acoustic neuroma removal?",
-    choices: ["Translabyrinthine", "Retrosigmoid", "Middle fossa", "All are used"],
-    correctAnswer: 3
+    question: "Subcuticular sutures:",
+    choices: ["Are visible", "Are placed in dermis", "Are always interrupted", "Are always non-absorbable"],
+    correctAnswer: 1
   },
   {
     id: 616,
-    question: "What is the most common indication for septoplasty?",
-    choices: ["Cosmetic", "Nasal obstruction", "Chronic sinusitis", "Epistaxis"],
+    question: "Purse-string sutures:",
+    choices: ["Close in straight line", "Close in circular pattern", "Are always interrupted", "Are never used"],
     correctAnswer: 1
   },
   {
     id: 617,
-    question: "Which procedure is most effective for Meniere's disease?",
-    choices: ["Medical therapy", "Vestibular nerve section", "Labyrinthectomy", "Depends on hearing"],
-    correctAnswer: 3
-  },
-  {
-    id: 618,
-    question: "What is the most common cause of facial nerve paralysis?",
-    choices: ["Bell's palsy", "Trauma", "Tumor", "Infection"],
-    correctAnswer: 0
-  },
-  {
-    id: 619,
-    question: "Which imaging study is best for salivary gland evaluation?",
-    choices: ["CT scan", "MRI", "Ultrasound", "Sialography"],
+    question: "Retention sutures:",
+    choices: ["Are delicate", "Provide extra support", "Are always absorbable", "Are subcuticular"],
     correctAnswer: 1
   },
   {
-    id: 620,
-    question: "What is the most common salivary gland tumor?",
-    choices: ["Pleomorphic adenoma", "Warthin tumor", "Mucoepidermoid carcinoma", "Adenoid cystic carcinoma"],
-    correctAnswer: 0
-  },
-  {
-    id: 621,
-    question: "Which approach is preferred for submandibular gland removal?",
-    choices: ["Transcervical", "Intraoral", "Combined", "Endoscopic"],
-    correctAnswer: 0
-  },
-  {
-    id: 622,
-    question: "What is the most important consideration in neck dissection?",
-    choices: ["Oncologic clearance", "Functional preservation", "Both equally", "Cosmetic outcome"],
-    correctAnswer: 2
-  },
-  {
-    id: 623,
-    question: "Which type of neck dissection removes the most structures?",
-    choices: ["Radical", "Modified radical", "Selective", "Extended radical"],
+    id: 618,
+    question: "Suture removal timing depends on:",
+    choices: ["Suture type", "Location", "Patient factors", "All of the above"],
     correctAnswer: 3
   },
   {
+    id: 619,
+    question: "Facial sutures are typically removed in:",
+    choices: ["3-5 days", "7-10 days", "14 days", "21 days"],
+    correctAnswer: 0
+  },
+  {
+    id: 620,
+    question: "The most important factor in wound closure is:",
+    choices: ["Suture type", "Technique", "Speed", "Cost"],
+    correctAnswer: 1
+  },
+  {
+    id: 621,
+    question: "What is the primary purpose of surgical staplers?",
+    choices: ["Speed", "Hemostasis", "Tissue approximation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 622,
+    question: "Skin staplers use:",
+    choices: ["Absorbable staples", "Non-absorbable staples", "Titanium staples", "Steel staples"],
+    correctAnswer: 1
+  },
+  {
+    id: 623,
+    question: "GIA staplers create:",
+    choices: ["Single staple line", "Double staple line with division", "Circular anastomosis", "Skin closure"],
+    correctAnswer: 1
+  },
+  {
     id: 624,
-    question: "What is the most common indication for laryngectomy?",
-    choices: ["Laryngeal cancer", "Trauma", "Infection", "Stenosis"],
+    question: "TA staplers create:",
+    choices: ["Single staple line", "Double staple line with division", "Circular anastomosis", "Skin closure"],
     correctAnswer: 0
   },
   {
     id: 625,
-    question: "Which reconstruction is preferred after total laryngectomy?",
-    choices: ["Primary closure", "Flap reconstruction", "TEP", "All are options"],
-    correctAnswer: 3
-  },
-  {
-    id: 626,
-    question: "What is the most common complication of sinus surgery?",
-    choices: ["Bleeding", "Infection", "Scarring", "CSF leak"],
-    correctAnswer: 2
-  },
-  {
-    id: 627,
-    question: "Which approach is preferred for pituitary surgery?",
-    choices: ["Transcranial", "Transsphenoidal", "Endoscopic", "Combined"],
+    question: "EEA staplers create:",
+    choices: ["Linear staple line", "Circular anastomosis", "Skin closure", "Hemostasis only"],
     correctAnswer: 1
   },
   {
+    id: 626,
+    question: "Staple height is determined by:",
+    choices: ["Surgeon preference", "Tissue thickness", "Stapler type", "Patient size"],
+    correctAnswer: 1
+  },
+  {
+    id: 627,
+    question: "Staple malformation can be caused by:",
+    choices: ["Incorrect tissue thickness", "Dull staples", "Improper technique", "All of the above"],
+    correctAnswer: 3
+  },
+  {
     id: 628,
-    question: "What is the most common indication for rhinoplasty?",
-    choices: ["Cosmetic", "Functional", "Trauma", "All are common"],
+    question: "Advantages of staplers include:",
+    choices: ["Speed", "Consistency", "Reduced tissue handling", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 629,
-    question: "Which imaging study is most useful for skull base surgery planning?",
-    choices: ["CT scan", "MRI", "Angiography", "All are important"],
+    question: "Disadvantages of staplers include:",
+    choices: ["Cost", "Limited flexibility", "Potential malfunction", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 630,
-    question: "What is the most important factor in head and neck reconstruction?",
-    choices: ["Function", "Aesthetics", "Both equally", "Donor site morbidity"],
-    correctAnswer: 2
+    question: "Staple removal requires:",
+    choices: ["Special instruments", "Standard forceps", "Scissors", "Scalpel"],
+    correctAnswer: 0
   },
   {
     id: 631,
-    question: "Which flap is most commonly used for oral cavity reconstruction?",
-    choices: ["Radial forearm", "Fibula", "Latissimus dorsi", "Rectus abdominis"],
-    correctAnswer: 0
-  },
-  {
-    id: 632,
-    question: "What is the most common complication of free flap reconstruction?",
-    choices: ["Flap failure", "Donor site morbidity", "Infection", "Fistula"],
-    correctAnswer: 0
-  },
-  {
-    id: 633,
-    question: "Which approach is preferred for thyroid cancer surgery?",
-    choices: ["Hemithyroidectomy", "Total thyroidectomy", "Depends on tumor", "Subtotal thyroidectomy"],
+    question: "Tissue adhesives are used for:",
+    choices: ["Internal closure only", "External closure only", "Both internal and external closure", "Hemostasis only"],
     correctAnswer: 2
   },
   {
+    id: 632,
+    question: "Cyanoacrylate adhesives:",
+    choices: ["Require sutures", "Polymerize on contact with water", "Are permanent", "Require removal"],
+    correctAnswer: 1
+  },
+  {
+    id: 633,
+    question: "Fibrin sealants contain:",
+    choices: ["Cyanoacrylate", "Thrombin and fibrinogen", "Collagen only", "Synthetic polymers"],
+    correctAnswer: 1
+  },
+  {
     id: 634,
-    question: "What is the most important prognostic factor in head and neck cancer?",
-    choices: ["TNM stage", "Histology", "Location", "All are important"],
+    question: "Advantages of tissue adhesives include:",
+    choices: ["No needles required", "Waterproof seal", "Antimicrobial properties", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 635,
-    question: "Which treatment modality is most effective for early laryngeal cancer?",
-    choices: ["Surgery", "Radiation", "Both equally effective", "Chemotherapy"],
-    correctAnswer: 2
+    question: "Limitations of tissue adhesives include:",
+    choices: ["Lower tensile strength", "Not suitable for all wounds", "Cost", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 636,
-    question: "What is the most common cause of postoperative bleeding after tonsillectomy?",
-    choices: ["Inadequate hemostasis", "Infection", "Trauma", "Medication"],
-    correctAnswer: 0
+    question: "Surgical clips are made of:",
+    choices: ["Steel", "Titanium", "Absorbable materials", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 637,
-    question: "Which technique is preferred for adenoidectomy?",
-    choices: ["Curettage", "Electrocautery", "Coblation", "All are acceptable"],
-    correctAnswer: 3
+    question: "Hemoclips are used for:",
+    choices: ["Tissue approximation", "Vessel occlusion", "Skin closure", "Organ support"],
+    correctAnswer: 1
   },
   {
     id: 638,
-    question: "What is the most common indication for myringotomy?",
-    choices: ["Acute otitis media", "Chronic otitis media", "Hearing loss", "All are indications"],
-    correctAnswer: 3
+    question: "Clip appliers should be:",
+    choices: ["Reusable only", "Disposable only", "Either reusable or disposable", "Never used"],
+    correctAnswer: 2
   },
   {
     id: 639,
-    question: "Which type of tympanoplasty is most commonly performed?",
-    choices: ["Type I", "Type II", "Type III", "Type IV"],
+    question: "Proper clip application requires:",
+    choices: ["Perpendicular placement", "Parallel placement", "Angled placement", "Any placement"],
     correctAnswer: 0
   },
   {
     id: 640,
-    question: "What is the most important factor in ossiculoplasty success?",
-    choices: ["Prosthesis type", "Surgical technique", "Patient selection", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 641,
-    question: "Which approach is preferred for CSF leak repair?",
-    choices: ["Endoscopic", "Open craniotomy", "Combined", "Depends on location"],
-    correctAnswer: 3
-  },
-  {
-    id: 642,
-    question: "What is the most common complication of endoscopic sinus surgery?",
-    choices: ["Bleeding", "Infection", "Synechiae", "Anosmia"],
-    correctAnswer: 2
-  },
-  {
-    id: 643,
-    question: "Which imaging modality is best for evaluating chronic otitis media?",
-    choices: ["CT scan", "MRI", "X-ray", "Ultrasound"],
-    correctAnswer: 0
-  },
-  {
-    id: 644,
-    question: "What is the most common cause of conductive hearing loss?",
-    choices: ["Cerumen impaction", "Otitis media", "Otosclerosis", "All are common"],
-    correctAnswer: 3
-  },
-  {
-    id: 645,
-    question: "Which procedure is most effective for otosclerosis?",
-    choices: ["Stapedotomy", "Stapedectomy", "Both equally effective", "Hearing aid"],
-    correctAnswer: 2
-  },
-  {
-    id: 646,
-    question: "What is the most important consideration in pediatric ENT surgery?",
-    choices: ["Size differences", "Healing capacity", "Long-term effects", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 647,
-    question: "Which factor most influences outcome in head and neck surgery?",
-    choices: ["Surgeon experience", "Patient factors", "Tumor factors", "All are important"],
-    correctAnswer: 3
-  },
-  {
-    id: 648,
-    question: "What is the most common indication for appendectomy?",
-    choices: ["Acute appendicitis", "Chronic appendicitis", "Appendiceal tumor", "Prophylactic"],
-    correctAnswer: 0
-  },
-  {
-    id: 649,
-    question: "Which approach is preferred for appendectomy?",
-    choices: ["Open", "Laparoscopic", "Both equally effective", "Depends on complexity"],
-    correctAnswer: 3
-  },
-  {
-    id: 650,
-    question: "What is the most common complication of cholecystectomy?",
-    choices: ["Bleeding", "Bile duct injury", "Infection", "Port site hernia"],
+    question: "The most versatile wound closure method is:",
+    choices: ["Staples", "Sutures", "Adhesives", "Clips"],
     correctAnswer: 1
   },
   {
-    id: 651,
-    question: "Which imaging study is most useful for diagnosing cholecystitis?",
-    choices: ["Ultrasound", "CT scan", "HIDA scan", "All are useful"],
+    id: 641,
+    question: "What is the most common imaging modality used during surgery?",
+    choices: ["CT scan", "MRI", "Fluoroscopy", "Ultrasound"],
+    correctAnswer: 2
+  },
+  {
+    id: 642,
+    question: "C-arm fluoroscopy provides:",
+    choices: ["Static images", "Real-time imaging", "3D reconstruction", "Ultrasound imaging"],
+    correctAnswer: 1
+  },
+  {
+    id: 643,
+    question: "Radiation safety requires:",
+    choices: ["Lead aprons", "Distance from source", "Minimal exposure time", "All of the above"],
     correctAnswer: 3
   },
   {
+    id: 644,
+    question: "The ALARA principle means:",
+    choices: ["Always Low And Rarely Applied", "As Low As Reasonably Achievable", "All Levels Are Reasonably Acceptable", "Avoid Low And Reduce Applications"],
+    correctAnswer: 1
+  },
+  {
+    id: 645,
+    question: "Intraoperative ultrasound is used for:",
+    choices: ["Tissue identification", "Vessel location", "Tumor localization", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 646,
+    question: "Ultrasound guidance improves:",
+    choices: ["Speed only", "Accuracy", "Cost", "Visibility"],
+    correctAnswer: 1
+  },
+  {
+    id: 647,
+    question: "Intraoperative CT scanning provides:",
+    choices: ["Real-time imaging", "Cross-sectional images", "Ultrasound images", "Fluoroscopic images"],
+    correctAnswer: 1
+  },
+  {
+    id: 648,
+    question: "Intraoperative MRI is used for:",
+    choices: ["Bone imaging", "Soft tissue imaging", "Vascular imaging", "All imaging"],
+    correctAnswer: 1
+  },
+  {
+    id: 649,
+    question: "Image-guided surgery improves:",
+    choices: ["Speed", "Precision", "Cost", "Simplicity"],
+    correctAnswer: 1
+  },
+  {
+    id: 650,
+    question: "Navigation systems use:",
+    choices: ["GPS", "Infrared tracking", "Magnetic tracking", "Both infrared and magnetic tracking"],
+    correctAnswer: 3
+  },
+  {
+    id: 651,
+    question: "Stereotactic surgery requires:",
+    choices: ["No imaging", "Precise coordinates", "General anesthesia", "Open approach"],
+    correctAnswer: 1
+  },
+  {
     id: 652,
-    question: "What is the most common indication for splenectomy?",
-    choices: ["Trauma", "Hematologic disorders", "Malignancy", "All are common"],
+    question: "Frameless stereotaxy uses:",
+    choices: ["Head frame", "Fiducial markers", "No reference points", "Manual guidance"],
     correctAnswer: 1
   },
   {
     id: 653,
-    question: "Which approach is preferred for elective splenectomy?",
-    choices: ["Open", "Laparoscopic", "Hand-assisted", "Robotic"],
+    question: "Augmented reality in surgery:",
+    choices: ["Replaces imaging", "Overlays digital information", "Is not useful", "Increases radiation"],
     correctAnswer: 1
   },
   {
     id: 654,
-    question: "What is the most important consideration after splenectomy?",
-    choices: ["Bleeding", "Infection risk", "Thrombosis", "All are important"],
-    correctAnswer: 3
+    question: "3D imaging provides:",
+    choices: ["Flat images", "Depth perception", "Color enhancement", "Speed improvement"],
+    correctAnswer: 1
   },
   {
     id: 655,
-    question: "Which hernia is most common in adults?",
-    choices: ["Inguinal", "Umbilical", "Incisional", "Hiatal"],
-    correctAnswer: 0
+    question: "Contrast agents are used to:",
+    choices: ["Reduce radiation", "Enhance visualization", "Speed imaging", "Reduce cost"],
+    correctAnswer: 1
   },
   {
     id: 656,
-    question: "What is the preferred repair for inguinal hernia?",
-    choices: ["Tissue repair", "Mesh repair", "Laparoscopic", "Depends on patient"],
-    correctAnswer: 3
+    question: "Iodinated contrast can cause:",
+    choices: ["No reactions", "Allergic reactions", "Improved outcomes", "Faster healing"],
+    correctAnswer: 1
   },
   {
     id: 657,
-    question: "Which approach is preferred for incisional hernia repair?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Depends on size"],
-    correctAnswer: 3
+    question: "Gadolinium contrast is used for:",
+    choices: ["CT scans", "MRI scans", "X-rays", "Ultrasound"],
+    correctAnswer: 1
   },
   {
     id: 658,
-    question: "What is the most common complication of hernia repair?",
-    choices: ["Recurrence", "Infection", "Chronic pain", "Seroma"],
-    correctAnswer: 0
+    question: "Image quality depends on:",
+    choices: ["Resolution", "Contrast", "Noise level", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 659,
-    question: "Which procedure is most effective for GERD?",
-    choices: ["Medical therapy", "Nissen fundoplication", "LINX", "All can be effective"],
-    correctAnswer: 3
+    question: "Digital imaging allows:",
+    choices: ["Film processing", "Immediate viewing", "Slower workflow", "Higher costs"],
+    correctAnswer: 1
   },
   {
     id: 660,
-    question: "What is the most common indication for esophagectomy?",
-    choices: ["Esophageal cancer", "Barrett's esophagus", "Achalasia", "Perforation"],
-    correctAnswer: 0
+    question: "The most important aspect of intraoperative imaging is:",
+    choices: ["Speed", "Cost", "Patient safety", "Image quality"],
+    correctAnswer: 2
   },
   {
     id: 661,
-    question: "Which approach is preferred for esophagectomy?",
-    choices: ["Transhiatal", "Transthoracic", "Minimally invasive", "Depends on tumor location"],
-    correctAnswer: 3
+    question: "What is the most common type of surgical laser?",
+    choices: ["CO2", "Nd:YAG", "Argon", "Diode"],
+    correctAnswer: 0
   },
   {
     id: 662,
-    question: "What is the most common complication of esophagectomy?",
-    choices: ["Anastomotic leak", "Pneumonia", "Bleeding", "All are serious"],
-    correctAnswer: 3
+    question: "CO2 lasers are absorbed by:",
+    choices: ["Hemoglobin", "Water", "Melanin", "Protein"],
+    correctAnswer: 1
   },
   {
     id: 663,
-    question: "Which procedure is most effective for morbid obesity?",
-    choices: ["Gastric bypass", "Sleeve gastrectomy", "Adjustable band", "All are effective"],
-    correctAnswer: 3
+    question: "Nd:YAG lasers penetrate:",
+    choices: ["Superficially", "Deeply", "Not at all", "Variably"],
+    correctAnswer: 1
   },
   {
     id: 664,
-    question: "What is the most common complication of bariatric surgery?",
-    choices: ["Leak", "Bleeding", "Nutritional deficiency", "All are possible"],
-    correctAnswer: 3
+    question: "Argon lasers are absorbed by:",
+    choices: ["Water", "Hemoglobin and melanin", "Protein", "Fat"],
+    correctAnswer: 1
   },
   {
     id: 665,
-    question: "Which approach is preferred for colorectal surgery?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Depends on indication"],
+    question: "Laser safety requires:",
+    choices: ["Eye protection", "Skin protection", "Fire prevention", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 666,
-    question: "What is the most important factor in colorectal cancer surgery?",
-    choices: ["Oncologic clearance", "Functional preservation", "Both equally", "Cosmetic outcome"],
-    correctAnswer: 2
+    question: "Laser eye protection depends on:",
+    choices: ["Laser wavelength", "Room lighting", "Patient position", "Surgeon preference"],
+    correctAnswer: 0
   },
   {
     id: 667,
-    question: "Which imaging study is most useful for liver surgery planning?",
-    choices: ["CT scan", "MRI", "Ultrasound", "All are important"],
+    question: "Laser plume contains:",
+    choices: ["Water vapor only", "Toxic chemicals", "Viable bacteria", "Both toxic chemicals and bacteria"],
     correctAnswer: 3
   },
   {
     id: 668,
-    question: "What is the most common indication for liver resection?",
-    choices: ["Hepatocellular carcinoma", "Metastases", "Benign tumors", "All are indications"],
+    question: "Laser plume should be:",
+    choices: ["Ignored", "Evacuated", "Inhaled", "Collected"],
     correctAnswer: 1
   },
   {
     id: 669,
-    question: "Which factor is most important in liver surgery?",
-    choices: ["Anatomic resection", "Negative margins", "Liver function", "All are important"],
+    question: "Laser fire prevention includes:",
+    choices: ["Wet drapes", "Non-flammable anesthetics", "Reduced oxygen concentration", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 670,
-    question: "What is the most common complication of pancreaticoduodenectomy?",
-    choices: ["Pancreatic fistula", "Bleeding", "Infection", "Delayed gastric emptying"],
-    correctAnswer: 0
+    question: "Laser warning signs must be:",
+    choices: ["Optional", "Posted at entrances", "Small", "Handwritten"],
+    correctAnswer: 1
   },
   {
     id: 671,
-    question: "Which approach is preferred for pancreatic surgery?",
-    choices: ["Open", "Laparoscopic", "Robotic", "Depends on indication"],
+    question: "Laser safety officer is responsible for:",
+    choices: ["Operating lasers", "Safety training", "Equipment maintenance", "All safety aspects"],
     correctAnswer: 3
   },
   {
     id: 672,
-    question: "What is the most important factor in thyroid surgery?",
-    choices: ["Oncologic clearance", "Voice preservation", "Calcium levels", "All are important"],
-    correctAnswer: 3
+    question: "Laser classification ranges from:",
+    choices: ["1-3", "1-4", "1-5", "A-D"],
+    correctAnswer: 1
   },
   {
     id: 673,
-    question: "Which imaging study is most useful for adrenal surgery?",
-    choices: ["CT scan", "MRI", "Nuclear medicine", "All are useful"],
-    correctAnswer: 3
+    question: "Class 4 lasers:",
+    choices: ["Are safe", "Can cause eye and skin damage", "Require no precautions", "Are not used medically"],
+    correctAnswer: 1
   },
   {
     id: 674,
-    question: "What is the most common indication for adrenalectomy?",
-    choices: ["Adenoma", "Pheochromocytoma", "Carcinoma", "All are indications"],
-    correctAnswer: 0
+    question: "Laser maintenance includes:",
+    choices: ["Calibration", "Cleaning", "Safety checks", "All of the above"],
+    correctAnswer: 3
   },
   {
     id: 675,
-    question: "Which approach is preferred for adrenalectomy?",
-    choices: ["Open", "Laparoscopic", "Retroperitoneoscopic", "Depends on size"],
-    correctAnswer: 3
+    question: "Laser beam delivery can be:",
+    choices: ["Direct only", "Fiber optic only", "Both direct and fiber optic", "Neither"],
+    correctAnswer: 2
   },
   {
     id: 676,
-    question: "What is the most common complication of bowel surgery?",
-    choices: ["Anastomotic leak", "Bleeding", "Infection", "Ileus"],
-    correctAnswer: 0
+    question: "Laser power is measured in:",
+    choices: ["Volts", "Watts", "Amperes", "Ohms"],
+    correctAnswer: 1
   },
   {
     id: 677,
-    question: "Which factor is most important in wound healing?",
-    choices: ["Age", "Nutrition", "Blood supply", "All are important"],
-    correctAnswer: 3
+    question: "Continuous wave lasers provide:",
+    choices: ["Pulsed energy", "Constant energy", "No energy", "Variable energy"],
+    correctAnswer: 1
   },
   {
     id: 678,
-    question: "What is the most common cause of postoperative fever?",
-    choices: ["Infection", "Atelectasis", "DVT", "Drug reaction"],
+    question: "Pulsed lasers provide:",
+    choices: ["Constant energy", "Intermittent energy", "No energy", "Decreasing energy"],
     correctAnswer: 1
   },
   {
     id: 679,
-    question: "Which complication is most serious after major surgery?",
-    choices: ["Bleeding", "Infection", "Organ failure", "All are serious"],
+    question: "Laser tissue effects include:",
+    choices: ["Cutting", "Coagulation", "Vaporization", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 680,
-    question: "What is the most important factor in surgical site infection prevention?",
-    choices: ["Antibiotic prophylaxis", "Sterile technique", "Patient factors", "All are important"],
-    correctAnswer: 3
+    question: "The most important laser safety consideration is:",
+    choices: ["Cost", "Speed", "Eye protection", "Equipment maintenance"],
+    correctAnswer: 2
   },
   {
     id: 681,
-    question: "Which approach minimizes surgical trauma?",
-    choices: ["Minimally invasive surgery", "Robotic surgery", "Single incision", "All minimize trauma"],
-    correctAnswer: 3
+    question: "What is the most common type of electrosurgical unit?",
+    choices: ["Monopolar", "Bipolar", "Ultrasonic", "Microwave"],
+    correctAnswer: 0
   },
   {
     id: 682,
-    question: "What is the most common indication for emergency surgery?",
-    choices: ["Trauma", "Acute abdomen", "Bleeding", "All are common"],
-    correctAnswer: 3
+    question: "Monopolar electrosurgery requires:",
+    choices: ["Two electrodes at surgical site", "Ground pad", "Special instruments", "Water cooling"],
+    correctAnswer: 1
   },
   {
     id: 683,
-    question: "Which factor most influences surgical outcome?",
-    choices: ["Surgeon experience", "Patient selection", "Hospital factors", "All are important"],
-    correctAnswer: 3
+    question: "Bipolar electrosurgery:",
+    choices: ["Requires ground pad", "Uses two electrodes in forceps", "Is less precise", "Cannot coagulate"],
+    correctAnswer: 1
   },
   {
     id: 684,
-    question: "What is the most important consideration in elderly surgical patients?",
-    choices: ["Cardiac risk", "Pulmonary risk", "Cognitive function", "All are important"],
-    correctAnswer: 3
+    question: "Cut mode provides:",
+    choices: ["Coagulation only", "Continuous waveform", "Interrupted waveform", "No current"],
+    correctAnswer: 1
   },
   {
     id: 685,
-    question: "Which approach reduces postoperative complications?",
-    choices: ["Enhanced recovery protocols", "Minimally invasive surgery", "Multimodal analgesia", "All reduce complications"],
-    correctAnswer: 3
+    question: "Coag mode provides:",
+    choices: ["Continuous waveform", "Interrupted waveform", "Cutting only", "No current"],
+    correctAnswer: 1
   },
   {
     id: 686,
-    question: "What is the most common cause of readmission after surgery?",
-    choices: ["Infection", "Bleeding", "Organ dysfunction", "All are causes"],
-    correctAnswer: 3
+    question: "Blend mode provides:",
+    choices: ["Pure cut", "Pure coag", "Combination of cut and coag", "No current"],
+    correctAnswer: 2
   },
   {
     id: 687,
-    question: "Which imaging study is most cost-effective for diagnosis?",
-    choices: ["X-ray", "Ultrasound", "CT scan", "Depends on indication"],
+    question: "Electrosurgical burns can be caused by:",
+    choices: ["Improper ground pad placement", "Current concentration", "Wet conditions", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 688,
-    question: "What is the most important factor in patient safety?",
-    choices: ["Communication", "Protocols", "Training", "All are important"],
+    question: "Ground pad safety requires:",
+    choices: ["Proper placement", "Good skin contact", "Adequate size", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 689,
-    question: "Which approach improves quality of care?",
-    choices: ["Standardization", "Continuous improvement", "Team-based care", "All improve quality"],
-    correctAnswer: 3
+    question: "Electrosurgery near pacemakers:",
+    choices: ["Is always safe", "Requires precautions", "Is prohibited", "Has no effect"],
+    correctAnswer: 1
   },
   {
     id: 690,
-    question: "What is the most effective way to reduce medical errors?",
-    choices: ["Checklists", "Communication", "Training", "All are effective"],
-    correctAnswer: 3
+    question: "Argon beam coagulation uses:",
+    choices: ["Argon gas and heat", "Argon gas and electricity", "Pure argon", "Argon and oxygen"],
+    correctAnswer: 1
   },
   {
     id: 691,
-    question: "Which factor most affects patient satisfaction?",
-    choices: ["Outcome", "Communication", "Pain control", "All affect satisfaction"],
-    correctAnswer: 3
+    question: "Ultrasonic devices work by:",
+    choices: ["Heat generation", "Mechanical vibration", "Electrical current", "Chemical reaction"],
+    correctAnswer: 1
   },
   {
     id: 692,
-    question: "What is the most important aspect of informed consent?",
-    choices: ["Risks", "Benefits", "Alternatives", "All are important"],
-    correctAnswer: 3
+    question: "Harmonic scalpel operates at:",
+    choices: ["50 Hz", "55,500 Hz", "1 MHz", "Variable frequency"],
+    correctAnswer: 1
   },
   {
     id: 693,
-    question: "Which approach reduces healthcare costs?",
-    choices: ["Prevention", "Early intervention", "Efficient care", "All reduce costs"],
+    question: "Advantages of ultrasonic devices include:",
+    choices: ["Less smoke", "Precise cutting", "Minimal thermal damage", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 694,
-    question: "What is the most important factor in surgical training?",
-    choices: ["Volume", "Mentorship", "Simulation", "All are important"],
-    correctAnswer: 3
+    question: "LigaSure technology uses:",
+    choices: ["Ultrasound", "Bipolar energy and pressure", "Monopolar energy", "Laser energy"],
+    correctAnswer: 1
   },
   {
     id: 695,
-    question: "Which technology most improves surgical outcomes?",
-    choices: ["Robotics", "Navigation", "Imaging", "All can improve outcomes"],
-    correctAnswer: 3
+    question: "Vessel sealing devices can seal vessels up to:",
+    choices: ["3 mm", "5 mm", "7 mm", "10 mm"],
+    correctAnswer: 2
   },
   {
     id: 696,
-    question: "What is the most important consideration in surgical innovation?",
-    choices: ["Safety", "Efficacy", "Cost", "All are important"],
+    question: "Electrosurgical smoke contains:",
+    choices: ["Water vapor only", "Toxic chemicals", "Viable bacteria", "Both toxic chemicals and bacteria"],
     correctAnswer: 3
   },
   {
     id: 697,
-    question: "Which approach best serves patient needs?",
-    choices: ["Patient-centered care", "Evidence-based care", "Individualized care", "All serve patient needs"],
-    correctAnswer: 3
+    question: "Smoke evacuation should be used:",
+    choices: ["Optionally", "For all electrosurgery", "Only for long procedures", "Never"],
+    correctAnswer: 1
   },
   {
     id: 698,
-    question: "What is the most important goal of surgery?",
-    choices: ["Cure disease", "Improve function", "Relieve symptoms", "All are important goals"],
+    question: "Electrosurgical unit maintenance includes:",
+    choices: ["Power checks", "Safety testing", "Calibration", "All of the above"],
     correctAnswer: 3
   },
   {
     id: 699,
-    question: "Which factor most determines surgical success?",
-    choices: ["Technical skill", "Clinical judgment", "Team coordination", "All determine success"],
-    correctAnswer: 3
+    question: "The most important electrosurgical safety consideration is:",
+    choices: ["Speed", "Power setting", "Proper technique", "Cost"],
+    correctAnswer: 2
   },
   {
     id: 700,
-    question: "What is the most important principle of surgical practice?",
-    choices: ["First do no harm", "Patient safety", "Quality care", "All are fundamental principles"],
-    correctAnswer: 3
+    question: "Modern electrosurgical units have:",
+    choices: ["No safety features", "Multiple safety features", "Manual controls only", "No monitoring"],
+    correctAnswer: 1
   },
   {
     id: 701,
-    question: "Which approach best ensures quality outcomes?",
-    choices: ["Best practices", "Continuous monitoring", "Quality improvement", "All ensure quality"],
-    correctAnswer: 3
+    question: "What is the primary advantage of robotic surgery?",
+    choices: ["Speed", "Cost reduction", "Enhanced precision", "Reduced training"],
+    correctAnswer: 2
   },
   {
     id: 702,
-    question: "What is the most important aspect of surgical care?",
-    choices: ["Technical excellence", "Compassionate care", "Safe practice", "All are essential"],
-    correctAnswer: 3
+    question: "The da Vinci surgical system provides:",
+    choices: ["2D visualization", "3D visualization", "No magnification", "Limited movement"],
+    correctAnswer: 1
   },
   {
     id: 703,
-    question: "Which factor most influences patient outcomes?",
-    choices: ["Surgical technique", "Perioperative care", "Patient factors", "All influence outcomes"],
-    correctAnswer: 3
+    question: "Robotic instruments have:",
+    choices: ["Limited degrees of freedom", "7 degrees of freedom", "No articulation", "Manual control only"],
+    correctAnswer: 1
   },
   {
     id: 704,
-    question: "What is the ultimate goal of surgical practice?",
-    choices: ["Perfect technique", "Optimal outcomes", "Patient satisfaction", "All contribute to excellence"],
-    correctAnswer: 3
+    question: "Tremor filtration in robotic surgery:",
+    choices: ["Amplifies tremor", "Eliminates hand tremor", "Has no effect", "Increases tremor"],
+    correctAnswer: 1
   },
   {
     id: 705,
-    question: "Which principle guides surgical decision-making?",
-    choices: ["Evidence-based medicine", "Clinical experience", "Patient preference", "All guide decisions"],
-    correctAnswer: 3
+    question: "Motion scaling in robotics allows:",
+    choices: ["Larger movements", "Smaller, precise movements", "No movement control", "Faster movements"],
+    correctAnswer: 1
   },
   {
     id: 706,
-    question: "What defines surgical excellence?",
-    choices: ["Technical skill", "Clinical outcomes", "Patient care", "All define excellence"],
+    question: "Robotic surgery requires:",
+    choices: ["No special training", "Extensive training", "Basic training only", "Self-teaching"],
+    correctAnswer: 1
+  },
+  {
+    id: 707,
+    question: "The surgeon console provides:",
+    choices: ["Direct patient contact", "Remote control", "No visualization", "Limited control"],
+    correctAnswer: 1
+  },
+  {
+    id: 708,
+    question: "Patient-side cart contains:",
+    choices: ["Surgeon console", "Robotic arms", "Vision system", "Both robotic arms and vision system"],
     correctAnswer: 3
+  },
+  {
+    id: 709,
+    question: "Robotic surgery complications can include:",
+    choices: ["Equipment malfunction", "Conversion to open", "Longer operative time", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 710,
+    question: "Advantages of robotic surgery include:",
+    choices: ["Improved dexterity", "Better visualization", "Reduced fatigue", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 711,
+    question: "Disadvantages of robotic surgery include:",
+    choices: ["High cost", "Loss of tactile feedback", "Longer setup time", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 712,
+    question: "Robotic surgery is commonly used for:",
+    choices: ["Prostatectomy", "Hysterectomy", "Cardiac surgery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 713,
+    question: "Single-site robotic surgery uses:",
+    choices: ["Multiple incisions", "One incision", "No incisions", "Natural orifices"],
+    correctAnswer: 1
+  },
+  {
+    id: 714,
+    question: "Robotic training includes:",
+    choices: ["Simulation", "Proctoring", "Credentialing", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 715,
+    question: "Learning curve for robotic surgery is:",
+    choices: ["Very short", "Variable by procedure", "Non-existent", "Always the same"],
+    correctAnswer: 1
+  },
+  {
+    id: 716,
+    question: "Robotic surgery outcomes compared to traditional surgery:",
+    choices: ["Are always better", "Are always worse", "Vary by procedure", "Are identical"],
+    correctAnswer: 2
+  },
+  {
+    id: 717,
+    question: "Future of robotic surgery includes:",
+    choices: ["Artificial intelligence", "Haptic feedback", "Autonomous functions", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 718,
+    question: "Robotic surgery credentialing requires:",
+    choices: ["No requirements", "Specific training and assessment", "Basic surgery experience", "Self-declaration"],
+    correctAnswer: 1
+  },
+  {
+    id: 719,
+    question: "The most important factor in robotic surgery success is:",
+    choices: ["Equipment quality", "Surgeon training", "Patient selection", "All factors are important"],
+    correctAnswer: 3
+  },
+  {
+    id: 720,
+    question: "Robotic surgery represents:",
+    choices: ["A fad", "Evolution of minimally invasive surgery", "Replacement for all surgery", "Cost reduction method"],
+    correctAnswer: 1
+  },
+  {
+    id: 721,
+    question: "What is the most important principle of surgical asepsis?",
+    choices: ["Speed", "Sterile items touch only sterile items", "Cost effectiveness", "Convenience"],
+    correctAnswer: 1
+  },
+  {
+    id: 722,
+    question: "The sterile field is considered contaminated if:",
+    choices: ["It's been open for 1 hour", "A non-sterile item touches it", "The room temperature changes", "The lights are dimmed"],
+    correctAnswer: 1
+  },
+  {
+    id: 723,
+    question: "When opening sterile packages, which flap should be opened first?",
+    choices: ["The flap closest to you", "The flap farthest from you", "Any flap", "The largest flap"],
+    correctAnswer: 1
+  },
+  {
+    id: 724,
+    question: "The minimum temperature for steam sterilization is:",
+    choices: ["212°F (100°C)", "250°F (121°C)", "275°F (135°C)", "300°F (149°C)"],
+    correctAnswer: 1
+  },
+  {
+    id: 725,
+    question: "Biological indicators contain:",
+    choices: ["Chemical strips", "Living microorganisms", "Temperature sensors", "pH indicators"],
+    correctAnswer: 1
+  },
+  {
+    id: 726,
+    question: "The most heat-resistant microorganisms are:",
+    choices: ["Bacteria", "Viruses", "Spores", "Fungi"],
+    correctAnswer: 2
+  },
+  {
+    id: 727,
+    question: "Flash sterilization should be used:",
+    choices: ["Routinely", "Only for emergencies", "For all instruments", "To save time"],
+    correctAnswer: 1
+  },
+  {
+    id: 728,
+    question: "Sterile storage areas should maintain relative humidity of:",
+    choices: ["20-30%", "30-60%", "70-80%", "80-90%"],
+    correctAnswer: 1
+  },
+  {
+    id: 729,
+    question: "Event-related sterility means items remain sterile:",
+    choices: ["For 30 days", "Until package integrity is compromised", "For 1 year", "Indefinitely"],
+    correctAnswer: 1
+  },
+  {
+    id: 730,
+    question: "The purpose of surgical hand antisepsis is to:",
+    choices: ["Remove all microorganisms", "Reduce microbial count", "Sterilize hands", "Clean visible soil only"],
+    correctAnswer: 1
+  },
+  {
+    id: 731,
+    question: "Surgical gowns are considered sterile:",
+    choices: ["Entirely", "Front from chest to waist, sleeves to 2 inches above elbow", "Only the sleeves", "Only the front"],
+    correctAnswer: 1
+  },
+  {
+    id: 732,
+    question: "If a sterile team member's back touches a sterile surface:",
+    choices: ["It's acceptable", "The surface is contaminated", "No action needed", "Just document it"],
+    correctAnswer: 1
+  },
+  {
+    id: 733,
+    question: "Sterile team members should keep their hands:",
+    choices: ["At any level", "Above waist level", "Below waist level", "Behind their back"],
+    correctAnswer: 1
+  },
+  {
+    id: 734,
+    question: "When passing between sterile fields, non-sterile persons should:",
+    choices: ["Walk quickly", "Face the sterile field", "Keep adequate distance", "Touch nothing"],
+    correctAnswer: 2
+  },
+  {
+    id: 735,
+    question: "Sterile drapes should be:",
+    choices: ["Shaken out vigorously", "Unfolded carefully without shaking", "Thrown onto the patient", "Refolded if misplaced"],
+    correctAnswer: 1
+  },
+  {
+    id: 736,
+    question: "The edges of sterile packages are considered:",
+    choices: ["Sterile", "Contaminated", "Questionably sterile", "Semi-sterile"],
+    correctAnswer: 1
+  },
+  {
+    id: 737,
+    question: "Moisture on sterile packages:",
+    choices: ["Is acceptable", "Indicates contamination", "Should be wiped off", "Improves sterility"],
+    correctAnswer: 1
+  },
+  {
+    id: 738,
+    question: "The surgical conscience means:",
+    choices: ["Feeling guilty about mistakes", "Personal responsibility for sterile technique", "Following orders blindly", "Avoiding responsibility"],
+    correctAnswer: 1
+  },
+  {
+    id: 739,
+    question: "When in doubt about sterility:",
+    choices: ["Use the item anyway", "Consider it contaminated", "Ask someone else", "Test it first"],
+    correctAnswer: 1
+  },
+  {
+    id: 740,
+    question: "The most important aspect of maintaining sterility is:",
+    choices: ["Following protocols exactly", "Using expensive equipment", "Working quickly", "Having good intentions"],
+    correctAnswer: 0
+  },
+  {
+    id: 741,
+    question: "What is the primary goal of perioperative nursing?",
+    choices: ["Assist the surgeon", "Ensure patient safety", "Maintain efficiency", "Control costs"],
+    correctAnswer: 1
+  },
+  {
+    id: 742,
+    question: "The circulating nurse is responsible for:",
+    choices: ["Maintaining sterile field", "Non-sterile activities", "Operating equipment", "Anesthesia management"],
+    correctAnswer: 1
+  },
+  {
+    id: 743,
+    question: "The scrub nurse/technologist is responsible for:",
+    choices: ["Patient positioning", "Maintaining sterile field", "Room temperature", "Documentation"],
+    correctAnswer: 1
+  },
+  {
+    id: 744,
+    question: "Preoperative patient assessment includes:",
+    choices: ["Medical history", "Allergies", "Previous surgeries", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 745,
+    question: "Patient identification must include:",
+    choices: ["Name only", "Name and date of birth", "Room number", "Surgeon's name"],
+    correctAnswer: 1
+  },
+  {
+    id: 746,
+    question: "The surgical time-out occurs:",
+    choices: ["Before patient enters OR", "After anesthesia induction", "Before skin incision", "After surgery"],
+    correctAnswer: 2
+  },
+  {
+    id: 747,
+    question: "Wrong-site surgery prevention includes:",
+    choices: ["Site marking", "Time-out", "Verification processes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 748,
+    question: "Surgical counts are performed to:",
+    choices: ["Track inventory", "Prevent retained items", "Satisfy regulations", "Control costs"],
+    correctAnswer: 1
+  },
+  {
+    id: 749,
+    question: "If a surgical count is incorrect:",
+    choices: ["Proceed with closure", "Recount immediately", "Take X-ray first", "Call supervisor"],
+    correctAnswer: 1
+  },
+  {
+    id: 750,
+    question: "Patient advocacy means:",
+    choices: ["Following doctor's orders", "Protecting patient rights and safety", "Avoiding conflict", "Maintaining silence"],
+    correctAnswer: 1
+  },
+  {
+    id: 751,
+    question: "Informed consent must include:",
+    choices: ["Risks only", "Benefits only", "Risks, benefits, and alternatives", "Surgeon's recommendation only"],
+    correctAnswer: 2
+  },
+  {
+    id: 752,
+    question: "Patient privacy is protected by:",
+    choices: ["OSHA", "HIPAA", "Joint Commission", "FDA"],
+    correctAnswer: 1
+  },
+  {
+    id: 753,
+    question: "Cultural competence in perioperative care means:",
+    choices: ["Treating all patients the same", "Understanding cultural differences", "Speaking multiple languages", "Avoiding cultural issues"],
+    correctAnswer: 1
+  },
+  {
+    id: 754,
+    question: "Family communication should be:",
+    choices: ["Minimal", "Honest and timely", "Delayed until after surgery", "Avoided"],
+    correctAnswer: 1
+  },
+  {
+    id: 755,
+    question: "The most important quality in perioperative nursing is:",
+    choices: ["Technical skill", "Speed", "Attention to detail", "Flexibility"],
+    correctAnswer: 2
+  },
+  {
+    id: 756,
+    question: "Continuous professional development includes:",
+    choices: ["Attending conferences", "Reading journals", "Obtaining certifications", "All of the above"],
+    correctAnswer: 3
+  },
+  // New Orthopedic Questions (757-806)
+  {
+    id: 757,
+    question: "What is the appendicular skeleton composed of?",
+    choices: ["Skull and ribcage", "Vertebrae and sacrum", "Limbs", "Sternum"],
+    correctAnswer: 2
+  },
+  {
+    id: 758,
+    question: "What type of bones make up the skull?",
+    choices: ["Long bones", "Flat bones", "Short bones", "Irregular bones"],
+    correctAnswer: 1
+  },
+  {
+    id: 759,
+    question: "Which of the following are irregular bones?",
+    choices: ["Femur", "Vertebrae", "Radius", "Sternum"],
+    correctAnswer: 1
+  },
+  {
+    id: 760,
+    question: "Which ribs are considered true ribs?",
+    choices: ["8–10", "11–12", "1–7", "9–12"],
+    correctAnswer: 2
+  },
+  {
+    id: 761,
+    question: "The manubrium is a part of which bone?",
+    choices: ["Pelvis", "Sternum", "Scapula", "Skull"],
+    correctAnswer: 1
+  },
+  {
+    id: 762,
+    question: "What is the shaft of a long bone called?",
+    choices: ["Epiphysis", "Diaphysis", "Medulla", "Periosteum"],
+    correctAnswer: 1
+  },
+  {
+    id: 763,
+    question: "Which type of bone is the patella?",
+    choices: ["Short", "Flat", "Irregular", "Long"],
+    correctAnswer: 1
+  },
+  {
+    id: 764,
+    question: "What is the primary function of red bone marrow?",
+    choices: ["Fat storage", "Hormone production", "Blood cell production", "Bone resorption"],
+    correctAnswer: 2
+  },
+  {
+    id: 765,
+    question: "A tumor of the plasma cells of bone marrow is called:",
+    choices: ["Osteosarcoma", "Myeloma", "Chondroma", "Osteoma"],
+    correctAnswer: 1
+  },
+  {
+    id: 766,
+    question: "The outer layer of hard connective tissue of bone is called:",
+    choices: ["Cancellous bone", "Bone marrow", "Cortical bone", "Periosteum"],
+    correctAnswer: 2
+  },
+  {
+    id: 767,
+    question: "The four stages of bone healing begin with:",
+    choices: ["Callus formation", "Calcification", "Hematoma formation", "Remodeling"],
+    correctAnswer: 2
+  },
+  {
+    id: 768,
+    question: "What type of tissue covers joint surfaces to allow smooth movement?",
+    choices: ["Periosteum", "Ligament", "Cartilage", "Tendon"],
+    correctAnswer: 2
+  },
+  {
+    id: 769,
+    question: "Which of the following is a benign cartilage tumor?",
+    choices: ["Osteosarcoma", "Chondroma", "Myeloma", "Osteoma"],
+    correctAnswer: 1
+  },
+  {
+    id: 770,
+    question: "Which type of muscle is voluntary?",
+    choices: ["Smooth", "Striated", "Cardiac", "Involuntary"],
+    correctAnswer: 1
+  },
+  {
+    id: 771,
+    question: "What do ligaments attach?",
+    choices: ["Muscle to bone", "Bone to bone", "Cartilage to bone", "Muscle to cartilage"],
+    correctAnswer: 1
+  },
+  {
+    id: 772,
+    question: "What is the function of tendons?",
+    choices: ["Connect bone to bone", "Connect muscle to bone", "Cushion joints", "Secrete synovial fluid"],
+    correctAnswer: 1
+  },
+  {
+    id: 773,
+    question: "A joint that allows no movement is called:",
+    choices: ["Amphiarthrotic", "Diarthrotic", "Synarthrotic", "Synovial"],
+    correctAnswer: 2
+  },
+  {
+    id: 774,
+    question: "Which joint type allows the widest range of motion?",
+    choices: ["Hinge", "Ball and socket", "Pivot", "Gliding"],
+    correctAnswer: 1
+  },
+  {
+    id: 775,
+    question: "What is an example of a condyloid joint?",
+    choices: ["Shoulder", "Elbow", "Temporomandibular joint", "Hip"],
+    correctAnswer: 2
+  },
+  {
+    id: 776,
+    question: "A hinge joint is best exemplified by the:",
+    choices: ["Hip", "Shoulder", "Elbow", "Wrist"],
+    correctAnswer: 2
+  },
+  {
+    id: 777,
+    question: "Turning the sole of the foot inward is called:",
+    choices: ["Eversion", "Inversion", "Plantar flexion", "Dorsiflexion"],
+    correctAnswer: 1
+  },
+  {
+    id: 778,
+    question: "Moving a limb away from the midline of the body is called:",
+    choices: ["Adduction", "Abduction", "Flexion", "Extension"],
+    correctAnswer: 1
+  },
+  {
+    id: 779,
+    question: "An autoimmune disease that causes joint inflammation and stiffness is:",
+    choices: ["Osteoarthritis", "Rheumatoid arthritis", "Osteomyelitis", "Chondroma"],
+    correctAnswer: 1
+  },
+  {
+    id: 780,
+    question: "Which diagnostic test records electrical activity of muscle?",
+    choices: ["MRI", "Arthrogram", "CT scan", "Electromyography"],
+    correctAnswer: 3
+  },
+  {
+    id: 781,
+    question: "What type of fracture does not puncture the skin?",
+    choices: ["Open", "Simple", "Compound", "Comminuted"],
+    correctAnswer: 1
+  },
+  {
+    id: 782,
+    question: "A fracture where the bone bends on one side and breaks on the other is:",
+    choices: ["Oblique", "Greenstick", "Transverse", "Impacted"],
+    correctAnswer: 1
+  },
+  {
+    id: 783,
+    question: "A fracture where the bone breaks into several pieces is called:",
+    choices: ["Displaced", "Comminuted", "Oblique", "Transverse"],
+    correctAnswer: 1
+  },
+  {
+    id: 784,
+    question: "A Colles' fracture involves which bone?",
+    choices: ["Tibia", "Femur", "Radius", "Fibula"],
+    correctAnswer: 2
+  },
+  {
+    id: 785,
+    question: "Which type of fracture is caused by disease that weakens the bone?",
+    choices: ["Pathologic", "Greenstick", "Impacted", "Oblique"],
+    correctAnswer: 0
+  },
+  {
+    id: 786,
+    question: "A partial dislocation is known as:",
+    choices: ["Dislocation", "Subluxation", "Impaction", "Avulsion"],
+    correctAnswer: 1
+  },
+  {
+    id: 787,
+    question: "Which table is used for spine surgery?",
+    choices: ["Fracture table", "Andrews table", "Jackson table", "Alvarado table"],
+    correctAnswer: 2
+  },
+  {
+    id: 788,
+    question: "Traction applied directly to bone using pins is called:",
+    choices: ["Manual traction", "Skeletal traction", "Skin traction", "Elastic traction"],
+    correctAnswer: 1
+  },
+  {
+    id: 789,
+    question: "Which material is commonly used for casting?",
+    choices: ["Bone cement", "Fiberglass", "Silicone", "Nylon"],
+    correctAnswer: 1
+  },
+  {
+    id: 790,
+    question: "Which of the following is a complication of bone healing?",
+    choices: ["Delayed union", "Callus formation", "Calcification", "Remodeling"],
+    correctAnswer: 0
+  },
+  {
+    id: 791,
+    question: "A disease of decreased bone density leading to brittle bones is:",
+    choices: ["Osteomalacia", "Osteogenesis imperfecta", "Osteoporosis", "Osteoarthritis"],
+    correctAnswer: 2
+  },
+  {
+    id: 792,
+    question: "Bone cement is also known as:",
+    choices: ["PMMA", "PVC", "Fiberglass", "Epoxy"],
+    correctAnswer: 0
+  },
+  {
+    id: 793,
+    question: "Which type of bone graft is taken from the patient?",
+    choices: ["Allograft", "Xenograft", "Autograft", "Synthetic"],
+    correctAnswer: 2
+  },
+  {
+    id: 794,
+    question: "What suture material is commonly used for tendon-to-bone?",
+    choices: ["Silk", "Polyester (Ethibond)", "Vicryl", "Chromic"],
+    correctAnswer: 1
+  },
+  {
+    id: 795,
+    question: "Which hemostatic agent is made of absorbable gelatin?",
+    choices: ["Bone wax", "Gelfoam", "Thrombin", "PMMA"],
+    correctAnswer: 1
+  },
+  {
+    id: 796,
+    question: "Which position may interfere with chest expansion if improperly performed?",
+    choices: ["Lateral", "Supine", "Prone", "Lithotomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 797,
+    question: "A genetic disorder causing brittle bones is:",
+    choices: ["Osteomyelitis", "Osteomalacia", "Osteogenesis imperfecta", "Osteoarthritis"],
+    correctAnswer: 2
+  },
+  {
+    id: 798,
+    question: "Which of the following is a metabolic disease causing soft bones?",
+    choices: ["Osteoporosis", "Osteomalacia", "Osteonecrosis", "Osteoarthritis"],
+    correctAnswer: 1
+  },
+  {
+    id: 799,
+    question: "A compartment syndrome results in:",
+    choices: ["Bone infection", "Increased pressure in fascial compartments", "Loss of calcium", "Bone necrosis"],
+    correctAnswer: 1
+  },
+  {
+    id: 800,
+    question: "What table provides skeletal traction for fractures?",
+    choices: ["Fracture table", "Jackson table", "Andrews table", "Alvarado table"],
+    correctAnswer: 0
+  },
+  {
+    id: 801,
+    question: "Which antibiotic is commonly used for irrigation?",
+    choices: ["Erythromycin", "Bacitracin", "Amoxicillin", "Ciprofloxacin"],
+    correctAnswer: 1
+  },
+  {
+    id: 802,
+    question: "Which laser is used in arthroscopies?",
+    choices: ["Nd:YAG", "CO₂", "Excimer", "Argon"],
+    correctAnswer: 0
+  },
+  {
+    id: 803,
+    question: "What is the purpose of bone grafts?",
+    choices: ["To increase bone length", "To promote healing of fractures", "To lubricate joints", "To remove diseased bone"],
+    correctAnswer: 1
+  },
+  {
+    id: 804,
+    question: "What is the preferred first step to repair a fracture?",
+    choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
+    correctAnswer: 1
+  },
+  {
+    id: 805,
+    question: "Which imaging technique is most commonly used to diagnose fractures?",
+    choices: ["MRI", "CT scan", "X-ray", "Ultrasound"],
+    correctAnswer: 2
+  },
+  {
+    id: 806,
+    question: "What is the most common complication of orthopedic surgery?",
+    choices: ["Bleeding", "Infection", "Nerve damage", "Blood clots"],
+    correctAnswer: 1
   }
 ];
