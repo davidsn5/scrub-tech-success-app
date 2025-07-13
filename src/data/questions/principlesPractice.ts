@@ -2795,5 +2795,149 @@ export const principlesPracticeQuestions: Question[] = [
     question: "Which position is used for surgery of the vagina, perineum, and rectum?",
     choices: ["Prone", "Lithotomy", "Supine", "Trendelenburg"],
     correctAnswer: 1
+  },
+  {
+    id: 476,
+    question: "When opening a sterile package, which edge is considered contaminated?",
+    choices: ["The inner edge", "The outer edge", "The folded edge", "All edges are sterile"],
+    correctAnswer: 1
+  },
+  {
+    id: 477,
+    question: "Which sterilization method uses ethylene oxide gas?",
+    choices: ["Steam sterilization", "Dry heat sterilization", "Chemical sterilization", "Gas sterilization"],
+    correctAnswer: 3
+  },
+  {
+    id: 478,
+    question: "Which of the following is a chemical indicator?",
+    choices: ["Autoclave tape", "Biological indicator", "Mechanical indicator", "Temperature gauge"],
+    correctAnswer: 0
+  },
+  {
+    id: 479,
+    question: "Biological indicators contain:",
+    choices: ["Chemical dyes", "Heat-sensitive tape", "Living microorganisms", "pH indicators"],
+    correctAnswer: 2
+  },
+  {
+    id: 480,
+    question: "The most resistant microorganism used in biological indicators is:",
+    choices: ["Staphylococcus aureus", "Escherichia coli", "Geobacillus stearothermophilus", "Pseudomonas aeruginosa"],
+    correctAnswer: 2
+  },
+  {
+    id: 481,
+    question: "The temperature for flash sterilization is typically:",
+    choices: ["250°F (121°C)", "270°F (132°C)", "300°F (149°C)", "212°F (100°C)"],
+    correctAnswer: 1
+  },
+  {
+    id: 482,
+    question: "Immediate use steam sterilization (IUSS) cycle time for non-porous items is:",
+    choices: ["3 minutes", "4 minutes", "10 minutes", "15 minutes"],
+    correctAnswer: 0
+  },
+  {
+    id: 483,
+    question: "Which of the following compromises sterility?",
+    choices: ["Moisture", "Tears in packaging", "Dropping on floor", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 484,
+    question: "The sterile storage area should maintain humidity between:",
+    choices: ["30-60%", "70-80%", "10-20%", "80-90%"],
+    correctAnswer: 0
+  },
+  {
+    id: 485,
+    question: "Sterile items should be stored:",
+    choices: ["On the floor", "Against walls", "8-10 inches from ceiling", "In direct sunlight"],
+    correctAnswer: 2
+  },
+  {
+    id: 486,
+    question: "High-level disinfection kills:",
+    choices: ["Bacteria only", "Viruses only", "All microorganisms except spores", "All microorganisms including spores"],
+    correctAnswer: 2
+  },
+  {
+    id: 487,
+    question: "Glutaraldehyde is used for:",
+    choices: ["Sterilization", "High-level disinfection", "Cleaning", "Lubrication"],
+    correctAnswer: 1
+  },
+  {
+    id: 488,
+    question: "Peracetic acid is:",
+    choices: ["Low-level disinfectant", "Intermediate-level disinfectant", "High-level disinfectant", "Sterilant"],
+    correctAnswer: 3
+  },
+  {
+    id: 489,
+    question: "Instrument sets should be assembled:",
+    choices: ["In the OR", "In sterile processing", "By the surgeon", "By nursing"],
+    correctAnswer: 1
+  },
+  {
+    id: 490,
+    question: "The surgical technologist's primary role is:",
+    choices: ["Patient care", "Maintaining sterile field", "Equipment management", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 491,
+    question: "Scrubbing in requires:",
+    choices: ["Surgical hand antisepsis", "Sterile gown and gloves", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 492,
+    question: "The circulating nurse is:",
+    choices: ["Sterile", "Non-sterile", "Sometimes sterile", "Always gowned"],
+    correctAnswer: 1
+  },
+  {
+    id: 493,
+    question: "Surgical gowns should be:",
+    choices: ["Fluid-resistant", "Sterile", "Properly sized", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 494,
+    question: "The sterile area of a surgical gown extends:",
+    choices: ["Entire gown", "Front and sleeves", "Front only", "Sleeves only"],
+    correctAnswer: 1
+  },
+  {
+    id: 495,
+    question: "Sterile drapes should:",
+    choices: ["Be fluid-resistant", "Cover completely", "Not be moved once placed", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 496,
+    question: "Draping should proceed from:",
+    choices: ["Dirty to clean", "Clean to dirty", "Sterile to non-sterile", "Incision site outward"],
+    correctAnswer: 3
+  },
+  {
+    id: 497,
+    question: "Surgical site infection prevention includes:",
+    choices: ["Antibiotic prophylaxis", "Proper skin prep", "Sterile technique", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 498,
+    question: "What is the correct sequence for decontamination of a radiologically exposed patient?",
+    choices: ["Bleach > soap > saline rinse", "Soap and water > rinse > dry", "Remove clothes > rinse with sterile water > bleach", "Burn clothes > rinse with bleach"],
+    correctAnswer: 1
+  },
+  {
+    id: 499,
+    question: "Infection control measures include:",
+    choices: ["Hand hygiene", "Isolation", "Disinfection", "All of the above"],
+    correctAnswer: 3
   }
 ];

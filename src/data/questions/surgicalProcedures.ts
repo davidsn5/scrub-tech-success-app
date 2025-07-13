@@ -7,48 +7,6 @@ export interface Question {
 
 export const surgicalProceduresQuestions: Question[] = [
   {
-    id: 4,
-    question: "When opening a sterile package, which edge is considered contaminated?",
-    choices: ["The inner edge", "The outer edge", "The folded edge", "All edges are sterile"],
-    correctAnswer: 1
-  },
-  {
-    id: 6,
-    question: "Which sterilization method uses ethylene oxide gas?",
-    choices: ["Steam sterilization", "Dry heat sterilization", "Chemical sterilization", "Gas sterilization"],
-    correctAnswer: 3
-  },
-  {
-    id: 9,
-    question: "Which of the following is a chemical indicator?",
-    choices: ["Autoclave tape", "Biological indicator", "Mechanical indicator", "Temperature gauge"],
-    correctAnswer: 0
-  },
-  {
-    id: 10,
-    question: "Biological indicators contain:",
-    choices: ["Chemical dyes", "Heat-sensitive tape", "Living microorganisms", "pH indicators"],
-    correctAnswer: 2
-  },
-  {
-    id: 11,
-    question: "The most resistant microorganism used in biological indicators is:",
-    choices: ["Staphylococcus aureus", "Escherichia coli", "Geobacillus stearothermophilus", "Pseudomonas aeruginosa"],
-    correctAnswer: 2
-  },
-  {
-    id: 13,
-    question: "The temperature for flash sterilization is typically:",
-    choices: ["250°F (121°C)", "270°F (132°C)", "300°F (149°C)", "212°F (100°C)"],
-    correctAnswer: 1
-  },
-  {
-    id: 14,
-    question: "Immediate use steam sterilization (IUSS) cycle time for non-porous items is:",
-    choices: ["3 minutes", "4 minutes", "10 minutes", "15 minutes"],
-    correctAnswer: 0
-  },
-  {
     id: 15,
     question: "Which wrap material allows steam penetration?",
     choices: ["Plastic", "Aluminum foil", "Muslin", "Rubber"],
@@ -65,18 +23,6 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Which of the following compromises sterility?",
     choices: ["Moisture", "Tears in packaging", "Dropping on floor", "All of the above"],
     correctAnswer: 3
-  },
-  {
-    id: 20,
-    question: "The sterile storage area should maintain humidity between:",
-    choices: ["30-60%", "70-80%", "10-20%", "80-90%"],
-    correctAnswer: 0
-  },
-  {
-    id: 21,
-    question: "Sterile items should be stored:",
-    choices: ["On the floor", "Against walls", "8-10 inches from ceiling", "In direct sunlight"],
-    correctAnswer: 2
   },
   {
     id: 25,
@@ -475,24 +421,6 @@ export const surgicalProceduresQuestions: Question[] = [
     correctAnswer: 2
   },
   {
-    id: 91,
-    question: "High-level disinfection kills:",
-    choices: ["Bacteria only", "Viruses only", "All microorganisms except spores", "All microorganisms including spores"],
-    correctAnswer: 2
-  },
-  {
-    id: 92,
-    question: "Glutaraldehyde is used for:",
-    choices: ["Sterilization", "High-level disinfection", "Cleaning", "Lubrication"],
-    correctAnswer: 1
-  },
-  {
-    id: 93,
-    question: "Peracetic acid is:",
-    choices: ["Low-level disinfectant", "Intermediate-level disinfectant", "High-level disinfectant", "Sterilant"],
-    correctAnswer: 3
-  },
-  {
     id: 94,
     question: "Hydrogen peroxide plasma sterilization is used for:",
     choices: ["Heat-sensitive items", "Moisture-sensitive items", "Both A and B", "Neither A nor B"],
@@ -523,34 +451,10 @@ export const surgicalProceduresQuestions: Question[] = [
     correctAnswer: 1
   },
   {
-    id: 99,
-    question: "Instrument sets should be assembled:",
-    choices: ["In the OR", "In sterile processing", "By the surgeon", "By nursing"],
-    correctAnswer: 1
-  },
-  {
     id: 100,
     question: "Count sheets are used to:",
     choices: ["Track instruments", "Record sterilization", "Document cleaning", "All of the above"],
     correctAnswer: 0
-  },
-  {
-    id: 101,
-    question: "The surgical technologist's primary role is:",
-    choices: ["Patient care", "Maintaining sterile field", "Equipment management", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 102,
-    question: "Scrubbing in requires:",
-    choices: ["Surgical hand antisepsis", "Sterile gown and gloves", "Both A and B", "Neither A nor B"],
-    correctAnswer: 2
-  },
-  {
-    id: 103,
-    question: "The circulating nurse is:",
-    choices: ["Sterile", "Non-sterile", "Sometimes sterile", "Always gowned"],
-    correctAnswer: 1
   },
   {
     id: 104,
@@ -563,18 +467,6 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Alcohol-based hand rubs require:",
     choices: ["Water rinse", "Towel drying", "Complete evaporation", "Soap application"],
     correctAnswer: 2
-  },
-  {
-    id: 106,
-    question: "Surgical gowns should be:",
-    choices: ["Fluid-resistant", "Sterile", "Properly sized", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 107,
-    question: "The sterile area of a surgical gown extends:",
-    choices: ["Entire gown", "Front and sleeves", "Front only", "Sleeves only"],
-    correctAnswer: 1
   },
   {
     id: 108,
@@ -625,12 +517,6 @@ export const surgicalProceduresQuestions: Question[] = [
     correctAnswer: 2
   },
   {
-    id: 117,
-    question: "Sterile drapes should:",
-    choices: ["Be fluid-resistant", "Cover completely", "Not be moved once placed", "All of the above"],
-    correctAnswer: 3
-  },
-  {
     id: 118,
     question: "The incise drape is:",
     choices: ["Placed first", "Placed last", "Adhesive", "Both B and C"],
@@ -641,12 +527,6 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Fenestrated drapes have:",
     choices: ["Multiple layers", "An opening", "Adhesive edges", "Reinforcement"],
     correctAnswer: 1
-  },
-  {
-    id: 120,
-    question: "Draping should proceed from:",
-    choices: ["Dirty to clean", "Clean to dirty", "Sterile to non-sterile", "Incision site outward"],
-    correctAnswer: 3
   },
   {
     id: 121,
@@ -1067,12 +947,6 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "T-tubes are used for:",
     choices: ["Bile drainage", "Urine drainage", "Blood drainage", "Air drainage"],
     correctAnswer: 0
-  },
-  {
-    id: 191,
-    question: "Surgical site infection prevention includes:",
-    choices: ["Antibiotic prophylaxis", "Proper skin prep", "Sterile technique", "All of the above"],
-    correctAnswer: 3
   },
   {
     id: 192,
@@ -2563,12 +2437,6 @@ export const surgicalProceduresQuestions: Question[] = [
     correctAnswer: 3
   },
   {
-    id: 440,
-    question: "Surgical site infection prevention includes:",
-    choices: ["Antibiotic prophylaxis", "Skin preparation", "Sterile technique", "All of the above"],
-    correctAnswer: 3
-  },
-  {
     id: 441,
     question: "Venous thromboembolism prevention uses:",
     choices: ["Mechanical prophylaxis", "Pharmacologic prophylaxis", "Early mobilization", "All of the above"],
@@ -3652,12 +3520,6 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 621,
     question: "Vaccination prevents:",
     choices: ["Infectious diseases", "Complications", "Outbreaks", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 622,
-    question: "Infection control measures include:",
-    choices: ["Hand hygiene", "Isolation", "Disinfection", "All of the above"],
     correctAnswer: 3
   },
   {
@@ -5716,12 +5578,6 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 965,
     question: "What is the primary goal of an EAP in healthcare?",
     choices: ["To order supplies", "To define staff responsibilities during a disaster", "To provide free vaccinations", "To sterilize equipment"],
-    correctAnswer: 1
-  },
-  {
-    id: 966,
-    question: "What is the correct sequence for decontamination of a radiologically exposed patient?",
-    choices: ["Bleach > soap > saline rinse", "Soap and water > rinse > dry", "Remove clothes > rinse with sterile water > bleach", "Burn clothes > rinse with bleach"],
     correctAnswer: 1
   },
   {
