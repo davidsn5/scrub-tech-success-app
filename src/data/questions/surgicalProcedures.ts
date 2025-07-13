@@ -4541,5 +4541,305 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "What is the preferred first step to repair a fracture?",
     choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
     correctAnswer: 1
+  },
+  {
+    id: 757,
+    question: "What is the appendicular skeleton composed of?",
+    choices: ["Skull and ribcage", "Vertebrae and sacrum", "Limbs", "Sternum"],
+    correctAnswer: 2
+  },
+  {
+    id: 758,
+    question: "What type of bones make up the skull?",
+    choices: ["Long bones", "Flat bones", "Short bones", "Irregular bones"],
+    correctAnswer: 1
+  },
+  {
+    id: 759,
+    question: "Which of the following are irregular bones?",
+    choices: ["Femur", "Vertebrae", "Radius", "Sternum"],
+    correctAnswer: 1
+  },
+  {
+    id: 760,
+    question: "Which ribs are considered true ribs?",
+    choices: ["8–10", "11–12", "1–7", "9–12"],
+    correctAnswer: 2
+  },
+  {
+    id: 761,
+    question: "The manubrium is a part of which bone?",
+    choices: ["Pelvis", "Sternum", "Scapula", "Skull"],
+    correctAnswer: 1
+  },
+  {
+    id: 762,
+    question: "What is the shaft of a long bone called?",
+    choices: ["Epiphysis", "Diaphysis", "Medulla", "Periosteum"],
+    correctAnswer: 1
+  },
+  {
+    id: 763,
+    question: "Which type of bone is the patella?",
+    choices: ["Short", "Flat", "Irregular", "Long"],
+    correctAnswer: 1
+  },
+  {
+    id: 764,
+    question: "What is the primary function of red bone marrow?",
+    choices: ["Fat storage", "Hormone production", "Blood cell production", "Bone resorption"],
+    correctAnswer: 2
+  },
+  {
+    id: 765,
+    question: "A tumor of the plasma cells of bone marrow is called:",
+    choices: ["Osteosarcoma", "Myeloma", "Chondroma", "Osteoma"],
+    correctAnswer: 1
+  },
+  {
+    id: 766,
+    question: "The outer layer of hard connective tissue of bone is called:",
+    choices: ["Cancellous bone", "Bone marrow", "Cortical bone", "Periosteum"],
+    correctAnswer: 2
+  },
+  {
+    id: 767,
+    question: "The four stages of bone healing begin with:",
+    choices: ["Callus formation", "Calcification", "Hematoma formation", "Remodeling"],
+    correctAnswer: 2
+  },
+  {
+    id: 768,
+    question: "What type of tissue covers joint surfaces to allow smooth movement?",
+    choices: ["Periosteum", "Ligament", "Cartilage", "Tendon"],
+    correctAnswer: 2
+  },
+  {
+    id: 769,
+    question: "Which of the following is a benign cartilage tumor?",
+    choices: ["Osteosarcoma", "Chondroma", "Myeloma", "Osteoma"],
+    correctAnswer: 1
+  },
+  {
+    id: 770,
+    question: "Which type of muscle is voluntary?",
+    choices: ["Smooth", "Striated", "Cardiac", "Involuntary"],
+    correctAnswer: 1
+  },
+  {
+    id: 771,
+    question: "What do ligaments attach?",
+    choices: ["Muscle to bone", "Bone to bone", "Cartilage to bone", "Muscle to cartilage"],
+    correctAnswer: 1
+  },
+  {
+    id: 772,
+    question: "What is the function of tendons?",
+    choices: ["Connect bone to bone", "Connect muscle to bone", "Cushion joints", "Secrete synovial fluid"],
+    correctAnswer: 1
+  },
+  {
+    id: 773,
+    question: "A joint that allows no movement is called:",
+    choices: ["Amphiarthrotic", "Diarthrotic", "Synarthrotic", "Synovial"],
+    correctAnswer: 2
+  },
+  {
+    id: 774,
+    question: "Which joint type allows the widest range of motion?",
+    choices: ["Hinge", "Ball and socket", "Pivot", "Gliding"],
+    correctAnswer: 1
+  },
+  {
+    id: 775,
+    question: "What is an example of a condyloid joint?",
+    choices: ["Shoulder", "Elbow", "Temporomandibular joint", "Hip"],
+    correctAnswer: 2
+  },
+  {
+    id: 776,
+    question: "A hinge joint is best exemplified by the:",
+    choices: ["Hip", "Shoulder", "Elbow", "Wrist"],
+    correctAnswer: 2
+  },
+  {
+    id: 777,
+    question: "Turning the sole of the foot inward is called:",
+    choices: ["Eversion", "Inversion", "Plantar flexion", "Dorsiflexion"],
+    correctAnswer: 1
+  },
+  {
+    id: 778,
+    question: "Moving a limb away from the midline of the body is called:",
+    choices: ["Adduction", "Abduction", "Flexion", "Extension"],
+    correctAnswer: 1
+  },
+  {
+    id: 779,
+    question: "An autoimmune disease that causes joint inflammation and stiffness is:",
+    choices: ["Osteoarthritis", "Rheumatoid arthritis", "Osteomyelitis", "Chondroma"],
+    correctAnswer: 3
+  },
+  {
+    id: 780,
+    question: "Which diagnostic test records electrical activity of muscle?",
+    choices: ["MRI", "Arthrogram", "CT scan", "Electromyography"],
+    correctAnswer: 1
+  },
+  {
+    id: 781,
+    question: "What type of fracture does not puncture the skin?",
+    choices: ["Open", "Simple", "Compound", "Comminuted"],
+    correctAnswer: 1
+  },
+  {
+    id: 782,
+    question: "A fracture where the bone bends on one side and breaks on the other is:",
+    choices: ["Oblique", "Greenstick", "Transverse", "Impacted"],
+    correctAnswer: 1
+  },
+  {
+    id: 783,
+    question: "A fracture where the bone breaks into several pieces is called:",
+    choices: ["Displaced", "Comminuted", "Oblique", "Transverse"],
+    correctAnswer: 2
+  },
+  {
+    id: 784,
+    question: "A Colles' fracture involves which bone?",
+    choices: ["Tibia", "Femur", "Radius", "Fibula"],
+    correctAnswer: 2
+  },
+  {
+    id: 785,
+    question: "Which type of fracture is caused by disease that weakens the bone?",
+    choices: ["Pathologic", "Greenstick", "Impacted", "Oblique"],
+    correctAnswer: 0
+  },
+  {
+    id: 786,
+    question: "A partial dislocation is known as:",
+    choices: ["Dislocation", "Subluxation", "Impaction", "Avulsion"],
+    correctAnswer: 1
+  },
+  {
+    id: 787,
+    question: "Which table is used for spine surgery?",
+    choices: ["Fracture table", "Andrews table", "Jackson table", "Alvarado table"],
+    correctAnswer: 1
+  },
+  {
+    id: 788,
+    question: "Traction applied directly to bone using pins is called:",
+    choices: ["Manual traction", "Skeletal traction", "Skin traction", "Elastic traction"],
+    correctAnswer: 1
+  },
+  {
+    id: 789,
+    question: "Which material is commonly used for casting?",
+    choices: ["Bone cement", "Fiberglass", "Silicone", "Nylon"],
+    correctAnswer: 0
+  },
+  {
+    id: 790,
+    question: "Which of the following is a complication of bone healing?",
+    choices: ["Delayed union", "Callus formation", "Calcification", "Remodeling"],
+    correctAnswer: 2
+  },
+  {
+    id: 791,
+    question: "A disease of decreased bone density leading to brittle bones is:",
+    choices: ["Osteomalacia", "Osteogenesis imperfecta", "Osteoporosis", "Osteoarthritis"],
+    correctAnswer: 0
+  },
+  {
+    id: 792,
+    question: "Bone cement is also known as:",
+    choices: ["PMMA", "PVC", "Fiberglass", "Epoxy"],
+    correctAnswer: 2
+  },
+  {
+    id: 793,
+    question: "Which type of bone graft is taken from the patient?",
+    choices: ["Allograft", "Xenograft", "Autograft", "Synthetic"],
+    correctAnswer: 1
+  },
+  {
+    id: 794,
+    question: "What suture material is commonly used for tendon-to-bone?",
+    choices: ["Silk", "Polyester (Ethibond)", "Vicryl", "Chromic"],
+    correctAnswer: 0
+  },
+  {
+    id: 795,
+    question: "Which hemostatic agent is made of absorbable gelatin?",
+    choices: ["Bone wax", "Gelfoam", "Thrombin", "PMMA"],
+    correctAnswer: 2
+  },
+  {
+    id: 796,
+    question: "Which position may interfere with chest expansion if improperly performed?",
+    choices: ["Lateral", "Supine", "Prone", "Lithotomy"],
+    correctAnswer: 2
+  },
+  {
+    id: 797,
+    question: "A genetic disorder causing brittle bones is:",
+    choices: ["Osteomyelitis", "Osteomalacia", "Osteogenesis imperfecta", "Osteoarthritis"],
+    correctAnswer: 1
+  },
+  {
+    id: 798,
+    question: "Which of the following is a metabolic disease causing soft bones?",
+    choices: ["Osteoporosis", "Osteomalacia", "Osteonecrosis", "Osteoarthritis"],
+    correctAnswer: 2
+  },
+  {
+    id: 799,
+    question: "A compartment syndrome results in:",
+    choices: ["Bone infection", "Increased pressure in fascial compartments", "Loss of calcium", "Bone necrosis"],
+    correctAnswer: 2
+  },
+  {
+    id: 800,
+    question: "What table provides skeletal traction for fractures?",
+    choices: ["Fracture table", "Jackson table", "Andrews table", "Alvarado table"],
+    correctAnswer: 1
+  },
+  {
+    id: 801,
+    question: "Which antibiotic is commonly used for irrigation?",
+    choices: ["Erythromycin", "Bacitracin", "Amoxicillin", "Ciprofloxacin"],
+    correctAnswer: 1
+  },
+  {
+    id: 802,
+    question: "Which laser is used in arthroscopies?",
+    choices: ["Nd:YAG", "CO₂", "Excimer", "Argon"],
+    correctAnswer: 0
+  },
+  {
+    id: 803,
+    question: "What is the purpose of bone grafts?",
+    choices: ["To increase bone length", "To promote healing of fractures", "To lubricate joints", "To remove diseased bone"],
+    correctAnswer: 1
+  },
+  {
+    id: 804,
+    question: "What is the preferred first step to repair a fracture?",
+    choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
+    correctAnswer: 1
+  },
+  {
+    id: 805,
+    question: "Which laser is used in arthroscopies?",
+    choices: ["Nd:YAG", "CO₂", "Excimer", "Argon"],
+    correctAnswer: 1
+  },
+  {
+    id: 806,
+    question: "What is the preferred first step to repair a fracture?",
+    choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
+    correctAnswer: 1
   }
 ];
