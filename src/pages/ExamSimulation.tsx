@@ -4,9 +4,36 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Award, Clock, Target, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import QuestionPractice from '@/components/QuestionPractice';
+import { getExamSimulationQuestions, categoryBreakdown } from '@/data/allQuestions';
 
 const ExamSimulation = () => {
   const [isStarted, setIsStarted] = useState(false);
+  const [examQuestions, setExamQuestions] = useState<any[]>([]);
+
+  const startExam = () => {
+    const questions = getExamSimulationQuestions();
+    setExamQuestions(questions);
+    setIsStarted(true);
+  };
+
+  const handleMissedQuestion = (question: any) => {
+    // Get existing missed questions from localStorage
+    const existingMissed = JSON.parse(localStorage.getItem('missedQuestions') || '[]');
+    
+    // Check if question already exists (avoid duplicates)
+    const questionExists = existingMissed.some((q: any) => q.id === question.id && q.category === question.category);
+    
+    if (!questionExists) {
+      const missedQuestion = { 
+        ...question, 
+        category: question.category || 'Exam Simulation',
+        dateMissed: new Date().toISOString()
+      };
+      existingMissed.push(missedQuestion);
+      localStorage.setItem('missedQuestions', JSON.stringify(existingMissed));
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
@@ -53,8 +80,8 @@ const ExamSimulation = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                 <div className="flex flex-col items-center space-y-2">
                   <Clock className="h-8 w-8 text-blue-500/80" />
-                  <h3 className="font-semibold text-gray-900">Timed Exam</h3>
-                  <p className="text-sm text-gray-600">Realistic time constraints</p>
+                  <h3 className="font-semibold text-gray-900">Timed Practice</h3>
+                  <p className="text-sm text-gray-600">Self-paced learning</p>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <BookOpen className="h-8 w-8 text-indigo-500/80" />
@@ -70,17 +97,22 @@ const ExamSimulation = () => {
 
               <div className="bg-blue-50/60 rounded-lg p-6 my-8">
                 <h3 className="font-semibold text-gray-900 mb-4">Exam Categories Coverage:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div className="text-gray-700">• Intro to Surgical Technology</div>
-                  <div className="text-gray-700">• Principles and Practice</div>
-                  <div className="text-gray-700">• Surgical Procedures</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="text-gray-700">• Intro to Surgical Technology ({categoryBreakdown['Intro to Surgical Technology']} questions)</div>
+                  <div className="text-gray-700">• Principles and Practice ({categoryBreakdown['Principles and Practice of Surgical Technology']} questions)</div>
+                  <div className="text-gray-700">• Surgical Procedures ({categoryBreakdown['Surgical Procedures']} questions)</div>
+                  <div className="text-gray-700">• Medical Terminology ({categoryBreakdown['Medical Terminology']} questions)</div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-blue-200/50">
+                  <p className="font-semibold text-gray-900">Total: {categoryBreakdown.Total} questions available</p>
+                  <p className="text-sm text-gray-600 mt-1">Exam will randomly select 150 questions from this pool</p>
                 </div>
               </div>
 
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-8 py-3"
-                onClick={() => setIsStarted(true)}
+                onClick={startExam}
               >
                 <Award className="h-5 w-5 mr-2" />
                 Start Exam Simulation
@@ -88,19 +120,13 @@ const ExamSimulation = () => {
             </div>
           </Card>
         ) : (
-          <Card className="bg-gradient-to-br from-white/90 via-blue-50/80 to-indigo-50/70 backdrop-blur-sm border-blue-200/50 shadow-xl p-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-2xl font-semibold text-gray-900">Exam Coming Soon</h2>
-              <p className="text-gray-600">The full exam simulation will be available once you provide the complete question bank.</p>
-              <Button 
-                variant="outline" 
-                onClick={() => setIsStarted(false)}
-                className="border-blue-200/60 hover:bg-blue-50/80"
-              >
-                Back to Setup
-              </Button>
-            </div>
-          </Card>
+          <div className="space-y-6">
+            <QuestionPractice
+              questions={examQuestions}
+              categoryName="Exam Simulation"
+              onMissedQuestion={handleMissedQuestion}
+            />
+          </div>
         )}
       </div>
     </div>

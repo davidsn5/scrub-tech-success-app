@@ -4,9 +4,36 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Zap, Clock, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import QuestionPractice from '@/components/QuestionPractice';
+import { getFireQuizQuestions, categoryBreakdown } from '@/data/allQuestions';
 
 const FireQuiz = () => {
   const [isStarted, setIsStarted] = useState(false);
+  const [quizQuestions, setQuizQuestions] = useState<any[]>([]);
+
+  const startQuiz = () => {
+    const questions = getFireQuizQuestions();
+    setQuizQuestions(questions);
+    setIsStarted(true);
+  };
+
+  const handleMissedQuestion = (question: any) => {
+    // Get existing missed questions from localStorage
+    const existingMissed = JSON.parse(localStorage.getItem('missedQuestions') || '[]');
+    
+    // Check if question already exists (avoid duplicates)
+    const questionExists = existingMissed.some((q: any) => q.id === question.id && q.category === question.category);
+    
+    if (!questionExists) {
+      const missedQuestion = { 
+        ...question, 
+        category: question.category || 'Fire Quiz',
+        dateMissed: new Date().toISOString()
+      };
+      existingMissed.push(missedQuestion);
+      localStorage.setItem('missedQuestions', JSON.stringify(existingMissed));
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-red-50/90 to-orange-100/85">
@@ -68,10 +95,23 @@ const FireQuiz = () => {
                 </div>
               </div>
 
+              <div className="bg-red-50/60 rounded-lg p-6 my-8">
+                <h3 className="font-semibold text-gray-900 mb-4">Question Pool:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="text-gray-700">• Intro to Surgical Technology ({categoryBreakdown['Intro to Surgical Technology']} questions)</div>
+                  <div className="text-gray-700">• Principles and Practice ({categoryBreakdown['Principles and Practice of Surgical Technology']} questions)</div>
+                  <div className="text-gray-700">• Surgical Procedures ({categoryBreakdown['Surgical Procedures']} questions)</div>
+                  <div className="text-gray-700">• Medical Terminology ({categoryBreakdown['Medical Terminology']} questions)</div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-red-200/50">
+                  <p className="font-semibold text-gray-900">Total: {categoryBreakdown.Total} questions available</p>
+                </div>
+              </div>
+
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white px-8 py-3"
-                onClick={() => setIsStarted(true)}
+                onClick={startQuiz}
               >
                 <Zap className="h-5 w-5 mr-2" />
                 Start Fire Quiz
@@ -79,19 +119,13 @@ const FireQuiz = () => {
             </div>
           </Card>
         ) : (
-          <Card className="bg-gradient-to-br from-white/90 via-red-50/80 to-orange-50/70 backdrop-blur-sm border-red-200/50 shadow-xl p-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-2xl font-semibold text-gray-900">Quiz Coming Soon</h2>
-              <p className="text-gray-600">The Fire Quiz feature will be available once you provide the question bank.</p>
-              <Button 
-                variant="outline" 
-                onClick={() => setIsStarted(false)}
-                className="border-red-200/60 hover:bg-red-50/80"
-              >
-                Back to Setup
-              </Button>
-            </div>
-          </Card>
+          <div className="space-y-6">
+            <QuestionPractice
+              questions={quizQuestions}
+              categoryName="Fire Quiz"
+              onMissedQuestion={handleMissedQuestion}
+            />
+          </div>
         )}
       </div>
     </div>
