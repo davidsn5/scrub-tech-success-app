@@ -56,6 +56,7 @@ const PrinciplesPractice = () => {
           questions={principlesPracticeQuestions}
           categoryName="Principles and Practice of Surgical Technology"
           onMissedQuestion={handleMissedQuestion}
+          themeColor="from-teal-500/90 to-teal-600/90"
         />
       </div>
     </div>

@@ -9,12 +9,14 @@ interface QuestionPracticeProps {
   questions: Question[];
   categoryName: string;
   onMissedQuestion?: (question: Question) => void;
+  themeColor?: string;
 }
 
 const QuestionPractice: React.FC<QuestionPracticeProps> = ({ 
   questions, 
   categoryName, 
-  onMissedQuestion 
+  onMissedQuestion,
+  themeColor = "from-orange-500/90 to-teal-500/90"
 }) => {
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -104,7 +106,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md mx-auto">
           <Button 
             onClick={handleRestart}
-            className="bg-gradient-to-r from-orange-500/90 to-teal-500/90 hover:opacity-90 transition-opacity text-white"
+            className={`bg-gradient-to-r ${themeColor} hover:opacity-90 transition-opacity text-white`}
           >
             <RotateCcw className="h-4 w-4 mr-2" />
             Try Again
@@ -225,7 +227,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
               <div className="mt-4 flex justify-end">
                 <Button 
                   onClick={handleNextQuestion}
-                  className="bg-gradient-to-r from-orange-500/90 to-teal-500/90 hover:opacity-90 transition-opacity text-white"
+                  className={`bg-gradient-to-r ${themeColor} hover:opacity-90 transition-opacity text-white`}
                 >
                   {currentQuestionIndex < shuffledQuestions.length - 1 ? (
                     <>
