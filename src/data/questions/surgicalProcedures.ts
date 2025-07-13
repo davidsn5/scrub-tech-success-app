@@ -5717,5 +5717,281 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Radiological decontamination includes:",
     choices: ["Removing clothing and washing with soap and water", "Leaving clothing on", "Using bleach in the eyes", "None of the above"],
     correctAnswer: 0
+  },
+  {
+    id: 953,
+    question: "What is the purpose of a HEPA filter in smoke evacuation during laser surgery?",
+    choices: ["To cool the air in the operating room", "To absorb odor from antiseptics", "To filter cells and particles from surgical smoke", "To sterilize the surgical instruments"],
+    correctAnswer: 2
+  },
+  {
+    id: 954,
+    question: "The ESU smoke is less dangerous than laser smoke because:",
+    choices: ["It has no odor", "It contains fewer cellular particles", "It cannot cause respiratory irritation", "It is filtered automatically"],
+    correctAnswer: 1
+  },
+  {
+    id: 955,
+    question: "What is the main risk of latex allergy?",
+    choices: ["Eye damage", "Skin rash to respiratory arrest", "Cancer", "Hair loss"],
+    correctAnswer: 1
+  },
+  {
+    id: 956,
+    question: "Why should a latex-allergic patient be scheduled as the first case?",
+    choices: ["To save time", "To reduce cross-contamination with latex dust", "To minimize anesthesia time", "To reduce cost"],
+    correctAnswer: 1
+  },
+  {
+    id: 957,
+    question: "Which chemical is used to preserve surgical specimens?",
+    choices: ["Glutaraldehyde", "Formaldehyde", "Ethylene oxide", "Sodium hypochlorite"],
+    correctAnswer: 1
+  },
+  {
+    id: 958,
+    question: "What is PMMA used for?",
+    choices: ["Skin antiseptic", "Bone cement", "Surgical drape coating", "Fire retardant"],
+    correctAnswer: 1
+  },
+  {
+    id: 959,
+    question: "Bone cement implantation syndrome can cause:",
+    choices: ["Bone fracture", "Emboli to the lungs", "Skin burns", "Vision loss"],
+    correctAnswer: 1
+  },
+  {
+    id: 960,
+    question: "Which fire extinguisher is used for electrical fires?",
+    choices: ["Class A", "Class B", "Class C", "Class D"],
+    correctAnswer: 2
+  },
+  {
+    id: 961,
+    question: "What does the \"A\" in PASS stand for?",
+    choices: ["Alert", "Aim", "Avoid", "Act"],
+    correctAnswer: 1
+  },
+  {
+    id: 962,
+    question: "Which natural disaster can cause a tsunami?",
+    choices: ["Wildfire", "Heat wave", "Earthquake", "Avalanche"],
+    correctAnswer: 2
+  },
+  {
+    id: 963,
+    question: "What is a dirty bomb?",
+    choices: ["A chemical explosion causing blindness", "A radioactive bomb causing land damage and burns", "A conventional explosive in a hospital", "A biological agent release"],
+    correctAnswer: 1
+  },
+  {
+    id: 964,
+    question: "Bioterrorism agents include:",
+    choices: ["Mustard gas", "Ebola", "CO₂", "PMMA"],
+    correctAnswer: 1
+  },
+  {
+    id: 965,
+    question: "What is the primary goal of an EAP in healthcare?",
+    choices: ["To order supplies", "To define staff responsibilities during a disaster", "To provide free vaccinations", "To sterilize equipment"],
+    correctAnswer: 1
+  },
+  {
+    id: 966,
+    question: "What is the correct sequence for decontamination of a radiologically exposed patient?",
+    choices: ["Bleach > soap > saline rinse", "Soap and water > rinse > dry", "Remove clothes > rinse with sterile water > bleach", "Burn clothes > rinse with bleach"],
+    correctAnswer: 1
+  },
+  {
+    id: 967,
+    question: "The hot zone refers to:",
+    choices: ["The area for triage", "The area near the operating table", "The area where the disaster occurred", "The hospital entrance"],
+    correctAnswer: 2
+  },
+  {
+    id: 968,
+    question: "Which triage tag is used for patients beyond healing?",
+    choices: ["Red", "Yellow", "Green", "Black"],
+    correctAnswer: 3
+  },
+  {
+    id: 969,
+    question: "Which instrument is inserted through a cannula to view the operative field in MIS?",
+    choices: ["Fiberoptic telescope", "Rigid needle", "Blunt trocar", "Laparoscope"],
+    correctAnswer: 3
+  },
+  {
+    id: 970,
+    question: "Why is CO₂ used for insufflation?",
+    choices: ["It disinfects the cavity", "It is cool and non-flammable", "It improves oxygenation", "It helps clot blood"],
+    correctAnswer: 1
+  },
+  {
+    id: 971,
+    question: "What is one disadvantage of MIS surgery?",
+    choices: ["Excessive trauma", "Quick recovery", "Risk of adhesions", "Reduced pain"],
+    correctAnswer: 2
+  },
+  {
+    id: 972,
+    question: "Which device prevents fogging on a laparoscope lens?",
+    choices: ["Insufflator", "Defogger", "Veress needle", "Biopsy forceps"],
+    correctAnswer: 1
+  },
+  {
+    id: 973,
+    question: "Why is white balancing a scope important?",
+    choices: ["To sterilize the scope", "To adjust color and improve image quality", "To prevent fogging", "To protect mucous membranes"],
+    correctAnswer: 1
+  },
+  {
+    id: 974,
+    question: "The purpose of an endocoupler is to:",
+    choices: ["Inflate the cavity", "Connect the camera to the telescope", "Remove debris", "Filter smoke"],
+    correctAnswer: 1
+  },
+  {
+    id: 975,
+    question: "What is the function of a morcellator?",
+    choices: ["Expand tissue", "Reduce large specimens into small pieces", "Remove fluid", "Suture tissue"],
+    correctAnswer: 1
+  },
+  {
+    id: 976,
+    question: "Which endoscope cleaning step checks for holes?",
+    choices: ["Preclean", "Leak test", "Sterilization", "Enzymatic wash"],
+    correctAnswer: 1
+  },
+  {
+    id: 977,
+    question: "Which sterilization method is suitable for scopes sensitive to heat?",
+    choices: ["Steam", "ETO", "Autoclave", "Incineration"],
+    correctAnswer: 1
+  },
+  {
+    id: 978,
+    question: "What is capacitive coupling?",
+    choices: ["Direct contact burn", "Heat damage from sterilization", "Stray current burn", "Smoke inhalation"],
+    correctAnswer: 2
+  },
+  {
+    id: 979,
+    question: "Which laser is preferred for bronchoscopies?",
+    choices: ["Nd:YAG", "CO₂", "Argon", "KTP"],
+    correctAnswer: 1
+  },
+  {
+    id: 980,
+    question: "A fetoscopy is used to:",
+    choices: ["Repair hernia", "Visualize fetus", "Resect colon", "Remove gallstones"],
+    correctAnswer: 1
+  },
+  {
+    id: 981,
+    question: "What is the purpose of ERCP?",
+    choices: ["View uterus", "Repair aneurysm", "Visualize bile ducts", "Resect prostate"],
+    correctAnswer: 2
+  },
+  {
+    id: 982,
+    question: "What condition can hysteroscopy treat?",
+    choices: ["Liver tumors", "Menorrhagia", "Hydrocephalus", "Herniated disc"],
+    correctAnswer: 1
+  },
+  {
+    id: 983,
+    question: "Sigmoidoscopy is performed to view the:",
+    choices: ["Bladder", "Rectum and sigmoid colon", "Esophagus", "Uterus"],
+    correctAnswer: 1
+  },
+  {
+    id: 984,
+    question: "Which endoscopic procedure removes foreign bodies from the tracheobronchial tree?",
+    choices: ["Esophagoscopy", "Bronchoscopy", "Gastroscopy", "Cystoscopy"],
+    correctAnswer: 1
+  },
+  {
+    id: 985,
+    question: "What is VATS?",
+    choices: ["Video-assisted thoracoscopic surgery", "Vascular aneurysm treatment", "Video imaging of the stomach", "Vocal cord biopsy"],
+    correctAnswer: 0
+  },
+  {
+    id: 986,
+    question: "What is the most common robot used in surgery?",
+    choices: ["Zeus", "Intuitive Da Vinci", "Telchir", "Telepresence"],
+    correctAnswer: 1
+  },
+  {
+    id: 987,
+    question: "What is a manipulator?",
+    choices: ["The surgeon's controller", "The robotic arm", "The console", "The endoscope"],
+    correctAnswer: 1
+  },
+  {
+    id: 988,
+    question: "What does yaw describe?",
+    choices: ["Up and down movement", "Insertion", "Right and left movement", "Open and close"],
+    correctAnswer: 2
+  },
+  {
+    id: 989,
+    question: "What is telesurgery?",
+    choices: ["Teaching surgery remotely", "Surgery performed at a distance", "Biopsy using a robot", "Video recording of a surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 990,
+    question: "What are micromanipulators?",
+    choices: ["Robotic fingers", "Endowrist tips", "Devices translating console commands to robotic movement", "High-definition cameras"],
+    correctAnswer: 2
+  },
+  {
+    id: 991,
+    question: "What does sensitivity in robotics refer to?",
+    choices: ["Ability to differentiate objects", "Ability to detect weak signals", "Ability to rotate", "Ability to see in color"],
+    correctAnswer: 1
+  },
+  {
+    id: 992,
+    question: "Which robot component houses the surgeon?",
+    choices: ["Patient-side cart", "Console", "Manipulator", "Endowrist"],
+    correctAnswer: 1
+  },
+  {
+    id: 993,
+    question: "Why is carbon dioxide preferred for pneumoperitoneum?",
+    choices: ["It cools and is absorbed by the body", "It sterilizes the cavity", "It is highly flammable", "It improves blood oxygenation"],
+    correctAnswer: 0
+  },
+  {
+    id: 994,
+    question: "What is chromopertubation used for?",
+    choices: ["Determine tubal patency", "Remove fibroids", "Biopsy of the uterus", "Repair hernia"],
+    correctAnswer: 0
+  },
+  {
+    id: 995,
+    question: "What procedure removes a kidney laparoscopically?",
+    choices: ["Nephrectomy", "Cystectomy", "TURP", "TURB"],
+    correctAnswer: 0
+  },
+  {
+    id: 996,
+    question: "What is a ventriculoscopy used to treat?",
+    choices: ["Varices", "Hydrocephalus", "Herniated disc", "Sinusitis"],
+    correctAnswer: 1
+  },
+  {
+    id: 997,
+    question: "What is radiofrequency ablation used for?",
+    choices: ["Varicose veins", "Uterine fibroids", "Hernias", "Aneurysms"],
+    correctAnswer: 0
+  },
+  {
+    id: 998,
+    question: "What does MIDCAB stand for?",
+    choices: ["Minimally invasive coronary artery bypass", "Minimally invasive colon and bladder", "Manual incision coronary artery bypass", "Mechanical internal cardiac ablation"],
+    correctAnswer: 0
   }
 ];
