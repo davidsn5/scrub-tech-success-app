@@ -5435,5 +5435,287 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Which gender is more commonly affected by pyloric stenosis?",
     choices: ["Female", "Male", "Equal", "Depends on race"],
     correctAnswer: 1
+  },
+  {
+    id: 906,
+    question: "What is the main concern with laser plume during surgery?",
+    choices: ["Electrical burns", "Cancer-causing fumes", "Cells in the smoke", "High temperatures"],
+    correctAnswer: 2
+  },
+  {
+    id: 907,
+    question: "Which type of filter should be used with suction for laser plume?",
+    choices: ["HEPA with charcoal", "Water-only filter", "UV filter", "HEPA-only"],
+    correctAnswer: 0
+  },
+  {
+    id: 908,
+    question: "Latex is made from:",
+    choices: ["Petroleum", "Rubber (trees)", "Synthetic plastic", "Cotton"],
+    correctAnswer: 1
+  },
+  {
+    id: 909,
+    question: "Who was the first surgeon to use latex gloves?",
+    choices: ["Halstead", "Lister", "Pasteur", "Koch"],
+    correctAnswer: 0
+  },
+  {
+    id: 910,
+    question: "What is a symptom of latex allergy?",
+    choices: ["Rash", "Hypertension", "Fever only", "Hearing loss"],
+    correctAnswer: 0
+  },
+  {
+    id: 911,
+    question: "When should a latex-allergic patient ideally be scheduled?",
+    choices: ["First case of the day", "Last case of the day", "After lunch", "At night"],
+    correctAnswer: 0
+  },
+  {
+    id: 912,
+    question: "Which chemical is used to preserve specimens?",
+    choices: ["Glutaraldehyde", "Formaldehyde", "ETO", "PMMA"],
+    correctAnswer: 1
+  },
+  {
+    id: 913,
+    question: "What is PMMA used for?",
+    choices: ["Sterilizing instruments", "Bone cement", "Sutures", "Cleaning floors"],
+    correctAnswer: 1
+  },
+  {
+    id: 914,
+    question: "PMMA can cause:",
+    choices: ["Respiratory arrest", "Hypotension", "Seizures", "Tachycardia"],
+    correctAnswer: 1
+  },
+  {
+    id: 915,
+    question: "Which gas is used in Class B fire extinguishers?",
+    choices: ["Halon", "Water", "CO₂", "Oxygen"],
+    correctAnswer: 2
+  },
+  {
+    id: 916,
+    question: "What is the correct order for PASS when using a fire extinguisher?",
+    choices: ["Pull, Aim, Squeeze, Sweep", "Push, Aim, Spray, Sweep", "Pull, Align, Spray, Sweep", "Push, Align, Squeeze, Sweep"],
+    correctAnswer: 0
+  },
+  {
+    id: 917,
+    question: "RACE for fire response stands for:",
+    choices: ["Run, Avoid, Call, Escape", "Rescue, Alert, Contain, Evacuate", "Rescue, Alert, Call, Evacuate", "Run, Alert, Contain, Exit"],
+    correctAnswer: 1
+  },
+  {
+    id: 918,
+    question: "The Richter scale is used to measure:",
+    choices: ["Hurricanes", "Earthquakes", "Floods", "Tornadoes"],
+    correctAnswer: 1
+  },
+  {
+    id: 919,
+    question: "Heat stroke occurs due to:",
+    choices: ["Too much water", "Body's failure to regulate temperature", "Viral infection", "Low humidity"],
+    correctAnswer: 1
+  },
+  {
+    id: 920,
+    question: "Which biological agent is considered a bioterrorism risk?",
+    choices: ["Lead", "Anthrax", "Asbestos", "Mercury"],
+    correctAnswer: 1
+  },
+  {
+    id: 921,
+    question: "Dirty bombs cause:",
+    choices: ["Only radiation", "Only burns", "Radiation and physical injury", "Only chemical injury"],
+    correctAnswer: 2
+  },
+  {
+    id: 922,
+    question: "Which is NOT a correct hot, warm, cold zone description?",
+    choices: ["Hot — where the disaster occurred", "Warm — evaluation area", "Cold — safest zone", "Hot — safe zone"],
+    correctAnswer: 3
+  },
+  {
+    id: 923,
+    question: "Triage black tag means:",
+    choices: ["Minor injury", "Beyond healing", "Needs immediate help", "Walking wounded"],
+    correctAnswer: 1
+  },
+  {
+    id: 924,
+    question: "What is the surgical technologist's role in triage?",
+    choices: ["Direct command center", "CPR and transport", "Triage doctor", "None"],
+    correctAnswer: 0
+  },
+  {
+    id: 925,
+    question: "MIS stands for:",
+    choices: ["Minimally invasive surgery", "Minimally instructed surgery", "Medical invasive surgery", "Multi-instrument surgery"],
+    correctAnswer: 0
+  },
+  {
+    id: 926,
+    question: "The trocar is removed and what remains in place?",
+    choices: ["Port", "Cannula", "Fiberoptic light", "Insufflator"],
+    correctAnswer: 1
+  },
+  {
+    id: 927,
+    question: "Blunt trocar is also known as:",
+    choices: ["Veress needle", "Hasson", "Port", "Balloon dissector"],
+    correctAnswer: 1
+  },
+  {
+    id: 928,
+    question: "Fiberoptic light cords should:",
+    choices: ["Be tightly coiled", "Be handled carefully and loosely coiled", "Be sterilized in ETO", "Be soaked in saline"],
+    correctAnswer: 1
+  },
+  {
+    id: 929,
+    question: "Insufflation for laparoscopy uses:",
+    choices: ["Oxygen", "Nitrogen", "CO₂", "Helium"],
+    correctAnswer: 2
+  },
+  {
+    id: 930,
+    question: "What is an advantage of MIS surgery?",
+    choices: ["Increased trauma", "Quick recovery", "More bleeding", "Increased pain"],
+    correctAnswer: 1
+  },
+  {
+    id: 931,
+    question: "What is a disadvantage of MIS surgery?",
+    choices: ["Reduced risk of adhesions", "Gas embolism risk", "Improved vision", "Lower training needed"],
+    correctAnswer: 1
+  },
+  {
+    id: 932,
+    question: "Maintaining normothermia is important because CO₂:",
+    choices: ["Raises body temperature", "Has no effect", "Lowers body temperature", "Dehydrates tissue"],
+    correctAnswer: 2
+  },
+  {
+    id: 933,
+    question: "Which part of a telescope should you always hold?",
+    choices: ["Shaft", "Head", "Lens", "Base"],
+    correctAnswer: 1
+  },
+  {
+    id: 934,
+    question: "White balancing:",
+    choices: ["Is optional", "Evens brightness and improves image", "Is harmful to the scope", "Requires a black background"],
+    correctAnswer: 1
+  },
+  {
+    id: 935,
+    question: "Pixels on the camera chip determine:",
+    choices: ["Weight", "Clarity", "Length", "Heat"],
+    correctAnswer: 1
+  },
+  {
+    id: 936,
+    question: "Which laser has a blue-green beam?",
+    choices: ["CO₂", "Argon", "YAG", "Excimer"],
+    correctAnswer: 1
+  },
+  {
+    id: 937,
+    question: "Excimer laser is used for:",
+    choices: ["Ablating tissue without cutting", "Deep cuts", "Coagulating", "Dissecting"],
+    correctAnswer: 0
+  },
+  {
+    id: 938,
+    question: "Krypton laser beam color:",
+    choices: ["Blue", "Red-yellow", "Green", "Invisible"],
+    correctAnswer: 1
+  },
+  {
+    id: 939,
+    question: "YAG lasers are commonly used for:",
+    choices: ["Eyes only", "Skin cancers and glaucoma", "Teeth whitening", "Bone cutting"],
+    correctAnswer: 1
+  },
+  {
+    id: 940,
+    question: "For laser safety, which is FALSE?",
+    choices: ["Use metal jewelry", "Cover patient eyes", "Wear fire-resistant gowns", "Insulate ET tubes"],
+    correctAnswer: 0
+  },
+  {
+    id: 941,
+    question: "Blended current is used to:",
+    choices: ["Only cut", "Only coagulate", "Cut and provide hemostasis", "Sterilize tissue"],
+    correctAnswer: 2
+  },
+  {
+    id: 942,
+    question: "Monopolar electrosurgery current path is:",
+    choices: ["Active to patient to inactive", "Active to ground only", "Patient to air", "Inactive to generator"],
+    correctAnswer: 1
+  },
+  {
+    id: 943,
+    question: "Coagulating current:",
+    choices: ["Cuts tissue", "Provides intense heat to control bleeding", "Freezes tissue", "Provides no heat"],
+    correctAnswer: 1
+  },
+  {
+    id: 944,
+    question: "Harmonic scalpel uses:",
+    choices: ["Lasers", "Ultrasonic waves", "CO₂ gas", "Cryogenic energy"],
+    correctAnswer: 1
+  },
+  {
+    id: 945,
+    question: "Cryosurgery uses:",
+    choices: ["High heat", "Cold (liquid nitrogen or CO₂)", "Radiation", "Ultrasonic waves"],
+    correctAnswer: 1
+  },
+  {
+    id: 946,
+    question: "Ligasure is a:",
+    choices: ["Cryogenic device", "Bipolar device sealing vessels and tissue", "Monopolar device", "Scalpel blade"],
+    correctAnswer: 1
+  },
+  {
+    id: 947,
+    question: "Laser light waves are:",
+    choices: ["Random", "Coherent and parallel", "Non-coherent", "Random and perpendicular"],
+    correctAnswer: 1
+  },
+  {
+    id: 948,
+    question: "Laser medium can be:",
+    choices: ["Only gas", "Only liquid", "Only crystal", "Gas, solid, crystal, liquid, dye"],
+    correctAnswer: 3
+  },
+  {
+    id: 949,
+    question: "Anesthesia scavenging systems are used to:",
+    choices: ["Capture patient breath", "Filter and remove anesthetic gases", "Provide oxygen", "Create pneumoperitoneum"],
+    correctAnswer: 1
+  },
+  {
+    id: 950,
+    question: "Which class fire extinguisher is for lasers and electrical fires?",
+    choices: ["A", "B", "C", "D"],
+    correctAnswer: 2
+  },
+  {
+    id: 951,
+    question: "Which chemical is used to sterilize and is highly toxic?",
+    choices: ["PMMA", "Formalin", "ETO", "Bleach"],
+    correctAnswer: 2
+  },
+  {
+    id: 952,
+    question: "Radiological decontamination includes:",
+    choices: ["Removing clothing and washing with soap and water", "Leaving clothing on", "Using bleach in the eyes", "None of the above"],
+    correctAnswer: 0
   }
 ];
