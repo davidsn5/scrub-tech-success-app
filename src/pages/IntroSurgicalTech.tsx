@@ -27,20 +27,20 @@ const IntroSurgicalTech = () => {
           <div className="flex items-center justify-center">
             <div className="text-center space-y-4">
               <div className="flex items-center justify-center space-x-3">
-                <div className="bg-gradient-to-br from-orange-500/90 to-teal-500/90 p-2 rounded-lg shadow-lg">
+                <div className="bg-orange-500 p-2 rounded-lg shadow-lg">
                   <BookOpen className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600/90 to-teal-600/90 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold text-orange-500">
                   Intro to Surgical Technology
                 </h1>
               </div>
+              <p className="text-sm text-gray-600">Exam Style Practice Questions</p>
               <Link to="/">
                 <Button variant="outline" size="sm" className="flex items-center space-x-2 border-orange-200/60 hover:bg-orange-50/80">
                   <ArrowLeft className="h-4 w-4" />
                   <span>Back to Home</span>
                 </Button>
               </Link>
-              <p className="text-sm text-gray-600">Exam Style Practice Questions</p>
             </div>
           </div>
         </div>

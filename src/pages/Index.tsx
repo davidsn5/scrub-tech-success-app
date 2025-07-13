@@ -16,7 +16,7 @@ const Index = () => {
       title: "Intro to Surgical Technology",
       description: "Fundamental concepts and foundational knowledge for surgical technologists",
       icon: BookOpen,
-      color: "from-orange-500/80 to-orange-600/80",
+      color: "bg-orange-500",
       bgColor: "from-orange-50/90 to-orange-100/90",
       borderColor: "border-orange-200/60",
       link: "/intro-surgical-tech",
@@ -139,17 +139,14 @@ const Index = () => {
                 <Card key={index} className={`p-4 sm:p-6 bg-gradient-to-br ${section.bgColor} backdrop-blur-sm ${section.borderColor} border shadow-lg hover:shadow-xl transition-all duration-300`}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                      <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-r ${section.color} flex-shrink-0`}>
+                      <div className={`p-2 sm:p-3 rounded-lg ${section.color} flex-shrink-0`}>
                         <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                       </div>
                       <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
-                    <div className="flex items-center justify-between mb-3 sm:mb-4">
-                      <span className="text-xs sm:text-sm text-gray-500">{section.questionCount} Questions Available</span>
-                    </div>
                     <Link to={section.link} className="mt-auto">
-                      <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}>
+                      <Button className={`w-full ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}>
                         Start Studying
                       </Button>
                     </Link>
@@ -216,10 +213,6 @@ const Index = () => {
               <div className="flex items-center space-x-2">
                 <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span>150 Questions</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Target className="h-3 w-3 sm:h-4 sm:w-4" />
-                <span>Timed Practice</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Award className="h-3 w-3 sm:h-4 sm:w-4" />
