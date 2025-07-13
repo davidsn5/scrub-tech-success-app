@@ -5135,5 +5135,305 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "What is the most common indication for total shoulder replacement?",
     choices: ["Tumor", "Trauma", "Arthritis and pain", "Muscle tear"],
     correctAnswer: 2
+  },
+  {
+    id: 856,
+    question: "What is the age range for a neonate?",
+    choices: ["Birth to 1 month", "1–18 months", "6–12 years", "13–18 years"],
+    correctAnswer: 0
+  },
+  {
+    id: 857,
+    question: "Which of the following is a major fear of pediatric patients in surgery?",
+    choices: ["Pain management", "Separation from parents", "Radiation exposure", "Weight gain"],
+    correctAnswer: 1
+  },
+  {
+    id: 858,
+    question: "What is the best way to reduce a child's anxiety about surgery?",
+    choices: ["Keep parents outside the operating room", "Avoid telling the child about the surgery", "Let them bring a toy or stuffed animal", "Sedate the child before arrival"],
+    correctAnswer: 2
+  },
+  {
+    id: 859,
+    question: "Pediatric patients are between the ages of:",
+    choices: ["Birth to 12 years", "Birth to 18 years", "1 month to 18 years", "1 year to 12 years"],
+    correctAnswer: 1
+  },
+  {
+    id: 860,
+    question: "The transfer of heat between the body and objects not in direct contact is called:",
+    choices: ["Conduction", "Convection", "Radiation", "Evaporation"],
+    correctAnswer: 2
+  },
+  {
+    id: 861,
+    question: "When an infant's wet skin is exposed to air and heat is lost, this is:",
+    choices: ["Conduction", "Evaporation", "Convection", "Radiation"],
+    correctAnswer: 1
+  },
+  {
+    id: 862,
+    question: "Heat loss due to direct contact with a cold surface is called:",
+    choices: ["Conduction", "Evaporation", "Convection", "Radiation"],
+    correctAnswer: 0
+  },
+  {
+    id: 863,
+    question: "Heat loss caused by cool air moving around an infant is:",
+    choices: ["Conduction", "Evaporation", "Convection", "Radiation"],
+    correctAnswer: 2
+  },
+  {
+    id: 864,
+    question: "An infant is considered hypothermic when their temperature falls below:",
+    choices: ["35°C/95°F", "36.5°C/97.7°F", "37.5°C/99.5°F", "38°C/100.4°F"],
+    correctAnswer: 1
+  },
+  {
+    id: 865,
+    question: "Which artery is used for intra-arterial monitoring in neonates?",
+    choices: ["Radial", "Carotid", "Umbilical", "Femoral"],
+    correctAnswer: 2
+  },
+  {
+    id: 866,
+    question: "The pyloromyotomy procedure treats:",
+    choices: ["Intestinal atresia", "Hirschsprung's disease", "Pyloric stenosis", "Tracheoesophageal fistula"],
+    correctAnswer: 2
+  },
+  {
+    id: 867,
+    question: "Which of the following is performed for gastroesophageal reflux in infants?",
+    choices: ["Fundoplication", "Myotomy", "Gastrostomy", "Herniorrhaphy"],
+    correctAnswer: 0
+  },
+  {
+    id: 868,
+    question: "Which congenital defect involves a funnel-shaped chest?",
+    choices: ["Omphalocele", "Pectus excavatum", "Spina bifida", "Imperforate anus"],
+    correctAnswer: 1
+  },
+  {
+    id: 869,
+    question: "Which is a fatal blood disorder in infants due to Rh incompatibility?",
+    choices: ["Anemia", "Leukemia", "Erythroblastosis fetalis", "Thalassemia"],
+    correctAnswer: 2
+  },
+  {
+    id: 870,
+    question: "A congenital defect where the esophagus is closed off is:",
+    choices: ["Tracheoesophageal fistula", "Esophageal atresia", "Omphalocele", "Myelomeningocele"],
+    correctAnswer: 1
+  },
+  {
+    id: 871,
+    question: "The most common hernia in infants is:",
+    choices: ["Femoral", "Inguinal", "Umbilical", "Hiatal"],
+    correctAnswer: 2
+  },
+  {
+    id: 872,
+    question: "Spina bifida with exposure of meninges and spinal cord is:",
+    choices: ["Omphalocele", "Myelomeningocele", "Imperforate anus", "Apert syndrome"],
+    correctAnswer: 1
+  },
+  {
+    id: 873,
+    question: "What BMI threshold with life-threatening conditions warrants bariatric surgery in children?",
+    choices: ["30", "35", "40", "45"],
+    correctAnswer: 2
+  },
+  {
+    id: 874,
+    question: "A cleft palate is a defect of:",
+    choices: ["Nose cartilage", "Roof of the mouth", "Lip skin", "Cheek muscle"],
+    correctAnswer: 1
+  },
+  {
+    id: 875,
+    question: "Wilms tumor is also known as:",
+    choices: ["Neuroblastoma", "Nephroblastoma", "Retinoblastoma", "Hepatoblastoma"],
+    correctAnswer: 1
+  },
+  {
+    id: 876,
+    question: "Which tumor commonly arises in the adrenal medulla in children?",
+    choices: ["Wilms tumor", "Neuroblastoma", "Sacrococcygeal teratoma", "Erythroblastosis fetalis"],
+    correctAnswer: 1
+  },
+  {
+    id: 877,
+    question: "An abnormal fluid collection in the scrotum is called:",
+    choices: ["Cryptorchidism", "Hydrocele", "Varicocele", "Orchitis"],
+    correctAnswer: 1
+  },
+  {
+    id: 878,
+    question: "Repair of an undescended testicle is called:",
+    choices: ["Orchiectomy", "Orchiopexy", "Hydrocelectomy", "Varicocelectomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 879,
+    question: "A shunt from brain ventricle to peritoneum treats:",
+    choices: ["Spina bifida", "Hydrocephalus", "Pectus excavatum", "Tetralogy of Fallot"],
+    correctAnswer: 1
+  },
+  {
+    id: 880,
+    question: "The most common cause of pediatric head trauma is:",
+    choices: ["Abuse", "Falls and accidents", "Cancer", "Shunts"],
+    correctAnswer: 1
+  },
+  {
+    id: 881,
+    question: "Which congenital heart defect involves a hole between the atria?",
+    choices: ["Tetralogy of Fallot", "Patent ductus arteriosus", "Ventricular septal defect", "Atrial septal defect"],
+    correctAnswer: 3
+  },
+  {
+    id: 882,
+    question: "Tetralogy of Fallot includes all except:",
+    choices: ["Pulmonary stenosis", "Right ventricular hypertrophy", "Atrial septal defect", "Dextroposition of the aorta"],
+    correctAnswer: 2
+  },
+  {
+    id: 883,
+    question: "Failure of the ductus arteriosus to close at birth is called:",
+    choices: ["Atrial septal defect", "Patent ductus arteriosus", "Tetralogy of Fallot", "Ventricular septal defect"],
+    correctAnswer: 1
+  },
+  {
+    id: 884,
+    question: "Pediatric medications are dosed based on:",
+    choices: ["Age in months", "Weight in kilograms", "Height in centimeters", "Body surface area"],
+    correctAnswer: 1
+  },
+  {
+    id: 885,
+    question: "Fetal surgery can be performed:",
+    choices: ["After birth only", "While fetus is in uterus", "Only on neonates", "Only on premature infants"],
+    correctAnswer: 1
+  },
+  {
+    id: 886,
+    question: "Craniosynostosis repair involves:",
+    choices: ["Craniectomy", "Burr hole", "Shunt placement", "Skull grafting"],
+    correctAnswer: 0
+  },
+  {
+    id: 887,
+    question: "Crouzon's disease includes:",
+    choices: ["Spinal cord defect", "Premature cranial suture closure", "Clubfoot deformity", "Omphalocele"],
+    correctAnswer: 1
+  },
+  {
+    id: 888,
+    question: "Apert syndrome is associated with:",
+    choices: ["Syndactyly", "Hydrocephalus", "Pyloric stenosis", "Neuroblastoma"],
+    correctAnswer: 0
+  },
+  {
+    id: 889,
+    question: "A congenital deformity where the foot rotates inward is called:",
+    choices: ["Genu varum", "Clubfoot", "Hallux valgus", "Talipes valgus"],
+    correctAnswer: 1
+  },
+  {
+    id: 890,
+    question: "Tendon lengthening is performed to treat:",
+    choices: ["Pectus excavatum", "Cleft lip", "Clubfoot and cerebral palsy", "Omphalocele"],
+    correctAnswer: 2
+  },
+  {
+    id: 891,
+    question: "Otoplasty is performed to correct:",
+    choices: ["Hydrocephalus", "Protruding ears", "Syndactyly", "Apert syndrome"],
+    correctAnswer: 1
+  },
+  {
+    id: 892,
+    question: "Microtia refers to:",
+    choices: ["Absent or small ears", "Small jaw", "Small hands", "Small feet"],
+    correctAnswer: 0
+  },
+  {
+    id: 893,
+    question: "Children are at increased risk of airway obstruction during:",
+    choices: ["Intubation", "Extubation", "Surgery", "Recovery"],
+    correctAnswer: 2
+  },
+  {
+    id: 894,
+    question: "Shaken baby syndrome is a type of:",
+    choices: ["Accidental trauma", "Birth injury", "Child abuse", "Head defect"],
+    correctAnswer: 2
+  },
+  {
+    id: 895,
+    question: "A Z-plasty is often used to repair:",
+    choices: ["Cleft lip", "Clubfoot", "Syndactyly", "Spina bifida"],
+    correctAnswer: 0
+  },
+  {
+    id: 896,
+    question: "Hypovolemic shock in children is often caused by:",
+    choices: ["Sepsis", "Dehydration", "Blood loss", "Heart failure"],
+    correctAnswer: 2
+  },
+  {
+    id: 897,
+    question: "Septic shock is commonly caused by:",
+    choices: ["Viral infection", "Dehydration", "Bacterial infection", "Trauma"],
+    correctAnswer: 2
+  },
+  {
+    id: 898,
+    question: "The most common feeding tube used in children is:",
+    choices: ["Nasogastric tube", "PEG tube", "T-tube", "J-tube"],
+    correctAnswer: 0
+  },
+  {
+    id: 899,
+    question: "Which congenital defect causes intestines to twist?",
+    choices: ["Intussusception", "Volvulus", "Omphalocele", "Hirschsprung's disease"],
+    correctAnswer: 1
+  },
+  {
+    id: 900,
+    question: "Which congenital defect is due to absence of ganglion cells?",
+    choices: ["Intussusception", "Hirschsprung's disease", "Volvulus", "Myelomeningocele"],
+    correctAnswer: 1
+  },
+  {
+    id: 901,
+    question: "Which congenital defect causes telescoping of the bowel?",
+    choices: ["Intussusception", "Volvulus", "Hirschsprung's disease", "Pyloric stenosis"],
+    correctAnswer: 0
+  },
+  {
+    id: 902,
+    question: "What is the treatment for pyloric stenosis?",
+    choices: ["Fundoplication", "Pyloromyotomy", "Gastrostomy", "Colostomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 903,
+    question: "Which imaging study is best for diagnosing pyloric stenosis?",
+    choices: ["CT scan", "Ultrasound", "MRI", "X-ray"],
+    correctAnswer: 1
+  },
+  {
+    id: 904,
+    question: "What is the most common age for pyloric stenosis?",
+    choices: ["Newborn", "2-8 weeks", "6 months", "1 year"],
+    correctAnswer: 1
+  },
+  {
+    id: 905,
+    question: "Which gender is more commonly affected by pyloric stenosis?",
+    choices: ["Female", "Male", "Equal", "Depends on race"],
+    correctAnswer: 1
   }
 ];
