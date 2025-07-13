@@ -2031,5 +2031,522 @@ export const introSurgicalTechQuestions: Question[] = [
       "Another patient"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 701,
+    question: "What is the charge of an electron?",
+    choices: [
+      "Positive",
+      "Neutral", 
+      "Negative",
+      "No charge"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 702,
+    question: "What is the center of an atom called?",
+    choices: [
+      "Electron",
+      "Neutron",
+      "Proton",
+      "Nucleus"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 703,
+    question: "What is the term for an electron that is free to move to another atom?",
+    choices: [
+      "Bound electron",
+      "Free electron",
+      "Neutron",
+      "Proton"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 704,
+    question: "Which of the following measures the rate at which work is done?",
+    choices: [
+      "Speed",
+      "Power",
+      "Frequency",
+      "Mass"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 705,
+    question: "What is the unit of frequency?",
+    choices: [
+      "Watts",
+      "Amps",
+      "Hertz",
+      "Volts"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 706,
+    question: "The movement of electricity is called:",
+    choices: [
+      "Voltage",
+      "Resistance",
+      "Current",
+      "Charge"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 707,
+    question: "The pressure that pushes electricity is known as:",
+    choices: [
+      "Current",
+      "Power",
+      "Voltage",
+      "Energy"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 708,
+    question: "Which of Newton's laws is also called the law of inertia?",
+    choices: [
+      "First",
+      "Second",
+      "Third",
+      "Fourth"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 709,
+    question: "According to Newton's third law, for every action there is:",
+    choices: [
+      "A reaction with half the strength",
+      "An equal and opposite reaction",
+      "No reaction",
+      "A delayed reaction"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 710,
+    question: "What type of current flows in only one direction?",
+    choices: [
+      "Alternating current",
+      "Direct current",
+      "Mixed current",
+      "Circular current"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 711,
+    question: "What is the typical hospital voltage?",
+    choices: [
+      "90V",
+      "100V",
+      "110V or 120V",
+      "220V"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 712,
+    question: "In bipolar electrocautery, the current passes between:",
+    choices: [
+      "Patient and ground pad",
+      "Tips of forceps",
+      "Active and neutral electrodes",
+      "Generator and monitor"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 713,
+    question: "The grounding pad is also called the:",
+    choices: [
+      "Active electrode",
+      "Return electrode",
+      "Generator",
+      "Laser beam"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 714,
+    question: "Which current is used to cut tissue?",
+    choices: [
+      "Coagulating",
+      "Blended",
+      "Cutting",
+      "Direct"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 715,
+    question: "What device uses ultrasonic motion to cut and coagulate tissue?",
+    choices: [
+      "Ligasure",
+      "Harmonic scalpel",
+      "Cryosurgery",
+      "Laser"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 716,
+    question: "What is the acronym LASER short for?",
+    choices: [
+      "Light Amplification by Stimulated Emission of Radiation",
+      "Light And Sound Emission Radiation",
+      "Laser Application for Surgical Energy Radiation",
+      "None of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 717,
+    question: "What type of laser emits a blue-green beam?",
+    choices: [
+      "CO₂",
+      "Argon",
+      "YAG",
+      "Krypton"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 718,
+    question: "Which laser is commonly used in Lasik surgery?",
+    choices: [
+      "YAG",
+      "Excimer",
+      "Argon",
+      "CO₂"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 719,
+    question: "Which laser emits a red-yellow beam?",
+    choices: [
+      "Argon",
+      "Krypton",
+      "YAG",
+      "Excimer"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 720,
+    question: "What is the purpose of moistened towels around a laser site?",
+    choices: [
+      "To cool the laser",
+      "To insulate the patient",
+      "To prevent beam reflection",
+      "To increase conductivity"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 721,
+    question: "What does RAM stand for in computers?",
+    choices: [
+      "Random access memory",
+      "Read all memory",
+      "Read after memory",
+      "Random assigned memory"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 722,
+    question: "What is the main storage unit of a computer called?",
+    choices: [
+      "RAM",
+      "ROM",
+      "Hard drive",
+      "Modem"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 723,
+    question: "What is the acronym ROM short for?",
+    choices: [
+      "Read once memory",
+      "Read only memory",
+      "Random only memory",
+      "Read on monitor"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 724,
+    question: "What computer component allows movement of the cursor?",
+    choices: [
+      "Keyboard",
+      "Mouse",
+      "Monitor",
+      "Hard drive"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 725,
+    question: "Which of the following is an example of a hazard in the OR?",
+    choices: [
+      "Physical injury",
+      "Chemical exposure",
+      "Biological contamination",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 726,
+    question: "What type of OR light feature helps reduce eye fatigue?",
+    choices: [
+      "Bright white light",
+      "Flickering light",
+      "Nonglaring light",
+      "Colored light"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 727,
+    question: "Ergonomics in the OR involves:",
+    choices: [
+      "Proper body mechanics",
+      "Electrical safety",
+      "Computer programming",
+      "Air circulation"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 728,
+    question: "What is the recommended maximum weight of an instrument?",
+    choices: [
+      "10 lbs",
+      "15 lbs",
+      "25 lbs",
+      "50 lbs"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 729,
+    question: "What is the minimum distance from a fluoroscopy beam one should stand?",
+    choices: [
+      "2 feet",
+      "4 feet",
+      "6 feet",
+      "8 feet"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 730,
+    question: "What material is worn to protect against x-rays?",
+    choices: [
+      "Steel apron",
+      "Lead apron",
+      "Aluminum collar",
+      "Plastic gown"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 731,
+    question: "Which humidity range helps prevent static electricity sparks in the OR?",
+    choices: [
+      "10–30%",
+      "20–60%",
+      "40–80%",
+      "50–90%"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 732,
+    question: "Which of the following is NOT recommended for laser safety?",
+    choices: [
+      "Fire-resistant gown",
+      "Eye protection",
+      "Wearing metal jewelry",
+      "Nonflammable drapes"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 733,
+    question: "What is the recommended way to pass sharps safely?",
+    choices: [
+      "By hand",
+      "Through a neutral zone",
+      "On a tray",
+      "With tongs"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 734,
+    question: "When stuck with a needle, the first step is to:",
+    choices: [
+      "Wash the injury",
+      "Report to supervisor",
+      "Remove glove and assess injury",
+      "Leave the room"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 735,
+    question: "What is laser plume?",
+    choices: [
+      "A light beam",
+      "A smoke byproduct",
+      "A cooling device",
+      "A laser type"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 736,
+    question: "What medium is used in a YAG laser?",
+    choices: [
+      "Argon",
+      "CO₂",
+      "Holmium:Yttrium-Aluminum-Garnet",
+      "Krypton"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 737,
+    question: "Which laser is contraindicated for cancer tissue?",
+    choices: [
+      "CO₂",
+      "YAG",
+      "Argon",
+      "Excimer"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 738,
+    question: "Which medium does a krypton laser use?",
+    choices: [
+      "Argon gas",
+      "Carbon dioxide",
+      "Electrical current",
+      "Mixture of gases"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 739,
+    question: "Which device uses ultrasonic wave energy to seal and cut?",
+    choices: [
+      "Ligasure",
+      "Cryosurgery",
+      "Harmonic scalpel",
+      "Morcellator"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 740,
+    question: "What is the purpose of an active electrode?",
+    choices: [
+      "Directs current to target tissue",
+      "Returns current to generator",
+      "Produces electricity",
+      "Insulates tissue"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 741,
+    question: "What is a morcellator used for?",
+    choices: [
+      "Freezing tissue",
+      "Sealing vessels",
+      "Cutting and fragmenting tissue",
+      "Coagulating tissue"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 742,
+    question: "What is the correct definition of frequency?",
+    choices: [
+      "Rate of work done",
+      "Cycles per unit time",
+      "Force over area",
+      "Energy per second"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 743,
+    question: "Which computer term refers to programs?",
+    choices: [
+      "Hardware",
+      "Software",
+      "Memory",
+      "RAM"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 744,
+    question: "What is the unit of power?",
+    choices: [
+      "Watt",
+      "Hertz",
+      "Volt",
+      "Amp"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 745,
+    question: "Which of Newton's laws states that acceleration is proportional to force?",
+    choices: [
+      "First",
+      "Second",
+      "Third",
+      "Fourth"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 746,
+    question: "Which type of current alternates direction?",
+    choices: [
+      "Direct",
+      "Alternating",
+      "Mixed",
+      "Neutral"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 747,
+    question: "What does the generator in electrosurgery do?",
+    choices: [
+      "Insulates the patient",
+      "Produces high-frequency current",
+      "Absorbs electricity",
+      "Reflects the beam"
+    ],
+    correctAnswer: 1
   }
 ];
