@@ -743,7 +743,12 @@ const QuizMode: React.FC<QuizModeProps> = ({
                 disabled={showResult}
               >
                 <div className="flex items-center justify-between w-full">
-                  <span>{option}</span>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold">
+                      {String.fromCharCode(65 + index)}
+                    </div>
+                    <span>{option}</span>
+                  </div>
                   {showResult && index === currentQuestion.correct && (
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   )}
