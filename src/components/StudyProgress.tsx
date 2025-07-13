@@ -106,12 +106,7 @@ const StudyProgress: React.FC<StudyProgressProps> = ({
                 ({correctAnswers}/{totalQuestions})
               </span>
             </div>
-            <div className="relative w-full h-2 bg-blue-200 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-blue-600 rounded-full transition-all duration-300" 
-                style={{ width: `${accuracy}%` }}
-              />
-            </div>
+            <Progress value={accuracy} className="h-2" />
           </div>
         </Card>
 
@@ -143,12 +138,7 @@ const StudyProgress: React.FC<StudyProgressProps> = ({
               </span>
               <span className="text-sm text-gray-600">complete</span>
             </div>
-            <div className="relative w-full h-2 bg-green-200 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-green-600 rounded-full transition-all duration-300" 
-                style={{ width: `${Math.round(categoryProgress)}%` }}
-              />
-            </div>
+            <Progress value={categoryProgress} className="h-2" />
           </div>
         </Card>
       </div>

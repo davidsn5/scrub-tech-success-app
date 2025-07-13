@@ -37,15 +37,15 @@ const PrinciplesPractice = () => {
                   Principles and Practice of Surgical Technology
                 </h1>
               </div>
-              <p className="text-sm text-gray-600">
-                Exam Style Practice Questions ({principlesPracticeQuestions.length} Questions Available)
-              </p>
               <Link to="/">
                 <Button variant="outline" size="sm" className="flex items-center space-x-2">
                   <ArrowLeft className="h-4 w-4" />
                   <span>Back to Home</span>
                 </Button>
               </Link>
+              <p className="text-sm text-gray-600">
+                Exam Style Practice Questions ({principlesPracticeQuestions.length} Questions Available)
+              </p>
             </div>
           </div>
         </div>

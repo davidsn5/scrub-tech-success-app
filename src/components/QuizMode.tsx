@@ -707,12 +707,7 @@ const QuizMode: React.FC<QuizModeProps> = ({
         </div>
       </div>
 
-      <div className="relative w-full h-2 bg-red-200 rounded-full overflow-hidden">
-        <div 
-          className="h-full bg-red-600 rounded-full transition-all duration-100" 
-          style={{ width: `${(timeLeft / 30) * 100}%` }}
-        />
-      </div>
+      <Progress value={(timeLeft / 30) * 100} className="h-2" />
 
       <Card className="p-6">
         <h3 className="text-xl font-semibold text-gray-900 mb-6">
