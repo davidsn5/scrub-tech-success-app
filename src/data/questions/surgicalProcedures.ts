@@ -1,562 +1,4545 @@
-import { Question } from './types';
+export interface Question {
+  id: number;
+  question: string;
+  choices: string[];
+  correctAnswer: number;
+}
 
 export const surgicalProceduresQuestions: Question[] = [
   {
     id: 1,
+    question: "What is the primary purpose of surgical asepsis?",
+    choices: ["To reduce infection", "To eliminate all microorganisms", "To sterilize instruments", "To clean the operating room"],
+    correctAnswer: 1
+  },
+  {
+    id: 2,
+    question: "Which of the following is NOT a principle of sterile technique?",
+    choices: ["Sterile items touch only sterile items", "Sterile persons remain in sterile areas", "Sterile items are kept dry", "Sterile items can touch clean items"],
+    correctAnswer: 3
+  },
+  {
+    id: 3,
+    question: "The sterile field should be established:",
+    choices: ["Before the patient enters", "After the patient is positioned", "Just before the incision", "As close to surgery time as possible"],
+    correctAnswer: 3
+  },
+  {
+    id: 4,
+    question: "When opening a sterile package, which edge is considered contaminated?",
+    choices: ["The inner edge", "The outer edge", "The folded edge", "All edges are sterile"],
+    correctAnswer: 1
+  },
+  {
+    id: 5,
+    question: "The minimum temperature for steam sterilization is:",
+    choices: ["250°F (121°C)", "270°F (132°C)", "300°F (149°C)", "212°F (100°C)"],
+    correctAnswer: 0
+  },
+  {
+    id: 6,
+    question: "Which sterilization method uses ethylene oxide gas?",
+    choices: ["Steam sterilization", "Dry heat sterilization", "Chemical sterilization", "Gas sterilization"],
+    correctAnswer: 3
+  },
+  {
+    id: 7,
+    question: "The Spaulding classification system categorizes medical devices based on:",
+    choices: ["Size", "Material", "Risk of infection", "Cost"],
+    correctAnswer: 2
+  },
+  {
+    id: 8,
+    question: "Critical items in the Spaulding classification require:",
+    choices: ["High-level disinfection", "Intermediate-level disinfection", "Low-level disinfection", "Sterilization"],
+    correctAnswer: 3
+  },
+  {
+    id: 9,
+    question: "Which of the following is a chemical indicator?",
+    choices: ["Autoclave tape", "Biological indicator", "Mechanical indicator", "Temperature gauge"],
+    correctAnswer: 0
+  },
+  {
+    id: 10,
+    question: "Biological indicators contain:",
+    choices: ["Chemical dyes", "Heat-sensitive tape", "Living microorganisms", "pH indicators"],
+    correctAnswer: 2
+  },
+  {
+    id: 11,
+    question: "The most resistant microorganism used in biological indicators is:",
+    choices: ["Staphylococcus aureus", "Escherichia coli", "Geobacillus stearothermophilus", "Pseudomonas aeruginosa"],
+    correctAnswer: 2
+  },
+  {
+    id: 12,
+    question: "Flash sterilization should be used:",
+    choices: ["Routinely for all instruments", "Only in emergency situations", "For all implants", "For wrapped items only"],
+    correctAnswer: 1
+  },
+  {
+    id: 13,
+    question: "The temperature for flash sterilization is typically:",
+    choices: ["250°F (121°C)", "270°F (132°C)", "300°F (149°C)", "212°F (100°C)"],
+    correctAnswer: 1
+  },
+  {
+    id: 14,
+    question: "Immediate use steam sterilization (IUSS) cycle time for non-porous items is:",
+    choices: ["3 minutes", "4 minutes", "10 minutes", "15 minutes"],
+    correctAnswer: 0
+  },
+  {
+    id: 15,
+    question: "Which wrap material allows steam penetration?",
+    choices: ["Plastic", "Aluminum foil", "Muslin", "Rubber"],
+    correctAnswer: 2
+  },
+  {
+    id: 16,
+    question: "Double wrapping provides:",
+    choices: ["Better steam penetration", "Extended shelf life", "Faster sterilization", "Lower cost"],
+    correctAnswer: 1
+  },
+  {
+    id: 17,
+    question: "The shelf life of a sterile package depends on:",
+    choices: ["Sterilization method only", "Storage conditions only", "Packaging material only", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 18,
+    question: "Event-related sterility means:",
+    choices: ["Items expire on a specific date", "Sterility is maintained until package is compromised", "Items must be used within 24 hours", "Sterility lasts exactly 30 days"],
+    correctAnswer: 1
+  },
+  {
+    id: 19,
+    question: "Which of the following compromises sterility?",
+    choices: ["Moisture", "Tears in packaging", "Dropping on floor", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 20,
+    question: "The sterile storage area should maintain humidity between:",
+    choices: ["30-60%", "70-80%", "10-20%", "80-90%"],
+    correctAnswer: 0
+  },
+  {
+    id: 21,
+    question: "Sterile items should be stored:",
+    choices: ["On the floor", "Against walls", "8-10 inches from ceiling", "In direct sunlight"],
+    correctAnswer: 2
+  },
+  {
+    id: 22,
+    question: "The first step in instrument processing is:",
+    choices: ["Sterilization", "Cleaning", "Disinfection", "Packaging"],
+    correctAnswer: 1
+  },
+  {
+    id: 23,
+    question: "Enzymatic cleaners are used to:",
+    choices: ["Sterilize instruments", "Remove protein debris", "Disinfect surfaces", "Lubricate hinges"],
+    correctAnswer: 1
+  },
+  {
+    id: 24,
+    question: "Ultrasonic cleaners use:",
+    choices: ["Heat only", "Chemicals only", "Sound waves", "Steam"],
+    correctAnswer: 2
+  },
+  {
+    id: 25,
+    question: "The purpose of instrument lubrication is to:",
+    choices: ["Prevent corrosion", "Maintain function", "Extend life", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 26,
+    question: "Instruments should be inspected for:",
+    choices: ["Cleanliness", "Function", "Damage", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 27,
+    question: "Which instrument finish is most resistant to corrosion?",
+    choices: ["Bright finish", "Satin finish", "Ebony finish", "Passivated finish"],
+    correctAnswer: 3
+  },
+  {
+    id: 28,
+    question: "Stainless steel instruments are made primarily of:",
+    choices: ["Iron and carbon", "Iron and chromium", "Aluminum and steel", "Titanium and steel"],
+    correctAnswer: 1
+  },
+  {
+    id: 29,
+    question: "The minimum chromium content in surgical stainless steel is:",
+    choices: ["8%", "12%", "16%", "20%"],
+    correctAnswer: 1
+  },
+  {
+    id: 30,
+    question: "Titanium instruments are preferred for:",
+    choices: ["General surgery", "Microsurgery", "Orthopedic surgery", "All surgeries"],
+    correctAnswer: 1
+  },
+  {
+    id: 31,
+    question: "Which suture material is absorbable?",
+    choices: ["Silk", "Nylon", "Vicryl", "Prolene"],
+    correctAnswer: 2
+  },
+  {
+    id: 32,
+    question: "Catgut sutures are made from:",
+    choices: ["Cat intestines", "Sheep intestines", "Synthetic materials", "Plant fibers"],
+    correctAnswer: 1
+  },
+  {
+    id: 33,
+    question: "The strongest suture material is:",
+    choices: ["Silk", "Steel", "Nylon", "Prolene"],
+    correctAnswer: 1
+  },
+  {
+    id: 34,
+    question: "Monofilament sutures have:",
+    choices: ["Multiple strands", "Single strand", "Braided construction", "Twisted fibers"],
+    correctAnswer: 1
+  },
+  {
+    id: 35,
+    question: "Which suture causes the least tissue reaction?",
+    choices: ["Silk", "Catgut", "Prolene", "Cotton"],
+    correctAnswer: 2
+  },
+  {
+    id: 36,
+    question: "The USP suture size 2-0 is:",
+    choices: ["Larger than 0", "Smaller than 0", "Same as 0", "Twice the size of 0"],
+    correctAnswer: 1
+  },
+  {
+    id: 37,
+    question: "Which needle point is used for delicate tissues?",
+    choices: ["Cutting", "Reverse cutting", "Taper", "Blunt"],
+    correctAnswer: 2
+  },
+  {
+    id: 38,
+    question: "Cutting needles are used for:",
+    choices: ["Soft tissues", "Tough tissues", "Vessels", "Nerves"],
+    correctAnswer: 1
+  },
+  {
+    id: 39,
+    question: "The swaged needle is:",
+    choices: ["Reusable", "Attached to suture", "Separate from suture", "Disposable only"],
+    correctAnswer: 1
+  },
+  {
+    id: 40,
+    question: "Hemostats are used to:",
+    choices: ["Cut tissue", "Grasp tissue", "Control bleeding", "Suture tissue"],
+    correctAnswer: 2
+  },
+  {
+    id: 41,
+    question: "Kelly forceps have:",
+    choices: ["Straight jaws", "Curved jaws", "Serrated jaws", "Smooth jaws"],
+    correctAnswer: 1
+  },
+  {
+    id: 42,
+    question: "Mosquito forceps are:",
+    choices: ["Large hemostats", "Small hemostats", "Tissue forceps", "Needle holders"],
+    correctAnswer: 1
+  },
+  {
+    id: 43,
+    question: "Allis forceps are used to:",
+    choices: ["Control bleeding", "Grasp delicate tissue", "Grasp tough tissue", "Hold needles"],
+    correctAnswer: 2
+  },
+  {
+    id: 44,
+    question: "Babcock forceps are designed for:",
+    choices: ["Tough tissue", "Delicate tissue", "Bone", "Metal"],
+    correctAnswer: 1
+  },
+  {
+    id: 45,
+    question: "Russian forceps have:",
+    choices: ["Smooth tips", "Serrated tips", "Teeth", "Hooks"],
+    correctAnswer: 2
+  },
+  {
+    id: 46,
+    question: "DeBakey forceps are used in:",
+    choices: ["Orthopedic surgery", "Vascular surgery", "Neurosurgery", "General surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 47,
+    question: "Adson forceps are commonly used in:",
+    choices: ["Abdominal surgery", "Plastic surgery", "Cardiac surgery", "Orthopedic surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 48,
+    question: "Gerald forceps are:",
+    choices: ["Tissue forceps", "Dressing forceps", "Hemostats", "Needle holders"],
+    correctAnswer: 1
+  },
+  {
+    id: 49,
+    question: "The Metzenbaum scissors are used for:",
+    choices: ["Cutting sutures", "Cutting delicate tissue", "Cutting tough tissue", "Cutting wire"],
+    correctAnswer: 1
+  },
+  {
+    id: 50,
+    question: "Mayo scissors are designed for:",
+    choices: ["Delicate tissue", "Tough tissue", "Sutures only", "Bandages only"],
+    correctAnswer: 1
+  },
+  {
+    id: 51,
+    question: "Iris scissors are used in:",
+    choices: ["General surgery", "Ophthalmic surgery", "Orthopedic surgery", "Cardiac surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 52,
+    question: "Potts scissors are designed for:",
+    choices: ["General cutting", "Vascular surgery", "Neurosurgery", "Orthopedic surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 53,
+    question: "Bandage scissors have:",
+    choices: ["Sharp points", "Blunt tips", "Curved blades", "Serrated edges"],
+    correctAnswer: 1
+  },
+  {
+    id: 54,
+    question: "Wire scissors are used to cut:",
+    choices: ["Sutures", "Tissue", "Metal wire", "Bandages"],
+    correctAnswer: 2
+  },
+  {
+    id: 55,
+    question: "The scalpel handle #3 fits blade sizes:",
+    choices: ["10-15", "20-25", "10-11, 15", "20-24"],
+    correctAnswer: 2
+  },
+  {
+    id: 56,
+    question: "The scalpel handle #4 fits blade sizes:",
+    choices: ["10-15", "20-25", "10-11, 15", "20-24"],
+    correctAnswer: 3
+  },
+  {
+    id: 57,
+    question: "Blade #10 is used for:",
+    choices: ["Small incisions", "Large incisions", "Curved incisions", "Stab incisions"],
+    correctAnswer: 1
+  },
+  {
+    id: 58,
+    question: "Blade #11 is designed for:",
+    choices: ["Large incisions", "Stab incisions", "Curved incisions", "Skin only"],
+    correctAnswer: 1
+  },
+  {
+    id: 59,
+    question: "Blade #15 is used for:",
+    choices: ["Large incisions", "Small precise incisions", "Curved incisions", "Deep incisions"],
+    correctAnswer: 1
+  },
+  {
+    id: 60,
+    question: "The electrosurgical unit (ESU) works by:",
+    choices: ["Heat conduction", "High-frequency current", "Laser energy", "Ultrasonic waves"],
+    correctAnswer: 1
+  },
+  {
+    id: 61,
+    question: "Monopolar electrosurgery requires:",
+    choices: ["Two electrodes", "One electrode", "Grounding pad", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 62,
+    question: "Bipolar electrosurgery:",
+    choices: ["Requires grounding pad", "Uses two electrodes", "Has higher power", "Is less precise"],
+    correctAnswer: 1
+  },
+  {
+    id: 63,
+    question: "The cutting current in electrosurgery is:",
+    choices: ["Continuous", "Interrupted", "Low frequency", "High voltage"],
+    correctAnswer: 0
+  },
+  {
+    id: 64,
+    question: "Coagulation current is:",
+    choices: ["Continuous", "Interrupted", "Low power", "DC current"],
+    correctAnswer: 1
+  },
+  {
+    id: 65,
+    question: "Fulguration produces:",
+    choices: ["Precise cutting", "Deep coagulation", "Superficial coagulation", "Tissue welding"],
+    correctAnswer: 2
+  },
+  {
+    id: 66,
+    question: "Desiccation produces:",
+    choices: ["Superficial coagulation", "Deep coagulation", "Tissue cutting", "Tissue removal"],
+    correctAnswer: 1
+  },
+  {
+    id: 67,
+    question: "The argon beam coagulator uses:",
+    choices: ["Nitrogen gas", "Argon gas", "Oxygen", "Carbon dioxide"],
+    correctAnswer: 1
+  },
+  {
+    id: 68,
+    question: "Harmonic scalpel uses:",
+    choices: ["Heat", "Electricity", "Ultrasonic energy", "Laser"],
+    correctAnswer: 2
+  },
+  {
+    id: 69,
+    question: "LigaSure device uses:",
+    choices: ["Ultrasonic energy", "Bipolar energy", "Monopolar energy", "Laser energy"],
+    correctAnswer: 1
+  },
+  {
+    id: 70,
+    question: "CO2 laser is absorbed by:",
+    choices: ["Hemoglobin", "Water", "Melanin", "Protein"],
+    correctAnswer: 1
+  },
+  {
+    id: 71,
+    question: "Nd:YAG laser penetrates:",
+    choices: ["Superficially", "Moderately", "Deeply", "Not at all"],
+    correctAnswer: 2
+  },
+  {
+    id: 72,
+    question: "Argon laser is absorbed by:",
+    choices: ["Water", "Hemoglobin", "Melanin", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 73,
+    question: "KTP laser appears:",
+    choices: ["Red", "Blue", "Green", "Invisible"],
+    correctAnswer: 2
+  },
+  {
+    id: 74,
+    question: "Laser safety requires:",
+    choices: ["Eye protection", "Fire prevention", "Proper ventilation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 75,
+    question: "The laser safety officer is responsible for:",
+    choices: ["Operating the laser", "Laser safety program", "Buying lasers", "Repairing lasers"],
+    correctAnswer: 1
+  },
+  {
+    id: 76,
+    question: "Cryosurgery uses:",
+    choices: ["Heat", "Cold", "Pressure", "Vacuum"],
+    correctAnswer: 1
+  },
+  {
+    id: 77,
+    question: "Liquid nitrogen temperature is:",
+    choices: ["-80°C", "-196°C", "-273°C", "-100°C"],
+    correctAnswer: 1
+  },
+  {
+    id: 78,
+    question: "Pneumatic tourniquets are used to:",
+    choices: ["Control bleeding", "Provide anesthesia", "Position patient", "Monitor vitals"],
+    correctAnswer: 0
+  },
+  {
+    id: 79,
+    question: "Tourniquet pressure should be:",
+    choices: ["As high as possible", "Based on patient's BP", "Always 300 mmHg", "Patient's weight"],
+    correctAnswer: 1
+  },
+  {
+    id: 80,
+    question: "Maximum tourniquet time for arm is:",
+    choices: ["1 hour", "2 hours", "3 hours", "4 hours"],
+    correctAnswer: 1
+  },
+  {
+    id: 81,
+    question: "Maximum tourniquet time for leg is:",
+    choices: ["1 hour", "2 hours", "3 hours", "4 hours"],
+    correctAnswer: 2
+  },
+  {
+    id: 82,
+    question: "Esmarch bandage is used for:",
+    choices: ["Wound dressing", "Exsanguination", "Compression", "Support"],
+    correctAnswer: 1
+  },
+  {
+    id: 83,
+    question: "The C-arm provides:",
+    choices: ["Fluoroscopy", "CT imaging", "MRI imaging", "Ultrasound"],
+    correctAnswer: 0
+  },
+  {
+    id: 84,
+    question: "Image intensifier converts:",
+    choices: ["X-rays to light", "Light to X-rays", "Sound to image", "Heat to image"],
+    correctAnswer: 0
+  },
+  {
+    id: 85,
+    question: "Lead aprons protect against:",
+    choices: ["Heat", "Infection", "Radiation", "Chemicals"],
+    correctAnswer: 2
+  },
+  {
+    id: 86,
+    question: "ALARA principle means:",
+    choices: ["Always Low And Reasonable Amounts", "As Low As Reasonably Achievable", "All Limits Are Reasonably Applied", "Always Limit All Radiation Activities"],
+    correctAnswer: 1
+  },
+  {
+    id: 87,
+    question: "Radiation exposure is measured in:",
+    choices: ["Watts", "Joules", "Rems", "Degrees"],
+    correctAnswer: 2
+  },
+  {
+    id: 88,
+    question: "Dosimeter badges measure:",
+    choices: ["Temperature", "Radiation exposure", "Time", "Distance"],
+    correctAnswer: 1
+  },
+  {
+    id: 89,
+    question: "Ultrasonic cleaners should NOT be used for:",
+    choices: ["Stainless steel", "Plated instruments", "Microsurgical instruments", "Plastic items"],
+    correctAnswer: 1
+  },
+  {
+    id: 90,
+    question: "Endoscope cleaning requires:",
+    choices: ["Manual cleaning only", "Automated cleaning only", "Both manual and automated", "Steam sterilization only"],
+    correctAnswer: 2
+  },
+  {
+    id: 91,
+    question: "High-level disinfection kills:",
+    choices: ["Bacteria only", "Viruses only", "All microorganisms except spores", "All microorganisms including spores"],
+    correctAnswer: 2
+  },
+  {
+    id: 92,
+    question: "Glutaraldehyde is used for:",
+    choices: ["Sterilization", "High-level disinfection", "Cleaning", "Lubrication"],
+    correctAnswer: 1
+  },
+  {
+    id: 93,
+    question: "Peracetic acid is:",
+    choices: ["Low-level disinfectant", "Intermediate-level disinfectant", "High-level disinfectant", "Sterilant"],
+    correctAnswer: 3
+  },
+  {
+    id: 94,
+    question: "Hydrogen peroxide plasma sterilization is used for:",
+    choices: ["Heat-sensitive items", "Moisture-sensitive items", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 95,
+    question: "Ethylene oxide sterilization requires:",
+    choices: ["High temperature", "High pressure", "Aeration", "All of the above"],
+    correctAnswer: 2
+  },
+  {
+    id: 96,
+    question: "The aeration time after ETO sterilization depends on:",
+    choices: ["Item material", "Temperature", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 97,
+    question: "Implants should be sterilized using:",
+    choices: ["Flash sterilization", "ETO only", "Steam sterilization with BI", "Any method"],
+    correctAnswer: 2
+  },
+  {
+    id: 98,
+    question: "Loaner instruments should be:",
+    choices: ["Used immediately", "Processed like regular instruments", "Sterilized twice", "Not used"],
+    correctAnswer: 1
+  },
+  {
+    id: 99,
+    question: "Instrument sets should be assembled:",
+    choices: ["In the OR", "In sterile processing", "By the surgeon", "By nursing"],
+    correctAnswer: 1
+  },
+  {
+    id: 100,
+    question: "Count sheets are used to:",
+    choices: ["Track instruments", "Record sterilization", "Document cleaning", "All of the above"],
+    correctAnswer: 0
+  },
+  {
+    id: 101,
+    question: "The surgical technologist's primary role is:",
+    choices: ["Patient care", "Maintaining sterile field", "Equipment management", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 102,
+    question: "Scrubbing in requires:",
+    choices: ["Surgical hand antisepsis", "Sterile gown and gloves", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 103,
+    question: "The circulating nurse is:",
+    choices: ["Sterile", "Non-sterile", "Sometimes sterile", "Always gowned"],
+    correctAnswer: 1
+  },
+  {
+    id: 104,
+    question: "Surgical hand antisepsis should last:",
+    choices: ["30 seconds", "1 minute", "2-6 minutes", "10 minutes"],
+    correctAnswer: 2
+  },
+  {
+    id: 105,
+    question: "Alcohol-based hand rubs require:",
+    choices: ["Water rinse", "Towel drying", "Complete evaporation", "Soap application"],
+    correctAnswer: 2
+  },
+  {
+    id: 106,
+    question: "Surgical gowns should be:",
+    choices: ["Fluid-resistant", "Sterile", "Properly sized", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 107,
+    question: "The sterile area of a surgical gown extends:",
+    choices: ["Entire gown", "Front and sleeves", "Front only", "Sleeves only"],
+    correctAnswer: 1
+  },
+  {
+    id: 108,
+    question: "Closed gloving is performed:",
+    choices: ["Before gowning", "After gowning", "Instead of gowning", "With contaminated hands"],
+    correctAnswer: 1
+  },
+  {
+    id: 109,
+    question: "Open gloving is used when:",
+    choices: ["Scrubbed in", "Not gowned", "Changing gloves", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 110,
+    question: "Double gloving provides:",
+    choices: ["Better dexterity", "Increased protection", "Cost savings", "Improved grip"],
+    correctAnswer: 1
+  },
+  {
+    id: 111,
+    question: "Glove perforation should be:",
+    choices: ["Ignored if small", "Reported immediately", "Fixed with tape", "Noted after surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 112,
+    question: "Surgical masks should:",
+    choices: ["Cover nose and mouth", "Be changed between cases", "Not be touched during surgery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 113,
+    question: "Eye protection is required when:",
+    choices: ["Risk of splashing", "Using lasers", "Using chemicals", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 114,
+    question: "Surgical caps should:",
+    choices: ["Cover all hair", "Be disposable", "Be changed daily", "All of the above"],
+    correctAnswer: 0
+  },
+  {
+    id: 115,
+    question: "Shoe covers are:",
+    choices: ["Always required", "Never required", "Required in some areas", "Optional"],
+    correctAnswer: 2
+  },
+  {
+    id: 116,
+    question: "The sterile field includes:",
+    choices: ["Draped patient", "Instrument tables", "Scrubbed personnel", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 117,
+    question: "Sterile drapes should:",
+    choices: ["Be fluid-resistant", "Cover completely", "Not be moved once placed", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 118,
+    question: "The incise drape is:",
+    choices: ["Placed first", "Placed last", "Adhesive", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 119,
+    question: "Fenestrated drapes have:",
+    choices: ["Multiple layers", "An opening", "Adhesive edges", "Reinforcement"],
+    correctAnswer: 1
+  },
+  {
+    id: 120,
+    question: "Draping should proceed from:",
+    choices: ["Dirty to clean", "Clean to dirty", "Sterile to non-sterile", "Incision site outward"],
+    correctAnswer: 3
+  },
+  {
+    id: 121,
+    question: "If a drape becomes contaminated:",
+    choices: ["Continue surgery", "Replace the drape", "Cover with another drape", "Clean the drape"],
+    correctAnswer: 1
+  },
+  {
+    id: 122,
+    question: "Surgical site preparation includes:",
+    choices: ["Hair removal", "Skin antisepsis", "Draping", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 123,
+    question: "Hair removal should be done:",
+    choices: ["Night before surgery", "Just before surgery", "In the OR", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 124,
+    question: "Clippers are preferred over razors because they:",
+    choices: ["Are faster", "Reduce infection risk", "Are cheaper", "Are easier to use"],
+    correctAnswer: 1
+  },
+  {
+    id: 125,
+    question: "Skin preparation should begin:",
+    choices: ["At the periphery", "At the incision site", "At the cleanest area", "Anywhere"],
+    correctAnswer: 1
+  },
+  {
+    id: 126,
+    question: "Prep solution should be applied in:",
+    choices: ["Back and forth motions", "Circular motions", "Vertical strokes", "Any pattern"],
+    correctAnswer: 1
+  },
+  {
+    id: 127,
+    question: "Alcohol-based prep solutions are:",
+    choices: ["Flammable", "Non-flammable", "Water-based", "Oil-based"],
+    correctAnswer: 0
+  },
+  {
+    id: 128,
+    question: "Iodophors are:",
+    choices: ["Immediate acting", "Slow acting", "Non-antimicrobial", "Alcohol-based"],
+    correctAnswer: 1
+  },
+  {
+    id: 129,
+    question: "Chlorhexidine gluconate:",
+    choices: ["Has no residual effect", "Has residual effect", "Is not antimicrobial", "Requires alcohol"],
+    correctAnswer: 1
+  },
+  {
+    id: 130,
+    question: "Patient positioning should consider:",
+    choices: ["Surgical access", "Patient safety", "Physiologic function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 131,
+    question: "Supine position is also called:",
+    choices: ["Prone", "Lateral", "Dorsal recumbent", "Trendelenburg"],
+    correctAnswer: 2
+  },
+  {
+    id: 132,
+    question: "Trendelenburg position involves:",
+    choices: ["Head up", "Head down", "Side lying", "Face down"],
+    correctAnswer: 1
+  },
+  {
+    id: 133,
+    question: "Reverse Trendelenburg involves:",
+    choices: ["Head up", "Head down", "Side lying", "Face down"],
+    correctAnswer: 0
+  },
+  {
+    id: 134,
+    question: "Fowler's position is:",
+    choices: ["Flat", "Head elevated", "Head down", "Side lying"],
+    correctAnswer: 1
+  },
+  {
+    id: 135,
+    question: "Lithotomy position is used for:",
+    choices: ["Abdominal surgery", "Pelvic surgery", "Chest surgery", "Head surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 136,
+    question: "Prone position risks include:",
+    choices: ["Pressure sores", "Breathing difficulty", "Nerve damage", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 137,
+    question: "Lateral position requires:",
+    choices: ["Kidney rest", "Axillary roll", "Leg support", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 138,
+    question: "Jackknife position is a variation of:",
+    choices: ["Supine", "Prone", "Lateral", "Lithotomy"],
+    correctAnswer: 1
+  },
+  {
+    id: 139,
+    question: "Beach chair position is used for:",
+    choices: ["Abdominal surgery", "Shoulder surgery", "Leg surgery", "Back surgery"],
+    correctAnswer: 1
+  },
+  {
+    id: 140,
+    question: "Pressure points should be:",
+    choices: ["Ignored", "Padded", "Marked", "Compressed"],
+    correctAnswer: 1
+  },
+  {
+    id: 141,
+    question: "Compartment syndrome can result from:",
+    choices: ["Poor positioning", "Prolonged surgery", "Tight restraints", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 142,
+    question: "Brachial plexus injury can occur in:",
+    choices: ["Supine position", "Lateral position", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 143,
+    question: "Common peroneal nerve injury occurs with:",
+    choices: ["Arm positioning", "Leg positioning", "Head positioning", "Back positioning"],
+    correctAnswer: 1
+  },
+  {
+    id: 144,
+    question: "Ulnar nerve injury is associated with:",
+    choices: ["Elbow pressure", "Shoulder pressure", "Hip pressure", "Knee pressure"],
+    correctAnswer: 0
+  },
+  {
+    id: 145,
+    question: "The surgical count includes:",
+    choices: ["Sponges", "Instruments", "Needles", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 146,
+    question: "Initial count is performed:",
+    choices: ["Before incision", "After incision", "During closure", "After closure"],
+    correctAnswer: 0
+  },
+  {
+    id: 147,
+    question: "Closing count is performed:",
+    choices: ["Before closure begins", "During closure", "After closure", "Next day"],
+    correctAnswer: 0
+  },
+  {
+    id: 148,
+    question: "If count is incorrect:",
+    choices: ["Continue surgery", "Search for item", "Take X-ray", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 149,
+    question: "Sponges should be:",
+    choices: ["Counted individually", "Kept on field", "Discarded immediately", "Both A and B"],
+    correctAnswer: 3
+  },
+  {
+    id: 150,
+    question: "Radiopaque sponges contain:",
+    choices: ["Metal strips", "Plastic markers", "Barium sulfate", "Iodine"],
+    correctAnswer: 2
+  },
+  {
+    id: 151,
+    question: "Needle count includes:",
+    choices: ["Suture needles only", "All needles", "Hypodermic needles only", "Broken needles only"],
+    correctAnswer: 1
+  },
+  {
+    id: 152,
+    question: "Broken needles should be:",
+    choices: ["Discarded", "Counted as one", "Counted as pieces", "Ignored"],
+    correctAnswer: 2
+  },
+  {
+    id: 153,
+    question: "Instrument count is required for:",
+    choices: ["All surgeries", "Open surgeries only", "Laparoscopic surgeries", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 154,
+    question: "Small items like clips should be:",
+    choices: ["Not counted", "Counted if possible", "Always counted", "Never used"],
+    correctAnswer: 1
+  },
+  {
+    id: 155,
+    question: "Count discrepancy requires:",
+    choices: ["Documentation", "Incident report", "X-ray", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 156,
+    question: "Specimen handling requires:",
+    choices: ["Proper labeling", "Appropriate fixative", "Timely transport", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 157,
+    question: "Frozen section specimens require:",
+    choices: ["Formalin", "Saline", "No fixative", "Alcohol"],
+    correctAnswer: 2
+  },
+  {
+    id: 158,
+    question: "Culture specimens should be:",
+    choices: ["Fixed in formalin", "Kept moist", "Kept dry", "Frozen"],
+    correctAnswer: 1
+  },
+  {
+    id: 159,
+    question: "Specimen containers should be:",
+    choices: ["Labeled before surgery", "Labeled after surgery", "Not labeled", "Labeled by pathology"],
+    correctAnswer: 0
+  },
+  {
+    id: 160,
+    question: "Chain of custody applies to:",
+    choices: ["All specimens", "Legal specimens", "Culture specimens", "Frozen specimens"],
+    correctAnswer: 1
+  },
+  {
+    id: 161,
+    question: "Hemostasis is achieved by:",
+    choices: ["Pressure", "Electrosurgery", "Ligatures", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 162,
+    question: "Primary hemostasis involves:",
+    choices: ["Platelets", "Clotting factors", "Fibrin", "Red blood cells"],
+    correctAnswer: 0
+  },
+  {
+    id: 163,
+    question: "Secondary hemostasis involves:",
+    choices: ["Platelets", "Coagulation cascade", "Vasoconstriction", "Pressure"],
+    correctAnswer: 1
+  },
+  {
+    id: 164,
+    question: "Topical hemostatic agents include:",
+    choices: ["Gelfoam", "Surgicel", "Thrombin", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 165,
+    question: "Bone wax is used for:",
+    choices: ["Soft tissue bleeding", "Bone bleeding", "Vascular bleeding", "All bleeding"],
+    correctAnswer: 1
+  },
+  {
+    id: 166,
+    question: "Microfibrillar collagen works by:",
+    choices: ["Chemical action", "Mechanical action", "Platelet aggregation", "Vasoconstriction"],
+    correctAnswer: 2
+  },
+  {
+    id: 167,
+    question: "Thrombin should not be:",
+    choices: ["Used topically", "Injected", "Mixed with blood", "Used on bone"],
+    correctAnswer: 1
+  },
+  {
+    id: 168,
+    question: "Fibrin sealants contain:",
+    choices: ["Thrombin only", "Fibrinogen only", "Both thrombin and fibrinogen", "Neither"],
+    correctAnswer: 2
+  },
+  {
+    id: 169,
+    question: "Wound classification includes:",
+    choices: ["Clean", "Clean-contaminated", "Contaminated", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 170,
+    question: "Clean wounds have infection rate of:",
+    choices: ["<2%", "2-5%", "5-10%", ">10%"],
+    correctAnswer: 0
+  },
+  {
+    id: 171,
+    question: "Contaminated wounds have infection rate of:",
+    choices: ["<2%", "2-5%", "10-17%", ">20%"],
+    correctAnswer: 2
+  },
+  {
+    id: 172,
+    question: "Dirty wounds have infection rate of:",
+    choices: ["<2%", "2-5%", "10-17%", ">27%"],
+    correctAnswer: 3
+  },
+  {
+    id: 173,
+    question: "Primary intention healing occurs in:",
+    choices: ["Clean wounds", "Infected wounds", "Open wounds", "Chronic wounds"],
+    correctAnswer: 0
+  },
+  {
+    id: 174,
+    question: "Secondary intention healing involves:",
+    choices: ["Immediate closure", "Delayed closure", "Granulation tissue", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 175,
+    question: "Tertiary intention healing is:",
+    choices: ["Immediate closure", "Delayed primary closure", "Open healing", "Skin grafting"],
+    correctAnswer: 1
+  },
+  {
+    id: 176,
+    question: "Wound dehiscence is:",
+    choices: ["Infection", "Separation of layers", "Bleeding", "Scarring"],
+    correctAnswer: 1
+  },
+  {
+    id: 177,
+    question: "Evisceration involves:",
+    choices: ["Skin separation", "Fascial separation", "Organ protrusion", "Bleeding"],
+    correctAnswer: 2
+  },
+  {
+    id: 178,
+    question: "Factors affecting wound healing include:",
+    choices: ["Age", "Nutrition", "Infection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 179,
+    question: "Protein deficiency affects:",
+    choices: ["Collagen synthesis", "Immune function", "Wound strength", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 180,
+    question: "Vitamin C deficiency causes:",
+    choices: ["Poor collagen formation", "Bleeding", "Delayed healing", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 181,
+    question: "Smoking affects wound healing by:",
+    choices: ["Reducing oxygen", "Impairing circulation", "Affecting immune function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 182,
+    question: "Diabetes affects wound healing through:",
+    choices: ["Poor circulation", "Impaired immune function", "High glucose levels", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 183,
+    question: "Steroids affect wound healing by:",
+    choices: ["Reducing inflammation", "Impairing collagen synthesis", "Affecting immune function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 184,
+    question: "Wound drainage systems include:",
+    choices: ["Penrose drains", "Jackson-Pratt drains", "Hemovac drains", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 185,
+    question: "Penrose drains provide:",
+    choices: ["Active drainage", "Passive drainage", "Suction drainage", "No drainage"],
+    correctAnswer: 1
+  },
+  {
+    id: 186,
+    question: "Jackson-Pratt drains use:",
+    choices: ["Gravity", "Suction", "Pressure", "Capillary action"],
+    correctAnswer: 1
+  },
+  {
+    id: 187,
+    question: "Chest tubes are used for:",
+    choices: ["Pneumothorax", "Hemothorax", "Pleural effusion", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 188,
+    question: "Nasogastric tubes are used for:",
+    choices: ["Feeding", "Decompression", "Medication", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 189,
+    question: "Foley catheters are used for:",
+    choices: ["Urine drainage", "Bladder irrigation", "Medication instillation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 190,
+    question: "T-tubes are used for:",
+    choices: ["Bile drainage", "Urine drainage", "Blood drainage", "Air drainage"],
+    correctAnswer: 0
+  },
+  {
+    id: 191,
+    question: "Surgical site infection prevention includes:",
+    choices: ["Antibiotic prophylaxis", "Proper skin prep", "Sterile technique", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 192,
+    question: "Antibiotic prophylaxis should be given:",
+    choices: ["After surgery", "During surgery", "Within 1 hour before incision", "24 hours before"],
+    correctAnswer: 2
+  },
+  {
+    id: 193,
+    question: "Duration of antibiotic prophylaxis should be:",
+    choices: ["Single dose", "24 hours", "48 hours", "Until discharge"],
+    correctAnswer: 0
+  },
+  {
+    id: 194,
+    question: "Hair removal should be done:",
+    choices: ["Night before", "Morning of surgery", "In OR", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 195,
+    question: "Normothermia helps prevent:",
+    choices: ["Infection", "Bleeding", "Arrhythmias", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 196,
+    question: "Glucose control is important for:",
+    choices: ["Diabetic patients only", "All patients", "Elderly patients only", "Obese patients only"],
+    correctAnswer: 1
+  },
+  {
+    id: 197,
+    question: "Oxygenation affects:",
+    choices: ["Wound healing", "Infection risk", "Tissue perfusion", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 198,
+    question: "Traffic control in OR helps:",
+    choices: ["Reduce contamination", "Improve efficiency", "Ensure safety", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 199,
+    question: "OR doors should be:",
+    choices: ["Always open", "Always closed", "Kept closed during surgery", "It doesn't matter"],
+    correctAnswer: 2
+  },
+  {
+    id: 200,
+    question: "Talking in OR should be:",
+    choices: ["Unlimited", "Minimized", "Prohibited", "Encouraged"],
+    correctAnswer: 1
+  },
+  {
+    id: 201,
+    question: "The appendix is located in the:",
+    choices: ["Right upper quadrant", "Right lower quadrant", "Left upper quadrant", "Left lower quadrant"],
+    correctAnswer: 1
+  },
+  {
+    id: 202,
+    question: "McBurney's point is located:",
+    choices: ["1/3 distance from ASIS to umbilicus", "2/3 distance from ASIS to umbilicus", "At the umbilicus", "At the ASIS"],
+    correctAnswer: 0
+  },
+  {
+    id: 203,
+    question: "Appendectomy incision is usually:",
+    choices: ["Midline", "McBurney's", "Pfannenstiel", "Kocher"],
+    correctAnswer: 1
+  },
+  {
+    id: 204,
+    question: "Laparoscopic appendectomy uses:",
+    choices: ["2 ports", "3 ports", "4 ports", "5 ports"],
+    correctAnswer: 1
+  },
+  {
+    id: 205,
+    question: "The mesoappendix contains:",
+    choices: ["Appendicular artery", "Lymphatics", "Nerves", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 206,
+    question: "Cholecystectomy removes the:",
+    choices: ["Liver", "Gallbladder", "Pancreas", "Spleen"],
+    correctAnswer: 1
+  },
+  {
+    id: 207,
+    question: "Calot's triangle is bounded by:",
+    choices: ["Hepatic artery, cystic artery, liver", "Cystic artery, common hepatic duct, liver", "Hepatic artery, common bile duct, liver", "Common hepatic duct, cystic duct, liver"],
+    correctAnswer: 1
+  },
+  {
+    id: 208,
+    question: "The critical view of safety includes:",
+    choices: ["Two structures", "Three structures", "Four structures", "Five structures"],
+    correctAnswer: 0
+  },
+  {
+    id: 209,
+    question: "Laparoscopic cholecystectomy typically uses:",
+    choices: ["2 ports", "3 ports", "4 ports", "5 ports"],
+    correctAnswer: 2
+  },
+  {
+    id: 210,
+    question: "Cholangiography is used to:",
+    choices: ["Visualize bile ducts", "Remove stones", "Measure pressure", "Inject contrast"],
+    correctAnswer: 0
+  },
+  {
+    id: 211,
+    question: "Hernia repair involves:",
+    choices: ["Reducing contents", "Repairing defect", "Strengthening repair", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 212,
+    question: "Inguinal hernias are classified as:",
+    choices: ["Direct or indirect", "Internal or external", "Primary or secondary", "Simple or complex"],
+    correctAnswer: 0
+  },
+  {
+    id: 213,
+    question: "Indirect inguinal hernias:",
+    choices: ["Go through Hesselbach's triangle", "Follow spermatic cord", "Are acquired", "Are more common in elderly"],
+    correctAnswer: 1
+  },
+  {
+    id: 214,
+    question: "Direct inguinal hernias:",
+    choices: ["Are congenital", "Go through deep ring", "Go through Hesselbach's triangle", "Follow spermatic cord"],
+    correctAnswer: 2
+  },
+  {
+    id: 215,
+    question: "Femoral hernias occur:",
+    choices: ["Above inguinal ligament", "Below inguinal ligament", "Through obturator foramen", "Through sciatic foramen"],
+    correctAnswer: 1
+  },
+  {
+    id: 216,
+    question: "Ventral hernias include:",
+    choices: ["Incisional hernias", "Umbilical hernias", "Epigastric hernias", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 217,
+    question: "Mesh repair is used to:",
+    choices: ["Reduce recurrence", "Strengthen repair", "Provide scaffolding", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 218,
+    question: "TEP repair stands for:",
+    choices: ["Total extraperitoneal", "Transabdominal extraperitoneal", "Totally endoscopic preperitoneal", "Transinguinal extraperitoneal"],
+    correctAnswer: 0
+  },
+  {
+    id: 219,
+    question: "Thyroidectomy may be:",
+    choices: ["Total", "Subtotal", "Lobectomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 220,
+    question: "Recurrent laryngeal nerve injury causes:",
+    choices: ["Hoarseness", "Difficulty swallowing", "Breathing problems", "All of the above"],
+    correctAnswer: 0
+  },
+  {
+    id: 221,
+    question: "Parathyroid glands are:",
+    choices: ["2 in number", "4 in number", "6 in number", "Variable in number"],
+    correctAnswer: 3
+  },
+  {
+    id: 222,
+    question: "Hypocalcemia after thyroidectomy is due to:",
+    choices: ["Nerve injury", "Parathyroid injury", "Bleeding", "Infection"],
+    correctAnswer: 1
+  },
+  {
+    id: 223,
+    question: "Breast cancer surgery may include:",
+    choices: ["Lumpectomy", "Mastectomy", "Lymph node dissection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 224,
+    question: "Sentinel lymph node biopsy uses:",
+    choices: ["Blue dye", "Radioactive tracer", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 225,
+    question: "Modified radical mastectomy removes:",
+    choices: ["Breast only", "Breast and lymph nodes", "Breast, lymph nodes, and pectoralis major", "Breast, lymph nodes, and both pectoral muscles"],
+    correctAnswer: 1
+  },
+  {
+    id: 226,
+    question: "Radical mastectomy removes:",
+    choices: ["Breast only", "Breast and lymph nodes", "Breast, lymph nodes, and pectoralis minor", "Breast, lymph nodes, and both pectoral muscles"],
+    correctAnswer: 3
+  },
+  {
+    id: 227,
+    question: "Gastroesophageal reflux surgery includes:",
+    choices: ["Nissen fundoplication", "Toupet fundoplication", "Hill repair", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 228,
+    question: "Nissen fundoplication is:",
+    choices: ["Partial wrap", "Complete wrap", "No wrap", "Double wrap"],
+    correctAnswer: 1
+  },
+  {
+    id: 229,
+    question: "Hiatal hernia repair may include:",
+    choices: ["Crural repair", "Mesh reinforcement", "Fundoplication", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 230,
+    question: "Bariatric surgery includes:",
+    choices: ["Gastric bypass", "Sleeve gastrectomy", "Gastric banding", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 231,
+    question: "Roux-en-Y gastric bypass creates:",
+    choices: ["Restriction only", "Malabsorption only", "Both restriction and malabsorption", "Neither"],
+    correctAnswer: 2
+  },
+  {
+    id: 232,
+    question: "Sleeve gastrectomy removes:",
+    choices: ["Entire stomach", "80% of stomach", "50% of stomach", "20% of stomach"],
+    correctAnswer: 1
+  },
+  {
+    id: 233,
+    question: "Colectomy may be:",
+    choices: ["Right hemicolectomy", "Left hemicolectomy", "Sigmoid colectomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 234,
+    question: "Right hemicolectomy removes:",
+    choices: ["Cecum and ascending colon", "Transverse colon", "Descending colon", "Sigmoid colon"],
+    correctAnswer: 0
+  },
+  {
+    id: 235,
+    question: "Left hemicolectomy removes:",
+    choices: ["Cecum", "Ascending colon", "Descending colon", "Rectum"],
+    correctAnswer: 2
+  },
+  {
+    id: 236,
+    question: "Low anterior resection removes:",
+    choices: ["Cecum", "Sigmoid colon", "Upper rectum", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 237,
+    question: "Abdominoperineal resection removes:",
+    choices: ["Colon only", "Rectum only", "Rectum and anus", "Entire large bowel"],
+    correctAnswer: 2
+  },
+  {
+    id: 238,
+    question: "Colostomy may be:",
+    choices: ["Temporary", "Permanent", "Loop or end", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 239,
+    question: "Ileostomy is created from:",
+    choices: ["Large bowel", "Small bowel", "Stomach", "Duodenum"],
+    correctAnswer: 1
+  },
+  {
+    id: 240,
+    question: "Whipple procedure removes:",
+    choices: ["Pancreatic head", "Duodenum", "Gallbladder", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 241,
+    question: "Splenectomy may be performed for:",
+    choices: ["Trauma", "Hematologic disorders", "Tumors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 242,
+    question: "Pneumonia risk after splenectomy is due to:",
+    choices: ["Encapsulated bacteria", "Viral infections", "Fungal infections", "All infections"],
+    correctAnswer: 0
+  },
+  {
+    id: 243,
+    question: "Liver resection may be:",
+    choices: ["Segmentectomy", "Lobectomy", "Wedge resection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 244,
+    question: "Pringle maneuver controls:",
+    choices: ["Hepatic artery", "Portal vein", "Both A and B", "Hepatic veins"],
+    correctAnswer: 2
+  },
+  {
+    id: 245,
+    question: "Kidney transplant involves:",
+    choices: ["Donor nephrectomy", "Recipient surgery", "Vascular anastomosis", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 246,
+    question: "Living donor nephrectomy is usually:",
+    choices: ["Open", "Laparoscopic", "Robotic", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 247,
+    question: "Nephrectomy may be:",
+    choices: ["Simple", "Radical", "Partial", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 248,
+    question: "Radical nephrectomy removes:",
+    choices: ["Kidney only", "Kidney and ureter", "Kidney, adrenal, and lymph nodes", "Kidney and bladder"],
+    correctAnswer: 2
+  },
+  {
+    id: 249,
+    question: "Cystectomy may be:",
+    choices: ["Partial", "Radical", "Simple", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 250,
+    question: "Urinary diversion after cystectomy includes:",
+    choices: ["Ileal conduit", "Neobladder", "Ureterostomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 251,
+    question: "Prostatectomy may be:",
+    choices: ["Open", "Laparoscopic", "Robotic", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 252,
+    question: "Radical prostatectomy removes:",
+    choices: ["Prostate only", "Prostate and seminal vesicles", "Prostate and bladder", "Prostate and urethra"],
+    correctAnswer: 1
+  },
+  {
+    id: 253,
+    question: "TURP stands for:",
+    choices: ["Transurethral resection of prostate", "Total urethral resection procedure", "Transverse urethral repair procedure", "Transurethral repair of prostate"],
+    correctAnswer: 0
+  },
+  {
+    id: 254,
+    question: "Orchiopexy is performed for:",
+    choices: ["Undescended testis", "Testicular torsion", "Testicular tumor", "Hydrocele"],
+    correctAnswer: 0
+  },
+  {
+    id: 255,
+    question: "Varicocelectomy treats:",
+    choices: ["Undescended testis", "Dilated veins", "Testicular tumor", "Epididymitis"],
+    correctAnswer: 1
+  },
+  {
+    id: 256,
+    question: "Hysterectomy may be:",
+    choices: ["Total", "Subtotal", "Radical", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 257,
+    question: "Total hysterectomy removes:",
+    choices: ["Uterus only", "Uterus and cervix", "Uterus and ovaries", "Uterus, cervix, and ovaries"],
+    correctAnswer: 1
+  },
+  {
+    id: 258,
+    question: "Radical hysterectomy removes:",
+    choices: ["Uterus and cervix", "Uterus, cervix, and upper vagina", "Uterus, cervix, parametrium, and upper vagina", "Entire reproductive tract"],
+    correctAnswer: 2
+  },
+  {
+    id: 259,
+    question: "Myomectomy removes:",
+    choices: ["Uterus", "Fibroids", "Ovaries", "Cervix"],
+    correctAnswer: 1
+  },
+  {
+    id: 260,
+    question: "Oophorectomy removes:",
+    choices: ["Uterus", "Ovaries", "Fallopian tubes", "Cervix"],
+    correctAnswer: 1
+  },
+  {
+    id: 261,
+    question: "Salpingectomy removes:",
+    choices: ["Uterus", "Ovaries", "Fallopian tubes", "Cervix"],
+    correctAnswer: 2
+  },
+  {
+    id: 262,
+    question: "Cesarean section may be:",
+    choices: ["Low transverse", "Classical", "Low vertical", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 263,
+    question: "Tubal ligation may be performed:",
+    choices: ["Postpartum", "Interval", "At cesarean section", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 264,
+    question: "Dilation and curettage involves:",
+    choices: ["Cervical dilation", "Endometrial sampling", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 265,
+    question: "Laparoscopy uses:",
+    choices: ["CO2 insufflation", "Trocars", "Camera", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 266,
+    question: "Pneumoperitoneum is created with:",
+    choices: ["Air", "CO2", "N2O", "O2"],
+    correctAnswer: 1
+  },
+  {
+    id: 267,
+    question: "Veress needle is used for:",
+    choices: ["Insufflation", "Trocar insertion", "Suturing", "Cutting"],
+    correctAnswer: 0
+  },
+  {
+    id: 268,
+    question: "Hasson technique involves:",
+    choices: ["Blind trocar insertion", "Open trocar insertion", "Veress needle", "Direct visualization"],
+    correctAnswer: 1
+  },
+  {
+    id: 269,
+    question: "Trendelenburg position in laparoscopy:",
+    choices: ["Improves visualization", "Reduces complications", "Is always required", "Is never used"],
+    correctAnswer: 0
+  },
+  {
+    id: 270,
+    question: "Laparoscopic complications include:",
+    choices: ["Bowel injury", "Vascular injury", "Gas embolism", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 271,
+    question: "Robotic surgery advantages include:",
+    choices: ["3D visualization", "Tremor elimination", "Improved dexterity", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 272,
+    question: "Da Vinci robot has:",
+    choices: ["2 arms", "3 arms", "4 arms", "Variable arms"],
+    correctAnswer: 3
+  },
+  {
+    id: 273,
+    question: "Endoscopic instruments are:",
+    choices: ["Reusable", "Disposable", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 274,
+    question: "Arthroscopy is used for:",
+    choices: ["Diagnosis", "Treatment", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 275,
+    question: "Knee arthroscopy portals include:",
+    choices: ["Anteromedial", "Anterolateral", "Posteromedial", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 276,
+    question: "Shoulder arthroscopy positions include:",
+    choices: ["Beach chair", "Lateral decubitus", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 277,
+    question: "ACL reconstruction uses:",
+    choices: ["Autograft", "Allograft", "Synthetic graft", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 278,
+    question: "Meniscectomy removes:",
+    choices: ["Entire meniscus", "Torn portion", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 279,
+    question: "Rotator cuff repair may be:",
+    choices: ["Open", "Arthroscopic", "Mini-open", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 280,
+    question: "Hip arthroscopy treats:",
+    choices: ["Labral tears", "Impingement", "Loose bodies", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 281,
+    question: "Total hip replacement replaces:",
+    choices: ["Femoral head only", "Acetabulum only", "Both femoral head and acetabulum", "Entire hip joint"],
+    correctAnswer: 2
+  },
+  {
+    id: 282,
+    question: "Hip replacement approaches include:",
+    choices: ["Posterior", "Anterior", "Lateral", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 283,
+    question: "Total knee replacement replaces:",
+    choices: ["Femoral component only", "Tibial component only", "Both femoral and tibial", "Entire knee joint"],
+    correctAnswer: 2
+  },
+  {
+    id: 284,
+    question: "Unicompartmental knee replacement replaces:",
+    choices: ["Medial compartment", "Lateral compartment", "Patellofemoral compartment", "Any single compartment"],
+    correctAnswer: 3
+  },
+  {
+    id: 285,
+    question: "Shoulder replacement may be:",
+    choices: ["Total", "Hemiarthroplasty", "Reverse", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 286,
+    question: "Reverse shoulder replacement is used for:",
+    choices: ["Young patients", "Rotator cuff deficiency", "Fractures", "Arthritis"],
+    correctAnswer: 1
+  },
+  {
+    id: 287,
+    question: "Fracture fixation may use:",
+    choices: ["Plates", "Screws", "Rods", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 288,
+    question: "Intramedullary nails are used for:",
+    choices: ["Long bone fractures", "Joint fractures", "Spine fractures", "Skull fractures"],
+    correctAnswer: 0
+  },
+  {
+    id: 289,
+    question: "External fixation is used for:",
+    choices: ["Open fractures", "Infected fractures", "Unstable fractures", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 290,
+    question: "Bone grafts may be:",
+    choices: ["Autograft", "Allograft", "Synthetic", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 291,
+    question: "Spinal fusion may be:",
+    choices: ["Anterior", "Posterior", "Lateral", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 292,
+    question: "Laminectomy removes:",
+    choices: ["Vertebral body", "Lamina", "Pedicle", "Spinous process"],
+    correctAnswer: 1
+  },
+  {
+    id: 293,
+    question: "Discectomy removes:",
+    choices: ["Entire disc", "Herniated portion", "Disc space", "Adjacent vertebrae"],
+    correctAnswer: 1
+  },
+  {
+    id: 294,
+    question: "Spinal instrumentation includes:",
+    choices: ["Pedicle screws", "Rods", "Hooks", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 295,
+    question: "Craniotomy involves:",
+    choices: ["Opening skull", "Removing bone flap", "Accessing brain", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 296,
+    question: "Craniectomy involves:",
+    choices: ["Opening skull", "Removing bone permanently", "Replacing bone flap", "Accessing brain"],
+    correctAnswer: 1
+  },
+  {
+    id: 297,
+    question: "Brain tumor resection may be:",
+    choices: ["Total", "Subtotal", "Biopsy only", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 298,
+    question: "Awake craniotomy is performed for:",
+    choices: ["All brain tumors", "Tumors near eloquent areas", "Emergency surgery", "Pediatric patients"],
+    correctAnswer: 1
+  },
+  {
+    id: 299,
+    question: "Ventriculoperitoneal shunt treats:",
+    choices: ["Brain tumor", "Hydrocephalus", "Hemorrhage", "Infection"],
+    correctAnswer: 1
+  },
+  {
+    id: 300,
+    question: "Aneurysm clipping involves:",
+    choices: ["Opening aneurysm", "Placing clip on neck", "Removing aneurysm", "Bypassing aneurysm"],
+    correctAnswer: 1
+  },
+  {
+    id: 301,
+    question: "Carotid endarterectomy removes:",
+    choices: ["Entire carotid artery", "Plaque from carotid", "Carotid bifurcation", "External carotid"],
+    correctAnswer: 1
+  },
+  {
+    id: 302,
+    question: "Cardiac surgery may require:",
+    choices: ["Cardiopulmonary bypass", "Hypothermia", "Cardioplegia", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 303,
+    question: "Coronary artery bypass uses:",
+    choices: ["Saphenous vein", "Internal mammary artery", "Radial artery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 304,
+    question: "Valve replacement may use:",
+    choices: ["Mechanical valves", "Biological valves", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 305,
+    question: "Aortic valve replacement approaches include:",
+    choices: ["Full sternotomy", "Mini-sternotomy", "Right thoracotomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 306,
+    question: "Mitral valve repair may involve:",
+    choices: ["Annuloplasty", "Leaflet repair", "Chordal repair", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 307,
+    question: "CABG stands for:",
+    choices: ["Cardiac artery bypass graft", "Coronary artery bypass graft", "Carotid artery bypass graft", "Cerebral artery bypass graft"],
+    correctAnswer: 1
+  },
+  {
+    id: 308,
+    question: "Off-pump CABG avoids:",
+    choices: ["Cardiopulmonary bypass", "General anesthesia", "Sternotomy", "Grafting"],
+    correctAnswer: 0
+  },
+  {
+    id: 309,
+    question: "Thoracotomy approaches include:",
+    choices: ["Posterolateral", "Anterolateral", "Median sternotomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 310,
+    question: "Lobectomy removes:",
+    choices: ["Entire lung", "One lobe", "Segment", "Wedge"],
+    correctAnswer: 1
+  },
+  {
+    id: 311,
+    question: "Pneumonectomy removes:",
+    choices: ["One lobe", "Multiple lobes", "Entire lung", "Lung segment"],
+    correctAnswer: 2
+  },
+  {
+    id: 312,
+    question: "Wedge resection removes:",
+    choices: ["Entire lobe", "Lung segment", "Small portion", "Entire lung"],
+    correctAnswer: 2
+  },
+  {
+    id: 313,
+    question: "VATS stands for:",
+    choices: ["Video-assisted thoracic surgery", "Ventilator-assisted thoracic surgery", "Vascular-assisted thoracic surgery", "Visual-assisted thoracic surgery"],
+    correctAnswer: 0
+  },
+  {
+    id: 314,
+    question: "Chest tube insertion treats:",
+    choices: ["Pneumothorax", "Hemothorax", "Pleural effusion", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 315,
+    question: "Mediastinoscopy examines:",
+    choices: ["Pleural space", "Mediastinum", "Pericardium", "Diaphragm"],
+    correctAnswer: 1
+  },
+  {
+    id: 316,
+    question: "Plastic surgery principles include:",
+    choices: ["Tissue preservation", "Aesthetic outcome", "Functional restoration", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 317,
+    question: "Skin grafts may be:",
+    choices: ["Split-thickness", "Full-thickness", "Composite", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 318,
+    question: "Flaps have:",
+    choices: ["No blood supply", "Their own blood supply", "Artificial blood supply", "Variable blood supply"],
+    correctAnswer: 1
+  },
+  {
+    id: 319,
+    question: "Free flaps require:",
+    choices: ["No anastomosis", "Vascular anastomosis", "Nerve anastomosis", "Bone anastomosis"],
+    correctAnswer: 1
+  },
+  {
+    id: 320,
+    question: "Breast reconstruction may use:",
+    choices: ["Implants", "Autologous tissue", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 321,
+    question: "TRAM flap uses:",
+    choices: ["Latissimus dorsi", "Rectus abdominis", "Gluteus maximus", "Gracilis"],
+    correctAnswer: 1
+  },
+  {
+    id: 322,
+    question: "Rhinoplasty modifies:",
+    choices: ["Nose shape", "Nose function", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 323,
+    question: "Blepharoplasty involves:",
+    choices: ["Eyelid surgery", "Eyebrow surgery", "Eye muscle surgery", "Tear duct surgery"],
+    correctAnswer: 0
+  },
+  {
+    id: 324,
+    question: "Facelift addresses:",
+    choices: ["Skin laxity", "Muscle laxity", "Fat redistribution", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 325,
+    question: "Liposuction removes:",
+    choices: ["Skin", "Muscle", "Fat", "Bone"],
+    correctAnswer: 2
+  },
+  {
+    id: 326,
+    question: "Abdominoplasty addresses:",
+    choices: ["Excess skin", "Muscle separation", "Fat deposits", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 327,
+    question: "Hand surgery may involve:",
+    choices: ["Tendon repair", "Nerve repair", "Fracture fixation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 328,
+    question: "Carpal tunnel release treats:",
+    choices: ["Median nerve compression", "Ulnar nerve compression", "Radial nerve compression", "All nerve compressions"],
+    correctAnswer: 0
+  },
+  {
+    id: 329,
+    question: "Dupuytren's contracture affects:",
+    choices: ["Tendons", "Nerves", "Palmar fascia", "Bones"],
+    correctAnswer: 2
+  },
+  {
+    id: 330,
+    question: "Trigger finger involves:",
+    choices: ["Tendon sheath", "Nerve", "Bone", "Joint"],
+    correctAnswer: 0
+  },
+  {
+    id: 331,
+    question: "Microsurgery requires:",
+    choices: ["Operating microscope", "Specialized instruments", "Sutures", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 332,
+    question: "Replantation involves:",
+    choices: ["Reattaching severed part", "Transplanting organ", "Replacing joint", "Repairing fracture"],
+    correctAnswer: 0
+  },
+  {
+    id: 333,
+    question: "Ophthalmic surgery requires:",
+    choices: ["Operating microscope", "Specialized instruments", "Precise technique", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 334,
+    question: "Cataract surgery removes:",
+    choices: ["Entire eye", "Lens", "Cornea", "Retina"],
+    correctAnswer: 1
+  },
+  {
+    id: 335,
+    question: "Phacoemulsification uses:",
+    choices: ["Laser", "Ultrasound", "Heat", "Cold"],
+    correctAnswer: 1
+  },
+  {
+    id: 336,
+    question: "IOL stands for:",
+    choices: ["Intraocular lens", "Internal optical lens", "Implanted ocular lens", "Integrated optical lens"],
+    correctAnswer: 0
+  },
+  {
+    id: 337,
+    question: "Glaucoma surgery aims to:",
+    choices: ["Increase eye pressure", "Decrease eye pressure", "Maintain eye pressure", "Measure eye pressure"],
+    correctAnswer: 1
+  },
+  {
+    id: 338,
+    question: "Retinal detachment repair may use:",
+    choices: ["Scleral buckle", "Vitrectomy", "Gas injection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 339,
+    question: "Corneal transplant replaces:",
+    choices: ["Entire cornea", "Corneal layers", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 340,
+    question: "LASIK corrects:",
+    choices: ["Cataracts", "Glaucoma", "Refractive errors", "Retinal detachment"],
+    correctAnswer: 2
+  },
+  {
+    id: 341,
+    question: "ENT surgery includes:",
+    choices: ["Ear surgery", "Nose surgery", "Throat surgery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 342,
+    question: "Tonsillectomy removes:",
+    choices: ["Adenoids", "Tonsils", "Both A and B", "Neither A nor B"],
+    correctAnswer: 1
+  },
+  {
+    id: 343,
+    question: "Adenoidectomy removes:",
+    choices: ["Tonsils", "Adenoids", "Both A and B", "Neither A nor B"],
+    correctAnswer: 1
+  },
+  {
+    id: 344,
+    question: "Myringotomy involves:",
+    choices: ["Eardrum incision", "Ear canal cleaning", "Hearing aid insertion", "Ear reconstruction"],
+    correctAnswer: 0
+  },
+  {
+    id: 345,
+    question: "Tympanoplasty repairs:",
+    choices: ["Eardrum", "Ear canal", "Inner ear", "Outer ear"],
+    correctAnswer: 0
+  },
+  {
+    id: 346,
+    question: "Mastoidectomy removes:",
+    choices: ["Mastoid air cells", "Entire mastoid", "Ear canal", "Eardrum"],
+    correctAnswer: 0
+  },
+  {
+    id: 347,
+    question: "Stapedectomy replaces:",
+    choices: ["Eardrum", "Stapes bone", "Cochlea", "Ear canal"],
+    correctAnswer: 1
+  },
+  {
+    id: 348,
+    question: "Cochlear implant treats:",
+    choices: ["Conductive hearing loss", "Sensorineural hearing loss", "Mixed hearing loss", "All hearing loss"],
+    correctAnswer: 1
+  },
+  {
+    id: 349,
+    question: "Septoplasty corrects:",
+    choices: ["Deviated septum", "Nasal polyps", "Sinus infection", "Nasal fracture"],
+    correctAnswer: 0
+  },
+  {
+    id: 350,
+    question: "FESS stands for:",
+    choices: ["Functional endoscopic sinus surgery", "Full endoscopic sinus surgery", "Frontal endoscopic sinus surgery", "Final endoscopic sinus surgery"],
+    correctAnswer: 0
+  },
+  {
+    id: 351,
+    question: "Laryngectomy removes:",
+    choices: ["Voice box", "Tongue", "Throat", "Esophagus"],
+    correctAnswer: 0
+  },
+  {
+    id: 352,
+    question: "Tracheostomy creates:",
+    choices: ["Airway opening", "Voice restoration", "Swallowing passage", "Hearing improvement"],
+    correctAnswer: 0
+  },
+  {
+    id: 353,
+    question: "Parotidectomy removes:",
+    choices: ["Submandibular gland", "Parotid gland", "Sublingual gland", "All salivary glands"],
+    correctAnswer: 1
+  },
+  {
+    id: 354,
+    question: "Facial nerve preservation is important in:",
+    choices: ["Thyroidectomy", "Parotidectomy", "Neck dissection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 355,
+    question: "Pediatric surgery considerations include:",
+    choices: ["Size differences", "Physiologic differences", "Psychological factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 356,
+    question: "Pyloric stenosis repair is:",
+    choices: ["Pyloromyotomy", "Pyloroplasty", "Gastrojejunostomy", "Vagotomy"],
+    correctAnswer: 0
+  },
+  {
+    id: 357,
+    question: "Intussusception is:",
+    choices: ["Bowel obstruction", "Bowel telescoping", "Bowel perforation", "Bowel inflammation"],
+    correctAnswer: 1
+  },
+  {
+    id: 358,
+    question: "Hirschsprung's disease affects:",
+    choices: ["Small bowel", "Colon", "Stomach", "Esophagus"],
+    correctAnswer: 1
+  },
+  {
+    id: 359,
+    question: "Omphalocele involves:",
+    choices: ["Abdominal wall defect", "Diaphragmatic hernia", "Intestinal atresia", "Pyloric stenosis"],
+    correctAnswer: 0
+  },
+  {
+    id: 360,
+    question: "Gastroschisis is:",
+    choices: ["Covered defect", "Uncovered defect", "Diaphragmatic defect", "Chest wall defect"],
+    correctAnswer: 1
+  },
+  {
+    id: 361,
+    question: "Congenital diaphragmatic hernia affects:",
+    choices: ["Breathing", "Digestion", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 362,
+    question: "Esophageal atresia may involve:",
+    choices: ["Tracheoesophageal fistula", "Isolated atresia", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 363,
+    question: "Cleft lip repair is usually performed:",
+    choices: ["At birth", "3-6 months", "1-2 years", "School age"],
+    correctAnswer: 1
+  },
+  {
+    id: 364,
+    question: "Cleft palate repair is usually performed:",
+    choices: ["3-6 months", "9-18 months", "2-3 years", "School age"],
+    correctAnswer: 1
+  },
+  {
+    id: 365,
+    question: "Hypospadias repair corrects:",
+    choices: ["Urethral opening position", "Penile curvature", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 366,
+    question: "Undescended testis repair is:",
+    choices: ["Orchiopexy", "Orchiectomy", "Orchidopexy", "Both A and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 367,
+    question: "Vascular surgery includes:",
+    choices: ["Arterial procedures", "Venous procedures", "Access procedures", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 368,
+    question: "Aneurysm repair may be:",
+    choices: ["Open", "Endovascular", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 369,
+    question: "AAA stands for:",
+    choices: ["Acute aortic aneurysm", "Abdominal aortic aneurysm", "Ascending aortic aneurysm", "Arterial aortic aneurysm"],
+    correctAnswer: 1
+  },
+  {
+    id: 370,
+    question: "EVAR stands for:",
+    choices: ["Endovascular aneurysm repair", "Emergency vascular aneurysm repair", "Extended vascular aneurysm repair", "Elective vascular aneurysm repair"],
+    correctAnswer: 0
+  },
+  {
+    id: 371,
+    question: "Peripheral bypass uses:",
+    choices: ["Synthetic graft", "Vein graft", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 372,
+    question: "Fem-pop bypass connects:",
+    choices: ["Femoral to popliteal", "Femoral to posterior tibial", "Femoral to peroneal", "Femoral to plantar"],
+    correctAnswer: 0
+  },
+  {
+    id: 373,
+    question: "Carotid stenosis may cause:",
+    choices: ["Stroke", "TIA", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 374,
+    question: "AV fistula is created for:",
+    choices: ["Dialysis access", "Blood pressure monitoring", "Medication administration", "Blood sampling"],
+    correctAnswer: 0
+  },
+  {
+    id: 375,
+    question: "Varicose vein treatment includes:",
+    choices: ["Stripping", "Sclerotherapy", "Endovenous ablation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 376,
+    question: "DVT stands for:",
+    choices: ["Deep vein thrombosis", "Deep venous thrombosis", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 377,
+    question: "Pulmonary embolectomy removes:",
+    choices: ["Lung tissue", "Blood clot", "Tumor", "Infection"],
+    correctAnswer: 1
+  },
+  {
+    id: 378,
+    question: "IVC filter prevents:",
+    choices: ["DVT", "Pulmonary embolism", "Stroke", "Heart attack"],
+    correctAnswer: 1
+  },
+  {
+    id: 379,
+    question: "Amputation may be:",
+    choices: ["Above knee", "Below knee", "Digital", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 380,
+    question: "Amputation level depends on:",
+    choices: ["Blood supply", "Infection", "Function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 381,
+    question: "Trauma surgery priorities follow:",
+    choices: ["ABCDE", "ATLS", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 382,
+    question: "Damage control surgery involves:",
+    choices: ["Definitive repair", "Temporary measures", "Complete reconstruction", "Cosmetic repair"],
+    correctAnswer: 1
+  },
+  {
+    id: 383,
+    question: "Exploratory laparotomy explores:",
+    choices: ["Abdomen", "Pelvis", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 384,
+    question: "Splenectomy for trauma is indicated for:",
+    choices: ["All splenic injuries", "Unstable patients", "Stable patients", "Pediatric patients only"],
+    correctAnswer: 1
+  },
+  {
+    id: 385,
+    question: "Liver injury may require:",
+    choices: ["Observation", "Repair", "Resection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 386,
+    question: "Pancreatic injury may cause:",
+    choices: ["Bleeding", "Fistula", "Pseudocyst", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 387,
+    question: "Bowel injury repair depends on:",
+    choices: ["Location", "Extent", "Contamination", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 388,
+    question: "Vascular injury may require:",
+    choices: ["Repair", "Bypass", "Ligation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 389,
+    question: "Chest trauma may cause:",
+    choices: ["Pneumothorax", "Hemothorax", "Cardiac injury", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 390,
+    question: "Pericardiocentesis treats:",
+    choices: ["Pneumothorax", "Hemothorax", "Cardiac tamponade", "Pulmonary embolism"],
+    correctAnswer: 2
+  },
+  {
+    id: 391,
+    question: "Emergency thoracotomy is performed for:",
+    choices: ["All chest trauma", "Cardiac arrest", "Massive hemothorax", "Both B and C"],
+    correctAnswer: 3
+  },
+  {
+    id: 392,
+    question: "Head trauma may require:",
+    choices: ["Observation", "ICP monitoring", "Craniotomy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 393,
+    question: "ICP stands for:",
+    choices: ["Intracranial pressure", "Intercranial pressure", "Internal cranial pressure", "Intracerebral pressure"],
+    correctAnswer: 0
+  },
+  {
+    id: 394,
+    question: "Epidural hematoma is:",
+    choices: ["Above dura", "Below dura", "In brain tissue", "In ventricles"],
+    correctAnswer: 0
+  },
+  {
+    id: 395,
+    question: "Subdural hematoma is:",
+    choices: ["Above dura", "Below dura", "In brain tissue", "In ventricles"],
+    correctAnswer: 1
+  },
+  {
+    id: 396,
+    question: "Burn surgery may involve:",
+    choices: ["Debridement", "Grafting", "Reconstruction", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 397,
+    question: "Burn depth classification includes:",
+    choices: ["First degree", "Second degree", "Third degree", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 398,
+    question: "Escharotomy relieves:",
+    choices: ["Pain", "Compartment syndrome", "Infection", "Scarring"],
+    correctAnswer: 1
+  },
+  {
+    id: 399,
+    question: "Skin grafts for burns may be:",
+    choices: ["Autograft", "Allograft", "Xenograft", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 400,
+    question: "Burn reconstruction addresses:",
+    choices: ["Function", "Appearance", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 401,
+    question: "Transplant surgery requires:",
+    choices: ["Donor organ", "Recipient preparation", "Immunosuppression", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 402,
+    question: "Organ preservation uses:",
+    choices: ["Cold storage", "Machine perfusion", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 403,
+    question: "Brain death criteria include:",
+    choices: ["Absence of brain function", "Absence of brainstem reflexes", "Apnea test", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 404,
+    question: "Living donor transplants include:",
+    choices: ["Kidney", "Liver", "Lung", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 405,
+    question: "Rejection may be:",
+    choices: ["Hyperacute", "Acute", "Chronic", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 406,
+    question: "Immunosuppressive drugs include:",
+    choices: ["Steroids", "Calcineurin inhibitors", "Antimetabolites", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 407,
+    question: "Heart transplant indications include:",
+    choices: ["End-stage heart failure", "Cardiomyopathy", "Congenital heart disease", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 408,
+    question: "Lung transplant may be:",
+    choices: ["Single lung", "Double lung", "Heart-lung", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 409,
+    question: "Liver transplant indications include:",
+    choices: ["Cirrhosis", "Hepatitis", "Liver cancer", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 410,
+    question: "Pancreas transplant treats:",
+    choices: ["Type 1 diabetes", "Type 2 diabetes", "Pancreatitis", "Pancreatic cancer"],
+    correctAnswer: 0
+  },
+  {
+    id: 411,
+    question: "Corneal transplant has:",
+    choices: ["High success rate", "Low success rate", "Variable success rate", "No success"],
+    correctAnswer: 0
+  },
+  {
+    id: 412,
+    question: "Bone marrow transplant treats:",
+    choices: ["Leukemia", "Lymphoma", "Aplastic anemia", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 413,
+    question: "Autologous transplant uses:",
+    choices: ["Patient's own tissue", "Donor tissue", "Artificial material", "Animal tissue"],
+    correctAnswer: 0
+  },
+  {
+    id: 414,
+    question: "Allogeneic transplant uses:",
+    choices: ["Patient's own tissue", "Human donor tissue", "Animal tissue", "Artificial material"],
+    correctAnswer: 1
+  },
+  {
+    id: 415,
+    question: "Xenograft uses:",
+    choices: ["Human tissue", "Animal tissue", "Artificial material", "Patient's tissue"],
+    correctAnswer: 1
+  },
+  {
+    id: 416,
+    question: "Minimally invasive surgery advantages include:",
+    choices: ["Smaller incisions", "Less pain", "Faster recovery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 417,
+    question: "Single-port laparoscopy uses:",
+    choices: ["One incision", "Two incisions", "Three incisions", "Four incisions"],
+    correctAnswer: 0
+  },
+  {
+    id: 418,
+    question: "NOTES stands for:",
+    choices: ["Natural orifice transluminal endoscopic surgery", "New operative technique endoscopic surgery", "Non-operative therapeutic endoscopic surgery", "Novel orifice transluminal endoscopic surgery"],
+    correctAnswer: 0
+  },
+  {
+    id: 419,
+    question: "Robotic surgery disadvantages include:",
+    choices: ["High cost", "Learning curve", "Equipment size", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 420,
+    question: "Telemedicine allows:",
+    choices: ["Remote consultation", "Remote surgery", "Remote monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 421,
+    question: "Image-guided surgery uses:",
+    choices: ["CT", "MRI", "Ultrasound", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 422,
+    question: "Navigation systems help with:",
+    choices: ["Accuracy", "Safety", "Efficiency", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 423,
+    question: "Intraoperative imaging includes:",
+    choices: ["Fluoroscopy", "Ultrasound", "MRI", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 424,
+    question: "3D printing in surgery is used for:",
+    choices: ["Surgical planning", "Custom implants", "Surgical guides", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 425,
+    question: "Artificial intelligence in surgery helps with:",
+    choices: ["Diagnosis", "Planning", "Execution", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 426,
+    question: "Augmented reality provides:",
+    choices: ["Enhanced visualization", "Real-time guidance", "Training simulation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 427,
+    question: "Virtual reality is used for:",
+    choices: ["Surgical training", "Patient education", "Surgical planning", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 428,
+    question: "Nanotechnology in surgery involves:",
+    choices: ["Drug delivery", "Imaging", "Tissue engineering", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 429,
+    question: "Gene therapy may treat:",
+    choices: ["Cancer", "Genetic disorders", "Infections", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 430,
+    question: "Stem cell therapy uses:",
+    choices: ["Embryonic stem cells", "Adult stem cells", "Induced pluripotent stem cells", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 431,
+    question: "Tissue engineering combines:",
+    choices: ["Cells", "Scaffolds", "Growth factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 432,
+    question: "Regenerative medicine aims to:",
+    choices: ["Repair tissue", "Replace tissue", "Regenerate tissue", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 433,
+    question: "Bioprinting can create:",
+    choices: ["Tissues", "Organs", "Medical devices", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 434,
+    question: "Personalized medicine considers:",
+    choices: ["Genetics", "Environment", "Lifestyle", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 435,
+    question: "Precision surgery uses:",
+    choices: ["Genetic information", "Molecular markers", "Imaging data", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 436,
+    question: "Quality improvement in surgery focuses on:",
+    choices: ["Safety", "Effectiveness", "Efficiency", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 437,
+    question: "Surgical checklists improve:",
+    choices: ["Communication", "Safety", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 438,
+    question: "Time-out procedure verifies:",
+    choices: ["Patient identity", "Procedure", "Site", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 439,
+    question: "Wrong-site surgery prevention requires:",
+    choices: ["Site marking", "Time-out", "Verification", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 440,
+    question: "Surgical site infection prevention includes:",
+    choices: ["Antibiotic prophylaxis", "Skin preparation", "Sterile technique", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 441,
+    question: "Venous thromboembolism prevention uses:",
+    choices: ["Mechanical prophylaxis", "Pharmacologic prophylaxis", "Early mobilization", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 442,
+    question: "Enhanced recovery protocols include:",
+    choices: ["Preoperative optimization", "Intraoperative management", "Postoperative care", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 443,
+    question: "ERAS stands for:",
+    choices: ["Enhanced recovery after surgery", "Early recovery after surgery", "Effective recovery after surgery", "Extended recovery after surgery"],
+    correctAnswer: 0
+  },
+  {
+    id: 444,
+    question: "Multimodal analgesia uses:",
+    choices: ["Multiple drugs", "Multiple routes", "Multiple techniques", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 445,
+    question: "Regional anesthesia includes:",
+    choices: ["Spinal", "Epidural", "Nerve blocks", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 446,
+    question: "Patient-controlled analgesia allows:",
+    choices: ["Patient control", "Consistent levels", "Reduced side effects", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 447,
+    question: "Postoperative nausea prevention uses:",
+    choices: ["Antiemetics", "Hydration", "Avoiding triggers", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 448,
+    question: "Early mobilization prevents:",
+    choices: ["Pneumonia", "DVT", "Muscle weakness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 449,
+    question: "Nutritional support may be:",
+    choices: ["Enteral", "Parenteral", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 450,
+    question: "Wound care includes:",
+    choices: ["Cleaning", "Dressing", "Monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 451,
+    question: "Surgical education includes:",
+    choices: ["Didactic learning", "Simulation", "Clinical experience", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 452,
+    question: "Simulation training provides:",
+    choices: ["Safe environment", "Repetitive practice", "Objective assessment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 453,
+    question: "Competency-based training focuses on:",
+    choices: ["Knowledge", "Skills", "Attitudes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 454,
+    question: "Continuing education is:",
+    choices: ["Optional", "Required", "Recommended", "Variable by specialty"],
+    correctAnswer: 1
+  },
+  {
+    id: 455,
+    question: "Professional development includes:",
+    choices: ["Technical skills", "Leadership skills", "Communication skills", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 456,
+    question: "Research in surgery involves:",
+    choices: ["Basic science", "Clinical trials", "Outcomes research", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 457,
+    question: "Evidence-based medicine uses:",
+    choices: ["Best evidence", "Clinical expertise", "Patient values", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 458,
+    question: "Clinical trials may be:",
+    choices: ["Randomized", "Controlled", "Blinded", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 459,
+    question: "Systematic reviews provide:",
+    choices: ["Comprehensive analysis", "High-level evidence", "Clinical guidance", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 460,
+    question: "Meta-analysis combines:",
+    choices: ["Multiple studies", "Statistical methods", "Quantitative results", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 461,
+    question: "Surgical innovation requires:",
+    choices: ["Scientific rigor", "Ethical oversight", "Patient safety", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 462,
+    question: "Technology assessment evaluates:",
+    choices: ["Safety", "Efficacy", "Cost-effectiveness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 463,
+    question: "Healthcare economics considers:",
+    choices: ["Costs", "Benefits", "Resource allocation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 464,
+    question: "Value-based care focuses on:",
+    choices: ["Quality", "Outcomes", "Cost", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 465,
+    question: "Patient satisfaction includes:",
+    choices: ["Communication", "Pain management", "Overall experience", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 466,
+    question: "Surgical outcomes include:",
+    choices: ["Mortality", "Morbidity", "Quality of life", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 467,
+    question: "Risk stratification uses:",
+    choices: ["Patient factors", "Procedure factors", "System factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 468,
+    question: "Preoperative assessment includes:",
+    choices: ["Medical history", "Physical examination", "Diagnostic tests", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 469,
+    question: "Cardiac risk assessment uses:",
+    choices: ["Clinical predictors", "Functional capacity", "Surgery-specific risk", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 470,
+    question: "Pulmonary risk factors include:",
+    choices: ["Smoking", "COPD", "Age", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 471,
+    question: "Renal function assessment uses:",
+    choices: ["Creatinine", "BUN", "GFR", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 472,
+    question: "Hepatic function tests include:",
+    choices: ["ALT", "AST", "Bilirubin", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 473,
+    question: "Coagulation studies include:",
+    choices: ["PT", "PTT", "INR", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 474,
+    question: "Nutritional assessment includes:",
+    choices: ["Weight loss", "Albumin", "Prealbumin", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 475,
+    question: "Functional status assessment uses:",
+    choices: ["Activities of daily living", "Exercise tolerance", "Cognitive function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 476,
+    question: "Perioperative management includes:",
+    choices: ["Preoperative preparation", "Intraoperative care", "Postoperative monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 477,
+    question: "Fluid management considers:",
+    choices: ["Preoperative status", "Intraoperative losses", "Postoperative needs", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 478,
+    question: "Blood management includes:",
+    choices: ["Preoperative optimization", "Intraoperative conservation", "Postoperative monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 479,
+    question: "Temperature management prevents:",
+    choices: ["Hypothermia", "Hyperthermia", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 480,
+    question: "Glucose management is important for:",
+    choices: ["Diabetic patients", "Non-diabetic patients", "All patients", "No patients"],
+    correctAnswer: 2
+  },
+  {
+    id: 481,
+    question: "Surgical site preparation includes:",
+    choices: ["Hair removal", "Skin antisepsis", "Draping", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 482,
+    question: "Antibiotic prophylaxis timing is:",
+    choices: ["Within 1 hour of incision", "At induction", "Both A and B", "After surgery"],
+    correctAnswer: 2
+  },
+  {
+    id: 483,
+    question: "Surgical positioning considers:",
+    choices: ["Surgical access", "Patient safety", "Physiologic function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 484,
+    question: "Pressure injury prevention uses:",
+    choices: ["Padding", "Positioning", "Monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 485,
+    question: "Nerve injury prevention requires:",
+    choices: ["Proper positioning", "Adequate padding", "Avoiding stretch", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 486,
+    question: "Compartment syndrome prevention includes:",
+    choices: ["Proper positioning", "Pressure monitoring", "Time limits", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 487,
+    question: "Surgical counts include:",
+    choices: ["Sponges", "Instruments", "Needles", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 488,
+    question: "Count discrepancies require:",
+    choices: ["Search", "X-ray", "Documentation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 489,
+    question: "Specimen handling requires:",
+    choices: ["Proper labeling", "Appropriate fixation", "Timely transport", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 490,
+    question: "Pathology consultation helps with:",
+    choices: ["Diagnosis", "Staging", "Treatment planning", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 491,
+    question: "Frozen section provides:",
+    choices: ["Rapid diagnosis", "Margin assessment", "Surgical guidance", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 492,
+    question: "Intraoperative consultation includes:",
+    choices: ["Pathology", "Radiology", "Other specialties", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 493,
+    question: "Surgical complications may be:",
+    choices: ["Intraoperative", "Early postoperative", "Late postoperative", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 494,
+    question: "Complication management requires:",
+    choices: ["Recognition", "Treatment", "Prevention", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 495,
+    question: "Surgical mortality is affected by:",
+    choices: ["Patient factors", "Procedure factors", "System factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 496,
+    question: "Morbidity includes:",
+    choices: ["Complications", "Functional impairment", "Quality of life", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 497,
+    question: "Length of stay is affected by:",
+    choices: ["Complications", "Patient factors", "System factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 498,
+    question: "Readmission may be due to:",
+    choices: ["Complications", "Inadequate discharge planning", "Patient factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 499,
+    question: "Surgical follow-up includes:",
+    choices: ["Wound check", "Complication monitoring", "Functional assessment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 500,
+    question: "Long-term outcomes include:",
+    choices: ["Survival", "Function", "Quality of life", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 501,
+    question: "Surgical training requires:",
+    choices: ["Knowledge", "Skills", "Experience", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 502,
+    question: "Competency assessment uses:",
+    choices: ["Written exams", "Practical exams", "Observation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 503,
+    question: "Surgical mentorship provides:",
+    choices: ["Guidance", "Support", "Role modeling", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 504,
+    question: "Professional development includes:",
+    choices: ["Continuing education", "Research", "Leadership", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 505,
+    question: "Surgical ethics considers:",
+    choices: ["Patient autonomy", "Beneficence", "Justice", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 506,
+    question: "Informed consent requires:",
+    choices: ["Disclosure", "Understanding", "Voluntariness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 507,
+    question: "Confidentiality protects:",
+    choices: ["Patient information", "Medical records", "Communications", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 508,
+    question: "Professional boundaries maintain:",
+    choices: ["Therapeutic relationship", "Patient safety", "Professional integrity", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 509,
+    question: "Cultural competence includes:",
+    choices: ["Awareness", "Knowledge", "Skills", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 510,
+    question: "Communication skills include:",
+    choices: ["Listening", "Speaking", "Non-verbal", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 511,
+    question: "Team-based care requires:",
+    choices: ["Collaboration", "Communication", "Coordination", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 512,
+    question: "Leadership skills include:",
+    choices: ["Vision", "Communication", "Decision-making", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 513,
+    question: "Quality improvement uses:",
+    choices: ["Data collection", "Analysis", "Implementation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 514,
+    question: "Patient safety culture promotes:",
+    choices: ["Reporting", "Learning", "Improvement", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 515,
+    question: "Risk management identifies:",
+    choices: ["Hazards", "Risks", "Solutions", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 516,
+    question: "Error prevention uses:",
+    choices: ["System design", "Training", "Monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 517,
+    question: "Incident reporting promotes:",
+    choices: ["Learning", "Improvement", "Prevention", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 518,
+    question: "Root cause analysis identifies:",
+    choices: ["Contributing factors", "System issues", "Solutions", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 519,
+    question: "Failure mode analysis prevents:",
+    choices: ["Errors", "Complications", "Adverse events", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 520,
+    question: "High reliability organizations have:",
+    choices: ["Safety culture", "System design", "Continuous improvement", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 521,
+    question: "Surgical innovation requires:",
+    choices: ["Research", "Development", "Testing", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 522,
+    question: "Technology adoption considers:",
+    choices: ["Safety", "Efficacy", "Cost", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 523,
+    question: "Future surgery may include:",
+    choices: ["Robotics", "AI", "Nanotechnology", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 524,
+    question: "Personalized surgery uses:",
+    choices: ["Genetics", "Imaging", "Biomarkers", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 525,
+    question: "Precision medicine considers:",
+    choices: ["Individual variation", "Genetic factors", "Environmental factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 526,
+    question: "Regenerative surgery uses:",
+    choices: ["Stem cells", "Growth factors", "Scaffolds", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 527,
+    question: "Tissue engineering combines:",
+    choices: ["Biology", "Engineering", "Medicine", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 528,
+    question: "Gene therapy may treat:",
+    choices: ["Genetic disorders", "Cancer", "Infections", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 529,
+    question: "Immunotherapy uses:",
+    choices: ["Immune system", "Antibodies", "Vaccines", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 530,
+    question: "Targeted therapy focuses on:",
+    choices: ["Specific molecules", "Pathways", "Mechanisms", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 531,
+    question: "Biomarkers help with:",
+    choices: ["Diagnosis", "Prognosis", "Treatment selection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 532,
+    question: "Liquid biopsy detects:",
+    choices: ["Circulating tumor cells", "Cell-free DNA", "Exosomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 533,
+    question: "Molecular imaging shows:",
+    choices: ["Anatomy", "Function", "Molecular processes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 534,
+    question: "Theranostics combines:",
+    choices: ["Therapy", "Diagnostics", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 535,
+    question: "Digital health includes:",
+    choices: ["Electronic records", "Telemedicine", "Mobile health", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 536,
+    question: "Big data analytics uses:",
+    choices: ["Large datasets", "Advanced algorithms", "Machine learning", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 537,
+    question: "Artificial intelligence applications include:",
+    choices: ["Diagnosis", "Treatment planning", "Surgical guidance", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 538,
+    question: "Machine learning uses:",
+    choices: ["Algorithms", "Data", "Pattern recognition", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 539,
+    question: "Deep learning is a type of:",
+    choices: ["Machine learning", "Artificial intelligence", "Neural networks", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 540,
+    question: "Natural language processing analyzes:",
+    choices: ["Text", "Speech", "Language", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 541,
+    question: "Computer vision analyzes:",
+    choices: ["Images", "Videos", "Visual data", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 542,
+    question: "Robotics in surgery provides:",
+    choices: ["Precision", "Dexterity", "Visualization", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 543,
+    question: "Autonomous surgery may involve:",
+    choices: ["Planning", "Execution", "Monitoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 544,
+    question: "Haptic feedback provides:",
+    choices: ["Touch sensation", "Force feedback", "Tactile information", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 545,
+    question: "Virtual reality training offers:",
+    choices: ["Safe environment", "Repetitive practice", "Objective assessment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 546,
+    question: "Augmented reality provides:",
+    choices: ["Enhanced visualization", "Real-time guidance", "Information overlay", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 547,
+    question: "Mixed reality combines:",
+    choices: ["Real world", "Virtual elements", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 548,
+    question: "Simulation-based training uses:",
+    choices: ["Models", "Simulators", "Virtual reality", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 549,
+    question: "Competency-based assessment measures:",
+    choices: ["Knowledge", "Skills", "Attitudes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 550,
+    question: "Continuous learning requires:",
+    choices: ["Motivation", "Resources", "Support", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 551,
+    question: "Global surgery addresses:",
+    choices: ["Access", "Quality", "Equity", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 552,
+    question: "Surgical capacity building includes:",
+    choices: ["Infrastructure", "Training", "Equipment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 553,
+    question: "Humanitarian surgery provides:",
+    choices: ["Emergency care", "Capacity building", "Training", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 554,
+    question: "Disaster response requires:",
+    choices: ["Preparation", "Coordination", "Resources", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 555,
+    question: "Mass casualty management uses:",
+    choices: ["Triage", "Resource allocation", "Coordination", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 556,
+    question: "Surgical missions provide:",
+    choices: ["Care", "Training", "Capacity building", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 557,
+    question: "Telesurgery enables:",
+    choices: ["Remote surgery", "Remote consultation", "Remote training", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 558,
+    question: "Mobile surgery units provide:",
+    choices: ["Access", "Flexibility", "Cost-effectiveness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 559,
+    question: "Point-of-care testing provides:",
+    choices: ["Rapid results", "Convenience", "Cost savings", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 560,
+    question: "Portable imaging enables:",
+    choices: ["Bedside imaging", "Remote imaging", "Emergency imaging", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 561,
+    question: "Wearable devices monitor:",
+    choices: ["Vital signs", "Activity", "Health parameters", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 562,
+    question: "Remote monitoring enables:",
+    choices: ["Continuous monitoring", "Early detection", "Timely intervention", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 563,
+    question: "Digital therapeutics provide:",
+    choices: ["Treatment", "Monitoring", "Support", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 564,
+    question: "Precision dosing uses:",
+    choices: ["Pharmacokinetics", "Pharmacodynamics", "Individual factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 565,
+    question: "Drug delivery systems include:",
+    choices: ["Targeted delivery", "Controlled release", "Personalized dosing", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 566,
+    question: "Nanotechnology applications include:",
+    choices: ["Drug delivery", "Imaging", "Diagnostics", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 567,
+    question: "Biosensors detect:",
+    choices: ["Biomarkers", "Pathogens", "Chemicals", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 568,
+    question: "Lab-on-a-chip devices provide:",
+    choices: ["Miniaturization", "Integration", "Automation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 569,
+    question: "Microfluidics enables:",
+    choices: ["Small volumes", "Precise control", "High throughput", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 570,
+    question: "Organ-on-a-chip models:",
+    choices: ["Human physiology", "Disease states", "Drug responses", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 571,
+    question: "3D bioprinting creates:",
+    choices: ["Tissues", "Organs", "Models", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 572,
+    question: "Bioinks contain:",
+    choices: ["Cells", "Biomaterials", "Growth factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 573,
+    question: "Scaffold materials include:",
+    choices: ["Natural polymers", "Synthetic polymers", "Ceramics", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 574,
+    question: "Decellularization removes:",
+    choices: ["Cells", "Cellular components", "Antigens", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 575,
+    question: "Recellularization adds:",
+    choices: ["Cells", "Growth factors", "Nutrients", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 576,
+    question: "Organoids are:",
+    choices: ["3D cultures", "Organ-like structures", "Disease models", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 577,
+    question: "Spheroids are:",
+    choices: ["3D cell cultures", "Tumor models", "Drug testing platforms", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 578,
+    question: "Bioreactors provide:",
+    choices: ["Controlled environment", "Mechanical stimulation", "Nutrient supply", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 579,
+    question: "Perfusion systems maintain:",
+    choices: ["Nutrient supply", "Waste removal", "Oxygen delivery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 580,
+    question: "Cryopreservation preserves:",
+    choices: ["Cells", "Tissues", "Organs", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 581,
+    question: "Vitrification prevents:",
+    choices: ["Ice formation", "Cell damage", "Protein denaturation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 582,
+    question: "Hypothermic preservation uses:",
+    choices: ["Cold storage", "Perfusion", "Oxygenation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 583,
+    question: "Normothermic preservation maintains:",
+    choices: ["Body temperature", "Metabolism", "Function", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 584,
+    question: "Machine perfusion provides:",
+    choices: ["Continuous flow", "Oxygenation", "Nutrient delivery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 585,
+    question: "Organ assessment evaluates:",
+    choices: ["Viability", "Function", "Quality", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 586,
+    question: "Biomarkers of organ quality include:",
+    choices: ["Enzymes", "Metabolites", "Proteins", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 587,
+    question: "Real-time monitoring tracks:",
+    choices: ["Function", "Viability", "Quality", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 588,
+    question: "Predictive models use:",
+    choices: ["Clinical data", "Biomarkers", "Imaging", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 589,
+    question: "Risk stratification identifies:",
+    choices: ["High-risk patients", "Complications", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 590,
+    question: "Decision support systems provide:",
+    choices: ["Recommendations", "Alerts", "Guidelines", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 591,
+    question: "Clinical pathways standardize:",
+    choices: ["Care processes", "Outcomes", "Resource use", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 592,
+    question: "Protocol adherence improves:",
+    choices: ["Quality", "Safety", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 593,
+    question: "Variation reduction focuses on:",
+    choices: ["Processes", "Outcomes", "Costs", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 594,
+    question: "Standardization improves:",
+    choices: ["Quality", "Efficiency", "Safety", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 595,
+    question: "Best practices are:",
+    choices: ["Evidence-based", "Proven effective", "Widely accepted", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 596,
+    question: "Benchmarking compares:",
+    choices: ["Performance", "Outcomes", "Processes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 597,
+    question: "Performance metrics measure:",
+    choices: ["Quality", "Safety", "Efficiency", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 598,
+    question: "Outcome measures include:",
+    choices: ["Clinical outcomes", "Patient satisfaction", "Cost-effectiveness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 599,
+    question: "Process measures evaluate:",
+    choices: ["Care delivery", "Adherence", "Timeliness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 600,
+    question: "Structure measures assess:",
+    choices: ["Resources", "Capabilities", "Organization", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 601,
+    question: "Quality indicators reflect:",
+    choices: ["Performance", "Outcomes", "Processes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 602,
+    question: "Safety indicators monitor:",
+    choices: ["Adverse events", "Near misses", "Hazards", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 603,
+    question: "Efficiency measures evaluate:",
+    choices: ["Resource use", "Productivity", "Cost-effectiveness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 604,
+    question: "Patient experience includes:",
+    choices: ["Communication", "Respect", "Involvement", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 605,
+    question: "Patient-centered care focuses on:",
+    choices: ["Individual needs", "Preferences", "Values", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 606,
+    question: "Shared decision-making involves:",
+    choices: ["Information sharing", "Deliberation", "Decision", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 607,
+    question: "Patient engagement includes:",
+    choices: ["Participation", "Collaboration", "Partnership", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 608,
+    question: "Health literacy affects:",
+    choices: ["Understanding", "Decision-making", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 609,
+    question: "Cultural sensitivity considers:",
+    choices: ["Beliefs", "Values", "Practices", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 610,
+    question: "Language barriers affect:",
+    choices: ["Communication", "Understanding", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 611,
+    question: "Interpreter services provide:",
+    choices: ["Translation", "Cultural mediation", "Advocacy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 612,
+    question: "Health disparities involve:",
+    choices: ["Access", "Quality", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 613,
+    question: "Health equity promotes:",
+    choices: ["Fairness", "Justice", "Equal opportunity", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 614,
+    question: "Social determinants include:",
+    choices: ["Income", "Education", "Environment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 615,
+    question: "Population health focuses on:",
+    choices: ["Health outcomes", "Health determinants", "Health policies", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 616,
+    question: "Public health interventions target:",
+    choices: ["Individuals", "Communities", "Populations", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 617,
+    question: "Prevention strategies include:",
+    choices: ["Primary prevention", "Secondary prevention", "Tertiary prevention", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 618,
+    question: "Health promotion activities include:",
+    choices: ["Education", "Behavior change", "Policy change", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 619,
+    question: "Disease prevention focuses on:",
+    choices: ["Risk factors", "Early detection", "Treatment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 620,
+    question: "Screening programs detect:",
+    choices: ["Disease", "Risk factors", "Precancerous conditions", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 621,
+    question: "Vaccination prevents:",
+    choices: ["Infectious diseases", "Complications", "Outbreaks", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 622,
+    question: "Infection control measures include:",
+    choices: ["Hand hygiene", "Isolation", "Disinfection", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 623,
+    question: "Antimicrobial stewardship promotes:",
+    choices: ["Appropriate use", "Resistance prevention", "Patient safety", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 624,
+    question: "Surveillance systems monitor:",
+    choices: ["Disease occurrence", "Trends", "Outbreaks", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 625,
+    question: "Epidemiological investigations identify:",
+    choices: ["Sources", "Modes of transmission", "Risk factors", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 626,
+    question: "Outbreak response includes:",
+    choices: ["Investigation", "Control measures", "Communication", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 627,
+    question: "Emergency preparedness involves:",
+    choices: ["Planning", "Training", "Resources", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 628,
+    question: "Disaster management includes:",
+    choices: ["Mitigation", "Preparedness", "Response", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 629,
+    question: "Business continuity planning ensures:",
+    choices: ["Operations", "Services", "Recovery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 630,
+    question: "Risk assessment identifies:",
+    choices: ["Hazards", "Vulnerabilities", "Consequences", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 631,
+    question: "Risk mitigation reduces:",
+    choices: ["Probability", "Impact", "Both A and B", "Neither A nor B"],
+    correctAnswer: 2
+  },
+  {
+    id: 632,
+    question: "Crisis communication provides:",
+    choices: ["Information", "Reassurance", "Guidance", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 633,
+    question: "Media relations involve:",
+    choices: ["Press releases", "Interviews", "Social media", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 634,
+    question: "Stakeholder engagement includes:",
+    choices: ["Patients", "Families", "Communities", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 635,
+    question: "Partnership development involves:",
+    choices: ["Collaboration", "Coordination", "Resource sharing", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 636,
+    question: "Network building creates:",
+    choices: ["Connections", "Relationships", "Collaborations", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 637,
+    question: "Knowledge sharing promotes:",
+    choices: ["Learning", "Innovation", "Improvement", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 638,
+    question: "Best practice sharing includes:",
+    choices: ["Documentation", "Dissemination", "Implementation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 639,
+    question: "Innovation diffusion involves:",
+    choices: ["Adoption", "Implementation", "Sustainability", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 640,
+    question: "Change management includes:",
+    choices: ["Planning", "Implementation", "Evaluation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 641,
+    question: "Organizational culture affects:",
+    choices: ["Behavior", "Performance", "Outcomes", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 642,
+    question: "Leadership styles include:",
+    choices: ["Transformational", "Transactional", "Servant", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 643,
+    question: "Team dynamics involve:",
+    choices: ["Communication", "Collaboration", "Conflict resolution", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 644,
+    question: "Interprofessional collaboration includes:",
+    choices: ["Shared goals", "Mutual respect", "Effective communication", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 645,
+    question: "Conflict resolution strategies include:",
+    choices: ["Negotiation", "Mediation", "Arbitration", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 646,
+    question: "Performance management includes:",
+    choices: ["Goal setting", "Monitoring", "Feedback", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 647,
+    question: "Professional development includes:",
+    choices: ["Education", "Training", "Mentoring", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 648,
+    question: "Career advancement requires:",
+    choices: ["Skills", "Experience", "Networking", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 649,
+    question: "Work-life balance involves:",
+    choices: ["Time management", "Stress management", "Priority setting", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 650,
+    question: "Burnout prevention includes:",
+    choices: ["Workload management", "Support systems", "Self-care", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 651,
+    question: "Resilience building involves:",
+    choices: ["Coping skills", "Support networks", "Stress management", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 652,
+    question: "Wellness programs promote:",
+    choices: ["Physical health", "Mental health", "Social well-being", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 653,
+    question: "Employee assistance programs provide:",
+    choices: ["Counseling", "Support", "Resources", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 654,
+    question: "Workplace safety includes:",
+    choices: ["Hazard identification", "Risk assessment", "Control measures", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 655,
+    question: "Occupational health focuses on:",
+    choices: ["Prevention", "Treatment", "Rehabilitation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 656,
+    question: "Environmental health addresses:",
+    choices: ["Air quality", "Water quality", "Chemical exposure", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 657,
+    question: "Sustainability initiatives include:",
+    choices: ["Waste reduction", "Energy conservation", "Green practices", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 658,
+    question: "Green surgery practices include:",
+    choices: ["Waste reduction", "Energy efficiency", "Sustainable materials", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 659,
+    question: "Waste management includes:",
+    choices: ["Reduction", "Recycling", "Disposal", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 660,
+    question: "Energy conservation measures include:",
+    choices: ["Efficient equipment", "Smart systems", "Behavior change", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 661,
+    question: "Water conservation includes:",
+    choices: ["Efficient fixtures", "Leak detection", "Behavior change", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 662,
+    question: "Supply chain sustainability involves:",
+    choices: ["Supplier selection", "Product lifecycle", "Environmental impact", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 663,
+    question: "Circular economy principles include:",
+    choices: ["Reduce", "Reuse", "Recycle", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 664,
+    question: "Life cycle assessment evaluates:",
+    choices: ["Environmental impact", "Resource use", "Emissions", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 665,
+    question: "Carbon footprint measures:",
+    choices: ["Greenhouse gas emissions", "Energy use", "Transportation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 666,
+    question: "Climate change impacts include:",
+    choices: ["Health effects", "Environmental changes", "Economic consequences", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 667,
+    question: "Adaptation strategies address:",
+    choices: ["Current impacts", "Future risks", "Vulnerability", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 668,
+    question: "Mitigation strategies reduce:",
+    choices: ["Emissions", "Energy use", "Environmental impact", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 669,
+    question: "Renewable energy sources include:",
+    choices: ["Solar", "Wind", "Hydroelectric", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 670,
+    question: "Energy efficiency measures include:",
+    choices: ["Insulation", "Efficient equipment", "Smart controls", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 671,
+    question: "Transportation sustainability includes:",
+    choices: ["Public transit", "Electric vehicles", "Active transportation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 672,
+    question: "Building sustainability involves:",
+    choices: ["Design", "Construction", "Operations", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 673,
+    question: "Green building standards include:",
+    choices: ["LEED", "BREEAM", "Energy Star", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 674,
+    question: "Indoor environmental quality includes:",
+    choices: ["Air quality", "Lighting", "Acoustics", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 675,
+    question: "Healthy buildings promote:",
+    choices: ["Occupant health", "Productivity", "Well-being", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 676,
+    question: "Smart buildings use:",
+    choices: ["Sensors", "Automation", "Data analytics", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 677,
+    question: "Internet of Things (IoT) enables:",
+    choices: ["Connectivity", "Data collection", "Automation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 678,
+    question: "Smart cities integrate:",
+    choices: ["Technology", "Infrastructure", "Services", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 679,
+    question: "Digital transformation involves:",
+    choices: ["Technology adoption", "Process change", "Cultural change", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 680,
+    question: "Data governance ensures:",
+    choices: ["Quality", "Security", "Privacy", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 681,
+    question: "Cybersecurity protects:",
+    choices: ["Data", "Systems", "Networks", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 682,
+    question: "Privacy protection includes:",
+    choices: ["Data minimization", "Consent", "Access controls", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 683,
+    question: "Information security involves:",
+    choices: ["Confidentiality", "Integrity", "Availability", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 684,
+    question: "Risk management includes:",
+    choices: ["Identification", "Assessment", "Mitigation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 685,
+    question: "Business continuity ensures:",
+    choices: ["Operations", "Services", "Recovery", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 686,
+    question: "Disaster recovery includes:",
+    choices: ["Planning", "Testing", "Implementation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 687,
+    question: "Backup strategies include:",
+    choices: ["Data backup", "System backup", "Site backup", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 688,
+    question: "Cloud computing provides:",
+    choices: ["Scalability", "Flexibility", "Cost savings", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 689,
+    question: "Edge computing enables:",
+    choices: ["Local processing", "Reduced latency", "Real-time response", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 690,
+    question: "Quantum computing offers:",
+    choices: ["Massive parallelism", "Complex calculations", "Cryptography", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 691,
+    question: "Blockchain technology provides:",
+    choices: ["Transparency", "Security", "Decentralization", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 692,
+    question: "Cryptocurrency uses:",
+    choices: ["Blockchain", "Cryptography", "Decentralization", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 693,
+    question: "Digital identity includes:",
+    choices: ["Authentication", "Authorization", "Verification", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 694,
+    question: "Biometric authentication uses:",
+    choices: ["Fingerprints", "Facial recognition", "Voice recognition", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 695,
+    question: "Multi-factor authentication includes:",
+    choices: ["Something you know", "Something you have", "Something you are", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 696,
+    question: "Zero trust security assumes:",
+    choices: ["No implicit trust", "Verify everything", "Least privilege", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 697,
+    question: "Threat intelligence provides:",
+    choices: ["Information", "Analysis", "Context", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 698,
+    question: "Incident response includes:",
+    choices: ["Detection", "Analysis", "Containment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 699,
+    question: "Forensic analysis examines:",
+    choices: ["Evidence", "Artifacts", "Timeline", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 700,
+    question: "Compliance management ensures:",
+    choices: ["Regulatory adherence", "Policy compliance", "Audit readiness", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 701,
+    question: "Audit processes include:",
+    choices: ["Planning", "Execution", "Reporting", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 702,
+    question: "Regulatory frameworks provide:",
+    choices: ["Standards", "Guidelines", "Requirements", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 703,
+    question: "Policy development includes:",
+    choices: ["Research", "Drafting", "Implementation", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 704,
+    question: "Procedure documentation includes:",
+    choices: ["Steps", "Responsibilities", "Controls", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 705,
+    question: "Training programs include:",
+    choices: ["Content development", "Delivery", "Assessment", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 706,
+    question: "Continuous improvement involves:",
+    choices: ["Monitoring", "Analysis", "Enhancement", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 707,
     question: "What is the appendicular skeleton composed of?",
     choices: ["Skull and ribcage", "Vertebrae and sacrum", "Limbs", "Sternum"],
     correctAnswer: 2
   },
   {
-    id: 2,
+    id: 708,
     question: "What type of bones make up the skull?",
     choices: ["Long bones", "Flat bones", "Short bones", "Irregular bones"],
     correctAnswer: 1
   },
   {
-    id: 3,
+    id: 709,
     question: "Which of the following are irregular bones?",
     choices: ["Femur", "Vertebrae", "Radius", "Sternum"],
     correctAnswer: 1
   },
   {
-    id: 4,
+    id: 710,
     question: "Which ribs are considered true ribs?",
     choices: ["8–10", "11–12", "1–7", "9–12"],
     correctAnswer: 2
   },
   {
-    id: 5,
+    id: 711,
     question: "The manubrium is a part of which bone?",
     choices: ["Pelvis", "Sternum", "Scapula", "Skull"],
     correctAnswer: 1
   },
   {
-    id: 6,
+    id: 712,
     question: "What is the shaft of a long bone called?",
     choices: ["Epiphysis", "Diaphysis", "Medulla", "Periosteum"],
     correctAnswer: 1
   },
   {
-    id: 7,
+    id: 713,
     question: "Which type of bone is the patella?",
     choices: ["Short", "Flat", "Irregular", "Long"],
     correctAnswer: 1
   },
   {
-    id: 8,
+    id: 714,
     question: "What is the primary function of red bone marrow?",
     choices: ["Fat storage", "Hormone production", "Blood cell production", "Bone resorption"],
     correctAnswer: 2
   },
   {
-    id: 9,
+    id: 715,
     question: "A tumor of the plasma cells of bone marrow is called:",
     choices: ["Osteosarcoma", "Myeloma", "Chondroma", "Osteoma"],
     correctAnswer: 1
   },
   {
-    id: 10,
+    id: 716,
     question: "The outer layer of hard connective tissue of bone is called:",
     choices: ["Cancellous bone", "Bone marrow", "Cortical bone", "Periosteum"],
     correctAnswer: 2
   },
   {
-    id: 11,
+    id: 717,
     question: "The four stages of bone healing begin with:",
     choices: ["Callus formation", "Calcification", "Hematoma formation", "Remodeling"],
     correctAnswer: 2
   },
   {
-    id: 12,
+    id: 718,
     question: "What type of tissue covers joint surfaces to allow smooth movement?",
     choices: ["Periosteum", "Ligament", "Cartilage", "Tendon"],
     correctAnswer: 2
   },
   {
-    id: 13,
+    id: 719,
     question: "Which of the following is a benign cartilage tumor?",
     choices: ["Osteosarcoma", "Chondroma", "Myeloma", "Osteoma"],
     correctAnswer: 1
   },
   {
-    id: 14,
+    id: 720,
     question: "Which type of muscle is voluntary?",
     choices: ["Smooth", "Striated", "Cardiac", "Involuntary"],
     correctAnswer: 1
   },
   {
-    id: 15,
+    id: 721,
     question: "What do ligaments attach?",
     choices: ["Muscle to bone", "Bone to bone", "Cartilage to bone", "Muscle to cartilage"],
     correctAnswer: 1
   },
   {
-    id: 16,
+    id: 722,
     question: "What is the function of tendons?",
     choices: ["Connect bone to bone", "Connect muscle to bone", "Cushion joints", "Secrete synovial fluid"],
     correctAnswer: 1
   },
   {
-    id: 17,
+    id: 723,
     question: "A joint that allows no movement is called:",
     choices: ["Amphiarthrotic", "Diarthrotic", "Synarthrotic", "Synovial"],
     correctAnswer: 2
   },
   {
-    id: 18,
+    id: 724,
     question: "Which joint type allows the widest range of motion?",
     choices: ["Hinge", "Ball and socket", "Pivot", "Gliding"],
     correctAnswer: 1
   },
   {
-    id: 19,
+    id: 725,
     question: "What is an example of a condyloid joint?",
     choices: ["Shoulder", "Elbow", "Temporomandibular joint", "Hip"],
     correctAnswer: 2
   },
   {
-    id: 20,
+    id: 726,
     question: "A hinge joint is best exemplified by the:",
     choices: ["Hip", "Shoulder", "Elbow", "Wrist"],
     correctAnswer: 2
   },
   {
-    id: 21,
+    id: 727,
     question: "Turning the sole of the foot inward is called:",
     choices: ["Eversion", "Inversion", "Plantar flexion", "Dorsiflexion"],
     correctAnswer: 1
   },
   {
-    id: 22,
+    id: 728,
     question: "Moving a limb away from the midline of the body is called:",
     choices: ["Adduction", "Abduction", "Flexion", "Extension"],
     correctAnswer: 1
   },
   {
-    id: 23,
+    id: 729,
     question: "An autoimmune disease that causes joint inflammation and stiffness is:",
     choices: ["Osteoarthritis", "Rheumatoid arthritis", "Osteomyelitis", "Chondroma"],
     correctAnswer: 1
   },
   {
-    id: 24,
+    id: 730,
     question: "Which diagnostic test records electrical activity of muscle?",
     choices: ["MRI", "Arthrogram", "CT scan", "Electromyography"],
     correctAnswer: 3
   },
   {
-    id: 25,
+    id: 731,
     question: "What type of fracture does not puncture the skin?",
     choices: ["Open", "Simple", "Compound", "Comminuted"],
     correctAnswer: 1
   },
   {
-    id: 26,
+    id: 732,
     question: "A fracture where the bone bends on one side and breaks on the other is:",
     choices: ["Oblique", "Greenstick", "Transverse", "Impacted"],
     correctAnswer: 1
   },
   {
-    id: 27,
+    id: 733,
     question: "A fracture where the bone breaks into several pieces is called:",
     choices: ["Displaced", "Comminuted", "Oblique", "Transverse"],
     correctAnswer: 1
   },
   {
-    id: 28,
+    id: 734,
     question: "A Colles' fracture involves which bone?",
     choices: ["Tibia", "Femur", "Radius", "Fibula"],
     correctAnswer: 2
   },
   {
-    id: 29,
+    id: 735,
     question: "Which type of fracture is caused by disease that weakens the bone?",
     choices: ["Pathologic", "Greenstick", "Impacted", "Oblique"],
     correctAnswer: 0
   },
   {
-    id: 30,
+    id: 736,
     question: "A partial dislocation is known as:",
     choices: ["Dislocation", "Subluxation", "Impaction", "Avulsion"],
     correctAnswer: 1
   },
   {
-    id: 31,
+    id: 737,
     question: "Which table is used for spine surgery?",
     choices: ["Fracture table", "Andrews table", "Jackson table", "Alvarado table"],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
-    id: 32,
+    id: 738,
     question: "Traction applied directly to bone using pins is called:",
     choices: ["Manual traction", "Skeletal traction", "Skin traction", "Elastic traction"],
     correctAnswer: 1
   },
   {
-    id: 33,
+    id: 739,
     question: "Which material is commonly used for casting?",
     choices: ["Bone cement", "Fiberglass", "Silicone", "Nylon"],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
-    id: 34,
+    id: 740,
     question: "Which of the following is a complication of bone healing?",
     choices: ["Delayed union", "Callus formation", "Calcification", "Remodeling"],
-    correctAnswer: 0
+    correctAnswer: 2
   },
   {
-    id: 35,
+    id: 741,
     question: "A disease of decreased bone density leading to brittle bones is:",
     choices: ["Osteomalacia", "Osteogenesis imperfecta", "Osteoporosis", "Osteoarthritis"],
-    correctAnswer: 2
-  },
-  {
-    id: 36,
-    question: "Bone cement is also known as:",
-    choices: ["PMMA", "PVC", "Fiberglass", "Epoxy"],
     correctAnswer: 0
   },
   {
-    id: 37,
-    question: "Which type of bone graft is taken from the patient?",
-    choices: ["Allograft", "Xenograft", "Autograft", "Synthetic"],
+    id: 742,
+    question: "Bone cement is also known as:",
+    choices: ["PMMA", "PVC", "Fiberglass", "Epoxy"],
     correctAnswer: 2
   },
   {
-    id: 38,
+    id: 743,
+    question: "Which type of bone graft is taken from the patient?",
+    choices: ["Allograft", "Xenograft", "Autograft", "Synthetic"],
+    correctAnswer: 1
+  },
+  {
+    id: 744,
     question: "What suture material is commonly used for tendon-to-bone?",
     choices: ["Silk", "Polyester (Ethibond)", "Vicryl", "Chromic"],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
-    id: 39,
+    id: 745,
     question: "Which hemostatic agent is made of absorbable gelatin?",
     choices: ["Bone wax", "Gelfoam", "Thrombin", "PMMA"],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
-    id: 40,
+    id: 746,
     question: "Which position may interfere with chest expansion if improperly performed?",
     choices: ["Lateral", "Supine", "Prone", "Lithotomy"],
     correctAnswer: 2
   },
   {
-    id: 41,
+    id: 747,
     question: "A genetic disorder causing brittle bones is:",
     choices: ["Osteomyelitis", "Osteomalacia", "Osteogenesis imperfecta", "Osteoarthritis"],
     correctAnswer: 2
   },
   {
-    id: 42,
+    id: 748,
     question: "Which of the following is a metabolic disease causing soft bones?",
     choices: ["Osteoporosis", "Osteomalacia", "Osteonecrosis", "Osteoarthritis"],
     correctAnswer: 1
   },
   {
-    id: 43,
+    id: 749,
     question: "A compartment syndrome results in:",
     choices: ["Bone infection", "Increased pressure in fascial compartments", "Loss of calcium", "Bone necrosis"],
     correctAnswer: 1
   },
   {
-    id: 44,
+    id: 750,
     question: "What table provides skeletal traction for fractures?",
     choices: ["Fracture table", "Jackson table", "Andrews table", "Alvarado table"],
     correctAnswer: 0
   },
   {
-    id: 45,
+    id: 751,
     question: "Which antibiotic is commonly used for irrigation?",
     choices: ["Erythromycin", "Bacitracin", "Amoxicillin", "Ciprofloxacin"],
     correctAnswer: 1
   },
   {
-    id: 46,
+    id: 752,
     question: "Which laser is used in arthroscopies?",
     choices: ["Nd:YAG", "CO₂", "Excimer", "Argon"],
-    correctAnswer: 0
-  },
-  {
-    id: 47,
-    question: "What is the purpose of bone grafts?",
-    choices: ["To increase bone length", "To promote healing of fractures", "To lubricate joints", "To remove diseased bone"],
     correctAnswer: 1
   },
   {
-    id: 48,
+    id: 753,
+    question: "What is the purpose of bone grafts?",
+    choices: ["To increase bone length", "To promote healing of fractures", "To lubricate joints", "To remove diseased bone"],
+    correctAnswer: 0
+  },
+  {
+    id: 754,
     question: "What is the preferred first step to repair a fracture?",
     choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
     correctAnswer: 1
   },
   {
-    id: 49,
-    question: "What is the most common use for a cell-saver during surgery?",
-    choices: ["Cancer surgery", "Aneurysm repair (AAA)", "Cesarean delivery", "Sepsis management"],
+    id: 755,
+    question: "Which laser is used in arthroscopies?",
+    choices: ["Nd:YAG", "CO₂", "Excimer", "Argon"],
     correctAnswer: 1
   },
   {
-    id: 50,
-    question: "Hemolysis during cell-saver use refers to:",
-    choices: ["Blood clotting in the device", "Rupture of red blood cells", "Infection of the salvaged blood", "Failure of the suction system"],
+    id: 756,
+    question: "What is the preferred first step to repair a fracture?",
+    choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
     correctAnswer: 1
-  },
-  {
-    id: 51,
-    question: "What condition involves overactivation of the clotting cascade and widespread bleeding?",
-    choices: ["Hemolysis", "Sepsis", "DIC", "Hemophilia"],
-    correctAnswer: 2
-  },
-  {
-    id: 52,
-    question: "Which of the following is a minimally invasive repair of an AAA?",
-    choices: ["Fem-pop bypass", "Endovascular AAA repair", "Axillofemoral bypass", "Fem-tibial bypass"],
-    correctAnswer: 1
-  },
-  {
-    id: 53,
-    question: "An endovascular AAA repair involves:",
-    choices: ["Directly sewing the aneurysm", "Using a metal stent graft", "Bypassing with saphenous vein", "Removing the aneurysm"],
-    correctAnswer: 1
-  },
-  {
-    id: 54,
-    question: "What type of bypass restores blood flow from femoral to popliteal artery?",
-    choices: ["Fem-tibial bypass", "Fem-fem bypass", "Fem-pop bypass", "Aortofemoral bypass"],
-    correctAnswer: 2
-  },
-  {
-    id: 55,
-    question: "Which bypass uses the axillary and femoral arteries?",
-    choices: ["Aortofemoral bypass", "Axillofemoral bypass", "Fem-fem bypass", "Fem-pop bypass"],
-    correctAnswer: 1
-  },
-  {
-    id: 56,
-    question: "Collateral circulation refers to:",
-    choices: ["Blood loss from collateral veins", "Blood rerouting around a blocked vessel", "Removal of collaterals during surgery", "Clotting in a collateral vein"],
-    correctAnswer: 1
-  },
-  {
-    id: 57,
-    question: "Amputation above the knee is performed when:",
-    choices: ["Below-knee wound healing is likely", "Vascular flow below the knee is inadequate", "Phantom pain is severe", "Femoral artery is patent"],
-    correctAnswer: 1
-  },
-  {
-    id: 58,
-    question: "Phantom pain is best described as:",
-    choices: ["Sharp burning pain in an amputated limb", "Pain in an uninjured limb", "Numbness of the stump", "Pain due to infection"],
-    correctAnswer: 0
-  },
-  {
-    id: 59,
-    question: "Which vein is most commonly treated in varicose vein stripping?",
-    choices: ["Femoral vein", "Saphenous vein", "Popliteal vein", "Tibial vein"],
-    correctAnswer: 1
-  },
-  {
-    id: 60,
-    question: "Which cranial nerve controls facial muscles and tears?",
-    choices: ["III Oculomotor", "VII Facial", "V Trigeminal", "VI Abducens"],
-    correctAnswer: 1
-  },
-  {
-    id: 61,
-    question: "The vagus nerve controls:",
-    choices: ["Hearing and balance", "Taste and salivation", "Heart, lungs, and digestive organs", "Eye movements"],
-    correctAnswer: 2
-  },
-  {
-    id: 62,
-    question: "What diagnostic test uses MRI and geometric markers to create a 3D brain image?",
-    choices: ["CT scan", "Angiography", "Stereotactic craniotomy", "EEG"],
-    correctAnswer: 2
-  },
-  {
-    id: 63,
-    question: "The dura mater is the:",
-    choices: ["Middle meningeal layer", "Outer meningeal layer", "Inner meningeal layer", "Brain cortex"],
-    correctAnswer: 1
-  },
-  {
-    id: 64,
-    question: "The subarachnoid space lies between:",
-    choices: ["Skull and dura", "Dura and arachnoid", "Arachnoid and pia", "Pia and brain tissue"],
-    correctAnswer: 2
-  },
-  {
-    id: 65,
-    question: "CSF is produced in the:",
-    choices: ["Subarachnoid space", "Choroid plexus", "Dura mater", "Circle of Willis"],
-    correctAnswer: 1
-  },
-  {
-    id: 66,
-    question: "The Circle of Willis is a:",
-    choices: ["Venous plexus", "Circular artery supplying the brain", "Bundle of cranial nerves", "Group of ventricles"],
-    correctAnswer: 1
-  },
-  {
-    id: 67,
-    question: "The cerebellum is primarily responsible for:",
-    choices: ["Emotions", "Balance and coordination", "Respiration", "Eye movements"],
-    correctAnswer: 1
-  },
-  {
-    id: 68,
-    question: "Which cranial nerve controls tongue movement?",
-    choices: ["IX Glossopharyngeal", "XII Hypoglossal", "V Trigeminal", "XI Accessory"],
-    correctAnswer: 1
-  },
-  {
-    id: 69,
-    question: "What is the most common pediatric skull deformity requiring surgery?",
-    choices: ["Craniotomy", "Craniectomy", "Craniosynostosis", "Encephalocele"],
-    correctAnswer: 2
-  },
-  {
-    id: 70,
-    question: "Glioblastoma is a:",
-    choices: ["Benign brain tumor", "Malignant, fast-growing brain tumor", "Tumor of meninges", "Tumor of eighth cranial nerve"],
-    correctAnswer: 1
-  },
-  {
-    id: 71,
-    question: "A subdural hematoma is located:",
-    choices: ["Between skull and dura", "In brain tissue itself", "Between dura and arachnoid", "Between arachnoid and pia"],
-    correctAnswer: 2
-  },
-  {
-    id: 72,
-    question: "Burr holes are performed to:",
-    choices: ["Implant electrodes", "Drain intracranial blood", "Measure intracranial pressure", "Resect brain tumors"],
-    correctAnswer: 1
-  },
-  {
-    id: 73,
-    question: "The eighth cranial nerve is also called the:",
-    choices: ["Vestibulocochlear", "Glossopharyngeal", "Trigeminal", "Abducens"],
-    correctAnswer: 0
-  },
-  {
-    id: 74,
-    question: "A Gigli saw is used to:",
-    choices: ["Drill burr holes", "Remove a bone flap", "Mark neuro tissue", "Measure pressure"],
-    correctAnswer: 1
-  },
-  {
-    id: 75,
-    question: "Which instrument is a self-retaining brain retractor?",
-    choices: ["Penfield dissector", "Leyla-Yasargil", "Raney clip", "Midas Rex"],
-    correctAnswer: 1
-  },
-  {
-    id: 76,
-    question: "Bone wax is used to:",
-    choices: ["Mark the dura", "Stop bone bleeding", "Suture the dura", "Cover nerve roots"],
-    correctAnswer: 1
-  },
-  {
-    id: 77,
-    question: "Which hemostatic agent is absorbable and antibacterial?",
-    choices: ["Bone wax", "Gelfoam", "Surgicel", "Cottonoid"],
-    correctAnswer: 2
-  },
-  {
-    id: 78,
-    question: "Which suture is appropriate for closing the dura mater?",
-    choices: ["Chromic", "Silk or nylon", "Absorbable gut", "Wire"],
-    correctAnswer: 1
-  },
-  {
-    id: 79,
-    question: "Supratentorial craniotomy includes access to:",
-    choices: ["Cerebellum", "Temporal lobe", "Brainstem", "Midbrain"],
-    correctAnswer: 1
-  },
-  {
-    id: 80,
-    question: "A craniectomy differs from craniotomy because:",
-    choices: ["Bone flap is removed and replaced", "Bone flap is removed and not replaced", "Only burr holes are made", "Only soft tissue is removed"],
-    correctAnswer: 1
-  },
-  {
-    id: 81,
-    question: "Arteriovenous malformation is:",
-    choices: ["Normal collateral circulation", "Abnormal vein-artery connection", "Tumor of the brain", "Blockage of a vein"],
-    correctAnswer: 1
-  },
-  {
-    id: 82,
-    question: "Which procedure treats trigeminal neuralgia?",
-    choices: ["Craniosynostosis repair", "Decompression of trigeminal nerve", "Transsphenoidal hypophysectomy", "Carotid endarterectomy"],
-    correctAnswer: 1
-  },
-  {
-    id: 83,
-    question: "Transsphenoidal hypophysectomy is performed to:",
-    choices: ["Remove pituitary tumor", "Repair brain aneurysm", "Resect trigeminal nerve", "Repair dura tear"],
-    correctAnswer: 0
-  },
-  {
-    id: 84,
-    question: "What is the surgical treatment for median nerve compression?",
-    choices: ["Carpal tunnel release", "Ulnar nerve transposition", "Rhizotomy", "Cordotomy"],
-    correctAnswer: 0
-  },
-  {
-    id: 85,
-    question: "The most serious form of spina bifida is:",
-    choices: ["Meningocele", "Myelomeningocele", "Encephalocele", "Anencephaly"],
-    correctAnswer: 1
-  },
-  {
-    id: 86,
-    question: "Which benign spinal tumor originates from meninges?",
-    choices: ["Schwannoma", "Meningioma", "Osteoblastoma", "Ewing sarcoma"],
-    correctAnswer: 1
-  },
-  {
-    id: 87,
-    question: "Lumbar laminectomy relieves:",
-    choices: ["Cervical nerve compression", "Spinal stenosis", "Carpal tunnel syndrome", "Hydrocephalus"],
-    correctAnswer: 1
-  },
-  {
-    id: 88,
-    question: "Anterior cervical decompression requires bone grafts from:",
-    choices: ["Femur", "Iliac crest", "Radius", "Skull"],
-    correctAnswer: 1
-  },
-  {
-    id: 89,
-    question: "Artificial disk replacement restores:",
-    choices: ["CSF flow", "Disk function and spine movement", "Nerve conduction", "Bone healing"],
-    correctAnswer: 1
-  },
-  {
-    id: 90,
-    question: "Kyphoplasty repairs:",
-    choices: ["Herniated disks", "Collapsed vertebrae", "Spinal nerves", "Brain aneurysms"],
-    correctAnswer: 1
-  },
-  {
-    id: 91,
-    question: "Scoliosis is a spinal deformity where the spine:",
-    choices: ["Curves inward", "Curves outward", "Curves side to side", "Remains straight"],
-    correctAnswer: 2
-  },
-  {
-    id: 92,
-    question: "Lordosis affects the:",
-    choices: ["Upper back", "Lower back", "Cervical spine", "Brainstem"],
-    correctAnswer: 1
-  },
-  {
-    id: 93,
-    question: "Thoracic outlet syndrome involves impingement of:",
-    choices: ["Cranial nerves", "Median nerve", "Brachial plexus", "Ulnar nerve"],
-    correctAnswer: 2
   }
 ];
