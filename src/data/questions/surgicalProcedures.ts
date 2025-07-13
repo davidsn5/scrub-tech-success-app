@@ -4841,5 +4841,299 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "What is the preferred first step to repair a fracture?",
     choices: ["Open reduction", "Closed reduction", "Casting", "Bone grafting"],
     correctAnswer: 1
+  },
+  {
+    id: 807,
+    question: "What does the axial skeleton consist of?",
+    choices: ["Limbs and girdles", "Skull, ribcage, and vertebrae", "Upper and lower extremities", "Pelvic and pectoral girdles"],
+    correctAnswer: 1
+  },
+  {
+    id: 808,
+    question: "Which bones are classified as long bones?",
+    choices: ["Vertebrae", "Sternum", "Femur and humerus", "Carpals"],
+    correctAnswer: 2
+  },
+  {
+    id: 809,
+    question: "What type of joint is immovable, like the suture lines in the cranium?",
+    choices: ["Amphiarthrotic", "Synarthrotic", "Diarthrotic", "Hinge"],
+    correctAnswer: 1
+  },
+  {
+    id: 810,
+    question: "What are the true ribs?",
+    choices: ["Ribs 8–10", "Ribs 11–12", "Ribs 1–7", "Ribs 6–12"],
+    correctAnswer: 2
+  },
+  {
+    id: 811,
+    question: "What is the name of the outer hard layer of bone?",
+    choices: ["Cancellous bone", "Periosteum", "Compact bone", "Marrow"],
+    correctAnswer: 2
+  },
+  {
+    id: 812,
+    question: "What is the term for the shaft of a long bone?",
+    choices: ["Epiphysis", "Metaphysis", "Diaphysis", "Periosteum"],
+    correctAnswer: 2
+  },
+  {
+    id: 813,
+    question: "What type of bone is the scapula?",
+    choices: ["Long", "Flat", "Short", "Irregular"],
+    correctAnswer: 1
+  },
+  {
+    id: 814,
+    question: "Which structure connects muscle to bone?",
+    choices: ["Ligament", "Tendon", "Cartilage", "Joint capsule"],
+    correctAnswer: 1
+  },
+  {
+    id: 815,
+    question: "What is the most common benign cartilage tumor?",
+    choices: ["Chondroma", "Osteoma", "Ewing sarcoma", "Osteogenic sarcoma"],
+    correctAnswer: 0
+  },
+  {
+    id: 816,
+    question: "What is the first step of bone healing?",
+    choices: ["Remodeling", "Callus formation", "Hematoma formation", "Calcification"],
+    correctAnswer: 2
+  },
+  {
+    id: 817,
+    question: "What type of fracture is incomplete and common in children?",
+    choices: ["Comminuted", "Greenstick", "Transverse", "Impacted"],
+    correctAnswer: 1
+  },
+  {
+    id: 818,
+    question: "Which rib classification applies to ribs 11 and 12?",
+    choices: ["True ribs", "False ribs", "Floating ribs", "Hinged ribs"],
+    correctAnswer: 2
+  },
+  {
+    id: 819,
+    question: "What type of muscle is voluntary?",
+    choices: ["Smooth", "Cardiac", "Striated", "Involuntary"],
+    correctAnswer: 2
+  },
+  {
+    id: 820,
+    question: "What is the function of synovial fluid?",
+    choices: ["Nourishes bone marrow", "Strengthens tendons", "Lubricates joints", "Forms ligaments"],
+    correctAnswer: 2
+  },
+  {
+    id: 821,
+    question: "What type of joint allows the widest range of motion?",
+    choices: ["Hinge", "Pivot", "Ball and socket", "Saddle"],
+    correctAnswer: 2
+  },
+  {
+    id: 822,
+    question: "Which joint is an example of a hinge joint?",
+    choices: ["Shoulder", "Elbow", "Hip", "Wrist"],
+    correctAnswer: 1
+  },
+  {
+    id: 823,
+    question: "What is a Colles' fracture?",
+    choices: ["Tibial plateau fracture", "Distal radius fracture", "Fibula fracture", "Femoral neck fracture"],
+    correctAnswer: 1
+  },
+  {
+    id: 824,
+    question: "Which test records electrical activity of muscle?",
+    choices: ["Arthrogram", "MRI", "Electromyography", "CT scan"],
+    correctAnswer: 2
+  },
+  {
+    id: 825,
+    question: "What is compartment syndrome?",
+    choices: ["Joint inflammation", "Bone infection", "Increased pressure in muscle compartments", "Ligament tear"],
+    correctAnswer: 2
+  },
+  {
+    id: 826,
+    question: "What type of bone marrow forms red blood cells?",
+    choices: ["Yellow", "White", "Red", "Compact"],
+    correctAnswer: 2
+  },
+  {
+    id: 827,
+    question: "What are the names of the three parts of the sternum?",
+    choices: ["Ilium, ischium, pubis", "Manubrium, body, xiphoid", "Epiphysis, metaphysis, diaphysis", "Radius, ulna, humerus"],
+    correctAnswer: 1
+  },
+  {
+    id: 828,
+    question: "Which of these is a malignant bone tumor of plasma cells?",
+    choices: ["Osteoma", "Osteogenic sarcoma", "Plasma cell myeloma", "Giant cell tumor"],
+    correctAnswer: 2
+  },
+  {
+    id: 829,
+    question: "Which fracture results in the bone protruding through the skin?",
+    choices: ["Closed", "Compound", "Greenstick", "Stellate"],
+    correctAnswer: 1
+  },
+  {
+    id: 830,
+    question: "What position is often used for shoulder surgery?",
+    choices: ["Supine", "Beach chair", "Lateral", "Prone"],
+    correctAnswer: 2
+  },
+  {
+    id: 831,
+    question: "What are the four rotator cuff muscles?",
+    choices: ["Biceps, triceps, deltoid, pectoralis", "Iliacus, gluteus, sartorius, psoas", "Supraspinatus, infraspinatus, subscapularis, teres minor", "Rectus, vastus, gracilis, sartorius"],
+    correctAnswer: 2
+  },
+  {
+    id: 832,
+    question: "What is the most common site of carpal fracture?",
+    choices: ["Lunate", "Pisiform", "Scaphoid", "Trapezium"],
+    correctAnswer: 2
+  },
+  {
+    id: 833,
+    question: "What is the name of the socket in the hip bone?",
+    choices: ["Glenoid", "Acetabulum", "Foramen", "Fossa"],
+    correctAnswer: 1
+  },
+  {
+    id: 834,
+    question: "What is a hemiarthroplasty?",
+    choices: ["Total hip replacement", "Knee fusion", "Shoulder arthroscopy", "Replacement of only femoral head"],
+    correctAnswer: 3
+  },
+  {
+    id: 835,
+    question: "Which prosthesis type has a swiveling head?",
+    choices: ["Unipolar", "Bipolar", "Tripolar", "Tricompartmental"],
+    correctAnswer: 1
+  },
+  {
+    id: 836,
+    question: "What type of saw blade moves back and forth in line with the handle?",
+    choices: ["Sagittal", "Oscillating", "Reciprocating", "Circular"],
+    correctAnswer: 2
+  },
+  {
+    id: 837,
+    question: "What does the ACL prevent?",
+    choices: ["Tibia from sliding backward", "Fibula from rotating", "Tibia from sliding too far forward", "Femur from rotating"],
+    correctAnswer: 1
+  },
+  {
+    id: 838,
+    question: "What is the treatment for a Baker's cyst?",
+    choices: ["Antibiotics", "Casting", "Drainage and ice", "ORIF"],
+    correctAnswer: 1
+  },
+  {
+    id: 839,
+    question: "What three joints are fused in a triple arthrodesis?",
+    choices: ["Glenohumeral, acromioclavicular, sternoclavicular", "Talocalcaneal, talonavicular, calcaneocuboid", "Radioulnar, radiocarpal, intercarpal", "Hip, knee, ankle"],
+    correctAnswer: 1
+  },
+  {
+    id: 840,
+    question: "What is hallux valgus?",
+    choices: ["Big toe points laterally", "Big toe points medially", "Flat foot", "Claw toes"],
+    correctAnswer: 0
+  },
+  {
+    id: 841,
+    question: "What is the most common meniscal tear?",
+    choices: ["Radial", "Bucket handle", "Oblique", "Horizontal"],
+    correctAnswer: 2
+  },
+  {
+    id: 842,
+    question: "What instrument inflates the knee during arthroscopy?",
+    choices: ["Hibbs retractor", "Rasp", "Ringer's lactate", "Townley caliper"],
+    correctAnswer: 2
+  },
+  {
+    id: 843,
+    question: "Which ligament keeps the tibia from sliding too far back?",
+    choices: ["ACL", "PCL", "MCL", "LCL"],
+    correctAnswer: 1
+  },
+  {
+    id: 844,
+    question: "What is genu varum?",
+    choices: ["Knock-kneed", "Bow-legged", "Flat-footed", "Clubfoot"],
+    correctAnswer: 1
+  },
+  {
+    id: 845,
+    question: "What is osteomyelitis?",
+    choices: ["Cartilage tumor", "Bone infection", "Bone fracture", "Bone cancer"],
+    correctAnswer: 1
+  },
+  {
+    id: 846,
+    question: "What type of fracture is caused by a disease weakening bone?",
+    choices: ["Stellate", "Pathologic", "Impacted", "Avulsion"],
+    correctAnswer: 1
+  },
+  {
+    id: 847,
+    question: "What is a ganglion cyst?",
+    choices: ["Bone tumor", "Joint dislocation", "Fluid-filled sac", "Fracture of the foot"],
+    correctAnswer: 2
+  },
+  {
+    id: 848,
+    question: "What is used to create a bloodless field in hand surgery?",
+    choices: ["Webril", "Esmarch", "PMMA", "Bone wax"],
+    correctAnswer: 1
+  },
+  {
+    id: 849,
+    question: "What is PMMA used for?",
+    choices: ["Bone graft", "Bone cement", "Joint lubricant", "Hemostatic agent"],
+    correctAnswer: 1
+  },
+  {
+    id: 850,
+    question: "What is the common autograft site for bone grafting?",
+    choices: ["Femur", "Radius", "Iliac crest", "Scapula"],
+    correctAnswer: 2
+  },
+  {
+    id: 851,
+    question: "What is the function of cartilage?",
+    choices: ["Stores calcium", "Produces blood cells", "Smooth joint surface", "Forms tendons"],
+    correctAnswer: 2
+  },
+  {
+    id: 852,
+    question: "What fracture involves both malleoli of the ankle?",
+    choices: ["Trimalleolar", "Pott's", "Colles'", "Stellate"],
+    correctAnswer: 1
+  },
+  {
+    id: 853,
+    question: "What is a common complication of radial head excision?",
+    choices: ["Loss of knee stability", "Loss of elbow rotation", "Bone infection", "Shoulder dislocation"],
+    correctAnswer: 1
+  },
+  {
+    id: 854,
+    question: "What is arthrodesis?",
+    choices: ["Joint repair", "Joint fusion", "Bone grafting", "Joint replacement"],
+    correctAnswer: 1
+  },
+  {
+    id: 855,
+    question: "What is the most common indication for total shoulder replacement?",
+    choices: ["Tumor", "Trauma", "Arthritis and pain", "Muscle tear"],
+    correctAnswer: 2
   }
 ];
