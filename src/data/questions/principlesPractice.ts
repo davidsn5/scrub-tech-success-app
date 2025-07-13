@@ -7,12 +7,6 @@ export interface Question {
 
 export const principlesPracticeQuestions: Question[] = [
   {
-    id: 1,
-    question: "What is the primary purpose of surgical asepsis?",
-    choices: ["To reduce costs", "To prevent infection", "To speed up surgery", "To improve visibility"],
-    correctAnswer: 1
-  },
-  {
     id: 2,
     question: "Which of the following is NOT a principle of sterile technique?",
     choices: ["Sterile items touch only sterile items", "Sterile persons touch only sterile items", "Non-sterile persons touch only non-sterile items", "All items can be touched by anyone"],
@@ -893,12 +887,6 @@ export const principlesPracticeQuestions: Question[] = [
     question: "Blood type is determined by:",
     choices: ["Antigens on red blood cells", "Antibodies in plasma", "White blood cell count", "Platelet count"],
     correctAnswer: 0
-  },
-  {
-    id: 149,
-    question: "The universal donor blood type is:",
-    choices: ["A", "B", "AB", "O"],
-    correctAnswer: 3
   },
   {
     id: 150,
@@ -1909,12 +1897,6 @@ export const principlesPracticeQuestions: Question[] = [
     correctAnswer: 1
   },
   {
-    id: 318,
-    question: "Flash sterilization should be used:",
-    choices: ["Routinely", "For convenience", "In emergencies only", "To save time"],
-    correctAnswer: 2
-  },
-  {
     id: 319,
     question: "Ethylene oxide is used for:",
     choices: ["All instruments", "Heat-sensitive items", "Routine sterilization", "Emergency sterilization"],
@@ -1942,18 +1924,6 @@ export const principlesPracticeQuestions: Question[] = [
     id: 323,
     question: "Instrument cleaning should occur:",
     choices: ["At end of day", "Between cases", "Immediately after use", "When convenient"],
-    correctAnswer: 2
-  },
-  {
-    id: 324,
-    question: "The first step in instrument processing is:",
-    choices: ["Disinfection", "Sterilization", "Cleaning", "Packaging"],
-    correctAnswer: 2
-  },
-  {
-    id: 325,
-    question: "Ultrasonic cleaners use:",
-    choices: ["Heat", "Chemicals", "Sound waves", "Pressure"],
     correctAnswer: 2
   },
   {
@@ -2014,24 +1984,6 @@ export const principlesPracticeQuestions: Question[] = [
     id: 335,
     question: "Quality assurance includes:",
     choices: ["Monitoring only", "Documentation only", "Training only", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 336,
-    question: "The most important infection control measure is:",
-    choices: ["Sterilization", "Hand hygiene", "Isolation", "Antibiotics"],
-    correctAnswer: 1
-  },
-  {
-    id: 337,
-    question: "Standard precautions apply to:",
-    choices: ["Blood only", "Body fluids only", "All patients", "Infected patients only"],
-    correctAnswer: 2
-  },
-  {
-    id: 338,
-    question: "Personal protective equipment includes:",
-    choices: ["Gloves only", "Gowns only", "Masks only", "All of the above"],
     correctAnswer: 3
   },
   {
@@ -2137,12 +2089,6 @@ export const principlesPracticeQuestions: Question[] = [
     correctAnswer: 0
   },
   {
-    id: 356,
-    question: "For C. difficile, hand hygiene requires:",
-    choices: ["Alcohol-based rub", "Soap and water", "Either method", "No special requirements"],
-    correctAnswer: 1
-  },
-  {
     id: 357,
     question: "Contact precautions require:",
     choices: ["Private room", "Gloves and gown", "Dedicated equipment", "All of the above"],
@@ -2225,12 +2171,6 @@ export const principlesPracticeQuestions: Question[] = [
     question: "Work practice controls include:",
     choices: ["Safety devices", "Proper techniques", "Personal protective equipment", "Training programs"],
     correctAnswer: 1
-  },
-  {
-    id: 371,
-    question: "PPE must be:",
-    choices: ["Provided by employer", "Maintained by employer", "Replaced when necessary", "All of the above"],
-    correctAnswer: 3
   },
   {
     id: 372,

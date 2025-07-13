@@ -7,51 +7,15 @@ export interface Question {
 
 export const surgicalProceduresQuestions: Question[] = [
   {
-    id: 1,
-    question: "What is the primary purpose of surgical asepsis?",
-    choices: ["To reduce infection", "To eliminate all microorganisms", "To sterilize instruments", "To clean the operating room"],
-    correctAnswer: 1
-  },
-  {
-    id: 2,
-    question: "Which of the following is NOT a principle of sterile technique?",
-    choices: ["Sterile items touch only sterile items", "Sterile persons remain in sterile areas", "Sterile items are kept dry", "Sterile items can touch clean items"],
-    correctAnswer: 3
-  },
-  {
-    id: 3,
-    question: "The sterile field should be established:",
-    choices: ["Before the patient enters", "After the patient is positioned", "Just before the incision", "As close to surgery time as possible"],
-    correctAnswer: 3
-  },
-  {
     id: 4,
     question: "When opening a sterile package, which edge is considered contaminated?",
     choices: ["The inner edge", "The outer edge", "The folded edge", "All edges are sterile"],
     correctAnswer: 1
   },
   {
-    id: 5,
-    question: "The minimum temperature for steam sterilization is:",
-    choices: ["250°F (121°C)", "270°F (132°C)", "300°F (149°C)", "212°F (100°C)"],
-    correctAnswer: 0
-  },
-  {
     id: 6,
     question: "Which sterilization method uses ethylene oxide gas?",
     choices: ["Steam sterilization", "Dry heat sterilization", "Chemical sterilization", "Gas sterilization"],
-    correctAnswer: 3
-  },
-  {
-    id: 7,
-    question: "The Spaulding classification system categorizes medical devices based on:",
-    choices: ["Size", "Material", "Risk of infection", "Cost"],
-    correctAnswer: 2
-  },
-  {
-    id: 8,
-    question: "Critical items in the Spaulding classification require:",
-    choices: ["High-level disinfection", "Intermediate-level disinfection", "Low-level disinfection", "Sterilization"],
     correctAnswer: 3
   },
   {
@@ -71,12 +35,6 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "The most resistant microorganism used in biological indicators is:",
     choices: ["Staphylococcus aureus", "Escherichia coli", "Geobacillus stearothermophilus", "Pseudomonas aeruginosa"],
     correctAnswer: 2
-  },
-  {
-    id: 12,
-    question: "Flash sterilization should be used:",
-    choices: ["Routinely for all instruments", "Only in emergency situations", "For all implants", "For wrapped items only"],
-    correctAnswer: 1
   },
   {
     id: 13,
@@ -103,18 +61,6 @@ export const surgicalProceduresQuestions: Question[] = [
     correctAnswer: 1
   },
   {
-    id: 17,
-    question: "The shelf life of a sterile package depends on:",
-    choices: ["Sterilization method only", "Storage conditions only", "Packaging material only", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    id: 18,
-    question: "Event-related sterility means:",
-    choices: ["Items expire on a specific date", "Sterility is maintained until package is compromised", "Items must be used within 24 hours", "Sterility lasts exactly 30 days"],
-    correctAnswer: 1
-  },
-  {
     id: 19,
     question: "Which of the following compromises sterility?",
     choices: ["Moisture", "Tears in packaging", "Dropping on floor", "All of the above"],
@@ -130,24 +76,6 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 21,
     question: "Sterile items should be stored:",
     choices: ["On the floor", "Against walls", "8-10 inches from ceiling", "In direct sunlight"],
-    correctAnswer: 2
-  },
-  {
-    id: 22,
-    question: "The first step in instrument processing is:",
-    choices: ["Sterilization", "Cleaning", "Disinfection", "Packaging"],
-    correctAnswer: 1
-  },
-  {
-    id: 23,
-    question: "Enzymatic cleaners are used to:",
-    choices: ["Sterilize instruments", "Remove protein debris", "Disinfect surfaces", "Lubricate hinges"],
-    correctAnswer: 1
-  },
-  {
-    id: 24,
-    question: "Ultrasonic cleaners use:",
-    choices: ["Heat only", "Chemicals only", "Sound waves", "Steam"],
     correctAnswer: 2
   },
   {
@@ -695,12 +623,6 @@ export const surgicalProceduresQuestions: Question[] = [
     question: "Shoe covers are:",
     choices: ["Always required", "Never required", "Required in some areas", "Optional"],
     correctAnswer: 2
-  },
-  {
-    id: 116,
-    question: "The sterile field includes:",
-    choices: ["Draped patient", "Instrument tables", "Scrubbed personnel", "All of the above"],
-    correctAnswer: 3
   },
   {
     id: 117,

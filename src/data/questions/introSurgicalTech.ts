@@ -405,17 +405,6 @@ export const introSurgicalTechQuestions: Question[] = [
     correctAnswer: 3
   },
   {
-    id: 37,
-    question: "How many people are recommended to transfer an immobile patient?",
-    choices: [
-      "One",
-      "Two",
-      "Four",
-      "Six"
-    ],
-    correctAnswer: 2
-  },
-  {
     id: 38,
     question: "When administering a drug, the STSR should:",
     choices: [
@@ -614,28 +603,6 @@ export const introSurgicalTechQuestions: Question[] = [
     correctAnswer: 1
   },
   {
-    id: 56,
-    question: "Bradycardia refers to a heart rate of:",
-    choices: [
-      "Less than 60 bpm",
-      "More than 100 bpm",
-      "60–80 bpm",
-      "120–140 bpm"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 57,
-    question: "Which respiration pattern involves cessation of breathing?",
-    choices: [
-      "Tachypnea",
-      "Apnea",
-      "Bradypnea",
-      "Cheyne-Stokes"
-    ],
-    correctAnswer: 1
-  },
-  {
     id: 58,
     question: "What is the top number of a blood pressure reading called?",
     choices: [
@@ -733,17 +700,6 @@ export const introSurgicalTechQuestions: Question[] = [
       "Fowler's"
     ],
     correctAnswer: 2
-  },
-  {
-    id: 67,
-    question: "What is the universal blood donor type?",
-    choices: [
-      "O positive",
-      "O negative",
-      "AB positive",
-      "AB negative"
-    ],
-    correctAnswer: 1
   },
   {
     id: 68,
@@ -953,17 +909,6 @@ export const introSurgicalTechQuestions: Question[] = [
       "6 inches"
     ],
     correctAnswer: 1
-  },
-  {
-    id: 87,
-    question: "How many people are recommended to transfer an immobile patient?",
-    choices: [
-      "One",
-      "Two",
-      "Four",
-      "Six"
-    ],
-    correctAnswer: 2
   },
   {
     id: 88,
