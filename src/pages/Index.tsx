@@ -145,9 +145,6 @@ const Index = () => {
                       <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
-                    <div className="flex items-center justify-between mb-3 sm:mb-4">
-                      <span className="text-xs sm:text-sm text-gray-500">{section.questionCount} Questions Available</span>
-                    </div>
                     <Link to={section.link} className="mt-auto">
                       <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}>
                         Start Studying
