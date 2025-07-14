@@ -40,14 +40,14 @@ const FireQuiz = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-white/95 via-red-50/90 to-orange-50/85 shadow-sm border-b border-red-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/">
-                <Button variant="outline" size="sm" className="flex items-center space-x-2 border-red-200/60 hover:bg-red-50/80">
-                  <ArrowLeft className="h-4 w-4" />
-                  <span>Back to Home</span>
-                </Button>
-              </Link>
+          <div className="space-y-4">
+            <Link to="/">
+              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-red-200/60 hover:bg-red-50/80">
+                <ArrowLeft className="h-4 w-4" />
+                <span>Back to Home</span>
+              </Button>
+            </Link>
+            <div className="flex items-center justify-center">
               <div className="flex items-center space-x-3">
                 <div className="bg-gradient-to-br from-red-500/90 to-orange-500/90 p-2 rounded-lg shadow-lg">
                   <Zap className="h-6 w-6 text-white" />

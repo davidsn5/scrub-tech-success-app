@@ -51,14 +51,14 @@ const StudyCategory = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-white via-slate-50 to-blue-50 shadow-sm border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/">
-                <Button variant="outline" size="sm" className="flex items-center space-x-2">
-                  <ArrowLeft className="h-4 w-4" />
-                  <span>Back to Home</span>
-                </Button>
-              </Link>
+          <div className="space-y-4">
+            <Link to="/">
+              <Button variant="outline" size="sm" className="flex items-center space-x-2">
+                <ArrowLeft className="h-4 w-4" />
+                <span>Back to Home</span>
+              </Button>
+            </Link>
+            <div className="flex items-center justify-center">
               <div className="flex items-center space-x-3">
                 <div className="bg-gradient-to-br from-slate-500 to-blue-500 p-2 rounded-lg shadow-lg">
                   <BookOpen className="h-6 w-6 text-white" />
