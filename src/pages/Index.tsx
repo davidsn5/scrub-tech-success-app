@@ -99,7 +99,7 @@ const Index = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
-          <div className="grid grid-cols-3 items-center">
+          <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
                 <img 
@@ -108,14 +108,14 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              <div>
+                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
+                  Surgical Technologist Question Prep
+                </h1>
+                <p className="text-xs sm:text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
+              </div>
             </div>
-            <div className="text-center">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
-                Surgical Technologist Question Prep
-              </h1>
-              <p className="text-xs sm:text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
-            </div>
-            <div className="flex items-center justify-end space-x-4">
+            <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <User className="h-4 w-4" />
                 <span className="hidden sm:inline">{user.email}</span>
