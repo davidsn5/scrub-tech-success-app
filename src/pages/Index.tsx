@@ -110,7 +110,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
-                  Surgical Technologist Review
+                  Surgical Technologist Question Prep
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
               </div>
