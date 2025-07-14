@@ -88,9 +88,9 @@ const Index = () => {
             Your Progress
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-green-50/80 to-emerald-100/70 backdrop-blur-sm border-green-200/50 shadow-lg">
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-slate-50/80 to-blue-100/70 backdrop-blur-sm border-slate-200/50 shadow-lg">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-green-600/90 flex-shrink-0" />
+                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600/90 flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-lg sm:text-2xl font-bold text-gray-900">{accuracy}%</p>
                   <p className="text-xs sm:text-sm text-gray-600">Accuracy Rate</p>
