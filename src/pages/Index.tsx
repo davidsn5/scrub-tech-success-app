@@ -97,9 +97,9 @@ const Index = () => {
                 </div>
               </div>
             </Card>
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-rose-50/80 to-rose-100/70 backdrop-blur-sm border-rose-200/50 shadow-lg">
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-violet-50/80 to-violet-100/70 backdrop-blur-sm border-violet-200/50 shadow-lg">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-rose-600/90 flex-shrink-0" />
+                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-violet-600/90 flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-lg sm:text-2xl font-bold text-gray-900">{totalQuestions}</p>
                   <p className="text-xs sm:text-sm text-gray-600">Questions Completed</p>
