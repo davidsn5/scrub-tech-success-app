@@ -2493,5 +2493,150 @@ export const introSurgicalTechQuestions: Question[] = [
       "Reflects the beam"
     ],
     correctAnswer: 1
+  },
+  // Moved from surgical procedures - foundational concepts
+  {
+    id: 500,
+    question: "Which wrap material allows steam penetration?",
+    choices: ["Plastic", "Aluminum foil", "Muslin", "Rubber"],
+    correctAnswer: 2
+  },
+  {
+    id: 501,
+    question: "Double wrapping provides:",
+    choices: ["Better steam penetration", "Extended shelf life", "Faster sterilization", "Lower cost"],
+    correctAnswer: 1
+  },
+  {
+    id: 502,
+    question: "Which of the following compromises sterility?",
+    choices: ["Moisture", "Tears in packaging", "Dropping on floor", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 503,
+    question: "The purpose of instrument lubrication is to:",
+    choices: ["Prevent corrosion", "Maintain function", "Extend life", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 504,
+    question: "Instruments should be inspected for:",
+    choices: ["Cleanliness", "Function", "Damage", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    id: 505,
+    question: "Which instrument finish is most resistant to corrosion?",
+    choices: ["Bright finish", "Satin finish", "Ebony finish", "Passivated finish"],
+    correctAnswer: 3
+  },
+  {
+    id: 506,
+    question: "Stainless steel instruments are made primarily of:",
+    choices: ["Iron and carbon", "Iron and chromium", "Aluminum and steel", "Titanium and steel"],
+    correctAnswer: 1
+  },
+  {
+    id: 507,
+    question: "The minimum chromium content in surgical stainless steel is:",
+    choices: ["8%", "12%", "16%", "20%"],
+    correctAnswer: 1
+  },
+  {
+    id: 508,
+    question: "Titanium instruments are preferred for:",
+    choices: ["General surgery", "Microsurgery", "Orthopedic surgery", "All surgeries"],
+    correctAnswer: 1
+  },
+  {
+    id: 509,
+    question: "Which suture material is absorbable?",
+    choices: ["Silk", "Nylon", "Vicryl", "Prolene"],
+    correctAnswer: 2
+  },
+  {
+    id: 510,
+    question: "Catgut sutures are made from:",
+    choices: ["Cat intestines", "Sheep intestines", "Synthetic materials", "Plant fibers"],
+    correctAnswer: 1
+  },
+  {
+    id: 511,
+    question: "The strongest suture material is:",
+    choices: ["Silk", "Steel", "Nylon", "Prolene"],
+    correctAnswer: 1
+  },
+  {
+    id: 512,
+    question: "Monofilament sutures have:",
+    choices: ["Multiple strands", "Single strand", "Braided construction", "Twisted fibers"],
+    correctAnswer: 1
+  },
+  {
+    id: 513,
+    question: "Which suture causes the least tissue reaction?",
+    choices: ["Silk", "Catgut", "Prolene", "Cotton"],
+    correctAnswer: 2
+  },
+  {
+    id: 514,
+    question: "The USP suture size 2-0 is:",
+    choices: ["Larger than 0", "Smaller than 0", "Same as 0", "Twice the size of 0"],
+    correctAnswer: 1
+  },
+  {
+    id: 515,
+    question: "Which needle point is used for delicate tissues?",
+    choices: ["Cutting", "Reverse cutting", "Taper", "Blunt"],
+    correctAnswer: 2
+  },
+  {
+    id: 516,
+    question: "Cutting needles are used for:",
+    choices: ["Soft tissues", "Tough tissues", "Vessels", "Nerves"],
+    correctAnswer: 1
+  },
+  {
+    id: 517,
+    question: "The swaged needle is:",
+    choices: ["Reusable", "Attached to suture", "Separate from suture", "Disposable only"],
+    correctAnswer: 1
+  },
+  {
+    id: 518,
+    question: "Hemostats are used to:",
+    choices: ["Cut tissue", "Grasp tissue", "Control bleeding", "Suture tissue"],
+    correctAnswer: 2
+  },
+  {
+    id: 519,
+    question: "Kelly forceps have:",
+    choices: ["Straight jaws", "Curved jaws", "Serrated jaws", "Smooth jaws"],
+    correctAnswer: 1
+  },
+  {
+    id: 520,
+    question: "Mosquito forceps are:",
+    choices: ["Large hemostats", "Small hemostats", "Tissue forceps", "Needle holders"],
+    correctAnswer: 1
+  },
+  {
+    id: 521,
+    question: "Allis forceps are used to:",
+    choices: ["Control bleeding", "Grasp delicate tissue", "Grasp tough tissue", "Hold needles"],
+    correctAnswer: 2
+  },
+  {
+    id: 522,
+    question: "Babcock forceps are designed for:",
+    choices: ["Tough tissue", "Delicate tissue", "Bone", "Metal"],
+    correctAnswer: 1
+  },
+  {
+    id: 523,
+    question: "Russian forceps have:",
+    choices: ["Smooth tips", "Serrated tips", "Teeth", "Hooks"],
+    correctAnswer: 2
   }
 ];
