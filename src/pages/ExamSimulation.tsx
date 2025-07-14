@@ -40,14 +40,14 @@ const ExamSimulation = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-white/95 via-blue-50/90 to-indigo-50/85 shadow-sm border-b border-blue-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/">
-                <Button variant="outline" size="sm" className="flex items-center space-x-2 border-blue-200/60 hover:bg-blue-50/80">
-                  <ArrowLeft className="h-4 w-4" />
-                  <span>Back to Home</span>
-                </Button>
-              </Link>
+          <div className="space-y-4">
+            <Link to="/">
+              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-blue-200/60 hover:bg-blue-50/80">
+                <ArrowLeft className="h-4 w-4" />
+                <span>Back to Home</span>
+              </Button>
+            </Link>
+            <div className="flex items-center justify-center">
               <div className="flex items-center space-x-3">
                 <div className="bg-gradient-to-br from-blue-500/90 to-indigo-500/90 p-2 rounded-lg shadow-lg">
                   <Award className="h-6 w-6 text-white" />
@@ -80,7 +80,7 @@ const ExamSimulation = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                 <div className="flex flex-col items-center space-y-2">
                   <Clock className="h-8 w-8 text-blue-500/80" />
-                  <h3 className="font-semibold text-gray-900">Timed Practice</h3>
+                  <h3 className="font-semibold text-gray-900">Self-Paced</h3>
                   <p className="text-sm text-gray-600">Self-paced learning</p>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
