@@ -215,10 +215,6 @@ const Index = () => {
                 <span>150 Questions</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Target className="h-3 w-3 sm:h-4 sm:w-4" />
-                <span>Timed Practice</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <Award className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span>Detailed Results</span>
               </div>
