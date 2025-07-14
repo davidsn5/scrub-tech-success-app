@@ -88,18 +88,18 @@ const Index = () => {
             Your Progress
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-blue-100/70 backdrop-blur-sm border-blue-200/50 shadow-lg">
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-orange-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600/90 flex-shrink-0" />
+                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-orange-600/90 flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-lg sm:text-2xl font-bold text-gray-900">{accuracy}%</p>
                   <p className="text-xs sm:text-sm text-gray-600">Accuracy Rate</p>
                 </div>
               </div>
             </Card>
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-blue-100/70 backdrop-blur-sm border-blue-200/50 shadow-lg">
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-teal-50/80 to-teal-100/70 backdrop-blur-sm border-teal-200/50 shadow-lg">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600/90 flex-shrink-0" />
+                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-teal-600/90 flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-lg sm:text-2xl font-bold text-gray-900">{totalQuestions}</p>
                   <p className="text-xs sm:text-sm text-gray-600">Questions Completed</p>
@@ -115,9 +115,9 @@ const Index = () => {
                 </div>
               </div>
             </Card>
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-blue-100/70 backdrop-blur-sm border-blue-200/50 shadow-lg">
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600/90 flex-shrink-0" />
+                <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600/90 flex-shrink-0" />
                 <div className="min-w-0">
                   <p className="text-lg sm:text-2xl font-bold text-gray-900">{missedQuestions}</p>
                   <p className="text-xs sm:text-sm text-gray-600">Missed Questions</p>
