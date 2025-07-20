@@ -34,7 +34,7 @@ const MissedQuestions = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <Card className="bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-xl p-8">
+        <Card className="bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-xl p-8">
           <div className="text-center space-y-6">
             <div className="flex justify-center">
               <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/90 to-cyan-600/90">
@@ -42,7 +42,7 @@ const MissedQuestions = () => {
               </div>
             </div>
             <h2 className="text-3xl font-bold text-gray-900">Missed Questions Review</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto text-center">
               Review questions you've answered incorrectly and strengthen your weak areas. 
               This focused approach helps improve your overall performance.
             </p>
@@ -58,7 +58,7 @@ const MissedQuestions = () => {
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-gray-600">Missed questions will appear here once you start taking quizzes and exams.</p>
+              <p className="text-gray-600 text-center">Missed questions will appear here once you start taking quizzes and exams.</p>
               <div className="flex justify-center">
                 <Link to="/">
                   <Button className="bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white">
