@@ -84,6 +84,7 @@ const StudyCategory = () => {
               <QuestionPractice 
                 questions={surgicalProceduresQuestions}
                 categoryName="Surgical Procedures"
+                progressBarColor="bg-teal-500"
               />
             </div>
           ) : (
