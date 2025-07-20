@@ -59,11 +59,13 @@ const MissedQuestions = () => {
 
             <div className="text-center space-y-4">
               <p className="text-gray-600">Missed questions will appear here once you start taking quizzes and exams.</p>
-              <Link to="/">
-                <Button className="bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white">
-                  Start Studying to Build Your Review Bank
-                </Button>
-              </Link>
+              <div className="flex justify-center">
+                <Link to="/">
+                  <Button className="bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white">
+                    Start Studying to Build Your Review Bank
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </Card>
