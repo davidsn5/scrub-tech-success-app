@@ -50,7 +50,7 @@ const MissedQuestions = () => {
             <div className="bg-purple-50/60 rounded-lg p-6 my-8">
               <div className="flex items-center justify-center space-x-4">
                 <Target className="h-8 w-8 text-purple-600/80" />
-                <div className="text-left">
+                <div className="text-center">
                   <h3 className="font-semibold text-gray-900">12 Questions to Review</h3>
                   <p className="text-sm text-gray-600">From your recent study sessions</p>
                 </div>
