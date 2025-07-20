@@ -55,6 +55,7 @@ const PrinciplesPractice = () => {
           categoryName="Principles and Practice of Surgical Technology"
           onMissedQuestion={handleMissedQuestion}
           themeColor="from-teal-500/90 to-teal-600/90"
+          progressBarColor="bg-teal-600"
         />
       </div>
     </div>

@@ -10,13 +10,15 @@ interface QuestionPracticeProps {
   categoryName: string;
   onMissedQuestion?: (question: Question) => void;
   themeColor?: string;
+  progressBarColor?: string;
 }
 
 const QuestionPractice: React.FC<QuestionPracticeProps> = ({ 
   questions, 
   categoryName, 
   onMissedQuestion,
-  themeColor = "from-orange-500/90 to-teal-500/90"
+  themeColor = "from-orange-500/90 to-teal-500/90",
+  progressBarColor = "bg-orange-500"
 }) => {
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -150,7 +152,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
       {/* Progress Bar */}
       <div className="bg-gray-200/60 rounded-full h-2">
         <div 
-          className="bg-orange-500 h-2 rounded-full transition-all duration-300"
+          className={`${progressBarColor} h-2 rounded-full transition-all duration-300`}
           style={{ width: `${((currentQuestionIndex + 1) / shuffledQuestions.length) * 100}%` }}
         />
       </div>
