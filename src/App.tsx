@@ -12,6 +12,7 @@ import MedicalTerminology from "./pages/MedicalTerminology";
 import FireQuiz from "./pages/FireQuiz";
 import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/fire-quiz" element={<FireQuiz />} />
           <Route path="/missed-questions" element={<MissedQuestions />} />
           <Route path="/exam-simulation" element={<ExamSimulation />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
