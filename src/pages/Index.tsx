@@ -227,6 +227,16 @@ const Index = () => {
             </Link>
           </div>
         </Card>
+        
+        {/* Footer */}
+        <div className="text-center mt-8 pt-6 border-t border-gray-200/50">
+          <Link 
+            to="/privacy-policy" 
+            className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+          >
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </div>
   );
