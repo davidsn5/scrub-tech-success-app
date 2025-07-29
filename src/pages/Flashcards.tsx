@@ -83,7 +83,7 @@ const Flashcards = () => {
                 <span>Back to Categories</span>
               </Button>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
+                <h1 className={`text-xl sm:text-2xl font-bold ${category?.color?.includes('blue') ? 'text-blue-700' : category?.color?.includes('purple') ? 'text-purple-700' : category?.color?.includes('orange') ? 'text-orange-700' : category?.color?.includes('teal') ? 'text-teal-700' : category?.color?.includes('green') ? 'text-green-700' : category?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-900'}`}>
                   {category?.title} Flashcards
                 </h1>
                 <p className="text-sm text-gray-600">{category?.description}</p>
