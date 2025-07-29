@@ -82,29 +82,31 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-4">
-          <h2 className={`text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-800'}`}>Flashcards</h2>
-          <div className={`${categoryColors?.bgColor || 'bg-blue-100'} ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-blue-800'} px-3 py-1 rounded-full text-sm font-medium`}>
-            {currentIndex + 1} of {currentFlashcards.length}
-          </div>
-          <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-1">
-            <CheckCircle className="h-3 w-3" />
-            <span>{reviewedCards.size} reviewed</span>
-          </div>
-          {shuffledCards.length > 0 && (
-            <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-              Shuffled
+    <div className="max-w-4xl mx-auto px-3 sm:px-4">
+      <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-2">
+        <div className="flex items-center flex-wrap gap-2 sm:gap-4 min-w-0">
+          <h2 className={`text-lg sm:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-800'} shrink-0`}>Flashcards</h2>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className={`${categoryColors?.bgColor || 'bg-blue-100'} ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-blue-800'} px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium`}>
+              {currentIndex + 1} of {currentFlashcards.length}
             </div>
-          )}
+            <div className="bg-green-100 text-green-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center space-x-1">
+              <CheckCircle className="h-3 w-3" />
+              <span>{reviewedCards.size} reviewed</span>
+            </div>
+            {shuffledCards.length > 0 && (
+              <div className="bg-purple-100 text-purple-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+                Shuffled
+              </div>
+            )}
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <Button onClick={handleShuffle} variant="outline" size="sm" className="flex items-center space-x-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          <Button onClick={handleShuffle} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
             <Shuffle className="h-4 w-4" />
             <span>Shuffle</span>
           </Button>
-          <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-2">
+          <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
             <RotateCcw className="h-4 w-4" />
             <span>Reset</span>
           </Button>
@@ -112,10 +114,10 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       </div>
 
       {/* Progress Bar */}
-      <div className="mb-6">
+      <div className="mb-4 sm:mb-6">
         <div className="flex items-center justify-between mb-2">
-          <span className={`text-sm font-medium ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-700'}`}>Study Progress</span>
-          <span className="text-sm text-gray-500">
+          <span className={`text-xs sm:text-sm font-medium ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-700'}`}>Study Progress</span>
+          <span className="text-xs sm:text-sm text-gray-500">
             {Math.round((reviewedCards.size / currentFlashcards.length) * 100)}% complete
           </span>
         </div>
@@ -135,38 +137,38 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
         />
       </div>
 
-      <div className="mb-8">
-        <Card className={`w-full h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg`}>
-          <CardContent className="h-full flex flex-col justify-center items-center p-8">
+      <div className="mb-6 sm:mb-8">
+        <Card className={`w-full h-80 sm:h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg`}>
+          <CardContent className="h-full flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
             <div className="text-center w-full">
               <div className="flex items-center justify-center mb-4">
                 <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
                 <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
               </div>
-              <h3 className={`text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-6 leading-relaxed`}>
+              <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-4 sm:mb-6 leading-relaxed text-center`}>
                 {currentCard.question}
               </h3>
               
               {!showAnswer ? (
                 <Button 
                   onClick={handleRevealAnswer}
-                  className={`bg-gradient-to-r ${categoryColors?.color || 'from-blue-500/80 to-blue-600/80'} hover:opacity-90 text-white px-6 py-3`}
+                  className={`bg-gradient-to-r ${categoryColors?.color || 'from-blue-500/80 to-blue-600/80'} hover:opacity-90 text-white px-4 sm:px-6 py-3 min-h-[44px] text-sm sm:text-base`}
                 >
                   Show Answer
                 </Button>
               ) : (
-                <div className="space-y-4">
-                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+                <div className="space-y-3 sm:space-y-4 w-full">
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 sm:p-4 lg:p-6">
                     <div className="flex items-center justify-center mb-3">
                       <EyeOff className="h-5 w-5 text-green-600 mr-2" />
                       <span className="text-green-600 font-medium">Answer</span>
                     </div>
-                    <h4 className={`text-xl font-semibold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3`}>
+                    <h4 className={`text-lg sm:text-xl font-semibold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-2 sm:mb-3 text-center`}>
                       {currentCard.answer}
                     </h4>
                     {currentCard.explanation && (
-                      <div className="bg-white bg-opacity-70 rounded-lg p-4 mt-4">
-                        <p className="text-sm text-gray-700 leading-relaxed">
+                      <div className="bg-white bg-opacity-70 rounded-lg p-3 sm:p-4 mt-3 sm:mt-4">
+                        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                           <strong>Explanation:</strong> {currentCard.explanation}
                         </p>
                       </div>
@@ -175,7 +177,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                   <Button 
                     onClick={handleRevealAnswer}
                     variant="outline"
-                    className="px-6 py-2"
+                    className="px-4 sm:px-6 py-2 min-h-[44px] text-sm sm:text-base"
                   >
                     Hide Answer
                   </Button>
@@ -186,19 +188,20 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
         </Card>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-3">
         <Button 
           onClick={handlePrevious} 
           variant="outline" 
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] px-3 sm:px-4 text-sm sm:text-base"
           disabled={currentFlashcards.length <= 1}
         >
           <ChevronLeft className="h-4 w-4" />
-          <span>Previous</span>
+          <span className="hidden xs:inline">Previous</span>
+          <span className="xs:hidden">Prev</span>
         </Button>
 
-        <div className="text-center">
-          <span className="text-sm text-gray-500">
+        <div className="text-center px-2">
+          <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
             {currentIndex + 1} of {currentFlashcards.length}
           </span>
         </div>
@@ -206,10 +209,11 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
         <Button 
           onClick={handleNext} 
           variant="outline" 
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] px-3 sm:px-4 text-sm sm:text-base"
           disabled={currentFlashcards.length <= 1}
         >
-          <span>Next</span>
+          <span className="hidden xs:inline">Next</span>
+          <span className="xs:hidden">Next</span>
           <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
