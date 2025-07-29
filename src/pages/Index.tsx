@@ -138,7 +138,7 @@ const Index = () => {
               return (
                 <Card key={index} className={`p-4 sm:p-6 bg-gradient-to-br ${section.bgColor} backdrop-blur-sm ${section.borderColor} border shadow-lg hover:shadow-xl transition-all duration-300`}>
                   <div className="flex flex-col h-full">
-                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                    <div className="flex items-start space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                       <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-r ${section.color} flex-shrink-0`}>
                         <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                       </div>
@@ -159,16 +159,16 @@ const Index = () => {
 
         {/* Flashcards Section */}
         <div className="mb-6 sm:mb-8">
-          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-green-50/80 to-green-100/70 backdrop-blur-sm border-green-200/50 shadow-lg">
+          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg">
             <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-green-500/90 to-green-600/90 flex-shrink-0">
+              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
                 <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
             <Link to="/flashcards">
-              <Button className="w-full bg-gradient-to-r from-green-500/90 to-green-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
+              <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
                 <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Browse Flashcards
               </Button>
