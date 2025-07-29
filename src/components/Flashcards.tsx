@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff } from 'lucide-react';
+import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
 
 interface FlashcardsProps {
@@ -15,13 +15,16 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [shuffledCards, setShuffledCards] = useState<any[]>([]);
 
-  const currentFlashcards = flashcardData[category] || [];
+  const originalFlashcards = flashcardData[category] || [];
+  const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : originalFlashcards;
 
   useEffect(() => {
     setCurrentIndex(0);
     setShowAnswer(false);
     setIsFlipped(false);
+    setShuffledCards([]);
   }, [category]);
 
   if (currentFlashcards.length === 0) {
@@ -61,6 +64,15 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
     setCurrentIndex(0);
     setShowAnswer(false);
     setIsFlipped(false);
+    setShuffledCards([]);
+  };
+
+  const handleShuffle = () => {
+    const shuffled = [...originalFlashcards].sort(() => Math.random() - 0.5);
+    setShuffledCards(shuffled);
+    setCurrentIndex(0);
+    setShowAnswer(false);
+    setIsFlipped(false);
   };
 
   return (
@@ -71,11 +83,22 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
           <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
             {currentIndex + 1} of {currentFlashcards.length}
           </div>
+          {shuffledCards.length > 0 && (
+            <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+              Shuffled
+            </div>
+          )}
         </div>
-        <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-2">
-          <RotateCcw className="h-4 w-4" />
-          <span>Reset</span>
-        </Button>
+        <div className="flex items-center space-x-2">
+          <Button onClick={handleShuffle} variant="outline" size="sm" className="flex items-center space-x-2">
+            <Shuffle className="h-4 w-4" />
+            <span>Shuffle</span>
+          </Button>
+          <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-2">
+            <RotateCcw className="h-4 w-4" />
+            <span>Reset</span>
+          </Button>
+        </div>
       </div>
 
       <div className="perspective-1000 mb-8">

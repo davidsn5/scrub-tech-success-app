@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import StudyCategory from "./pages/StudyCategory";
+import Flashcards from "./pages/Flashcards";
 import IntroSurgicalTech from "./pages/IntroSurgicalTech";
 import PrinciplesPractice from "./pages/PrinciplesPractice";
 import MedicalTerminology from "./pages/MedicalTerminology";
@@ -25,6 +26,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/study/:category" element={<StudyCategory />} />
           <Route path="/intro-surgical-tech" element={<IntroSurgicalTech />} />
           <Route path="/principles-practice" element={<PrinciplesPractice />} />
