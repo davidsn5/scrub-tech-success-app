@@ -505,5 +505,157 @@ export const surgicalProcedures: FlashcardItem[] = [
     question: "Tertiary intention healing",
     answer: "Delayed primary closure",
     explanation: "Tertiary intention healing involves leaving a wound open initially, then closing it surgically after several days."
+  },
+  
+  // ===== SURGICAL PROCEDURE NAMES =====
+  {
+    question: "Laparoscopic Cholecystectomy",
+    answer: "Laparoscopic Gallbladder Removal",
+    explanation: "A minimally invasive procedure to remove the gallbladder using small incisions and a camera."
+  },
+  {
+    question: "Appendectomy",
+    answer: "Appendix Removal",
+    explanation: "Surgical removal of the appendix, often performed laparoscopically or through open surgery."
+  },
+  {
+    question: "Thyroidectomy",
+    answer: "Thyroid Gland Removal",
+    explanation: "Surgical removal of all or part of the thyroid gland, often for cancer or hyperthyroidism."
+  },
+  {
+    question: "Nephrectomy",
+    answer: "Kidney Removal",
+    explanation: "Surgical removal of a kidney, may be partial or complete depending on the condition."
+  },
+  {
+    question: "Mastectomy",
+    answer: "Breast Removal",
+    explanation: "Surgical removal of breast tissue, commonly performed for breast cancer treatment."
+  },
+  {
+    question: "Hysterectomy",
+    answer: "Uterus Removal",
+    explanation: "Surgical removal of the uterus, may include cervix and other structures depending on type."
+  },
+  {
+    question: "Craniotomy",
+    answer: "Skull Opening Surgery",
+    explanation: "Surgical procedure involving opening the skull to access the brain for treatment."
+  },
+  {
+    question: "Arthroscopy",
+    answer: "Joint Scope Surgery",
+    explanation: "Minimally invasive joint surgery using a small camera to diagnose and treat joint problems."
+  },
+  {
+    question: "Rhinoplasty",
+    answer: "Nose Job",
+    explanation: "Surgical procedure to reshape or reconstruct the nose for cosmetic or functional reasons."
+  },
+  {
+    question: "Tonsillectomy",
+    answer: "Tonsil Removal",
+    explanation: "Surgical removal of the tonsils, commonly performed for recurrent infections."
+  },
+  {
+    question: "Colectomy",
+    answer: "Colon Removal",
+    explanation: "Surgical removal of all or part of the colon, often for cancer or inflammatory bowel disease."
+  },
+  {
+    question: "Splenectomy",
+    answer: "Spleen Removal",
+    explanation: "Surgical removal of the spleen, may be performed for trauma, disease, or blood disorders."
+  },
+  {
+    question: "Pneumonectomy",
+    answer: "Lung Removal",
+    explanation: "Surgical removal of an entire lung, typically performed for lung cancer."
+  },
+  {
+    question: "Lobectomy",
+    answer: "Lobe Removal",
+    explanation: "Surgical removal of a lobe of an organ, commonly performed on lungs or liver."
+  },
+  {
+    question: "Gastrectomy",
+    answer: "Stomach Removal",
+    explanation: "Surgical removal of all or part of the stomach, often for cancer or severe ulcers."
+  },
+  {
+    question: "Prostatectomy",
+    answer: "Prostate Removal",
+    explanation: "Surgical removal of the prostate gland, commonly performed for prostate cancer."
+  },
+  {
+    question: "Laminectomy",
+    answer: "Vertebral Bone Removal",
+    explanation: "Surgical removal of the lamina portion of vertebrae to relieve spinal cord pressure."
+  },
+  {
+    question: "Septoplasty",
+    answer: "Nasal Septum Repair",
+    explanation: "Surgical procedure to straighten the nasal septum to improve breathing."
+  },
+  {
+    question: "Endarterectomy",
+    answer: "Artery Plaque Removal",
+    explanation: "Surgical removal of plaque from the inner lining of an artery to restore blood flow."
+  },
+  {
+    question: "Thoracotomy",
+    answer: "Chest Opening Surgery",
+    explanation: "Surgical incision into the chest wall to access organs within the thoracic cavity."
+  },
+  {
+    question: "Laparotomy",
+    answer: "Abdominal Opening Surgery",
+    explanation: "Surgical incision through the abdominal wall to access abdominal organs."
+  },
+  {
+    question: "Tracheostomy",
+    answer: "Neck Breathing Hole",
+    explanation: "Surgical creation of an opening in the neck to place a tube directly into the windpipe."
+  },
+  {
+    question: "Anastomosis",
+    answer: "Surgical Connection",
+    explanation: "Surgical connection of two structures, such as blood vessels or bowel segments."
+  },
+  {
+    question: "Debridement",
+    answer: "Dead Tissue Removal",
+    explanation: "Surgical removal of dead, damaged, or infected tissue to promote healing."
+  },
+  {
+    question: "Oophorectomy",
+    answer: "Ovary Removal",
+    explanation: "Surgical removal of one or both ovaries, often performed with hysterectomy."
+  },
+  {
+    question: "Salpingectomy",
+    answer: "Fallopian Tube Removal",
+    explanation: "Surgical removal of one or both fallopian tubes for various medical conditions."
+  },
+  {
+    question: "Cystectomy",
+    answer: "Bladder Removal",
+    explanation: "Surgical removal of all or part of the bladder, commonly for bladder cancer."
+  },
+  {
+    question: "Orchiectomy",
+    answer: "Testicle Removal",
+    explanation: "Surgical removal of one or both testicles for cancer or other medical conditions."
+  },
+  {
+    question: "Biopsy",
+    answer: "Tissue Sample Removal",
+    explanation: "Surgical procedure to remove a small sample of tissue for laboratory examination."
+  },
+  {
+    question: "Angioplasty",
+    answer: "Artery Balloon Opening",
+    explanation: "Procedure to open blocked arteries using a balloon catheter and often placing a stent."
   }
 ];
