@@ -59,9 +59,9 @@ const Flashcards = () => {
       title: 'Disinfection & Sterilization',
       description: 'Sterilization methods, disinfection practices, and equipment processing',
       icon: BookOpen,
-      color: 'from-red-500/80 to-red-600/80',
-      bgColor: 'from-red-50/90 to-red-100/90',
-      borderColor: 'border-red-200/60'
+      color: 'from-indigo-500/80 to-indigo-600/80',
+      bgColor: 'from-indigo-50/90 to-indigo-100/90',
+      borderColor: 'border-indigo-200/60'
     }
   ];
 
@@ -146,7 +146,7 @@ const Flashcards = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
