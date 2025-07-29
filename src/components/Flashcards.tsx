@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle, CheckCircle } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
 
 interface FlashcardsProps {
@@ -15,6 +16,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
+  const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
 
   const originalFlashcards = flashcardData[category] || [];
   const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : originalFlashcards;
@@ -23,6 +25,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
     setCurrentIndex(0);
     setShowAnswer(false);
     setShuffledCards([]);
+    setReviewedCards(new Set());
   }, [category]);
 
   if (currentFlashcards.length === 0) {
@@ -50,6 +53,9 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
 
   const handleRevealAnswer = () => {
     setShowAnswer(!showAnswer);
+    if (!showAnswer) {
+      setReviewedCards(prev => new Set([...prev, currentIndex]));
+    }
     if (onQuestionAttempt) {
       onQuestionAttempt();
     }
@@ -59,6 +65,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
     setCurrentIndex(0);
     setShowAnswer(false);
     setShuffledCards([]);
+    setReviewedCards(new Set());
   };
 
   const handleShuffle = () => {
@@ -66,6 +73,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
     setShuffledCards(shuffled);
     setCurrentIndex(0);
     setShowAnswer(false);
+    setReviewedCards(new Set());
   };
 
   return (
@@ -76,8 +84,12 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
           <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
             {currentIndex + 1} of {currentFlashcards.length}
           </div>
+          <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-1">
+            <CheckCircle className="h-3 w-3" />
+            <span>{reviewedCards.size} reviewed</span>
+          </div>
           {shuffledCards.length > 0 && (
-            <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+            <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
               Shuffled
             </div>
           )}
@@ -92,6 +104,20 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
             <span>Reset</span>
           </Button>
         </div>
+      </div>
+
+      {/* Progress Bar */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700">Study Progress</span>
+          <span className="text-sm text-gray-500">
+            {Math.round((reviewedCards.size / currentFlashcards.length) * 100)}% complete
+          </span>
+        </div>
+        <Progress 
+          value={(reviewedCards.size / currentFlashcards.length) * 100} 
+          className="h-2"
+        />
       </div>
 
       <div className="mb-8">
