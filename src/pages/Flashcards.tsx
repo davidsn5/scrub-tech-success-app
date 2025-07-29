@@ -97,6 +97,11 @@ const Flashcards = () => {
             category={selectedCategory}
             onAnswerCorrect={() => {}}
             onQuestionAttempt={() => {}}
+            categoryColors={{
+              color: category?.color || 'from-blue-500/80 to-blue-600/80',
+              bgColor: category?.bgColor || 'from-blue-50/90 to-blue-100/90',
+              borderColor: category?.borderColor || 'border-blue-200/60'
+            }}
           />
         </div>
       </div>

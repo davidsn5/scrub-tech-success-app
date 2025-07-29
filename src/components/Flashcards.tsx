@@ -10,9 +10,14 @@ interface FlashcardsProps {
   category: string;
   onAnswerCorrect?: () => void;
   onQuestionAttempt?: () => void;
+  categoryColors?: {
+    color: string;
+    bgColor: string;
+    borderColor: string;
+  };
 }
 
-const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: FlashcardsProps) => {
+const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColors }: FlashcardsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
@@ -81,7 +86,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-4">
           <h2 className="text-2xl font-bold text-gray-800">Flashcards</h2>
-          <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+          <div className={`${categoryColors?.bgColor || 'bg-blue-100'} ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-blue-800'} px-3 py-1 rounded-full text-sm font-medium`}>
             {currentIndex + 1} of {currentFlashcards.length}
           </div>
           <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-1">
@@ -121,12 +126,12 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
       </div>
 
       <div className="mb-8">
-        <Card className="w-full h-96 bg-gradient-to-br from-white via-blue-50/50 to-indigo-100/30 border-2 border-blue-200 shadow-lg">
+        <Card className={`w-full h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg`}>
           <CardContent className="h-full flex flex-col justify-center items-center p-8">
             <div className="text-center w-full">
               <div className="flex items-center justify-center mb-4">
-                <Eye className="h-6 w-6 text-blue-600 mr-2" />
-                <span className="text-blue-600 font-medium">Term</span>
+                <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
+                <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-6 leading-relaxed">
                 {currentCard.question}
@@ -135,7 +140,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
               {!showAnswer ? (
                 <Button 
                   onClick={handleRevealAnswer}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                  className={`bg-gradient-to-r ${categoryColors?.color || 'from-blue-500/80 to-blue-600/80'} hover:opacity-90 text-white px-6 py-3`}
                 >
                   Show Answer
                 </Button>
