@@ -14,7 +14,6 @@ interface FlashcardsProps {
 const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: FlashcardsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
 
   const originalFlashcards = flashcardData[category] || [];
@@ -23,7 +22,6 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
   useEffect(() => {
     setCurrentIndex(0);
     setShowAnswer(false);
-    setIsFlipped(false);
     setShuffledCards([]);
   }, [category]);
 
@@ -43,17 +41,14 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % currentFlashcards.length);
     setShowAnswer(false);
-    setIsFlipped(false);
   };
 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + currentFlashcards.length) % currentFlashcards.length);
     setShowAnswer(false);
-    setIsFlipped(false);
   };
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
+  const handleRevealAnswer = () => {
     setShowAnswer(!showAnswer);
     if (onQuestionAttempt) {
       onQuestionAttempt();
@@ -63,7 +58,6 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
   const handleReset = () => {
     setCurrentIndex(0);
     setShowAnswer(false);
-    setIsFlipped(false);
     setShuffledCards([]);
   };
 
@@ -72,7 +66,6 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
     setShuffledCards(shuffled);
     setCurrentIndex(0);
     setShowAnswer(false);
-    setIsFlipped(false);
   };
 
   return (
@@ -101,45 +94,52 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
         </div>
       </div>
 
-      <div className="perspective-1000 mb-8">
-        <Card 
-          className={`relative w-full h-96 cursor-pointer transition-transform duration-500 transform-style-preserve-3d ${
-            isFlipped ? 'rotate-y-180' : ''
-          }`}
-          onClick={handleFlip}
-        >
-          {/* Front of card (Question) */}
-          <CardContent className="absolute inset-0 w-full h-full backface-hidden flex flex-col justify-center items-center p-8 bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-blue-200">
-            <div className="text-center">
+      <div className="mb-8">
+        <Card className="w-full h-96 bg-gradient-to-br from-white via-blue-50/50 to-indigo-100/30 border-2 border-blue-200 shadow-lg">
+          <CardContent className="h-full flex flex-col justify-center items-center p-8">
+            <div className="text-center w-full">
               <div className="flex items-center justify-center mb-4">
                 <Eye className="h-6 w-6 text-blue-600 mr-2" />
-                <span className="text-blue-600 font-medium">Question</span>
+                <span className="text-blue-600 font-medium">Term</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 leading-relaxed">
                 {currentCard.question}
               </h3>
-              <p className="text-gray-600 italic">Click to reveal answer</p>
-            </div>
-          </CardContent>
-
-          {/* Back of card (Answer) */}
-          <CardContent className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 flex flex-col justify-center items-center p-8 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-200">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <EyeOff className="h-6 w-6 text-green-600 mr-2" />
-                <span className="text-green-600 font-medium">Answer</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                {currentCard.answer}
-              </h3>
-              {currentCard.explanation && (
-                <div className="bg-white bg-opacity-70 rounded-lg p-4 mt-4">
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    <strong>Explanation:</strong> {currentCard.explanation}
-                  </p>
+              
+              {!showAnswer ? (
+                <Button 
+                  onClick={handleRevealAnswer}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                >
+                  Show Answer
+                </Button>
+              ) : (
+                <div className="space-y-4">
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+                    <div className="flex items-center justify-center mb-3">
+                      <EyeOff className="h-5 w-5 text-green-600 mr-2" />
+                      <span className="text-green-600 font-medium">Answer</span>
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                      {currentCard.answer}
+                    </h4>
+                    {currentCard.explanation && (
+                      <div className="bg-white bg-opacity-70 rounded-lg p-4 mt-4">
+                        <p className="text-sm text-gray-700 leading-relaxed">
+                          <strong>Explanation:</strong> {currentCard.explanation}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                  <Button 
+                    onClick={handleRevealAnswer}
+                    variant="outline"
+                    className="px-6 py-2"
+                  >
+                    Hide Answer
+                  </Button>
                 </div>
               )}
-              <p className="text-gray-600 italic mt-4">Click to see question</p>
             </div>
           </CardContent>
         </Card>
@@ -156,22 +156,10 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
           <span>Previous</span>
         </Button>
 
-        <div className="flex space-x-2">
-          {currentFlashcards.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setCurrentIndex(index);
-                setShowAnswer(false);
-                setIsFlipped(false);
-              }}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex
-                  ? 'bg-blue-600'
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
+        <div className="text-center">
+          <span className="text-sm text-gray-500">
+            {currentIndex + 1} of {currentFlashcards.length}
+          </span>
         </div>
 
         <Button 
