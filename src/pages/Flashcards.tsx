@@ -44,6 +44,24 @@ const Flashcards = () => {
       color: 'from-blue-500/80 to-blue-600/80',
       bgColor: 'from-blue-50/90 to-blue-100/90',
       borderColor: 'border-blue-200/60'
+    },
+    {
+      id: 'surgical-procedures',
+      title: 'Surgical Procedures',
+      description: 'Surgical techniques, procedures, and operative methods',
+      icon: Shuffle,
+      color: 'from-green-500/80 to-green-600/80',
+      bgColor: 'from-green-50/90 to-green-100/90',
+      borderColor: 'border-green-200/60'
+    },
+    {
+      id: 'disinfection-sterilization',
+      title: 'Disinfection & Sterilization',
+      description: 'Sterilization methods, disinfection practices, and equipment processing',
+      icon: BookOpen,
+      color: 'from-red-500/80 to-red-600/80',
+      bgColor: 'from-red-50/90 to-red-100/90',
+      borderColor: 'border-red-200/60'
     }
   ];
 
