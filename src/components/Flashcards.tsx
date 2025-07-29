@@ -102,7 +102,9 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt }: Flashcards
                 <Eye className="h-6 w-6 text-blue-600 mr-2" />
                 <span className="text-blue-600 font-medium">Term</span>
               </div>
-              <div className="text-2xl font-bold text-gray-800 mb-6 leading-relaxed" dangerouslySetInnerHTML={{ __html: currentCard.question }} />
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 leading-relaxed">
+                {currentCard.question}
+              </h3>
               
               {!showAnswer ? (
                 <Button 
