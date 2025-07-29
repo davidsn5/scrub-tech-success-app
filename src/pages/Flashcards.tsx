@@ -19,31 +19,31 @@ const Flashcards = () => {
       borderColor: 'border-purple-200/60'
     },
     {
-      id: 'surgical-asepsis-sterility',
-      title: 'Surgical Asepsis & Sterility',
-      description: 'Sterile technique, asepsis principles, and infection control',
-      icon: BookOpen,
-      color: 'from-orange-500/80 to-orange-600/80',
-      bgColor: 'from-orange-50/90 to-orange-100/90',
-      borderColor: 'border-orange-200/60'
-    },
-    {
-      id: 'surgical-technologist-role',
-      title: 'Surgical Technologist Role',
-      description: 'Professional responsibilities and scope of practice',
-      icon: Brain,
-      color: 'from-teal-500/80 to-teal-600/80',
-      bgColor: 'from-teal-50/90 to-teal-100/90',
-      borderColor: 'border-teal-200/60'
-    },
-    {
-      id: 'instrumentation-equipment',
-      title: 'Instrumentation & Equipment',
-      description: 'Surgical instruments, equipment, and their proper use',
+      id: 'surgical-procedures',
+      title: 'Surgical Procedures',
+      description: 'Key terms and concepts from surgical procedures and techniques',
       icon: Target,
       color: 'from-blue-500/80 to-blue-600/80',
       bgColor: 'from-blue-50/90 to-blue-100/90',
       borderColor: 'border-blue-200/60'
+    },
+    {
+      id: 'disinfection-sterilization',
+      title: 'Disinfection & Sterilization',
+      description: 'Sterilization methods, disinfection levels, and decontamination',
+      icon: BookOpen,
+      color: 'from-green-500/80 to-green-600/80',
+      bgColor: 'from-green-50/90 to-green-100/90',
+      borderColor: 'border-green-200/60'
+    },
+    {
+      id: 'surgical-instrumentation',
+      title: 'Surgical Instrumentation',
+      description: 'Visual identification of surgical instruments with pictures',
+      icon: Brain,
+      color: 'from-orange-500/80 to-orange-600/80',
+      bgColor: 'from-orange-50/90 to-orange-100/90',
+      borderColor: 'border-orange-200/60'
     }
   ];
 
@@ -128,7 +128,7 @@ const Flashcards = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
