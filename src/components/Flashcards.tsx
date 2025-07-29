@@ -122,6 +122,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
         <Progress 
           value={(reviewedCards.size / currentFlashcards.length) * 100} 
           className="h-2"
+          backgroundColor="bg-white border border-gray-200"
           indicatorColor={
             categoryColors?.color?.includes('blue') ? 'bg-blue-600' : 
             categoryColors?.color?.includes('purple') ? 'bg-purple-600' :
