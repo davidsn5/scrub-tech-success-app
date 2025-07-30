@@ -2,14 +2,17 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, LogIn, User, Crown, Settings, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '@/components/AuthContext';
+import ProtectedContent from '@/components/ProtectedContent';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
+  const { user, subscription, signOut, createCheckout, openCustomerPortal } = useAuth();
 
   const sections = [
     {
@@ -76,6 +79,87 @@ const Index = () => {
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
               </div>
+            </div>
+            
+            {/* Auth Section */}
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              {user ? (
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  {/* Subscription Status */}
+                  {subscription?.status === 'admin' && (
+                    <div className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full border border-purple-300/50">
+                      <Crown className="h-3 w-3 text-purple-600" />
+                      <span className="text-xs font-medium text-purple-700">Admin</span>
+                    </div>
+                  )}
+                  {subscription?.status === 'active' && (
+                    <div className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-full border border-green-300/50">
+                      <Crown className="h-3 w-3 text-green-600" />
+                      <span className="text-xs font-medium text-green-700">Premium</span>
+                    </div>
+                  )}
+                  {subscription?.status === 'trial' && (
+                    <div className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full border border-blue-300/50">
+                      <Clock className="h-3 w-3 text-blue-600" />
+                      <span className="text-xs font-medium text-blue-700">Trial</span>
+                    </div>
+                  )}
+                  {subscription?.status === 'expired' && (
+                    <Button
+                      onClick={createCheckout}
+                      size="sm"
+                      className="bg-gradient-to-r from-orange-500/90 to-orange-600/90 hover:opacity-90 text-white text-xs px-3 py-1"
+                    >
+                      Subscribe $9.99/mo
+                    </Button>
+                  )}
+                  
+                  {/* User Menu */}
+                  <div className="flex items-center space-x-2">
+                    {subscription?.subscribed && (
+                      <Button
+                        onClick={openCustomerPortal}
+                        variant="outline"
+                        size="sm"
+                        className="text-xs px-2 py-1"
+                      >
+                        <Settings className="h-3 w-3 mr-1" />
+                        Manage
+                      </Button>
+                    )}
+                    <Button
+                      onClick={signOut}
+                      variant="outline"
+                      size="sm"
+                      className="text-xs px-2 py-1"
+                    >
+                      <User className="h-3 w-3 mr-1" />
+                      Sign Out
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex items-center space-x-2">
+                  <Link to="/auth">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-xs px-3 py-1"
+                    >
+                      <LogIn className="h-3 w-3 mr-1" />
+                      Sign In
+                    </Button>
+                  </Link>
+                  <Link to="/auth">
+                    <Button
+                      size="sm"
+                      className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 text-white text-xs px-3 py-1"
+                    >
+                      Start Free Trial
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -237,13 +321,39 @@ const Index = () => {
                 <Award className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span>Detailed Results</span>
               </div>
+              {!user && (
+                <div className="flex items-center space-x-2 text-orange-600">
+                  <Lock className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span>Subscription Required</span>
+                </div>
+              )}
             </div>
-            <Link to="/exam-simulation">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
-                <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                Start Exam Simulation
-              </Button>
-            </Link>
+            {user ? (
+              subscription?.subscribed || subscription?.status === 'admin' ? (
+                <Link to="/exam-simulation">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
+                    <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+                    Start Exam Simulation
+                  </Button>
+                </Link>
+              ) : (
+                <Button 
+                  onClick={createCheckout}
+                  size="lg" 
+                  className="bg-gradient-to-r from-orange-500/90 to-orange-600/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+                >
+                  <Crown className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+                  Subscribe to Access - $9.99/mo
+                </Button>
+              )
+            ) : (
+              <Link to="/auth">
+                <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
+                  <LogIn className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+                  Sign Up for Free Trial
+                </Button>
+              </Link>
+            )}
           </div>
         </Card>
         
