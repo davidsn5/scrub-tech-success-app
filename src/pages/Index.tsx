@@ -2,14 +2,17 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, LogOut, User, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '@/components/AuthContext';
+import ProtectedContent from '@/components/ProtectedContent';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
+  const { user, subscription, signOut, createCheckout, manageSubscription } = useAuth();
 
   const sections = [
     {
@@ -77,11 +80,86 @@ const Index = () => {
                 <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
               </div>
             </div>
+            
+            {/* Auth Section */}
+            <div className="flex items-center space-x-2">
+              {user ? (
+                <div className="flex items-center space-x-2">
+                  {/* Subscription Status */}
+                  <div className="hidden sm:flex items-center space-x-2 px-3 py-1 rounded-full bg-white/80 border border-gray-200">
+                    {subscription.subscription_tier === 'admin' ? (
+                      <Crown className="h-4 w-4 text-yellow-500" />
+                    ) : subscription.subscribed ? (
+                      <Target className="h-4 w-4 text-green-500" />
+                    ) : (
+                      <Clock className="h-4 w-4 text-orange-500" />
+                    )}
+                    <span className="text-xs font-medium text-gray-700">
+                      {subscription.subscription_tier === 'admin' 
+                        ? 'Admin' 
+                        : subscription.subscription_tier === 'trial'
+                          ? 'Free Trial'
+                          : subscription.subscribed 
+                            ? 'Premium' 
+                            : 'Trial Expired'
+                      }
+                    </span>
+                  </div>
+                  
+                  {/* User Menu */}
+                  <div className="flex items-center space-x-1">
+                    <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-white/80 border border-gray-200">
+                      <User className="h-4 w-4 text-gray-600" />
+                      <span className="text-xs font-medium text-gray-700 max-w-20 truncate">
+                        {user.email}
+                      </span>
+                    </div>
+                    
+                    {subscription.subscribed && subscription.subscription_tier !== 'admin' && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={manageSubscription}
+                        className="text-xs"
+                      >
+                        Manage
+                      </Button>
+                    )}
+                    
+                    {!subscription.subscribed && subscription.subscription_tier !== 'admin' && (
+                      <Button
+                        size="sm"
+                        onClick={createCheckout}
+                        className="text-xs bg-gradient-to-r from-green-500 to-green-600 hover:opacity-90"
+                      >
+                        Subscribe
+                      </Button>
+                    )}
+                    
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={signOut}
+                      className="text-xs"
+                    >
+                      <LogOut className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <Link to="/auth">
+                  <Button size="sm" className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90">
+                    Sign Up / Login
+                  </Button>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <ProtectedContent>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* Progress Tracker */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
@@ -256,7 +334,8 @@ const Index = () => {
             Privacy Policy
           </Link>
         </div>
-      </div>
+        </div>
+      </ProtectedContent>
     </div>
   );
 };
