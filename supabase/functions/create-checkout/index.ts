@@ -71,6 +71,7 @@ serve(async (req) => {
       subscription_data: {
         trial_period_days: 5,
       },
+      payment_method_collection: 'always',
       metadata: {
         user_id: user.id,
         user_email: user.email,
@@ -78,6 +79,17 @@ serve(async (req) => {
     });
 
     logStep("Checkout session created", { sessionId: session.id, url: session.url });
+
+    // Mark trial as started
+    const supabaseService = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+    );
+    
+    await supabaseService
+      .from('subscribers')
+      .update({ trial_started: true })
+      .eq('user_id', user.id);
 
     return new Response(JSON.stringify({ url: session.url }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },

@@ -12,7 +12,7 @@ const Index = () => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
-  const { user, subscription, signOut, createCheckout, openCustomerPortal } = useAuth();
+  const { user, subscription, signOut, createCheckout, openCustomerPortal, cancelSubscription } = useAuth();
 
   const sections = [
     {
@@ -357,6 +357,19 @@ const Index = () => {
           </div>
         </Card>
         
+        {/* Cancel Subscription Button */}
+        {user && subscription?.subscribed && (
+          <div className="mt-8 text-center">
+            <Button 
+              variant="outline" 
+              onClick={cancelSubscription}
+              className="text-red-600 border-red-600 hover:bg-red-50"
+            >
+              Cancel Subscription
+            </Button>
+          </div>
+        )}
+
         {/* Footer */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50">
           <Link 

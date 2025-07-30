@@ -20,7 +20,7 @@ const ProtectedContent: React.FC<ProtectedContentProps> = ({
   currentItems = 0,
   contentType = "content"
 }) => {
-  const { user, subscription, createCheckout } = useAuth();
+  const { user, subscription, createCheckout, sendVerificationEmail } = useAuth();
 
   // Admin users get full access
   if (user?.email === 'davidsonnf@gmail.com') {

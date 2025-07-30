@@ -22,6 +22,8 @@ interface AuthContextType {
   checkSubscription: () => Promise<void>;
   createCheckout: () => Promise<void>;
   openCustomerPortal: () => Promise<void>;
+  sendVerificationEmail: () => Promise<void>;
+  cancelSubscription: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -120,6 +122,75 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const sendVerificationEmail = async () => {
+    if (!session) {
+      toast({
+        title: "Authentication Required",
+        description: "Please log in to send verification email",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-verification', {
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+        },
+      });
+
+      if (error) throw error;
+      toast({
+        title: "Verification Email Sent",
+        description: "Please check your email to verify your account and start your trial",
+      });
+    } catch (error) {
+      console.error('Error sending verification email:', error);
+      toast({
+        title: "Error",
+        description: error.message || "Failed to send verification email",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const cancelSubscription = async () => {
+    if (!session) {
+      toast({
+        title: "Authentication Required",
+        description: "Please log in to cancel subscription",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.functions.invoke('cancel-subscription', {
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+        },
+      });
+
+      if (error) throw error;
+      toast({
+        title: "Subscription Cancelled",
+        description: "Your subscription has been cancelled successfully",
+      });
+      
+      // Refresh subscription status
+      setTimeout(() => {
+        checkSubscription();
+      }, 1000);
+    } catch (error) {
+      console.error('Error cancelling subscription:', error);
+      toast({
+        title: "Error",
+        description: error.message || "Failed to cancel subscription",
+        variant: "destructive",
+      });
+    }
+  };
+
   useEffect(() => {
     // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -188,6 +259,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     checkSubscription,
     createCheckout,
     openCustomerPortal,
+    sendVerificationEmail,
+    cancelSubscription,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -15,6 +15,7 @@ import FireQuiz from "./pages/FireQuiz";
 import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
 import Auth from "./pages/Auth";
+import VerifyEmail from "./pages/VerifyEmail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/verify-email" element={<VerifyEmail />} />
             <Route path="/flashcards" element={<Flashcards />} />
             <Route path="/study/:category" element={<StudyCategory />} />
             <Route path="/intro-surgical-tech" element={<IntroSurgicalTech />} />
