@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
-import LockedButton from '@/components/LockedButton';
-const Button = LockedButton;
+import { Button } from '@/components/ui/button';
 import { ArrowLeft, Award, Clock, Target, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import QuestionPractice from '@/components/QuestionPractice';

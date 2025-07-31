@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import LockedButton from '@/components/LockedButton';
-const Button = LockedButton;
+import { Button } from '@/components/ui/button';
 import { ArrowLeft, RotateCcw, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -21,11 +20,11 @@ const MissedQuestions = () => {
             </Link>
             <div className="flex items-center justify-center">
               <div className="flex items-center space-x-3">
-                <div className="bg-gradient-to-br from-cyan-500/90 to-cyan-600/90 p-2 rounded-lg shadow-lg">
+                <div className="bg-gradient-to-br from-purple-500/90 to-purple-600/90 p-2 rounded-lg shadow-lg">
                   <RotateCcw className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-600/90 to-cyan-700/90 bg-clip-text text-transparent">Missed Questions</h1>
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600/90 to-purple-700/90 bg-clip-text text-transparent">Missed Questions</h1>
                   <p className="text-sm text-gray-600">Review & Retry</p>
                 </div>
               </div>
@@ -35,22 +34,22 @@ const MissedQuestions = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <Card className="bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-xl p-8">
+        <Card className="bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-xl p-8">
           <div className="text-center space-y-6">
             <div className="flex justify-center">
-              <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/90 to-cyan-600/90">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/90 to-purple-600/90">
                 <RotateCcw className="h-12 w-12 text-white" />
               </div>
             </div>
             <h2 className="text-3xl font-bold text-gray-900">Missed Questions Review</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-center">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Review questions you've answered incorrectly and strengthen your weak areas. 
               This focused approach helps improve your overall performance.
             </p>
             
-            <div className="bg-cyan-50/60 rounded-lg p-6 my-8">
+            <div className="bg-purple-50/60 rounded-lg p-6 my-8">
               <div className="flex items-center justify-center space-x-4">
-                <Target className="h-8 w-8 text-cyan-600/80" />
+                <Target className="h-8 w-8 text-purple-600/80" />
                 <div className="text-center">
                   <h3 className="font-semibold text-gray-900">12 Questions to Review</h3>
                   <p className="text-sm text-gray-600">From your recent study sessions</p>
@@ -59,10 +58,10 @@ const MissedQuestions = () => {
             </div>
 
             <div className="text-center space-y-4">
-              <p className="text-gray-600 text-center">Missed questions will appear here once you start taking quizzes and exams.</p>
+              <p className="text-gray-600">Missed questions will appear here once you start taking quizzes and exams.</p>
               <div className="flex justify-center">
                 <Link to="/">
-                  <Button className="bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white">
+                  <Button className="bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white">
                     Start Studying to Build Your Review Bank
                   </Button>
                 </Link>

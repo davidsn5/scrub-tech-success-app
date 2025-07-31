@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.lovable.scrubtechsuccess',
+  appId: 'app.lovable.09d1e13cb27a4556ab42a09dea7d8ac6',
   appName: 'scrub-tech-success-app',
   webDir: 'dist',
   server: {

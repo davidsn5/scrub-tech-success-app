@@ -21,8 +21,6 @@ import { emergencySituations } from './flashcards/emergencySituations';
 import { pharmacologyAnesthesia } from './flashcards/pharmacologyAnesthesia';
 import { instrumentationEquipment } from './flashcards/instrumentationEquipment';
 import { hemostasisWoundHealing } from './flashcards/hemostasisWoundHealing';
-import { surgicalProcedures } from './flashcards/surgicalProcedures';
-import { disinfectionSterilization } from './flashcards/disinfectionSterilization';
 
 export const flashcardData: FlashcardData = {
   'medical-terminology': medicalTerminology,
@@ -36,6 +34,6 @@ export const flashcardData: FlashcardData = {
   'pharmacology-anesthesia': pharmacologyAnesthesia,
   'instrumentation-equipment': instrumentationEquipment,
   'hemostasis-wound-healing': hemostasisWoundHealing,
-  'surgical-procedures': surgicalProcedures,
-  'disinfection-sterilization': disinfectionSterilization
+  'microbiology': [],
+  'surgical-procedures': []
 };

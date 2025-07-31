@@ -1,6 +1,6 @@
 
 import React from 'react';
-import LockedButton from './LockedButton';
+import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface QuestionPaginationProps {
@@ -58,7 +58,7 @@ const QuestionPagination: React.FC<QuestionPaginationProps> = ({
 
   return (
     <div className="flex items-center justify-center space-x-2 mt-6">
-      <LockedButton
+      <Button
         variant="outline"
         size="sm"
         onClick={() => onPageChange(currentPage - 1)}
@@ -66,26 +66,26 @@ const QuestionPagination: React.FC<QuestionPaginationProps> = ({
       >
         <ChevronLeft className="h-4 w-4" />
         Previous
-      </LockedButton>
+      </Button>
       
       {getPageNumbers().map((page, index) => (
         <React.Fragment key={index}>
           {page === '...' ? (
             <span className="px-2 py-1 text-gray-500">...</span>
           ) : (
-            <LockedButton
+            <Button
               variant={currentPage === page ? "default" : "outline"}
               size="sm"
               onClick={() => onPageChange(page as number)}
               className={currentPage === page ? "bg-gradient-to-r from-orange-500/90 to-teal-500/90 text-white" : ""}
             >
               {page}
-            </LockedButton>
+            </Button>
           )}
         </React.Fragment>
       ))}
       
-      <LockedButton
+      <Button
         variant="outline"
         size="sm"
         onClick={() => onPageChange(currentPage + 1)}
@@ -93,7 +93,7 @@ const QuestionPagination: React.FC<QuestionPaginationProps> = ({
       >
         Next
         <ChevronRight className="h-4 w-4" />
-      </LockedButton>
+      </Button>
     </div>
   );
 };

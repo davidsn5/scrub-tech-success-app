@@ -1,6 +1,6 @@
 
 import React from 'react';
-import LockedButton from './LockedButton';
+import { Button } from '@/components/ui/button';
 import { 
   Stethoscope, 
   Heart, 
@@ -39,7 +39,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
         {categories.map((category) => {
           const Icon = category.icon;
           return (
-            <LockedButton
+            <Button
               key={category.id}
               variant={selectedCategory === category.id ? "default" : "outline"}
               className={`p-4 h-auto flex flex-col items-center space-y-2 transition-all duration-300 border-2 ${
@@ -63,7 +63,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
               <span className="text-xs font-medium text-center leading-tight">
                 {category.name}
               </span>
-            </LockedButton>
+            </Button>
           );
         })}
       </div>

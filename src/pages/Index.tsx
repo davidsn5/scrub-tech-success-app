@@ -1,19 +1,15 @@
 
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
-import LockedButton from '@/components/LockedButton';
-const Button = LockedButton;
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, LogIn, User, Crown, Settings, Lock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '@/components/AuthContext';
-import ProtectedContent from '@/components/ProtectedContent';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
-  const { user, subscription, signOut, createCheckout, openCustomerPortal, cancelSubscription } = useAuth();
 
   const sections = [
     {
@@ -78,89 +74,8 @@ const Index = () => {
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
                   Surgical Technologist Review
                 </h1>
-                <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
+                <p className="text-xs sm:text-sm text-gray-600">Certified Surgical Technologist Exam Prep</p>
               </div>
-            </div>
-            
-            {/* Auth Section */}
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              {user ? (
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  {/* Subscription Status */}
-                  {subscription?.status === 'admin' && (
-                    <div className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full border border-purple-300/50">
-                      <Crown className="h-3 w-3 text-purple-600" />
-                      <span className="text-xs font-medium text-purple-700">Admin</span>
-                    </div>
-                  )}
-                  {subscription?.status === 'active' && (
-                    <div className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-full border border-green-300/50">
-                      <Crown className="h-3 w-3 text-green-600" />
-                      <span className="text-xs font-medium text-green-700">Premium</span>
-                    </div>
-                  )}
-                  {subscription?.status === 'trial' && (
-                    <div className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full border border-blue-300/50">
-                      <Clock className="h-3 w-3 text-blue-600" />
-                      <span className="text-xs font-medium text-blue-700">Trial</span>
-                    </div>
-                  )}
-                  {subscription?.status === 'expired' && (
-                    <Button
-                      onClick={createCheckout}
-                      size="sm"
-                      className="bg-gradient-to-r from-orange-500/90 to-orange-600/90 hover:opacity-90 text-white text-xs px-3 py-1"
-                    >
-                      Subscribe $9.99/mo
-                    </Button>
-                  )}
-                  
-                  {/* User Menu */}
-                  <div className="flex items-center space-x-2">
-                    {subscription?.subscribed && (
-                      <Button
-                        onClick={openCustomerPortal}
-                        variant="outline"
-                        size="sm"
-                        className="text-xs px-2 py-1"
-                      >
-                        <Settings className="h-3 w-3 mr-1" />
-                        Manage
-                      </Button>
-                    )}
-                    <Button
-                      onClick={signOut}
-                      variant="outline"
-                      size="sm"
-                      className="text-xs px-2 py-1"
-                    >
-                      <User className="h-3 w-3 mr-1" />
-                      Sign Out
-                    </Button>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center space-x-2">
-                  <Link to="/auth">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="text-xs px-3 py-1"
-                    >
-                      <LogIn className="h-3 w-3 mr-1" />
-                      Sign In
-                    </Button>
-                  </Link>
-                  <Link to="/auth">
-                    <Button
-                      size="sm"
-                      className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 text-white text-xs px-3 py-1"
-                    >
-                      Start Free Trial
-                    </Button>
-                  </Link>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -223,7 +138,7 @@ const Index = () => {
               return (
                 <Card key={index} className={`p-4 sm:p-6 bg-gradient-to-br ${section.bgColor} backdrop-blur-sm ${section.borderColor} border shadow-lg hover:shadow-xl transition-all duration-300`}>
                   <div className="flex flex-col h-full">
-                    <div className="flex items-start space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                    <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                       <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-r ${section.color} flex-shrink-0`}>
                         <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                       </div>
@@ -240,25 +155,6 @@ const Index = () => {
               );
             })}
           </div>
-        </div>
-
-        {/* Flashcards Section */}
-        <div className="mb-6 sm:mb-8">
-          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg">
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
-                <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
-            </div>
-            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-            <Link to="/flashcards">
-              <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Browse Flashcards
-              </Button>
-            </Link>
-          </Card>
         </div>
 
         {/* Fire Quiz and Quick Actions */}
@@ -322,64 +218,15 @@ const Index = () => {
                 <Award className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span>Detailed Results</span>
               </div>
-              {!user && (
-                <div className="flex items-center space-x-2 text-orange-600">
-                  <Lock className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span>Subscription Required</span>
-                </div>
-              )}
             </div>
-            {user ? (
-              subscription?.subscribed || subscription?.status === 'admin' ? (
-                <Link to="/exam-simulation">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
-                    <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                    Start Exam Simulation
-                  </Button>
-                </Link>
-              ) : (
-                <Button 
-                  onClick={createCheckout}
-                  size="lg" 
-                  className="bg-gradient-to-r from-orange-500/90 to-orange-600/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
-                >
-                  <Crown className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                  Subscribe to Access - $9.99/mo
-                </Button>
-              )
-            ) : (
-              <Link to="/auth">
-                <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
-                  <LogIn className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                  Sign Up for Free Trial
-                </Button>
-              </Link>
-            )}
+            <Link to="/exam-simulation">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
+                <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+                Start Exam Simulation
+              </Button>
+            </Link>
           </div>
         </Card>
-        
-        {/* Cancel Subscription Button */}
-        {user && subscription?.subscribed && (
-          <div className="mt-8 text-center">
-            <Button 
-              variant="outline" 
-              onClick={cancelSubscription}
-              className="text-red-600 border-red-600 hover:bg-red-50"
-            >
-              Cancel Subscription
-            </Button>
-          </div>
-        )}
-
-        {/* Footer */}
-        <div className="text-center mt-8 pt-6 border-t border-gray-200/50">
-          <Link 
-            to="/privacy-policy" 
-            className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
-          >
-            Privacy Policy
-          </Link>
-        </div>
       </div>
     </div>
   );

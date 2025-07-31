@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
-import LockedButton from './LockedButton';
-const Button = LockedButton;
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle, XCircle, Clock, Award, Shuffle } from 'lucide-react';
