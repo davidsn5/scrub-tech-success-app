@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import LockedButton from './LockedButton';
 import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle } from 'lucide-react';
 import { Question } from '@/data/questions/introSurgicalTech';
 
@@ -106,21 +106,21 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md mx-auto">
-          <Button 
+          <LockedButton 
             onClick={handleRestart}
             className={`bg-gradient-to-r ${themeColor} hover:opacity-90 transition-opacity text-white`}
           >
             <RotateCcw className="h-4 w-4 mr-2" />
             Try Again
-          </Button>
-          <Button 
+          </LockedButton>
+          <LockedButton 
             onClick={shuffleQuestions}
             variant="outline"
             className="border-teal-300 hover:bg-teal-50"
           >
             <Shuffle className="h-4 w-4 mr-2" />
             Shuffle & Restart
-          </Button>
+          </LockedButton>
         </div>
       </Card>
     );
@@ -138,7 +138,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
             Total questions available: {shuffledQuestions.length}
           </p>
         </div>
-        <Button 
+        <LockedButton 
           onClick={shuffleQuestions}
           variant="outline"
           size="sm"
@@ -146,7 +146,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
         >
           <Shuffle className="h-4 w-4 mr-2" />
           Shuffle Questions
-        </Button>
+        </LockedButton>
       </div>
 
       {/* Progress Bar */}
@@ -227,7 +227,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
               </div>
               
               <div className="mt-4 flex justify-end">
-                <Button 
+                <LockedButton 
                   onClick={handleNextQuestion}
                   className={`bg-gradient-to-r ${themeColor} hover:opacity-90 transition-opacity text-white`}
                 >
@@ -239,7 +239,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
                   ) : (
                     'Complete Quiz'
                   )}
-                </Button>
+                </LockedButton>
               </div>
             </div>
           )}

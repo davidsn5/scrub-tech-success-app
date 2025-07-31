@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import LockedButton from './LockedButton';
 import { 
   BookOpen,
   Users,
@@ -49,7 +49,7 @@ const StudyCategorySelector: React.FC<StudyCategorySelectorProps> = ({
         {categories.map((category) => {
           const Icon = category.icon;
           return (
-            <Button
+            <LockedButton
               key={category.id}
               variant={selectedCategory === category.id ? "default" : "outline"}
               className={`p-4 h-auto flex flex-col items-center space-y-2 transition-all duration-300 border-2 ${
@@ -73,7 +73,7 @@ const StudyCategorySelector: React.FC<StudyCategorySelectorProps> = ({
               <span className="text-xs font-medium text-center leading-tight">
                 {category.name}
               </span>
-            </Button>
+            </LockedButton>
           );
         })}
       </div>

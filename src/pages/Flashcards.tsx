@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import LockedButton from '@/components/LockedButton';
+const Button = LockedButton;
 import { BookOpen, Brain, Target, FileText, Shuffle, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FlashcardsComponent from '@/components/Flashcards';

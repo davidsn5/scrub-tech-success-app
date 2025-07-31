@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import LockedButton from './LockedButton';
 import { Progress } from '@/components/ui/progress';
 import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle, CheckCircle } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
@@ -102,14 +102,14 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           </div>
         </div>
         <div className="flex items-center gap-2 flex-wrap">
-          <Button onClick={handleShuffle} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
+          <LockedButton onClick={handleShuffle} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
             <Shuffle className="h-4 w-4" />
             <span>Shuffle</span>
-          </Button>
-          <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
+          </LockedButton>
+          <LockedButton onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
             <RotateCcw className="h-4 w-4" />
             <span>Reset</span>
-          </Button>
+          </LockedButton>
         </div>
       </div>
 
@@ -150,12 +150,12 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
               </h3>
               
               {!showAnswer ? (
-                <Button 
+                <LockedButton 
                   onClick={handleRevealAnswer}
                   className={`bg-gradient-to-r ${categoryColors?.color || 'from-blue-500/80 to-blue-600/80'} hover:opacity-90 text-white px-4 sm:px-6 py-3 min-h-[44px] text-sm sm:text-base`}
                 >
                   Show Answer
-                </Button>
+                </LockedButton>
               ) : (
                 <div className="space-y-3 sm:space-y-4 w-full">
                   <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 sm:p-4 lg:p-6">
@@ -174,13 +174,13 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                       </div>
                     )}
                   </div>
-                  <Button 
+                  <LockedButton 
                     onClick={handleRevealAnswer}
                     variant="outline"
                     className="px-4 sm:px-6 py-2 min-h-[44px] text-sm sm:text-base"
                   >
                     Hide Answer
-                  </Button>
+                  </LockedButton>
                 </div>
               )}
             </div>
@@ -189,7 +189,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       </div>
 
       <div className="flex items-center justify-between gap-3">
-        <Button 
+        <LockedButton 
           onClick={handlePrevious} 
           variant="outline" 
           className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] px-3 sm:px-4 text-sm sm:text-base"
@@ -198,7 +198,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           <ChevronLeft className="h-4 w-4" />
           <span className="hidden xs:inline">Previous</span>
           <span className="xs:hidden">Prev</span>
-        </Button>
+        </LockedButton>
 
         <div className="text-center px-2">
           <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
@@ -206,7 +206,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           </span>
         </div>
 
-        <Button 
+        <LockedButton 
           onClick={handleNext} 
           variant="outline" 
           className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] px-3 sm:px-4 text-sm sm:text-base"
@@ -215,7 +215,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           <span className="hidden xs:inline">Next</span>
           <span className="xs:hidden">Next</span>
           <ChevronRight className="h-4 w-4" />
-        </Button>
+        </LockedButton>
       </div>
     </div>
   );

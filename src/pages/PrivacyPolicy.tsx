@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import LockedButton from "@/components/LockedButton";
+const Button = LockedButton;
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
