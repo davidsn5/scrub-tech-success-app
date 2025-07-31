@@ -7,7 +7,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const resend = new Resend('re_EW3mLVWr_KAZ2Gihd2cn6e6mUewP5eB3V');
+const resend = new Resend(Deno.env.get('RESEND_API_KEY'));
 
 const logStep = (step: string, details?: any) => {
   console.log(`[send-verification] ${step}`, details ? JSON.stringify(details) : '');
