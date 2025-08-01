@@ -1,15 +1,44 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
+  
+  const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate('/auth');
+    }
+  }, [user, loading, navigate]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return null;
+  }
+
+  const isTrialActive = subscription?.status === 'trial';
+  const isAdmin = subscription?.status === 'admin';
+  const isSubscribed = subscription?.subscribed || isAdmin;
 
   const sections = [
     {
@@ -75,6 +104,52 @@ const Index = () => {
                   Surgical Technologist Review
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
+              </div>
+            </div>
+            
+            {/* User Menu */}
+            <div className="flex items-center space-x-4">
+              {/* Subscription Status */}
+              <div className="hidden sm:flex items-center space-x-2">
+                {isAdmin ? (
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
+                    <Shield className="h-3 w-3" />
+                    <span className="text-xs font-medium">Admin</span>
+                  </div>
+                ) : isSubscribed ? (
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">
+                    <Shield className="h-3 w-3" />
+                    <span className="text-xs font-medium">Premium</span>
+                  </div>
+                ) : isTrialActive ? (
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200">
+                    <Clock className="h-3 w-3" />
+                    <span className="text-xs font-medium">Trial</span>
+                  </div>
+                ) : null}
+              </div>
+              
+              {/* User Actions */}
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
+                
+                {!isSubscribed && !isAdmin && (
+                  <Button onClick={createCheckoutSession} size="sm" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
+                    Subscribe
+                  </Button>
+                )}
+                
+                {isSubscribed && !isAdmin && (
+                  <Button onClick={openCustomerPortal} variant="outline" size="sm">
+                    <Settings className="h-4 w-4 mr-1" />
+                    Manage
+                  </Button>
+                )}
+                
+                <Button onClick={signOut} variant="outline" size="sm">
+                  <LogOut className="h-4 w-4 mr-1" />
+                  <span className="hidden sm:inline">Sign Out</span>
+                </Button>
               </div>
             </div>
           </div>
