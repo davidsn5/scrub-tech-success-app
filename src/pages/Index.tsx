@@ -322,36 +322,6 @@ const Index = () => {
           </div>
         </Card>
         
-        {/* App Screenshots */}
-        <div className="mt-8 mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-6 text-center">
-            App Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <div className="bg-white/90 rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
-              <img 
-                src="/lovable-uploads/3cb96223-53f0-4e4c-8bed-2be9daa426a8.png" 
-                alt="Dashboard and Progress Tracking" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="bg-white/90 rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
-              <img 
-                src="/lovable-uploads/f2fb6d13-d957-4788-8263-4f172ee8646b.png" 
-                alt="Practice Questions Interface" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="bg-white/90 rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
-              <img 
-                src="/lovable-uploads/251e6ade-3869-488e-96bb-ec2086e82e69.png" 
-                alt="Quiz Modes and Study Tools" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </div>
-        
         {/* Footer */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50">
           <Link 

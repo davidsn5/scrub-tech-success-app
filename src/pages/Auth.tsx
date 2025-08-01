@@ -80,7 +80,13 @@ const Auth = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Stethoscope className="h-8 w-8 text-primary" />
+            <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0">
+              <img 
+                src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
+                alt="Surgical Tech Review Logo" 
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h1 className="text-2xl font-bold">Surgical Tech Review</h1>
           </div>
           <p className="text-muted-foreground">
@@ -217,6 +223,36 @@ const Auth = () => {
             </Tabs>
           </CardContent>
         </Card>
+        
+        {/* App Screenshots */}
+        <div className="mt-8">
+          <h2 className="text-lg font-bold text-center mb-4 text-foreground">
+            App Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white/90 rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
+              <img 
+                src="/lovable-uploads/3cb96223-53f0-4e4c-8bed-2be9daa426a8.png" 
+                alt="Dashboard and Progress Tracking" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="bg-white/90 rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
+              <img 
+                src="/lovable-uploads/f2fb6d13-d957-4788-8263-4f172ee8646b.png" 
+                alt="Practice Questions Interface" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="bg-white/90 rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
+              <img 
+                src="/lovable-uploads/251e6ade-3869-488e-96bb-ec2086e82e69.png" 
+                alt="Quiz Modes and Study Tools" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
