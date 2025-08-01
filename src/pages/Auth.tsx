@@ -52,27 +52,21 @@ const Auth = () => {
       return;
     }
     
-    console.log('Starting signup process...');
     const { error } = await signUp(email, password);
     
     if (error) {
-      console.log('Signup error:', error);
       setError(error.message);
     } else {
-      console.log('Signup successful, attempting sign in...');
       setSuccess('Account created! Signing you in and redirecting to checkout...');
       
       // Sign in the user immediately after successful signup
       const { error: signInError } = await signIn(email, password);
       
       if (signInError) {
-        console.log('Sign in error:', signInError);
         setError('Account created but sign-in failed. Please try signing in manually.');
       } else {
-        console.log('Sign in successful, triggering checkout...');
         // Wait a bit for the auth state to update, then trigger checkout
         setTimeout(() => {
-          console.log('Calling createCheckoutSession...');
           createCheckoutSession();
         }, 1500);
       }
