@@ -104,9 +104,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const createCheckoutSession = async () => {
     try {
+      console.log('Creating checkout session, user:', user);
+      console.log('Session:', session);
       const { data, error } = await supabase.functions.invoke('create-checkout');
+      console.log('Checkout response:', { data, error });
       if (error) throw error;
       if (data?.url) {
+        console.log('Opening checkout URL:', data.url);
         window.open(data.url, '_blank');
       }
     } catch (error) {
