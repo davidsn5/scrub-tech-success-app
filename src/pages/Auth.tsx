@@ -57,11 +57,19 @@ const Auth = () => {
     if (error) {
       setError(error.message);
     } else {
-      setSuccess('Account created! Redirecting to Stripe checkout...');
-      // Trigger Stripe checkout after successful signup
-      setTimeout(() => {
-        createCheckoutSession();
-      }, 1000);
+      setSuccess('Account created! Signing you in and redirecting to checkout...');
+      
+      // Sign in the user immediately after successful signup
+      const { error: signInError } = await signIn(email, password);
+      
+      if (signInError) {
+        setError('Account created but sign-in failed. Please try signing in manually.');
+      } else {
+        // Wait a bit for the auth state to update, then trigger checkout
+        setTimeout(() => {
+          createCheckoutSession();
+        }, 1500);
+      }
     }
     
     setLoading(false);
