@@ -45,6 +45,7 @@ export type Database = {
         Row: {
           created_at: string
           email: string
+          email_verified: boolean | null
           id: string
           status: string
           stripe_customer_id: string | null
@@ -54,12 +55,16 @@ export type Database = {
           subscription_tier: string | null
           trial_end: string | null
           trial_start: string | null
+          trial_started: boolean | null
           updated_at: string
           user_id: string
+          verification_sent_at: string | null
+          verification_token: string | null
         }
         Insert: {
           created_at?: string
           email: string
+          email_verified?: boolean | null
           id?: string
           status?: string
           stripe_customer_id?: string | null
@@ -69,12 +74,16 @@ export type Database = {
           subscription_tier?: string | null
           trial_end?: string | null
           trial_start?: string | null
+          trial_started?: boolean | null
           updated_at?: string
           user_id: string
+          verification_sent_at?: string | null
+          verification_token?: string | null
         }
         Update: {
           created_at?: string
           email?: string
+          email_verified?: boolean | null
           id?: string
           status?: string
           stripe_customer_id?: string | null
@@ -84,8 +93,11 @@ export type Database = {
           subscription_tier?: string | null
           trial_end?: string | null
           trial_start?: string | null
+          trial_started?: boolean | null
           updated_at?: string
           user_id?: string
+          verification_sent_at?: string | null
+          verification_token?: string | null
         }
         Relationships: []
       }
@@ -94,7 +106,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      email_has_trial_history: {
+        Args: { user_email: string }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never
