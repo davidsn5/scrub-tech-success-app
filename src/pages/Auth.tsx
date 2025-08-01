@@ -17,7 +17,7 @@ const Auth = () => {
   const [success, setSuccess] = useState('');
   const [activeTab, setActiveTab] = useState('signin');
   
-  const { signIn, signUp, user } = useAuth();
+  const { signIn, signUp, user, createCheckoutSession } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,7 +57,11 @@ const Auth = () => {
     if (error) {
       setError(error.message);
     } else {
-      setSuccess('Account created! Please check your email to verify your account.');
+      setSuccess('Account created! Redirecting to Stripe checkout...');
+      // Trigger Stripe checkout after successful signup
+      setTimeout(() => {
+        createCheckoutSession();
+      }, 1000);
     }
     
     setLoading(false);
