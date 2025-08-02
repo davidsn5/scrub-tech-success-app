@@ -85,14 +85,15 @@ const AccountManagement = () => {
                       <Clock className="h-3 w-3" />
                       <span className="text-xs font-medium">Trial Active</span>
                     </div>
-                  ) : (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 px-3 py-1 rounded-full border border-gray-300 w-fit">
-                      <User className="h-3 w-3" />
-                      <span className="text-xs font-medium">Free Account</span>
-                    </div>
-                  )}
+                  ) : null}
                 </div>
               </div>
+              {(isSubscribed || isTrialActive) && subscription?.subscription_end && (
+                <div>
+                  <label className="text-sm font-medium text-gray-700">Subscription Renews</label>
+                  <p className="text-gray-900 mt-1">{new Date(subscription.subscription_end).toLocaleDateString()}</p>
+                </div>
+              )}
             </div>
           </Card>
 
@@ -169,41 +170,29 @@ const AccountManagement = () => {
                   </Link>
                 </div>
               </div>
-            ) : (
-              <div className="space-y-6">
-                <div className="bg-gray-50/60 rounded-lg p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Free Account</h3>
-                      <p className="text-sm text-gray-600">Upgrade to access all premium features and study materials.</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-gray-600">Free</div>
-                      <div className="text-xs text-gray-500">Limited access</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="text-center space-y-4">
-                  <p className="text-gray-600 mb-4">Get unlimited access to all study materials and exam simulations.</p>
-                  <div className="flex flex-col gap-3">
-                    <Link to="/">
-                      <Button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90 w-full">
-                        Subscribe Now
-                      </Button>
-                    </Link>
-                    <Button 
-                      onClick={openCustomerPortal}
-                      variant="outline"
-                      className="border-red-300 text-red-700 hover:bg-red-50 w-full"
-                    >
-                      <CreditCard className="h-4 w-4 mr-2" />
-                      Cancel Subscription
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            )}
+             ) : (
+               <div className="space-y-6">
+                 <div className="bg-gray-50/60 rounded-lg p-4">
+                   <div className="flex items-center justify-between">
+                     <div>
+                       <h3 className="font-semibold text-gray-900">Account Access</h3>
+                       <p className="text-sm text-gray-600">Manage your subscription and account settings.</p>
+                     </div>
+                   </div>
+                 </div>
+                 
+                 <div className="text-center">
+                   <Button 
+                     onClick={openCustomerPortal}
+                     variant="outline"
+                     className="border-red-300 text-red-700 hover:bg-red-50"
+                   >
+                     <CreditCard className="h-4 w-4 mr-2" />
+                     Cancel Subscription
+                   </Button>
+                 </div>
+               </div>
+             )}
           </Card>
 
           {/* Account Actions */}
