@@ -50,8 +50,24 @@ export const useMissedQuestions = () => {
         const questionsWithData = attempts
           .map(attempt => {
             console.log('Looking for question with ID:', attempt.question_id);
-            const question = allQuestions.find(q => q.id.toString() === attempt.question_id);
-            console.log('Found question:', question ? 'Yes' : 'No');
+            
+            // Handle both string and numeric question IDs
+            // Extract numeric part from question_id if it's in format "general-1" or "category-1"
+            let questionId = attempt.question_id;
+            let numericId: number;
+            
+            if (typeof questionId === 'string' && questionId.includes('-')) {
+              // Extract number from "general-1" format
+              const parts = questionId.split('-');
+              numericId = parseInt(parts[parts.length - 1]) + 1; // +1 because questions start at id 1, not 0
+            } else {
+              numericId = parseInt(questionId);
+            }
+            
+            console.log('Converted to numeric ID:', numericId);
+            const question = allQuestions.find(q => q.id === numericId);
+            console.log('Found question:', question ? 'Yes' : 'No', question?.question?.substring(0, 50));
+            
             if (question) {
               return {
                 ...question,
