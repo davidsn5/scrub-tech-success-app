@@ -125,6 +125,8 @@ const ExamSimulation = () => {
               questions={examQuestions}
               categoryName="Exam Simulation"
               onMissedQuestion={handleMissedQuestion}
+              themeColor="from-blue-500/90 to-indigo-500/90"
+              progressBarColor="bg-indigo-600"
             />
           </div>
         )}
