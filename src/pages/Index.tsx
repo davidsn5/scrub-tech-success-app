@@ -128,10 +128,12 @@ const Index = () => {
                   )}
                   
                   {isSubscribed && !isAdmin && (
-                    <Button onClick={openCustomerPortal} variant="outline" size="sm">
-                      <Settings className="h-4 w-4 mr-1" />
-                      Manage
-                    </Button>
+                    <Link to="/account">
+                      <Button variant="outline" size="sm">
+                        <Settings className="h-4 w-4 mr-1" />
+                        Manage Account
+                      </Button>
+                    </Link>
                   )}
                   
                   <Button onClick={signOut} variant="outline" size="sm">

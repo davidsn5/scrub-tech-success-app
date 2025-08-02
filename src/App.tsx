@@ -17,6 +17,7 @@ import MedicalTerminology from "./pages/MedicalTerminology";
 import FireQuiz from "./pages/FireQuiz";
 import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
+import AccountManagement from "./pages/AccountManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
@@ -50,6 +51,7 @@ const AppContent = () => {
         <Route path="/fire-quiz" element={<FireQuiz />} />
         <Route path="/missed-questions" element={<MissedQuestions />} />
         <Route path="/exam-simulation" element={<ExamSimulation />} />
+        <Route path="/account" element={<AccountManagement />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
