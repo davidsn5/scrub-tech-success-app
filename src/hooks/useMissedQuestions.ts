@@ -21,7 +21,12 @@ export const useMissedQuestions = () => {
   }, [user]);
 
   const fetchMissedQuestions = async () => {
-    if (!user) return;
+    if (!user) {
+      console.log('No user found, cannot fetch missed questions');
+      return;
+    }
+
+    console.log('Fetching missed questions for user:', user.id);
 
     try {
       const { data: attempts, error } = await supabase
@@ -31,16 +36,22 @@ export const useMissedQuestions = () => {
         .eq('is_correct', false)
         .order('attempted_at', { ascending: false });
 
+      console.log('Query result:', { attempts, error });
+
       if (error) {
         console.error('Error fetching missed questions:', error);
         return;
       }
 
       if (attempts) {
+        console.log('Found attempts:', attempts.length);
+        
         // Map question IDs to actual question data
         const questionsWithData = attempts
           .map(attempt => {
+            console.log('Looking for question with ID:', attempt.question_id);
             const question = allQuestions.find(q => q.id.toString() === attempt.question_id);
+            console.log('Found question:', question ? 'Yes' : 'No');
             if (question) {
               return {
                 ...question,
@@ -52,6 +63,7 @@ export const useMissedQuestions = () => {
           })
           .filter(q => q !== null) as MissedQuestion[];
 
+        console.log('Final missed questions:', questionsWithData.length);
         setMissedQuestions(questionsWithData);
       }
     } catch (error) {

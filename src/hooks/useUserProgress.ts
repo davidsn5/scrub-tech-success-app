@@ -89,17 +89,30 @@ export const useUserProgress = () => {
     category: string,
     isCorrect: boolean
   ) => {
-    if (!user) return;
+    if (!user) {
+      console.log('No user found, cannot record question attempt');
+      return;
+    }
+
+    console.log('Recording question attempt:', { questionId, category, isCorrect, userId: user.id });
 
     try {
-      await supabase
+      const { data, error } = await supabase
         .from('question_attempts')
         .insert({
           user_id: user.id,
           question_id: questionId,
           category,
           is_correct: isCorrect
-        });
+        })
+        .select();
+
+      console.log('Question attempt recorded:', { data, error });
+
+      if (error) {
+        console.error('Error recording question attempt:', error);
+        return;
+      }
 
       // Refresh progress after recording attempt
       await fetchUserProgress();
