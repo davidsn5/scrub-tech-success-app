@@ -86,6 +86,7 @@ const StudyCategory = () => {
                 categoryName="Surgical Procedures"
                 themeColor="from-slate-600/90 to-blue-600/90"
                 progressBarColor="bg-blue-600"
+                categorySlug={category}
               />
             </div>
           ) : (

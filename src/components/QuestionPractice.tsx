@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle } from 'lucide-react';
 import { Question } from '@/data/questions/introSurgicalTech';
+import { useUserProgress } from '@/hooks/useUserProgress';
 
 interface QuestionPracticeProps {
   questions: Question[];
@@ -11,6 +12,7 @@ interface QuestionPracticeProps {
   onMissedQuestion?: (question: Question) => void;
   themeColor?: string;
   progressBarColor?: string;
+  categorySlug?: string;
 }
 
 const QuestionPractice: React.FC<QuestionPracticeProps> = ({ 
@@ -18,8 +20,10 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   categoryName, 
   onMissedQuestion,
   themeColor = "from-orange-500/90 to-teal-500/90",
-  progressBarColor = "bg-orange-500"
+  progressBarColor = "bg-orange-500",
+  categorySlug = "general"
 }) => {
+  const { recordQuestionAttempt } = useUserProgress();
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -46,20 +50,28 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
     setIsComplete(false);
   };
 
-  const handleAnswerSelect = (answerIndex: number) => {
+  const handleAnswerSelect = async (answerIndex: number) => {
     if (showResult) return;
     
     setSelectedAnswer(answerIndex);
     setShowResult(true);
     
+    const isCorrect = answerIndex === currentQuestion.correctAnswer;
     const newScore = {
-      correct: answerIndex === currentQuestion.correctAnswer ? score.correct + 1 : score.correct,
+      correct: isCorrect ? score.correct + 1 : score.correct,
       total: score.total + 1
     };
     setScore(newScore);
 
+    // Record the question attempt in the database
+    await recordQuestionAttempt(
+      `${categorySlug}-${currentQuestionIndex}`, 
+      categorySlug, 
+      isCorrect
+    );
+
     // Track missed questions
-    if (answerIndex !== currentQuestion.correctAnswer && onMissedQuestion) {
+    if (!isCorrect && onMissedQuestion) {
       onMissedQuestion(currentQuestion);
     }
   };

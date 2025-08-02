@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      daily_activity: {
+        Row: {
+          activity_date: string
+          created_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          activity_date: string
+          created_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          activity_date?: string
+          created_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -37,6 +58,36 @@ export type Database = {
           email?: string
           id?: string
           updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      question_attempts: {
+        Row: {
+          attempted_at: string
+          category: string
+          created_at: string
+          id: string
+          is_correct: boolean
+          question_id: string
+          user_id: string
+        }
+        Insert: {
+          attempted_at?: string
+          category: string
+          created_at?: string
+          id?: string
+          is_correct: boolean
+          question_id: string
+          user_id: string
+        }
+        Update: {
+          attempted_at?: string
+          category?: string
+          created_at?: string
+          id?: string
+          is_correct?: boolean
+          question_id?: string
           user_id?: string
         }
         Relationships: []
@@ -98,6 +149,45 @@ export type Database = {
           user_id?: string
           verification_sent_at?: string | null
           verification_token?: string | null
+        }
+        Relationships: []
+      }
+      user_progress: {
+        Row: {
+          created_at: string
+          current_streak: number
+          id: string
+          last_activity_date: string | null
+          longest_streak: number
+          total_correct_answers: number
+          total_missed_questions: number
+          total_questions_attempted: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          current_streak?: number
+          id?: string
+          last_activity_date?: string | null
+          longest_streak?: number
+          total_correct_answers?: number
+          total_missed_questions?: number
+          total_questions_attempted?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          current_streak?: number
+          id?: string
+          last_activity_date?: string | null
+          longest_streak?: number
+          total_correct_answers?: number
+          total_missed_questions?: number
+          total_questions_attempted?: number
+          updated_at?: string
+          user_id?: string
         }
         Relationships: []
       }

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle, XCircle, Clock, Award, Shuffle } from 'lucide-react';
+import { useUserProgress } from '@/hooks/useUserProgress';
 
 interface QuizModeProps {
   category: string;
@@ -526,6 +527,7 @@ const QuizMode: React.FC<QuizModeProps> = ({
   onAnswerCorrect, 
   onQuestionAttempt 
 }) => {
+  const { recordQuestionAttempt } = useUserProgress();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
@@ -600,14 +602,23 @@ const QuizMode: React.FC<QuizModeProps> = ({
     }
   };
 
-  const handleSubmitAnswer = () => {
+  const handleSubmitAnswer = async () => {
     if (selectedAnswer === null && timeLeft > 0) return;
     
     setShowResult(true);
     setIsActive(false);
     onQuestionAttempt();
     
-    if (selectedAnswer === currentQuestion?.correct) {
+    const isCorrect = selectedAnswer === currentQuestion?.correct;
+    
+    // Record the question attempt in the database
+    await recordQuestionAttempt(
+      `${category}-quiz-${currentQuestionIndex}`, 
+      category, 
+      isCorrect
+    );
+    
+    if (isCorrect) {
       setScore(score + 1);
       onAnswerCorrect();
     }

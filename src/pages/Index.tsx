@@ -5,17 +5,14 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { useUserProgress } from '@/hooks/useUserProgress';
 
 const Index = () => {
-  const [totalQuestions, setTotalQuestions] = useState(0);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [missedQuestions, setMissedQuestions] = useState(12);
-  const [studyStreak, setStudyStreak] = useState(5);
-  
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
+  const { progress, loading: progressLoading, getAccuracyPercentage } = useUserProgress();
   const navigate = useNavigate();
 
-  if (loading) {
+  if (loading || progressLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85 flex items-center justify-center">
         <div className="text-center">
@@ -73,7 +70,7 @@ const Index = () => {
     }
   ];
 
-  const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
@@ -169,7 +166,7 @@ const Index = () => {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Target className="h-6 w-6 sm:h-8 sm:w-8 text-orange-600/90 flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{accuracy}%</p>
+                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{getAccuracyPercentage()}%</p>
                   <p className="text-xs sm:text-sm text-gray-600">Accuracy Rate</p>
                 </div>
               </div>
@@ -178,7 +175,7 @@ const Index = () => {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-teal-600/90 flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{totalQuestions}</p>
+                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{progress.totalQuestionsAttempted}</p>
                   <p className="text-xs sm:text-sm text-gray-600">Questions Completed</p>
                 </div>
               </div>
@@ -187,7 +184,7 @@ const Index = () => {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600/90 flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{studyStreak}</p>
+                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{progress.currentStreak}</p>
                   <p className="text-xs sm:text-sm text-gray-600">Day Streak</p>
                 </div>
               </div>
@@ -196,7 +193,7 @@ const Index = () => {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600/90 flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{missedQuestions}</p>
+                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{progress.totalMissedQuestions}</p>
                   <p className="text-xs sm:text-sm text-gray-600">Missed Questions</p>
                 </div>
               </div>
@@ -282,7 +279,7 @@ const Index = () => {
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review and retry questions you've missed</p>
             <div className="flex items-center justify-between mb-3 sm:mb-4">
-              <span className="text-xs sm:text-sm text-gray-500">{missedQuestions} questions to review</span>
+              <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
             </div>
             <Link to="/missed-questions">
               <Button className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
