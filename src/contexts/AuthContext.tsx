@@ -89,24 +89,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const signOut = async () => {
     try {
-      // Sign out from Supabase first (this clears the session from storage)
+      // Sign out from Supabase - this will trigger onAuthStateChange
       await supabase.auth.signOut({ scope: 'global' });
     } catch (error) {
       console.error('Error signing out:', error);
-      // If signOut fails, manually clear the session from storage
-      try {
-        await supabase.auth.signOut({ scope: 'local' });
-      } catch (localError) {
-        console.error('Error with local signout:', localError);
-      }
-    } finally {
-      // Clear local state
+      // If signOut fails, manually clear the session and state
       setSubscription(null);
       setUser(null);
       setSession(null);
-      
-      // Force reload to clear any remaining cached state
-      window.location.reload();
     }
   };
 
