@@ -20,6 +20,7 @@ const AddToHomeScreen = () => {
   const [showDesktopDialog, setShowDesktopDialog] = useState(false);
   const [showMobileDialog, setShowMobileDialog] = useState(false);
   const isMobile = useIsMobile();
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed
@@ -30,6 +31,12 @@ const AddToHomeScreen = () => {
     // Check if device is iOS
     const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     setIsIOS(iOS);
+
+    // Check if device is tablet (including iPad)
+    const tablet = /iPad/.test(navigator.userAgent) || 
+                  (navigator.userAgent.includes('Android') && !navigator.userAgent.includes('Mobile')) ||
+                  (window.innerWidth >= 768 && window.innerWidth <= 1024);
+    setIsTablet(tablet);
 
     const handler = (e: Event) => {
       e.preventDefault();
@@ -51,8 +58,8 @@ const AddToHomeScreen = () => {
   }, []);
 
   const handleClick = async () => {
-    // For desktop, show bookmark instructions
-    if (!isMobile) {
+    // For desktop (not mobile and not tablet), show bookmark instructions
+    if (!isMobile && !isTablet) {
       setShowDesktopDialog(true);
       return;
     }
@@ -103,8 +110,8 @@ const AddToHomeScreen = () => {
           variant="outline"
           className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white"
         >
-          {isMobile ? <Plus className="h-3 w-3 mr-1" /> : <Bookmark className="h-3 w-3 mr-1" />}
-          {isMobile ? 'Add to Home Screen' : 'Bookmark This Page'}
+          {(isMobile || isTablet) ? <Plus className="h-3 w-3 mr-1" /> : <Bookmark className="h-3 w-3 mr-1" />}
+          {(isMobile || isTablet) ? 'Add to Home Screen' : 'Bookmark This Page'}
         </Button>
       </div>
 
