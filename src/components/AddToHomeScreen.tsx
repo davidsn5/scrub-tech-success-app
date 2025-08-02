@@ -53,8 +53,8 @@ const AddToHomeScreen = () => {
     }
   };
 
-  // Only show on mobile and if not already installed and if prompt is available
-  if (!isMobile || isInstalled || !deferredPrompt) {
+  // Only show on mobile and if not already installed
+  if (!isMobile || isInstalled) {
     return null;
   }
 
@@ -64,7 +64,8 @@ const AddToHomeScreen = () => {
         onClick={handleInstallClick}
         variant="outline"
         size="sm"
-        className="text-xs bg-white/50 hover:bg-white/70 border-primary/20 text-primary"
+        className="text-xs bg-orange-500/20 hover:bg-orange-500/30 border-orange-500/30 text-orange-600 hover:text-orange-700"
+        disabled={!deferredPrompt}
       >
         <Plus className="h-3 w-3 mr-1" />
         Add to Home Screen
