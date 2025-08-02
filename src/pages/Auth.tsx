@@ -157,7 +157,7 @@ const Auth = () => {
                       <li>• Interactive flashcards and practice quizzes</li>
                       <li>• Full exam simulation</li>
                       <li>• Progress tracking and analytics</li>
-                      <li>• 5-day free trial included</li>
+                      
                     </ul>
                   </div>
                   
@@ -211,11 +211,11 @@ const Auth = () => {
                     )}
                     
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Creating account...' : 'Start Free Trial'}
+                      {loading ? 'Creating account...' : 'Sign Up & Subscribe'}
                     </Button>
                     
                     <p className="text-xs text-muted-foreground text-center">
-                      By signing up, you agree to our terms and will be charged $14.99/month after your 5-day free trial.
+                      By signing up, you agree to our terms and will be charged $14.99/month.
                     </p>
                   </form>
                 </div>
