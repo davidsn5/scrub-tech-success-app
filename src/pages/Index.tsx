@@ -324,7 +324,17 @@ const Index = () => {
         </Card>
         
         {/* Footer */}
-        <div className="text-center mt-8 pt-6 border-t border-gray-200/50">
+        <div className="text-center mt-8 pt-6 border-t border-gray-200/50 space-y-4">
+          {user && (
+            <div className="mb-4">
+              <Link to="/account">
+                <Button variant="outline" className="mb-2">
+                  <Settings className="h-4 w-4 mr-2" />
+                  Manage Account
+                </Button>
+              </Link>
+            </div>
+          )}
           <Link 
             to="/privacy-policy" 
             className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
