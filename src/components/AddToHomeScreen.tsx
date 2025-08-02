@@ -64,7 +64,7 @@ const AddToHomeScreen = () => {
         onClick={handleInstallClick}
         variant="outline"
         size="sm"
-        className="w-full bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white text-xs py-2"
+        className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white text-xs py-2"
         disabled={!deferredPrompt}
       >
         <Plus className="h-3 w-3 mr-1" />
