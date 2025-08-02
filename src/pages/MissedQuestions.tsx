@@ -43,7 +43,7 @@ const MissedQuestions = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-purple-50/90 to-purple-100/85 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-cyan-50/90 to-cyan-100/85 flex items-center justify-center">
         <div className="text-center">
           <RotateCcw className="h-8 w-8 animate-spin mx-auto mb-4 text-cyan-600" />
           <p className="text-gray-600">Loading missed questions...</p>
@@ -54,23 +54,60 @@ const MissedQuestions = () => {
 
   if (practiceMode && missedQuestions.length > 0) {
     return (
-      <QuestionPractice
-        questions={missedQuestions}
-        categoryName="Missed Questions Review"
-        categorySlug="missed-questions"
-        showBackToHome={true}
-      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-cyan-50/90 to-cyan-100/85">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-white/95 via-cyan-50/90 to-cyan-50/85 shadow-sm border-b border-cyan-200/50 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto px-4 py-6">
+            <div className="space-y-4">
+              <Link to="/">
+                <Button variant="outline" size="sm" className="flex items-center space-x-2 border-cyan-200/60 hover:bg-cyan-50/80">
+                  <ArrowLeft className="h-4 w-4" />
+                  <span>Back to Home</span>
+                </Button>
+              </Link>
+              <div className="flex items-center justify-center">
+                <div className="flex items-center space-x-3">
+                  <div className="bg-gradient-to-br from-cyan-500/90 to-cyan-600/90 p-2 rounded-lg shadow-lg">
+                    <RotateCcw className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-600/90 to-cyan-700/90 bg-clip-text text-transparent">
+                      Missed Questions
+                    </h1>
+                    <p className="text-sm text-gray-600">Interactive Learning & Practice</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <Card className="bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-xl">
+            <div className="p-6">
+              <QuestionPractice
+                questions={missedQuestions}
+                categoryName="Missed Questions"
+                categorySlug="missed-questions"
+                themeColor="from-cyan-500/90 to-cyan-600/90"
+                progressBarColor="bg-cyan-600"
+                showBackToHome={false}
+              />
+            </div>
+          </Card>
+        </div>
+      </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-purple-50/90 to-purple-100/85">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-cyan-50/90 to-cyan-100/85">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-purple-50/90 to-purple-50/85 shadow-sm border-b border-purple-200/50 backdrop-blur-sm">
+      <div className="bg-gradient-to-r from-white/95 via-cyan-50/90 to-cyan-50/85 shadow-sm border-b border-cyan-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="space-y-4">
             <Link to="/">
-              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-purple-200/60 hover:bg-purple-50/80">
+              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-cyan-200/60 hover:bg-cyan-50/80">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Home</span>
               </Button>
