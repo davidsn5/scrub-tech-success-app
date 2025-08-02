@@ -6,7 +6,7 @@ import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, File
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
-import AddToHomeScreen from '@/components/AddToHomeScreen';
+
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
@@ -93,7 +93,6 @@ const Index = () => {
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
                 <p className="text-xs sm:text-sm text-gray-500">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
-                <AddToHomeScreen />
               </div>
             </div>
             
