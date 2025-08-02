@@ -15,6 +15,7 @@ interface BeforeInstallPromptEvent extends Event {
 const AddToHomeScreen = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -22,6 +23,10 @@ const AddToHomeScreen = () => {
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
     }
+
+    // Check if device is iOS
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    setIsIOS(iOS);
 
     const handler = (e: Event) => {
       e.preventDefault();
@@ -43,18 +48,35 @@ const AddToHomeScreen = () => {
   }, []);
 
   const handleInstallClick = async () => {
+    if (isIOS) {
+      // For iOS devices, show instructions since they don't support the install prompt
+      alert('To add this app to your home screen:\n\n1. Tap the Share button in your browser\n2. Scroll down and tap "Add to Home Screen"\n3. Tap "Add" in the top right corner');
+      return;
+    }
+
     if (!deferredPrompt) return;
 
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    
-    if (outcome === 'accepted') {
-      setDeferredPrompt(null);
+    try {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      
+      if (outcome === 'accepted') {
+        setDeferredPrompt(null);
+      }
+    } catch (error) {
+      console.error('Error showing install prompt:', error);
     }
   };
 
   // Only show on mobile and if not already installed
   if (!isMobile || isInstalled) {
+    return null;
+  }
+
+  // Show button for iOS or if install prompt is available
+  const showButton = isIOS || deferredPrompt;
+
+  if (!showButton) {
     return null;
   }
 
@@ -65,7 +87,6 @@ const AddToHomeScreen = () => {
         variant="outline"
         size="sm"
         className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white text-xs py-2"
-        disabled={!deferredPrompt}
       >
         <Plus className="h-3 w-3 mr-1" />
         Add to Home Screen
