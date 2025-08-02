@@ -334,9 +334,9 @@ const Index = () => {
         
         {/* Footer */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50 space-y-4">
-          <AddToHomeScreen />
           {user && (
             <div className="mb-4">
+              <AddToHomeScreen />
               <Link to="/account">
                 <Button variant="outline" className="mb-2">
                   <Settings className="h-4 w-4 mr-2" />
