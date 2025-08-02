@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Download, Plus } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Download, Plus, Bookmark } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface BeforeInstallPromptEvent extends Event {
@@ -16,6 +17,7 @@ const AddToHomeScreen = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstalled, setIsInstalled] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
+  const [showDesktopDialog, setShowDesktopDialog] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -47,13 +49,20 @@ const AddToHomeScreen = () => {
     };
   }, []);
 
-  const handleInstallClick = async () => {
+  const handleClick = async () => {
+    // For desktop, show bookmark instructions
+    if (!isMobile) {
+      setShowDesktopDialog(true);
+      return;
+    }
+
+    // For mobile iOS devices, show instructions since they don't support the install prompt
     if (isIOS) {
-      // For iOS devices, show instructions since they don't support the install prompt
       alert('To add this app to your home screen:\n\n1. Tap the Share button in your browser\n2. Scroll down and tap "Add to Home Screen"\n3. Tap "Add" in the top right corner');
       return;
     }
 
+    // For mobile Android with install prompt
     if (!deferredPrompt) return;
 
     try {
@@ -86,17 +95,44 @@ const AddToHomeScreen = () => {
   });
 
   return (
-    <div className="mt-3">
-      <Button
-        onClick={handleInstallClick}
-        variant="outline"
-        size="sm"
-        className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white text-xs py-2"
-      >
-        <Plus className="h-3 w-3 mr-1" />
-        Add to Home Screen
-      </Button>
-    </div>
+    <>
+      <div className="mt-3">
+        <Button
+          onClick={handleClick}
+          variant="outline"
+          size="sm"
+          className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white text-xs py-2"
+        >
+          {isMobile ? <Plus className="h-3 w-3 mr-1" /> : <Bookmark className="h-3 w-3 mr-1" />}
+          {isMobile ? 'Add to Home Screen' : 'Bookmark This Page'}
+        </Button>
+      </div>
+
+      <Dialog open={showDesktopDialog} onOpenChange={setShowDesktopDialog}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Bookmark This Page</DialogTitle>
+            <DialogDescription>
+              Save this app for quick access by bookmarking it in your browser.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 text-sm">
+            <div>
+              <h4 className="font-medium mb-2">Chrome, Edge, or Firefox:</h4>
+              <p>Press <kbd className="px-2 py-1 bg-gray-100 rounded text-xs">Ctrl+D</kbd> (or <kbd className="px-2 py-1 bg-gray-100 rounded text-xs">Cmd+D</kbd> on Mac)</p>
+            </div>
+            <div>
+              <h4 className="font-medium mb-2">Safari:</h4>
+              <p>Press <kbd className="px-2 py-1 bg-gray-100 rounded text-xs">Cmd+D</kbd> or click the Share button and select "Add Bookmark"</p>
+            </div>
+            <div>
+              <h4 className="font-medium mb-2">Alternative:</h4>
+              <p>Click the star icon in your browser's address bar or use your browser's Bookmarks menu.</p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
