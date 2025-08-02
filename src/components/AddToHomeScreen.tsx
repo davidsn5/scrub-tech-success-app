@@ -137,9 +137,9 @@ const AddToHomeScreen = () => {
       <Dialog open={showMobileDialog} onOpenChange={setShowMobileDialog}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>Add to Home Screen</DialogTitle>
+            <DialogTitle>Bookmark This Page</DialogTitle>
             <DialogDescription>
-              Install this app on your device for quick access.
+              Save this app for quick access by bookmarking it in your browser.
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 text-sm">
@@ -147,30 +147,22 @@ const AddToHomeScreen = () => {
               <>
                 <div>
                   <h4 className="font-medium mb-2">iPhone/iPad (Safari):</h4>
-                  <ol className="list-decimal list-inside space-y-1">
-                    <li>Tap the Share button <span className="inline-block">📤</span> at the bottom of the screen</li>
-                    <li>Scroll down and tap "Add to Home Screen"</li>
-                    <li>Tap "Add" in the top right corner</li>
-                  </ol>
+                  <p>Tap the Share button <span className="inline-block">📤</span> at the bottom of the screen, then select "Add Bookmark"</p>
+                </div>
+                <div>
+                  <h4 className="font-medium mb-2">Alternative:</h4>
+                  <p>Tap the address bar and then tap the star icon to bookmark this page</p>
                 </div>
               </>
             ) : (
               <>
                 <div>
                   <h4 className="font-medium mb-2">Android (Chrome):</h4>
-                  <ol className="list-decimal list-inside space-y-1">
-                    <li>Tap the menu button ⋮ in the top right corner</li>
-                    <li>Select "Add to Home screen" or "Install app"</li>
-                    <li>Tap "Add" or "Install" to confirm</li>
-                  </ol>
+                  <p>Tap the menu button ⋮ in the top right corner, then select "Add bookmark" or tap the star icon</p>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2">Android (Firefox):</h4>
-                  <ol className="list-decimal list-inside space-y-1">
-                    <li>Tap the menu button ⋮ in the top right corner</li>
-                    <li>Select "Install" or "Add to Home Screen"</li>
-                    <li>Tap "Add" to confirm</li>
-                  </ol>
+                  <p>Tap the menu button ⋮ in the top right corner, then select "Bookmarks" and tap "Add bookmark"</p>
                 </div>
               </>
             )}
