@@ -101,8 +101,7 @@ const AddToHomeScreen = () => {
         <Button
           onClick={handleClick}
           variant="outline"
-          size="sm"
-          className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white text-xs py-2"
+          className="w-full bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90 transition-opacity text-white"
         >
           {isMobile ? <Plus className="h-3 w-3 mr-1" /> : <Bookmark className="h-3 w-3 mr-1" />}
           {isMobile ? 'Add to Home Screen' : 'Bookmark This Page'}
