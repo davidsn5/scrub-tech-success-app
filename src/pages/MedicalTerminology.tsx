@@ -22,9 +22,9 @@ const MedicalTerminology = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-purple-50/90 to-indigo-100/85">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-purple-50/90 to-purple-100/85">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-purple-50/90 to-indigo-50/85 shadow-sm border-b border-purple-200/50 backdrop-blur-sm">
+      <div className="bg-gradient-to-r from-white/95 via-purple-50/90 to-purple-50/85 shadow-sm border-b border-purple-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center">
             <div className="text-center space-y-4">
@@ -35,10 +35,10 @@ const MedicalTerminology = () => {
                 </Button>
               </Link>
               <div className="flex items-center justify-center space-x-3">
-                <div className="bg-purple-500 p-2 rounded-lg shadow-lg">
+                <div className="bg-gradient-to-br from-purple-500/90 to-purple-600/90 p-2 rounded-lg shadow-lg">
                   <FileText className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold text-purple-600">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-500/90 to-purple-600/90 bg-clip-text text-transparent">
                   Medical Terminology
                 </h1>
               </div>

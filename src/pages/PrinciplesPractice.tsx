@@ -23,9 +23,9 @@ const PrinciplesPractice = () => {
   console.log('Total Principles Practice questions:', principlesPracticeQuestions.length);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-teal-50/90 to-teal-100/85">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-teal-200/50 backdrop-blur-sm">
+      <div className="bg-gradient-to-r from-white/95 via-teal-50/90 to-teal-50/85 shadow-sm border-b border-teal-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center">
             <div className="text-center space-y-4">
@@ -36,10 +36,10 @@ const PrinciplesPractice = () => {
                 </Button>
               </Link>
               <div className="flex items-center justify-center space-x-3">
-                <div className="bg-teal-500 p-2 rounded-lg shadow-lg">
+                <div className="bg-gradient-to-br from-teal-500/90 to-teal-600/90 p-2 rounded-lg shadow-lg">
                   <Brain className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold text-teal-600">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-teal-500/90 to-teal-600/90 bg-clip-text text-transparent">
                   Principles and Practice of Surgical Technology
                 </h1>
               </div>

@@ -20,9 +20,9 @@ const IntroSurgicalTech = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-orange-50/90 to-teal-100/85">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-orange-50/90 to-orange-100/85">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-orange-50/90 to-teal-50/85 shadow-sm border-b border-orange-200/50 backdrop-blur-sm">
+      <div className="bg-gradient-to-r from-white/95 via-orange-50/90 to-orange-50/85 shadow-sm border-b border-orange-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center">
             <div className="text-center space-y-4">
@@ -33,10 +33,10 @@ const IntroSurgicalTech = () => {
                 </Button>
               </Link>
               <div className="flex items-center justify-center space-x-3">
-                <div className="bg-orange-500 p-2 rounded-lg shadow-lg">
+                <div className="bg-gradient-to-br from-orange-500/90 to-orange-600/90 p-2 rounded-lg shadow-lg">
                   <BookOpen className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold text-orange-600">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500/90 to-orange-600/90 bg-clip-text text-transparent">
                   Intro to Surgical Technology
                 </h1>
               </div>
@@ -52,6 +52,7 @@ const IntroSurgicalTech = () => {
           categoryName="Intro to Surgical Technology"
           onMissedQuestion={handleMissedQuestion}
           themeColor="from-orange-500/90 to-orange-600/90"
+          progressBarColor="bg-orange-600"
         />
       </div>
     </div>

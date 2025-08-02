@@ -35,6 +35,36 @@ const StudyCategory = () => {
     return categoryNames[category || ''] || 'Unknown Category';
   };
 
+  const getCategoryColors = (category: string) => {
+    const colorSchemes: { [key: string]: { 
+      themeColor: string, 
+      progressBarColor: string, 
+      bgColor: string, 
+      headerColor: string,
+      borderColor: string 
+    }} = {
+      'surgical-procedures': {
+        themeColor: 'from-blue-500/90 to-blue-600/90',
+        progressBarColor: 'bg-blue-600',
+        bgColor: 'from-slate-50/95 via-blue-50/90 to-blue-100/85',
+        headerColor: 'from-white/95 via-blue-50/90 to-blue-50/85',
+        borderColor: 'border-blue-200/50'
+      }
+    };
+    
+    return colorSchemes[category || ''] || {
+      themeColor: 'from-slate-600/90 to-blue-600/90',
+      progressBarColor: 'bg-blue-600',
+      bgColor: 'from-slate-50 via-blue-50 to-indigo-100',
+      headerColor: 'from-white via-slate-50 to-blue-50',
+      borderColor: 'border-slate-200'
+    };
+  };
+
+  // Check if this is the surgical procedures category
+  const isSurgicalProcedures = category === 'surgical-procedures';
+  const colors = getCategoryColors(category || '');
+
   if (!category) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex items-center justify-center">
@@ -43,13 +73,10 @@ const StudyCategory = () => {
     );
   }
 
-  // Check if this is the surgical procedures category
-  const isSurgicalProcedures = category === 'surgical-procedures';
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className={`min-h-screen bg-gradient-to-br ${colors.bgColor}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-white via-slate-50 to-blue-50 shadow-sm border-b border-slate-200">
+      <div className={`bg-gradient-to-r ${colors.headerColor} shadow-sm border-b ${colors.borderColor}`}>
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="space-y-4">
             <Link to="/">
@@ -60,11 +87,11 @@ const StudyCategory = () => {
             </Link>
             <div className="flex items-center justify-center">
               <div className="flex items-center space-x-3">
-                <div className="bg-gradient-to-br from-slate-500 to-blue-500 p-2 rounded-lg shadow-lg">
+                <div className={`bg-gradient-to-br ${colors.themeColor} p-2 rounded-lg shadow-lg`}>
                   <BookOpen className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent">
+                  <h1 className={`text-2xl font-bold bg-gradient-to-r ${colors.themeColor} bg-clip-text text-transparent`}>
                     {getCategoryName(category)}
                   </h1>
                   <p className="text-sm text-gray-600">Interactive Learning & Practice</p>
@@ -77,31 +104,31 @@ const StudyCategory = () => {
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Main Study Interface */}
-        <Card className="bg-gradient-to-br from-white via-slate-50 to-blue-50 backdrop-blur-sm border-slate-200 shadow-xl">
+        <Card className={`bg-gradient-to-br from-white via-slate-50 to-blue-50 backdrop-blur-sm ${colors.borderColor} shadow-xl`}>
           {isSurgicalProcedures ? (
             // For surgical procedures, show only question practice (no progress tab)
             <div className="p-6">
               <QuestionPractice 
                 questions={surgicalProceduresQuestions}
                 categoryName="Surgical Procedures"
-                themeColor="from-slate-600/90 to-blue-600/90"
-                progressBarColor="bg-blue-600"
+                themeColor={colors.themeColor}
+                progressBarColor={colors.progressBarColor}
                 categorySlug={category}
               />
             </div>
           ) : (
             // For other categories, show all three tabs
             <Tabs defaultValue="flashcards" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-slate-100 to-blue-100">
-                <TabsTrigger value="flashcards" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+              <TabsList className={`grid w-full grid-cols-3 mb-6 bg-gradient-to-r from-slate-100 to-blue-100`}>
+                <TabsTrigger value="flashcards" className={`flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:${colors.themeColor} data-[state=active]:text-white`}>
                   <BookOpen className="h-4 w-4" />
                   <span>Flashcards</span>
                 </TabsTrigger>
-                <TabsTrigger value="quiz" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                <TabsTrigger value="quiz" className={`flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:${colors.themeColor} data-[state=active]:text-white`}>
                   <Brain className="h-4 w-4" />
                   <span>Practice Quiz</span>
                 </TabsTrigger>
-                <TabsTrigger value="progress" className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-slate-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
+                <TabsTrigger value="progress" className={`flex items-center space-x-2 data-[state=active]:bg-gradient-to-r data-[state=active]:${colors.themeColor} data-[state=active]:text-white`}>
                   <Trophy className="h-4 w-4" />
                   <span>Progress</span>
                 </TabsTrigger>
