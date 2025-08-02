@@ -68,7 +68,7 @@ const AddToHomeScreen = () => {
         disabled={!deferredPrompt}
       >
         <Plus className="h-3 w-3 mr-1" />
-        Add to Home Screen
+        +Add to Home Screen
       </Button>
     </div>
   );
