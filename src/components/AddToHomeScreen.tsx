@@ -68,20 +68,25 @@ const AddToHomeScreen = () => {
     }
   };
 
-  // Only show on mobile and if not already installed
-  if (!isMobile || isInstalled) {
+  // Only hide if already installed
+  if (isInstalled) {
     return null;
   }
 
-  // Show button for iOS or if install prompt is available
-  const showButton = isIOS || deferredPrompt;
+  // Show button for iOS or if install prompt is available, or for testing
+  const showButton = isIOS || deferredPrompt || true; // Force show for now
 
-  if (!showButton) {
-    return null;
-  }
+  console.log('AddToHomeScreen Debug:', {
+    isMobile,
+    isInstalled,
+    isIOS,
+    deferredPrompt: !!deferredPrompt,
+    showButton,
+    userAgent: navigator.userAgent
+  });
 
   return (
-    <div className="mt-3 sm:hidden">
+    <div className="mt-3">
       <Button
         onClick={handleInstallClick}
         variant="outline"
