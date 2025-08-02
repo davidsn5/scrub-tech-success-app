@@ -121,12 +121,6 @@ const Index = () => {
                 <div className="flex items-center space-x-2">
                   <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
                   
-                  {!isSubscribed && !isAdmin && (
-                    <Button onClick={createCheckoutSession} size="sm" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
-                      Subscribe
-                    </Button>
-                  )}
-                  
                   {isSubscribed && !isAdmin && (
                     <Link to="/account">
                       <Button variant="outline" size="sm">
@@ -150,7 +144,7 @@ const Index = () => {
                 onClick={() => navigate('/auth')} 
                 className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
               >
-                Sign In
+                Sign in/Sign up
               </Button>
             )}
           </div>
