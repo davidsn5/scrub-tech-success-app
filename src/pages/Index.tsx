@@ -91,6 +91,7 @@ const Index = () => {
                   Surgical Technologist Review
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
+                <p className="text-xs sm:text-sm text-gray-500">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
               </div>
             </div>
             
