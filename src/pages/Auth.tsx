@@ -78,7 +78,7 @@ const Auth = () => {
   return (
     <div className="min-h-screen relative overflow-hidden flex items-center justify-center p-4">
       {/* Background - Main page preview with opacity */}
-      <div className="absolute inset-0 opacity-20 blur-sm pointer-events-none">
+      <div className="absolute inset-0 opacity-60 pointer-events-none">
         <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
           {/* Header */}
           <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
