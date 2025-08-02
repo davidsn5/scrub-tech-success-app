@@ -88,15 +88,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const signOut = async () => {
+    // Prevent multiple simultaneous sign out attempts
+    if (!session) return;
+    
     try {
-      // Sign out from Supabase - this will trigger onAuthStateChange
-      await supabase.auth.signOut({ scope: 'global' });
-    } catch (error) {
-      console.error('Error signing out:', error);
-      // If signOut fails, manually clear the session and state
+      setLoading(true);
+      
+      // Clear local state immediately to prevent UI issues
       setSubscription(null);
       setUser(null);
       setSession(null);
+      
+      // Then sign out from Supabase
+      await supabase.auth.signOut({ scope: 'global' });
+    } catch (error) {
+      console.error('Error signing out:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
