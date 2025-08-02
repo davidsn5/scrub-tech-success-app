@@ -94,7 +94,6 @@ const Index = () => {
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600">CST Program Prep and Exam Prep</p>
                 <p className="text-xs sm:text-sm text-gray-500">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
-                <AddToHomeScreen />
               </div>
             </div>
             
@@ -335,6 +334,7 @@ const Index = () => {
         
         {/* Footer */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50 space-y-4">
+          <AddToHomeScreen />
           {user && (
             <div className="mb-4">
               <Link to="/account">
