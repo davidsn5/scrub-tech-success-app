@@ -76,78 +76,8 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center justify-center p-4">
-      {/* Background - Main page preview with opacity */}
-      <div className="absolute inset-0 opacity-60 pointer-events-none">
-        <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
-            <div className="max-w-6xl mx-auto px-4 py-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
-                    <img 
-                      src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
-                      alt="Surgical Tech Review Logo" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h1 className="text-3xl font-bold text-orange-600">
-                      Surgical Technologist Review
-                    </h1>
-                    <p className="text-sm text-gray-600">CST Program Prep and Exam Prep</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="max-w-6xl mx-auto px-6 py-8">
-            {/* Progress Cards */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-6">
-                Your Progress
-              </h2>
-              <div className="grid grid-cols-4 gap-6">
-                {[1,2,3,4].map((i) => (
-                  <Card key={i} className="p-6 bg-gradient-to-br from-white/90 via-orange-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
-                    <div className="h-16 bg-gray-200 rounded"></div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Study Categories */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-6">
-                Study Categories
-              </h2>
-              <div className="grid grid-cols-4 gap-6">
-                {[1,2,3,4].map((i) => (
-                  <Card key={i} className="p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-blue-100/70 backdrop-blur-sm border-blue-200/50 shadow-lg">
-                    <div className="h-32 bg-gray-200 rounded"></div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* More cards */}
-            <div className="grid grid-cols-2 gap-6">
-              {[1,2].map((i) => (
-                <Card key={i} className="p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
-                  <div className="h-24 bg-gray-200 rounded"></div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Dark overlay for better contrast */}
-      <div className="absolute inset-0 bg-black/20"></div>
-
-      <div className="w-full max-w-md relative z-10">
+    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-primary/10 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0">
