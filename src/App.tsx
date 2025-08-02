@@ -29,10 +29,10 @@ const AppContent = () => {
 
   useEffect(() => {
     if (!loading && !user) {
-      // Start timer to show auth modal after 60 seconds for non-authenticated users
+      // Start timer to show auth modal after 90 seconds for non-authenticated users
       const timer = setTimeout(() => {
         setShowAuthModal(true);
-      }, 60000);
+      }, 90000);
 
       return () => clearTimeout(timer);
     }
