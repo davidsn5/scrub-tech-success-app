@@ -127,6 +127,7 @@ const ExamSimulation = () => {
               onMissedQuestion={handleMissedQuestion}
               themeColor="from-blue-500/90 to-indigo-500/90"
               progressBarColor="bg-indigo-600"
+              isExamMode={true}
             />
           </div>
         )}

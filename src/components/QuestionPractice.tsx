@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle, Home } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle, Home, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Question } from '@/data/questions/introSurgicalTech';
 import { useUserProgress } from '@/hooks/useUserProgress';
@@ -15,6 +15,7 @@ interface QuestionPracticeProps {
   progressBarColor?: string;
   categorySlug?: string;
   showBackToHome?: boolean;
+  isExamMode?: boolean;
 }
 
 const QuestionPractice: React.FC<QuestionPracticeProps> = ({ 
@@ -24,7 +25,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   themeColor = "from-orange-500/90 to-teal-500/90",
   progressBarColor = "bg-orange-500",
   categorySlug = "general",
-  showBackToHome = false
+  showBackToHome = false,
+  isExamMode = false
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
@@ -107,6 +109,86 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
 
   if (isComplete) {
     const percentage = Math.round((score.correct / score.total) * 100);
+    const incorrectCount = score.total - score.correct;
+    
+    if (isExamMode) {
+      // Enhanced results screen for Exam Simulation
+      return (
+        <Card className="p-8 text-center space-y-8">
+          <div className="space-y-6">
+            <div className="flex justify-center">
+              <div className={`p-4 rounded-xl bg-gradient-to-r ${themeColor}`}>
+                <Award className="h-12 w-12 text-white" />
+              </div>
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900">Exam Complete!</h3>
+            <p className="text-gray-600 text-lg">Your Full Exam Simulation Results</p>
+          </div>
+          
+          {/* Results Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div className="bg-green-50/80 rounded-lg p-6 border border-green-200/50">
+              <div className="text-3xl font-bold text-green-600 mb-2">{score.correct}</div>
+              <div className="text-sm font-semibold text-gray-700">Questions Correct</div>
+            </div>
+            <div className="bg-red-50/80 rounded-lg p-6 border border-red-200/50">
+              <div className="text-3xl font-bold text-red-600 mb-2">{incorrectCount}</div>
+              <div className="text-sm font-semibold text-gray-700">Questions Incorrect</div>
+            </div>
+            <div className={`bg-gradient-to-br from-blue-50/80 to-indigo-50/80 rounded-lg p-6 border border-blue-200/50`}>
+              <div className={`text-3xl font-bold bg-gradient-to-r ${themeColor} bg-clip-text text-transparent mb-2`}>{percentage}%</div>
+              <div className="text-sm font-semibold text-gray-700">Overall Grade</div>
+            </div>
+          </div>
+
+          {/* Performance Analysis */}
+          <div className="bg-gray-50/80 rounded-lg p-6 border border-gray-200/50">
+            <h4 className="text-lg font-semibold text-gray-900 mb-3">Performance Analysis</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <span className="font-medium text-gray-700">Total Questions:</span>
+                <span className="ml-2 text-gray-600">{score.total} / 150</span>
+              </div>
+              <div>
+                <span className="font-medium text-gray-700">Accuracy Rate:</span>
+                <span className="ml-2 text-gray-600">{percentage}%</span>
+              </div>
+              <div>
+                <span className="font-medium text-gray-700">Passing Grade:</span>
+                <span className="ml-2 text-gray-600">70% or higher</span>
+              </div>
+              <div>
+                <span className="font-medium text-gray-700">Status:</span>
+                <span className={`ml-2 font-semibold ${percentage >= 70 ? 'text-green-600' : 'text-red-600'}`}>
+                  {percentage >= 70 ? 'PASS' : 'NEEDS IMPROVEMENT'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md mx-auto">
+            <Button 
+              onClick={handleRestart}
+              className={`bg-gradient-to-r ${themeColor} hover:opacity-90 transition-opacity text-white`}
+            >
+              <RotateCcw className="h-4 w-4 mr-2" />
+              Retake Exam
+            </Button>
+            <Link to="/">
+              <Button 
+                variant="outline"
+                className="w-full border-gray-300 hover:bg-gray-50"
+              >
+                <Home className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </Link>
+          </div>
+        </Card>
+      );
+    }
+
+    // Standard results screen for other categories
     return (
       <Card className="p-8 text-center space-y-6">
         <div className="space-y-4">
