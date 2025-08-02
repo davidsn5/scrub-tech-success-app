@@ -18,6 +18,7 @@ const AddToHomeScreen = () => {
   const [isInstalled, setIsInstalled] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
   const [showDesktopDialog, setShowDesktopDialog] = useState(false);
+  const [showMobileDialog, setShowMobileDialog] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -56,15 +57,13 @@ const AddToHomeScreen = () => {
       return;
     }
 
-    // For mobile iOS devices, show instructions since they don't support the install prompt
-    if (isIOS) {
-      alert('To add this app to your home screen:\n\n1. Tap the Share button in your browser\n2. Scroll down and tap "Add to Home Screen"\n3. Tap "Add" in the top right corner');
+    // For mobile iOS devices or Android without install prompt, show instructions
+    if (isIOS || !deferredPrompt) {
+      setShowMobileDialog(true);
       return;
     }
 
     // For mobile Android with install prompt
-    if (!deferredPrompt) return;
-
     try {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
@@ -74,6 +73,8 @@ const AddToHomeScreen = () => {
       }
     } catch (error) {
       console.error('Error showing install prompt:', error);
+      // Fallback to showing instructions
+      setShowMobileDialog(true);
     }
   };
 
@@ -129,6 +130,50 @@ const AddToHomeScreen = () => {
               <h4 className="font-medium mb-2">Alternative:</h4>
               <p>Click the star icon in your browser's address bar or use your browser's Bookmarks menu.</p>
             </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showMobileDialog} onOpenChange={setShowMobileDialog}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Add to Home Screen</DialogTitle>
+            <DialogDescription>
+              Install this app on your device for quick access.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 text-sm">
+            {isIOS ? (
+              <>
+                <div>
+                  <h4 className="font-medium mb-2">iPhone/iPad (Safari):</h4>
+                  <ol className="list-decimal list-inside space-y-1">
+                    <li>Tap the Share button <span className="inline-block">📤</span> at the bottom of the screen</li>
+                    <li>Scroll down and tap "Add to Home Screen"</li>
+                    <li>Tap "Add" in the top right corner</li>
+                  </ol>
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <h4 className="font-medium mb-2">Android (Chrome):</h4>
+                  <ol className="list-decimal list-inside space-y-1">
+                    <li>Tap the menu button ⋮ in the top right corner</li>
+                    <li>Select "Add to Home screen" or "Install app"</li>
+                    <li>Tap "Add" or "Install" to confirm</li>
+                  </ol>
+                </div>
+                <div>
+                  <h4 className="font-medium mb-2">Android (Firefox):</h4>
+                  <ol className="list-decimal list-inside space-y-1">
+                    <li>Tap the menu button ⋮ in the top right corner</li>
+                    <li>Select "Install" or "Add to Home Screen"</li>
+                    <li>Tap "Add" to confirm</li>
+                  </ol>
+                </div>
+              </>
+            )}
           </div>
         </DialogContent>
       </Dialog>
