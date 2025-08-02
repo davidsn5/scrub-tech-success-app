@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Question } from '@/data/questions/introSurgicalTech';
 import { useUserProgress } from '@/hooks/useUserProgress';
 
@@ -13,6 +14,7 @@ interface QuestionPracticeProps {
   themeColor?: string;
   progressBarColor?: string;
   categorySlug?: string;
+  showBackToHome?: boolean;
 }
 
 const QuestionPractice: React.FC<QuestionPracticeProps> = ({ 
@@ -21,7 +23,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   onMissedQuestion,
   themeColor = "from-orange-500/90 to-teal-500/90",
   progressBarColor = "bg-orange-500",
-  categorySlug = "general"
+  categorySlug = "general",
+  showBackToHome = false
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
@@ -140,6 +143,22 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
 
   return (
     <div className="space-y-6">
+      {/* Back to Home Button - Only show for missed questions */}
+      {showBackToHome && (
+        <div className="flex justify-start">
+          <Link to="/">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="flex items-center space-x-2 border-gray-300 hover:bg-gray-50"
+            >
+              <Home className="h-4 w-4" />
+              <span>Back to Home</span>
+            </Button>
+          </Link>
+        </div>
+      )}
+
       {/* Controls Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="text-center sm:text-left">

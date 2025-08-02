@@ -58,6 +58,7 @@ const MissedQuestions = () => {
         questions={missedQuestions}
         categoryName="Missed Questions Review"
         categorySlug="missed-questions"
+        showBackToHome={true}
       />
     );
   }
