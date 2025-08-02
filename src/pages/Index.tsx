@@ -139,16 +139,28 @@ const Index = () => {
               </div>
             )}
             
-            {/* Sign In Button for non-authenticated users */}
+            {/* Sign In Button for non-authenticated users - desktop only */}
             {!user && (
+              <Button 
+                onClick={() => navigate('/auth')} 
+                className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 hidden sm:block"
+              >
+                Sign in/Sign up
+              </Button>
+            )}
+          </div>
+          
+          {/* Mobile Sign In Button - show below header on mobile only */}
+          {!user && (
+            <div className="mt-4 text-center sm:hidden">
               <Button 
                 onClick={() => navigate('/auth')} 
                 className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
               >
                 Sign in/Sign up
               </Button>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
 
