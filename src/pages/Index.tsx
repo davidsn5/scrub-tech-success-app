@@ -1,32 +1,19 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
-import AuthModal from '@/components/AuthModal';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
-  const [showAuthModal, setShowAuthModal] = useState(false);
   
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!loading && !user) {
-      // Start timer to show auth modal after 30 seconds
-      const timer = setTimeout(() => {
-        setShowAuthModal(true);
-      }, 30000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [user, loading]);
 
   if (loading) {
     return (
@@ -161,7 +148,7 @@ const Index = () => {
             {/* Sign In Button for non-authenticated users */}
             {!user && (
               <Button 
-                onClick={() => setShowAuthModal(true)} 
+                onClick={() => navigate('/auth')} 
                 className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
               >
                 Sign In
@@ -347,12 +334,6 @@ const Index = () => {
           </Link>
         </div>
       </div>
-      
-      {/* Auth Modal */}
-      <AuthModal 
-        isOpen={showAuthModal} 
-        onClose={() => setShowAuthModal(false)} 
-      />
     </div>
   );
 };
