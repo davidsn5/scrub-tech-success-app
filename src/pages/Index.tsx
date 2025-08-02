@@ -5,36 +5,21 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
-import AuthModal from '@/components/AuthModal';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
-  const [showAuthModal, setShowAuthModal] = useState(false);
   
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
   const navigate = useNavigate();
 
-  // Don't redirect to auth page anymore, just show modal when needed
   useEffect(() => {
     if (!loading && !user) {
-      setShowAuthModal(true);
+      navigate('/auth');
     }
-  }, [user, loading]);
-
-  const handleButtonClick = (e: React.MouseEvent, path?: string) => {
-    if (!user) {
-      e.preventDefault();
-      setShowAuthModal(true);
-      return;
-    }
-    
-    if (path) {
-      navigate(path);
-    }
-  };
+  }, [user, loading, navigate]);
 
   if (loading) {
     return (
@@ -45,6 +30,10 @@ const Index = () => {
         </div>
       </div>
     );
+  }
+
+  if (!user) {
+    return null;
   }
 
   const isTrialActive = subscription?.status === 'trial';
@@ -119,52 +108,50 @@ const Index = () => {
             </div>
             
             {/* User Menu */}
-            {user && (
-              <div className="flex items-center space-x-4">
-                {/* Subscription Status */}
-                <div className="hidden sm:flex items-center space-x-2">
-                  {isAdmin ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
-                      <Shield className="h-3 w-3" />
-                      <span className="text-xs font-medium">Admin</span>
-                    </div>
-                  ) : isSubscribed ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">
-                      <Shield className="h-3 w-3" />
-                      <span className="text-xs font-medium">Premium</span>
-                    </div>
-                  ) : isTrialActive ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200">
-                      <Clock className="h-3 w-3" />
-                      <span className="text-xs font-medium">Trial</span>
-                    </div>
-                  ) : null}
-                </div>
-                
-                {/* User Actions */}
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
-                  
-                  {!isSubscribed && !isAdmin && (
-                    <Button onClick={createCheckoutSession} size="sm" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
-                      Subscribe
-                    </Button>
-                  )}
-                  
-                  {isSubscribed && !isAdmin && (
-                    <Button onClick={openCustomerPortal} variant="outline" size="sm">
-                      <Settings className="h-4 w-4 mr-1" />
-                      Manage
-                    </Button>
-                  )}
-                  
-                  <Button onClick={signOut} variant="outline" size="sm">
-                    <LogOut className="h-4 w-4 mr-1" />
-                    <span className="hidden sm:inline">Sign Out</span>
-                  </Button>
-                </div>
+            <div className="flex items-center space-x-4">
+              {/* Subscription Status */}
+              <div className="hidden sm:flex items-center space-x-2">
+                {isAdmin ? (
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
+                    <Shield className="h-3 w-3" />
+                    <span className="text-xs font-medium">Admin</span>
+                  </div>
+                ) : isSubscribed ? (
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">
+                    <Shield className="h-3 w-3" />
+                    <span className="text-xs font-medium">Premium</span>
+                  </div>
+                ) : isTrialActive ? (
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200">
+                    <Clock className="h-3 w-3" />
+                    <span className="text-xs font-medium">Trial</span>
+                  </div>
+                ) : null}
               </div>
-            )}
+              
+              {/* User Actions */}
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
+                
+                {!isSubscribed && !isAdmin && (
+                  <Button onClick={createCheckoutSession} size="sm" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
+                    Subscribe
+                  </Button>
+                )}
+                
+                {isSubscribed && !isAdmin && (
+                  <Button onClick={openCustomerPortal} variant="outline" size="sm">
+                    <Settings className="h-4 w-4 mr-1" />
+                    Manage
+                  </Button>
+                )}
+                
+                <Button onClick={signOut} variant="outline" size="sm">
+                  <LogOut className="h-4 w-4 mr-1" />
+                  <span className="hidden sm:inline">Sign Out</span>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -233,20 +220,11 @@ const Index = () => {
                       <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
-                    {user ? (
-                      <Link to={section.link} className="mt-auto">
-                        <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}>
-                          Start Studying
-                        </Button>
-                      </Link>
-                    ) : (
-                      <Button 
-                        onClick={(e) => handleButtonClick(e)} 
-                        className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 mt-auto`}
-                      >
+                    <Link to={section.link} className="mt-auto">
+                      <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}>
                         Start Studying
                       </Button>
-                    )}
+                    </Link>
                   </div>
                 </Card>
               );
@@ -264,22 +242,12 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-            {user ? (
-              <Link to="/flashcards">
-                <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                  <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Browse Flashcards
-                </Button>
-              </Link>
-            ) : (
-              <Button 
-                onClick={(e) => handleButtonClick(e)} 
-                className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
+            <Link to="/flashcards">
+              <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
                 <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Browse Flashcards
               </Button>
-            )}
+            </Link>
           </Card>
         </div>
 
@@ -294,22 +262,12 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Fire Quiz</h3>
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Quick 5-question quiz with random questions from all categories</p>
-            {user ? (
-              <Link to="/fire-quiz">
-                <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                  <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Start Fire Quiz
-                </Button>
-              </Link>
-            ) : (
-              <Button 
-                onClick={(e) => handleButtonClick(e)} 
-                className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
+            <Link to="/fire-quiz">
+              <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
                 <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Start Fire Quiz
               </Button>
-            )}
+            </Link>
           </Card>
 
           {/* Missed Questions */}
@@ -324,22 +282,12 @@ const Index = () => {
             <div className="flex items-center justify-between mb-3 sm:mb-4">
               <span className="text-xs sm:text-sm text-gray-500">{missedQuestions} questions to review</span>
             </div>
-            {user ? (
-              <Link to="/missed-questions">
-                <Button className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                  <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Review Missed Questions
-                </Button>
-              </Link>
-            ) : (
-              <Button 
-                onClick={(e) => handleButtonClick(e)} 
-                className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
+            <Link to="/missed-questions">
+              <Button className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
                 <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Review Missed Questions
               </Button>
-            )}
+            </Link>
           </Card>
         </div>
 
@@ -365,23 +313,12 @@ const Index = () => {
                 <span>Detailed Results</span>
               </div>
             </div>
-            {user ? (
-              <Link to="/exam-simulation">
-                <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
-                  <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                  Start Exam Simulation
-                </Button>
-              </Link>
-            ) : (
-              <Button 
-                onClick={(e) => handleButtonClick(e)} 
-                size="lg" 
-                className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
-              >
+            <Link to="/exam-simulation">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
                 <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
                 Start Exam Simulation
               </Button>
-            )}
+            </Link>
           </div>
         </Card>
         
@@ -395,8 +332,6 @@ const Index = () => {
           </Link>
         </div>
       </div>
-      
-      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </div>
   );
 };
