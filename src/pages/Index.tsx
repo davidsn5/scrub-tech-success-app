@@ -5,21 +5,28 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import AuthModal from '@/components/AuthModal';
 
 const Index = () => {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [missedQuestions, setMissedQuestions] = useState(12);
   const [studyStreak, setStudyStreak] = useState(5);
+  const [showAuthModal, setShowAuthModal] = useState(false);
   
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!loading && !user) {
-      navigate('/auth');
+      // Start timer to show auth modal after 10 seconds
+      const timer = setTimeout(() => {
+        setShowAuthModal(true);
+      }, 10000);
+
+      return () => clearTimeout(timer);
     }
-  }, [user, loading, navigate]);
+  }, [user, loading]);
 
   if (loading) {
     return (
@@ -30,10 +37,6 @@ const Index = () => {
         </div>
       </div>
     );
-  }
-
-  if (!user) {
-    return null;
   }
 
   const isTrialActive = subscription?.status === 'trial';
@@ -107,51 +110,63 @@ const Index = () => {
               </div>
             </div>
             
-            {/* User Menu */}
-            <div className="flex items-center space-x-4">
-              {/* Subscription Status */}
-              <div className="hidden sm:flex items-center space-x-2">
-                {isAdmin ? (
-                  <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
-                    <Shield className="h-3 w-3" />
-                    <span className="text-xs font-medium">Admin</span>
-                  </div>
-                ) : isSubscribed ? (
-                  <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">
-                    <Shield className="h-3 w-3" />
-                    <span className="text-xs font-medium">Premium</span>
-                  </div>
-                ) : isTrialActive ? (
-                  <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200">
-                    <Clock className="h-3 w-3" />
-                    <span className="text-xs font-medium">Trial</span>
-                  </div>
-                ) : null}
-              </div>
-              
-              {/* User Actions */}
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
+            {/* User Menu - Only show when authenticated */}
+            {user && (
+              <div className="flex items-center space-x-4">
+                {/* Subscription Status */}
+                <div className="hidden sm:flex items-center space-x-2">
+                  {isAdmin ? (
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
+                      <Shield className="h-3 w-3" />
+                      <span className="text-xs font-medium">Admin</span>
+                    </div>
+                  ) : isSubscribed ? (
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">
+                      <Shield className="h-3 w-3" />
+                      <span className="text-xs font-medium">Premium</span>
+                    </div>
+                  ) : isTrialActive ? (
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200">
+                      <Clock className="h-3 w-3" />
+                      <span className="text-xs font-medium">Trial</span>
+                    </div>
+                  ) : null}
+                </div>
                 
-                {!isSubscribed && !isAdmin && (
-                  <Button onClick={createCheckoutSession} size="sm" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
-                    Subscribe
+                {/* User Actions */}
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
+                  
+                  {!isSubscribed && !isAdmin && (
+                    <Button onClick={createCheckoutSession} size="sm" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
+                      Subscribe
+                    </Button>
+                  )}
+                  
+                  {isSubscribed && !isAdmin && (
+                    <Button onClick={openCustomerPortal} variant="outline" size="sm">
+                      <Settings className="h-4 w-4 mr-1" />
+                      Manage
+                    </Button>
+                  )}
+                  
+                  <Button onClick={signOut} variant="outline" size="sm">
+                    <LogOut className="h-4 w-4 mr-1" />
+                    <span className="hidden sm:inline">Sign Out</span>
                   </Button>
-                )}
-                
-                {isSubscribed && !isAdmin && (
-                  <Button onClick={openCustomerPortal} variant="outline" size="sm">
-                    <Settings className="h-4 w-4 mr-1" />
-                    Manage
-                  </Button>
-                )}
-                
-                <Button onClick={signOut} variant="outline" size="sm">
-                  <LogOut className="h-4 w-4 mr-1" />
-                  <span className="hidden sm:inline">Sign Out</span>
-                </Button>
+                </div>
               </div>
-            </div>
+            )}
+            
+            {/* Sign In Button for non-authenticated users */}
+            {!user && (
+              <Button 
+                onClick={() => setShowAuthModal(true)} 
+                className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
+              >
+                Sign In
+              </Button>
+            )}
           </div>
         </div>
       </div>
@@ -332,6 +347,12 @@ const Index = () => {
           </Link>
         </div>
       </div>
+      
+      {/* Auth Modal */}
+      <AuthModal 
+        isOpen={showAuthModal} 
+        onClose={() => setShowAuthModal(false)} 
+      />
     </div>
   );
 };
