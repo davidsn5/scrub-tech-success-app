@@ -19,10 +19,10 @@ const Index = () => {
 
   useEffect(() => {
     if (!loading && !user) {
-      // Start timer to show auth modal after 10 seconds
+      // Start timer to show auth modal after 30 seconds
       const timer = setTimeout(() => {
         setShowAuthModal(true);
-      }, 10000);
+      }, 30000);
 
       return () => clearTimeout(timer);
     }
