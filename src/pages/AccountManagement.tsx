@@ -140,17 +140,8 @@ const AccountManagement = () => {
                     Manage Subscription
                   </Button>
                   
-                  <Button 
-                    onClick={openCustomerPortal}
-                    variant="outline"
-                    className="border-red-300 text-red-700 hover:bg-red-50"
-                  >
-                    <CreditCard className="h-4 w-4 mr-2" />
-                    Cancel Subscription
-                  </Button>
-                  
                   <p className="text-xs text-gray-500 text-center">
-                    Manage payment method, update plan, or cancel subscription
+                    Change payment method, update plan, or cancel subscription
                   </p>
                 </div>
               </div>
@@ -193,13 +184,23 @@ const AccountManagement = () => {
                   </div>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center space-y-4">
                   <p className="text-gray-600 mb-4">Get unlimited access to all study materials and exam simulations.</p>
-                  <Link to="/">
-                    <Button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90">
-                      Subscribe Now
+                  <div className="flex flex-col gap-3">
+                    <Link to="/">
+                      <Button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:opacity-90 w-full">
+                        Subscribe Now
+                      </Button>
+                    </Link>
+                    <Button 
+                      onClick={openCustomerPortal}
+                      variant="outline"
+                      className="border-red-300 text-red-700 hover:bg-red-50 w-full"
+                    >
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Cancel Subscription
                     </Button>
-                  </Link>
+                  </div>
                 </div>
               </div>
             )}
