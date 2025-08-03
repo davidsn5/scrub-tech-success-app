@@ -149,35 +149,21 @@ const AddToHomeScreen = () => {
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 text-sm">
-            {isIOS ? (
-              <>
-                <div>
-                  <h4 className="font-medium mb-2">iPhone/iPad (Safari):</h4>
-                  <p>1. Tap the Share button <span className="inline-block">📤</span> at the bottom of the screen</p>
-                  <p>2. Scroll down and tap "Add to Home Screen"</p>
-                  <p>3. Tap "Add" to confirm</p>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-2">Other iOS browsers:</h4>
-                  <p>Open this page in Safari to see the "Add to Home Screen" option</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div>
-                  <h4 className="font-medium mb-2">Android (Chrome):</h4>
-                  <p>1. Tap the menu button ⋮ in the top right corner</p>
-                  <p>2. Select "Add to Home screen" or "Install app"</p>
-                  <p>3. Tap "Add" or "Install" to confirm</p>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-2">Android (Firefox):</h4>
-                  <p>1. Tap the menu button ⋮ in the top right corner</p>
-                  <p>2. Select "Add to Home Screen"</p>
-                  <p>3. Tap "Add" to confirm</p>
-                </div>
-              </>
-            )}
+            <div>
+              <h4 className="font-medium mb-2">Android Phone:</h4>
+              <p>1. Tap the menu button ⋮ in the top right corner</p>
+              <p>2. Select "Add to Home screen" or "Install app"</p>
+              <p>3. Tap "Add" or "Install" to confirm</p>
+              <p className="text-xs text-gray-500 mt-1">Works with Chrome, Firefox, and most browsers</p>
+            </div>
+            
+            <div>
+              <h4 className="font-medium mb-2">iPhone (Safari):</h4>
+              <p>1. Tap the Share button <span className="inline-block">📤</span> at the bottom of the screen</p>
+              <p>2. Scroll down and tap "Add to Home Screen"</p>
+              <p>3. Tap "Add" to confirm</p>
+              <p className="text-xs text-gray-500 mt-1">Note: This option is only available in Safari browser</p>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
