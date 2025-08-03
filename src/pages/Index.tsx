@@ -88,7 +88,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div>
+              <div className="text-center">
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
                   Surgical Technologist Review
                 </h1>
