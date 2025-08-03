@@ -143,15 +143,7 @@ const AccountManagement = () => {
                     </Button>
                     
                     <Button 
-                      onClick={() => {
-                        // Check if mobile device to avoid popup blockers
-                        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                        if (isMobile) {
-                          window.location.href = 'https://billing.stripe.com/p/login/5kQbJ0fOg1MH2k07OIaMU00';
-                        } else {
-                          window.open('https://billing.stripe.com/p/login/5kQbJ0fOg1MH2k07OIaMU00', '_blank');
-                        }
-                      }}
+                      onClick={openCustomerPortal}
                       variant="outline"
                       className="border-orange-300 text-orange-700 hover:bg-orange-50"
                     >
