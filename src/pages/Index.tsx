@@ -80,7 +80,7 @@ const Index = () => {
       <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex items-center justify-between">
-            <div className="flex flex-col items-center space-y-3 flex-1">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-3 sm:space-y-0 sm:space-x-3 flex-1">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
                 <img 
                   src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
@@ -88,7 +88,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="text-center">
+              <div className="text-center sm:text-left">
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
                   Surgical Technologist Review
                 </h1>
