@@ -64,13 +64,13 @@ const AddToHomeScreen = () => {
       return;
     }
 
-    // For mobile iOS devices or Android without install prompt, show instructions
-    if (isIOS || !deferredPrompt) {
+    // For tablets and mobile devices (iOS or Android), show add to home screen instructions
+    if (isTablet || isIOS || !deferredPrompt) {
       setShowMobileDialog(true);
       return;
     }
 
-    // For mobile Android with install prompt
+    // For mobile Android with install prompt (only phones, not tablets)
     try {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
