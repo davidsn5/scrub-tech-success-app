@@ -356,7 +356,7 @@ const Index = () => {
             </div>
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">Full Exam Simulation</h3>
             <p className="text-gray-600 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-              Take a comprehensive 150-question practice exam that simulates the actual certification test experience
+              Take a comprehensive 150-question practice exam
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
               <div className="flex items-center space-x-2">
