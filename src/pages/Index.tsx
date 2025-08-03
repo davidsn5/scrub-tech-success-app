@@ -419,12 +419,15 @@ const Index = () => {
               </div>
             </div>
           )}
-          <Link 
-            to="/privacy-policy" 
-            className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
-          >
-            Privacy Policy
-          </Link>
+          <div className="flex flex-col space-y-2 text-sm text-gray-500">
+            <Link 
+              to="/privacy-policy" 
+              className="hover:text-gray-700 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span>Contact Us: SurgicalTechReview@gmail.com</span>
+          </div>
         </div>
       </div>
     </div>
