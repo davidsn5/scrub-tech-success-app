@@ -133,16 +133,27 @@ const AccountManagement = () => {
                 </div>
                 
                 <div className="flex flex-col gap-4">
-                  <Button 
-                    onClick={openCustomerPortal}
-                    className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white"
-                  >
-                    <Settings className="h-4 w-4 mr-2" />
-                    Manage Subscription
-                  </Button>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <Button 
+                      onClick={openCustomerPortal}
+                      className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white"
+                    >
+                      <Settings className="h-4 w-4 mr-2" />
+                      Manage Subscription
+                    </Button>
+                    
+                    <Button 
+                      onClick={openCustomerPortal}
+                      variant="outline"
+                      className="border-red-300 text-red-700 hover:bg-red-50"
+                    >
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Cancel Subscription
+                    </Button>
+                  </div>
                   
                   <p className="text-xs text-gray-500 text-center">
-                    Change payment method, update plan, or cancel subscription
+                    Manage your payment method, update your plan, or cancel your subscription
                   </p>
                 </div>
               </div>
