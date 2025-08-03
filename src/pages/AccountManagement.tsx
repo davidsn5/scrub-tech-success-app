@@ -6,7 +6,18 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 
 const AccountManagement = () => {
-  const { user, subscription, openCustomerPortal, signOut } = useAuth();
+  const { user, subscription, openCustomerPortal, signOut, loading } = useAuth();
+
+  // Show loading state while authentication is being restored
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85 flex items-center justify-center">
+        <Card className="p-8 text-center">
+          <p className="text-gray-600">Loading account information...</p>
+        </Card>
+      </div>
+    );
+  }
 
   if (!user) {
     return (

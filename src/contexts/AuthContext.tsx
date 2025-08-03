@@ -109,12 +109,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const checkSubscription = async () => {
+    // Don't check subscription if no user is authenticated
+    if (!user || !session) {
+      return;
+    }
+    
     try {
       const { data, error } = await supabase.functions.invoke('check-subscription');
       if (error) throw error;
       setSubscription(data);
     } catch (error) {
       console.error('Error checking subscription:', error);
+      // Clear subscription data on error to prevent stale state
+      setSubscription(null);
     }
   };
 
