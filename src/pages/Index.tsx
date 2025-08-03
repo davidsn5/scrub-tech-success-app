@@ -122,22 +122,24 @@ const Index = () => {
                 </div>
                 
                 {/* User Actions */}
-                <div className="flex items-center space-x-2">
+                <div className="flex flex-col items-end space-y-2">
                   <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
                   
-                  {isSubscribed && !isAdmin && (
-                    <Link to="/account">
-                      <Button variant="outline" size="sm">
-                        <Settings className="h-4 w-4 mr-1" />
-                        Manage Account
-                      </Button>
-                    </Link>
-                  )}
-                  
-                  <Button onClick={signOut} variant="outline" size="sm">
-                    <LogOut className="h-4 w-4 mr-1" />
-                    <span className="hidden sm:inline">Sign Out</span>
-                  </Button>
+                  <div className="flex items-center space-x-2">
+                    {isSubscribed && !isAdmin && (
+                      <Link to="/account">
+                        <Button variant="outline" size="sm">
+                          <Settings className="h-4 w-4 mr-1" />
+                          Manage Account
+                        </Button>
+                      </Link>
+                    )}
+                    
+                    <Button onClick={signOut} variant="outline" size="sm">
+                      <LogOut className="h-4 w-4 mr-1" />
+                      <span className="hidden sm:inline">Sign Out</span>
+                    </Button>
+                  </div>
                 </div>
               </div>
             )}
