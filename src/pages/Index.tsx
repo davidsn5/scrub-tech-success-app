@@ -81,7 +81,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
                 <img 
                   src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
                   alt="Surgical Tech Review Logo" 
