@@ -136,9 +136,6 @@ export const useUserProgress = () => {
           total_questions_attempted: 0,
           total_correct_answers: 0,
           total_missed_questions: 0,
-          current_streak: 0,
-          longest_streak: 0,
-          last_activity_date: null,
           updated_at: new Date().toISOString()
         })
         .eq('user_id', user.id);
