@@ -152,6 +152,10 @@ const AccountManagement = () => {
                     </Button>
                   </div>
                   
+                  <p className="text-xs text-red-600 text-center font-medium">
+                    Enable Pop-ups to Cancel Subscription
+                  </p>
+                  
                   <p className="text-xs text-gray-500 text-center">
                     Manage your payment method, update your plan, or cancel your subscription
                   </p>
