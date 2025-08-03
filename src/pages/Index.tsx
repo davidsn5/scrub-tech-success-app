@@ -95,14 +95,44 @@ const Index = () => {
                 <p className="text-sm sm:text-base text-gray-600 font-bold">CST Program Prep and Exam Prep</p>
                 <p className="text-sm sm:text-base text-gray-500 font-bold">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
                 <p className="text-xs sm:text-sm text-gray-500 font-medium">Full Access and Performance Analytics Only Available with Subscription</p>
+                
+                {/* Mobile Sign In/Out Buttons - show below subscription text on mobile only */}
+                <div className="mt-4 sm:hidden">
+                  {!user ? (
+                    <Button 
+                      onClick={() => navigate('/auth')} 
+                      className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
+                    >
+                      Sign in/Sign up
+                    </Button>
+                  ) : (
+                    <div className="space-y-2">
+                      <p className="text-sm text-gray-600">{user.email}</p>
+                      <div className="flex flex-col space-y-2">
+                        {isSubscribed && !isAdmin && (
+                          <Link to="/account">
+                            <Button variant="outline" size="sm">
+                              <Settings className="h-4 w-4 mr-1" />
+                              Manage Account
+                            </Button>
+                          </Link>
+                        )}
+                        <Button onClick={signOut} variant="outline" size="sm">
+                          <LogOut className="h-4 w-4 mr-1" />
+                          Sign Out
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             
-            {/* User Menu - Only show when authenticated */}
+            {/* User Menu - Only show when authenticated on desktop/tablet */}
             {user && (
-              <div className="flex items-center space-x-4">
+              <div className="hidden sm:flex items-center space-x-4">
                 {/* Subscription Status */}
-                <div className="hidden sm:flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                   {isAdmin ? (
                     <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
                       <Shield className="h-3 w-3" />
@@ -123,7 +153,7 @@ const Index = () => {
                 
                 {/* User Actions */}
                 <div className="flex flex-col items-end space-y-2">
-                  <span className="text-sm text-gray-600 hidden sm:block">{user.email}</span>
+                  <span className="text-sm text-gray-600">{user.email}</span>
                   
                   <div className="flex items-center space-x-2">
                     {isSubscribed && !isAdmin && (
@@ -154,18 +184,6 @@ const Index = () => {
               </Button>
             )}
           </div>
-          
-          {/* Mobile Sign In Button - show below header on mobile only */}
-          {!user && (
-            <div className="mt-4 text-center sm:hidden">
-              <Button 
-                onClick={() => navigate('/auth')} 
-                className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
-              >
-                Sign in/Sign up
-              </Button>
-            </div>
-          )}
         </div>
       </div>
 
