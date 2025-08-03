@@ -2,17 +2,20 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import AddToHomeScreen from '@/components/AddToHomeScreen';
+import { useToast } from '@/hooks/use-toast';
 
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
-  const { progress, loading: progressLoading, getAccuracyPercentage } = useUserProgress();
+  const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isResetting, setIsResetting] = useState(false);
 
   if (loading || progressLoading) {
     return (
@@ -71,6 +74,27 @@ const Index = () => {
       questionCount: 40
     }
   ];
+
+  const handleProgressReset = async () => {
+    if (!user) return;
+    
+    setIsResetting(true);
+    try {
+      await resetProgress();
+      toast({
+        title: "Progress Reset",
+        description: "Your progress has been successfully reset to 0.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to reset progress. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsResetting(false);
+    }
+  };
 
   
 
@@ -355,6 +379,28 @@ const Index = () => {
         
         {/* Footer */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50 space-y-4">
+          {user && (
+            <div className="mb-4">
+              <Button 
+                onClick={handleProgressReset}
+                disabled={isResetting}
+                variant="outline"
+                className="bg-gradient-to-r from-red-500/10 to-orange-500/10 hover:from-red-500/20 hover:to-orange-500/20 border-red-200 text-red-600 hover:text-red-700"
+              >
+                {isResetting ? (
+                  <>
+                    <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                    Resetting...
+                  </>
+                ) : (
+                  <>
+                    <RefreshCw className="h-4 w-4 mr-2" />
+                    Progress Reset
+                  </>
+                )}
+              </Button>
+            </div>
+          )}
           <AddToHomeScreen />
           {user && (
             <div className="mb-4 space-y-2">

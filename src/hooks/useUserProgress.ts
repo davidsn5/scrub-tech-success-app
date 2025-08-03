@@ -126,11 +126,42 @@ export const useUserProgress = () => {
     return Math.round((progress.totalCorrectAnswers / progress.totalQuestionsAttempted) * 100);
   };
 
+  const resetProgress = async () => {
+    if (!user) return;
+
+    try {
+      const { error } = await supabase
+        .from('user_progress')
+        .update({
+          total_questions_attempted: 0,
+          total_correct_answers: 0,
+          total_missed_questions: 0,
+          current_streak: 0,
+          longest_streak: 0,
+          last_activity_date: null,
+          updated_at: new Date().toISOString()
+        })
+        .eq('user_id', user.id);
+
+      if (error) {
+        console.error('Error resetting progress:', error);
+        throw error;
+      }
+
+      // Refresh progress after reset
+      await fetchUserProgress();
+    } catch (error) {
+      console.error('Error resetting progress:', error);
+      throw error;
+    }
+  };
+
   return {
     progress,
     loading,
     recordQuestionAttempt,
     getAccuracyPercentage,
-    refreshProgress: fetchUserProgress
+    refreshProgress: fetchUserProgress,
+    resetProgress
   };
 };
