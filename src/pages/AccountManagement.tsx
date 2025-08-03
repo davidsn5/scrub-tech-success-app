@@ -143,7 +143,7 @@ const AccountManagement = () => {
                     </Button>
                     
                     <Button 
-                      onClick={openCustomerPortal}
+                      onClick={() => window.open('https://billing.stripe.com/p/login/5kQbJ0fOg1MH2k07OIaMU00', '_blank')}
                       variant="outline"
                       className="border-red-300 text-red-700 hover:bg-red-50"
                     >
