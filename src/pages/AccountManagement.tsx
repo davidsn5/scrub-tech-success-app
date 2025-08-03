@@ -145,14 +145,14 @@ const AccountManagement = () => {
                     <Button 
                       onClick={() => window.open('https://billing.stripe.com/p/login/5kQbJ0fOg1MH2k07OIaMU00', '_blank')}
                       variant="outline"
-                      className="border-red-300 text-red-700 hover:bg-red-50"
+                      className="border-orange-300 text-orange-700 hover:bg-orange-50"
                     >
                       <CreditCard className="h-4 w-4 mr-2" />
                       Cancel Subscription
                     </Button>
                   </div>
                   
-                  <p className="text-xs text-red-600 text-center font-medium">
+                  <p className="text-xs text-orange-600 text-center font-medium">
                     Enable Pop-ups to Cancel Subscription
                   </p>
                   
@@ -196,38 +196,41 @@ const AccountManagement = () => {
                    </div>
                  </div>
                  
-                 <div className="text-center">
-                   <Button 
-                     onClick={openCustomerPortal}
-                     variant="outline"
-                     className="border-red-300 text-red-700 hover:bg-red-50"
-                   >
-                     <CreditCard className="h-4 w-4 mr-2" />
-                     Cancel Subscription
-                   </Button>
-                 </div>
+                  <div className="text-center space-y-3">
+                    <Button 
+                      onClick={openCustomerPortal}
+                      variant="outline"
+                      className="border-orange-300 text-orange-700 hover:bg-orange-50"
+                    >
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Cancel Subscription
+                    </Button>
+                    <p className="text-xs text-orange-600 font-medium">
+                      Enable Pop-ups to Cancel Subscription
+                    </p>
+                  </div>
                </div>
              )}
           </Card>
 
           {/* Account Actions */}
-          <Card className="p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-red-50/70 backdrop-blur-sm border-red-200/50 shadow-xl">
-            <div className="flex items-center space-x-3 mb-6">
-              <Settings className="h-6 w-6 text-red-600" />
-              <h2 className="text-xl font-semibold text-gray-900">Account Actions</h2>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-red-50/60 rounded-lg border border-red-200/50">
-                <div>
-                  <h3 className="font-semibold text-gray-900">Sign Out</h3>
-                  <p className="text-sm text-gray-600">Sign out of your account on this device.</p>
-                </div>
-                <Button onClick={signOut} variant="outline" className="border-red-300 text-red-700 hover:bg-red-50">
-                  Sign Out
-                </Button>
-              </div>
-            </div>
+           <Card className="p-6 bg-gradient-to-br from-white/90 via-orange-50/80 to-orange-50/70 backdrop-blur-sm border-orange-200/50 shadow-xl">
+             <div className="flex items-center space-x-3 mb-6">
+               <Settings className="h-6 w-6 text-orange-600" />
+               <h2 className="text-xl font-semibold text-gray-900">Account Actions</h2>
+             </div>
+             
+             <div className="space-y-4">
+               <div className="flex items-center justify-between p-4 bg-orange-50/60 rounded-lg border border-orange-200/50">
+                 <div>
+                   <h3 className="font-semibold text-gray-900">Sign Out</h3>
+                   <p className="text-sm text-gray-600">Sign out of your account on this device.</p>
+                 </div>
+                 <Button onClick={signOut} variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-50">
+                   Sign Out
+                 </Button>
+               </div>
+             </div>
           </Card>
         </div>
       </div>
