@@ -155,12 +155,12 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
               </div>
               <div>
                 <span className="font-medium text-gray-700">Passing Grade:</span>
-                <span className="ml-2 text-gray-600">70% or higher</span>
+                <span className="ml-2 text-gray-600">98+ correct (65.33%)</span>
               </div>
               <div>
                 <span className="font-medium text-gray-700">Status:</span>
-                <span className={`ml-2 font-semibold ${percentage >= 70 ? 'text-green-600' : 'text-red-600'}`}>
-                  {percentage >= 70 ? 'PASS' : 'NEEDS IMPROVEMENT'}
+                <span className={`ml-2 font-semibold ${score.correct >= 98 ? 'text-green-600' : 'text-red-600'}`}>
+                  {score.correct >= 98 ? 'PASS' : 'NEEDS IMPROVEMENT'}
                 </span>
               </div>
             </div>
