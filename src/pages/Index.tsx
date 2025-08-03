@@ -337,13 +337,20 @@ const Index = () => {
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50 space-y-4">
           <AddToHomeScreen />
           {user && (
-            <div className="mb-4">
+            <div className="mb-4 space-y-2">
+              <p className="text-sm text-gray-600">{user.email}</p>
               <Link to="/account">
                 <Button variant="outline" className="mb-2">
                   <Settings className="h-4 w-4 mr-2" />
                   Manage Account
                 </Button>
               </Link>
+              <div>
+                <Button onClick={signOut} variant="outline" size="sm">
+                  <LogOut className="h-4 w-4 mr-1" />
+                  Sign Out
+                </Button>
+              </div>
             </div>
           )}
           <Link 
