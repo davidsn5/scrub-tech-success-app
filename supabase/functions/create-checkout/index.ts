@@ -72,6 +72,9 @@ serve(async (req) => {
         },
       ],
       mode: "subscription",
+      automatic_payment_methods: {
+        enabled: true,
+      },
       success_url: `${origin}/?success=true`,
       cancel_url: `${origin}/?canceled=true`,
     });
