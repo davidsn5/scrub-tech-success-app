@@ -209,7 +209,7 @@ const AccountManagement = () => {
                   
                    <div className="text-center space-y-3">
                      <Button 
-                       onClick={createCheckoutSession}
+                       onClick={openCustomerPortal}
                        className="bg-gradient-to-r from-orange-500 to-orange-600 hover:opacity-90 transition-opacity text-white"
                      >
                        <Plus className="h-4 w-4 mr-2" />
