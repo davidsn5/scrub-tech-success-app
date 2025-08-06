@@ -14,6 +14,8 @@ interface AuthContextType {
   session: Session | null;
   subscription: SubscriptionInfo | null;
   loading: boolean;
+  previewTimeRemaining: number;
+  isPreviewExpired: boolean;
   signIn: (email: string, password: string) => Promise<{ error?: any }>;
   signUp: (email: string, password: string) => Promise<{ error?: any }>;
   signOut: () => Promise<void>;
@@ -37,6 +39,38 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [session, setSession] = useState<Session | null>(null);
   const [subscription, setSubscription] = useState<SubscriptionInfo | null>(null);
   const [loading, setLoading] = useState(true);
+  const [previewStartTime, setPreviewStartTime] = useState<number | null>(null);
+  const [previewTimeRemaining, setPreviewTimeRemaining] = useState(120); // 2 minutes in seconds
+  const [isPreviewExpired, setIsPreviewExpired] = useState(false);
+
+  // Preview timer for non-authenticated users
+  useEffect(() => {
+    if (!loading && !user) {
+      // Start preview timer for non-authenticated users
+      if (previewStartTime === null) {
+        const startTime = Date.now();
+        setPreviewStartTime(startTime);
+        localStorage.setItem('previewStartTime', startTime.toString());
+      }
+
+      const interval = setInterval(() => {
+        const startTime = previewStartTime || parseInt(localStorage.getItem('previewStartTime') || '0');
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        const remaining = Math.max(120 - elapsed, 0); // 2 minutes = 120 seconds
+        
+        setPreviewTimeRemaining(remaining);
+        setIsPreviewExpired(remaining === 0);
+      }, 1000);
+
+      return () => clearInterval(interval);
+    } else if (user) {
+      // Clear preview timer when user is authenticated
+      setPreviewStartTime(null);
+      setPreviewTimeRemaining(120);
+      setIsPreviewExpired(false);
+      localStorage.removeItem('previewStartTime');
+    }
+  }, [user, loading, previewStartTime]);
 
   useEffect(() => {
     // Set up auth state listener
@@ -165,6 +199,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     session,
     subscription,
     loading,
+    previewTimeRemaining,
+    isPreviewExpired,
     signIn,
     signUp,
     signOut,

@@ -28,17 +28,6 @@ const AppContent = () => {
   const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  useEffect(() => {
-    if (!loading && !user) {
-      // Start timer to show auth modal after 2 minutes for non-authenticated users
-      const timer = setTimeout(() => {
-        setShowAuthModal(true);
-      }, 120000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [user, loading]);
-
   return (
     <>
       <Routes>

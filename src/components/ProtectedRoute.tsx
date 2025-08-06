@@ -10,7 +10,7 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const { user, subscription, loading, createCheckoutSession } = useAuth();
+  const { user, subscription, loading, createCheckoutSession, isPreviewExpired, previewTimeRemaining } = useAuth();
 
   if (loading) {
     return (
@@ -23,7 +23,13 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     );
   }
 
-  if (!user) {
+  // Allow access during preview period for non-authenticated users
+  if (!user && !isPreviewExpired) {
+    return <>{children}</>;
+  }
+
+  // Redirect to auth if user is not logged in and preview has expired
+  if (!user && isPreviewExpired) {
     return <Navigate to="/auth" replace />;
   }
 
