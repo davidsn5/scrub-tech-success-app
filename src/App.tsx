@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import StudyCategory from "./pages/StudyCategory";
@@ -43,16 +44,19 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/flashcards" element={<Flashcards />} />
-        <Route path="/study/:category" element={<StudyCategory />} />
-        <Route path="/intro-surgical-tech" element={<IntroSurgicalTech />} />
-        <Route path="/principles-practice" element={<PrinciplesPractice />} />
-        <Route path="/medical-terminology" element={<MedicalTerminology />} />
-        <Route path="/fire-quiz" element={<FireQuiz />} />
-        <Route path="/missed-questions" element={<MissedQuestions />} />
-        <Route path="/exam-simulation" element={<ExamSimulation />} />
-        <Route path="/account" element={<AccountManagement />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        
+        {/* Protected Routes - Require subscription */}
+        <Route path="/flashcards" element={<ProtectedRoute><Flashcards /></ProtectedRoute>} />
+        <Route path="/study/:category" element={<ProtectedRoute><StudyCategory /></ProtectedRoute>} />
+        <Route path="/intro-surgical-tech" element={<ProtectedRoute><IntroSurgicalTech /></ProtectedRoute>} />
+        <Route path="/principles-practice" element={<ProtectedRoute><PrinciplesPractice /></ProtectedRoute>} />
+        <Route path="/medical-terminology" element={<ProtectedRoute><MedicalTerminology /></ProtectedRoute>} />
+        <Route path="/fire-quiz" element={<ProtectedRoute><FireQuiz /></ProtectedRoute>} />
+        <Route path="/missed-questions" element={<ProtectedRoute><MissedQuestions /></ProtectedRoute>} />
+        <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
+        <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
+        
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

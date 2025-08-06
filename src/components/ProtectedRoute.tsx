@@ -27,9 +27,10 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     return <Navigate to="/auth" replace />;
   }
 
-  // Check subscription status - no trial support, only subscribed users get access
+  // Check subscription status - allow trial users and subscribed users
   const isSubscribed = subscription?.subscribed || subscription?.status === 'admin';
-  const hasAccess = isSubscribed;
+  const isTrialActive = subscription?.status === 'trial';
+  const hasAccess = isSubscribed || isTrialActive;
 
   if (!hasAccess) {
     return (
@@ -43,13 +44,17 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
           </div>
           
           <p className="text-muted-foreground mb-6">
-            Subscribe to access all premium study materials and features.
+            Subscribe to access all premium study materials and features, or start your 5-day free trial.
           </p>
           
           <div className="bg-primary/10 p-4 rounded-md border border-primary/20 mb-6">
             <div className="flex items-center gap-2 mb-2">
               <CreditCard className="h-4 w-4 text-primary" />
               <span className="font-medium text-sm">Premium Access - $9.99/month</span>
+            </div>
+            <div className="flex items-center gap-2 mb-3">
+              <Clock className="h-4 w-4 text-blue-600" />
+              <span className="font-medium text-sm text-blue-600">5-Day Free Trial Included</span>
             </div>
             <ul className="text-sm text-muted-foreground text-left space-y-1">
               <li>• Complete study materials for all categories</li>
@@ -60,7 +65,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
           </div>
 
           <Button onClick={createCheckoutSession} className="w-full">
-            Subscribe Now
+            Start 5-Day Free Trial
           </Button>
         </Card>
       </div>
