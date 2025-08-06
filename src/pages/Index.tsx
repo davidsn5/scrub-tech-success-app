@@ -287,8 +287,13 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Flashcards Section */}
+        {/* Review Section */}
         <div className="mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
+            Review
+          </h2>
+        
+          {/* Flashcards Section */}
           <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg">
             <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
               <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
