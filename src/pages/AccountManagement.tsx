@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, User, Settings, CreditCard, Shield, Calendar, Clock, Plus } from 'lucide-react';
+import { ArrowLeft, User, Settings, CreditCard, Shield, Calendar, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 
 const AccountManagement = () => {
-  const { user, subscription, openCustomerPortal, signOut, loading, createCheckoutSession } = useAuth();
+  const { user, subscription, openCustomerPortal, signOut, loading } = useAuth();
 
   // Show loading state while authentication is being restored
   if (loading) {
@@ -206,28 +206,20 @@ const AccountManagement = () => {
                      </div>
                    </div>
                  </div>
-                  
-                   <div className="text-center space-y-3">
-                     <Button 
-                       onClick={openCustomerPortal}
-                       className="bg-gradient-to-r from-orange-500 to-orange-600 hover:opacity-90 transition-opacity text-white"
-                     >
-                       <Plus className="h-4 w-4 mr-2" />
-                       Subscribe Now
-                     </Button>
-                     
-                     <Button 
-                       onClick={openCustomerPortal}
-                       variant="outline"
-                       className="border-orange-300 text-orange-700 hover:bg-orange-50"
-                     >
-                       <CreditCard className="h-4 w-4 mr-2" />
-                       Cancel Subscription
-                     </Button>
-                     <p className="text-xs text-orange-600 font-medium">
-                       Enable Pop-ups to Cancel Subscription
-                     </p>
-                   </div>
+                 
+                  <div className="text-center space-y-3">
+                    <Button 
+                      onClick={openCustomerPortal}
+                      variant="outline"
+                      className="border-orange-300 text-orange-700 hover:bg-orange-50"
+                    >
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Cancel Subscription
+                    </Button>
+                    <p className="text-xs text-orange-600 font-medium">
+                      Enable Pop-ups to Cancel Subscription
+                    </p>
+                  </div>
                </div>
              )}
           </Card>

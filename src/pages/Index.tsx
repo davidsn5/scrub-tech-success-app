@@ -117,7 +117,6 @@ const Index = () => {
                   Surgical Technologist Review
                 </h1>
                 <p className="text-sm sm:text-base text-gray-600 font-bold">CST Program Prep and Exam Prep</p>
-                <p className="text-sm sm:text-base text-gray-500 font-medium">AST Curriculum Based</p>
                 <p className="text-sm sm:text-base text-gray-500 font-bold">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
                 <p className="text-xs sm:text-sm text-gray-500 font-medium">Full Access and Performance Analytics Only Available with Subscription</p>
                 
