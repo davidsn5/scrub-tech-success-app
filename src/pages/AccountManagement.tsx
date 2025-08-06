@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 
 const AccountManagement = () => {
-  const { user, subscription, openCustomerPortal, signOut, loading } = useAuth();
+  const { user, subscription, openCustomerPortal, createCheckoutSession, signOut, loading } = useAuth();
 
   // Show loading state while authentication is being restored
   if (loading) {
@@ -201,25 +201,37 @@ const AccountManagement = () => {
                  <div className="bg-gray-50/60 rounded-lg p-4">
                    <div className="flex items-center justify-between">
                      <div>
-                       <h3 className="font-semibold text-gray-900">Account Access</h3>
-                       <p className="text-sm text-gray-600">Manage your subscription and account settings.</p>
+                       <h3 className="font-semibold text-gray-900">No Active Subscription</h3>
+                       <p className="text-sm text-gray-600">Subscribe to access all premium study materials and features.</p>
                      </div>
                    </div>
                  </div>
                  
-                  <div className="text-center space-y-3">
-                    <Button 
-                      onClick={openCustomerPortal}
-                      variant="outline"
-                      className="border-orange-300 text-orange-700 hover:bg-orange-50"
-                    >
-                      <CreditCard className="h-4 w-4 mr-2" />
-                      Cancel Subscription
-                    </Button>
-                    <p className="text-xs text-orange-600 font-medium">
-                      Enable Pop-ups to Cancel Subscription
-                    </p>
-                  </div>
+                 <div className="bg-primary/10 p-4 rounded-md border border-primary/20 mb-6">
+                   <div className="flex items-center gap-2 mb-2">
+                     <CreditCard className="h-4 w-4 text-primary" />
+                     <span className="font-medium text-sm">Premium Access - $9.99/month</span>
+                   </div>
+                   <ul className="text-sm text-muted-foreground space-y-1">
+                     <li>• Complete study materials for all categories</li>
+                     <li>• Interactive flashcards and practice quizzes</li>
+                     <li>• Full exam simulation</li>
+                     <li>• Progress tracking and analytics</li>
+                   </ul>
+                 </div>
+                 
+                 <div className="text-center space-y-3">
+                   <Button 
+                     onClick={createCheckoutSession}
+                     className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white w-full"
+                   >
+                     <CreditCard className="h-4 w-4 mr-2" />
+                     Subscribe Now
+                   </Button>
+                   <p className="text-xs text-gray-500">
+                     Secure payment processing through Stripe
+                   </p>
+                 </div>
                </div>
              )}
           </Card>
