@@ -22,7 +22,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const [success, setSuccess] = useState('');
   const [activeTab, setActiveTab] = useState('signin');
   
-  const { signIn, signUp, createCheckoutSession } = useAuth();
+  const { signIn, signUp, openCustomerPortal } = useAuth();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,9 +65,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
       if (signInError) {
         setError('Account created but sign-in failed. Please try signing in manually.');
       } else {
-        // Wait a bit for the auth state to update, then trigger checkout
+        // Wait a bit for the auth state to update, then open customer portal
         setTimeout(() => {
-          createCheckoutSession();
+          openCustomerPortal();
           onClose();
         }, 1500);
       }
