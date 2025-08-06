@@ -68,7 +68,7 @@ const Auth = () => {
         // Wait a bit for the auth state to update, then trigger checkout
         setTimeout(() => {
           createCheckoutSession();
-        }, 1500);
+        }, 2000);
       }
     }
     
