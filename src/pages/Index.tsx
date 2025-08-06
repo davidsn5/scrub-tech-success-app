@@ -313,23 +313,6 @@ const Index = () => {
 
         {/* Fire Quiz and Quick Actions */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
-          {/* Fire Quiz */}
-          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-red-500/90 to-orange-500/90 flex-shrink-0">
-                <Zap className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Fire Quiz</h3>
-            </div>
-            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Quick 5-question quiz with random questions from all categories</p>
-            <Link to="/fire-quiz">
-              <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Start Fire Quiz
-              </Button>
-            </Link>
-          </Card>
-
           {/* Missed Questions */}
           <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-lg">
             <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
@@ -346,6 +329,23 @@ const Index = () => {
               <Button className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
                 <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Review Missed Questions
+              </Button>
+            </Link>
+          </Card>
+
+          {/* Fire Quiz */}
+          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-red-500/90 to-orange-500/90 flex-shrink-0">
+                <Zap className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Fire Quiz</h3>
+            </div>
+            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Quick 5-question quiz with random questions from all categories</p>
+            <Link to="/fire-quiz">
+              <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
+                <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Start Fire Quiz
               </Button>
             </Link>
           </Card>
