@@ -228,6 +228,14 @@ const AccountManagement = () => {
                      <CreditCard className="h-4 w-4 mr-2" />
                      Subscribe Now
                    </Button>
+                   <Button 
+                     onClick={openCustomerPortal}
+                     variant="outline"
+                     className="border-orange-300 text-orange-700 hover:bg-orange-50 w-full"
+                   >
+                     <Settings className="h-4 w-4 mr-2" />
+                     Cancel Subscription
+                   </Button>
                    <p className="text-xs text-gray-500">
                      Secure payment processing through Stripe
                    </p>
