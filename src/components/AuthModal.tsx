@@ -218,7 +218,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   )}
                   
                   <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? 'Creating account...' : 'Sign Up & Subscribe'}
+                    {loading ? 'Creating account...' : 'Sign Up'}
                   </Button>
                   
                   <p className="text-xs text-muted-foreground text-center">
