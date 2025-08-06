@@ -44,7 +44,7 @@ const StudyCategorySelector: React.FC<StudyCategorySelectorProps> = ({
 }) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-xl font-semibold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent">Study Categories</h2>
+      <h2 className="text-xl font-semibold bg-gradient-to-r from-slate-600 to-blue-600 bg-clip-text text-transparent">Study Questions by Category Practice Questions</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
         {categories.map((category) => {
           const Icon = category.icon;

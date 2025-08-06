@@ -260,7 +260,7 @@ const Index = () => {
         {/* Main Study Sections */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
-            Study Categories
+            Study Questions by Category Practice Questions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {sections.map((section, index) => {

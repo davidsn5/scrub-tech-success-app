@@ -37,7 +37,7 @@ const Study = () => {
         {/* Instructions */}
         <Card className="bg-gradient-to-br from-white/90 via-slate-50/80 to-blue-50/70 backdrop-blur-sm border-slate-200/50 shadow-xl p-8">
           <div className="text-center space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-900">Study Categories Available</h2>
+            <h2 className="text-2xl font-semibold text-gray-900">Study Questions by Category Practice Questions Available</h2>
             <p className="text-gray-600">Visit the home page to access the new study categories and quiz features.</p>
             <Link to="/">
               <Button className="bg-gradient-to-r from-orange-500/90 to-teal-500/90 hover:opacity-90 transition-opacity text-white">
