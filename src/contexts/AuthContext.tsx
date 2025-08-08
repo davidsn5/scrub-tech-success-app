@@ -154,8 +154,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
     
     try {
+      console.log('Checking subscription for user:', user.email);
       const { data, error } = await supabase.functions.invoke('check-subscription');
       if (error) throw error;
+      console.log('Subscription data received:', data);
       setSubscription(data);
     } catch (error) {
       console.error('Error checking subscription:', error);
