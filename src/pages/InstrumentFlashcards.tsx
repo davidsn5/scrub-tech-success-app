@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArrowLeft, Settings } from 'lucide-react';
 import InstrumentFlashcard from '@/components/InstrumentFlashcard';
+import InstrumentImageGenerator from '@/components/InstrumentImageGenerator';
 
 const InstrumentFlashcards = () => {
+  const [activeTab, setActiveTab] = useState('flashcards');
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50/95 via-green-50/90 to-teal-100/85">
       {/* Header */}
@@ -31,7 +35,23 @@ const InstrumentFlashcards = () => {
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-        <InstrumentFlashcard />
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="flashcards">Study Flashcards</TabsTrigger>
+            <TabsTrigger value="generator" className="flex items-center space-x-2">
+              <Settings className="h-4 w-4" />
+              <span>Generate Images</span>
+            </TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="flashcards">
+            <InstrumentFlashcard />
+          </TabsContent>
+          
+          <TabsContent value="generator">
+            <InstrumentImageGenerator />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
