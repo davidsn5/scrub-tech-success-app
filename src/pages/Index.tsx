@@ -116,7 +116,7 @@ const Index = () => {
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
                   Surgical Technologist Review
                 </h1>
-                <p className="text-sm sm:text-base text-gray-600 font-bold">CST Program and Exam Prep</p>
+                <p className="text-sm sm:text-base text-gray-600 font-bold">CST Program and Exam Prep, AST Text based Practice</p>
                 <p className="text-sm sm:text-base text-gray-500 font-bold">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
                 <p className="text-xs sm:text-sm text-gray-500 font-medium">Full Access and Performance Analytics Only Available with Subscription</p>
                 <p className="text-xs sm:text-sm text-gray-500 font-medium">Unlimited Fire Quiz questions available without Subscription</p>
