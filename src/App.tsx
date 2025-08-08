@@ -41,7 +41,7 @@ const AppContent = () => {
         <Route path="/intro-surgical-tech" element={<ProtectedRoute><IntroSurgicalTech /></ProtectedRoute>} />
         <Route path="/principles-practice" element={<ProtectedRoute><PrinciplesPractice /></ProtectedRoute>} />
         <Route path="/medical-terminology" element={<ProtectedRoute><MedicalTerminology /></ProtectedRoute>} />
-        <Route path="/fire-quiz" element={<ProtectedRoute><FireQuiz /></ProtectedRoute>} />
+        <Route path="/fire-quiz" element={<FireQuiz />} />
         <Route path="/missed-questions" element={<ProtectedRoute><MissedQuestions /></ProtectedRoute>} />
         <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
