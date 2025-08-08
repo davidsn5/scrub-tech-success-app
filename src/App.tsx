@@ -20,6 +20,7 @@ import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
 import AccountManagement from "./pages/AccountManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import InstrumentFlashcards from "./pages/InstrumentFlashcards";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ const AppContent = () => {
         <Route path="/missed-questions" element={<ProtectedRoute><MissedQuestions /></ProtectedRoute>} />
         <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
+        <Route path="/instrument-flashcards" element={<ProtectedRoute><InstrumentFlashcards /></ProtectedRoute>} />
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
