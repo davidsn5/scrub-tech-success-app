@@ -43,6 +43,26 @@ serve(async (req) => {
     if (!user?.email) throw new Error("User not authenticated or email not available");
     logStep("User authenticated", { userId: user.id, email: user.email });
 
+    // Check if user is an admin first
+    const { data: existingSubscriber } = await supabaseClient
+      .from("subscribers")
+      .select("status, subscribed, subscription_tier")
+      .eq("email", user.email)
+      .single();
+    
+    // If user is admin, return admin status without checking Stripe
+    if (existingSubscriber?.status === 'admin') {
+      logStep("Admin user detected, returning admin status");
+      return new Response(JSON.stringify({
+        subscribed: true,
+        subscription_tier: existingSubscriber.subscription_tier || "premium",
+        status: "admin"
+      }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 200,
+      });
+    }
+
     const stripe = new Stripe(stripeKey, { apiVersion: "2023-10-16" });
     const customers = await stripe.customers.list({ email: user.email, limit: 1 });
     
@@ -58,7 +78,11 @@ serve(async (req) => {
         status: "trial",
         updated_at: new Date().toISOString(),
       }, { onConflict: 'email' });
-      return new Response(JSON.stringify({ subscribed: false, subscription_tier: "premium" }), {
+      return new Response(JSON.stringify({ 
+        subscribed: false, 
+        subscription_tier: "premium",
+        status: "trial"
+      }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200,
       });
@@ -83,6 +107,7 @@ serve(async (req) => {
       logStep("No active subscription found");
     }
 
+    const finalStatus = hasActiveSub ? "active" : "trial";
     await supabaseClient.from("subscribers").upsert({
       email: user.email,
       user_id: user.id,
@@ -90,15 +115,16 @@ serve(async (req) => {
       subscribed: hasActiveSub,
       subscription_tier: "premium",
       subscription_end: subscriptionEnd,
-      status: hasActiveSub ? "active" : "trial",
+      status: finalStatus,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'email' });
 
-    logStep("Updated database with subscription info", { subscribed: hasActiveSub, subscriptionTier: "premium" });
+    logStep("Updated database with subscription info", { subscribed: hasActiveSub, subscriptionTier: "premium", status: finalStatus });
     return new Response(JSON.stringify({
       subscribed: hasActiveSub,
       subscription_tier: "premium",
-      subscription_end: subscriptionEnd
+      subscription_end: subscriptionEnd,
+      status: finalStatus
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
