@@ -73,31 +73,38 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [user, loading, previewStartTime]);
 
   useEffect(() => {
+    console.log('AuthContext useEffect - Setting up auth listener');
     // Set up auth state listener
     const { data: { subscription: authSubscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
+        console.log('Auth state change:', event, 'Session exists:', !!session);
         setSession(session);
         setUser(session?.user ?? null);
         
         if (session?.user) {
+          console.log('User found, calling checkSubscription in 100ms');
           setTimeout(() => {
             checkSubscription();
-          }, 0);
+          }, 100);
         } else {
+          console.log('No user, setting subscription to null');
           setSubscription(null);
         }
       }
     );
 
     // Check for existing session
+    console.log('AuthContext - Checking for existing session');
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('Existing session check result:', !!session);
       setSession(session);
       setUser(session?.user ?? null);
       
       if (session?.user) {
+        console.log('Existing user found, calling checkSubscription in 100ms');
         setTimeout(() => {
           checkSubscription();
-        }, 0);
+        }, 100);
       }
       setLoading(false);
     });
