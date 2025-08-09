@@ -35,7 +35,7 @@ const InstrumentImageGenerator = () => {
         toast.info(`Generating image ${i + 1}/${totalInstruments}: ${instrument.name}`);
 
         try {
-          const { data, error } = await supabase.functions.invoke('generate-instrument-image-hf', {
+          const { data, error } = await supabase.functions.invoke('generate-instrument-image', {
             body: {
               instrumentName: instrument.name,
               features: instrument.characteristics
@@ -44,10 +44,10 @@ const InstrumentImageGenerator = () => {
 
           if (error) throw error;
 
-          if (data?.image) {
+          if (data?.success && data?.imageData) {
             const generatedImage: GeneratedImage = {
               instrumentName: instrument.name,
-              imageData: data.image,
+              imageData: data.imageData,
               category: instrument.category
             };
             
