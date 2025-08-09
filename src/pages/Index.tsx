@@ -320,29 +320,6 @@ const Index = () => {
               </Link>
             </Card>
 
-            {/* Admin-Only Surgical Instruments */}
-            {isAdmin && (
-              <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-emerald-50/80 to-emerald-100/70 backdrop-blur-sm border-emerald-200/50 shadow-lg">
-                <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 flex-shrink-0">
-                    <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Surgical Instruments</h3>
-                    <span className="px-2 py-1 text-xs bg-emerald-100 text-emerald-800 rounded-full border border-emerald-200">
-                      Admin Preview
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Visual flashcards for surgical instrument identification and learning</p>
-                <Link to="/instrument-flashcards">
-                  <Button className="w-full bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                    <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                    Study Instruments
-                  </Button>
-                </Link>
-              </Card>
-            )}
           </div>
         </div>
 
