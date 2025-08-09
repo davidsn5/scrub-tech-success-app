@@ -32,6 +32,11 @@ const Index = () => {
   const isAdmin = subscription?.status === 'admin';
   const isSubscribed = subscription?.subscribed || isAdmin;
 
+  // Debug logging for admin access
+  console.log('Index.tsx - User:', user?.email);
+  console.log('Index.tsx - Subscription:', subscription);
+  console.log('Index.tsx - isAdmin:', isAdmin);
+
   const sections = [
     {
       title: "Intro to Surgical Technology",
