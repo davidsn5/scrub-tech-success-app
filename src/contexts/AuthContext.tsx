@@ -157,17 +157,30 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const checkSubscription = async () => {
     // Don't check subscription if no user is authenticated
     if (!user || !session) {
+      console.log('No user or session, skipping subscription check');
       return;
     }
     
     try {
       console.log('Checking subscription for user:', user.email);
+      console.log('Session token exists:', !!session.access_token);
+      
       const { data, error } = await supabase.functions.invoke('check-subscription');
-      if (error) throw error;
+      
+      if (error) {
+        console.error('Edge function error:', error);
+        throw error;
+      }
+      
       console.log('Subscription data received:', data);
       setSubscription(data);
     } catch (error) {
       console.error('Error checking subscription:', error);
+      console.error('Error details:', {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      });
       // Clear subscription data on error to prevent stale state
       setSubscription(null);
     }
