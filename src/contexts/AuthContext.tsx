@@ -163,12 +163,40 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     try {
       console.log('Checking subscription for user:', user.email);
-      console.log('Session token exists:', !!session.access_token);
       
+      // First check database directly for premium/admin users
+      const { data: dbData, error: dbError } = await supabase
+        .from('subscribers')
+        .select('*')
+        .eq('email', user.email)
+        .single();
+
+      if (dbData && (dbData.status === 'admin' || dbData.status === 'premium')) {
+        console.log('Premium/admin user found in database:', dbData);
+        setSubscription({
+          subscribed: true,
+          subscription_tier: dbData.subscription_tier || 'premium',
+          status: dbData.status
+        });
+        return;
+      }
+
+      // Fall back to edge function for regular users
+      console.log('Session token exists:', !!session.access_token);
       const { data, error } = await supabase.functions.invoke('check-subscription');
       
       if (error) {
         console.error('Edge function error:', error);
+        // If edge function fails but user exists in DB, use that data
+        if (dbData) {
+          console.log('Using database fallback data:', dbData);
+          setSubscription({
+            subscribed: dbData.subscribed || false,
+            subscription_tier: dbData.subscription_tier || 'premium',
+            status: dbData.status || 'trial'
+          });
+          return;
+        }
         throw error;
       }
       
