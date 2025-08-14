@@ -164,40 +164,50 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       console.log('Checking subscription for user:', user.email);
       
-      // First check database directly for premium/admin users
+      // First check database directly for all users
       const { data: dbData, error: dbError } = await supabase
         .from('subscribers')
         .select('*')
         .eq('email', user.email)
         .single();
 
-      if (dbData && (dbData.status === 'admin' || dbData.status === 'premium')) {
-        console.log('Premium/admin user found in database:', dbData);
+      console.log('Database query result:', { dbData, dbError });
+
+      if (dbData) {
+        console.log('User found in database:', dbData);
+        
+        // Check if user has any form of access (admin, premium, trial, or subscribed)
+        const hasAccess = dbData.status === 'admin' || 
+                         dbData.status === 'premium' || 
+                         dbData.subscribed || 
+                         (dbData.trial_started && dbData.trial_end && new Date(dbData.trial_end) > new Date());
+        
+        console.log('User access status:', { 
+          hasAccess, 
+          status: dbData.status, 
+          subscribed: dbData.subscribed, 
+          trial_started: dbData.trial_started,
+          trial_end: dbData.trial_end,
+          trial_still_valid: dbData.trial_end ? new Date(dbData.trial_end) > new Date() : false
+        });
+        
         setSubscription({
-          subscribed: true,
+          subscribed: hasAccess,
           subscription_tier: dbData.subscription_tier || 'premium',
-          status: dbData.status
+          status: dbData.status || 'trial'
         });
         return;
       }
 
-      // Fall back to edge function for regular users
-      console.log('Session token exists:', !!session.access_token);
+      // If no database record exists, fall back to edge function
+      console.log('No database record found, trying edge function');
       const { data, error } = await supabase.functions.invoke('check-subscription');
       
       if (error) {
         console.error('Edge function error:', error);
-        // If edge function fails but user exists in DB, use that data
-        if (dbData) {
-          console.log('Using database fallback data:', dbData);
-          setSubscription({
-            subscribed: dbData.subscribed || false,
-            subscription_tier: dbData.subscription_tier || 'premium',
-            status: dbData.status || 'trial'
-          });
-          return;
-        }
-        throw error;
+        // Default to no access if everything fails
+        setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+        return;
       }
       
       console.log('Subscription data received:', data);
@@ -209,8 +219,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         stack: error.stack,
         name: error.name
       });
-      // Clear subscription data on error to prevent stale state
-      setSubscription(null);
+      // Default to no access on error
+      setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
     }
   };
 
