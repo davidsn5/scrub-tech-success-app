@@ -33,8 +33,8 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     return <Navigate to="/auth" replace />;
   }
 
-  // Check subscription status - subscribed, admin, or premium users get access
-  const isSubscribed = subscription?.subscribed || subscription?.status === 'admin' || subscription?.status === 'premium';
+  // Check subscription status - subscribed, admin, premium, or trial users get access
+  const isSubscribed = subscription?.subscribed || subscription?.status === 'admin' || subscription?.status === 'premium' || subscription?.status === 'trial';
   const hasAccess = isSubscribed;
 
   if (!hasAccess) {
