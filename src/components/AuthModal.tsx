@@ -158,7 +158,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 <div className="bg-primary/10 p-4 rounded-md border border-primary/20">
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="h-4 w-4 text-primary" />
-                    <span className="font-medium text-sm">Premium Access - One time fee of $29.99</span>
+                    <span className="font-medium text-sm">Premium Access - $9.99/month</span>
                   </div>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Complete study materials for all categories</li>
@@ -222,7 +222,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   </Button>
                   
                   <p className="text-xs text-muted-foreground text-center">
-                    By signing up, you'll be redirected to complete payment for $29.99. No recurring monthly fees.
+                    By signing up, you'll be redirected to complete payment for $9.99/month.
                   </p>
                 </form>
               </div>

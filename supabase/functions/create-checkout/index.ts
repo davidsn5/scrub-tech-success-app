@@ -65,12 +65,13 @@ serve(async (req) => {
               name: "Premium Subscription",
               description: "Full access to all surgical technologist study materials"
             },
-            unit_amount: 2999, // $29.99 in cents
+            unit_amount: 999, // $9.99 in cents
+            recurring: { interval: "month" },
           },
           quantity: 1,
         },
       ],
-      mode: "payment",
+      mode: "subscription",
       success_url: `${origin}/?success=true`,
       cancel_url: `${origin}/?canceled=true`,
     });
