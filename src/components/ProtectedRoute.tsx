@@ -55,7 +55,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
           <div className="bg-primary/10 p-4 rounded-md border border-primary/20 mb-6">
             <div className="flex items-center gap-2 mb-2">
               <CreditCard className="h-4 w-4 text-primary" />
-              <span className="font-medium text-sm">Premium Access - $9.99/month</span>
+              <span className="font-medium text-sm">Premium Access for a One Time Fee of $29.99</span>
             </div>
             <ul className="text-sm text-muted-foreground text-left space-y-1">
               <li>• Complete study materials for all categories</li>
