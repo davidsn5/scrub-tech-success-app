@@ -126,7 +126,7 @@ const Index = () => {
                   <span className="block sm:inline">AST Curriculum Based Practice</span>
                 </p>
                 <p className="text-sm sm:text-base text-gray-500 font-bold">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
-                <p className="text-xs sm:text-sm text-gray-500 font-medium">Full Access and Performance Analytics Only Available with Subscription</p>
+                <p className="text-xs sm:text-sm text-gray-500 font-medium">Full Access and Performance Analytics Only Available with Premium Access</p>
                 <p className="text-xs sm:text-sm text-gray-500 font-medium">Unlimited Fire Quiz questions available without Subscription</p>
                 
                 {/* Mobile Sign In/Out Buttons - show below subscription text on mobile only */}
