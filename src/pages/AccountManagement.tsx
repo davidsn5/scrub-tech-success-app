@@ -144,7 +144,7 @@ const AccountManagement = () => {
                 </div>
                 
                 <div className="flex flex-col gap-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     <Button 
                       onClick={openCustomerPortal}
                       className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white"
@@ -152,23 +152,10 @@ const AccountManagement = () => {
                       <Settings className="h-4 w-4 mr-2" />
                       Manage Subscription
                     </Button>
-                    
-                    <Button 
-                      onClick={openCustomerPortal}
-                      variant="outline"
-                      className="border-orange-300 text-orange-700 hover:bg-orange-50"
-                    >
-                      <CreditCard className="h-4 w-4 mr-2" />
-                      Cancel Subscription
-                    </Button>
                   </div>
                   
-                  <p className="text-xs text-orange-600 text-center font-medium">
-                    Enable Pop-ups to Cancel Subscription
-                  </p>
-                  
                   <p className="text-xs text-gray-500 text-center">
-                    Manage your payment method, update your plan, or cancel your subscription
+                    Manage your payment method and update your plan
                   </p>
                 </div>
               </div>
@@ -220,26 +207,18 @@ const AccountManagement = () => {
                    </ul>
                  </div>
                  
-                 <div className="text-center space-y-3">
-                   <Button 
-                     onClick={createCheckoutSession}
-                     className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white w-full"
-                   >
-                     <CreditCard className="h-4 w-4 mr-2" />
-                     Subscribe Now
-                   </Button>
-                   <Button 
-                     onClick={openCustomerPortal}
-                     variant="outline"
-                     className="border-orange-300 text-orange-700 hover:bg-orange-50 w-full"
-                   >
-                     <Settings className="h-4 w-4 mr-2" />
-                     Cancel Subscription
-                   </Button>
-                   <p className="text-xs text-gray-500">
-                     Secure payment processing through Stripe
-                   </p>
-                 </div>
+                  <div className="text-center space-y-3">
+                    <Button 
+                      onClick={createCheckoutSession}
+                      className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white w-full"
+                    >
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Subscribe Now
+                    </Button>
+                    <p className="text-xs text-gray-500">
+                      Secure payment processing through Stripe
+                    </p>
+                  </div>
                </div>
              )}
           </Card>
