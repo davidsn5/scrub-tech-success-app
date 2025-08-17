@@ -62,16 +62,15 @@ serve(async (req) => {
           price_data: {
             currency: "usd",
             product_data: { 
-              name: "Premium Subscription",
-              description: "Full access to all surgical technologist study materials"
+              name: "Premium Access - One Time",
+              description: "Lifetime access to all surgical technologist study materials"
             },
-            unit_amount: 999, // $9.99 in cents
-            recurring: { interval: "month" },
+            unit_amount: 499, // $4.99 in cents
           },
           quantity: 1,
         },
       ],
-      mode: "subscription",
+      mode: "payment",
       success_url: `${origin}/?success=true`,
       cancel_url: `${origin}/?canceled=true`,
     });

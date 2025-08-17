@@ -113,37 +113,41 @@ serve(async (req) => {
     const customerId = customers.data[0].id;
     logStep("Found Stripe customer", { customerId });
 
-    const subscriptions = await stripe.subscriptions.list({
+    // Check for completed one-time payments instead of subscriptions
+    const checkoutSessions = await stripe.checkout.sessions.list({
       customer: customerId,
-      status: "active",
-      limit: 1,
+      limit: 100,
     });
-    const hasActiveSub = subscriptions.data.length > 0;
+    
+    const hasCompletedPayment = checkoutSessions.data.some(session => 
+      session.payment_status === "paid" && session.mode === "payment"
+    );
+    
+    logStep("Checked one-time payments", { hasCompletedPayment, sessionsFound: checkoutSessions.data.length });
+    
     let subscriptionEnd = null;
-
-    if (hasActiveSub) {
-      const subscription = subscriptions.data[0];
-      subscriptionEnd = new Date(subscription.current_period_end * 1000).toISOString();
-      logStep("Active subscription found", { subscriptionId: subscription.id, endDate: subscriptionEnd });
+    if (hasCompletedPayment) {
+      // For one-time payments, set no expiration (permanent access)
+      logStep("Completed one-time payment found, granting permanent access");
     } else {
-      logStep("No active subscription found");
+      logStep("No completed one-time payments found");
     }
 
-    const finalStatus = hasActiveSub ? "active" : "trial";
+    const finalStatus = hasCompletedPayment ? "active" : "trial";
     await supabaseClient.from("subscribers").upsert({
       email: user.email,
       user_id: user.id,
       stripe_customer_id: customerId,
-      subscribed: hasActiveSub,
+      subscribed: hasCompletedPayment,
       subscription_tier: "premium",
-      subscription_end: subscriptionEnd,
+      subscription_end: subscriptionEnd, // null for permanent access
       status: finalStatus,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'email' });
 
-    logStep("Updated database with subscription info", { subscribed: hasActiveSub, subscriptionTier: "premium", status: finalStatus });
+    logStep("Updated database with payment info", { subscribed: hasCompletedPayment, subscriptionTier: "premium", status: finalStatus });
     return new Response(JSON.stringify({
-      subscribed: hasActiveSub,
+      subscribed: hasCompletedPayment,
       subscription_tier: "premium",
       subscription_end: subscriptionEnd,
       status: finalStatus
