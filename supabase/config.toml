@@ -1,4 +1,3 @@
-
 project_id = "ypycxqlwbhfzkopfjmsi"
 
 [api]
@@ -63,7 +62,4 @@ verify_jwt = true
 verify_jwt = true
 
 [functions.validate-session]
-verify_jwt = true
-
-[functions.confirm-payment]
 verify_jwt = true
