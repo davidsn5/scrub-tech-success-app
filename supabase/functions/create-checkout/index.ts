@@ -65,7 +65,7 @@ serve(async (req) => {
               name: "Premium Access - One Time",
               description: "Lifetime access to all surgical technologist study materials"
             },
-            unit_amount: 2999, // $29.99 in cents
+            unit_amount: 1999, // $19.99 in cents
           },
           quantity: 1,
         },
