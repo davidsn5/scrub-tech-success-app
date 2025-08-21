@@ -20,7 +20,8 @@ import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
 import AccountManagement from "./pages/AccountManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-
+import PurchaseSuccess from "./pages/PurchaseSuccess";
+import PurchaseCanceled from "./pages/PurchaseCanceled";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,8 @@ const AppContent = () => {
         <Route path="/" element={<Index />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/purchase/success" element={<PurchaseSuccess />} />
+        <Route path="/purchase/canceled" element={<PurchaseCanceled />} />
         
         {/* Protected Routes - Require subscription */}
         <Route path="/flashcards" element={<ProtectedRoute><Flashcards /></ProtectedRoute>} />
