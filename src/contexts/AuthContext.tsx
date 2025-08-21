@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 interface SubscriptionInfo {
   subscribed: boolean;
@@ -42,6 +43,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [previewStartTime, setPreviewStartTime] = useState<number | null>(null);
   const [previewTimeRemaining, setPreviewTimeRemaining] = useState(120); // 2 minutes in seconds
   const [isPreviewExpired, setIsPreviewExpired] = useState(false);
+  const { toast } = useToast();
 
   // Preview timer for non-authenticated users
   useEffect(() => {
@@ -112,11 +114,25 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       if (error || !data?.valid) {
         console.log('Session invalidated, signing out user');
+        
+        // Show user-friendly message about session invalidation
+        toast({
+          title: "Session Expired",
+          description: "You've been signed in from another device. Please sign in again to continue.",
+          variant: "destructive",
+        });
+        
         // Session is invalid, sign out the user
         setSubscription(null);
         setUser(null);
         setSession(null);
         await supabase.auth.signOut({ scope: 'local' });
+        
+        // Redirect to auth page after a short delay
+        setTimeout(() => {
+          window.location.href = '/auth';
+        }, 2000);
+        
         return false;
       }
       
