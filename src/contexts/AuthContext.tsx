@@ -72,6 +72,61 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [user, loading, previewStartTime]);
 
+  // Helper function to track active sessions
+  const trackActiveSession = async (session: Session, email: string) => {
+    try {
+      const deviceInfo = navigator.userAgent;
+      
+      await supabase
+        .from('active_sessions')
+        .insert({
+          user_id: session.user.id,
+          email: email,
+          session_id: session.access_token,
+          device_info: deviceInfo,
+          ip_address: null // IP will be handled server-side if needed
+        });
+    } catch (error) {
+      console.error('Error tracking session:', error);
+    }
+  };
+
+  // Helper function to remove active session
+  const removeActiveSession = async (sessionId: string) => {
+    try {
+      await supabase
+        .from('active_sessions')
+        .delete()
+        .eq('session_id', sessionId);
+    } catch (error) {
+      console.error('Error removing session:', error);
+    }
+  };
+
+  // Helper function to validate current session
+  const validateSession = async () => {
+    if (!session) return true;
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('validate-session');
+      
+      if (error || !data?.valid) {
+        console.log('Session invalidated, signing out user');
+        // Session is invalid, sign out the user
+        setSubscription(null);
+        setUser(null);
+        setSession(null);
+        await supabase.auth.signOut({ scope: 'local' });
+        return false;
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('Error validating session:', error);
+      return true; // Don't sign out on network errors
+    }
+  };
+
   useEffect(() => {
     console.log('AuthContext useEffect - Setting up auth listener');
     // Set up auth state listener
@@ -102,6 +157,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       if (session?.user) {
         console.log('Existing user found, calling checkSubscription in 100ms');
+        // Track existing session
+        trackActiveSession(session, session.user.email!);
         setTimeout(() => {
           checkSubscription();
         }, 100);
@@ -112,11 +169,29 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return () => authSubscription.unsubscribe();
   }, []);
 
+  // Periodic session validation for authenticated users
+  useEffect(() => {
+    if (!user || !session) return;
+
+    // Validate session every 30 seconds
+    const validationInterval = setInterval(() => {
+      validateSession();
+    }, 30000);
+
+    return () => clearInterval(validationInterval);
+  }, [user, session]);
+
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
+    
+    // If login successful, track the session to enforce single device login
+    if (data.session && !error) {
+      await trackActiveSession(data.session, email);
+    }
+    
     return { error };
   };
 
@@ -139,6 +214,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     try {
       setLoading(true);
+      
+      // Remove active session tracking
+      await removeActiveSession(session.access_token);
       
       // Clear local state immediately to prevent UI issues
       setSubscription(null);

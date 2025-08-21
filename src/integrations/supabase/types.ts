@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      active_sessions: {
+        Row: {
+          created_at: string
+          device_info: string | null
+          email: string
+          id: string
+          ip_address: string | null
+          last_activity: string
+          session_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          device_info?: string | null
+          email: string
+          id?: string
+          ip_address?: string | null
+          last_activity?: string
+          session_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          device_info?: string | null
+          email?: string
+          id?: string
+          ip_address?: string | null
+          last_activity?: string
+          session_id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       daily_activity: {
         Row: {
           activity_date: string
