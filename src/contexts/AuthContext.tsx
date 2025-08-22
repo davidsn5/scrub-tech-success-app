@@ -304,16 +304,28 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const createCheckoutSession = async () => {
     try {
+      console.log('Creating checkout session...');
       const { data, error } = await supabase.functions.invoke('create-checkout');
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase function error:', error);
+        throw error;
+      }
       if (data?.url) {
-        // Check if mobile device to avoid popup blockers
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        console.log('Checkout URL received:', data.url);
+        // Always redirect on mobile devices (including iPad) to avoid popup blockers
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Tablet/i.test(navigator.userAgent) || 
+                         navigator.maxTouchPoints > 1; // Detect touch devices like iPad
+        console.log('Is mobile device:', isMobile, 'User agent:', navigator.userAgent);
+        
         if (isMobile) {
+          console.log('Redirecting to Stripe checkout...');
           window.location.href = data.url;
         } else {
+          console.log('Opening Stripe checkout in new tab...');
           window.open(data.url, '_blank');
         }
+      } else {
+        console.error('No checkout URL received from function');
       }
     } catch (error) {
       console.error('Error creating checkout session:', error);
