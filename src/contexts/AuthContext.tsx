@@ -18,6 +18,8 @@ interface AuthContextType {
   isPreviewExpired: boolean;
   signIn: (email: string, password: string) => Promise<{ error?: any }>;
   signUp: (email: string, password: string) => Promise<{ error?: any }>;
+  signInWithGoogle: () => Promise<{ error?: any }>;
+  signInWithApple: () => Promise<{ error?: any }>;
   signOut: () => Promise<void>;
   checkSubscription: () => Promise<void>;
   createCheckoutSession: () => Promise<void>;
@@ -208,6 +210,26 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return { error };
   };
 
+  const signInWithGoogle = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/`
+      }
+    });
+    return { error };
+  };
+
+  const signInWithApple = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'apple',
+      options: {
+        redirectTo: `${window.location.origin}/`
+      }
+    });
+    return { error };
+  };
+
   const signOut = async () => {
     // Prevent multiple simultaneous sign out attempts
     if (!session) return;
@@ -361,6 +383,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     isPreviewExpired,
     signIn,
     signUp,
+    signInWithGoogle,
+    signInWithApple,
     signOut,
     checkSubscription,
     createCheckoutSession,
