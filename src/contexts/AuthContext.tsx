@@ -312,17 +312,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       if (data?.url) {
         console.log('Checkout URL received:', data.url);
-        // Always redirect on mobile devices (including iPad) to avoid popup blockers
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Tablet/i.test(navigator.userAgent) || 
-                         navigator.maxTouchPoints > 1; // Detect touch devices like iPad
-        console.log('Is mobile device:', isMobile, 'User agent:', navigator.userAgent);
         
-        if (isMobile) {
-          console.log('Redirecting to Stripe checkout...');
+        // Force popup window for all devices including mobile and iPad
+        const popup = window.open(
+          data.url, 
+          'stripe-checkout',
+          'width=800,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
+        );
+        
+        if (!popup) {
+          console.log('Popup blocked, falling back to redirect');
           window.location.href = data.url;
         } else {
-          console.log('Opening Stripe checkout in new tab...');
-          window.open(data.url, '_blank');
+          console.log('Stripe checkout popup opened successfully');
         }
       } else {
         console.error('No checkout URL received from function');
