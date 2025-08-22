@@ -307,7 +307,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const { data, error } = await supabase.functions.invoke('create-checkout');
       if (error) throw error;
       if (data?.url) {
-        window.open(data.url, '_blank');
+        // Check if mobile device to avoid popup blockers
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobile) {
+          window.location.href = data.url;
+        } else {
+          window.open(data.url, '_blank');
+        }
       }
     } catch (error) {
       console.error('Error creating checkout session:', error);
