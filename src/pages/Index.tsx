@@ -461,25 +461,22 @@ const Index = () => {
             Review
           </h2>
         
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-            {/* Regular Flashcards */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
-                  <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
+          {/* Study Flashcards - Full Width */}
+          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg mb-6">
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
+                <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
               </div>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-              <Link to="/flashcards">
-                <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                  <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Browse Flashcards
-                </Button>
-              </Link>
-            </Card>
-
-          </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
+            </div>
+            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
+            <Link to="/flashcards">
+              <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
+                <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Browse Flashcards
+              </Button>
+            </Link>
+          </Card>
         </div>
 
         {/* Fire Quiz and Quick Actions */}
