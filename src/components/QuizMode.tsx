@@ -3,8 +3,10 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, XCircle, Clock, Award, Shuffle } from 'lucide-react';
+import { CheckCircle, XCircle, Clock, Award, Shuffle, Lock, Star } from 'lucide-react';
 import { useUserProgress } from '@/hooks/useUserProgress';
+import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface QuizModeProps {
   category: string;
@@ -528,6 +530,8 @@ const QuizMode: React.FC<QuizModeProps> = ({
   onQuestionAttempt 
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
+  const { createCheckoutSession } = useAuth();
+  const { canAccessQuiz, incrementDailyQuizCount, getRemainingQuizzes, isPremium } = useFreeAccessGate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
@@ -634,6 +638,10 @@ const QuizMode: React.FC<QuizModeProps> = ({
     } else {
       setQuizCompleted(true);
       setIsActive(false);
+      // Increment daily quiz count for free users when completing a quiz
+      if (!isPremium) {
+        incrementDailyQuizCount();
+      }
     }
   };
 
@@ -647,10 +655,45 @@ const QuizMode: React.FC<QuizModeProps> = ({
     setIsActive(false);
   };
 
+  const handleUnlockPremium = async () => {
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+    }
+  };
+
+  // Check if quiz is blocked for free users
+  const isQuizBlocked = !isPremium && !canAccessQuiz();
+
   if (!questions.length) {
     return (
       <div className="text-center py-12">
         <p className="text-gray-600">No quiz questions available for this category yet.</p>
+      </div>
+    );
+  }
+
+  // Show gating overlay if quiz is blocked
+  if (isQuizBlocked) {
+    const remainingQuizzes = getRemainingQuizzes();
+    return (
+      <div className="text-center py-12 space-y-6">
+        <Lock className="h-16 w-16 text-gray-400 mx-auto" />
+        <h2 className="text-2xl font-bold text-gray-900">Daily Quiz Limit Reached</h2>
+        <div className="space-y-2">
+          <p className="text-gray-600">Free users can complete 2 quizzes per day</p>
+          <p className="text-sm text-gray-500">
+            You have {remainingQuizzes} quiz{remainingQuizzes !== 1 ? 'es' : ''} remaining today
+          </p>
+        </div>
+        <Button 
+          onClick={handleUnlockPremium}
+          className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white"
+        >
+          <Star className="h-4 w-4 mr-2" />
+          Unlock Premium for Unlimited Quizzes
+        </Button>
       </div>
     );
   }
@@ -666,6 +709,11 @@ const QuizMode: React.FC<QuizModeProps> = ({
         <div className="space-y-2">
           <p className="text-4xl font-bold text-blue-600">{percentage}%</p>
           <p className="text-gray-600">You scored {score} out of {questions.length} questions</p>
+          {!isPremium && (
+            <p className="text-sm text-gray-500">
+              Remaining daily quizzes: {getRemainingQuizzes()}
+            </p>
+          )}
         </div>
         <div className="flex justify-center space-x-3">
           <Button onClick={resetQuiz} className="bg-blue-600 hover:bg-blue-700">

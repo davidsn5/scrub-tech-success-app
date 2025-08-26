@@ -51,6 +51,7 @@ const IntroSurgicalTech = () => {
           questions={introSurgicalTechQuestions}
           categoryName="Intro to Surgical Technology"
           onMissedQuestion={handleMissedQuestion}
+          categorySlug="intro-surgical-tech"
           themeColor="from-orange-500/90 to-orange-600/90"
           progressBarColor="bg-orange-600"
         />

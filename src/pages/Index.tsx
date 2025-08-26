@@ -2,11 +2,13 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import AddToHomeScreen from '@/components/AddToHomeScreen';
+import StickyPromoBanner from '@/components/StickyPromoBanner';
 import { useToast } from '@/hooks/use-toast';
 
 
@@ -103,8 +105,29 @@ const Index = () => {
 
   
 
+  const handleUnlockPremium = async () => {
+    if (!user) {
+      navigate('/auth');
+      return;
+    }
+
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+      toast({
+        title: "Error",
+        description: "Failed to start checkout. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
+      {/* Sticky Promo Banner */}
+      <StickyPromoBanner />
+      
       {/* Header */}
       <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
@@ -220,7 +243,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 mt-16">
         {/* Progress Tracker */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
@@ -281,7 +304,14 @@ const Index = () => {
                       <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-r ${section.color} flex-shrink-0`}>
                         <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                       </div>
-                      <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
+                     <div className="flex-1">
+                        <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
+                        {!isSubscribed && (
+                          <Badge variant="outline" className="mt-1 text-xs">
+                            {section.title === "Medical Terminology" ? "10 free Qs" : section.title === "Surgical Procedures" ? "2 free quizzes/day" : "10 free Qs"}
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
                     <Link to={section.link} className="mt-auto">
@@ -295,6 +325,88 @@ const Index = () => {
             })}
           </div>
         </div>
+
+        {/* Premium Section - Only show for non-premium users */}
+        {!isSubscribed && (
+          <div className="mb-6 sm:mb-8">
+            <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/95 via-primary/5 to-primary/10 backdrop-blur-sm border-primary/20 shadow-xl">
+              <div className="text-center max-w-4xl mx-auto">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-primary/80">
+                    <Star className="h-8 w-8 text-white fill-white" />
+                  </div>
+                </div>
+                
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                  Go Premium
+                </h2>
+                
+                <p className="text-gray-600 mb-6 text-lg">
+                  Unlock your full potential with complete access to all study materials
+                </p>
+
+                {/* Value Props */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">1700+ Practice Questions</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Complete Flashcard Library</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Full Exam Simulations</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Detailed Performance Analytics</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Unlimited Study Sessions</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Lifetime Updates</span>
+                  </div>
+                </div>
+
+                {/* Testimonials */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white/60 rounded-lg p-4 border border-gray-200/50">
+                    <div className="flex items-center space-x-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-gray-600 mb-2">"The comprehensive question bank helped me pass my CST exam on the first try!"</p>
+                    <p className="text-xs text-gray-500 font-medium">- Sarah M., CST</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-gray-200/50">
+                    <div className="flex items-center space-x-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-gray-600 mb-2">"91% pass rate improvement with detailed explanations and analytics."</p>
+                    <p className="text-xs text-gray-500 font-medium">- Program Director Review</p>
+                  </div>
+                </div>
+
+                <Button 
+                  onClick={handleUnlockPremium}
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white px-8 py-3 text-lg font-semibold"
+                >
+                  <Star className="h-5 w-5 mr-2" />
+                  Unlock Premium Access
+                </Button>
+              </div>
+            </Card>
+          </div>
+        )}
 
         {/* Review Section */}
         <div className="mb-6 sm:mb-8">

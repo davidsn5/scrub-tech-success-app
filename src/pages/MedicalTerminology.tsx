@@ -53,6 +53,7 @@ const MedicalTerminology = () => {
           questions={medicalTerminologyQuestions}
           categoryName="Medical Terminology"
           onMissedQuestion={handleMissedQuestion}
+          categorySlug="medical-terminology"
           themeColor="from-purple-500/90 to-purple-600/90"
           progressBarColor="bg-purple-600"
         />

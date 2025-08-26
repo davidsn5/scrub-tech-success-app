@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle, Home, Award } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle, Home, Award, Lock, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Question } from '@/data/questions/introSurgicalTech';
 import { useUserProgress } from '@/hooks/useUserProgress';
+import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface QuestionPracticeProps {
   questions: Question[];
@@ -29,6 +31,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   isExamMode = false
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
+  const { createCheckoutSession } = useAuth();
+  const { canAccessQuestion, isPremium } = useFreeAccessGate();
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -44,6 +48,15 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
 
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
   const isCorrect = selectedAnswer === currentQuestion?.correctAnswer;
+  const isQuestionBlocked = !isPremium && !canAccessQuestion(currentQuestionIndex);
+
+  const handleUnlockPremium = async () => {
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+    }
+  };
 
   const shuffleQuestions = () => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
@@ -271,8 +284,29 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
       </div>
 
       {/* Question Card */}
-      <Card className="p-8 bg-gradient-to-br from-white/90 via-orange-50/40 to-teal-50/40 backdrop-blur-sm border-orange-200/30 shadow-xl">
-        <div className="space-y-6">
+      <Card className="p-8 bg-gradient-to-br from-white/90 via-orange-50/40 to-teal-50/40 backdrop-blur-sm border-orange-200/30 shadow-xl relative">
+        {isQuestionBlocked && (
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center z-10">
+            <div className="text-center max-w-md p-6">
+              <Lock className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Free users can access 10 questions per category
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Unlock all {shuffledQuestions.length} questions with Premium access
+              </p>
+              <Button 
+                onClick={handleUnlockPremium}
+                className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white"
+              >
+                <Star className="h-4 w-4 mr-2" />
+                Unlock Premium
+              </Button>
+            </div>
+          </div>
+        )}
+        
+        <div className={`space-y-6 ${isQuestionBlocked ? 'blur-sm pointer-events-none' : ''}`}>
           <h3 className="text-xl font-semibold text-gray-900 leading-relaxed">
             {currentQuestion?.question}
           </h3>
