@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [subscription, setSubscription] = useState<SubscriptionInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [previewStartTime, setPreviewStartTime] = useState<number | null>(null);
-  const [previewTimeRemaining, setPreviewTimeRemaining] = useState(120); // 2 minutes in seconds
+  const [previewTimeRemaining, setPreviewTimeRemaining] = useState(600); // 10 minutes in seconds
   const [isPreviewExpired, setIsPreviewExpired] = useState(false);
 
   // Preview timer for non-authenticated users
@@ -58,7 +58,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const interval = setInterval(() => {
         const startTime = previewStartTime || parseInt(localStorage.getItem('previewStartTime') || '0');
         const elapsed = Math.floor((Date.now() - startTime) / 1000);
-        const remaining = Math.max(120 - elapsed, 0); // 2 minutes = 120 seconds
+        const remaining = Math.max(600 - elapsed, 0); // 10 minutes = 600 seconds
         
         setPreviewTimeRemaining(remaining);
         setIsPreviewExpired(remaining === 0);
@@ -68,7 +68,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } else if (user) {
       // Clear preview timer when user is authenticated
       setPreviewStartTime(null);
-      setPreviewTimeRemaining(120);
+      setPreviewTimeRemaining(600);
       setIsPreviewExpired(false);
       localStorage.removeItem('previewStartTime');
     }
