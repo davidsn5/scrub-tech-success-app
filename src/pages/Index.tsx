@@ -135,8 +135,8 @@ const Index = () => {
             {/* Logo and Brand Section */}
             <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 flex-1">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <div className="relative w-18 h-18 sm:w-22 sm:h-22 rounded-2xl shadow-xl overflow-hidden ring-2 ring-white/50">
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl shadow-lg overflow-hidden ring-2 ring-white/50">
                   <img 
                     src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
                     alt="Surgical Tech Review Logo" 
