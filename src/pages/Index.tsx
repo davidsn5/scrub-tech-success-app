@@ -129,52 +129,77 @@ const Index = () => {
       <StickyPromoBanner />
       
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+      <div className="bg-gradient-to-r from-white/98 via-slate-50/95 to-blue-50/90 shadow-lg border-b border-slate-200/40 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex items-center justify-between">
-            <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-3 sm:space-y-0 sm:space-x-3 flex-1">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
-                <img 
-                  src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
-                  alt="Surgical Tech Review Logo" 
-                  className="w-full h-full object-cover"
-                />
+            {/* Logo and Brand Section */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 flex-1">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative w-18 h-18 sm:w-22 sm:h-22 rounded-2xl shadow-xl overflow-hidden ring-2 ring-white/50">
+                  <img 
+                    src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
+                    alt="Surgical Tech Review Logo" 
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
+                  />
+                </div>
               </div>
-              <div className="text-center sm:text-left">
-                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-600">
+              
+              <div className="text-center sm:text-left space-y-1 sm:space-y-2">
+                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 bg-clip-text text-transparent animate-fade-in">
                   Surgical Technologist Review
                 </h1>
-                <p className="text-sm sm:text-base text-gray-600 font-bold">
-                  CST Program and Exam Prep<span className="hidden sm:inline">, </span>
-                  <span className="block sm:inline">AST Curriculum Based Practice</span>
-                </p>
-                <p className="text-sm sm:text-base text-gray-500 font-bold">1700+ Practice Questions, Interactive Flashcards, Full Exam Simulation, and Performance Analytics</p>
-                <p className="text-xs sm:text-sm text-gray-500 font-medium">Full Access and Performance Analytics Only Available with Premium Access</p>
-                <p className="text-xs sm:text-sm text-gray-500 font-medium">Unlimited Fire Quiz questions available without Premium Access</p>
+                <div className="space-y-1">
+                  <p className="text-sm sm:text-base text-slate-700 font-semibold leading-tight">
+                    CST Program and Exam Prep
+                    <span className="hidden sm:inline text-slate-500"> • </span>
+                    <span className="block sm:inline text-slate-600">AST Curriculum Based Practice</span>
+                  </p>
+                  <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed max-w-2xl">
+                    1700+ Practice Questions • Interactive Flashcards • Full Exam Simulation • Performance Analytics
+                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center sm:justify-start text-xs">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-orange-100/80 text-orange-700 font-medium border border-orange-200/50">
+                      Premium Features Available
+                    </span>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-green-100/80 text-green-700 font-medium border border-green-200/50">
+                      Fire Quiz Always Free
+                    </span>
+                  </div>
+                </div>
                 
-                {/* Mobile Sign In/Out Buttons - show below subscription text on mobile only */}
+                {/* Mobile Auth Section */}
                 <div className="mt-4 sm:hidden">
                   {!user ? (
                     <Button 
                       onClick={() => navigate('/auth')} 
-                      className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90"
+                      className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     >
+                      <User className="h-4 w-4 mr-2" />
                       Sign in/Sign up
                     </Button>
                   ) : (
-                    <div className="space-y-2">
-                      <p className="text-sm text-gray-600">{user.email}</p>
+                    <div className="space-y-3 bg-white/60 rounded-xl p-4 border border-slate-200/50 backdrop-blur-sm">
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <p className="text-sm text-slate-700 font-medium">{user.email}</p>
+                      </div>
                       <div className="flex flex-col space-y-2">
                         {isSubscribed && !isAdmin && (
-                          <Link to="/account">
-                            <Button variant="outline" size="sm">
-                              <Settings className="h-4 w-4 mr-1" />
+                          <Link to="/account" className="w-full">
+                            <Button variant="outline" size="sm" className="w-full hover:bg-slate-50">
+                              <Settings className="h-4 w-4 mr-2" />
                               Manage Account
                             </Button>
                           </Link>
                         )}
-                        <Button onClick={signOut} variant="outline" size="sm">
-                          <LogOut className="h-4 w-4 mr-1" />
+                        <Button 
+                          onClick={signOut} 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full hover:bg-red-50 hover:border-red-200 hover:text-red-600"
+                        >
+                          <LogOut className="h-4 w-4 mr-2" />
                           Sign Out
                         </Button>
                       </div>
@@ -184,60 +209,82 @@ const Index = () => {
               </div>
             </div>
             
-            {/* User Menu - Only show when authenticated on desktop/tablet */}
+            {/* Desktop User Section */}
             {user && (
               <div className="hidden sm:flex items-center space-x-4">
-                {/* Subscription Status */}
-                <div className="flex items-center space-x-2">
+                {/* Enhanced Subscription Status */}
+                <div className="flex items-center space-x-3">
                   {isAdmin ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200">
-                      <Shield className="h-3 w-3" />
-                      <span className="text-xs font-medium">Admin</span>
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 px-4 py-2 rounded-full border border-emerald-200/60 shadow-sm">
+                      <Shield className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Admin</span>
                     </div>
                   ) : isSubscribed ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">
-                      <Shield className="h-3 w-3" />
-                      <span className="text-xs font-medium">Premium</span>
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full border border-blue-200/60 shadow-sm">
+                      <Shield className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Premium</span>
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     </div>
                   ) : isTrialActive ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200">
-                      <Clock className="h-3 w-3" />
-                      <span className="text-xs font-medium">Trial</span>
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-4 py-2 rounded-full border border-amber-200/60 shadow-sm">
+                      <Clock className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Trial</span>
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 px-4 py-2 rounded-full border border-slate-200/60 shadow-sm">
+                      <User className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Free</span>
+                    </div>
+                  )}
                 </div>
                 
-                {/* User Actions */}
-                <div className="flex flex-col items-end space-y-2">
-                  <span className="text-sm text-gray-600">{user.email}</span>
+                {/* Enhanced User Actions */}
+                <div className="flex flex-col items-end space-y-3 bg-white/60 rounded-xl p-4 border border-slate-200/50 backdrop-blur-sm shadow-sm">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm text-slate-700 font-medium">{user.email}</span>
+                  </div>
                   
                   <div className="flex items-center space-x-2">
                     {isSubscribed && !isAdmin && (
                       <Link to="/account">
-                        <Button variant="outline" size="sm">
-                          <Settings className="h-4 w-4 mr-1" />
-                          Manage Account
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="hover:bg-slate-50 hover:scale-105 transition-all duration-200"
+                        >
+                          <Settings className="h-4 w-4 mr-2" />
+                          Account
                         </Button>
                       </Link>
                     )}
                     
-                    <Button onClick={signOut} variant="outline" size="sm">
-                      <LogOut className="h-4 w-4 mr-1" />
-                      <span className="hidden sm:inline">Sign Out</span>
+                    <Button 
+                      onClick={signOut} 
+                      variant="outline" 
+                      size="sm"
+                      className="hover:bg-red-50 hover:border-red-200 hover:text-red-600 hover:scale-105 transition-all duration-200"
+                    >
+                      <LogOut className="h-4 w-4 mr-2" />
+                      <span className="hidden lg:inline">Sign Out</span>
                     </Button>
                   </div>
                 </div>
               </div>
             )}
             
-            {/* Sign In Button for non-authenticated users - desktop only */}
+            {/* Desktop Sign In Button */}
             {!user && (
-              <Button 
-                onClick={() => navigate('/auth')} 
-                className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 hidden sm:block"
-              >
-                Sign in/Sign up
-              </Button>
+              <div className="hidden sm:block">
+                <Button 
+                  onClick={() => navigate('/auth')} 
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-6"
+                >
+                  <User className="h-4 w-4 mr-2" />
+                  Sign in/Sign up
+                </Button>
+              </div>
             )}
           </div>
         </div>
