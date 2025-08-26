@@ -71,13 +71,25 @@ export const useFreeAccessGate = () => {
     }));
   };
 
-  const canAccessQuiz = () => {
+  const canAccessQuiz = (categoryName?: string) => {
     if (isPremium) return true;
+    
+    // Special handling for Surgical Procedures - always allow access (questions are limited instead)
+    if (categoryName?.toLowerCase().includes('surgical procedures')) {
+      return true;
+    }
+    
     return dailyQuizCount < limits.dailyQuizCompletions;
   };
 
-  const canAccessQuestion = (questionIndex: number) => {
+  const canAccessQuestion = (questionIndex: number, categoryName?: string) => {
     if (isPremium) return true;
+    
+    // Special handling for Surgical Procedures - use question limit instead of daily quiz limit
+    if (categoryName?.toLowerCase().includes('surgical procedures')) {
+      return questionIndex < limits.questionsPerCategory;
+    }
+    
     return questionIndex < limits.questionsPerCategory;
   };
 
