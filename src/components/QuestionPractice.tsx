@@ -35,7 +35,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   const { createCheckoutSession } = useAuth();
   const { canAccessQuestion, isPremium } = useFreeAccessGate();
   const { subscription } = useAuth();
-  const hasShuffleAccess = isPremium || subscription?.status === 'admin' || subscription?.status === 'premium';
+  const hasShuffleAccess = true; // Allow all users to shuffle questions
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
