@@ -8,108 +8,108 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Professional color palette - sophisticated blues and neutrals */
-    --background: 220 15% 97%;
-    --foreground: 215 25% 15%;
+    /* Vibrant orange color palette - energetic and engaging */
+    --background: 30 15% 97%;
+    --foreground: 25 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 25 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 25 25% 15%;
 
-    /* Primary: Professional navy blue */
-    --primary: 217 91% 24%;
+    /* Primary: Vibrant orange */
+    --primary: 25 95% 53%;
     --primary-foreground: 0 0% 98%;
 
-    /* Secondary: Sophisticated gray */
-    --secondary: 215 16% 47%;
+    /* Secondary: Warm gray */
+    --secondary: 30 8% 47%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 14% 95%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 30 14% 95%;
+    --muted-foreground: 30 15% 45%;
 
-    /* Accent: Subtle teal for highlights */
-    --accent: 200 85% 35%;
+    /* Accent: Deep orange for highlights */
+    --accent: 15 85% 45%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 24%;
+    --border: 30 13% 91%;
+    --input: 30 13% 91%;
+    --ring: 25 95% 53%;
 
     --radius: 0.5rem;
 
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 24%), hsl(217 91% 32%));
-    --gradient-secondary: linear-gradient(135deg, hsl(215 16% 47%), hsl(215 16% 55%));
-    --gradient-accent: linear-gradient(135deg, hsl(200 85% 35%), hsl(200 85% 43%));
-    --gradient-background: linear-gradient(135deg, hsl(220 15% 97%), hsl(220 15% 94%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    /* Orange-themed gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(30 8% 47%), hsl(30 8% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 85% 45%), hsl(15 85% 53%));
+    --gradient-background: linear-gradient(135deg, hsl(30 15% 97%), hsl(30 15% 94%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(30 14% 98%));
 
-    /* Professional shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 43% 11% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 43% 11% / 0.1), 0 2px 4px -1px hsl(220 43% 11% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(220 43% 11% / 0.1), 0 4px 6px -2px hsl(220 43% 11% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(220 43% 11% / 0.1), 0 10px 10px -5px hsl(220 43% 11% / 0.04);
+    /* Orange-themed shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(25 43% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(25 43% 11% / 0.1), 0 2px 4px -1px hsl(25 43% 11% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(25 43% 11% / 0.1), 0 4px 6px -2px hsl(25 43% 11% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(25 43% 11% / 0.1), 0 10px 10px -5px hsl(25 43% 11% / 0.04);
 
     /* Sidebar variables */
-    --sidebar-background: 217 91% 24%;
+    --sidebar-background: 25 95% 53%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 200 85% 35%;
+    --sidebar-primary: 15 85% 45%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 217 78% 32%;
+    --sidebar-accent: 25 78% 60%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 217 78% 32%;
-    --sidebar-ring: 200 85% 35%;
+    --sidebar-border: 25 78% 60%;
+    --sidebar-ring: 15 85% 45%;
   }
 
   .dark {
-    --background: 215 25% 8%;
+    --background: 25 25% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 215 22% 12%;
+    --card: 25 22% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 215 22% 12%;
+    --popover: 25 22% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 217 91% 40%;
-    --primary-foreground: 215 25% 8%;
+    --primary: 25 91% 55%;
+    --primary-foreground: 25 25% 8%;
 
-    --secondary: 215 16% 25%;
+    --secondary: 30 16% 25%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 215 20% 18%;
-    --muted-foreground: 215 10% 65%;
+    --muted: 25 20% 18%;
+    --muted-foreground: 25 10% 65%;
 
-    --accent: 200 85% 50%;
-    --accent-foreground: 215 25% 8%;
+    --accent: 15 85% 60%;
+    --accent-foreground: 25 25% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 20% 18%;
-    --input: 215 20% 18%;
-    --ring: 217 91% 40%;
+    --border: 25 20% 18%;
+    --input: 25 20% 18%;
+    --ring: 25 91% 55%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 40%), hsl(217 91% 48%));
-    --gradient-secondary: linear-gradient(135deg, hsl(215 16% 25%), hsl(215 16% 33%));
-    --gradient-accent: linear-gradient(135deg, hsl(200 85% 50%), hsl(200 85% 58%));
-    --gradient-background: linear-gradient(135deg, hsl(215 25% 8%), hsl(215 25% 11%));
-    --gradient-card: linear-gradient(135deg, hsl(215 22% 12%), hsl(215 22% 15%));
+    /* Dark mode orange gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 91% 55%), hsl(25 91% 63%));
+    --gradient-secondary: linear-gradient(135deg, hsl(30 16% 25%), hsl(30 16% 33%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 85% 60%), hsl(15 85% 68%));
+    --gradient-background: linear-gradient(135deg, hsl(25 25% 8%), hsl(25 25% 11%));
+    --gradient-card: linear-gradient(135deg, hsl(25 22% 12%), hsl(25 22% 15%));
 
-    --sidebar-background: 215 25% 8%;
+    --sidebar-background: 25 25% 8%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 200 85% 50%;
-    --sidebar-primary-foreground: 215 25% 8%;
-    --sidebar-accent: 215 20% 15%;
+    --sidebar-primary: 15 85% 60%;
+    --sidebar-primary-foreground: 25 25% 8%;
+    --sidebar-accent: 25 20% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 215 20% 15%;
-    --sidebar-ring: 200 85% 50%;
+    --sidebar-border: 25 20% 15%;
+    --sidebar-ring: 15 85% 60%;
   }
 }
 
