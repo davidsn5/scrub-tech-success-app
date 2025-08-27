@@ -76,6 +76,7 @@ export type Database = {
           id: string
           updated_at: string
           user_id: string
+          username: string | null
         }
         Insert: {
           created_at?: string
@@ -84,6 +85,7 @@ export type Database = {
           id?: string
           updated_at?: string
           user_id: string
+          username?: string | null
         }
         Update: {
           created_at?: string
@@ -92,6 +94,7 @@ export type Database = {
           id?: string
           updated_at?: string
           user_id?: string
+          username?: string | null
         }
         Relationships: []
       }
@@ -231,6 +234,19 @@ export type Database = {
     Functions: {
       email_has_trial_history: {
         Args: { user_email: string }
+        Returns: boolean
+      }
+      get_user_by_username: {
+        Args: { input_username: string }
+        Returns: {
+          display_name: string
+          email: string
+          user_id: string
+          username: string
+        }[]
+      }
+      username_exists: {
+        Args: { input_username: string }
         Returns: boolean
       }
     }

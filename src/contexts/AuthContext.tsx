@@ -16,14 +16,16 @@ interface AuthContextType {
   loading: boolean;
   previewTimeRemaining: number;
   isPreviewExpired: boolean;
-  signIn: (email: string, password: string) => Promise<{ error?: any }>;
-  signUp: (email: string, password: string) => Promise<{ error?: any }>;
+  signIn: (emailOrUsername: string, password: string) => Promise<{ error?: any }>;
+  signUp: (email: string, password: string, username?: string) => Promise<{ error?: any }>;
   signInWithGoogle: () => Promise<{ error?: any }>;
   signInWithApple: () => Promise<{ error?: any }>;
   signOut: () => Promise<void>;
   checkSubscription: () => Promise<void>;
   createCheckoutSession: () => Promise<void>;
   openCustomerPortal: () => Promise<void>;
+  checkUsernameAvailability: (username: string) => Promise<{ available: boolean; error?: any }>;
+  updateUsername: (username: string) => Promise<{ error?: any }>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -164,30 +166,80 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return () => clearInterval(validationInterval);
   }, [user, session]);
 
-  const signIn = async (email: string, password: string) => {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+  const signIn = async (emailOrUsername: string, password: string) => {
+    // Check if input is an email or username
+    const isEmail = emailOrUsername.includes('@');
     
-    // If login successful, track the session to enforce single device login
-    if (data.session && !error) {
-      await trackActiveSession(data.session, email);
+    if (isEmail) {
+      // Standard email/password signin
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: emailOrUsername,
+        password,
+      });
+      
+      if (data.session && !error) {
+        await trackActiveSession(data.session, emailOrUsername);
+      }
+      
+      return { error };
+    } else {
+      // Username-based signin
+      try {
+        const { data, error } = await supabase.functions.invoke('username-auth', {
+          body: {
+            action: 'sign-in-with-username',
+            username: emailOrUsername,
+            password
+          }
+        });
+        
+        if (error) {
+          return { error };
+        }
+        
+        if (data.session && data.user) {
+          await trackActiveSession(data.session, data.user.email);
+          // Set the session manually since we're bypassing the normal auth flow
+          setSession(data.session);
+          setUser(data.user);
+        }
+        
+        return { error: null };
+      } catch (error) {
+        return { error };
+      }
     }
-    
-    return { error };
   };
 
-  const signUp = async (email: string, password: string) => {
+  const signUp = async (email: string, password: string, username?: string) => {
     const redirectUrl = `${window.location.origin}/`;
     
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         emailRedirectTo: redirectUrl
       }
     });
+    
+    // If signup successful and username provided, update the profile
+    if (!error && username && data.user) {
+      try {
+        await supabase.functions.invoke('username-auth', {
+          body: {
+            action: 'update-username',
+            username
+          },
+          headers: {
+            Authorization: `Bearer ${data.session?.access_token}`
+          }
+        });
+      } catch (usernameError) {
+        console.error('Error setting username:', usernameError);
+        // Don't fail the signup if username update fails
+      }
+    }
+    
     return { error };
   };
 
@@ -355,6 +407,50 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const checkUsernameAvailability = async (username: string) => {
+    try {
+      const { data, error } = await supabase.functions.invoke('username-auth', {
+        body: {
+          action: 'check-username',
+          username
+        }
+      });
+      
+      if (error) {
+        return { available: false, error };
+      }
+      
+      return { available: !data.exists, error: null };
+    } catch (error) {
+      return { available: false, error };
+    }
+  };
+
+  const updateUsername = async (username: string) => {
+    if (!session) {
+      return { error: { message: "Not authenticated" } };
+    }
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('username-auth', {
+        body: {
+          action: 'update-username',
+          username
+        },
+        headers: {
+          Authorization: `Bearer ${session.access_token}`
+        }
+      });
+      
+      if (error) {
+        return { error };
+      }
+      
+      return { error: null };
+    } catch (error) {
+      return { error };
+    }
+  };
   const value = {
     user,
     session,
@@ -370,6 +466,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     checkSubscription,
     createCheckoutSession,
     openCustomerPortal,
+    checkUsernameAvailability,
+    updateUsername,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
