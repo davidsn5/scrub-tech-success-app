@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle, CheckCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle, CheckCircle, Lock, Crown } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
+import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface FlashcardsProps {
   category: string;
@@ -22,9 +24,13 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
   const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
+  const { isPremium } = useFreeAccessGate();
+  const { createCheckoutSession } = useAuth();
 
   const originalFlashcards = flashcardData[category] || [];
-  const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : originalFlashcards;
+  // Limit free users to 5 flashcards
+  const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, 5);
+  const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : limitedFlashcards;
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -74,11 +80,23 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   };
 
   const handleShuffle = () => {
+    if (!isPremium) {
+      handleUnlockPremium();
+      return;
+    }
     const shuffled = [...originalFlashcards].sort(() => Math.random() - 0.5);
     setShuffledCards(shuffled);
     setCurrentIndex(0);
     setShowAnswer(false);
     setReviewedCards(new Set());
+  };
+
+  const handleUnlockPremium = async () => {
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+    }
   };
 
   return (
@@ -102,9 +120,20 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           </div>
         </div>
         <div className="flex items-center gap-2 flex-wrap">
-          <Button onClick={handleShuffle} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
+          <Button 
+            onClick={handleShuffle} 
+            variant="outline" 
+            size="sm" 
+            className={`flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm ${!isPremium ? 'opacity-50 cursor-not-allowed' : ''} relative`}
+            disabled={!isPremium}
+          >
             <Shuffle className="h-4 w-4" />
             <span>Shuffle</span>
+            {!isPremium && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Lock className="h-3 w-3 text-amber-500" />
+              </div>
+            )}
           </Button>
           <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
             <RotateCcw className="h-4 w-4" />
@@ -113,29 +142,34 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
         </div>
       </div>
 
-      {/* Progress Bar */}
-      <div className="mb-4 sm:mb-6">
-        <div className="flex items-center justify-between mb-2">
-          <span className={`text-xs sm:text-sm font-medium ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-700'}`}>Study Progress</span>
-          <span className="text-xs sm:text-sm text-gray-500">
-            {Math.round((reviewedCards.size / currentFlashcards.length) * 100)}% complete
-          </span>
+      {/* Free User Notice */}
+      {!isPremium && originalFlashcards.length > 5 && (
+        <div className="mb-4 sm:mb-6">
+          <Card className="bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-200/50 p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <Lock className="h-5 w-5 text-amber-600" />
+                <div>
+                  <p className="text-sm font-medium text-amber-800">
+                    Showing 5 of {originalFlashcards.length} flashcards
+                  </p>
+                  <p className="text-xs text-amber-700">
+                    Unlock all flashcards with Premium access
+                  </p>
+                </div>
+              </div>
+              <Button 
+                onClick={handleUnlockPremium}
+                size="sm"
+                className="bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90 text-white"
+              >
+                <Crown className="h-4 w-4 mr-1" />
+                Unlock
+              </Button>
+            </div>
+          </Card>
         </div>
-        <Progress 
-          value={(reviewedCards.size / currentFlashcards.length) * 100} 
-          className="h-2"
-          backgroundColor="bg-white border border-gray-200"
-          indicatorColor={
-            categoryColors?.color?.includes('blue') ? 'bg-blue-600' : 
-            categoryColors?.color?.includes('purple') ? 'bg-purple-600' :
-            categoryColors?.color?.includes('orange') ? 'bg-orange-600' :
-            categoryColors?.color?.includes('teal') ? 'bg-teal-600' :
-            categoryColors?.color?.includes('green') ? 'bg-green-600' :
-            categoryColors?.color?.includes('indigo') ? 'bg-indigo-600' :
-            'bg-blue-600'
-          }
-        />
-      </div>
+      )}
 
       <div className="mb-6 sm:mb-8">
         <Card className={`w-full h-80 sm:h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg`}>

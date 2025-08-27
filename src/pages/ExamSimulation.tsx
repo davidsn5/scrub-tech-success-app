@@ -2,19 +2,35 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Award, Clock, Target, BookOpen } from 'lucide-react';
+import { ArrowLeft, Award, Clock, Target, BookOpen, Lock, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import QuestionPractice from '@/components/QuestionPractice';
 import { getExamSimulationQuestions, categoryBreakdown } from '@/data/allQuestions';
+import { useAuth } from '@/contexts/AuthContext';
+import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
 
 const ExamSimulation = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [examQuestions, setExamQuestions] = useState<any[]>([]);
+  const { createCheckoutSession } = useAuth();
+  const { isPremium } = useFreeAccessGate();
 
   const startExam = () => {
+    if (!isPremium) {
+      handleUnlockPremium();
+      return;
+    }
     const questions = getExamSimulationQuestions();
     setExamQuestions(questions);
     setIsStarted(true);
+  };
+
+  const handleUnlockPremium = async () => {
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+    }
   };
 
   const handleMissedQuestion = (question: any) => {
@@ -63,7 +79,46 @@ const ExamSimulation = () => {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
-        {!isStarted ? (
+        {!isPremium ? (
+          <Card className="bg-gradient-to-br from-white/90 via-amber-50/80 to-orange-50/70 backdrop-blur-sm border-amber-200/50 shadow-xl p-8">
+            <div className="text-center space-y-6">
+              <div className="flex justify-center">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-amber-500/90 to-orange-500/90">
+                  <Lock className="h-12 w-12 text-white" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">Premium Feature</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                The full exam simulation is available to Premium users only. Unlock access to experience the complete 
+                certification exam with 150 questions drawn from all study categories.
+              </p>
+              
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-6 my-8 border border-amber-200">
+                <h3 className="font-semibold text-gray-900 mb-4 flex items-center justify-center">
+                  <Crown className="h-5 w-5 text-amber-600 mr-2" />
+                  Premium Benefits Include:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="text-gray-700">• Full 150-question exam simulation</div>
+                  <div className="text-gray-700">• Unlimited practice questions</div>
+                  <div className="text-gray-700">• Complete flashcard collections</div>
+                  <div className="text-gray-700">• Detailed performance analytics</div>
+                  <div className="text-gray-700">• Question shuffling & customization</div>
+                  <div className="text-gray-700">• Progress tracking across all modules</div>
+                </div>
+              </div>
+
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white px-8 py-3"
+                onClick={handleUnlockPremium}
+              >
+                <Crown className="h-5 w-5 mr-2" />
+                Unlock Premium Access
+              </Button>
+            </div>
+          </Card>
+        ) : !isStarted ? (
           <Card className="bg-gradient-to-br from-white/90 via-blue-50/80 to-indigo-50/70 backdrop-blur-sm border-blue-200/50 shadow-xl p-8">
             <div className="text-center space-y-6">
               <div className="flex justify-center">
