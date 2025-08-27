@@ -6,7 +6,7 @@ import { Progress } from '@/components/ui/progress';
 import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle, CheckCircle, Lock, Crown } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
-import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 interface FlashcardsProps {
   category: string;
@@ -25,7 +25,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
   const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
   const { isPremium } = useFreeAccessGate();
-  const { createCheckoutSession } = useAuth();
+  const navigate = useNavigate();
 
   const originalFlashcards = flashcardData[category] || [];
   // Limit free users to 5 flashcards
@@ -91,12 +91,8 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     setReviewedCards(new Set());
   };
 
-  const handleUnlockPremium = async () => {
-    try {
-      await createCheckoutSession();
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-    }
+  const handleUnlockPremium = () => {
+    navigate('/auth');
   };
 
   return (

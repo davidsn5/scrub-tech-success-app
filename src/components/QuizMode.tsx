@@ -7,6 +7,7 @@ import { CheckCircle, XCircle, Clock, Award, Shuffle, Lock, Star } from 'lucide-
 import { useUserProgress } from '@/hooks/useUserProgress';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
 import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 interface QuizModeProps {
   category: string;
@@ -530,6 +531,7 @@ const QuizMode: React.FC<QuizModeProps> = ({
   onQuestionAttempt 
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
+  const navigate = useNavigate();
   const { createCheckoutSession } = useAuth();
   const { canAccessQuiz, incrementDailyQuizCount, getRemainingQuizzes, isPremium } = useFreeAccessGate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -655,12 +657,8 @@ const QuizMode: React.FC<QuizModeProps> = ({
     setIsActive(false);
   };
 
-  const handleUnlockPremium = async () => {
-    try {
-      await createCheckoutSession();
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-    }
+  const handleUnlockPremium = () => {
+    navigate('/auth');
   };
 
   // Check if quiz is blocked for free users

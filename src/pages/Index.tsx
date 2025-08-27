@@ -105,22 +105,8 @@ const Index = () => {
 
   
 
-  const handleUnlockPremium = async () => {
-    if (!user) {
-      navigate('/auth');
-      return;
-    }
-
-    try {
-      await createCheckoutSession();
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-      toast({
-        title: "Error",
-        description: "Failed to start checkout. Please try again.",
-        variant: "destructive",
-      });
-    }
+  const handleUnlockPremium = () => {
+    navigate('/auth');
   };
 
   return (

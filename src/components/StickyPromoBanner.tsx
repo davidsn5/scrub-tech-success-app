@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { X, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const StickyPromoBanner: React.FC = () => {
-  const { user, subscription, createCheckoutSession } = useAuth();
+  const { user, subscription } = useAuth();
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   const isAdmin = subscription?.status === 'admin';
@@ -34,18 +36,8 @@ const StickyPromoBanner: React.FC = () => {
     localStorage.setItem('promoBannerDismissed', dismissUntil.toString());
   };
 
-  const handleUnlockPremium = async () => {
-    if (!user) {
-      // Redirect to auth if not signed in
-      window.location.href = '/auth';
-      return;
-    }
-
-    try {
-      await createCheckoutSession();
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-    }
+  const handleUnlockPremium = () => {
+    navigate('/auth');
   };
 
   if (!isVisible) return null;

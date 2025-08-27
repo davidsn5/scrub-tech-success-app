@@ -6,13 +6,13 @@ import { ArrowLeft, Award, Clock, Target, BookOpen, Lock, Crown } from 'lucide-r
 import { Link } from 'react-router-dom';
 import QuestionPractice from '@/components/QuestionPractice';
 import { getExamSimulationQuestions, categoryBreakdown } from '@/data/allQuestions';
-import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
 
 const ExamSimulation = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [examQuestions, setExamQuestions] = useState<any[]>([]);
-  const { createCheckoutSession } = useAuth();
+  const navigate = useNavigate();
   const { isPremium } = useFreeAccessGate();
 
   const startExam = () => {
@@ -25,12 +25,8 @@ const ExamSimulation = () => {
     setIsStarted(true);
   };
 
-  const handleUnlockPremium = async () => {
-    try {
-      await createCheckoutSession();
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-    }
+  const handleUnlockPremium = () => {
+    navigate('/auth');
   };
 
   const handleMissedQuestion = (question: any) => {

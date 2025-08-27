@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, XCircle, ArrowRight, RotateCcw, Shuffle, Home, Award, Lock, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Question } from '@/data/questions/introSurgicalTech';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
@@ -31,6 +31,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   isExamMode = false
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
+  const navigate = useNavigate();
   const { createCheckoutSession } = useAuth();
   const { canAccessQuestion, isPremium } = useFreeAccessGate();
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
@@ -50,12 +51,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   const isCorrect = selectedAnswer === currentQuestion?.correctAnswer;
   const isQuestionBlocked = !isPremium && !canAccessQuestion(currentQuestionIndex);
 
-  const handleUnlockPremium = async () => {
-    try {
-      await createCheckoutSession();
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-    }
+  const handleUnlockPremium = () => {
+    navigate('/auth');
   };
 
   const shuffleQuestions = () => {
