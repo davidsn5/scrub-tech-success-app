@@ -355,7 +355,7 @@ const Index = () => {
                         <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
                         {!isSubscribed && (
                           <Badge variant="outline" className="mt-1 text-xs">
-                            {section.title === "Medical Terminology" ? "10 free Qs" : section.title === "Surgical Procedures" ? "2 free quizzes/day" : "10 free Qs"}
+                            10 free Qs
                           </Badge>
                         )}
                       </div>
