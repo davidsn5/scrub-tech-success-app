@@ -59,6 +59,10 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   };
 
   const shuffleQuestions = () => {
+    if (!isPremium) {
+      handleUnlockPremium();
+      return;
+    }
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
     setShuffledQuestions(shuffled);
     setCurrentQuestionIndex(0);
@@ -226,10 +230,18 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
           <Button 
             onClick={shuffleQuestions}
             variant="outline"
-            className="border-teal-300 hover:bg-teal-50"
+            className={`border-teal-300 ${!isPremium ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-50'} relative`}
+            disabled={!isPremium}
           >
             <Shuffle className="h-4 w-4 mr-2" />
             Shuffle & Restart
+            {!isPremium && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg className="h-3 w-3 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+            )}
           </Button>
         </div>
       </Card>
@@ -268,10 +280,18 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
           onClick={shuffleQuestions}
           variant="outline"
           size="sm"
-          className="border-teal-300 hover:bg-teal-50"
+          className={`border-teal-300 ${!isPremium ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-50'} relative`}
+          disabled={!isPremium}
         >
           <Shuffle className="h-4 w-4 mr-2" />
           Shuffle Questions
+          {!isPremium && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg className="h-3 w-3 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+          )}
         </Button>
       </div>
 
