@@ -339,11 +339,6 @@ const Index = () => {
                       </div>
                      <div className="flex-1">
                         <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-tight">{section.title}</h3>
-                        {!isSubscribed && (
-                          <Badge variant="outline" className="mt-1 text-xs">
-                            10 free Qs
-                          </Badge>
-                        )}
                       </div>
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
@@ -352,6 +347,13 @@ const Index = () => {
                         Start Studying
                       </Button>
                     </Link>
+                    {!isSubscribed && (
+                      <div className="flex justify-center mt-2">
+                        <Badge variant="outline" className="text-xs">
+                          10 free Qs
+                        </Badge>
+                      </div>
+                    )}
                   </div>
                 </Card>
               );
