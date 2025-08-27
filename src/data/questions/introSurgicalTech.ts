@@ -16,7 +16,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "Absence of pathogenic microorganisms or disease",
       "Reduction of bioburden to a safe level"
     ],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "Asepsis refers to the absence of pathogenic (disease-causing) microorganisms. This is different from sterilization (complete destruction of all microorganisms including spores) and disinfection (reduction of bioburden). Asepsis is the foundation of surgical practice to prevent infection."
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "Fungicide",
       "Virucide"
     ],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Bactericidal means 'bacteria-killing' - it refers to agents or processes that destroy bacteria. Bacteriostatic means 'bacteria-stopping' (inhibits growth but doesn't kill), fungicide kills fungi, and virucide kills viruses. The suffix '-cidal' always means 'killing'."
   },
   {
     id: 3,
@@ -38,7 +40,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "An area cleaned with intermediate-level disinfectant",
       "A place where non-critical items are stored"
     ],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "The sterile field is an area that is kept completely free of all microorganisms to prevent contamination during surgical procedures. It must be established and maintained using strict sterile technique to ensure patient safety and prevent surgical site infections."
   },
   {
     id: 4,
@@ -49,7 +52,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "Sterilization",
       "Package integrity"
     ],
-    correctAnswer: 0
+    correctAnswer: 0,
+    explanation: "Contamination occurs when pathogenic microorganisms are present where they should not be, especially on sterile items. This breaks the sterile field and can lead to surgical site infections. Decontamination is the process of removing contamination."
   },
   {
     id: 5,
@@ -60,7 +64,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "Fomite",
       "Vector"
     ],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Spores are highly resistant dormant forms of bacteria that can survive extreme conditions including heat, cold, radiation, and chemical disinfectants. They require sterilization (not just disinfection) to be destroyed. This is why sterilization processes must be validated against spore-forming bacteria."
   },
   {
     id: 6,
@@ -71,7 +76,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "Pathogens",
       "Bioburden"
     ],
-    correctAnswer: 0
+    correctAnswer: 0,
+    explanation: "Indigenous (or normal) microflora are beneficial microorganisms that naturally live in or on the body and help protect against harmful pathogens. Transient microflora are temporary microorganisms that can be removed with hand hygiene. Understanding this difference is crucial for proper antiseptic procedures."
   },
   {
     id: 7,

@@ -388,6 +388,13 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
                     The correct answer is: <strong>{currentQuestion.choices[currentQuestion.correctAnswer]}</strong>
                   </p>
                 )}
+                {currentQuestion.explanation && (
+                  <div className="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p className="text-sm text-gray-700">
+                      <strong>Explanation:</strong> {currentQuestion.explanation}
+                    </p>
+                  </div>
+                )}
               </div>
               
               <div className="mt-4 flex justify-end">

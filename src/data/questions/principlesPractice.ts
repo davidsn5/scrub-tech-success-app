@@ -3,6 +3,7 @@ export interface Question {
   question: string;
   choices: string[];
   correctAnswer: number;
+  explanation?: string;
 }
 
 export const principlesPracticeQuestions: Question[] = [
@@ -10,25 +11,29 @@ export const principlesPracticeQuestions: Question[] = [
     id: 2,
     question: "Which of the following is NOT a principle of sterile technique?",
     choices: ["Sterile items touch only sterile items", "Sterile persons touch only sterile items", "Non-sterile persons touch only non-sterile items", "All items can be touched by anyone"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "The principle that 'all items can be touched by anyone' violates fundamental sterile technique. In sterile procedures, strict separation must be maintained: sterile items only touch sterile items, sterile persons only touch sterile items and areas, and non-sterile persons only touch non-sterile items."
   },
   {
     id: 3,
     question: "The sterile field is considered contaminated if:",
     choices: ["It becomes wet", "It falls below table level", "It is touched by non-sterile items", "All of the above"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "All of these conditions contaminate the sterile field. Moisture allows microorganisms to wick through materials (strike-through contamination), items below table level are considered non-sterile, and any contact with non-sterile items breaks sterility. Any one of these events requires immediate corrective action."
   },
   {
     id: 4,
     question: "What is the minimum temperature for steam sterilization?",
     choices: ["250°F", "270°F", "285°F", "300°F"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Steam sterilization requires a minimum temperature of 270°F (132°C) to effectively kill all microorganisms including bacterial spores. This temperature, combined with proper pressure and time, ensures complete sterilization. Lower temperatures are insufficient for sterilization."
   },
   {
     id: 5,
     question: "How long should hands be scrubbed for the initial scrub?",
     choices: ["2-3 minutes", "3-5 minutes", "5-10 minutes", "10-15 minutes"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "The initial surgical hand scrub should last 3-5 minutes to effectively remove transient microorganisms and reduce the resident microbial population on the hands and forearms. This duration has been proven effective in reducing surgical site infections when proper technique is used."
   },
   {
     id: 6,
