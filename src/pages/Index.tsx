@@ -110,19 +110,19 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
+    <div className="min-h-screen gradient-background">
       {/* Sticky Promo Banner */}
       <StickyPromoBanner />
       
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/98 via-slate-50/95 to-blue-50/90 shadow-lg border-b border-slate-200/40 backdrop-blur-md">
+      <div className="bg-card/95 backdrop-blur-md shadow-card border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex items-center justify-between">
             {/* Logo and Brand Section */}
             <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 flex-1">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl shadow-lg overflow-hidden ring-2 ring-white/50">
+                <div className="absolute -inset-1 gradient-primary rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl shadow-card overflow-hidden ring-2 ring-white/50">
                   <img 
                     src="/lovable-uploads/f83d7dac-f60d-4f1c-bb14-f51b206c6316.png" 
                     alt="Surgical Tech Review Logo" 
@@ -132,23 +132,23 @@ const Index = () => {
               </div>
               
               <div className="text-center sm:text-left space-y-1 sm:space-y-2">
-                <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 bg-clip-text text-transparent animate-fade-in">
+                <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary animate-fade-in">
                   Surgical Technologist Review
                 </h1>
                 <div className="space-y-1">
-                  <p className="text-sm sm:text-base text-slate-700 font-semibold leading-tight">
+                  <p className="text-sm sm:text-base text-foreground font-medium leading-tight">
                     CST Program and Exam Prep
-                    <span className="hidden sm:inline text-slate-500"> • </span>
-                    <span className="block sm:inline text-slate-600">AST Curriculum Based Practice</span>
+                    <span className="hidden sm:inline text-muted-foreground"> • </span>
+                    <span className="block sm:inline text-muted-foreground">AST Curriculum Based Practice</span>
                   </p>
-                  <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed max-w-2xl">
+                  <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl">
                     1700+ Practice Questions • Interactive Flashcards • Full Exam Simulation • Performance Analytics
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center sm:justify-start text-xs">
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-orange-100/80 text-orange-700 font-medium border border-orange-200/50">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium border border-accent/20">
                       Premium Features Available
                     </span>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-green-100/80 text-green-700 font-medium border border-green-200/50">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-medium border border-secondary/20">
                       Fire Quiz Always Free
                     </span>
                   </div>
@@ -159,15 +159,15 @@ const Index = () => {
                   {!user ? (
                     <Button 
                       onClick={() => navigate('/auth')} 
-                      className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="gradient-primary hover:opacity-90 shadow-card hover:shadow-professional transition-all duration-300 transform hover:scale-105"
                     >
                       <User className="h-4 w-4 mr-2" />
                       Sign in/Sign up
                     </Button>
                   ) : (
-                    <div className="space-y-3 bg-white/60 rounded-xl p-4 border border-slate-200/50 backdrop-blur-sm">
+                    <div className="space-y-3 gradient-card rounded-xl p-4 border border-border/50 backdrop-blur-sm shadow-card">
                       <div className="flex items-center justify-center space-x-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
                         <p className="text-sm text-slate-700 font-medium">{user.email}</p>
                       </div>
                       <div className="flex flex-col space-y-2">
@@ -279,43 +279,43 @@ const Index = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 mt-16">
         {/* Progress Tracker */}
         <div className="mb-6 sm:mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
             Your Progress
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-orange-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
+            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-orange-600/90 flex-shrink-0" />
+                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-accent flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{getAccuracyPercentage()}%</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Accuracy Rate</p>
+                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{getAccuracyPercentage()}%</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Accuracy Rate</p>
                 </div>
               </div>
             </Card>
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-teal-50/80 to-teal-100/70 backdrop-blur-sm border-teal-200/50 shadow-lg">
+            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-teal-600/90 flex-shrink-0" />
+                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-primary flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{progress.totalQuestionsAttempted}</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Questions Completed</p>
+                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{progress.totalQuestionsAttempted}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Questions Completed</p>
                 </div>
               </div>
             </Card>
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-blue-100/70 backdrop-blur-sm border-blue-200/50 shadow-lg">
+            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600/90 flex-shrink-0" />
+                <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-secondary flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{progress.currentStreak}</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Day Streak</p>
+                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{progress.currentStreak}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Day Streak</p>
                 </div>
               </div>
             </Card>
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
+            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600/90 flex-shrink-0" />
+                <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-muted-foreground flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{progress.totalMissedQuestions}</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Missed Questions</p>
+                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{progress.totalMissedQuestions}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Missed Questions</p>
                 </div>
               </div>
             </Card>
@@ -324,7 +324,7 @@ const Index = () => {
 
         {/* Main Study Sections */}
         <div className="mb-6 sm:mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
             Practice Questions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
