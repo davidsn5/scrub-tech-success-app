@@ -34,6 +34,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   const navigate = useNavigate();
   const { createCheckoutSession } = useAuth();
   const { canAccessQuestion, isPremium } = useFreeAccessGate();
+  const { subscription } = useAuth();
+  const hasShuffleAccess = isPremium || subscription?.status === 'admin' || subscription?.status === 'premium';
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -56,7 +58,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   };
 
   const shuffleQuestions = () => {
-    if (!isPremium) {
+    if (!hasShuffleAccess) {
       handleUnlockPremium();
       return;
     }
@@ -227,15 +229,15 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
           <Button 
             onClick={shuffleQuestions}
             variant="outline"
-            className={`border-teal-300 ${!isPremium ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-50'} relative`}
-            disabled={!isPremium}
+            className={`border-teal-300 ${!hasShuffleAccess ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-50'} relative`}
+            disabled={!hasShuffleAccess}
           >
             <Shuffle className="h-4 w-4 mr-2" />
             Shuffle & Restart
-            {!isPremium && (
+            {!hasShuffleAccess && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg className="h-3 w-3 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 616 0z" clipRule="evenodd" />
                 </svg>
               </div>
             )}
@@ -277,12 +279,12 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
           onClick={shuffleQuestions}
           variant="outline"
           size="sm"
-          className={`border-teal-300 ${!isPremium ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-50'} relative`}
-          disabled={!isPremium}
+          className={`border-teal-300 ${!hasShuffleAccess ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-50'} relative`}
+          disabled={!hasShuffleAccess}
         >
           <Shuffle className="h-4 w-4 mr-2" />
           Shuffle Questions
-          {!isPremium && (
+          {!hasShuffleAccess && (
             <div className="absolute inset-0 flex items-center justify-center">
               <svg className="h-3 w-3 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
