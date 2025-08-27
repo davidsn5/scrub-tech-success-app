@@ -198,7 +198,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "Ask another tech to do it",
       "Only refuse if the surgeon isn't watching"
     ],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "When asked to perform a task outside your scope of practice, you must politely decline to protect patient safety and avoid legal liability."
   },
   {
     id: 18,
@@ -209,7 +210,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "\"Was this taught in my surgical technology program?\"",
       "\"Does the surgeon prefer this?\""
     ],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "You should only perform tasks that were taught in your surgical technology education program and are within your defined scope of practice."
   },
   {
     id: 19,
@@ -220,7 +222,8 @@ export const introSurgicalTechQuestions: Question[] = [
       "The most restrictive form of regulation",
       "Only for surgical technologists"
     ],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "Licensure is the most restrictive form of professional regulation, requiring legal permission from the state to practice the profession."
   },
   {
     id: 20,

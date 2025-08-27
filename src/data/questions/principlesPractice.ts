@@ -99,25 +99,29 @@ export const principlesPracticeQuestions: Question[] = [
     id: 16,
     question: "The sterile field should be established:",
     choices: ["Before the patient enters", "After the patient is positioned", "Just before the incision", "At any convenient time"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "The sterile field should be established after the patient is positioned to ensure proper surgical access and maintain sterility throughout the procedure."
   },
   {
     id: 17,
     question: "What is the minimum time for steam sterilization at 270°F?",
     choices: ["3 minutes", "4 minutes", "5 minutes", "10 minutes"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "At 270°F (132°C), the minimum time for steam sterilization is 4 minutes for unwrapped items in a gravity displacement sterilizer."
   },
   {
     id: 18,
     question: "The surgical hand scrub should include:",
     choices: ["Hands only", "Hands and wrists", "Hands to mid-forearm", "Hands to elbows"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "The surgical hand scrub must include hands to elbows to ensure all skin that could potentially contact the sterile field is properly cleaned."
   },
   {
     id: 19,
     question: "Which of the following indicates a break in sterile technique?",
     choices: ["Reaching across the sterile field", "Turning your back to the sterile field", "Allowing non-sterile items to touch sterile items", "All of the above"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "All of these actions compromise sterility: reaching across creates contamination risk, turning away allows unobserved contamination, and non-sterile contact breaks sterility."
   },
   {
     id: 20,
@@ -201,49 +205,57 @@ export const principlesPracticeQuestions: Question[] = [
     id: 33,
     question: "Which of the following is a critical item that must be sterile?",
     choices: ["Blood pressure cuff", "Stethoscope", "Surgical instruments", "Thermometer"],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "Surgical instruments are critical items that penetrate sterile tissue or the vascular system and must be sterile before use."
   },
   {
     id: 34,
     question: "The Spaulding classification system categorizes medical devices based on:",
     choices: ["Cost", "Size", "Risk of infection", "Complexity"],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "The Spaulding classification system categorizes medical devices into critical, semi-critical, and non-critical based on their risk of causing infection."
   },
   {
     id: 35,
     question: "Semi-critical items require:",
     choices: ["Sterilization", "High-level disinfection", "Intermediate-level disinfection", "Low-level disinfection"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Semi-critical items contact mucous membranes or non-intact skin and require high-level disinfection to eliminate most microorganisms except spores."
   },
   {
     id: 36,
     question: "Non-critical items require:",
     choices: ["Sterilization", "High-level disinfection", "Intermediate-level disinfection", "Low-level disinfection"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "Non-critical items only contact intact skin and require low-level disinfection to remove most vegetative bacteria, some viruses, and fungi."
   },
   {
     id: 37,
     question: "The most common method of sterilization in hospitals is:",
     choices: ["Ethylene oxide", "Steam", "Hydrogen peroxide", "Ozone"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Steam sterilization (autoclaving) is the most widely used sterilization method because it's effective, economical, and safe for most instruments."
   },
   {
     id: 38,
     question: "Biological indicators are used to:",
     choices: ["Monitor sterilization effectiveness", "Indicate temperature", "Measure time", "Check pressure"],
-    correctAnswer: 0
+    correctAnswer: 0,
+    explanation: "Biological indicators contain spores that are the most resistant to sterilization, providing the most reliable confirmation that sterilization was achieved."
   },
   {
     id: 39,
     question: "Chemical indicators:",
     choices: ["Prove sterilization", "Show exposure to sterilizing conditions", "Replace biological indicators", "Are not necessary"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Chemical indicators only show that items were exposed to sterilizing conditions but do not prove that sterilization was achieved."
   },
   {
     id: 40,
     question: "The most resistant microorganisms to sterilization are:",
     choices: ["Bacteria", "Viruses", "Fungi", "Spores"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "Bacterial spores are the most resistant microorganisms to sterilization processes, which is why they are used in biological indicators."
   },
   {
     id: 41,

@@ -3,6 +3,7 @@ export interface Question {
   question: string;
   choices: string[];
   correctAnswer: number;
+  explanation?: string;
 }
 
 export const surgicalProceduresQuestions: Question[] = [
@@ -10,85 +11,99 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 69,
     question: "LigaSure device uses:",
     choices: ["Ultrasonic energy", "Bipolar energy", "Monopolar energy", "Laser energy"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "LigaSure uses bipolar electrosurgical energy to seal blood vessels by denaturing collagen and elastin in vessel walls."
   },
   {
     id: 46,
     question: "DeBakey forceps are used in:",
     choices: ["Orthopedic surgery", "Vascular surgery", "Neurosurgery", "General surgery"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "DeBakey forceps have atraumatic tips designed specifically for handling delicate vascular tissues without causing damage."
   },
   {
     id: 47,
     question: "Adson forceps are commonly used in:",
     choices: ["Abdominal surgery", "Plastic surgery", "Cardiac surgery", "Orthopedic surgery"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Adson forceps have fine tips with teeth that provide precise tissue handling, making them ideal for plastic and reconstructive surgery."
   },
   {
     id: 48,
     question: "Gerald forceps are:",
     choices: ["Tissue forceps", "Dressing forceps", "Hemostats", "Needle holders"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Gerald forceps are smooth-tipped dressing forceps used for handling gauze, dressings, and other materials without teeth that could damage delicate items."
   },
   {
     id: 49,
     question: "The Metzenbaum scissors are used for:",
     choices: ["Cutting sutures", "Cutting delicate tissue", "Cutting tough tissue", "Cutting wire"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Metzenbaum scissors have long, thin blades designed for cutting delicate tissues without causing trauma to surrounding structures."
   },
   {
     id: 50,
     question: "Mayo scissors are designed for:",
     choices: ["Delicate tissue", "Tough tissue", "Sutures only", "Bandages only"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Mayo scissors have heavy, thick blades designed to cut through tough tissues, fascia, and dense materials during surgery."
   },
   {
     id: 51,
     question: "Iris scissors are used in:",
     choices: ["General surgery", "Ophthalmic surgery", "Orthopedic surgery", "Cardiac surgery"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Iris scissors are small, delicate scissors originally designed for eye surgery but also used for fine dissection in other procedures."
   },
   {
     id: 52,
     question: "Potts scissors are designed for:",
     choices: ["General cutting", "Vascular surgery", "Neurosurgery", "Orthopedic surgery"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Potts scissors are angled scissors specifically designed for cardiovascular surgery, particularly for cutting vascular anastomoses."
   },
   {
     id: 53,
     question: "Bandage scissors have:",
     choices: ["Sharp points", "Blunt tips", "Curved blades", "Serrated edges"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Bandage scissors have blunt tips to prevent injury to the patient when cutting bandages or dressings close to the skin."
   },
   {
     id: 54,
     question: "Wire scissors are used to cut:",
     choices: ["Sutures", "Tissue", "Metal wire", "Bandages"],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "Wire scissors are heavy-duty scissors specifically designed to cut orthopedic wires, pins, and other metal surgical hardware."
   },
   {
     id: 55,
     question: "The scalpel handle #3 fits blade sizes:",
     choices: ["10-15", "20-25", "10-11, 15", "20-24"],
-    correctAnswer: 2
+    correctAnswer: 2,
+    explanation: "Handle #3 is designed to fit smaller blades (#10, #11, #15) commonly used for precise incisions and detail work."
   },
   {
     id: 56,
     question: "The scalpel handle #4 fits blade sizes:",
     choices: ["10-15", "20-25", "10-11, 15", "20-24"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    explanation: "Handle #4 is larger and designed to fit bigger blades (#20-24) used for making larger incisions."
   },
   {
     id: 57,
     question: "Blade #10 is used for:",
     choices: ["Small incisions", "Large incisions", "Curved incisions", "Stab incisions"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Blade #10 has a large, curved cutting edge perfect for making initial large skin incisions in most surgical procedures."
   },
   {
     id: 58,
     question: "Blade #11 is designed for:",
     choices: ["Large incisions", "Stab incisions", "Curved incisions", "Skin only"],
-    correctAnswer: 1
+    correctAnswer: 1,
+    explanation: "Blade #11 has a sharp, pointed tip specifically designed for making precise stab incisions and small punctures."
   },
   {
     id: 59,
