@@ -18,6 +18,7 @@ interface QuestionPracticeProps {
   categorySlug?: string;
   showBackToHome?: boolean;
   isExamMode?: boolean;
+  isFireQuiz?: boolean;
 }
 
 const QuestionPractice: React.FC<QuestionPracticeProps> = ({ 
@@ -28,14 +29,15 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   progressBarColor = "bg-orange-500",
   categorySlug = "general",
   showBackToHome = false,
-  isExamMode = false
+  isExamMode = false,
+  isFireQuiz = false
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
   const navigate = useNavigate();
   const { createCheckoutSession } = useAuth();
   const { canAccessQuestion, isPremium } = useFreeAccessGate();
   const { subscription } = useAuth();
-  const hasShuffleAccess = true; // Allow all users to shuffle questions
+  const hasShuffleAccess = isFireQuiz || isPremium || subscription?.status === 'admin' || subscription?.status === 'premium';
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);

@@ -124,6 +124,7 @@ const FireQuiz = () => {
               questions={quizQuestions}
               categoryName="Fire Quiz"
               onMissedQuestion={handleMissedQuestion}
+              isFireQuiz={true}
             />
           </div>
         )}
