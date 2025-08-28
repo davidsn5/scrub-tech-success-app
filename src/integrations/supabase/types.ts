@@ -232,6 +232,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      cleanup_old_sessions: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
       email_has_trial_history: {
         Args: { user_email: string }
         Returns: boolean
