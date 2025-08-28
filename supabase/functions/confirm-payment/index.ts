@@ -20,12 +20,32 @@ serve(async (req) => {
   try {
     logStep("Function started");
 
+    // Authenticate the user first - this is critical for security
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader) {
+      throw new Error("Authorization header is required");
+    }
+
+    const supabaseClient = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_ANON_KEY") ?? ""
+    );
+
+    const token = authHeader.replace("Bearer ", "");
+    const { data: { user }, error: authError } = await supabaseClient.auth.getUser(token);
+    
+    if (authError || !user) {
+      throw new Error("Invalid authentication token");
+    }
+    
+    logStep("User authenticated", { userId: user.id, email: user.email });
+
     const stripeKey = Deno.env.get("STRIPE_SECRET_KEY");
     if (!stripeKey) throw new Error("STRIPE_SECRET_KEY is not set");
     logStep("Stripe key verified");
 
     // Use service role key to bypass RLS for updating subscribers
-    const supabaseClient = createClient(
+    const supabaseService = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
       { auth: { persistSession: false } }
@@ -54,10 +74,16 @@ serve(async (req) => {
       throw new Error("Customer email not found in session");
     }
 
+    // Verify the authenticated user's email matches the payment email
+    if (user.email !== customerEmail) {
+      throw new Error("Payment email does not match authenticated user");
+    }
+
     // Update subscribers table to grant access
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabaseService
       .from("subscribers")
       .upsert({
+        user_id: user.id,
         email: customerEmail,
         subscribed: true,
         status: "premium",
