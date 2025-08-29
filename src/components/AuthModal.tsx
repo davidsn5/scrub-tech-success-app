@@ -76,40 +76,56 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     setError('');
     setSuccess('');
     
+    // Validate passwords match
     if (password !== confirmPassword) {
       setError('Passwords do not match');
       setLoading(false);
       return;
     }
-    
+
+    // Validate username availability if provided
     if (username && usernameAvailable === false) {
       setError('Username is not available');
       setLoading(false);
       return;
     }
     
-    const { error } = await signUp(email, password, username);
-    
-    if (error) {
-      setError(error.message);
-    } else {
-      setSuccess('Account created! Redirecting to payment...');
+    try {
+      // First create the account
+      const { error: signUpError } = await signUp(email, password, username);
+      
+      if (signUpError) {
+        setError(signUpError.message);
+        setLoading(false);
+        return;
+      }
+      
+      setSuccess('Account created! Signing you in and opening payment...');
       
       // Sign in the user immediately after successful signup
       const { error: signInError } = await signIn(email, password);
       
       if (signInError) {
         setError('Account created but sign-in failed. Please try signing in manually.');
-      } else {
-        // Wait a bit for the auth state to update, then trigger checkout
-        setTimeout(() => {
-          createCheckoutSession();
-          onClose();
-        }, 1500);
+        setLoading(false);
+        return;
       }
+      
+      // Wait a moment for auth state to update, then trigger checkout
+      setTimeout(async () => {
+        try {
+          await createCheckoutSession();
+          onClose();
+        } catch (checkoutError) {
+          setError('Account created but payment page failed to open. Please try the upgrade button.');
+        }
+        setLoading(false);
+      }, 1500);
+      
+    } catch (error) {
+      setError('Failed to create account. Please try again.');
+      setLoading(false);
     }
-    
-    setLoading(false);
   };
 
   const resetForm = () => {
@@ -302,7 +318,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   )}
                   
                   <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? 'Creating account...' : 'Create Account & Upgrade'}
+                     {loading ? 'Creating account...' : 'Create Account & Upgrade'}
                   </Button>
                   
                   <p className="text-xs text-muted-foreground text-center">
