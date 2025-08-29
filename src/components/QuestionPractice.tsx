@@ -321,7 +321,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
                 className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white"
               >
                 <Star className="h-4 w-4 mr-2" />
-                Unlock Premium
+                Upgrade Now
               </Button>
             </div>
           </div>

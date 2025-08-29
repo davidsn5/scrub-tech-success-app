@@ -66,7 +66,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
           </div>
 
           <Button onClick={createCheckoutSession} className="w-full">
-            Subscribe Now
+            Upgrade Now
           </Button>
         </Card>
       </div>

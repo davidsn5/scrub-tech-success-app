@@ -59,7 +59,7 @@ const StickyPromoBanner: React.FC = () => {
               size="sm"
               className="bg-white text-primary hover:bg-white/90 font-semibold"
             >
-              Unlock Premium
+              Upgrade Now
             </Button>
             <button
               onClick={handleDismiss}

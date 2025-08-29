@@ -110,7 +110,7 @@ const ExamSimulation = () => {
                 onClick={handleUnlockPremium}
               >
                 <Crown className="h-5 w-5 mr-2" />
-                Unlock Premium Access
+                Upgrade Now
               </Button>
             </div>
           </Card>
