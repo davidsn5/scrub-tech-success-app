@@ -24,19 +24,13 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
   const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
-  const { isPremium, hasFreeAccess } = useFreeAccessGate();
+  const { isPremium, limits } = useFreeAccessGate();
   const navigate = useNavigate();
 
-  const handleUnlockPremium = () => {
-    navigate('/auth');
-  };
-
   const originalFlashcards = flashcardData[category] || [];
-  // All visitors get access to flashcards (5 free, unlimited for premium)
-  const shouldShowFlashcards = true;
-  // Limit free users to 5 flashcards
-  const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, 5);
-  const currentFlashcards = shouldShowFlashcards ? (shuffledCards.length > 0 ? shuffledCards : limitedFlashcards) : [];
+  // Limit free users to the specified number of flashcards from the hook
+  const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, limits.flashcardsPerCategory);
+  const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : limitedFlashcards;
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -44,20 +38,6 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     setShuffledCards([]);
     setReviewedCards(new Set());
   }, [category]);
-
-  if (!shouldShowFlashcards) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-center">
-          <h3 className="text-lg font-semibold text-gray-600 mb-2">Access Required</h3>
-          <p className="text-gray-500 mb-4">Please sign up to access free flashcards!</p>
-          <Button onClick={handleUnlockPremium}>
-            Sign Up for Free Access
-          </Button>
-        </div>
-      </div>
-    );
-  }
 
   if (currentFlashcards.length === 0) {
     return (
@@ -111,6 +91,9 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     setReviewedCards(new Set());
   };
 
+  const handleUnlockPremium = () => {
+    navigate('/auth');
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-3 sm:px-4">
@@ -156,7 +139,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       </div>
 
       {/* Free User Notice */}
-      {!isPremium && originalFlashcards.length > 5 && (
+      {!isPremium && originalFlashcards.length > limits.flashcardsPerCategory && (
         <div className="mb-4 sm:mb-6">
           <Card className="bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-200/50 p-4">
             <div className="flex items-center justify-between">
@@ -164,7 +147,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                 <Lock className="h-5 w-5 text-amber-600" />
                 <div>
                   <p className="text-sm font-medium text-amber-800">
-                    Showing 5 of {originalFlashcards.length} flashcards
+                    Showing {limits.flashcardsPerCategory} of {originalFlashcards.length} flashcards
                   </p>
                   <p className="text-xs text-amber-700">
                     Unlock all flashcards with Premium access

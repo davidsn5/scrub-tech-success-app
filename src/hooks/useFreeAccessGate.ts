@@ -3,6 +3,7 @@ import { useAuth } from '@/contexts/AuthContext';
 
 interface FreeAccessLimits {
   questionsPerCategory: number;
+  flashcardsPerCategory: number;
   dailyQuizCompletions: number;
 }
 
@@ -18,12 +19,13 @@ export const useFreeAccessGate = () => {
   const isAdmin = subscription?.status === 'admin';
   const isPremium = subscription?.subscribed || isAdmin;
   
-  // All visitors get free access to 10 questions per category and 5 flashcards per category
-  // Premium users get unlimited access
-  const hasFreeAccess = true; // All visitors get free access
+  // All users (authenticated or not) get free access to 10 questions/flashcards
+  // Only premium users get unlimited access
+  const hasFreeAccess = true;
 
   const limits: FreeAccessLimits = {
     questionsPerCategory: 10,
+    flashcardsPerCategory: 5,
     dailyQuizCompletions: 2,
   };
 
@@ -82,24 +84,18 @@ export const useFreeAccessGate = () => {
   const canAccessQuiz = (categoryName?: string) => {
     if (isPremium) return true;
     
-    // Fire Quiz is always free for everyone
-    if (categoryName?.toLowerCase().includes('fire quiz')) {
+    // Special handling for Surgical Procedures - always allow access (questions are limited instead)
+    if (categoryName?.toLowerCase().includes('surgical procedures')) {
       return true;
     }
     
-    // All visitors get free access with limits
     return dailyQuizCount < limits.dailyQuizCompletions;
   };
 
   const canAccessQuestion = (questionIndex: number, categoryName?: string) => {
     if (isPremium) return true;
     
-    // Fire Quiz is always free for everyone
-    if (categoryName?.toLowerCase().includes('fire quiz')) {
-      return true;
-    }
-    
-    // All visitors get 10 free questions per category
+    // All users (authenticated or not) can access the first 10 questions
     return questionIndex < limits.questionsPerCategory;
   };
 
@@ -113,15 +109,26 @@ export const useFreeAccessGate = () => {
     return Math.max(0, limits.questionsPerCategory - currentIndex);
   };
 
+  const canAccessFlashcard = (cardIndex: number) => {
+    if (isPremium) return true;
+    return cardIndex < limits.flashcardsPerCategory;
+  };
+
+  const getRemainingFlashcards = (currentIndex: number) => {
+    if (isPremium) return -1; // Unlimited
+    return Math.max(0, limits.flashcardsPerCategory - currentIndex);
+  };
+
   return {
     isPremium,
-    hasFreeAccess,
     limits,
     dailyQuizCount,
     canAccessQuiz,
     canAccessQuestion,
+    canAccessFlashcard,
     getRemainingQuizzes,
     getRemainingQuestions,
+    getRemainingFlashcards,
     incrementDailyQuizCount,
   };
 };

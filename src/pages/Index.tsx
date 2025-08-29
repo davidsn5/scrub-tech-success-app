@@ -114,36 +114,8 @@ const Index = () => {
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string) => {
-    if (!user) {
-      navigate('/auth');
-      return;
-    }
-    
-    // Show loading state while checking access
-    const loadingToast = toast({
-      title: "Checking your access...",
-      description: "Verifying your premium status with Stripe...",
-      duration: 2000,
-    });
-    
-    try {
-      // Check if user already has premium access
-      const alreadyHasAccess = await checkAccessBeforeUpgrade();
-      if (alreadyHasAccess) {
-        // User has access, navigate to the feature immediately
-        navigate(targetPath);
-      } else {
-        // User needs to upgrade, redirect to auth
-        navigate('/auth');
-      }
-    } catch (error) {
-      console.error('Error checking premium access:', error);
-      toast({
-        title: "Access Check Failed",
-        description: "Unable to verify your access. Please try again.",
-        variant: "destructive",
-      });
-    }
+    // Always allow navigation to the feature - let the individual components handle free access limits
+    navigate(targetPath);
   };
 
   return (

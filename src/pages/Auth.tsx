@@ -166,16 +166,17 @@ const Auth = () => {
               
               <TabsContent value="signup">
                 <div className="space-y-4">
-                  <div className="bg-orange-500/20 p-4 rounded-md border border-orange-500">
-                    <div className="text-center mb-2">
-                      <span className="font-medium text-sm text-black inline-flex items-center gap-2">
-                        <Stethoscope className="h-4 w-4 text-black" />
-                        Sign up for Access to Free Questions and Flashcards
-                      </span>
+                  <div className="bg-primary/10 p-4 rounded-md border border-primary/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Shield className="h-4 w-4 text-primary" />
+                      <span className="font-medium text-sm">Premium Access for a One Time Fee of $19.99</span>
                     </div>
-                    <ul className="text-sm text-black space-y-1 text-center">
-                      <li>• 10 free practice questions per category</li>
-                      <li>• 5 free flashcards per category</li>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Complete study materials for all categories</li>
+                      <li>• Interactive flashcards and practice quizzes</li>
+                      <li>• Full exam simulation</li>
+                      <li>• Progress tracking and analytics</li>
+                      
                     </ul>
                   </div>
                   
@@ -258,6 +259,10 @@ const Auth = () => {
                     <Button type="submit" className="w-full" disabled={loading}>
                       {loading ? 'Creating account...' : 'Sign Up'}
                     </Button>
+                    
+                    <p className="text-xs text-muted-foreground text-center">
+                      By signing up, you'll be redirected to complete payment for $19.99.
+                    </p>
                   </form>
                 </div>
               </TabsContent>
