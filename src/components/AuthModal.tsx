@@ -269,10 +269,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   <Button type="submit" className="w-full" disabled={loading}>
                     {loading ? 'Creating account...' : 'Sign Up'}
                   </Button>
-                  
-                  <p className="text-xs text-muted-foreground text-center">
-                    By signing up, you'll be redirected to complete payment for $19.99.
-                  </p>
                 </form>
               </div>
             </TabsContent>
