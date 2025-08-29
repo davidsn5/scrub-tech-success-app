@@ -443,7 +443,7 @@ const Index = () => {
                 </div>
 
                 <Button 
-                  onClick={handleUnlockPremium}
+                  onClick={() => navigate('/auth')}
                   size="lg" 
                   className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white px-8 py-3 text-lg font-semibold"
                 >
