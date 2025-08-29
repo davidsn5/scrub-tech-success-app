@@ -441,7 +441,7 @@ const Index = () => {
         </div>
 
         {/* Exam Simulation */}
-        <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/90 via-blue-50/80 to-indigo-100/70 backdrop-blur-sm border-blue-200/50 shadow-xl">
+        <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/90 via-blue-50/80 to-indigo-100/70 backdrop-blur-sm border-blue-200/50 shadow-xl mb-6 sm:mb-8">
           <div className="text-center">
             <div className="flex justify-center mb-3 sm:mb-4">
               <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-r from-blue-500/90 to-indigo-500/90">
