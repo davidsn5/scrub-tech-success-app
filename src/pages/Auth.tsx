@@ -53,6 +53,22 @@ const Auth = () => {
     setUsernameAvailable(available);
   };
 
+  const handleUpgradeNow = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    setSuccess('');
+    
+    // Directly open Stripe checkout without requiring account creation
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      setError('Failed to open payment page. Please try again.');
+    }
+    
+    setLoading(false);
+  };
+
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -176,8 +192,25 @@ const Auth = () => {
                       <li>• Interactive flashcards and practice quizzes</li>
                       <li>• Full exam simulation</li>
                       <li>• Progress tracking and analytics</li>
-                      
                     </ul>
+                    
+                    {/* Quick Upgrade Button */}
+                    <div className="mt-4">
+                      <Button 
+                        onClick={handleUpgradeNow}
+                        className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white"
+                        disabled={loading}
+                      >
+                        {loading ? 'Opening payment...' : 'Upgrade Now - $19.99'}
+                      </Button>
+                      <p className="text-xs text-muted-foreground text-center mt-2">
+                        Pay once, access forever. Create account after payment.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <span className="text-sm text-muted-foreground">Or create an account first:</span>
                   </div>
                   
                   <form onSubmit={handleSignUp} className="space-y-4">
@@ -257,7 +290,7 @@ const Auth = () => {
                     )}
                     
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Creating account...' : 'Upgrade Now'}
+                      {loading ? 'Creating account...' : 'Create Account & Upgrade'}
                     </Button>
                     
                     <p className="text-xs text-muted-foreground text-center">
