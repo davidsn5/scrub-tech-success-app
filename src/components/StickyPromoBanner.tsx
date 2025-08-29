@@ -5,7 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 const StickyPromoBanner: React.FC = () => {
-  const { user, subscription } = useAuth();
+  const { user, subscription, createCheckoutSession } = useAuth();
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,7 +37,7 @@ const StickyPromoBanner: React.FC = () => {
   };
 
   const handleUnlockPremium = () => {
-    navigate('/auth');
+    createCheckoutSession();
   };
 
   if (!isVisible) return null;

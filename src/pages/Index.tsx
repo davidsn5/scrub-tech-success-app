@@ -106,11 +106,8 @@ const Index = () => {
   
 
   const handleUnlockPremium = async () => {
-    // Check if user already has access before redirecting
-    const alreadyHasAccess = await checkAccessBeforeUpgrade();
-    if (!alreadyHasAccess) {
-      navigate('/auth');
-    }
+    // Directly trigger Stripe checkout
+    await createCheckoutSession();
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string) => {
