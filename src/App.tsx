@@ -22,6 +22,7 @@ import AccountManagement from "./pages/AccountManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PurchaseSuccess from "./pages/PurchaseSuccess";
 import PurchaseCanceled from "./pages/PurchaseCanceled";
+import AdminPaymentConfirm from "./pages/AdminPaymentConfirm";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,7 +50,7 @@ const AppContent = () => {
         <Route path="/missed-questions" element={<ProtectedRoute><MissedQuestions /></ProtectedRoute>} />
         <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
-        
+        <Route path="/admin/payment-confirm" element={<AdminPaymentConfirm />} />
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

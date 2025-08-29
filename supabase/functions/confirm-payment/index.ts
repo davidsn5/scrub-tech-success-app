@@ -79,15 +79,49 @@ serve(async (req) => {
       throw new Error("Payment email does not match authenticated user");
     }
 
+    // Get Stripe customer and subscription info
+    const customerId = session.customer as string;
+    let subscriptionData = {
+      subscribed: true,
+      status: "active",
+      subscription_tier: "premium",
+      subscription_start: new Date().toISOString(),
+      subscription_end: null as string | null,
+      stripe_customer_id: customerId
+    };
+
+    // If this is a subscription payment, get subscription details
+    if (session.mode === "subscription" && session.subscription) {
+      const subscription = await stripe.subscriptions.retrieve(session.subscription as string);
+      logStep("Retrieved subscription details", { 
+        subscriptionId: subscription.id, 
+        status: subscription.status 
+      });
+
+      if (subscription.status === "active") {
+        subscriptionData.subscription_start = new Date(subscription.current_period_start * 1000).toISOString();
+        subscriptionData.subscription_end = new Date(subscription.current_period_end * 1000).toISOString();
+      }
+    } else if (session.mode === "payment") {
+      // One-time payment - give access for 1 year
+      const oneYearFromNow = new Date();
+      oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+      subscriptionData.subscription_end = oneYearFromNow.toISOString();
+      logStep("One-time payment confirmed, granting 1 year access");
+    }
+
     // Update subscribers table to grant access
     const { data, error } = await supabaseService
       .from("subscribers")
       .upsert({
         user_id: user.id,
         email: customerEmail,
-        subscribed: true,
-        status: "premium",
-        subscription_tier: "premium",
+        subscribed: subscriptionData.subscribed,
+        status: subscriptionData.status,
+        subscription_tier: subscriptionData.subscription_tier,
+        subscription_start: subscriptionData.subscription_start,
+        subscription_end: subscriptionData.subscription_end,
+        stripe_customer_id: subscriptionData.stripe_customer_id,
         updated_at: new Date().toISOString(),
       }, { 
         onConflict: 'email',
@@ -105,7 +139,10 @@ serve(async (req) => {
     return new Response(JSON.stringify({ 
       success: true, 
       message: "Payment confirmed and access granted",
-      email: customerEmail 
+      email: customerEmail,
+      subscribed: subscriptionData.subscribed,
+      subscription_tier: subscriptionData.subscription_tier,
+      subscription_end: subscriptionData.subscription_end
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
