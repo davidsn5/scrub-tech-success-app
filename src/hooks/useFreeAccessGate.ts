@@ -93,11 +93,7 @@ export const useFreeAccessGate = () => {
   const canAccessQuestion = (questionIndex: number, categoryName?: string) => {
     if (isPremium) return true;
     
-    // Special handling for Surgical Procedures - use question limit instead of daily quiz limit
-    if (categoryName?.toLowerCase().includes('surgical procedures')) {
-      return questionIndex < limits.questionsPerCategory;
-    }
-    
+    // All users (authenticated or not) can access the first 10 questions
     return questionIndex < limits.questionsPerCategory;
   };
 
