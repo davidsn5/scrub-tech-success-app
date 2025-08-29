@@ -166,17 +166,16 @@ const Auth = () => {
               
               <TabsContent value="signup">
                 <div className="space-y-4">
-                  <div className="bg-primary/10 p-4 rounded-md border border-primary/20">
+                  <div className="bg-orange-50 p-4 rounded-md border border-orange-200">
                     <div className="flex items-center gap-2 mb-2">
-                      <Shield className="h-4 w-4 text-primary" />
-                      <span className="font-medium text-sm">Premium Access for a One Time Fee of $19.99</span>
+                      <Stethoscope className="h-4 w-4 text-orange-600" />
+                      <span className="font-medium text-sm text-orange-800">Sign up for Access to Free Questions and Flashcards</span>
                     </div>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Complete study materials for all categories</li>
-                      <li>• Interactive flashcards and practice quizzes</li>
-                      <li>• Full exam simulation</li>
-                      <li>• Progress tracking and analytics</li>
-                      
+                    <ul className="text-sm text-orange-700 space-y-1">
+                      <li>• 10 free practice questions per category</li>
+                      <li>• 5 free flashcards per category</li>
+                      <li>• Track your progress</li>
+                      <li>• Study at your own pace</li>
                     </ul>
                   </div>
                   
