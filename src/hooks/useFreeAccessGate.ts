@@ -18,9 +18,13 @@ export const useFreeAccessGate = () => {
   const isAdmin = subscription?.status === 'admin';
   const isPremium = subscription?.subscribed || isAdmin;
   
-  // All users (authenticated or not) get free access to 10 questions/flashcards
-  // Only premium users get unlimited access
-  const hasFreeAccess = true;
+  // Free access is granted to:
+  // 1. Non-authenticated users (guest access)
+  // 2. Authenticated users who have been verified as non-premium via Stripe
+  // 3. Users with status 'trial' after Stripe verification
+  const hasFreeAccess = !user || // Guest users get free access
+                        (user && subscription && !isPremium) || // Authenticated users verified as non-premium
+                        subscription?.status === 'trial'; // Users explicitly on trial
 
   const limits: FreeAccessLimits = {
     questionsPerCategory: 10,

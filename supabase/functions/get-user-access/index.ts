@@ -202,6 +202,42 @@ serve(async (req) => {
       }
     }
 
+    // Priority 3: If user has no premium access, ensure they have free access
+    // This grants free users access after Stripe verification shows they're not premium
+    if (!finalAccess.hasAccess) {
+      logStep("No premium access found - granting free access and updating database");
+      
+      // Update database to reflect free user status
+      const freeUpdateData = {
+        user_id: user.id,
+        email: user.email,
+        subscribed: false,
+        status: "trial",
+        subscription_tier: "premium",
+        stripe_customer_id: stripeVerification?.customerId || null,
+        updated_at: new Date().toISOString(),
+      };
+
+      const { error: freeUpdateError } = await supabaseService
+        .from("subscribers")
+        .upsert(freeUpdateData, { onConflict: 'email', ignoreDuplicates: false });
+
+      if (freeUpdateError) {
+        logStep("Failed to update database for free user", { error: freeUpdateError.message });
+      } else {
+        logStep("Database updated for free user");
+      }
+      
+      // Grant free access regardless of database update success
+      finalAccess = {
+        hasAccess: false, // Free users don't have premium access
+        accessType: 'trial',
+        subscriptionTier: 'premium',
+        verificationSource: 'stripe_verified_free'
+      };
+      logStep("Free access status set after Stripe verification");
+    }
+
     // Step 4: Return comprehensive response
     const response = {
       hasAccess: finalAccess.hasAccess,
