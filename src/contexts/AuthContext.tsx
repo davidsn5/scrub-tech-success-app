@@ -367,30 +367,40 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const createCheckoutSession = async () => {
     try {
-      console.log('🔍 Checking payment status before creating checkout session...');
+      console.log('🔍 CRITICAL: Checking payment status before creating checkout session...');
+      
+      if (!session?.access_token) {
+        throw new Error("User not authenticated - cannot check payment status");
+      }
       
       // First, check if user is already a paid subscriber
       const { data: accessData, error: accessError } = await supabase.functions.invoke('get-user-access', {
         headers: {
-          Authorization: `Bearer ${session?.access_token}`
+          Authorization: `Bearer ${session.access_token}`
         }
       });
 
       console.log('💳 Access check result:', { accessData, accessError });
 
       if (!accessError && accessData?.hasAccess) {
-        console.log('✅ User already has premium access - showing confirmation');
+        console.log('🚫 PREVENTING DUPLICATE PAYMENT - User already has premium access');
         
         // User already has access, show confirmation and refresh their status
         toast({
           title: "You're Already Premium! 🎉",
-          description: "You already have premium access to all features. Your subscription is active and no additional payment is needed.",
-          duration: 5000,
+          description: "You already have lifetime premium access. No additional payment needed.",
+          duration: 6000,
         });
         
-        // Refresh their subscription status to ensure UI is updated
+        // Force refresh their subscription status to ensure UI is updated immediately
         await checkSubscription();
-        return;
+        
+        // Double-check after a moment to ensure state is properly updated
+        setTimeout(async () => {
+          await checkSubscription();
+        }, 1000);
+        
+        return; // CRITICAL: Stop here to prevent duplicate charging
       }
 
       console.log('💰 User needs premium access - proceeding with checkout');

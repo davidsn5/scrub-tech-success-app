@@ -139,6 +139,17 @@ serve(async (req) => {
           verificationSource: 'database'
         };
         logStep("Access granted from database verification");
+        
+        // IMPORTANT: Even if database shows access, cross-verify with Stripe
+        // This ensures our local data stays in sync with Stripe's reality
+        if (stripeVerification && !stripeVerification.error) {
+          const stripeHasPayment = stripeVerification.hasCompletedPayment || stripeVerification.hasActiveSubscription;
+          
+          if (!stripeHasPayment) {
+            logStep("WARNING: Database shows access but Stripe shows no payment - may be admin override or data sync issue");
+            // For lifetime purchases, we trust the database more than Stripe ongoing subscription status
+          }
+        }
       }
     }
 
@@ -178,6 +189,16 @@ serve(async (req) => {
         logStep("Database updated from Stripe verification - access granted", { updateResult });
       } else {
         logStep("Failed to update database from Stripe", { error: updateError.message, details: updateError });
+        
+        // Even if database update fails, if Stripe shows payment, grant access
+        // This prevents payment/access issues due to database sync problems
+        finalAccess = {
+          hasAccess: true,
+          accessType: 'active',
+          subscriptionTier: 'premium',
+          verificationSource: 'stripe_fallback'
+        };
+        logStep("Database update failed but granting access based on Stripe payment");
       }
     }
 
