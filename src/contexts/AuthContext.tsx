@@ -483,6 +483,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return true; // User already has access
       }
       
+      // NEW: Check if user has free access (trial status)
+      if (!accessError && accessData?.accessType === 'trial') {
+        console.log('✅ User has free access');
+        return true; // User has free access, don't require upgrade
+      }
+      
       console.log('❌ User needs premium access');
       return false; // User needs to upgrade
     } catch (error) {
