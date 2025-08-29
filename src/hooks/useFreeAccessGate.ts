@@ -86,37 +86,54 @@ export const useFreeAccessGate = () => {
   const canAccessQuiz = (categoryName?: string) => {
     if (isPremium) return true;
     
-    // Special handling for Surgical Procedures - always allow access (questions are limited instead)
-    if (categoryName?.toLowerCase().includes('surgical procedures')) {
-      return true;
+    // Free users (including trial status) get limited access
+    if (hasFreeAccess) {
+      // Special handling for Surgical Procedures - always allow access (questions are limited instead)
+      if (categoryName?.toLowerCase().includes('surgical procedures')) {
+        return true;
+      }
+      
+      return dailyQuizCount < limits.dailyQuizCompletions;
     }
     
-    return dailyQuizCount < limits.dailyQuizCompletions;
+    return false; // No access if not premium and not free user
   };
 
   const canAccessQuestion = (questionIndex: number, categoryName?: string) => {
     if (isPremium) return true;
     
-    // Special handling for Surgical Procedures - use question limit instead of daily quiz limit
-    if (categoryName?.toLowerCase().includes('surgical procedures')) {
+    // Free users (including trial status) get limited access
+    if (hasFreeAccess) {
+      // Special handling for Surgical Procedures - use question limit instead of daily quiz limit
+      if (categoryName?.toLowerCase().includes('surgical procedures')) {
+        return questionIndex < limits.questionsPerCategory;
+      }
+      
       return questionIndex < limits.questionsPerCategory;
     }
     
-    return questionIndex < limits.questionsPerCategory;
+    return false; // No access if not premium and not free user
   };
 
   const getRemainingQuizzes = () => {
     if (isPremium) return -1; // Unlimited
-    return Math.max(0, limits.dailyQuizCompletions - dailyQuizCount);
+    if (hasFreeAccess) {
+      return Math.max(0, limits.dailyQuizCompletions - dailyQuizCount);
+    }
+    return 0; // No access if not premium and not free user
   };
 
   const getRemainingQuestions = (currentIndex: number) => {
     if (isPremium) return -1; // Unlimited
-    return Math.max(0, limits.questionsPerCategory - currentIndex);
+    if (hasFreeAccess) {
+      return Math.max(0, limits.questionsPerCategory - currentIndex);
+    }
+    return 0; // No access if not premium and not free user
   };
 
   return {
     isPremium,
+    hasFreeAccess,
     limits,
     dailyQuizCount,
     canAccessQuiz,

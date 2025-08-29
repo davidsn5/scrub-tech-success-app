@@ -24,13 +24,19 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
   const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
-  const { isPremium } = useFreeAccessGate();
+  const { isPremium, hasFreeAccess } = useFreeAccessGate();
   const navigate = useNavigate();
 
+  const handleUnlockPremium = () => {
+    navigate('/auth');
+  };
+
   const originalFlashcards = flashcardData[category] || [];
+  // Show flashcards if user is premium OR has free access
+  const shouldShowFlashcards = isPremium || hasFreeAccess;
   // Limit free users to 5 flashcards
   const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, 5);
-  const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : limitedFlashcards;
+  const currentFlashcards = shouldShowFlashcards ? (shuffledCards.length > 0 ? shuffledCards : limitedFlashcards) : [];
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -38,6 +44,20 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     setShuffledCards([]);
     setReviewedCards(new Set());
   }, [category]);
+
+  if (!shouldShowFlashcards) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold text-gray-600 mb-2">Access Required</h3>
+          <p className="text-gray-500 mb-4">Please sign up to access free flashcards!</p>
+          <Button onClick={handleUnlockPremium}>
+            Sign Up for Free Access
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   if (currentFlashcards.length === 0) {
     return (
@@ -91,9 +111,6 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     setReviewedCards(new Set());
   };
 
-  const handleUnlockPremium = () => {
-    navigate('/auth');
-  };
 
   return (
     <div className="max-w-4xl mx-auto px-3 sm:px-4">
