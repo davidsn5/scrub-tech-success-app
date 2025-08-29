@@ -13,7 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 
 
 const Index = () => {
-  const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade } = useAuth();
+  const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -111,7 +111,12 @@ const Index = () => {
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string) => {
-    // Always allow navigation to the feature - let the individual components handle free access limits
+    // Force refresh subscription status to ensure we have the latest data
+    console.log('🔍 Checking premium access before navigation...');
+    await checkSubscription();
+    
+    // Allow navigation - the individual components will handle access control
+    // and the ProtectedRoute component will verify access on the target page
     navigate(targetPath);
   };
 
