@@ -37,7 +37,20 @@ const PurchaseSuccess = () => {
         if (error) throw error;
 
         setConfirmed(true);
-        await checkSubscription(); // Refresh subscription status
+        
+        // Wait a moment for the database to update, then check subscription multiple times
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await checkSubscription();
+        
+        // Check again after another delay to ensure the subscription is properly updated
+        setTimeout(async () => {
+          await checkSubscription();
+        }, 2000);
+        
+        // Final check after 5 seconds
+        setTimeout(async () => {
+          await checkSubscription();
+        }, 5000);
         
         toast({
           title: "Payment Confirmed!",

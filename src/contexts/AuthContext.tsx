@@ -62,17 +62,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       const deviceInfo = navigator.userAgent;
       
+      // Use upsert to handle potential duplicates
       await supabase
         .from('active_sessions')
-        .insert({
+        .upsert({
           user_id: session.user.id,
           email: email,
           session_id: session.access_token,
           device_info: deviceInfo,
-          ip_address: null // IP will be handled server-side if needed
+          ip_address: null, // IP will be handled server-side if needed
+          last_activity: new Date().toISOString()
+        }, { 
+          onConflict: 'session_id',
+          ignoreDuplicates: false 
         });
     } catch (error) {
       console.error('Error tracking session:', error);
+      // Don't throw - session tracking failure shouldn't block authentication
     }
   };
 
@@ -85,6 +91,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         .eq('session_id', sessionId);
     } catch (error) {
       console.error('Error removing session:', error);
+      // Don't throw - session cleanup failure shouldn't block sign out
     }
   };
 
@@ -154,17 +161,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return () => authSubscription.unsubscribe();
   }, []);
 
-  // Periodic session validation for authenticated users
-  useEffect(() => {
-    if (!user || !session) return;
+  // Disable periodic session validation - it was causing users to be signed out after payments
+  // useEffect(() => {
+  //   if (!user || !session) return;
 
-    // Validate session every 30 seconds
-    const validationInterval = setInterval(() => {
-      validateSession();
-    }, 30000);
+  //   // Validate session every 30 seconds
+  //   const validationInterval = setInterval(() => {
+  //     validateSession();
+  //   }, 30000);
 
-    return () => clearInterval(validationInterval);
-  }, [user, session]);
+  //   return () => clearInterval(validationInterval);
+  // }, [user, session]);
 
   const signIn = async (emailOrUsername: string, password: string) => {
     // Check if input is an email or username
@@ -312,6 +319,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         // Check if user has any form of access (admin, premium, trial, or subscribed)
         const hasAccess = dbData.status === 'admin' || 
                          dbData.status === 'premium' || 
+                         dbData.status === 'active' ||
                          dbData.subscribed || 
                          (dbData.trial_started && dbData.trial_end && new Date(dbData.trial_end) > new Date());
         
@@ -324,11 +332,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           trial_still_valid: dbData.trial_end ? new Date(dbData.trial_end) > new Date() : false
         });
         
-        setSubscription({
+        // Be more generous with access - if user has any positive status, grant access
+        const finalSubscriptionStatus = {
           subscribed: hasAccess,
           subscription_tier: dbData.subscription_tier || 'premium',
           status: dbData.status || 'trial'
-        });
+        };
+        
+        console.log('Setting subscription status:', finalSubscriptionStatus);
+        setSubscription(finalSubscriptionStatus);
         return;
       }
 
@@ -338,12 +350,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       if (error) {
         console.error('Edge function error:', error);
-        // Default to no access if everything fails
-        setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+        // Don't immediately set to no access on error - preserve existing state if possible
+        if (!subscription) {
+          setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+        }
         return;
       }
       
-      console.log('Subscription data received:', data);
+      console.log('Subscription data received from edge function:', data);
       setSubscription(data);
     } catch (error) {
       console.error('Error checking subscription:', error);
@@ -352,8 +366,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         stack: error.stack,
         name: error.name
       });
-      // Default to no access on error
-      setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+      // Don't immediately remove access on network errors - preserve existing state
+      if (!subscription) {
+        setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+      }
     }
   };
 
