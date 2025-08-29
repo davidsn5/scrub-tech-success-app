@@ -166,16 +166,14 @@ const Auth = () => {
               
               <TabsContent value="signup">
                 <div className="space-y-4">
-                  <div className="bg-orange-50 p-4 rounded-md border border-orange-200">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Stethoscope className="h-4 w-4 text-orange-600" />
-                      <span className="font-medium text-sm text-orange-800">Sign up for Access to Free Questions and Flashcards</span>
+                  <div className="bg-orange-100 p-4 rounded-md border border-orange-400">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <Stethoscope className="h-4 w-4 text-orange-700" />
+                      <span className="font-medium text-sm text-orange-900">Sign up for Access to Free Questions and Flashcards</span>
                     </div>
-                    <ul className="text-sm text-orange-700 space-y-1">
+                    <ul className="text-sm text-orange-800 space-y-1 text-center">
                       <li>• 10 free practice questions per category</li>
                       <li>• 5 free flashcards per category</li>
-                      <li>• Track your progress</li>
-                      <li>• Study at your own pace</li>
                     </ul>
                   </div>
                   
