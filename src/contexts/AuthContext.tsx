@@ -129,14 +129,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser(session?.user ?? null);
         
         if (session?.user) {
-          console.log('User found in auth state change, scheduling checkSubscription');
-          // Use a small delay to ensure state is fully set
-          setTimeout(() => {
-            console.log('Calling checkSubscription with user:', session.user.email);
-            checkSubscription();
-          }, 200);
+          console.log('👤 User found in auth state change, triggering immediate access verification');
+          // Call immediately for instant access verification
+          checkSubscription();
         } else {
-          console.log('No user, setting subscription to null');
+          console.log('❌ No user, setting subscription to null');
           setSubscription(null);
         }
       }
@@ -150,14 +147,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setUser(session?.user ?? null);
       
       if (session?.user) {
-        console.log('Existing user found, scheduling checkSubscription');
+        console.log('👤 Existing user found, triggering immediate access verification');
         // Track existing session
         trackActiveSession(session, session.user.email!);
-        // Use a small delay to ensure state is fully set
-        setTimeout(() => {
-          console.log('Calling checkSubscription for existing user:', session.user.email);
-          checkSubscription();
-        }, 200);
+        // Call immediately for instant access verification
+        checkSubscription();
       }
       setLoading(false);
     });
@@ -306,19 +300,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
     
     try {
-      console.log('Checking subscription for user:', user.email);
+      console.log('🔍 Starting comprehensive payment verification for:', user.email);
       
-      // Use the dedicated get-user-access function that bypasses RLS issues
+      // Use the comprehensive get-user-access function that cross-checks Stripe and Supabase
       const { data, error } = await supabase.functions.invoke('get-user-access', {
         headers: {
           Authorization: `Bearer ${session.access_token}`
         }
       });
 
-      console.log('User access response:', { data, error });
+      console.log('🎯 Access verification response:', { data, error });
 
       if (error) {
-        console.error('Access check error:', error);
+        console.error('❌ Access verification error:', error);
         // On error, preserve existing subscription state or default to trial
         if (!subscription) {
           setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
@@ -330,18 +324,34 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const subscriptionStatus = {
           subscribed: data.hasAccess,
           subscription_tier: data.subscriptionTier,
-          status: data.accessType
+          status: data.accessType,
+          verificationSource: data.verificationSource
         };
         
-        console.log('Setting subscription status from access check:', subscriptionStatus);
+        console.log(
+          data.hasAccess 
+            ? `✅ ACCESS GRANTED - Source: ${data.verificationSource}` 
+            : `❌ ACCESS DENIED - Status: ${data.accessType}`,
+          subscriptionStatus
+        );
+        
         setSubscription(subscriptionStatus);
+
+        // Log additional verification details for debugging
+        if (data.stripeVerification) {
+          console.log('💳 Stripe verification details:', data.stripeVerification);
+        }
+        console.log('🗄️ Database status:', {
+          status: data.databaseStatus,
+          subscribed: data.databaseSubscribed
+        });
       } else {
-        console.log('No data returned from access check, setting default');
+        console.log('⚠️ No data returned from access verification, setting default');
         setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
       }
 
     } catch (error) {
-      console.error('Error checking subscription:', error);
+      console.error('🚨 Critical error in subscription check:', error);
       // Don't immediately remove access on network errors - preserve existing state
       if (!subscription) {
         setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });

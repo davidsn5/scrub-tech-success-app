@@ -38,23 +38,27 @@ const PurchaseSuccess = () => {
 
         setConfirmed(true);
         
+        console.log('💳 Payment confirmed, triggering comprehensive access verification...');
+        
         // Wait a moment for the database to update, then check subscription multiple times
         await new Promise(resolve => setTimeout(resolve, 1000));
         await checkSubscription();
         
         // Check again after another delay to ensure the subscription is properly updated
         setTimeout(async () => {
+          console.log('🔄 Second verification check...');
           await checkSubscription();
-        }, 2000);
+        }, 3000);
         
-        // Final check after 5 seconds
+        // Final check after 6 seconds
         setTimeout(async () => {
+          console.log('🔄 Final verification check...');
           await checkSubscription();
-        }, 5000);
+        }, 6000);
         
         toast({
           title: "Payment Confirmed!",
-          description: "Your premium access has been activated.",
+          description: "Your lifetime premium access has been activated.",
         });
       } catch (error) {
         console.error("Payment confirmation error:", error);
