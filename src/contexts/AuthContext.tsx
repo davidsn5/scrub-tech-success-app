@@ -367,10 +367,37 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const createCheckoutSession = async () => {
     try {
-      console.log('🔍 CRITICAL: Checking payment status before creating checkout session...');
+      console.log('🔍 Starting checkout session...');
       
+      // Check if user is authenticated
       if (!session?.access_token) {
-        throw new Error("User not authenticated - cannot check payment status");
+        console.log('🚧 User not authenticated - proceeding with guest checkout');
+        // Proceed with guest checkout - no authentication required
+        const { data, error } = await supabase.functions.invoke('create-checkout');
+        if (error) {
+          console.error('Supabase function error:', error);
+          throw error;
+        }
+        if (data?.url) {
+          console.log('Checkout URL received:', data.url);
+          
+          // Force popup window for all devices including mobile and iPad
+          const popup = window.open(
+            data.url, 
+            'stripe-checkout',
+            'width=800,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
+          );
+          
+          if (!popup) {
+            console.log('Popup blocked, falling back to redirect');
+            window.location.href = data.url;
+          } else {
+            console.log('Stripe checkout popup opened successfully');
+          }
+        } else {
+          console.error('No checkout URL received from function');
+        }
+        return;
       }
       
       // First, check if user is already a paid subscriber

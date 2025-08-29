@@ -30,33 +30,44 @@ serve(async (req) => {
     );
 
     const authHeader = req.headers.get("Authorization");
-    if (!authHeader) throw new Error("No authorization header provided");
-    logStep("Authorization header found");
-
-    const token = authHeader.replace("Bearer ", "");
-    const { data: userData, error: userError } = await supabaseClient.auth.getUser(token);
-    if (userError) throw new Error(`Authentication error: ${userError.message}`);
-    const user = userData.user;
-    if (!user?.email) throw new Error("User not authenticated or email not available");
-    logStep("User authenticated", { userId: user.id, email: user.email });
+    let user = null;
+    
+    // Try to authenticate user if header is provided
+    if (authHeader) {
+      logStep("Authorization header found, attempting authentication");
+      const token = authHeader.replace("Bearer ", "");
+      const { data: userData, error: userError } = await supabaseClient.auth.getUser(token);
+      if (!userError && userData.user?.email) {
+        user = userData.user;
+        logStep("User authenticated", { userId: user.id, email: user.email });
+      } else {
+        logStep("Authentication failed, proceeding as guest", { error: userError?.message });
+      }
+    } else {
+      logStep("No authorization header, proceeding as guest checkout");
+    }
 
     const stripe = new Stripe(stripeKey, { apiVersion: "2023-10-16" });
     
-    // Check if customer already exists
-    const customers = await stripe.customers.list({ email: user.email, limit: 1 });
+    // Check if customer already exists (only if user is authenticated)
     let customerId;
-    if (customers.data.length > 0) {
-      customerId = customers.data[0].id;
-      logStep("Found existing customer", { customerId });
+    if (user?.email) {
+      const customers = await stripe.customers.list({ email: user.email, limit: 1 });
+      if (customers.data.length > 0) {
+        customerId = customers.data[0].id;
+        logStep("Found existing customer", { customerId });
+      } else {
+        logStep("No existing customer found for authenticated user");
+      }
     } else {
-      logStep("No existing customer found");
+      logStep("Guest checkout - no customer lookup needed");
     }
 
     const origin = req.headers.get("origin") || "http://localhost:3000";
     
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
-      customer_email: customerId ? undefined : user.email,
+      customer_email: customerId ? undefined : (user?.email || "guest@surgicaltechreview.com"),
       line_items: [
         {
           price_data: {
