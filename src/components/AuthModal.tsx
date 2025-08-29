@@ -14,25 +14,22 @@ interface AuthModalProps {
 }
 
 const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
-  const [emailOrUsername, setEmailOrUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [activeTab, setActiveTab] = useState('signin');
-  const [usernameAvailable, setUsernameAvailable] = useState<boolean | null>(null);
   
-  const { signIn, signUp, createCheckoutSession, checkUsernameAvailability } = useAuth();
+  const { signIn, signUp, createCheckoutSession } = useAuth();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     
-    const { error } = await signIn(emailOrUsername, password);
+    const { error } = await signIn(email, password);
     
     if (error) {
       setError(error.message);
@@ -43,15 +40,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     setLoading(false);
   };
 
-  const checkUsername = async (username: string) => {
-    if (username.length < 3) {
-      setUsernameAvailable(null);
-      return;
-    }
-    
-    const { available } = await checkUsernameAvailability(username);
-    setUsernameAvailable(available);
-  };
 
   const handleUpgradeNow = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,16 +71,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
       return;
     }
 
-    // Validate username availability if provided
-    if (username && usernameAvailable === false) {
-      setError('Username is not available');
-      setLoading(false);
-      return;
-    }
-    
     try {
       // First create the account
-      const { error: signUpError } = await signUp(email, password, username);
+      const { error: signUpError } = await signUp(email, password);
       
       if (signUpError) {
         setError(signUpError.message);
@@ -129,14 +110,11 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   };
 
   const resetForm = () => {
-    setEmailOrUsername('');
     setEmail('');
-    setUsername('');
     setPassword('');
     setConfirmPassword('');
     setError('');
     setSuccess('');
-    setUsernameAvailable(null);
     setActiveTab('signin');
   };
 
@@ -174,13 +152,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             <TabsContent value="signin">
               <form onSubmit={handleSignIn} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="signin-email">Email or Username</Label>
+                  <Label htmlFor="signin-email">Email</Label>
                   <Input
                     id="signin-email"
-                    type="text"
-                    placeholder="your@email.com or username"
-                    value={emailOrUsername}
-                    onChange={(e) => setEmailOrUsername(e.target.value)}
+                    type="email"
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -252,33 +230,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-username">Username (optional)</Label>
-                    <Input
-                      id="signup-username"
-                      type="text"
-                      placeholder="Choose a username"
-                      value={username}
-                      onChange={(e) => {
-                        setUsername(e.target.value);
-                        if (e.target.value) {
-                          checkUsername(e.target.value);
-                        } else {
-                          setUsernameAvailable(null);
-                        }
-                      }}
-                      minLength={3}
-                    />
-                    {usernameAvailable === true && (
-                      <p className="text-xs text-green-600">✓ Username available</p>
-                    )}
-                    {usernameAvailable === false && (
-                      <p className="text-xs text-destructive">✗ Username not available</p>
-                    )}
-                    {username && username.length < 3 && (
-                      <p className="text-xs text-muted-foreground">Username must be at least 3 characters</p>
-                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="signup-password">Password</Label>
