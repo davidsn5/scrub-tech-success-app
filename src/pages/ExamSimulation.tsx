@@ -8,12 +8,14 @@ import QuestionPractice from '@/components/QuestionPractice';
 import { getExamSimulationQuestions, categoryBreakdown } from '@/data/allQuestions';
 import { useNavigate } from 'react-router-dom';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
+import { useAuth } from '@/contexts/AuthContext';
 
 const ExamSimulation = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [examQuestions, setExamQuestions] = useState<any[]>([]);
   const navigate = useNavigate();
   const { isPremium } = useFreeAccessGate();
+  const { createCheckoutSession } = useAuth();
 
   const startExam = () => {
     if (!isPremium) {
@@ -25,8 +27,8 @@ const ExamSimulation = () => {
     setIsStarted(true);
   };
 
-  const handleUnlockPremium = () => {
-    navigate('/auth');
+  const handleUnlockPremium = async () => {
+    await createCheckoutSession();
   };
 
   const handleMissedQuestion = (question: any) => {
