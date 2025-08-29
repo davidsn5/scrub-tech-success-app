@@ -127,8 +127,9 @@ serve(async (req) => {
     
     let subscriptionEnd = null;
     if (hasCompletedPayment) {
-      // For one-time payments, set no expiration (permanent access)
-      logStep("Completed one-time payment found, granting permanent access");
+      // For one-time payments, grant LIFETIME access (no expiration)
+      subscriptionEnd = null; // null = lifetime access
+      logStep("Completed one-time payment found, granting LIFETIME access");
     } else {
       logStep("No completed one-time payments found");
     }

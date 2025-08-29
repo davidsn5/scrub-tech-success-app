@@ -334,6 +334,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.log('User found in database:', dbData);
         
         // Check if user has any form of access (admin, premium, trial, or subscribed)
+        // For lifetime access, subscription_end will be null
         const hasAccess = dbData.status === 'admin' || 
                          dbData.status === 'premium' || 
                          dbData.status === 'active' ||

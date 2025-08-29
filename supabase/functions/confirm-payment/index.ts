@@ -103,11 +103,9 @@ serve(async (req) => {
         subscriptionData.subscription_end = new Date(subscription.current_period_end * 1000).toISOString();
       }
     } else if (session.mode === "payment") {
-      // One-time payment - give access for 1 year
-      const oneYearFromNow = new Date();
-      oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
-      subscriptionData.subscription_end = oneYearFromNow.toISOString();
-      logStep("One-time payment confirmed, granting 1 year access");
+      // One-time payment - give LIFETIME access (no expiration)
+      subscriptionData.subscription_end = null; // null = no expiration = lifetime access
+      logStep("One-time payment confirmed, granting LIFETIME access");
     }
 
     // Update subscribers table to grant access
