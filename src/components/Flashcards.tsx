@@ -32,8 +32,8 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   };
 
   const originalFlashcards = flashcardData[category] || [];
-  // Show flashcards if user is premium OR has free access
-  const shouldShowFlashcards = isPremium || hasFreeAccess;
+  // All visitors get access to flashcards (5 free, unlimited for premium)
+  const shouldShowFlashcards = true;
   // Limit free users to 5 flashcards
   const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, 5);
   const currentFlashcards = shouldShowFlashcards ? (shuffledCards.length > 0 ? shuffledCards : limitedFlashcards) : [];

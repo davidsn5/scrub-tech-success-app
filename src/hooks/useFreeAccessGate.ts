@@ -18,13 +18,9 @@ export const useFreeAccessGate = () => {
   const isAdmin = subscription?.status === 'admin';
   const isPremium = subscription?.subscribed || isAdmin;
   
-  // Free access is granted to:
-  // 1. Non-authenticated users (guest access)
-  // 2. Authenticated users who have been verified as non-premium via Stripe
-  // 3. Users with status 'trial' after Stripe verification
-  const hasFreeAccess = !user || // Guest users get free access
-                        (user && subscription && !isPremium) || // Authenticated users verified as non-premium
-                        subscription?.status === 'trial'; // Users explicitly on trial
+  // All visitors get free access to 10 questions per category and 5 flashcards per category
+  // Premium users get unlimited access
+  const hasFreeAccess = true; // All visitors get free access
 
   const limits: FreeAccessLimits = {
     questionsPerCategory: 10,
@@ -86,49 +82,35 @@ export const useFreeAccessGate = () => {
   const canAccessQuiz = (categoryName?: string) => {
     if (isPremium) return true;
     
-    // Free users (including trial status) get limited access
-    if (hasFreeAccess) {
-      // Special handling for Surgical Procedures - always allow access (questions are limited instead)
-      if (categoryName?.toLowerCase().includes('surgical procedures')) {
-        return true;
-      }
-      
-      return dailyQuizCount < limits.dailyQuizCompletions;
+    // Fire Quiz is always free for everyone
+    if (categoryName?.toLowerCase().includes('fire quiz')) {
+      return true;
     }
     
-    return false; // No access if not premium and not free user
+    // All visitors get free access with limits
+    return dailyQuizCount < limits.dailyQuizCompletions;
   };
 
   const canAccessQuestion = (questionIndex: number, categoryName?: string) => {
     if (isPremium) return true;
     
-    // Free users (including trial status) get limited access
-    if (hasFreeAccess) {
-      // Special handling for Surgical Procedures - use question limit instead of daily quiz limit
-      if (categoryName?.toLowerCase().includes('surgical procedures')) {
-        return questionIndex < limits.questionsPerCategory;
-      }
-      
-      return questionIndex < limits.questionsPerCategory;
+    // Fire Quiz is always free for everyone
+    if (categoryName?.toLowerCase().includes('fire quiz')) {
+      return true;
     }
     
-    return false; // No access if not premium and not free user
+    // All visitors get 10 free questions per category
+    return questionIndex < limits.questionsPerCategory;
   };
 
   const getRemainingQuizzes = () => {
     if (isPremium) return -1; // Unlimited
-    if (hasFreeAccess) {
-      return Math.max(0, limits.dailyQuizCompletions - dailyQuizCount);
-    }
-    return 0; // No access if not premium and not free user
+    return Math.max(0, limits.dailyQuizCompletions - dailyQuizCount);
   };
 
   const getRemainingQuestions = (currentIndex: number) => {
     if (isPremium) return -1; // Unlimited
-    if (hasFreeAccess) {
-      return Math.max(0, limits.questionsPerCategory - currentIndex);
-    }
-    return 0; // No access if not premium and not free user
+    return Math.max(0, limits.questionsPerCategory - currentIndex);
   };
 
   return {
