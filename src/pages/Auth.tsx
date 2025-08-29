@@ -75,36 +75,11 @@ const Auth = () => {
     setError('');
     setSuccess('');
     
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
-      setLoading(false);
-      return;
-    }
-    
-    if (username && usernameAvailable === false) {
-      setError('Username is not available');
-      setLoading(false);
-      return;
-    }
-    
-    const { error } = await signUp(email, password, username);
-    
-    if (error) {
-      setError(error.message);
-    } else {
-      setSuccess('Account created! Redirecting to payment...');
-      
-      // Sign in the user immediately after successful signup
-      const { error: signInError } = await signIn(email, password);
-      
-      if (signInError) {
-        setError('Account created but sign-in failed. Please try signing in manually.');
-      } else {
-        // Wait a bit for the auth state to update, then trigger checkout
-        setTimeout(() => {
-          createCheckoutSession();
-        }, 2000);
-      }
+    // Directly open Stripe checkout without requiring account creation
+    try {
+      await createCheckoutSession();
+    } catch (error) {
+      setError('Failed to open payment page. Please try again.');
     }
     
     setLoading(false);
@@ -272,11 +247,11 @@ const Auth = () => {
                     )}
                     
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Creating account...' : 'Create Account & Upgrade'}
+                      {loading ? 'Opening payment...' : 'Create Account & Upgrade'}
                     </Button>
                     
                     <p className="text-xs text-muted-foreground text-center">
-                      By upgrading, you'll be redirected to complete payment for $19.99.
+                      By clicking upgrade, you'll be redirected to complete payment for $19.99.
                     </p>
                   </form>
                 </div>
