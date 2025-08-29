@@ -373,87 +373,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Premium Section - Only show for non-premium users */}
-        {!isSubscribed && (
-          <div className="mb-6 sm:mb-8">
-            <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/95 via-primary/5 to-primary/10 backdrop-blur-sm border-primary/20 shadow-xl">
-              <div className="text-center max-w-4xl mx-auto">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-primary/80">
-                    <Star className="h-8 w-8 text-white fill-white" />
-                  </div>
-                </div>
-                
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                  Go Premium
-                </h2>
-                
-                <p className="text-gray-600 mb-6 text-lg">
-                  Unlock your full potential with complete access to all study materials
-                </p>
-
-                {/* Value Props */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">1700+ Practice Questions</span>
-                  </div>
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Complete Flashcard Library</span>
-                  </div>
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Full Exam Simulations</span>
-                  </div>
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Detailed Performance Analytics</span>
-                  </div>
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Unlimited Study Sessions</span>
-                  </div>
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Lifetime Updates</span>
-                  </div>
-                </div>
-
-                {/* Testimonials */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-white/60 rounded-lg p-4 border border-gray-200/50">
-                    <div className="flex items-center space-x-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="text-sm text-gray-600 mb-2">"The comprehensive question bank helped me pass my CST exam on the first try!"</p>
-                    <p className="text-xs text-gray-500 font-medium">- Sarah M., CST</p>
-                  </div>
-                  <div className="bg-white/60 rounded-lg p-4 border border-gray-200/50">
-                    <div className="flex items-center space-x-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="text-sm text-gray-600 mb-2">"91% pass rate improvement with detailed explanations and analytics."</p>
-                    <p className="text-xs text-gray-500 font-medium">- Program Director Review</p>
-                  </div>
-                </div>
-
-                <Button 
-                  onClick={() => navigate('/auth')}
-                  size="lg" 
-                  className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white px-8 py-3 text-lg font-semibold"
-                >
-                  <Star className="h-5 w-5 mr-2" />
-                  Upgrade Now
-                </Button>
-              </div>
-            </Card>
-          </div>
-        )}
 
         {/* Review Section */}
         <div className="mb-6 sm:mb-8">
@@ -553,6 +472,88 @@ const Index = () => {
             </Button>
           </div>
         </Card>
+        
+        {/* Premium Section - Only show for non-premium users */}
+        {!isSubscribed && (
+          <div className="mb-6 sm:mb-8">
+            <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/95 via-primary/5 to-primary/10 backdrop-blur-sm border-primary/20 shadow-xl">
+              <div className="text-center max-w-4xl mx-auto">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-primary/80">
+                    <Star className="h-8 w-8 text-white fill-white" />
+                  </div>
+                </div>
+                
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                  Go Premium
+                </h2>
+                
+                <p className="text-gray-600 mb-6 text-lg">
+                  Unlock your full potential with complete access to all study materials
+                </p>
+
+                {/* Value Props */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">1700+ Practice Questions</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Complete Flashcard Library</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Full Exam Simulations</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Detailed Performance Analytics</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Unlimited Study Sessions</span>
+                  </div>
+                  <div className="flex items-center space-x-3 justify-center md:justify-start">
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-700">Lifetime Updates</span>
+                  </div>
+                </div>
+
+                {/* Testimonials */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white/60 rounded-lg p-4 border border-gray-200/50">
+                    <div className="flex items-center space-x-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-gray-600 mb-2">"The comprehensive question bank helped me pass my CST exam on the first try!"</p>
+                    <p className="text-xs text-gray-500 font-medium">- Sarah M., CST</p>
+                  </div>
+                  <div className="bg-white/60 rounded-lg p-4 border border-gray-200/50">
+                    <div className="flex items-center space-x-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-gray-600 mb-2">"91% pass rate improvement with detailed explanations and analytics."</p>
+                    <p className="text-xs text-gray-500 font-medium">- Program Director Review</p>
+                  </div>
+                </div>
+
+                <Button 
+                  onClick={() => navigate('/auth')}
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white px-8 py-3 text-lg font-semibold"
+                >
+                  <Star className="h-5 w-5 mr-2" />
+                  Upgrade Now
+                </Button>
+              </div>
+            </Card>
+          </div>
+        )}
         
         {/* Footer */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200/50 space-y-4">
