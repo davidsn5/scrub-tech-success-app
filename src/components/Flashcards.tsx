@@ -24,12 +24,12 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
   const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
-  const { isPremium, limits } = useFreeAccessGate();
+  const { isPremium } = useFreeAccessGate();
   const navigate = useNavigate();
 
   const originalFlashcards = flashcardData[category] || [];
-  // Limit free users to the specified number of flashcards from the hook
-  const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, limits.flashcardsPerCategory);
+  // Limit free users to 5 flashcards
+  const limitedFlashcards = isPremium ? originalFlashcards : originalFlashcards.slice(0, 5);
   const currentFlashcards = shuffledCards.length > 0 ? shuffledCards : limitedFlashcards;
 
   useEffect(() => {
@@ -139,7 +139,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       </div>
 
       {/* Free User Notice */}
-      {!isPremium && originalFlashcards.length > limits.flashcardsPerCategory && (
+      {!isPremium && originalFlashcards.length > 5 && (
         <div className="mb-4 sm:mb-6">
           <Card className="bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-200/50 p-4">
             <div className="flex items-center justify-between">
@@ -147,7 +147,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                 <Lock className="h-5 w-5 text-amber-600" />
                 <div>
                   <p className="text-sm font-medium text-amber-800">
-                    Showing {limits.flashcardsPerCategory} of {originalFlashcards.length} flashcards
+                    Showing 5 of {originalFlashcards.length} flashcards
                   </p>
                   <p className="text-xs text-amber-700">
                     Unlock all flashcards with Premium access

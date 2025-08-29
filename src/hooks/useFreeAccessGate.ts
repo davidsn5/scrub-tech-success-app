@@ -3,7 +3,6 @@ import { useAuth } from '@/contexts/AuthContext';
 
 interface FreeAccessLimits {
   questionsPerCategory: number;
-  flashcardsPerCategory: number;
   dailyQuizCompletions: number;
 }
 
@@ -25,7 +24,6 @@ export const useFreeAccessGate = () => {
 
   const limits: FreeAccessLimits = {
     questionsPerCategory: 10,
-    flashcardsPerCategory: 5,
     dailyQuizCompletions: 2,
   };
 
@@ -109,26 +107,14 @@ export const useFreeAccessGate = () => {
     return Math.max(0, limits.questionsPerCategory - currentIndex);
   };
 
-  const canAccessFlashcard = (cardIndex: number) => {
-    if (isPremium) return true;
-    return cardIndex < limits.flashcardsPerCategory;
-  };
-
-  const getRemainingFlashcards = (currentIndex: number) => {
-    if (isPremium) return -1; // Unlimited
-    return Math.max(0, limits.flashcardsPerCategory - currentIndex);
-  };
-
   return {
     isPremium,
     limits,
     dailyQuizCount,
     canAccessQuiz,
     canAccessQuestion,
-    canAccessFlashcard,
     getRemainingQuizzes,
     getRemainingQuestions,
-    getRemainingFlashcards,
     incrementDailyQuizCount,
   };
 };
