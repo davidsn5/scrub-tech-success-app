@@ -129,9 +129,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser(session?.user ?? null);
         
         if (session?.user) {
-          console.log('User found, calling checkSubscription immediately');
-          // Remove setTimeout - call immediately when user is authenticated
-          checkSubscription();
+          console.log('User found in auth state change, scheduling checkSubscription');
+          // Use a small delay to ensure state is fully set
+          setTimeout(() => {
+            console.log('Calling checkSubscription with user:', session.user.email);
+            checkSubscription();
+          }, 200);
         } else {
           console.log('No user, setting subscription to null');
           setSubscription(null);
@@ -147,11 +150,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setUser(session?.user ?? null);
       
       if (session?.user) {
-        console.log('Existing user found, calling checkSubscription immediately');
+        console.log('Existing user found, scheduling checkSubscription');
         // Track existing session
         trackActiveSession(session, session.user.email!);
-        // Remove setTimeout - call immediately when user is authenticated
-        checkSubscription();
+        // Use a small delay to ensure state is fully set
+        setTimeout(() => {
+          console.log('Calling checkSubscription for existing user:', session.user.email);
+          checkSubscription();
+        }, 200);
       }
       setLoading(false);
     });
@@ -309,25 +315,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         .eq('email', user.email)
         .single();
 
-      // If RLS blocks the query or no data found, try with edge function that has service role access
-      if (dbError || !dbData) {
-        console.log('Database query failed or no data found, trying edge function', { dbError });
-        try {
-          const { data: edgeData, error: edgeError } = await supabase.functions.invoke('check-subscription', {
-            headers: {
-              Authorization: `Bearer ${session.access_token}`
-            }
-          });
-          if (!edgeError && edgeData) {
-            console.log('Edge function returned subscription data:', edgeData);
-            setSubscription(edgeData);
-            return;
-          }
-        } catch (edgeError) {
-          console.error('Edge function also failed:', edgeError);
-        }
-      }
-
       console.log('Database query result:', { dbData, dbError });
 
       if (dbData) {
@@ -362,21 +349,25 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return;
       }
 
-      // If no database record exists, fall back to edge function
-      console.log('No database record found, trying edge function');
-      const { data, error } = await supabase.functions.invoke('check-subscription');
-      
-      if (error) {
-        console.error('Edge function error:', error);
-        // Don't immediately set to no access on error - preserve existing state if possible
-        if (!subscription) {
-          setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+      // If no database record found or RLS blocks access, try edge function as fallback
+      if (dbError || !dbData) {
+        console.log('Database query failed or no data found, trying edge function', { dbError });
+        try {
+          const { data: edgeData, error: edgeError } = await supabase.functions.invoke('check-subscription', {
+            headers: {
+              Authorization: `Bearer ${session.access_token}`
+            }
+          });
+          if (!edgeError && edgeData) {
+            console.log('Edge function returned subscription data:', edgeData);
+            setSubscription(edgeData);
+            return;
+          }
+        } catch (edgeError) {
+          console.error('Edge function also failed:', edgeError);
         }
-        return;
       }
-      
-      console.log('Subscription data received from edge function:', data);
-      setSubscription(data);
+
     } catch (error) {
       console.error('Error checking subscription:', error);
       console.error('Error details:', {
