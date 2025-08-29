@@ -90,11 +90,9 @@ serve(async (req) => {
       subscriptionData.subscription_end = new Date(subscription.current_period_end * 1000).toISOString();
       logStep("Active subscription found", { subscriptionId: subscription.id });
     } else {
-      // Give 1 year access for one-time payments
-      const oneYearFromNow = new Date();
-      oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
-      subscriptionData.subscription_end = oneYearFromNow.toISOString();
-      logStep("No active subscription, granting 1 year access");
+      // Give LIFETIME access for one-time payments (no expiration)
+      subscriptionData.subscription_end = null; // null = lifetime access
+      logStep("No active subscription, granting LIFETIME access");
     }
 
     // Find user profile

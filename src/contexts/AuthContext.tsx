@@ -308,76 +308,43 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       console.log('Checking subscription for user:', user.email);
       
-      // First try to check with the regular client (respects RLS)
-      let { data: dbData, error: dbError } = await supabase
-        .from('subscribers')
-        .select('*')
-        .eq('email', user.email)
-        .single();
+      // Use the dedicated get-user-access function that bypasses RLS issues
+      const { data, error } = await supabase.functions.invoke('get-user-access', {
+        headers: {
+          Authorization: `Bearer ${session.access_token}`
+        }
+      });
 
-      console.log('Database query result:', { dbData, dbError });
+      console.log('User access response:', { data, error });
 
-      if (dbData) {
-        console.log('User found in database:', dbData);
-        
-        // Check if user has any form of access (admin, premium, trial, or subscribed)
-        // For lifetime access, subscription_end will be null
-        const hasAccess = dbData.status === 'admin' || 
-                         dbData.status === 'premium' || 
-                         dbData.status === 'active' ||
-                         dbData.subscribed || 
-                         (dbData.trial_started && dbData.trial_end && new Date(dbData.trial_end) > new Date());
-        
-        console.log('User access status:', { 
-          hasAccess, 
-          status: dbData.status, 
-          subscribed: dbData.subscribed, 
-          trial_started: dbData.trial_started,
-          trial_end: dbData.trial_end,
-          trial_still_valid: dbData.trial_end ? new Date(dbData.trial_end) > new Date() : false
-        });
-        
-        // Be more generous with access - if user has any positive status, grant access
-        const finalSubscriptionStatus = {
-          subscribed: hasAccess,
-          subscription_tier: dbData.subscription_tier || 'premium',
-          status: dbData.status || 'trial'
-        };
-        
-        console.log('Setting subscription status:', finalSubscriptionStatus);
-        setSubscription(finalSubscriptionStatus);
+      if (error) {
+        console.error('Access check error:', error);
+        // On error, preserve existing subscription state or default to trial
+        if (!subscription) {
+          setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
+        }
         return;
       }
 
-      // If no database record found or RLS blocks access, try edge function as fallback
-      if (dbError || !dbData) {
-        console.log('Database query failed or no data found, trying edge function', { dbError });
-        try {
-          const { data: edgeData, error: edgeError } = await supabase.functions.invoke('check-subscription', {
-            headers: {
-              Authorization: `Bearer ${session.access_token}`
-            }
-          });
-          if (!edgeError && edgeData) {
-            console.log('Edge function returned subscription data:', edgeData);
-            setSubscription(edgeData);
-            return;
-          }
-        } catch (edgeError) {
-          console.error('Edge function also failed:', edgeError);
-        }
+      if (data) {
+        const subscriptionStatus = {
+          subscribed: data.hasAccess,
+          subscription_tier: data.subscriptionTier,
+          status: data.accessType
+        };
+        
+        console.log('Setting subscription status from access check:', subscriptionStatus);
+        setSubscription(subscriptionStatus);
+      } else {
+        console.log('No data returned from access check, setting default');
+        setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
       }
 
     } catch (error) {
       console.error('Error checking subscription:', error);
-      console.error('Error details:', {
-        message: error.message,
-        stack: error.stack,
-        name: error.name
-      });
       // Don't immediately remove access on network errors - preserve existing state
       if (!subscription) {
-        setSubscription({ subscribed: false, subscription_tier: null, status: 'trial' });
+        setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
       }
     }
   };
