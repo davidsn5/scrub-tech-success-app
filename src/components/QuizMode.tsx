@@ -532,7 +532,7 @@ const QuizMode: React.FC<QuizModeProps> = ({
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
   const navigate = useNavigate();
-  const { createCheckoutSession } = useAuth();
+  const { createCheckoutSession, checkAccessBeforeUpgrade } = useAuth();
   const { canAccessQuiz, incrementDailyQuizCount, getRemainingQuizzes, isPremium } = useFreeAccessGate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -657,8 +657,12 @@ const QuizMode: React.FC<QuizModeProps> = ({
     setIsActive(false);
   };
 
-  const handleUnlockPremium = () => {
-    navigate('/auth');
+  const handleUnlockPremium = async () => {
+    // Check if user already has access before redirecting
+    const alreadyHasAccess = await checkAccessBeforeUpgrade();
+    if (!alreadyHasAccess) {
+      navigate('/auth');
+    }
   };
 
   // Check if quiz is blocked for free users

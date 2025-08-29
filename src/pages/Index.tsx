@@ -13,7 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 
 
 const Index = () => {
-  const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal } = useAuth();
+  const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -105,8 +105,12 @@ const Index = () => {
 
   
 
-  const handleUnlockPremium = () => {
-    navigate('/auth');
+  const handleUnlockPremium = async () => {
+    // Check if user already has access before redirecting
+    const alreadyHasAccess = await checkAccessBeforeUpgrade();
+    if (!alreadyHasAccess) {
+      navigate('/auth');
+    }
   };
 
   return (

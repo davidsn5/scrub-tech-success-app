@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 interface SubscriptionInfo {
   subscribed: boolean;
@@ -23,6 +24,7 @@ interface AuthContextType {
   signOut: () => Promise<void>;
   checkSubscription: () => Promise<void>;
   createCheckoutSession: () => Promise<void>;
+  checkAccessBeforeUpgrade: () => Promise<boolean>;
   openCustomerPortal: () => Promise<void>;
   checkUsernameAvailability: (username: string) => Promise<{ available: boolean; error?: any }>;
   updateUsername: (username: string) => Promise<{ error?: any }>;
@@ -46,6 +48,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [previewStartTime, setPreviewStartTime] = useState<number | null>(null);
   const [previewTimeRemaining, setPreviewTimeRemaining] = useState(600); // 10 minutes in seconds
   const [isPreviewExpired, setIsPreviewExpired] = useState(false);
+  const { toast } = useToast();
 
   // Preview timer disabled - allow unlimited access for non-authenticated users
   useEffect(() => {
@@ -364,6 +367,35 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const createCheckoutSession = async () => {
     try {
+      console.log('🔍 Checking payment status before creating checkout session...');
+      
+      // First, check if user is already a paid subscriber
+      const { data: accessData, error: accessError } = await supabase.functions.invoke('get-user-access', {
+        headers: {
+          Authorization: `Bearer ${session?.access_token}`
+        }
+      });
+
+      console.log('💳 Access check result:', { accessData, accessError });
+
+      if (!accessError && accessData?.hasAccess) {
+        console.log('✅ User already has premium access - showing confirmation');
+        
+        // User already has access, show confirmation and refresh their status
+        toast({
+          title: "You're Already Premium! 🎉",
+          description: "You already have premium access to all features. Your subscription is active and no additional payment is needed.",
+          duration: 5000,
+        });
+        
+        // Refresh their subscription status to ensure UI is updated
+        await checkSubscription();
+        return;
+      }
+
+      console.log('💰 User needs premium access - proceeding with checkout');
+
+      // User doesn't have access, proceed with normal checkout
       console.log('Creating checkout session...');
       const { data, error } = await supabase.functions.invoke('create-checkout');
       if (error) {
@@ -390,7 +422,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.error('No checkout URL received from function');
       }
     } catch (error) {
-      console.error('Error creating checkout session:', error);
+      console.error('Error with checkout process:', error);
+      toast({
+        title: "Checkout Error",
+        description: error instanceof Error ? error.message : "Failed to start checkout process",
+        variant: "destructive",
+      });
     }
   };
 
@@ -409,6 +446,38 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
     } catch (error) {
       console.error('Error opening customer portal:', error);
+    }
+  };
+
+  // Helper function to check access before upgrade attempts
+  const checkAccessBeforeUpgrade = async (): Promise<boolean> => {
+    try {
+      console.log('🔍 Checking if user already has premium access...');
+      
+      const { data: accessData, error: accessError } = await supabase.functions.invoke('get-user-access', {
+        headers: {
+          Authorization: `Bearer ${session?.access_token}`
+        }
+      });
+
+      if (!accessError && accessData?.hasAccess) {
+        console.log('✅ User already has premium access');
+        toast({
+          title: "You're Already Premium! 🎉",
+          description: "You already have premium access to all features. Your subscription is active.",
+          duration: 5000,
+        });
+        
+        // Refresh their subscription status
+        await checkSubscription();
+        return true; // User already has access
+      }
+      
+      console.log('❌ User needs premium access');
+      return false; // User needs to upgrade
+    } catch (error) {
+      console.error('Error checking access:', error);
+      return false; // On error, assume they need to upgrade
     }
   };
 
@@ -470,6 +539,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     signOut,
     checkSubscription,
     createCheckoutSession,
+    checkAccessBeforeUpgrade,
     openCustomerPortal,
     checkUsernameAvailability,
     updateUsername,
