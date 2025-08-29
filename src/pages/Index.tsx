@@ -171,7 +171,7 @@ const Index = () => {
                       className="gradient-primary hover:opacity-90 shadow-card hover:shadow-professional transition-all duration-300 transform hover:scale-105"
                     >
                       <User className="h-4 w-4 mr-2" />
-                      Sign in/Sign up
+                      Sign in/Upgrade
                     </Button>
                   ) : (
                     <div className="space-y-3 gradient-card rounded-xl p-4 border border-border/50 backdrop-blur-sm shadow-card">
@@ -277,7 +277,7 @@ const Index = () => {
                   className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-6"
                 >
                   <User className="h-4 w-4 mr-2" />
-                  Sign in/Sign up
+                  Sign in/Upgrade
                 </Button>
               </div>
             )}
