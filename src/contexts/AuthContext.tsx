@@ -129,10 +129,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser(session?.user ?? null);
         
         if (session?.user) {
-          console.log('User found, calling checkSubscription in 100ms');
-          setTimeout(() => {
-            checkSubscription();
-          }, 100);
+          console.log('User found, calling checkSubscription immediately');
+          // Remove setTimeout - call immediately when user is authenticated
+          checkSubscription();
         } else {
           console.log('No user, setting subscription to null');
           setSubscription(null);
@@ -148,12 +147,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setUser(session?.user ?? null);
       
       if (session?.user) {
-        console.log('Existing user found, calling checkSubscription in 100ms');
+        console.log('Existing user found, calling checkSubscription immediately');
         // Track existing session
         trackActiveSession(session, session.user.email!);
-        setTimeout(() => {
-          checkSubscription();
-        }, 100);
+        // Remove setTimeout - call immediately when user is authenticated
+        checkSubscription();
       }
       setLoading(false);
     });
@@ -304,12 +302,31 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       console.log('Checking subscription for user:', user.email);
       
-      // First check database directly for all users
-      const { data: dbData, error: dbError } = await supabase
+      // First try to check with the regular client (respects RLS)
+      let { data: dbData, error: dbError } = await supabase
         .from('subscribers')
         .select('*')
         .eq('email', user.email)
         .single();
+
+      // If RLS blocks the query or no data found, try with edge function that has service role access
+      if (dbError || !dbData) {
+        console.log('Database query failed or no data found, trying edge function', { dbError });
+        try {
+          const { data: edgeData, error: edgeError } = await supabase.functions.invoke('check-subscription', {
+            headers: {
+              Authorization: `Bearer ${session.access_token}`
+            }
+          });
+          if (!edgeError && edgeData) {
+            console.log('Edge function returned subscription data:', edgeData);
+            setSubscription(edgeData);
+            return;
+          }
+        } catch (edgeError) {
+          console.error('Edge function also failed:', edgeError);
+        }
+      }
 
       console.log('Database query result:', { dbData, dbError });
 
