@@ -12,11 +12,15 @@ interface DailyTracker {
 }
 
 export const useFreeAccessGate = () => {
-  const { subscription } = useAuth();
+  const { subscription, user } = useAuth();
   const [dailyQuizCount, setDailyQuizCount] = useState(0);
 
   const isAdmin = subscription?.status === 'admin';
   const isPremium = subscription?.subscribed || isAdmin;
+  
+  // All users (authenticated or not) get free access to 10 questions/flashcards
+  // Only premium users get unlimited access
+  const hasFreeAccess = true;
 
   const limits: FreeAccessLimits = {
     questionsPerCategory: 10,
@@ -26,7 +30,9 @@ export const useFreeAccessGate = () => {
   // Load daily quiz count from localStorage
   useEffect(() => {
     const today = new Date().toDateString();
-    const storedData = localStorage.getItem('dailyQuizTracker');
+    // Use user-specific storage key if authenticated, otherwise use global key
+    const storageKey = user ? `dailyQuizTracker_${user.id}` : 'dailyQuizTracker';
+    const storedData = localStorage.getItem(storageKey);
     
     if (storedData) {
       try {
@@ -36,7 +42,7 @@ export const useFreeAccessGate = () => {
         } else {
           // New day, reset counter
           setDailyQuizCount(0);
-          localStorage.setItem('dailyQuizTracker', JSON.stringify({
+          localStorage.setItem(storageKey, JSON.stringify({
             date: today,
             completedQuizzes: 0
           }));
@@ -44,19 +50,19 @@ export const useFreeAccessGate = () => {
       } catch (error) {
         // Invalid data, reset
         setDailyQuizCount(0);
-        localStorage.setItem('dailyQuizTracker', JSON.stringify({
+        localStorage.setItem(storageKey, JSON.stringify({
           date: today,
           completedQuizzes: 0
         }));
       }
     } else {
       // No data exists, initialize
-      localStorage.setItem('dailyQuizTracker', JSON.stringify({
+      localStorage.setItem(storageKey, JSON.stringify({
         date: today,
         completedQuizzes: 0
       }));
     }
-  }, []);
+  }, [user]);
 
   const incrementDailyQuizCount = () => {
     if (isPremium) return; // No limits for premium users
@@ -65,7 +71,9 @@ export const useFreeAccessGate = () => {
     const newCount = dailyQuizCount + 1;
     setDailyQuizCount(newCount);
     
-    localStorage.setItem('dailyQuizTracker', JSON.stringify({
+    // Store quiz count per user or globally for non-authenticated users
+    const storageKey = user ? `dailyQuizTracker_${user.id}` : 'dailyQuizTracker';
+    localStorage.setItem(storageKey, JSON.stringify({
       date: today,
       completedQuizzes: newCount
     }));
