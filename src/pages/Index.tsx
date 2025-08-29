@@ -113,6 +113,23 @@ const Index = () => {
     }
   };
 
+  const handlePremiumFeatureAccess = async (targetPath: string) => {
+    if (!user) {
+      navigate('/auth');
+      return;
+    }
+    
+    // Check if user already has premium access
+    const alreadyHasAccess = await checkAccessBeforeUpgrade();
+    if (alreadyHasAccess) {
+      // User has access, navigate to the feature
+      navigate(targetPath);
+    } else {
+      // User needs to upgrade, redirect to auth
+      navigate('/auth');
+    }
+  };
+
   return (
     <div className="min-h-screen gradient-background">
       {/* Sticky Promo Banner */}
@@ -346,11 +363,12 @@ const Index = () => {
                       </div>
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
-                    <Link to={section.link} className="mt-auto">
-                      <Button className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}>
-                        Start Studying
-                      </Button>
-                    </Link>
+                    <Button 
+                      onClick={() => handlePremiumFeatureAccess(section.link)}
+                      className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}
+                    >
+                      Start Studying
+                    </Button>
                     {!isSubscribed && (
                       <div className="flex justify-center mt-2">
                         <Badge variant="outline" className="text-xs">
@@ -462,12 +480,13 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
             </div>
             <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-            <Link to="/flashcards">
-              <Button className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Browse Flashcards
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => handlePremiumFeatureAccess('/flashcards')}
+              className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+            >
+              <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+              Browse Flashcards
+            </Button>
           </Card>
         </div>
 
@@ -485,12 +504,13 @@ const Index = () => {
             <div className="flex items-center justify-between mb-3 sm:mb-4">
               <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
             </div>
-            <Link to="/missed-questions">
-              <Button className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Review Missed Questions
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => handlePremiumFeatureAccess('/missed-questions')}
+              className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+            >
+              <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+              Review Missed Questions
+            </Button>
           </Card>
 
           {/* Fire Quiz */}
@@ -533,12 +553,14 @@ const Index = () => {
                 <span>Detailed Results</span>
               </div>
             </div>
-            <Link to="/exam-simulation">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base">
-                <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                Start Exam Simulation
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => handlePremiumFeatureAccess('/exam-simulation')}
+              size="lg" 
+              className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+            >
+              <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+              Start Exam Simulation
+            </Button>
           </div>
         </Card>
         
