@@ -124,7 +124,7 @@ const Auth = () => {
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="signin">Sign In</TabsTrigger>
-                <TabsTrigger value="signup">Sign Up</TabsTrigger>
+                <TabsTrigger value="signup">Upgrade Now</TabsTrigger>
               </TabsList>
               
               <TabsContent value="signin">
@@ -257,11 +257,11 @@ const Auth = () => {
                     )}
                     
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? 'Creating account...' : 'Sign Up'}
+                      {loading ? 'Creating account...' : 'Upgrade Now'}
                     </Button>
                     
                     <p className="text-xs text-muted-foreground text-center">
-                      By signing up, you'll be redirected to complete payment for $19.99.
+                      By upgrading, you'll be redirected to complete payment for $19.99.
                     </p>
                   </form>
                 </div>
