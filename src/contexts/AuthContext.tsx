@@ -301,6 +301,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     try {
       console.log('🔍 Starting comprehensive payment verification for:', user.email);
+      console.log('📧 User details:', { userId: user.id, email: user.email });
+      console.log('🔑 Session token exists:', !!session.access_token);
       
       // Use the comprehensive get-user-access function that cross-checks Stripe and Supabase
       const { data, error } = await supabase.functions.invoke('get-user-access', {
@@ -313,6 +315,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       if (error) {
         console.error('❌ Access verification error:', error);
+        console.error('❌ Error details:', JSON.stringify(error, null, 2));
         // On error, preserve existing subscription state or default to trial
         if (!subscription) {
           setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });

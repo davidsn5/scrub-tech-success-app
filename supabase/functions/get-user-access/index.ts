@@ -27,14 +27,25 @@ serve(async (req) => {
     );
 
     const authHeader = req.headers.get("Authorization");
-    if (!authHeader) throw new Error("No authorization header provided");
+    if (!authHeader) {
+      logStep("No authorization header provided");
+      throw new Error("No authorization header provided");
+    }
 
     const token = authHeader.replace("Bearer ", "");
+    logStep("Extracting user from token");
+    
     const { data: userData, error: userError } = await supabaseAuth.auth.getUser(token);
-    if (userError) throw new Error(`Authentication error: ${userError.message}`);
+    if (userError) {
+      logStep("Authentication error", { error: userError.message });
+      throw new Error(`Authentication error: ${userError.message}`);
+    }
     
     const user = userData.user;
-    if (!user?.email) throw new Error("User not authenticated or email not available");
+    if (!user?.email) {
+      logStep("User not authenticated or email not available");
+      throw new Error("User not authenticated or email not available");
+    }
     logStep("User authenticated", { userId: user.id, email: user.email });
 
     // Create service role client for database operations (bypasses RLS)
@@ -150,9 +161,12 @@ serve(async (req) => {
         updated_at: new Date().toISOString(),
       };
 
-      const { error: updateError } = await supabaseService
+      logStep("Attempting database update with data", updateData);
+
+      const { data: updateResult, error: updateError } = await supabaseService
         .from("subscribers")
-        .upsert(updateData, { onConflict: 'email', ignoreDuplicates: false });
+        .upsert(updateData, { onConflict: 'email', ignoreDuplicates: false })
+        .select();
 
       if (!updateError) {
         finalAccess = {
@@ -161,9 +175,9 @@ serve(async (req) => {
           subscriptionTier: 'premium',
           verificationSource: 'stripe_sync'
         };
-        logStep("Database updated from Stripe verification - access granted");
+        logStep("Database updated from Stripe verification - access granted", { updateResult });
       } else {
-        logStep("Failed to update database from Stripe", { error: updateError.message });
+        logStep("Failed to update database from Stripe", { error: updateError.message, details: updateError });
       }
     }
 
