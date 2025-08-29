@@ -168,12 +168,12 @@ const Auth = () => {
                 <div className="space-y-4">
                   <div className="bg-orange-500/20 p-4 rounded-md border border-orange-500">
                     <div className="text-center mb-2">
-                      <span className="font-medium text-sm text-orange-800 inline-flex items-center gap-2">
-                        <Stethoscope className="h-4 w-4 text-orange-600" />
+                      <span className="font-medium text-sm text-black inline-flex items-center gap-2">
+                        <Stethoscope className="h-4 w-4 text-black" />
                         Sign up for Access to Free Questions and Flashcards
                       </span>
                     </div>
-                    <ul className="text-sm text-orange-700 space-y-1 text-center">
+                    <ul className="text-sm text-black space-y-1 text-center">
                       <li>• 10 free practice questions per category</li>
                       <li>• 5 free flashcards per category</li>
                     </ul>
