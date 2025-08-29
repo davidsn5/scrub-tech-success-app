@@ -475,7 +475,7 @@ const Index = () => {
         
         {/* Premium Section - Only show for non-premium users */}
         {!isSubscribed && (
-          <div className="mb-6 sm:mb-8">
+          <div className="mb-6 sm:mb-8 mt-8">
             <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/95 via-primary/5 to-primary/10 backdrop-blur-sm border-primary/20 shadow-xl">
               <div className="text-center max-w-4xl mx-auto">
                 <div className="flex justify-center mb-4">
