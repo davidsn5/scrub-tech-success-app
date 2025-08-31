@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy, Download } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
@@ -331,6 +331,36 @@ const Index = () => {
               </div>
             </Card>
           </div>
+        </div>
+
+        {/* Website Overview Download */}
+        <div className="mb-6 sm:mb-8">
+          <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
+            <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  Website Overview Document
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Download comprehensive information about our platform for presentations or reference
+                </p>
+              </div>
+              <Button 
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Surgical-Technologist-Review-Website-Overview.pdf';
+                  link.download = 'Surgical-Technologist-Review-Website-Overview.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="gradient-primary hover:opacity-90 shadow-card transition-all duration-300"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download PDF
+              </Button>
+            </div>
+          </Card>
         </div>
 
         {/* Main Study Sections */}
