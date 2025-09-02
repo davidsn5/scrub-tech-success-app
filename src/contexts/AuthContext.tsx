@@ -160,18 +160,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return () => authSubscription.unsubscribe();
   }, []);
 
-  // Disable periodic session validation - it was causing users to be signed out after payments
-  // useEffect(() => {
-  //   if (!user || !session) return;
-
-  //   // Validate session every 30 seconds
-  //   const validationInterval = setInterval(() => {
-  //     validateSession();
-  //   }, 30000);
-
-  //   return () => clearInterval(validationInterval);
-  // }, [user, session]);
-
   const signIn = async (email: string, password: string) => {
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
@@ -279,6 +267,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           subscribed: data.hasAccess,
           subscription_tier: data.subscriptionTier,
           status: data.accessType,
+          subscription_end: data.subscriptionEnd,
           verificationSource: data.verificationSource
         };
         
@@ -363,7 +352,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         // User already has access, show confirmation and refresh their status
         toast({
           title: "You're Already Premium! 🎉",
-          description: "You already have lifetime premium access. No additional payment needed.",
+          description: "You already have premium access. No additional payment needed.",
           duration: 6000,
         });
         

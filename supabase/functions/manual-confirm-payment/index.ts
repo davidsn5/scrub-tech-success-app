@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
@@ -90,9 +91,16 @@ serve(async (req) => {
       subscriptionData.subscription_end = new Date(subscription.current_period_end * 1000).toISOString();
       logStep("Active subscription found", { subscriptionId: subscription.id });
     } else {
-      // Give LIFETIME access for one-time payments (no expiration)
-      subscriptionData.subscription_end = null; // null = lifetime access
-      logStep("No active subscription, granting LIFETIME access");
+      // One-time payment - give 365-day access
+      const paymentDate = new Date();
+      const expirationDate = new Date(paymentDate);
+      expirationDate.setDate(expirationDate.getDate() + 365); // Add 365 days
+      
+      subscriptionData.subscription_end = expirationDate.toISOString();
+      logStep("No active subscription, granting 365-day access", {
+        startDate: subscriptionData.subscription_start,
+        endDate: subscriptionData.subscription_end
+      });
     }
 
     // Find user profile

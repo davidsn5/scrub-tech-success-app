@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
@@ -103,9 +104,17 @@ serve(async (req) => {
         subscriptionData.subscription_end = new Date(subscription.current_period_end * 1000).toISOString();
       }
     } else if (session.mode === "payment") {
-      // One-time payment - give LIFETIME access (no expiration)
-      subscriptionData.subscription_end = null; // null = no expiration = lifetime access
-      logStep("One-time payment confirmed, granting LIFETIME access");
+      // One-time payment - give 365-day access (12 months)
+      const paymentDate = new Date();
+      const expirationDate = new Date(paymentDate);
+      expirationDate.setDate(expirationDate.getDate() + 365); // Add 365 days
+      
+      subscriptionData.subscription_start = paymentDate.toISOString();
+      subscriptionData.subscription_end = expirationDate.toISOString();
+      logStep("One-time payment confirmed, granting 365-day access", { 
+        startDate: subscriptionData.subscription_start,
+        endDate: subscriptionData.subscription_end 
+      });
     }
 
     // Update subscribers table to grant access

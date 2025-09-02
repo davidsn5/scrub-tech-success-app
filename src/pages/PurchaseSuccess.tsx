@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -58,7 +59,7 @@ const PurchaseSuccess = () => {
         
         toast({
           title: "Payment Confirmed!",
-          description: "Your lifetime premium access has been activated.",
+          description: "Your 12-month premium access has been activated.",
         });
       } catch (error) {
         console.error("Payment confirmation error:", error);
@@ -96,7 +97,7 @@ const PurchaseSuccess = () => {
           ) : confirmed ? (
             <>
               <p className="text-muted-foreground">
-                Thank you for your purchase! Your premium access has been activated and you now have full access to all study materials.
+                Thank you for your purchase! Your 12-month premium access has been activated and you now have full access to all study materials.
               </p>
               <Button onClick={() => navigate("/")} className="w-full">
                 Start Studying

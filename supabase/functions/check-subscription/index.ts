@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
@@ -42,21 +43,42 @@ serve(async (req) => {
     // Check if user is an admin or premium user first
     const { data: existingSubscriber } = await supabaseClient
       .from("subscribers")
-      .select("status, subscribed, subscription_tier")
+      .select("status, subscribed, subscription_tier, subscription_end")
       .eq("email", user.email)
       .single();
     
-    // If user is admin or premium, return their status without checking Stripe
+    // If user is admin or premium, check expiration for non-lifetime users
     if (existingSubscriber?.status === 'admin' || existingSubscriber?.status === 'premium') {
-      logStep("Admin or premium user detected, returning status", { status: existingSubscriber.status });
-      return new Response(JSON.stringify({
-        subscribed: true,
-        subscription_tier: existingSubscriber.subscription_tier || "premium",
-        status: existingSubscriber.status
-      }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 200,
-      });
+      // Check if this is a lifetime user (subscription_end is null) or if subscription is still valid
+      const isLifetimeUser = existingSubscriber.subscription_end === null;
+      const isSubscriptionValid = isLifetimeUser || (existingSubscriber.subscription_end && new Date(existingSubscriber.subscription_end) > new Date());
+      
+      if (isSubscriptionValid) {
+        logStep("Admin/premium user with valid subscription detected", { 
+          status: existingSubscriber.status,
+          isLifetime: isLifetimeUser,
+          subscriptionEnd: existingSubscriber.subscription_end
+        });
+        return new Response(JSON.stringify({
+          subscribed: true,
+          subscription_tier: existingSubscriber.subscription_tier || "premium",
+          status: existingSubscriber.status
+        }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 200,
+        });
+      } else {
+        // Subscription has expired, update status
+        logStep("Premium subscription expired, updating status", { subscriptionEnd: existingSubscriber.subscription_end });
+        await supabaseClient.from("subscribers").upsert({
+          email: user.email,
+          user_id: user.id,
+          subscribed: false,
+          status: "trial",
+          subscription_tier: "premium",
+          updated_at: new Date().toISOString(),
+        }, { onConflict: 'email' });
+      }
     }
 
     // For non-premium users, check if Stripe key is available
@@ -113,7 +135,7 @@ serve(async (req) => {
     const customerId = customers.data[0].id;
     logStep("Found Stripe customer", { customerId });
 
-    // Check for completed one-time payments instead of subscriptions
+    // Check for completed one-time payments
     const checkoutSessions = await stripe.checkout.sessions.list({
       customer: customerId,
       limit: 100,
@@ -127,9 +149,45 @@ serve(async (req) => {
     
     let subscriptionEnd = null;
     if (hasCompletedPayment) {
-      // For one-time payments, grant LIFETIME access (no expiration)
-      subscriptionEnd = null; // null = lifetime access
-      logStep("Completed one-time payment found, granting LIFETIME access");
+      // For one-time payments, calculate 365-day expiration from payment
+      const latestPaymentSession = checkoutSessions.data
+        .filter(session => session.payment_status === "paid" && session.mode === "payment")
+        .sort((a, b) => b.created - a.created)[0];
+      
+      if (latestPaymentSession) {
+        const paymentDate = new Date(latestPaymentSession.created * 1000);
+        const expirationDate = new Date(paymentDate);
+        expirationDate.setDate(expirationDate.getDate() + 365);
+        subscriptionEnd = expirationDate.toISOString();
+        
+        // Check if subscription is still valid
+        const isStillValid = new Date() < expirationDate;
+        if (!isStillValid) {
+          logStep("365-day subscription has expired", { paymentDate, expirationDate });
+          await supabaseClient.from("subscribers").upsert({
+            email: user.email,
+            user_id: user.id,
+            stripe_customer_id: customerId,
+            subscribed: false,
+            subscription_tier: "premium",
+            subscription_end: subscriptionEnd,
+            status: "expired",
+            updated_at: new Date().toISOString(),
+          }, { onConflict: 'email' });
+          
+          return new Response(JSON.stringify({
+            subscribed: false,
+            subscription_tier: "premium",
+            subscription_end: subscriptionEnd,
+            status: "expired"
+          }), {
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+            status: 200,
+          });
+        }
+        
+        logStep("Completed one-time payment found, granting 365-day access", { paymentDate, expirationDate });
+      }
     } else {
       logStep("No completed one-time payments found");
     }
@@ -141,7 +199,7 @@ serve(async (req) => {
       stripe_customer_id: customerId,
       subscribed: hasCompletedPayment,
       subscription_tier: "premium",
-      subscription_end: subscriptionEnd, // null for permanent access
+      subscription_end: subscriptionEnd,
       status: finalStatus,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'email' });

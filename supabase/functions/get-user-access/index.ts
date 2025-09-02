@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
@@ -126,10 +127,14 @@ serve(async (req) => {
 
     // Priority 1: Check database status (most reliable for lifetime access)
     if (dbSubscription) {
-      const dbHasAccess = dbSubscription.status === 'admin' || 
-                         dbSubscription.status === 'premium' || 
-                         dbSubscription.status === 'active' ||
-                         dbSubscription.subscribed === true;
+      // Check if subscription is expired (for non-lifetime users)
+      const isLifetimeUser = dbSubscription.subscription_end === null;
+      const isSubscriptionValid = isLifetimeUser || (dbSubscription.subscription_end && new Date(dbSubscription.subscription_end) > new Date());
+      
+      const dbHasAccess = (dbSubscription.status === 'admin' || 
+                          dbSubscription.status === 'premium' || 
+                          (dbSubscription.status === 'active' && isSubscriptionValid) ||
+                          (dbSubscription.subscribed === true && isSubscriptionValid));
       
       if (dbHasAccess) {
         finalAccess = {
@@ -138,18 +143,29 @@ serve(async (req) => {
           subscriptionTier: dbSubscription.subscription_tier || 'premium',
           verificationSource: 'database'
         };
-        logStep("Access granted from database verification");
+        logStep("Access granted from database verification", { 
+          isLifetime: isLifetimeUser,
+          subscriptionEnd: dbSubscription.subscription_end 
+        });
+      } else if (dbSubscription.subscription_end && new Date(dbSubscription.subscription_end) <= new Date()) {
+        // Update expired subscription status in database
+        logStep("Subscription expired, updating database status");
+        await supabaseService.from("subscribers").upsert({
+          email: user.email,
+          user_id: user.id,
+          subscribed: false,
+          status: "expired",
+          subscription_tier: dbSubscription.subscription_tier || "premium",
+          subscription_end: dbSubscription.subscription_end,
+          updated_at: new Date().toISOString(),
+        }, { onConflict: 'email' });
         
-        // IMPORTANT: Even if database shows access, cross-verify with Stripe
-        // This ensures our local data stays in sync with Stripe's reality
-        if (stripeVerification && !stripeVerification.error) {
-          const stripeHasPayment = stripeVerification.hasCompletedPayment || stripeVerification.hasActiveSubscription;
-          
-          if (!stripeHasPayment) {
-            logStep("WARNING: Database shows access but Stripe shows no payment - may be admin override or data sync issue");
-            // For lifetime purchases, we trust the database more than Stripe ongoing subscription status
-          }
-        }
+        finalAccess = {
+          hasAccess: false,
+          accessType: 'expired',
+          subscriptionTier: 'premium',
+          verificationSource: 'database_expired'
+        };
       }
     }
 
@@ -159,6 +175,15 @@ serve(async (req) => {
       
       logStep("Stripe shows payment but database doesn't - updating database");
       
+      // Calculate subscription end for one-time payments (365 days)
+      let subscriptionEnd = null;
+      if (stripeVerification.hasCompletedPayment) {
+        const paymentDate = new Date();
+        const expirationDate = new Date(paymentDate);
+        expirationDate.setDate(expirationDate.getDate() + 365);
+        subscriptionEnd = expirationDate.toISOString();
+      }
+      
       // Update database to reflect Stripe payment
       const updateData = {
         user_id: user.id,
@@ -167,7 +192,7 @@ serve(async (req) => {
         status: "active",
         subscription_tier: "premium",
         subscription_start: new Date().toISOString(),
-        subscription_end: stripeVerification.hasCompletedPayment ? null : undefined, // null for one-time payments (lifetime)
+        subscription_end: subscriptionEnd,
         stripe_customer_id: stripeVerification.customerId,
         updated_at: new Date().toISOString(),
       };
@@ -212,6 +237,7 @@ serve(async (req) => {
       email: user.email,
       databaseStatus: dbSubscription?.status || null,
       databaseSubscribed: dbSubscription?.subscribed || false,
+      subscriptionEnd: dbSubscription?.subscription_end || null,
       stripeVerification: stripeVerification
     };
 
