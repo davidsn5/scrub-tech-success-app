@@ -604,7 +604,16 @@ const Index = () => {
             >
               Privacy Policy
             </Link>
+            <Link 
+              to="/copyright-notice" 
+              className="hover:text-gray-700 transition-colors"
+            >
+              Copyright Notice
+            </Link>
             <span>Contact Us: SurgicalTechReview@gmail.com</span>
+            <span className="text-xs">
+              © {new Date().getFullYear()} Surgical Tech Review. All content is copyrighted and protected.
+            </span>
           </div>
         </div>
       </div>

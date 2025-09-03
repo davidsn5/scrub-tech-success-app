@@ -20,6 +20,7 @@ import MissedQuestions from "./pages/MissedQuestions";
 import ExamSimulation from "./pages/ExamSimulation";
 import AccountManagement from "./pages/AccountManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CopyrightNotice from "./pages/CopyrightNotice";
 import PurchaseSuccess from "./pages/PurchaseSuccess";
 import PurchaseCanceled from "./pages/PurchaseCanceled";
 import AdminPaymentConfirm from "./pages/AdminPaymentConfirm";
@@ -37,6 +38,7 @@ const AppContent = () => {
         <Route path="/" element={<Index />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/copyright-notice" element={<CopyrightNotice />} />
         <Route path="/purchase/success" element={<PurchaseSuccess />} />
         <Route path="/purchase/canceled" element={<PurchaseCanceled />} />
         
