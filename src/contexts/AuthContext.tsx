@@ -131,6 +131,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         
         if (session?.user) {
           console.log('👤 User found in auth state change, triggering immediate access verification');
+          
+          // Track session for both SIGNED_IN and TOKEN_REFRESHED events
+          if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+            setTimeout(() => {
+              trackActiveSession(session, session.user.email!);
+            }, 0);
+          }
+          
           // Call immediately for instant access verification
           checkSubscription();
         } else {
@@ -159,6 +167,37 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     return () => authSubscription.unsubscribe();
   }, []);
+
+  // Set up periodic session validation and window focus validation
+  useEffect(() => {
+    if (!session) return;
+
+    // Validate session every 60 seconds
+    const validationInterval = setInterval(() => {
+      validateSession();
+    }, 60000);
+
+    // Validate session when window regains focus
+    const handleFocus = () => {
+      validateSession();
+    };
+
+    // Validate session when page becomes visible
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        validateSession();
+      }
+    };
+
+    window.addEventListener('focus', handleFocus);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      clearInterval(validationInterval);
+      window.removeEventListener('focus', handleFocus);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [session]);
 
   const signIn = async (email: string, password: string) => {
     const { data, error } = await supabase.auth.signInWithPassword({
