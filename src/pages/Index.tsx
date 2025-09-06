@@ -10,6 +10,7 @@ import { useUserProgress } from '@/hooks/useUserProgress';
 import AddToHomeScreen from '@/components/AddToHomeScreen';
 import StickyPromoBanner from '@/components/StickyPromoBanner';
 import { useToast } from '@/hooks/use-toast';
+import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 
 
 const Index = () => {
@@ -18,6 +19,7 @@ const Index = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
 
   if (loading || progressLoading) {
     return (
@@ -168,13 +170,23 @@ const Index = () => {
                 {/* Mobile Auth Section */}
                 <div className="mt-4 sm:hidden">
                   {!user ? (
-                    <Button 
-                      onClick={() => navigate('/auth')} 
-                      className="gradient-primary hover:opacity-90 shadow-card hover:shadow-professional transition-all duration-300 transform hover:scale-105"
-                    >
-                      <User className="h-4 w-4 mr-2" />
-                      Sign in/Upgrade
-                    </Button>
+                    <div className="space-y-2">
+                      <Button 
+                        onClick={() => navigate('/auth')} 
+                        className="w-full gradient-primary hover:opacity-90 shadow-card hover:shadow-professional transition-all duration-300 transform hover:scale-105"
+                      >
+                        <User className="h-4 w-4 mr-2" />
+                        Sign in/Upgrade
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setShowForgotPassword(true)}
+                        className="w-full text-xs text-muted-foreground hover:text-foreground"
+                      >
+                        Forgot password?
+                      </Button>
+                    </div>
                   ) : (
                     <div className="space-y-3 gradient-card rounded-xl p-4 border border-border/50 backdrop-blur-sm shadow-card">
                       <div className="flex items-center justify-center space-x-2">
@@ -272,14 +284,22 @@ const Index = () => {
             
             {/* Desktop Sign In Button */}
             {!user && (
-              <div className="hidden sm:block">
+              <div className="hidden sm:block space-y-2">
                 <Button 
                   onClick={() => navigate('/auth')} 
                   size="lg"
-                  className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-6"
+                  className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-6"
                 >
                   <User className="h-4 w-4 mr-2" />
                   Sign in/Upgrade
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowForgotPassword(true)}
+                  className="text-xs text-muted-foreground hover:text-foreground"
+                >
+                  Forgot password?
                 </Button>
               </div>
             )}
@@ -617,6 +637,12 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Forgot Password Dialog */}
+      <ForgotPasswordDialog 
+        isOpen={showForgotPassword} 
+        onClose={() => setShowForgotPassword(false)} 
+      />
     </div>
   );
 };

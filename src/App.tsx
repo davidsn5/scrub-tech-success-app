@@ -24,6 +24,7 @@ import CopyrightNotice from "./pages/CopyrightNotice";
 import PurchaseSuccess from "./pages/PurchaseSuccess";
 import PurchaseCanceled from "./pages/PurchaseCanceled";
 import AdminPaymentConfirm from "./pages/AdminPaymentConfirm";
+import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const AppContent = () => {
         <Route path="/copyright-notice" element={<CopyrightNotice />} />
         <Route path="/purchase/success" element={<PurchaseSuccess />} />
         <Route path="/purchase/canceled" element={<PurchaseCanceled />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         
         {/* Protected Routes - Require subscription */}
         <Route path="/flashcards" element={<ProtectedRoute><Flashcards /></ProtectedRoute>} />
