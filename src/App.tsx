@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
+import { FeatureFlagsProvider } from "@/contexts/FeatureFlagsContext";
 import AuthModal from "@/components/AuthModal";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
@@ -26,6 +27,7 @@ import PurchaseCanceled from "./pages/PurchaseCanceled";
 import AdminPaymentConfirm from "./pages/AdminPaymentConfirm";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+import Preview from "./pages/Preview";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +57,7 @@ const AppContent = () => {
         <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
         <Route path="/admin/payment-confirm" element={<AdminPaymentConfirm />} />
+        <Route path="/preview" element={<Preview />} />
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
@@ -76,7 +79,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <AuthProvider>
-          <AppContent />
+          <FeatureFlagsProvider>
+            <AppContent />
+          </FeatureFlagsProvider>
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
