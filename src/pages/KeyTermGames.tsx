@@ -20,15 +20,15 @@ const KeyTermGames = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-white/95 via-purple-50/90 to-purple-50/85 shadow-sm border-b border-purple-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <Link to="/">
-                <Button variant="outline" size="sm" className="flex items-center space-x-2 border-purple-200/60 hover:bg-purple-50/80">
-                  <ArrowLeft className="h-4 w-4" />
-                  <span>Back to Home</span>
-                </Button>
-              </Link>
-              <div className="flex items-center justify-center space-x-3">
+          <div className="flex items-start justify-between">
+            <Link to="/">
+              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-purple-200/60 hover:bg-purple-50/80">
+                <ArrowLeft className="h-4 w-4" />
+                <span>Back to Home</span>
+              </Button>
+            </Link>
+            <div className="flex-1 text-center">
+              <div className="flex items-center justify-center space-x-3 mb-2">
                 <div className="bg-gradient-to-br from-purple-500/90 to-purple-600/90 p-2 rounded-lg shadow-lg">
                   <Trophy className="h-6 w-6 text-white" />
                 </div>
@@ -38,6 +38,7 @@ const KeyTermGames = () => {
               </div>
               <p className="text-sm text-gray-600">Interactive games to master medical terminology</p>
             </div>
+            <div className="w-32"></div> {/* Spacer for balance */}
           </div>
         </div>
       </div>
