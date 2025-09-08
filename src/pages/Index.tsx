@@ -419,13 +419,13 @@ const Index = () => {
             </Card>
 
             {/* Key Term Games */}
-            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-emerald-50/90 via-green-50/80 to-emerald-100/70 backdrop-blur-sm border-emerald-200/50 shadow-lg transition-all duration-300 ${!isPremium ? 'hover:shadow-xl' : ''}`}>
+            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-teal-50/90 to-teal-100/90 backdrop-blur-sm border-teal-200/60 shadow-lg transition-all duration-300 ${!isPremium ? 'hover:shadow-xl' : ''}`}>
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-emerald-500/80 to-green-600/80 flex-shrink-0">
+                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-teal-500/80 to-teal-600/80 flex-shrink-0">
                     <Trophy className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-emerald-700">Review Games</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-teal-700">Review Games</h3>
                 </div>
                 {isPremium ? (
                   <Badge className="bg-green-500/90 text-white text-xs">Premium</Badge>
@@ -433,13 +433,13 @@ const Index = () => {
                   <Badge className="bg-amber-500/90 text-white text-xs">Free Preview</Badge>
                 )}
               </div>
-              <p className="text-emerald-600 mb-3 sm:mb-4 text-xs sm:text-sm">
+              <p className="text-teal-600 mb-3 sm:mb-4 text-xs sm:text-sm">
                 Interactive games to master medical terminology and surgical concepts
                 {!isPremium && <span className="block mt-1 text-amber-700 font-medium">Try limited games daily - upgrade for unlimited access!</span>}
               </p>
               <Button 
                 onClick={() => handlePremiumFeatureAccess('/key-term-games')}
-                className="w-full bg-gradient-to-r from-emerald-500/80 to-green-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+                className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 {isPremium ? 'Play Games' : 'Try Free Preview'}
