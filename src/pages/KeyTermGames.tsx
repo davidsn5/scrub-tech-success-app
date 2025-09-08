@@ -103,18 +103,18 @@ const KeyTermGames = () => {
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="matching" className="w-full">
-              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-8 gap-1 sm:gap-0">
-                <TabsTrigger value="matching" className="flex items-center gap-2">
-                  <Target className="h-4 w-4" />
-                  Term Matching
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-8 gap-2 sm:gap-1 h-auto">
+                <TabsTrigger value="matching" className="flex flex-col sm:flex-row items-center gap-2 py-3 px-4 h-auto min-h-[60px] sm:min-h-[40px]">
+                  <Target className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm">Term Matching</span>
                 </TabsTrigger>
-                <TabsTrigger value="speed" className="flex items-center gap-2">
-                  <Zap className="h-4 w-4" />
-                  Speed Quiz
+                <TabsTrigger value="speed" className="flex flex-col sm:flex-row items-center gap-2 py-3 px-4 h-auto min-h-[60px] sm:min-h-[40px]">
+                  <Zap className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm">Speed Quiz</span>
                 </TabsTrigger>
-                <TabsTrigger value="scramble" className="flex items-center gap-2">
-                  <Shuffle className="h-4 w-4" />
-                  Word Scramble
+                <TabsTrigger value="scramble" className="flex flex-col sm:flex-row items-center gap-2 py-3 px-4 h-auto min-h-[60px] sm:min-h-[40px]">
+                  <Shuffle className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-sm">Word Scramble</span>
                 </TabsTrigger>
               </TabsList>
               
