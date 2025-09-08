@@ -29,7 +29,7 @@ const KeyTermGames = () => {
                 </Button>
               </Link>
               <div>
-                <h1 className="text-2xl sm:text-3xl font-semibold text-primary">Games</h1>
+                <h1 className="text-2xl sm:text-3xl font-semibold text-primary">Review Games</h1>
                 <p className="text-muted-foreground">Interactive games to master medical terminology</p>
               </div>
             </div>
