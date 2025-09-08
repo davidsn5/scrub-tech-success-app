@@ -8,7 +8,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import AddToHomeScreen from '@/components/AddToHomeScreen';
-import StickyPromoBanner from '@/components/StickyPromoBanner';
 import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
@@ -126,9 +125,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen gradient-background">
-      {/* Sticky Promo Banner */}
-      <StickyPromoBanner />
-      
       {/* Header */}
       <div className="bg-card/95 backdrop-blur-md shadow-card border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
