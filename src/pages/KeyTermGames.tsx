@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Trophy, Gamepad2, Target, Zap } from 'lucide-react';
+import { InstrumentImageGenerator } from '@/components/InstrumentImageGenerator';
 
 const KeyTermGames = () => {
   return (
@@ -29,7 +30,11 @@ const KeyTermGames = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+        {/* Instrument Image Generator */}
+        <InstrumentImageGenerator />
+        
+        {/* Coming Soon Section */}
         <Card className="gradient-card shadow-card border-border/50">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">

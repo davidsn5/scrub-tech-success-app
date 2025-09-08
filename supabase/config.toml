@@ -66,3 +66,6 @@ verify_jwt = true
 
 [functions.confirm-payment]
 verify_jwt = true
+
+[functions.generate-instrument-image]
+verify_jwt = true
