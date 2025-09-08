@@ -564,10 +564,6 @@ const Index = () => {
                     <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
                     <span className="text-sm font-medium text-gray-700">Unlimited Study Sessions</span>
                   </div>
-                  <div className="flex items-center space-x-3 justify-center md:justify-start">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Lifetime Updates</span>
-                  </div>
                 </div>
 
                 {/* Testimonials */}

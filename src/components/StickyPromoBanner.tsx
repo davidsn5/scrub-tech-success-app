@@ -50,7 +50,7 @@ const StickyPromoBanner: React.FC = () => {
             <Star className="h-5 w-5 text-yellow-300 fill-yellow-300" />
             <div className="text-sm font-medium">
               <span className="hidden sm:inline">🚀 Unlock Premium: </span>
-              Full question bank • Complete flashcards • Unlimited practice • One-time purchase, lifetime updates
+              Full question bank • Complete flashcards • Unlimited practice • One-time purchase
             </div>
           </div>
           <div className="flex items-center space-x-2">
