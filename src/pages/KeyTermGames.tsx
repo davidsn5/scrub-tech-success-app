@@ -29,8 +29,13 @@ const KeyTermGames = () => {
             </Link>
           </div>
           <div className="text-center">
-            <h1 className="text-2xl sm:text-3xl font-semibold text-primary mb-2">Review Games</h1>
-            <p className="text-muted-foreground">Interactive games to master medical terminology</p>
+            <div className="flex justify-center mb-4">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90">
+                <Trophy className="h-8 w-8 text-white" />
+              </div>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-semibold text-purple-700 mb-2">Review Games</h1>
+            <p className="text-purple-600">Interactive games to master medical terminology</p>
           </div>
         </div>
       </div>
