@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Trophy, Gamepad2, Target, Zap, Shuffle } from 'lucide-react';
-import { InstrumentImageGenerator } from '@/components/InstrumentImageGenerator';
 import TermMatchingGame from '@/components/games/TermMatchingGame';
 import SpeedQuizGame from '@/components/games/SpeedQuizGame';
 import WordScrambleGame from '@/components/games/WordScrambleGame';
@@ -35,9 +34,6 @@ const KeyTermGames = () => {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8">
-        {/* Instrument Image Generator */}
-        <InstrumentImageGenerator />
-        
         {/* Games Section */}
         <Card className="gradient-card shadow-card border-border/50">
           <CardHeader className="text-center">
