@@ -400,64 +400,81 @@ const Index = () => {
             Review
           </h2>
         
-          {/* Study Flashcards - Full Width */}
-          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg mb-6">
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
-                <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+          {/* 2x2 Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            {/* Study Flashcards */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg">
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 flex-shrink-0">
+                  <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
-            </div>
-            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-            <Button 
-              onClick={() => handlePremiumFeatureAccess('/flashcards')}
-              className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-            >
-              <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-              Browse Flashcards
-            </Button>
-          </Card>
-        </div>
-
-        {/* Fire Quiz and Quick Actions */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
-          {/* Missed Questions */}
-          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-lg">
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 flex-shrink-0">
-                <RotateCcw className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Missed Questions</h3>
-            </div>
-            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review and retry questions you've missed</p>
-            <div className="flex items-center justify-between mb-3 sm:mb-4">
-              <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
-            </div>
-            <Button 
-              onClick={() => handlePremiumFeatureAccess('/missed-questions')}
-              className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-            >
-              <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-              Review Missed Questions
-            </Button>
-          </Card>
-
-          {/* Fire Quiz */}
-          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-red-500/90 to-orange-500/90 flex-shrink-0">
-                <Zap className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Fire Quiz</h3>
-            </div>
-            <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Quick 5-question quiz with random questions from all categories</p>
-            <Link to="/fire-quiz">
-              <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Start Fire Quiz
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/flashcards')}
+                className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+              >
+                <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Browse Flashcards
               </Button>
-            </Link>
-          </Card>
+            </Card>
+
+            {/* Key Term Games */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
+                  <Trophy className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Key Term Games</h3>
+              </div>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Interactive games to master medical terminology and surgical concepts</p>
+              <Link to="/key-term-games">
+                <Button className="w-full bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
+                  <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                  Play Games
+                </Button>
+              </Link>
+            </Card>
+
+            {/* Missed Questions */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-lg">
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 flex-shrink-0">
+                  <RotateCcw className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Missed Questions</h3>
+              </div>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review and retry questions you've missed</p>
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
+              </div>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/missed-questions')}
+                className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+              >
+                <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Review Missed Questions
+              </Button>
+            </Card>
+
+            {/* Fire Quiz */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-red-500/90 to-orange-500/90 flex-shrink-0">
+                  <Zap className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Fire Quiz</h3>
+              </div>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Quick 5-question quiz with random questions from all categories</p>
+              <Link to="/fire-quiz">
+                <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
+                  <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                  Start Fire Quiz
+                </Button>
+              </Link>
+            </Card>
+          </div>
         </div>
 
         {/* Exam Simulation */}

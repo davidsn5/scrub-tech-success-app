@@ -28,6 +28,7 @@ import AdminPaymentConfirm from "./pages/AdminPaymentConfirm";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 import Preview from "./pages/Preview";
+import KeyTermGames from "./pages/KeyTermGames";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const AppContent = () => {
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
         <Route path="/admin/payment-confirm" element={<AdminPaymentConfirm />} />
         <Route path="/preview" element={<Preview />} />
+        <Route path="/key-term-games" element={<KeyTermGames />} />
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
