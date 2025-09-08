@@ -1,9 +1,13 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Trophy, Gamepad2, Target, Zap } from 'lucide-react';
+import { ArrowLeft, Trophy, Gamepad2, Target, Zap, Shuffle } from 'lucide-react';
 import { InstrumentImageGenerator } from '@/components/InstrumentImageGenerator';
+import TermMatchingGame from '@/components/games/TermMatchingGame';
+import SpeedQuizGame from '@/components/games/SpeedQuizGame';
+import WordScrambleGame from '@/components/games/WordScrambleGame';
 
 const KeyTermGames = () => {
   return (
@@ -30,11 +34,11 @@ const KeyTermGames = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8">
         {/* Instrument Image Generator */}
         <InstrumentImageGenerator />
         
-        {/* Coming Soon Section */}
+        {/* Games Section */}
         <Card className="gradient-card shadow-card border-border/50">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">
@@ -42,41 +46,40 @@ const KeyTermGames = () => {
                 <Gamepad2 className="h-12 w-12 text-white" />
               </div>
             </div>
-            <CardTitle className="text-2xl sm:text-3xl">Coming Soon!</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl">Interactive Learning Games</CardTitle>
             <CardDescription className="text-lg">
-              Interactive games to help you master surgical terminology and concepts
+              Test and improve your medical terminology knowledge with fun, engaging games
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-gradient-to-br from-blue-50/80 to-blue-100/80 rounded-lg border border-blue-200/50">
-                <Target className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-blue-900">Term Matching</h3>
-                <p className="text-sm text-blue-700">Match medical terms with their definitions</p>
-              </div>
-              <div className="text-center p-4 bg-gradient-to-br from-green-50/80 to-green-100/80 rounded-lg border border-green-200/50">
-                <Zap className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-green-900">Speed Quiz</h3>
-                <p className="text-sm text-green-700">Quick-fire terminology challenges</p>
-              </div>
-              <div className="text-center p-4 bg-gradient-to-br from-purple-50/80 to-purple-100/80 rounded-lg border border-purple-200/50">
-                <Trophy className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-                <h3 className="font-semibold text-purple-900">Word Games</h3>
-                <p className="text-sm text-purple-700">Crosswords and word puzzles</p>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <p className="text-muted-foreground mb-4">
-                We're working hard to bring you engaging and educational games that will make learning medical terminology fun and effective.
-              </p>
-              <Link to="/">
-                <Button className="bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Study Materials
-                </Button>
-              </Link>
-            </div>
+          <CardContent>
+            <Tabs defaultValue="matching" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 mb-8">
+                <TabsTrigger value="matching" className="flex items-center gap-2">
+                  <Target className="h-4 w-4" />
+                  Term Matching
+                </TabsTrigger>
+                <TabsTrigger value="speed" className="flex items-center gap-2">
+                  <Zap className="h-4 w-4" />
+                  Speed Quiz
+                </TabsTrigger>
+                <TabsTrigger value="scramble" className="flex items-center gap-2">
+                  <Shuffle className="h-4 w-4" />
+                  Word Scramble
+                </TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="matching" className="space-y-6">
+                <TermMatchingGame />
+              </TabsContent>
+              
+              <TabsContent value="speed" className="space-y-6">
+                <SpeedQuizGame />
+              </TabsContent>
+              
+              <TabsContent value="scramble" className="space-y-6">
+                <WordScrambleGame />
+              </TabsContent>
+            </Tabs>
           </CardContent>
         </Card>
       </div>
