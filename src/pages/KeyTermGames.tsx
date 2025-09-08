@@ -103,7 +103,7 @@ const KeyTermGames = () => {
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="matching" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 mb-8 gap-1 sm:gap-0">
                 <TabsTrigger value="matching" className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
                   Term Matching
