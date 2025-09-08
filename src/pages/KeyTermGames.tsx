@@ -18,21 +18,21 @@ const KeyTermGames = () => {
   return (
     <div className="min-h-screen gradient-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-blue-50/90 to-blue-50/85 shadow-sm border-b border-blue-200/50 backdrop-blur-sm">
+      <div className="bg-gradient-to-r from-white/95 via-emerald-50/90 to-green-50/85 shadow-sm border-b border-emerald-200/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-start justify-between">
             <Link to="/">
-              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-blue-200/60 hover:bg-blue-50/80">
+              <Button variant="outline" size="sm" className="flex items-center space-x-2 border-emerald-200/60 hover:bg-emerald-50/80">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Home</span>
               </Button>
             </Link>
             <div className="flex-1 text-center">
               <div className="flex items-center justify-center space-x-3 mb-2">
-                <div className="bg-gradient-to-br from-blue-500/90 to-blue-600/90 p-2 rounded-lg shadow-lg">
+                <div className="bg-gradient-to-br from-emerald-500/80 to-green-600/80 p-2 rounded-lg shadow-lg">
                   <Trophy className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500/90 to-blue-600/90 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-500/80 to-green-600/80 bg-clip-text text-transparent">
                   Review Games
                 </h1>
               </div>
@@ -97,7 +97,7 @@ const KeyTermGames = () => {
         <Card className="gradient-card shadow-card border-border/50">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">
-              <div className="p-4 rounded-xl bg-gradient-to-r from-blue-500/90 to-blue-600/90">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-500/80 to-green-600/80">
                 <Gamepad2 className="h-12 w-12 text-white" />
               </div>
             </div>
