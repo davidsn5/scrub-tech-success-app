@@ -157,7 +157,7 @@ const Index = () => {
                     <span className="block sm:inline text-muted-foreground">AST Curriculum Based Practice</span>
                   </p>
                   <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl">
-                    1700+ Practice Questions • Interactive Flashcards • Full Exam Simulation • Performance Analytics
+                    1700+ Practice Questions • Interactive Flashcards • Review Games • Full Exam Simulation • Performance Analytics
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center sm:justify-start text-xs">
                     <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium border border-accent/20">
