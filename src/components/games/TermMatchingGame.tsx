@@ -150,7 +150,7 @@ const TermMatchingGame = () => {
                 <Button
                   key={`term-${pair.id}`}
                   variant={pair.matched ? "default" : selectedTerm === pair.id ? "secondary" : "outline"}
-                  className={`w-full p-4 h-auto text-left justify-start ${
+                  className={`w-full p-3 min-h-[60px] text-left justify-start whitespace-normal ${
                     pair.matched 
                       ? "bg-green-500/90 text-white hover:bg-green-500/90" 
                       : selectedTerm === pair.id 
@@ -160,7 +160,7 @@ const TermMatchingGame = () => {
                   onClick={() => handleTermClick(pair.id)}
                   disabled={pair.matched}
                 >
-                  <span className="text-sm font-medium">{pair.term}</span>
+                  <span className="text-sm font-medium leading-tight break-words">{pair.term}</span>
                 </Button>
               ))}
             </div>
@@ -174,7 +174,7 @@ const TermMatchingGame = () => {
                 <Button
                   key={`definition-${pair.id}`}
                   variant={pair.matched ? "default" : selectedDefinition === pair.id ? "secondary" : "outline"}
-                  className={`w-full p-4 h-auto text-left justify-start ${
+                  className={`w-full p-3 min-h-[60px] text-left justify-start whitespace-normal ${
                     pair.matched 
                       ? "bg-green-500/90 text-white hover:bg-green-500/90" 
                       : selectedDefinition === pair.id 
@@ -184,7 +184,7 @@ const TermMatchingGame = () => {
                   onClick={() => handleDefinitionClick(pair.id)}
                   disabled={pair.matched}
                 >
-                  <span className="text-sm">{pair.definition}</span>
+                  <span className="text-sm leading-tight break-words">{pair.definition}</span>
                 </Button>
               ))}
             </div>
