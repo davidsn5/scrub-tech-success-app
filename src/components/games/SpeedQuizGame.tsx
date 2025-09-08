@@ -6,6 +6,7 @@ import { Progress } from '@/components/ui/progress';
 import { Zap, Clock, Trophy, RotateCcw, Play } from 'lucide-react';
 import { allQuestions } from '@/data/allQuestions';
 import { toast } from '@/hooks/use-toast';
+import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 
 interface GameState {
   currentQuestion: number;
@@ -18,8 +19,9 @@ interface GameState {
 }
 
 const SpeedQuizGame = () => {
-  const GAME_DURATION = 60; // 60 seconds
-  const QUESTIONS_COUNT = 10;
+  const { isPremium, incrementGameCount } = useGamePreviewGate();
+  const GAME_DURATION = isPremium ? 60 : 30; // Shorter duration for preview
+  const QUESTIONS_COUNT = isPremium ? 10 : 5; // Fewer questions for preview
 
   const [gameState, setGameState] = useState<GameState>({
     currentQuestion: 0,
@@ -46,6 +48,11 @@ const SpeedQuizGame = () => {
       questions: shuffledQuestions,
       answers: []
     });
+
+    // Increment play count for non-premium users
+    if (!isPremium) {
+      incrementGameCount('speedQuiz');
+    }
   };
 
   const resetGame = () => {
@@ -154,6 +161,7 @@ const SpeedQuizGame = () => {
         <CardTitle className="text-2xl">Speed Quiz</CardTitle>
         <CardDescription>
           Answer as many questions as you can in {GAME_DURATION} seconds!
+          {!isPremium && <span className="block text-xs text-muted-foreground mt-1">(Preview: {QUESTIONS_COUNT} questions)</span>}
         </CardDescription>
         
         {gameState.gameActive && (

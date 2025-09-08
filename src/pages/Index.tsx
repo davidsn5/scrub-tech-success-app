@@ -11,11 +11,13 @@ import AddToHomeScreen from '@/components/AddToHomeScreen';
 import StickyPromoBanner from '@/components/StickyPromoBanner';
 import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
+import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
+  const { isPremium } = useGamePreviewGate();
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
@@ -420,34 +422,32 @@ const Index = () => {
               </Button>
             </Card>
 
-            {/* Key Term Games - Locked */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-gray-100/90 via-gray-50/80 to-gray-200/70 backdrop-blur-sm border-gray-300/50 shadow-lg opacity-60 relative">
-              <div className="absolute inset-0 bg-gray-50/20 backdrop-blur-[1px] rounded-lg"></div>
-              <div className="relative">
-                <div className="flex items-center justify-between mb-3 sm:mb-4">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-gray-400/90 to-gray-500/90 flex-shrink-0">
-                      <Trophy className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-600">Key Term Games</h3>
+            {/* Key Term Games */}
+            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-purple-100/90 via-purple-50/80 to-purple-200/70 backdrop-blur-sm border-purple-300/50 shadow-lg transition-all duration-300 ${!isPremium ? 'hover:shadow-xl' : ''}`}>
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
+                    <Trophy className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                   </div>
-                  <Badge variant="secondary" className="text-xs">Coming Soon</Badge>
+                  <h3 className="text-lg sm:text-xl font-semibold text-purple-700">Key Term Games</h3>
                 </div>
-                <p className="text-gray-500 mb-3 sm:mb-4 text-xs sm:text-sm">Interactive games to master medical terminology and surgical concepts</p>
-                <Button 
-                  disabled
-                  className="w-full bg-gray-400/90 text-gray-600 cursor-not-allowed text-xs sm:text-sm py-2 sm:py-2.5"
-                  onClick={() => {
-                    toast({
-                      title: "Coming Soon!",
-                      description: "Key Term Games are currently in development. Stay tuned for exciting interactive learning experiences!",
-                    });
-                  }}
-                >
-                  <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Locked
-                </Button>
+                {isPremium ? (
+                  <Badge className="bg-green-500/90 text-white text-xs">Premium</Badge>
+                ) : (
+                  <Badge className="bg-amber-500/90 text-white text-xs">Free Preview</Badge>
+                )}
               </div>
+              <p className="text-purple-600 mb-3 sm:mb-4 text-xs sm:text-sm">
+                Interactive games to master medical terminology and surgical concepts
+                {!isPremium && <span className="block mt-1 text-amber-700 font-medium">Try limited games daily - upgrade for unlimited access!</span>}
+              </p>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/key-term-games')}
+                className="w-full bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+              >
+                <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                {isPremium ? 'Play Games' : 'Try Free Preview'}
+              </Button>
             </Card>
 
             {/* Missed Questions */}

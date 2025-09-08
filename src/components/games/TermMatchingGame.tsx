@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Target, RefreshCw, Trophy, Clock } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
 import { toast } from '@/hooks/use-toast';
+import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 
 interface MatchPair {
   id: string;
@@ -21,11 +22,13 @@ const TermMatchingGame = () => {
   const [gameComplete, setGameComplete] = useState(false);
   const [startTime, setStartTime] = useState<Date | null>(null);
   const [gameTime, setGameTime] = useState(0);
+  const { isPremium, incrementGameCount } = useGamePreviewGate();
 
   const generatePairs = () => {
     // Get random items from different flashcard categories
     const allItems = Object.values(flashcardData).flat();
-    const shuffledItems = allItems.sort(() => Math.random() - 0.5).slice(0, 6);
+    const pairCount = isPremium ? 6 : 4; // Fewer pairs for preview
+    const shuffledItems = allItems.sort(() => Math.random() - 0.5).slice(0, pairCount);
     
     const newPairs = shuffledItems.map((item, index) => ({
       id: `pair-${index}`,
@@ -39,6 +42,11 @@ const TermMatchingGame = () => {
     setGameComplete(false);
     setStartTime(new Date());
     setGameTime(0);
+    
+    // Increment play count for non-premium users
+    if (!isPremium) {
+      incrementGameCount('termMatching');
+    }
   };
 
   useEffect(() => {

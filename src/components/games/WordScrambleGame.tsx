@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Shuffle, Check, SkipForward, Trophy, Lightbulb } from 'lucide-react';
 import { flashcardData } from '@/data/flashcardData';
 import { toast } from '@/hooks/use-toast';
+import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 
 interface ScrambleItem {
   originalWord: string;
@@ -22,6 +23,7 @@ const WordScrambleGame = () => {
   const [showHint, setShowHint] = useState(false);
   const [gameWords, setGameWords] = useState<ScrambleItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { isPremium, incrementGameCount } = useGamePreviewGate();
 
   const extractMedicalTerms = () => {
     const allItems = Object.values(flashcardData).flat();
@@ -59,7 +61,8 @@ const WordScrambleGame = () => {
       index === self.findIndex(t => t.originalWord === term.originalWord)
     );
 
-    return uniqueTerms.sort(() => Math.random() - 0.5).slice(0, 20);
+    const wordCount = isPremium ? 20 : 8; // Fewer words for preview
+    return uniqueTerms.sort(() => Math.random() - 0.5).slice(0, wordCount);
   };
 
   const scrambleWord = (word: string): string => {
@@ -81,6 +84,11 @@ const WordScrambleGame = () => {
     setTotalAttempts(0);
     setUserInput('');
     setShowHint(false);
+    
+    // Increment play count for non-premium users
+    if (!isPremium) {
+      incrementGameCount('wordScramble');
+    }
   };
 
   useEffect(() => {
@@ -166,6 +174,7 @@ const WordScrambleGame = () => {
         <CardTitle className="text-2xl">Word Scramble</CardTitle>
         <CardDescription>
           Unscramble medical terms and learn their meanings
+          {!isPremium && <span className="block text-xs text-muted-foreground mt-1">(Preview: {gameWords.length} words)</span>}
         </CardDescription>
         <div className="flex justify-center gap-4 mt-4">
           <Badge variant="outline" className="flex items-center gap-2">
