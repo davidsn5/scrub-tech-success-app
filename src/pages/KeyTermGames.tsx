@@ -20,20 +20,17 @@ const KeyTermGames = () => {
       {/* Header */}
       <div className="bg-card/95 backdrop-blur-md shadow-card border-b border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/">
-                <Button variant="outline" size="sm">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
-                </Button>
-              </Link>
-              <div>
-                <h1 className="text-2xl sm:text-3xl font-semibold text-primary">Review Games</h1>
-                <p className="text-muted-foreground">Interactive games to master medical terminology</p>
-              </div>
-            </div>
-            <Trophy className="h-8 w-8 text-purple-500" />
+          <div className="flex justify-start mb-6">
+            <Link to="/">
+              <Button variant="outline" size="sm">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </Link>
+          </div>
+          <div className="text-center">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-primary mb-2">Review Games</h1>
+            <p className="text-muted-foreground">Interactive games to master medical terminology</p>
           </div>
         </div>
       </div>
