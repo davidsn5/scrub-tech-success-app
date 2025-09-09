@@ -16,6 +16,7 @@ interface MatchPair {
 
 const TermMatchingGame = () => {
   const [pairs, setPairs] = useState<MatchPair[]>([]);
+  const [shuffledDefinitions, setShuffledDefinitions] = useState<MatchPair[]>([]);
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
   const [selectedDefinition, setSelectedDefinition] = useState<string | null>(null);
   const [score, setScore] = useState(0);
@@ -37,7 +38,11 @@ const TermMatchingGame = () => {
       matched: false
     }));
     
+    // Create a shuffled version of definitions so they don't match the order of terms
+    const shuffledDefs = [...newPairs].sort(() => Math.random() - 0.5);
+    
     setPairs(newPairs);
+    setShuffledDefinitions(shuffledDefs);
     setScore(0);
     setGameComplete(false);
     setStartTime(new Date());
@@ -178,7 +183,7 @@ const TermMatchingGame = () => {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-center">Definitions</h3>
             <div className="space-y-2">
-              {pairs.map((pair) => (
+              {shuffledDefinitions.map((pair) => (
                 <Button
                   key={`definition-${pair.id}`}
                   variant={pair.matched ? "default" : selectedDefinition === pair.id ? "secondary" : "outline"}
