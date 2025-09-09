@@ -157,7 +157,7 @@ const TermMatchingGame = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Terms Column */}
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-center">Terms</h3>
+            <h3 className="text-lg font-semibold mb-3 text-center">Column A</h3>
             <div className="space-y-2">
               {pairs.map((pair) => (
                 <Button
@@ -181,7 +181,7 @@ const TermMatchingGame = () => {
 
           {/* Definitions Column */}
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-center">Definitions</h3>
+            <h3 className="text-lg font-semibold mb-3 text-center">Column B</h3>
             <div className="space-y-2">
               {shuffledDefinitions.map((pair) => (
                 <Button
