@@ -61,5 +61,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Mayo Scissors\n(Curved)",
     explanation: "Curved Mayo scissors are heavy-duty surgical scissors typically 6-7 inches (15-18 cm) in length with thick, sturdy blades and blunt tips. The curved design allows for better access around anatomical structures and improved maneuverability in deeper surgical sites. Like their straight counterparts, they are designed for cutting tough materials such as sutures, bandages, and thick tissue. The curved blade provides enhanced visibility and control when cutting around organs or in confined spaces during surgical procedures.",
     image: "/lovable-uploads/efef353f-91f8-4a1e-a907-a5f843242693.png"
+  },
+  {
+    question: "Identify this surgical instrument and its compatible blade sizes",
+    answer: "#3 Knife Handle\n(Scalpel Handle)",
+    explanation: "The #3 knife handle is a standard surgical scalpel handle approximately 5 inches (13 cm) in length with a textured grip for secure handling. This handle is compatible with blade sizes #10, #11, #12, #13, and #15. The #3 handle is the most commonly used scalpel handle in surgery due to its versatile blade compatibility and comfortable ergonomic design. The numbered markings on the handle help identify the correct handle size for proper blade attachment.",
+    image: "/lovable-uploads/a65b6129-9f75-4b8c-bfdb-26cc77272439.png"
   }
 ];
