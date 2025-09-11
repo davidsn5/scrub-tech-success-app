@@ -168,9 +168,9 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       )}
 
       <div className="mb-6 sm:mb-8">
-        <Card className={`w-full h-80 sm:h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg overflow-hidden`}>
-          <CardContent className="h-full flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8 overflow-hidden">
-            <div className="text-center w-full max-w-full overflow-hidden">
+        <Card className={`w-full min-h-80 sm:min-h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg overflow-hidden`}>
+          <CardContent className="flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
+            <div className="text-center w-full max-w-full">
               <div className="flex items-center justify-center mb-4">
                 <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
                 <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
@@ -204,18 +204,18 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                   Show Answer
                 </Button>
               ) : (
-                <div className="space-y-3 sm:space-y-4 w-full">
-                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3 sm:p-4 lg:p-6">
-                    <div className="flex items-center justify-center mb-3">
-                      <EyeOff className="h-5 w-5 text-green-600 mr-2" />
-                      <span className="text-green-600 font-medium">Answer</span>
+                <div className="space-y-2 sm:space-y-3 w-full max-w-full">
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-2 sm:p-3 lg:p-4 max-w-full overflow-hidden">
+                    <div className="flex items-center justify-center mb-2">
+                      <EyeOff className="h-4 w-4 text-green-600 mr-2" />
+                      <span className="text-green-600 font-medium text-sm">Answer</span>
                     </div>
-                    <h4 className={`text-lg sm:text-xl font-semibold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-2 sm:mb-3 text-center`}>
+                    <h4 className={`text-sm sm:text-base lg:text-lg font-semibold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-2 text-center whitespace-pre-line break-words`}>
                       {currentCard.answer}
                     </h4>
                     {currentCard.explanation && (
-                      <div className="bg-white bg-opacity-70 rounded-lg p-3 sm:p-4 mt-3 sm:mt-4">
-                        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                      <div className="bg-white bg-opacity-70 rounded-lg p-2 sm:p-3 mt-2">
+                        <p className="text-xs sm:text-sm text-gray-700 leading-relaxed break-words">
                           <strong>Explanation:</strong> {currentCard.explanation}
                         </p>
                       </div>
