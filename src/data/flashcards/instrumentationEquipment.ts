@@ -19,5 +19,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Halstead Mosquito\n(Hemostat)",
     explanation: "The Halstead Mosquito is a small hemostat typically 5 inches (12.5 cm) in length. It features fine, delicate jaws with transverse serrations for clamping small blood vessels and controlling minor bleeding. The mosquito hemostat is ideal for precise hemostasis in superficial tissues and fine dissection work.",
     image: "/lovable-uploads/771d9991-b6ef-46ed-a651-6652cf5ea8ca.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Foerster Sponge Stick\n(Sponge Forceps)",
+    explanation: "The Foerster Sponge Stick is a long surgical instrument typically 9.5-10 inches (24-25 cm) in length. It features ring handles and serrated jaws designed to securely hold gauze sponges or other materials. The instrument is used to manipulate sponges during surgical procedures, allowing for precise placement and removal while maintaining sterile technique and keeping the surgeon's hands away from the surgical site.",
+    image: "/lovable-uploads/cc624773-e623-4e92-81d6-fe57f75a53b3.png"
   }
 ];
