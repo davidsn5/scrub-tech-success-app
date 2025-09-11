@@ -13,5 +13,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Backhaus Towel Clamp\n(Perforating)",
     explanation: "The Backhaus Towel Clamp is a perforating clamp typically 5.5 inches (14 cm) in length. It features sharp pointed tips that penetrate through surgical drapes and towels to secure them firmly to the patient or draping material. The perforating design provides extremely secure attachment but creates small holes in the material.",
     image: "/lovable-uploads/be72b641-6e4b-4440-a858-a90063df4c16.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Halstead Mosquito\n(Hemostat)",
+    explanation: "The Halstead Mosquito is a small hemostat typically 5 inches (12.5 cm) in length. It features fine, delicate jaws with transverse serrations for clamping small blood vessels and controlling minor bleeding. The mosquito hemostat is ideal for precise hemostasis in superficial tissues and fine dissection work.",
+    image: "/lovable-uploads/c46ab3be-13fe-4691-8a96-99626ea686f1.png"
   }
 ];
