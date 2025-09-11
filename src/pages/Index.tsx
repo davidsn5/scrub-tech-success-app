@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy, Lock } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
@@ -12,12 +12,14 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
+import { useFeatureFlag } from '@/hooks/useFeatureFlag';
 
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const { isPremium } = useGamePreviewGate();
+  const isInstrumentFlashcardsEnabled = useFeatureFlag('instrumentFlashcards');
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
@@ -468,25 +470,45 @@ const Index = () => {
               </Button>
             </Card>
 
-            {/* Instrumentation Flashcards - Feature Flagged */}
-            <FlagGate flag="instrumentFlashcards">
-              <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-emerald-50/80 to-emerald-100/70 backdrop-blur-sm border-emerald-200/50 shadow-lg">
-                <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+            {/* Instrumentation Flashcards - Always visible but locked if flag disabled */}
+            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-white/90 via-emerald-50/80 to-emerald-100/70 backdrop-blur-sm border-emerald-200/50 shadow-lg ${!isInstrumentFlashcardsEnabled ? 'opacity-75' : ''}`}>
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <div className="flex items-center space-x-2 sm:space-x-3">
                   <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 flex-shrink-0">
                     <Target className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Flashcards</h3>
                 </div>
-                <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
-                <Button 
-                  onClick={() => handlePremiumFeatureAccess('/study/instrumentation-equipment')}
-                  className="w-full bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-                >
-                  <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Study Instruments
-                </Button>
-              </Card>
-            </FlagGate>
+                {!isInstrumentFlashcardsEnabled && (
+                  <Badge className="bg-amber-500/90 text-white text-xs flex items-center">
+                    <Lock className="h-3 w-3 mr-1" />
+                    Coming Soon
+                  </Badge>
+                )}
+              </div>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
+              <Button 
+                onClick={isInstrumentFlashcardsEnabled ? () => handlePremiumFeatureAccess('/study/instrumentation-equipment') : undefined}
+                disabled={!isInstrumentFlashcardsEnabled}
+                className={`w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 ${
+                  isInstrumentFlashcardsEnabled 
+                    ? 'bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 hover:opacity-90' 
+                    : 'bg-gray-400 cursor-not-allowed'
+                }`}
+              >
+                {isInstrumentFlashcardsEnabled ? (
+                  <>
+                    <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                    Study Instruments
+                  </>
+                ) : (
+                  <>
+                    <Lock className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                    Coming Soon
+                  </>
+                )}
+              </Button>
+            </Card>
           </div>
         </div>
 
