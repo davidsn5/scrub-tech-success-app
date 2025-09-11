@@ -25,5 +25,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Foerster Sponge Stick\n(Sponge Forceps)",
     explanation: "The Foerster Sponge Stick is a long surgical instrument typically 9.5-10 inches (24-25 cm) in length. It features ring handles and serrated jaws designed to securely hold gauze sponges or other materials. The instrument is used to manipulate sponges during surgical procedures, allowing for precise placement and removal while maintaining sterile technique and keeping the surgeon's hands away from the surgical site.",
     image: "/lovable-uploads/cc624773-e623-4e92-81d6-fe57f75a53b3.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Mixter Right Angle\n(Hemostat)",
+    explanation: "The Mixter Right Angle hemostat is a curved surgical clamp typically 7-9 inches (18-23 cm) in length. It features a distinctive right-angle curve near the tip with serrated jaws for secure clamping. This instrument is specifically designed for clamping blood vessels and tissues in hard-to-reach areas, particularly around curved anatomical structures. The right-angle design allows surgeons to access vessels behind organs or in deep surgical sites where straight instruments would be ineffective.",
+    image: "/lovable-uploads/4379375d-6a06-4540-84a6-7eb77dd41537.png"
   }
 ];
