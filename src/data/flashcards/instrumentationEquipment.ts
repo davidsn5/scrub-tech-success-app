@@ -31,5 +31,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Mixter Right Angle\n(Hemostat)",
     explanation: "The Mixter Right Angle hemostat is a curved surgical clamp typically 7-9 inches (18-23 cm) in length. It features a distinctive right-angle curve near the tip with serrated jaws for secure clamping. This instrument is specifically designed for clamping blood vessels and tissues in hard-to-reach areas, particularly around curved anatomical structures. The right-angle design allows surgeons to access vessels behind organs or in deep surgical sites where straight instruments would be ineffective.",
     image: "/lovable-uploads/4379375d-6a06-4540-84a6-7eb77dd41537.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Curved Crile\n(Hemostat)",
+    explanation: "The Curved Crile hemostat is a medium-sized surgical clamp typically 5.5-6.25 inches (14-16 cm) in length. It features a curved tip with transverse serrations for secure clamping of blood vessels and tissue. The curved design allows for better access around anatomical structures and improved visualization during surgical procedures. Crile hemostats are commonly used for controlling bleeding from medium-sized vessels and for general tissue manipulation during surgery.",
+    image: "/lovable-uploads/428c99f3-12db-4068-a414-4df52acb2740.png"
   }
 ];
