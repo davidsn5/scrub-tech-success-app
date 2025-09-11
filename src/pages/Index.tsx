@@ -488,7 +488,7 @@ const Index = () => {
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
               <Button 
-                onClick={isInstrumentFlashcardsEnabled ? () => handlePremiumFeatureAccess('/study/instrumentation-equipment') : undefined}
+                onClick={isInstrumentFlashcardsEnabled ? () => navigate('/instrumentation-flashcards') : undefined}
                 disabled={!isInstrumentFlashcardsEnabled}
                 className={`w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 ${
                   isInstrumentFlashcardsEnabled 
