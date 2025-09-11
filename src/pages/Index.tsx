@@ -471,10 +471,10 @@ const Index = () => {
             </Card>
 
             {/* Instrumentation Flashcards - Always visible but locked if flag disabled */}
-            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-white/90 via-emerald-50/80 to-emerald-100/70 backdrop-blur-sm border-emerald-200/50 shadow-lg ${!isInstrumentFlashcardsEnabled ? 'opacity-75' : ''}`}>
+            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg ${!isInstrumentFlashcardsEnabled ? 'opacity-75' : ''}`}>
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 flex-shrink-0">
+                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
                     <Target className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Flashcards</h3>
@@ -492,7 +492,7 @@ const Index = () => {
                 disabled={!isInstrumentFlashcardsEnabled}
                 className={`w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 ${
                   isInstrumentFlashcardsEnabled 
-                    ? 'bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 hover:opacity-90' 
+                    ? 'bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90' 
                     : 'bg-gray-400 cursor-not-allowed'
                 }`}
               >
