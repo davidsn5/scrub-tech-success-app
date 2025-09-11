@@ -49,5 +49,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Metzenbaum Scissors\n(Curved)",
     explanation: "Metzenbaum scissors are delicate surgical scissors typically 5-7 inches (13-18 cm) in length with long, slender blades and blunt tips. Available in both straight and curved versions, they are designed for fine tissue dissection and cutting delicate structures. The curved variety is particularly useful for dissecting around organs and in deep surgical sites. Metzenbaum scissors have thin blades that provide precise cutting with minimal tissue trauma, making them ideal for separating tissues during surgery.",
     image: "/lovable-uploads/924ee28a-8970-454a-8351-e938e48d12b7.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Mayo Scissors\n(Straight)",
+    explanation: "Mayo scissors are heavy-duty surgical scissors typically 6-7 inches (15-18 cm) in length with thick, sturdy blades and blunt tips. Available in both straight and curved versions, they are designed for cutting tough materials such as sutures, bandages, and thick tissue. The straight variety is particularly useful for cutting at surface level and in accessible areas. Mayo scissors have robust construction that allows them to cut through heavy materials without damage, making them essential for general surgical tasks.",
+    image: "/lovable-uploads/e74a51fe-906e-480f-b992-c22b64e35da7.png"
   }
 ];
