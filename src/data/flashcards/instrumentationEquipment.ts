@@ -55,5 +55,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Mayo Scissors\n(Straight)",
     explanation: "Mayo scissors are heavy-duty surgical scissors typically 6-7 inches (15-18 cm) in length with thick, sturdy blades and blunt tips. Available in both straight and curved versions, they are designed for cutting tough materials such as sutures, bandages, and thick tissue. The straight variety is particularly useful for cutting at surface level and in accessible areas. Mayo scissors have robust construction that allows them to cut through heavy materials without damage, making them essential for general surgical tasks.",
     image: "/lovable-uploads/e74a51fe-906e-480f-b992-c22b64e35da7.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Mayo Scissors\n(Curved)",
+    explanation: "Curved Mayo scissors are heavy-duty surgical scissors typically 6-7 inches (15-18 cm) in length with thick, sturdy blades and blunt tips. The curved design allows for better access around anatomical structures and improved maneuverability in deeper surgical sites. Like their straight counterparts, they are designed for cutting tough materials such as sutures, bandages, and thick tissue. The curved blade provides enhanced visibility and control when cutting around organs or in confined spaces during surgical procedures.",
+    image: "/lovable-uploads/efef353f-91f8-4a1e-a907-a5f843242693.png"
   }
 ];
