@@ -5,6 +5,7 @@ export interface FeatureFlags {
   newExamUI: boolean;
   chartsV2: boolean;
   enhancedProgress: boolean;
+  instrumentFlashcards: boolean;
 }
 
 interface FeatureFlagsContextType {
@@ -19,6 +20,7 @@ const defaultFlags: FeatureFlags = {
   newExamUI: false,
   chartsV2: false,
   enhancedProgress: false,
+  instrumentFlashcards: false,
 };
 
 export const FeatureFlagsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

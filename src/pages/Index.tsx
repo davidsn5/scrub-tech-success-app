@@ -11,6 +11,7 @@ import AddToHomeScreen from '@/components/AddToHomeScreen';
 import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
+import { FlagGate } from '@/components/FlagGate';
 
 
 const Index = () => {
@@ -467,24 +468,61 @@ const Index = () => {
               </Button>
             </Card>
 
-            {/* Fire Quiz */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-lg">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-red-500/90 to-orange-500/90 flex-shrink-0">
-                  <Zap className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+            {/* Instrumentation Flashcards - Feature Flagged */}
+            <FlagGate flag="instrumentFlashcards">
+              <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-emerald-50/80 to-emerald-100/70 backdrop-blur-sm border-emerald-200/50 shadow-lg">
+                <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 flex-shrink-0">
+                    <Target className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Flashcards</h3>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Fire Quiz</h3>
-              </div>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Quick 5-question quiz with random questions from all categories</p>
-              <Link to="/fire-quiz">
-                <Button className="w-full bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5">
-                  <Zap className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Start Fire Quiz
+                <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
+                <Button 
+                  onClick={() => handlePremiumFeatureAccess('/study/instrumentation-equipment')}
+                  className="w-full bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+                >
+                  <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                  Study Instruments
                 </Button>
-              </Link>
-            </Card>
+              </Card>
+            </FlagGate>
           </div>
         </div>
+
+        {/* Fire Quiz */}
+        <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-xl mb-6 sm:mb-8">
+          <div className="text-center">
+            <div className="flex justify-center mb-3 sm:mb-4">
+              <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-r from-red-500/90 to-orange-500/90">
+                <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">Fire Quiz</h3>
+            <p className="text-gray-600 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+              Quick 5-question quiz with random questions from all categories
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
+              <div className="flex items-center space-x-2">
+                <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span>5 Minutes</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Zap className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span>Always Free</span>
+              </div>
+            </div>
+            <Link to="/fire-quiz">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-red-500/90 to-orange-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+              >
+                <Zap className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+                Start Fire Quiz
+              </Button>
+            </Link>
+          </div>
+        </Card>
 
         {/* Exam Simulation */}
         <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/90 via-blue-50/80 to-indigo-100/70 backdrop-blur-sm border-blue-200/50 shadow-xl mb-6 sm:mb-8">
