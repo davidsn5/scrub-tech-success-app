@@ -181,7 +181,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                   <img 
                     src={currentCard.image} 
                     alt="Surgical instrument" 
-                    className="max-w-full max-h-32 sm:max-h-40 object-contain rounded-lg shadow-md"
+                    className="max-w-full max-h-64 sm:max-h-80 object-contain rounded-lg shadow-md"
                   />
                 </div>
               ) : (
