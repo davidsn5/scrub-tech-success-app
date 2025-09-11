@@ -168,30 +168,30 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       )}
 
       <div className="mb-6 sm:mb-8">
-        <Card className={`w-full h-80 sm:h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg`}>
-          <CardContent className="h-full flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
-            <div className="text-center w-full">
+        <Card className={`w-full h-80 sm:h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg overflow-hidden`}>
+          <CardContent className="h-full flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8 overflow-hidden">
+            <div className="text-center w-full max-w-full overflow-hidden">
               <div className="flex items-center justify-center mb-4">
                 <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
                 <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
               </div>
               
               {currentCard.image ? (
-                <div className="mb-4 sm:mb-6">
+                <div className="mb-3 sm:mb-4 flex justify-center">
                   <img 
                     src={currentCard.image} 
                     alt="Surgical instrument" 
-                    className="max-w-full max-h-48 mx-auto object-contain rounded-lg shadow-md"
+                    className="max-w-full max-h-32 sm:max-h-40 object-contain rounded-lg shadow-md"
                   />
                 </div>
               ) : (
-                <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-4 sm:mb-6 leading-relaxed text-center`}>
+                <h3 className={`text-base sm:text-lg lg:text-xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>
                   {currentCard.question}
                 </h3>
               )}
               
               {currentCard.image && (
-                <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-4 sm:mb-6 leading-relaxed text-center`}>
+                <h3 className={`text-sm sm:text-base lg:text-lg font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>
                   {currentCard.question}
                 </h3>
               )}
