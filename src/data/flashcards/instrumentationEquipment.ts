@@ -18,6 +18,6 @@ export const instrumentationEquipment: FlashcardItem[] = [
     question: "Identify this surgical instrument",
     answer: "Halstead Mosquito\n(Hemostat)",
     explanation: "The Halstead Mosquito is a small hemostat typically 5 inches (12.5 cm) in length. It features fine, delicate jaws with transverse serrations for clamping small blood vessels and controlling minor bleeding. The mosquito hemostat is ideal for precise hemostasis in superficial tissues and fine dissection work.",
-    image: "/lovable-uploads/c46ab3be-13fe-4691-8a96-99626ea686f1.png"
+    image: "/lovable-uploads/771d9991-b6ef-46ed-a651-6652cf5ea8ca.png"
   }
 ];
