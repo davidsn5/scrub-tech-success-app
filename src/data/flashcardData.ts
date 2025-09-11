@@ -3,6 +3,7 @@ export interface FlashcardItem {
   question: string;
   answer: string;
   explanation: string;
+  image?: string;
 }
 
 export interface FlashcardData {
@@ -35,6 +36,7 @@ export const flashcardData: FlashcardData = {
   'emergency-situations': emergencySituations,
   'pharmacology-anesthesia': pharmacologyAnesthesia,
   'instrumentation-equipment': instrumentationEquipment,
+  'general-instruments': instrumentationEquipment,
   'hemostasis-wound-healing': hemostasisWoundHealing,
   'surgical-procedures': surgicalProcedures,
   'disinfection-sterilization': disinfectionSterilization

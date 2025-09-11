@@ -175,9 +175,26 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                 <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
                 <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
               </div>
-              <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-4 sm:mb-6 leading-relaxed text-center`}>
-                {currentCard.question}
-              </h3>
+              
+              {currentCard.image ? (
+                <div className="mb-4 sm:mb-6">
+                  <img 
+                    src={currentCard.image} 
+                    alt="Surgical instrument" 
+                    className="max-w-full max-h-48 mx-auto object-contain rounded-lg shadow-md"
+                  />
+                </div>
+              ) : (
+                <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-4 sm:mb-6 leading-relaxed text-center`}>
+                  {currentCard.question}
+                </h3>
+              )}
+              
+              {currentCard.image && (
+                <h3 className={`text-lg sm:text-xl lg:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-4 sm:mb-6 leading-relaxed text-center`}>
+                  {currentCard.question}
+                </h3>
+              )}
               
               {!showAnswer ? (
                 <Button 
