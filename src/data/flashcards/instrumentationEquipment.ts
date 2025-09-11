@@ -43,5 +43,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Kocher Clamp\n(Straight or Curved)",
     explanation: "The Kocher clamp is a heavy-duty surgical instrument available in both straight and curved versions, typically 6-8 inches (15-20 cm) in length. It features distinctive 1×2 teeth at the tip and transverse serrations for secure grasping. Kocher clamps are designed for clamping thick tissue, large blood vessels, and tough structures. The teeth provide excellent grip on fibrous tissue, making it ideal for controlling bleeding from major vessels and manipulating dense anatomical structures during surgery.",
     image: "/lovable-uploads/b83510c2-04ba-4fd2-8e9c-10039f51486d.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Metzenbaum Scissors\n(Curved)",
+    explanation: "Metzenbaum scissors are delicate surgical scissors typically 5-7 inches (13-18 cm) in length with long, slender blades and blunt tips. Available in both straight and curved versions, they are designed for fine tissue dissection and cutting delicate structures. The curved variety is particularly useful for dissecting around organs and in deep surgical sites. Metzenbaum scissors have thin blades that provide precise cutting with minimal tissue trauma, making them ideal for separating tissues during surgery.",
+    image: "/lovable-uploads/924ee28a-8970-454a-8351-e938e48d12b7.png"
   }
 ];
