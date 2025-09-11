@@ -37,5 +37,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Curved Crile\n(Hemostat)",
     explanation: "The Curved Crile hemostat is a medium-sized surgical clamp typically 5.5-6.25 inches (14-16 cm) in length. It features a curved tip with transverse serrations for secure clamping of blood vessels and tissue. The curved design allows for better access around anatomical structures and improved visualization during surgical procedures. Crile hemostats are commonly used for controlling bleeding from medium-sized vessels and for general tissue manipulation during surgery.",
     image: "/lovable-uploads/428c99f3-12db-4068-a414-4df52acb2740.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Kocher Clamp\n(Straight or Curved)",
+    explanation: "The Kocher clamp is a heavy-duty surgical instrument available in both straight and curved versions, typically 6-8 inches (15-20 cm) in length. It features distinctive 1×2 teeth at the tip and transverse serrations for secure grasping. Kocher clamps are designed for clamping thick tissue, large blood vessels, and tough structures. The teeth provide excellent grip on fibrous tissue, making it ideal for controlling bleeding from major vessels and manipulating dense anatomical structures during surgery.",
+    image: "/lovable-uploads/b83510c2-04ba-4fd2-8e9c-10039f51486d.png"
   }
 ];
