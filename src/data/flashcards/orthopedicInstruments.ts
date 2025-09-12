@@ -120,5 +120,11 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Beaver Knife Handle\n(Surgical Knife Handle)",
     explanation: "The Beaver knife handle is a specialized surgical handle designed to accommodate small, precise surgical blades for delicate cutting procedures. Features a textured, non-slip grip and secure blade attachment mechanism for optimal control during fine dissection work. Commonly used in ophthalmic, plastic, and microsurgical procedures where precision cutting is essential. The lightweight design and ergonomic grip allow for extended use without hand fatigue while maintaining precise blade control for detailed surgical work.",
     image: "/lovable-uploads/beaver-knife-handle.png"
+  },
+  {
+    question: "Identify this set of orthopedic surgical instruments",
+    answer: "Lambotte Osteotomes\n(Bone Cutting Chisels)",
+    explanation: "Lambotte osteotomes are precision bone-cutting instruments featuring flat, beveled cutting edges in various widths (typically 1/4\" to 1 1/2\"). Named after Belgian surgeon Albin Lambotte, these osteotomes are designed for precise bone cutting, shaping, and contouring during orthopedic procedures. The sharp, beveled edge allows for controlled bone removal and precise osteotomies. Available in multiple sizes to accommodate different surgical needs, they are essential for procedures requiring accurate bone cuts, such as corrective osteotomies, bone grafting, and joint reconstruction surgeries.",
+    image: "/lovable-uploads/lambotte-osteotomes.png"
   }
 ];
