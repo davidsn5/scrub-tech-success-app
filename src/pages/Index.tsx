@@ -115,15 +115,10 @@ const Index = () => {
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
-    // Force refresh subscription status to ensure we have the latest data
     console.log('🔍 Checking premium access before navigation...');
-    if (user) {
-      await checkSubscription();
-    }
-    
-    // Check premium status and show appropriate message
+
+    // If not signed in, allow preview and encourage sign in
     if (!user) {
-      // User not signed in - show preview access message
       toast({
         title: "Preview Access",
         description: `Accessing ${featureName || 'this feature'} in preview mode. Sign in and upgrade for full access to all content.`,
@@ -137,27 +132,39 @@ const Index = () => {
           </Button>
         ),
       });
-    } else if (!isSubscribed && !isAdmin) {
-      // User signed in but not premium - show preview limitation message
-      toast({
-        title: "Preview Mode",
-        description: `You're accessing ${featureName || 'this feature'} in preview mode. Upgrade for full access to all content.`,
-        action: (
-          <Button 
-            size="sm" 
-            onClick={() => navigate('/auth')}
-            className="bg-primary text-white"
-          >
-            Upgrade
-          </Button>
-        ),
-      });
+      navigate(targetPath);
+      return;
     }
 
-    // Always allow navigation regardless of status
+    // Authenticated users: verify premium in real-time to avoid stale state
+    const hasPremium = await checkAccessBeforeUpgrade();
+
+    if (hasPremium) {
+      toast({
+        title: "Premium Access",
+        description: `Enjoy full access to ${featureName || 'this feature'}.`,
+      });
+      navigate(targetPath);
+      return;
+    }
+
+    // Not premium: show preview notice but still navigate
+    toast({
+      title: "Preview Mode",
+      description: `You're accessing ${featureName || 'this feature'} in preview mode. Upgrade for full access to all content.`,
+      action: (
+        <Button 
+          size="sm" 
+          onClick={() => navigate('/auth')}
+          className="bg-primary text-white"
+        >
+          Upgrade
+        </Button>
+      ),
+    });
+
     navigate(targetPath);
   };
-
   return (
     <div className="min-h-screen gradient-background">
       {/* Header */}
