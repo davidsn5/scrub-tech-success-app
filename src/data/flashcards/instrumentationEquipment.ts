@@ -127,5 +127,35 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Beaver Blade Handle\n(Microsurgery Handle)",
     explanation: "The Beaver blade handle is a small, precision surgical handle typically 4-5 inches (10-13 cm) in length with a textured grip for enhanced control. It is specifically designed to hold Beaver blades, which are small, disposable surgical blades used for delicate and precise cutting in microsurgery, ophthalmic surgery, and plastic surgery procedures. The handle's compact size and lightweight design provide excellent maneuverability for fine surgical work. Beaver blades come in various shapes and sizes, making this handle system ideal for procedures requiring extreme precision and minimal tissue trauma.",
     image: "/lovable-uploads/ae78fed8-55f9-4337-a4f4-d6d838565ed7.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Weitlaner Retractor\n(Self-Retaining Retractor)",
+    explanation: "The Weitlaner retractor is a self-retaining retractor typically 4-6 inches (10-15 cm) in length, featuring multiple sharp prongs or teeth on curved arms. It has a ratcheting mechanism that allows it to maintain tension and hold tissues apart without manual assistance. The sharp teeth provide secure grip on tissue edges, making it ideal for superficial procedures where the skin and subcutaneous tissues need to be retracted. Commonly used in plastic surgery, orthopedic procedures, and general surgery for maintaining exposure of shallow surgical sites. Available in different sizes with varying numbers of teeth.",
+    image: "/lovable-uploads/2faae81a-4910-4d0b-bbed-d15972a3ef8b.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Laney Goiter Scissors\n(Thyroidectomy Scissors)",
+    explanation: "Laney Goiter scissors are specialized curved surgical scissors typically 7-8 inches (18-20 cm) in length, designed specifically for thyroid surgery. They feature delicate, curved blades with fine tips that allow for precise dissection around the thyroid gland and surrounding delicate structures like the recurrent laryngeal nerve and parathyroid glands. The curved design provides excellent visualization and access in the confined space of the neck during thyroidectomy procedures. The scissors are also used for dividing small vessels and tissue planes during endocrine surgery.",
+    image: "/lovable-uploads/9777fcf0-cf17-4ecf-8136-ee6629c859c8.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Ferris-Smith Forceps\n(Tissue Forceps)",
+    explanation: "Ferris-Smith forceps are tissue grasping forceps typically 7-9 inches (18-23 cm) in length with distinctive serrated tips for secure tissue handling. They feature fine, delicate jaws with cross-hatched serrations that provide excellent grip without excessive tissue trauma. The forceps are commonly used in plastic surgery, general surgery, and other procedures requiring precise tissue manipulation. The serrated surface allows for secure grasping of tissue edges during suturing, tissue approximation, and general tissue handling. Available in both straight and curved varieties.",
+    image: "/lovable-uploads/c9fd814d-bf3b-457e-9eed-63ac930c6a41.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Russian Forceps\n(Tissue Forceps)",
+    explanation: "Russian forceps are heavy-duty tissue grasping forceps typically 6-10 inches (15-25 cm) in length, featuring broad, serrated jaws with multiple rows of interlocking teeth. The wide gripping surface and aggressive serrations provide extremely secure tissue handling, making them ideal for grasping tough, thick tissues, fascia, and organs that require firm manipulation. Russian forceps are commonly used in general surgery, trauma surgery, and procedures involving dense fibrous tissue. The robust construction allows for secure grasping of tissue that will be excised or where tissue crushing is acceptable.",
+    image: "/lovable-uploads/6b600582-e817-467c-b860-0ffa00e0a29e.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Gelpi Retractor\n(Self-Retaining Retractor)",
+    explanation: "The Gelpi retractor is a self-retaining retractor typically 6-8 inches (15-20 cm) in length, featuring two curved arms with sharp hooks at the ends. It has a spring-loaded mechanism with a central ratcheting system that allows the retractor to maintain constant tension and hold tissues apart without manual assistance. The sharp hooks provide secure grip on tissue edges, and the curved arms allow for excellent exposure of deeper structures. Gelpi retractors are commonly used in orthopedic surgery, spine surgery, and general surgery where sustained retraction of muscle and soft tissue is needed.",
+    image: "/lovable-uploads/4ffbeec3-3cdd-491b-8342-47c95a0f39ad.png"
   }
 ];
