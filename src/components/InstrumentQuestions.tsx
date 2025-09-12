@@ -3,17 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { instrumentIdentificationQuestions, Question } from '@/data/questions/instrumentIdentification';
-import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown } from 'lucide-react';
+import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 interface InstrumentQuestionsProps {
   onBack: () => void;
 }
 
 export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack }) => {
-  const { subscription, createCheckoutSession } = useAuth();
+  const { subscription, createCheckoutSession, user } = useAuth();
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   // Determine if user has premium access
   const hasPremiumAccess = subscription?.subscribed === true;
@@ -190,6 +192,17 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <span className="hidden sm:inline">Restart</span>
                 </Button>
               </div>
+              {!user && (
+                <Button 
+                  onClick={() => navigate('/auth')}
+                  size="sm"
+                  className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-1"
+                >
+                  <User className="h-4 w-4" />
+                  <span className="hidden sm:inline">Sign In/Up</span>
+                  <span className="sm:hidden">Sign In</span>
+                </Button>
+              )}
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="text-sm">
                   Score: {score}/{totalQuestions}
