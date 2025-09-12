@@ -3,24 +3,56 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { instrumentIdentificationQuestions, Question } from '@/data/questions/instrumentIdentification';
-import { CheckCircle, XCircle, RotateCcw, Shuffle } from 'lucide-react';
+import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
+import { useToast } from '@/hooks/use-toast';
 
 interface InstrumentQuestionsProps {
   onBack: () => void;
 }
 
 export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack }) => {
-  const [questions, setQuestions] = useState<Question[]>(instrumentIdentificationQuestions);
+  const { subscription, createCheckoutSession } = useAuth();
+  const { toast } = useToast();
+  
+  // Determine if user has premium access
+  const hasPremiumAccess = subscription?.subscribed === true;
+  const freeQuestionLimit = 5;
+  
+  // Use limited questions for non-premium users
+  const availableQuestions = hasPremiumAccess 
+    ? instrumentIdentificationQuestions 
+    : instrumentIdentificationQuestions.slice(0, freeQuestionLimit);
+  
+  const [questions, setQuestions] = useState<Question[]>(availableQuestions);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState<boolean[]>(
-    new Array(instrumentIdentificationQuestions.length).fill(false)
+    new Array(availableQuestions.length).fill(false)
   );
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
-    new Array(instrumentIdentificationQuestions.length).fill(null)
+    new Array(availableQuestions.length).fill(null)
   );
+
+  // Update questions when subscription status changes
+  useEffect(() => {
+    const newAvailableQuestions = hasPremiumAccess 
+      ? instrumentIdentificationQuestions 
+      : instrumentIdentificationQuestions.slice(0, freeQuestionLimit);
+    
+    setQuestions(newAvailableQuestions);
+    setAnsweredQuestions(new Array(newAvailableQuestions.length).fill(false));
+    setUserAnswers(new Array(newAvailableQuestions.length).fill(null));
+    
+    // Reset to first question if current index is out of bounds
+    if (currentQuestionIndex >= newAvailableQuestions.length) {
+      setCurrentQuestionIndex(0);
+      setSelectedAnswer(null);
+      setShowResult(false);
+    }
+  }, [hasPremiumAccess, currentQuestionIndex]);
 
   const currentQuestion = questions[currentQuestionIndex];
   const totalQuestions = questions.length;
@@ -80,6 +112,15 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   };
 
   const handleShuffle = () => {
+    if (!hasPremiumAccess) {
+      toast({
+        title: "Premium Feature",
+        description: "Shuffle is available with premium access. Upgrade to unlock all features!",
+        variant: "destructive",
+      });
+      return;
+    }
+
     // Fisher-Yates shuffle algorithm
     const shuffledQuestions = [...instrumentIdentificationQuestions];
     for (let i = shuffledQuestions.length - 1; i > 0; i--) {
@@ -94,6 +135,10 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     setScore(0);
     setAnsweredQuestions(new Array(shuffledQuestions.length).fill(false));
     setUserAnswers(new Array(shuffledQuestions.length).fill(null));
+  };
+
+  const handleUpgrade = () => {
+    createCheckoutSession();
   };
 
   const getScoreColor = () => {
@@ -126,10 +171,14 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   onClick={handleShuffle}
                   variant="outline"
                   size="sm"
-                  className="flex items-center space-x-1"
+                  className={`flex items-center space-x-1 ${!hasPremiumAccess ? 'opacity-50' : ''}`}
+                  disabled={!hasPremiumAccess}
                 >
+                  {!hasPremiumAccess && <Lock className="h-3 w-3" />}
                   <Shuffle className="h-4 w-4" />
-                  <span className="hidden sm:inline">Shuffle</span>
+                  <span className="hidden sm:inline">
+                    {hasPremiumAccess ? 'Shuffle' : 'Shuffle'}
+                  </span>
                 </Button>
                 <Button 
                   onClick={handleRestart}
@@ -141,9 +190,17 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <span className="hidden sm:inline">Restart</span>
                 </Button>
               </div>
-              <Badge variant="outline" className="text-sm">
-                Score: {score}/{totalQuestions}
-              </Badge>
+              <div className="flex items-center space-x-2">
+                <Badge variant="outline" className="text-sm">
+                  Score: {score}/{totalQuestions}
+                </Badge>
+                {!hasPremiumAccess && (
+                  <Badge variant="secondary" className="text-xs flex items-center space-x-1">
+                    <Crown className="h-3 w-3" />
+                    <span>Free: {freeQuestionLimit} questions</span>
+                  </Badge>
+                )}
+              </div>
             </div>
           </div>
           <div className="text-center">
@@ -181,14 +238,21 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
             </CardHeader>
             <CardContent className="text-center space-y-4">
               <div className="flex justify-center space-x-4">
-                <Button onClick={handleShuffle} className="flex items-center space-x-2">
+                <Button onClick={handleShuffle} className="flex items-center space-x-2" disabled={!hasPremiumAccess}>
+                  {!hasPremiumAccess && <Lock className="h-4 w-4" />}
                   <Shuffle className="h-4 w-4" />
-                  <span>Shuffle & Retry</span>
+                  <span>{hasPremiumAccess ? 'Shuffle & Retry' : 'Shuffle (Premium)'}</span>
                 </Button>
                 <Button onClick={handleRestart} variant="outline" className="flex items-center space-x-2">
                   <RotateCcw className="h-4 w-4" />
                   <span>Try Again</span>
                 </Button>
+                {!hasPremiumAccess && (
+                  <Button onClick={handleUpgrade} className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-2">
+                    <Crown className="h-4 w-4" />
+                    <span>Upgrade for All 36 Questions</span>
+                  </Button>
+                )}
                 <Button onClick={onBack} variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50">
                   Back to Categories
                 </Button>
@@ -209,6 +273,30 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
+              {/* Premium Upsell for Non-Premium Users */}
+              {!hasPremiumAccess && (
+                <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-2 rounded-full">
+                        <Crown className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-purple-900">Unlock All 36 Questions</h3>
+                        <p className="text-sm text-purple-700">
+                          Get access to all instrument identification questions plus shuffle feature
+                        </p>
+                      </div>
+                    </div>
+                    <Button 
+                      onClick={handleUpgrade}
+                      className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white"
+                    >
+                      Upgrade Now
+                    </Button>
+                  </div>
+                </div>
+              )}
               {/* Instrument Image */}
               {currentQuestion.image && (
                 <div className="flex justify-center">
