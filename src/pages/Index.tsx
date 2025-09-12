@@ -477,7 +477,7 @@ const Index = () => {
                   <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
                     <Scissors className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Flashcards</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Review</h3>
                 </div>
                 {!isInstrumentFlashcardsEnabled && (
                   <Badge className="bg-amber-500/90 text-white text-xs flex items-center">
