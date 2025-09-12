@@ -17,6 +17,15 @@ const InstrumentationFlashcards = () => {
       color: 'from-purple-500/80 to-purple-600/80',
       bgColor: 'from-purple-50/90 to-purple-100/90',
       borderColor: 'border-purple-200/60'
+    },
+    {
+      id: 'general-instrument-questions',
+      title: 'General Instrument Question Review',
+      description: 'Practice questions focusing on surgical instrument identification and usage',
+      icon: Target,
+      color: 'from-indigo-500/80 to-indigo-600/80',
+      bgColor: 'from-indigo-50/90 to-indigo-100/90',
+      borderColor: 'border-indigo-200/60'
     }
   ];
 
