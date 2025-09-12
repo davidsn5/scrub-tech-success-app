@@ -139,8 +139,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             }, 0);
           }
           
-          // Call immediately for instant access verification
-          checkSubscription();
+          // CRITICAL: Always verify payment status on EVERY sign-in
+          if (event === 'SIGNED_IN') {
+            console.log('🔍 SIGNED_IN event detected - triggering comprehensive payment verification');
+            // Call immediately for instant access verification with toast notification
+            verifyAndShowPremiumAccess();
+          } else {
+            // For other events (TOKEN_REFRESHED, etc), do silent verification
+            checkSubscription();
+          }
         } else {
           console.log('❌ No user, setting subscription to null');
           setSubscription(null);
@@ -492,6 +499,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error('Error checking access:', error);
       return false; // On error, assume they need to upgrade
     }
+  };
+
+  // Helper function to verify access and show success notification
+  const verifyAndShowPremiumAccess = async () => {
+    await checkSubscription();
+    
+    // After verification, check if user has premium access and show success toast
+    setTimeout(() => {
+      if (subscription?.subscribed || subscription?.status === 'premium' || subscription?.status === 'admin') {
+        toast({
+          title: "Premium Access Verified! 🎉",
+          description: "Welcome back! All premium features are now unlocked.",
+          duration: 4000,
+        });
+      }
+    }, 1000); // Wait a moment for subscription state to update
   };
 
   const value = {

@@ -19,8 +19,8 @@ export const useFreeAccessGate = () => {
   const isAdmin = subscription?.status === 'admin';
   const isPremium = subscription?.subscribed || isAdmin;
   
-  // All users (authenticated or not) get free access to 10 questions/flashcards
-  // Only premium users get unlimited access
+  // ALL site visitors have access to free questions and flashcards without signing in
+  // Premium users get unlimited access after payment verification
   const hasFreeAccess = true;
 
   const limits: FreeAccessLimits = {
@@ -95,7 +95,7 @@ export const useFreeAccessGate = () => {
   const canAccessQuestion = (questionIndex: number, categoryName?: string) => {
     if (isPremium) return true;
     
-    // All users (authenticated or not) can access the first 10 questions
+    // ALL site visitors can access free questions without signing in or up
     return questionIndex < limits.questionsPerCategory;
   };
 
@@ -111,6 +111,7 @@ export const useFreeAccessGate = () => {
 
   const canAccessFlashcard = (cardIndex: number) => {
     if (isPremium) return true;
+    // ALL site visitors can access free flashcards without signing in or up
     return cardIndex < limits.flashcardsPerCategory;
   };
 
