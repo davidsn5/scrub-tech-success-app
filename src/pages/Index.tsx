@@ -12,14 +12,12 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
-import { useFeatureFlag } from '@/hooks/useFeatureFlag';
 
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const { isPremium } = useGamePreviewGate();
-  const isInstrumentFlashcardsEnabled = useFeatureFlag('instrumentFlashcards');
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
@@ -470,8 +468,8 @@ const Index = () => {
               </Button>
             </Card>
 
-            {/* Instrumentation Flashcards - Always visible but locked if flag disabled */}
-            <Card className={`p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg ${!isInstrumentFlashcardsEnabled ? 'opacity-75' : ''}`}>
+            {/* Instrumentation Flashcards - Now always accessible */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
@@ -479,34 +477,14 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Review</h3>
                 </div>
-                {!isInstrumentFlashcardsEnabled && (
-                  <Badge className="bg-amber-500/90 text-white text-xs flex items-center">
-                    <Lock className="h-3 w-3 mr-1" />
-                    Coming Soon
-                  </Badge>
-                )}
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
               <Button 
-                onClick={isInstrumentFlashcardsEnabled ? () => navigate('/instrumentation-flashcards') : undefined}
-                disabled={!isInstrumentFlashcardsEnabled}
-                className={`w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 ${
-                  isInstrumentFlashcardsEnabled 
-                    ? 'bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90' 
-                    : 'bg-gray-400 cursor-not-allowed'
-                }`}
+                onClick={() => navigate('/instrumentation-flashcards')}
+                className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
               >
-                {isInstrumentFlashcardsEnabled ? (
-                  <>
-                    <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                    Study Instruments
-                  </>
-                ) : (
-                  <>
-                    <Lock className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                    Coming Soon
-                  </>
-                )}
+                <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Study Instruments
               </Button>
             </Card>
           </div>
