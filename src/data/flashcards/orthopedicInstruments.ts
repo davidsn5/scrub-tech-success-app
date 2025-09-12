@@ -66,5 +66,23 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Duck Bill Rongeur\n(Duck Billed Rongeur)",
     explanation: "The Duck Bill Rongeur is a specialized bone-cutting instrument featuring curved jaws that resemble a duck's bill, designed for cutting and removing bone and cartilage in confined spaces. The unique curved design allows for precise bone removal in areas with limited access, particularly useful in spinal procedures and joint surgeries. The serrated cutting edges provide excellent grip on bone tissue while the curved shape enables surgeons to work around corners and in deep surgical sites. Essential for laminectomies, discectomies, and other procedures requiring precise bone removal.",
     image: "/lovable-uploads/duck-bill-rongeur.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Bone Cutter (Small)",
+    explanation: "Small bone cutters are precision instruments used for cutting small bones and bone fragments in delicate orthopedic procedures. They feature sharp, angled cutting edges and provide excellent control for fine bone work.",
+    image: "/lovable-uploads/bone-cutter.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Bone Cutter (Medium)",
+    explanation: "Medium bone cutters are versatile instruments used for cutting medium-sized bones and performing osteotomies. They offer a balance between cutting power and precision, making them suitable for most orthopedic procedures.",
+    image: "/lovable-uploads/bone-cutter.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Bone Cutter (Large)",
+    explanation: "Large bone cutters are heavy-duty instruments designed for cutting thick bones and performing major osteotomies. They provide maximum cutting power and are essential for procedures involving large bones like the femur or tibia.",
+    image: "/lovable-uploads/bone-cutter.png"
   }
 ];
