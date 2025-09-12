@@ -12,12 +12,14 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
+import { usePremiumFeatureGate } from '@/hooks/usePremiumFeatureGate';
 
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const { isPremium } = useGamePreviewGate();
+  const { handlePremiumFeatureClick, isVerifying } = usePremiumFeatureGate();
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
@@ -29,6 +31,19 @@ const Index = () => {
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show verification overlay when verifying premium access
+  if (isVerifying) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-lg font-semibold text-primary">Verifying Premium Access...</p>
+          <p className="text-sm text-muted-foreground mt-2">Checking your subscription status through Stripe</p>
         </div>
       </div>
     );
@@ -114,14 +129,8 @@ const Index = () => {
     await createCheckoutSession();
   };
 
-  const handlePremiumFeatureAccess = async (targetPath: string) => {
-    // Force refresh subscription status to ensure we have the latest data
-    console.log('🔍 Checking premium access before navigation...');
-    await checkSubscription();
-    
-    // Allow navigation - the individual components will handle access control
-    // and the ProtectedRoute component will verify access on the target page
-    navigate(targetPath);
+  const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
+    handlePremiumFeatureClick(() => navigate(targetPath), featureName);
   };
 
   return (
@@ -373,7 +382,7 @@ const Index = () => {
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
                     <Button 
-                      onClick={() => handlePremiumFeatureAccess(section.link)}
+                      onClick={() => handlePremiumFeatureAccess(section.link, section.title)}
                       className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}
                     >
                       Start Studying
@@ -411,7 +420,7 @@ const Index = () => {
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/flashcards')}
+                onClick={() => handlePremiumFeatureAccess('/flashcards', 'Interactive Flashcards')}
                 className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -439,7 +448,7 @@ const Index = () => {
                 {!isPremium && <span className="block mt-1 text-amber-700 font-medium">Try limited games daily - upgrade for unlimited access!</span>}
               </p>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/key-term-games')}
+                onClick={() => handlePremiumFeatureAccess('/key-term-games', 'Review Games')}
                 className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -460,7 +469,7 @@ const Index = () => {
                 <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
               </div>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/missed-questions')}
+                onClick={() => handlePremiumFeatureAccess('/missed-questions', 'Missed Questions Review')}
                 className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -480,7 +489,7 @@ const Index = () => {
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
               <Button 
-                onClick={() => navigate('/instrumentation-flashcards')}
+                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Instrumentation Review')}
                 className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
               >
                 <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -547,8 +556,8 @@ const Index = () => {
               </div>
             </div>
             <Button 
-              onClick={() => handlePremiumFeatureAccess('/exam-simulation')}
-              size="lg" 
+              onClick={() => handlePremiumFeatureAccess('/exam-simulation', 'Full Exam Simulation')}
+              size="lg"
               className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
             >
               <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
