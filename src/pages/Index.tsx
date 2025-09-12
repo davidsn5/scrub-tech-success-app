@@ -114,13 +114,52 @@ const Index = () => {
     await createCheckoutSession();
   };
 
-  const handlePremiumFeatureAccess = async (targetPath: string) => {
+  const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
     // Force refresh subscription status to ensure we have the latest data
     console.log('🔍 Checking premium access before navigation...');
     await checkSubscription();
     
-    // Allow navigation - the individual components will handle access control
-    // and the ProtectedRoute component will verify access on the target page
+    // Check user authentication and premium status
+    if (!user) {
+      // User not signed in - show auth prompt with upgrade option
+      toast({
+        title: "Sign In Required",
+        description: "Please sign in to access study materials. Free preview available after sign in.",
+        action: (
+          <Button 
+            size="sm" 
+            onClick={() => navigate('/auth')}
+            className="bg-primary text-white"
+          >
+            Sign In
+          </Button>
+        ),
+      });
+      return;
+    }
+
+    // User is authenticated - check premium status
+    if (!isSubscribed && !isAdmin) {
+      // User has free access - show preview limitation message
+      toast({
+        title: "Preview Mode",
+        description: `You're accessing ${featureName || 'this feature'} in preview mode. Upgrade for full access to all content.`,
+        action: (
+          <Button 
+            size="sm" 
+            onClick={() => navigate('/auth')}
+            className="bg-primary text-white"
+          >
+            Upgrade
+          </Button>
+        ),
+      });
+      // Still allow navigation but with preview limitations
+      navigate(targetPath);
+      return;
+    }
+
+    // Premium user - full access
     navigate(targetPath);
   };
 
@@ -373,7 +412,7 @@ const Index = () => {
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
                     <Button 
-                      onClick={() => handlePremiumFeatureAccess(section.link)}
+                      onClick={() => handlePremiumFeatureAccess(section.link, section.title)}
                       className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}
                     >
                       Start Studying
@@ -411,7 +450,7 @@ const Index = () => {
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/flashcards')}
+                onClick={() => handlePremiumFeatureAccess('/flashcards', 'Study Flashcards')}
                 className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -439,7 +478,7 @@ const Index = () => {
                 {!isPremium && <span className="block mt-1 text-amber-700 font-medium">Try limited games daily - upgrade for unlimited access!</span>}
               </p>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/key-term-games')}
+                onClick={() => handlePremiumFeatureAccess('/key-term-games', 'Review Games')}
                 className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -460,7 +499,7 @@ const Index = () => {
                 <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
               </div>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/missed-questions')}
+                onClick={() => handlePremiumFeatureAccess('/missed-questions', 'Missed Questions Review')}
                 className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
               >
                 <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -480,7 +519,7 @@ const Index = () => {
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
               <Button 
-                onClick={() => navigate('/instrumentation-flashcards')}
+                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Instrumentation Review')}
                 className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
               >
                 <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
@@ -547,7 +586,7 @@ const Index = () => {
               </div>
             </div>
             <Button 
-              onClick={() => handlePremiumFeatureAccess('/exam-simulation')}
+              onClick={() => handlePremiumFeatureAccess('/exam-simulation', 'Full Exam Simulation')}
               size="lg" 
               className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
             >
