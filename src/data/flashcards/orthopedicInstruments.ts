@@ -138,5 +138,11 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Cobra Retractor\n(Curved Retractor)",
     explanation: "The Cobra retractor is a curved, handheld retractor featuring a smooth, curved blade designed for retracting soft tissues and providing exposure during surgical procedures. The distinctive curved shape resembles a cobra's profile, hence the name. The smooth surface prevents tissue trauma while the curved design allows for excellent visualization and access to surgical sites. Commonly used in various surgical procedures where gentle tissue retraction and exposure of underlying structures is required, particularly useful in procedures involving curved anatomical spaces.",
     image: "/lovable-uploads/cobra-retractor.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Posterior-Inferior Retractor\n(Spinal Retractor)",
+    explanation: "The Posterior-Inferior retractor is a specialized spinal retractor designed for retracting muscles and soft tissues during posterior spinal procedures. Features a curved blade with a loop handle for secure grip and control. The unique design allows for effective retraction of the posterior spinal muscles while providing excellent exposure of the vertebral column. Essential for spinal surgeries including laminectomies, discectomies, and spinal fusion procedures where clear visualization of posterior spinal elements is required.",
+    image: "/lovable-uploads/posterior-inferior-retractor.png"
   }
 ];
