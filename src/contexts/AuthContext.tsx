@@ -139,19 +139,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             }, 0);
           }
           
-          // CRITICAL: Always verify payment status on EVERY sign-in
-          if (event === 'SIGNED_IN') {
-            console.log('🔍 SIGNED_IN event detected - triggering comprehensive payment verification');
-            // Call immediately for instant access verification with toast notification
-            setTimeout(() => {
-              verifyAndShowPremiumAccess();
-            }, 0);
-          } else {
-            // For other events (TOKEN_REFRESHED, etc), do silent verification
-            setTimeout(() => {
-              checkSubscription();
-            }, 0);
-          }
+          // Call immediately for instant access verification
+          checkSubscription();
         } else {
           console.log('❌ No user, setting subscription to null');
           setSubscription(null);
@@ -285,7 +274,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Don't check subscription if no user is authenticated
     if (!user || !session) {
       console.log('No user or session, skipping subscription check');
-      setLoading(false); // Ensure loading is false when no user
       return;
     }
     
@@ -504,46 +492,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error('Error checking access:', error);
       return false; // On error, assume they need to upgrade
     }
-  };
-
-  // Helper function to verify access and show success notification
-  const verifyAndShowPremiumAccess = async () => {
-    console.log('🚀 Starting immediate payment verification upon sign-in...');
-    
-    // Show loading state briefly
-    toast({
-      title: "Verifying your access...",
-      description: "Checking your subscription status with Stripe and Supabase",
-      duration: 2000,
-    });
-    
-    await checkSubscription();
-    
-    // After verification, check if user has premium access and show appropriate feedback
-    setTimeout(() => {
-      if (subscription?.subscribed || subscription?.status === 'premium' || subscription?.status === 'admin') {
-        toast({
-          title: "Premium Access Verified! 🎉",
-          description: "Welcome back! All premium features are now unlocked.",
-          duration: 4000,
-        });
-        console.log('✅ Premium access confirmed and user notified');
-      } else if (subscription?.status === 'trial') {
-        toast({
-          title: "Welcome! 👋",
-          description: "You're signed in. Enjoy your free access to select features.",
-          duration: 3000,
-        });
-        console.log('ℹ️ Trial access confirmed');
-      } else {
-        toast({
-          title: "Welcome back! 👋",
-          description: "You're signed in. Upgrade anytime for premium features.",
-          duration: 3000,
-        });
-        console.log('ℹ️ Basic access confirmed');
-      }
-    }, 1500); // Wait for subscription state to update
   };
 
   const value = {

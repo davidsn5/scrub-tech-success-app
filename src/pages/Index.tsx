@@ -12,16 +12,12 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
-import { usePremiumFeatureGate } from '@/hooks/usePremiumFeatureGate';
-
 
 
 const Index = () => {
   const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const { isPremium } = useGamePreviewGate();
-  const { handlePremiumFeatureClick, isVerifying } = usePremiumFeatureGate();
-  
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
@@ -33,19 +29,6 @@ const Index = () => {
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p>Loading...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Show verification overlay when verifying premium access
-  if (isVerifying) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-lg font-semibold text-primary">Verifying Premium Access...</p>
-          <p className="text-sm text-muted-foreground mt-2">Checking your subscription status</p>
         </div>
       </div>
     );
@@ -131,9 +114,14 @@ const Index = () => {
     await createCheckoutSession();
   };
 
-  const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
-    // Allow free preview without sign-in
-    handlePremiumFeatureClick(() => navigate(targetPath), featureName, true);
+  const handlePremiumFeatureAccess = async (targetPath: string) => {
+    // Force refresh subscription status to ensure we have the latest data
+    console.log('🔍 Checking premium access before navigation...');
+    await checkSubscription();
+    
+    // Allow navigation - the individual components will handle access control
+    // and the ProtectedRoute component will verify access on the target page
+    navigate(targetPath);
   };
 
   return (
@@ -385,7 +373,7 @@ const Index = () => {
                     </div>
                     <p className="text-gray-600 mb-3 sm:mb-4 flex-grow text-xs sm:text-sm leading-relaxed">{section.description}</p>
                     <Button 
-                      onClick={() => handlePremiumFeatureAccess(section.link, section.title)}
+                      onClick={() => handlePremiumFeatureAccess(section.link)}
                       className={`w-full bg-gradient-to-r ${section.color} hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5`}
                     >
                       Start Studying
@@ -422,15 +410,13 @@ const Index = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-              <Link to="/flashcards">
-                <Button 
-                  className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-                >
-                  <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Browse Flashcards
-                  <span className="text-xs opacity-90 ml-2">Free Preview</span>
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/flashcards')}
+                className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+              >
+                <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Browse Flashcards
+              </Button>
             </Card>
 
             {/* Key Term Games */}
@@ -452,14 +438,13 @@ const Index = () => {
                 Interactive games to master medical terminology and surgical concepts
                 {!isPremium && <span className="block mt-1 text-amber-700 font-medium">Try limited games daily - upgrade for unlimited access!</span>}
               </p>
-              <Link to="/key-term-games">
-                <Button 
-                  className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-                >
-                  <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  {isPremium ? 'Play Games' : 'Try Free Preview'}
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/key-term-games')}
+                className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+              >
+                <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                {isPremium ? 'Play Games' : 'Try Free Preview'}
+              </Button>
             </Card>
 
             {/* Missed Questions */}
@@ -474,15 +459,13 @@ const Index = () => {
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
               </div>
-              <Link to="/missed-questions">
-                <Button 
-                  className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-                >
-                  <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                  Review Missed Questions
-                  <span className="text-xs opacity-90 ml-2">Free Preview</span>
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/missed-questions')}
+                className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+              >
+                <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Review Missed Questions
+              </Button>
             </Card>
 
             {/* Instrumentation Flashcards - Now always accessible */}
@@ -494,15 +477,8 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Review</h3>
                 </div>
-                <Badge className="bg-green-500/90 text-white text-xs flex items-center">
-                  <Star className="h-3 w-3 mr-1" />
-                  Free Preview
-                </Badge>
               </div>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">
-                Master surgical instruments with specialized flashcards covering tools, equipment, and their applications
-                <span className="block mt-1 text-green-700 font-medium text-xs">Free: 5 questions + 5 flashcards, upgrade for full access</span>
-              </p>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
               <Button 
                 onClick={() => navigate('/instrumentation-flashcards')}
                 className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
@@ -570,16 +546,14 @@ const Index = () => {
                 <span>Detailed Results</span>
               </div>
             </div>
-            <Link to="/exam-simulation">
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
-              >
-                <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-                Start Exam Simulation
-                <span className="text-xs opacity-90 ml-2">Free Preview</span>
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => handlePremiumFeatureAccess('/exam-simulation')}
+              size="lg" 
+              className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+            >
+              <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+              Start Exam Simulation
+            </Button>
           </div>
         </Card>
         

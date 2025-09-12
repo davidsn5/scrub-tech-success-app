@@ -61,9 +61,7 @@ serve(async (req) => {
       .from("subscribers")
       .select("*")
       .eq("email", user.email)
-      .order("updated_at", { ascending: false })
-      .limit(1)
-      .maybeSingle();
+      .single();
 
     logStep("Database check completed", { dbSubscription, dbError });
 
