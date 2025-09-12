@@ -108,5 +108,17 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Bone Curette\n(Surgical Curette)",
     explanation: "A bone curette is a spoon-shaped surgical instrument with a sharp, curved cutting edge designed for scraping and removing tissue, bone fragments, or infected material from bone surfaces. The rounded, scooped end allows for controlled tissue removal while minimizing damage to surrounding healthy tissue. Commonly used in orthopedic procedures for debridement, removal of bone cysts, infected tissue, or cartilage, and preparation of bone surfaces for grafting.",
     image: "/lovable-uploads/bone-curette.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Bone Mallet\n(Surgical Mallet)",
+    explanation: "A bone mallet is a specialized surgical hammer with a heavy metal head and ergonomic handle designed for delivering controlled impact force during orthopedic procedures. The weighted head provides precise force transmission for driving chisels, osteotomes, and bone punches, while the balanced design reduces surgeon fatigue. Essential for procedures requiring controlled bone cutting, shaping, or impaction, such as osteotomies, bone grafting, and implant placement. The non-slip handle ensures secure grip and accurate force delivery.",
+    image: "/lovable-uploads/bone-mallet.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Beaver Knife Handle\n(Surgical Knife Handle)",
+    explanation: "The Beaver knife handle is a specialized surgical handle designed to accommodate small, precise surgical blades for delicate cutting procedures. Features a textured, non-slip grip and secure blade attachment mechanism for optimal control during fine dissection work. Commonly used in ophthalmic, plastic, and microsurgical procedures where precision cutting is essential. The lightweight design and ergonomic grip allow for extended use without hand fatigue while maintaining precise blade control for detailed surgical work.",
+    image: "/lovable-uploads/beaver-knife-handle.png"
   }
 ];
