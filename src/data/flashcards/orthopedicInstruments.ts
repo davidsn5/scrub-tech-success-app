@@ -126,5 +126,17 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Lambotte Osteotomes\n(Bone Cutting Chisels)",
     explanation: "Lambotte osteotomes are precision bone-cutting instruments featuring flat, beveled cutting edges in various widths (typically 1/4\" to 1 1/2\"). Named after Belgian surgeon Albin Lambotte, these osteotomes are designed for precise bone cutting, shaping, and contouring during orthopedic procedures. The sharp, beveled edge allows for controlled bone removal and precise osteotomies. Available in multiple sizes to accommodate different surgical needs, they are essential for procedures requiring accurate bone cuts, such as corrective osteotomies, bone grafting, and joint reconstruction surgeries.",
     image: "/lovable-uploads/lambotte-osteotomes.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "#3 Knife Handle\n(Surgical Scalpel Handle)",
+    explanation: "The #3 knife handle is a standard surgical scalpel handle designed to accommodate #10, #11, #12, and #15 surgical blades. Features a textured, non-slip grip and secure blade attachment mechanism for optimal control during cutting procedures. This is one of the most commonly used scalpel handles in surgery due to its versatility and ergonomic design. The numbered handle system ensures proper blade compatibility and safe blade attachment, essential for precise incisions and dissection work across various surgical specialties.",
+    image: "/lovable-uploads/knife-handle-3.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Cobra Retractor\n(Curved Retractor)",
+    explanation: "The Cobra retractor is a curved, handheld retractor featuring a smooth, curved blade designed for retracting soft tissues and providing exposure during surgical procedures. The distinctive curved shape resembles a cobra's profile, hence the name. The smooth surface prevents tissue trauma while the curved design allows for excellent visualization and access to surgical sites. Commonly used in various surgical procedures where gentle tissue retraction and exposure of underlying structures is required, particularly useful in procedures involving curved anatomical spaces.",
+    image: "/lovable-uploads/cobra-retractor.png"
   }
 ];
