@@ -157,5 +157,29 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Gelpi Retractor\n(Self-Retaining Retractor)",
     explanation: "The Gelpi retractor is a self-retaining retractor typically 6-8 inches (15-20 cm) in length, featuring two curved arms with sharp hooks at the ends. It has a spring-loaded mechanism with a central ratcheting system that allows the retractor to maintain constant tension and hold tissues apart without manual assistance. The sharp hooks provide secure grip on tissue edges, and the curved arms allow for excellent exposure of deeper structures. Gelpi retractors are commonly used in orthopedic surgery, spine surgery, and general surgery where sustained retraction of muscle and soft tissue is needed.",
     image: "/lovable-uploads/4ffbeec3-3cdd-491b-8342-47c95a0f39ad.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Rat Tooth Forceps\n(Adson Forceps)",
+    explanation: "Rat Tooth forceps (Adson type) are precision tissue grasping forceps typically 4.75-5 inches (12-13 cm) in length, featuring fine tips with small interlocking teeth (typically 1×2 teeth configuration). The delicate teeth provide secure grip on tissue without excessive trauma, making them ideal for handling skin edges, fascia, and delicate tissues during surgical procedures. The fine tips allow for precise tissue manipulation and are commonly used in plastic surgery, general surgery, and procedures requiring delicate tissue handling. The teeth prevent tissue slippage while minimizing crushing.",
+    image: "/lovable-uploads/4f06121f-1d9f-48a4-b5dc-415090ea8712.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Lister Scissors\n(Bandage Scissors)",
+    explanation: "Lister scissors are specialized bandage scissors typically 5.5-7 inches (14-18 cm) in length, featuring one serrated blade and one smooth blade with a distinctive angled tip. The serrated blade grips bandages and dressings to prevent slipping during cutting, while the smooth blade protects the patient's skin from accidental cuts. The angled tip design allows for safe insertion under bandages and dressings. These scissors are specifically designed for removing bandages, cutting tape, and trimming dressings while minimizing the risk of patient injury.",
+    image: "/lovable-uploads/e276aef4-8215-41c0-a226-44412a31ebfd.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Frazier Suction\n(Neural Suction Tip)",
+    explanation: "The Frazier suction tip is a delicate, curved suction device typically 6-8 inches (15-20 cm) in length with a small diameter opening designed for precision suction in confined spaces. It features a curved tip that allows for excellent access to deep surgical sites while providing controlled suction power. The small opening prevents excessive tissue damage and allows for precise removal of blood and fluids without disturbing surrounding tissues. Frazier suction tips are commonly used in neurosurgery, ENT procedures, and other delicate surgeries requiring precise fluid management.",
+    image: "/lovable-uploads/c66b7240-e8fc-49b2-9c0c-42ea2fde68b8.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Webster Needle Holder\n(Needle Driver)",
+    explanation: "Webster needle holders are delicate needle driving instruments typically 5-6 inches (13-15 cm) in length, featuring fine, crosshatched tungsten carbide inserts in the jaws for secure needle grip. They have ring handles with a ratcheting mechanism that locks the needle in place during suturing. The fine tips and delicate construction make them ideal for precise suturing work, particularly in plastic surgery, ophthalmic surgery, and other procedures requiring fine sutures. The crosshatched surface prevents needle rotation while providing excellent control during suturing techniques.",
+    image: "/lovable-uploads/2eb02db4-7cda-4821-a0b1-01d76b13d4ec.png"
   }
 ];
