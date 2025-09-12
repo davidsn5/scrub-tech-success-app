@@ -45,6 +45,12 @@ export const orthopedicInstruments: FlashcardItem[] = [
   },
   {
     question: "Identify this orthopedic surgical instrument",
+    answer: "Ruskin Rongeur\n(Bone Cutting Forceps)",
+    explanation: "The Ruskin rongeur is a specialized bone-cutting instrument featuring curved, spring-loaded handles and sharp cutting jaws designed for removing bone and cartilage with precision. The curved design allows for excellent access to bone surfaces while the spring-loaded mechanism provides consistent cutting force. Commonly used in spinal procedures, joint surgeries, and trauma cases where controlled bone removal is required. The sharp cutting edges and ergonomic design make it ideal for shaping bone edges and removing bone spurs during orthopedic procedures.",
+    image: "/lovable-uploads/ruskin-rongeur.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
     answer: "Duck Bill Rongeur\n(Duck Billed Rongeur)",
     explanation: "The Duck Bill Rongeur is a specialized bone-cutting instrument featuring curved jaws that resemble a duck's bill, designed for cutting and removing bone and cartilage in confined spaces. The unique curved design allows for precise bone removal in areas with limited access, particularly useful in spinal procedures and joint surgeries. The serrated cutting edges provide excellent grip on bone tissue while the curved shape enables surgeons to work around corners and in deep surgical sites. Essential for laminectomies, discectomies, and other procedures requiring precise bone removal.",
     image: "/lovable-uploads/duck-bill-rongeur.png"
