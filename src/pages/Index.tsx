@@ -488,16 +488,17 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Review</h3>
                 </div>
-                <Badge className="bg-blue-500/90 text-white text-xs flex items-center">
+                <Badge className="bg-green-500/90 text-white text-xs flex items-center">
                   <Star className="h-3 w-3 mr-1" />
-                  Premium Feature
+                  Free Preview
                 </Badge>
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">
                 Master surgical instruments with specialized flashcards covering tools, equipment, and their applications
+                <span className="block mt-1 text-green-700 font-medium text-xs">Free: 5 questions + 5 flashcards, upgrade for full access</span>
               </p>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Instrumentation Review')}
+                onClick={() => navigate('/instrumentation-flashcards')}
                 className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
               >
                 <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
