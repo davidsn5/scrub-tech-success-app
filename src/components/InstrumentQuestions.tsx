@@ -277,7 +277,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
           <Card className="mb-8">
             <CardHeader>
               <div className="flex justify-between items-start">
-                <CardTitle className="text-xl font-semibold">
+                <CardTitle className="text-xl font-semibold text-purple-700">
                   {currentQuestion.question}
                 </CardTitle>
                 <Badge variant={answeredQuestions[currentQuestionIndex] ? "default" : "outline"}>
