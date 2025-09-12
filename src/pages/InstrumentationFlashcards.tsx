@@ -18,27 +18,27 @@ const InstrumentationFlashcards = () => {
       title: 'General Instruments',
       description: 'Basic surgical instruments used across multiple specialties',
       icon: Scissors,
-      color: 'from-teal-500/80 to-teal-600/80',
-      bgColor: 'from-teal-50/90 to-teal-100/90',
-      borderColor: 'border-teal-200/60'
+      color: 'from-blue-500/80 to-blue-600/80',
+      bgColor: 'from-blue-50/90 to-blue-100/90',
+      borderColor: 'border-blue-200/60'
     },
     {
       id: 'general-instrument-questions',
       title: 'General Instrument Question Review',
       description: 'Practice questions focusing on surgical instrument identification and usage',
       icon: Target,
-      color: 'from-teal-500/80 to-teal-600/80',
-      bgColor: 'from-teal-50/90 to-teal-100/90',
-      borderColor: 'border-teal-200/60'
+      color: 'from-blue-500/80 to-blue-600/80',
+      bgColor: 'from-blue-50/90 to-blue-100/90',
+      borderColor: 'border-blue-200/60'
     }
   ];
 
   if (selectedCategory === 'general-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-teal-50/90 to-teal-100/85">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-blue-100/85">
         {/* Header */}
-        <div className="bg-teal-50 shadow-sm border-b">
+        <div className="bg-blue-50 shadow-sm border-b">
           <div className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-4">
@@ -46,7 +46,7 @@ const InstrumentationFlashcards = () => {
                   onClick={() => setSelectedCategory(null)}
                   variant="ghost"
                   size="sm"
-                  className="flex items-center space-x-2 hover:bg-teal-100 hover:text-teal-700 min-h-[44px] px-3"
+                  className="flex items-center space-x-2 hover:bg-blue-100 hover:text-blue-700 min-h-[44px] px-3"
                 >
                   <span>←</span>
                   <span className="hidden xs:inline">Back to Categories</span>
@@ -56,7 +56,7 @@ const InstrumentationFlashcards = () => {
               {!user && (
                 <Button 
                   onClick={() => navigate('/auth')}
-                  className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white flex items-center space-x-2"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white flex items-center space-x-2"
                 >
                   <User className="h-4 w-4" />
                   <span className="hidden sm:inline">Sign In/Upgrade</span>
@@ -65,7 +65,7 @@ const InstrumentationFlashcards = () => {
               )}
             </div>
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-teal-700">{category?.title} Flashcards</h1>
+              <h1 className="text-2xl font-bold text-blue-700">{category?.title} Flashcards</h1>
               <p className="text-sm text-gray-600 mt-1">{category?.description}</p>
             </div>
           </div>
@@ -78,9 +78,9 @@ const InstrumentationFlashcards = () => {
             onQuestionAttempt={() => {}}
             useOrangeUnlock={true}
             categoryColors={{
-              color: category?.color || 'from-teal-500/80 to-teal-600/80',
-              bgColor: category?.bgColor || 'from-teal-50/90 to-teal-100/90',
-              borderColor: category?.borderColor || 'border-teal-200/60'
+              color: category?.color || 'from-blue-500/80 to-blue-600/80',
+              bgColor: category?.bgColor || 'from-blue-50/90 to-blue-100/90',
+              borderColor: category?.borderColor || 'border-blue-200/60'
             }}
           />
         </div>
@@ -93,17 +93,17 @@ const InstrumentationFlashcards = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-teal-50/90 to-teal-100/85">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-blue-100/85">
       {/* Header */}
-      <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-teal-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm sticky top-0 z-50">
+      <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-blue-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-3 sm:px-6 py-3 sm:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 shadow-lg flex-shrink-0 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg flex-shrink-0 flex items-center justify-center">
                 <Scissors className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-teal-600 leading-tight">
+                <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-blue-600 leading-tight">
                   Instrumentation Review
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600 hidden sm:block">Master surgical instruments by category</p>
@@ -122,7 +122,7 @@ const InstrumentationFlashcards = () => {
       <div className="max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-8">
         {/* Introduction */}
         <div className="text-center mb-6 sm:mb-8 px-2">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-slate-700/90 to-teal-700/90 bg-clip-text text-transparent mb-3 sm:mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-3 sm:mb-4">
             Choose an Instrument Category
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
