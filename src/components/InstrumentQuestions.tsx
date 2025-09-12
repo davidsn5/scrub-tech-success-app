@@ -203,16 +203,16 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <span className="sm:hidden">Sign In</span>
                 </Button>
               )}
-              <div className="flex items-center space-x-2">
-                <Badge variant="outline" className="text-sm">
-                  Score: {score}/{totalQuestions}
-                </Badge>
+              <div className="flex flex-col sm:flex-row items-end sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
                 {!hasPremiumAccess && (
-                  <Badge variant="secondary" className="text-xs flex items-center space-x-1">
+                  <Badge variant="secondary" className="text-xs flex items-center space-x-1 order-1 sm:order-2">
                     <Crown className="h-3 w-3" />
                     <span>Free: {freeQuestionLimit} questions</span>
                   </Badge>
                 )}
+                <Badge variant="outline" className="text-sm order-2 sm:order-1">
+                  Score: {score}/{totalQuestions}
+                </Badge>
               </div>
             </div>
           </div>
