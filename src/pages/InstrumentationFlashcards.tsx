@@ -23,15 +23,6 @@ const InstrumentationFlashcards = () => {
       borderColor: 'border-blue-200/60'
     },
     {
-      id: 'orthopedic-instruments',
-      title: 'Orthopedic Instruments',
-      description: 'Specialized instruments for bone and joint procedures',
-      icon: Bone,
-      color: 'from-green-500/80 to-green-600/80',
-      bgColor: 'from-green-50/90 to-green-100/90',
-      borderColor: 'border-green-200/60'
-    },
-    {
       id: 'general-instrument-questions',
       title: 'General Instrument Question Review',
       description: 'Practice questions focusing on surgical instrument identification and usage',
@@ -39,6 +30,15 @@ const InstrumentationFlashcards = () => {
       color: 'from-purple-500/80 to-purple-600/80',
       bgColor: 'from-purple-50/90 to-purple-100/90',
       borderColor: 'border-purple-200/60'
+    },
+    {
+      id: 'orthopedic-instruments',
+      title: 'Orthopedic Instruments',
+      description: 'Specialized instruments for bone and joint procedures',
+      icon: Bone,
+      color: 'from-green-500/80 to-green-600/80',
+      bgColor: 'from-green-50/90 to-green-100/90',
+      borderColor: 'border-green-200/60'
     }
   ];
 
