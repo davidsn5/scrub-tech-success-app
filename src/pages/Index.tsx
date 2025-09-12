@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy, Lock } from 'lucide-react';
+import { BookOpen, Brain, Zap, RotateCcw, Target, TrendingUp, Clock, Award, FileText, User, LogOut, Settings, Shield, RefreshCw, Star, Check, Users, Trophy, Lock, Wrench } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserProgress } from '@/hooks/useUserProgress';
@@ -475,7 +475,7 @@ const Index = () => {
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
-                    <Target className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                    <Wrench className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Flashcards</h3>
                 </div>
