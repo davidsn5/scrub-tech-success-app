@@ -187,5 +187,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Tonsil Schmidt Forceps\n(ENT Forceps)",
     explanation: "Tonsil Schmidt forceps are specialized ENT instruments typically 7-8 inches (18-20 cm) in length, designed specifically for tonsillectomy procedures. They feature curved, serrated jaws with a secure gripping surface for grasping and manipulating tonsil tissue during removal. The ring handles provide excellent control and the curved design allows for optimal access to the tonsillar fossa. These forceps are essential for secure tissue handling during tonsil dissection and removal, providing surgeons with precise control while minimizing trauma to surrounding pharyngeal structures.",
     image: "/lovable-uploads/f7f2cf01-808e-4209-a70c-9d2a068b847d.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Goelet Retractor\n(Hand-held Retractor)",
+    explanation: "Goelet retractors are hand-held surgical instruments typically 6-7 inches (15-18 cm) in length, featuring a curved, spoon-shaped blade at each end with different sizes for versatility. The smooth, blunt edges are designed to safely retract and hold soft tissues without causing trauma. The ergonomic handle provides comfortable grip during prolonged procedures. These retractors are commonly used in general surgery, plastic surgery, and other procedures where gentle tissue retraction is needed. The double-ended design allows surgeons to choose the appropriate blade size for different anatomical areas and surgical requirements.",
+    image: "/lovable-uploads/1a87ae38-8d0a-4bb0-a036-58b296d78feb.png"
   }
 ];
