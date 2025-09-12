@@ -158,7 +158,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
               <Button 
                 onClick={handleUnlockPremium}
                 size="sm"
-                className={`${useOrangeUnlock ? 'bg-gradient-to-r from-orange-500/90 to-orange-600/90 hover:from-orange-600/90 hover:to-orange-700/90' : 'bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90'} text-white`}
+                className={`${useOrangeUnlock ? 'bg-gradient-to-r from-blue-700/90 to-blue-800/90 hover:from-blue-800/90 hover:to-blue-900/90' : 'bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90'} text-white`}
               >
                 <Crown className="h-4 w-4 mr-1" />
                 Unlock
