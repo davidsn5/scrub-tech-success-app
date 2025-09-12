@@ -128,7 +128,7 @@ const InstrumentationFlashcards = () => {
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-4">
             Study surgical instruments and their uses. Each flashcard includes detailed explanations and proper identification techniques.
           </p>
-          <p className="text-slate-700 font-bold text-sm sm:text-base">
+          <p className="text-blue-700 font-bold text-sm sm:text-base">
             Under Construction - More Categories Coming Soon
           </p>
         </div>
