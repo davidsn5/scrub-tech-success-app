@@ -96,5 +96,11 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Key Elevator\n(Periosteal Elevator)",
     explanation: "The Key elevator is a robust periosteal elevator featuring a wide, flat blade with a beveled edge designed for separating periosteum from bone surfaces during orthopedic procedures. The broad, angled blade provides excellent leverage for tissue elevation, while the sturdy construction allows for controlled force application. Commonly used in trauma surgery, joint procedures, and bone exposure where significant periosteal elevation is required.",
     image: "/lovable-uploads/key-elevator.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Putti Rasp\n(Bone Rasp)",
+    explanation: "The Putti rasp is a double-ended bone rasp featuring coarse, textured surfaces designed for shaping and smoothing bone during orthopedic procedures. Named after Italian orthopedic surgeon Vittorio Putti, this instrument is essential for bone preparation, particularly in joint replacement surgeries and fracture repairs. The textured surfaces allow for controlled bone removal and shaping, while the double-ended design provides versatility with different cutting patterns on each end. Commonly used in hip and knee arthroplasty procedures.",
+    image: "/lovable-uploads/putti-rasp.png"
   }
 ];
