@@ -139,8 +139,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             }, 0);
           }
           
-          // Call immediately for instant access verification
-          checkSubscription();
+          // For SIGNED_IN events, immediately verify and show success if premium
+          if (event === 'SIGNED_IN') {
+            setTimeout(async () => {
+              await verifyAndShowPremiumAccess();
+            }, 0);
+          } else {
+            // For other events, just check subscription silently
+            setTimeout(() => {
+              checkSubscription();
+            }, 0);
+          }
         } else {
           console.log('❌ No user, setting subscription to null');
           setSubscription(null);
@@ -338,6 +347,65 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (!subscription) {
         setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
       }
+    }
+  };
+
+  // Helper function to verify and show premium access immediately upon sign-in
+  const verifyAndShowPremiumAccess = async () => {
+    if (!user || !session) return;
+    
+    try {
+      console.log('🔍 Verifying premium access immediately upon sign-in');
+      
+      // Use the comprehensive get-user-access function
+      const { data, error } = await supabase.functions.invoke('get-user-access', {
+        headers: {
+          Authorization: `Bearer ${session.access_token}`
+        }
+      });
+
+      if (error) {
+        console.error('❌ Access verification error:', error);
+        // Still check subscription silently on error
+        checkSubscription();
+        return;
+      }
+
+      if (data) {
+        const subscriptionStatus = {
+          subscribed: data.hasAccess,
+          subscription_tier: data.subscriptionTier,
+          status: data.accessType,
+          subscription_end: data.subscriptionEnd,
+          verificationSource: data.verificationSource
+        };
+        
+        console.log(
+          data.hasAccess 
+            ? `✅ ACCESS GRANTED upon sign-in - Source: ${data.verificationSource}` 
+            : `❌ ACCESS DENIED - Status: ${data.accessType}`,
+          subscriptionStatus
+        );
+        
+        setSubscription(subscriptionStatus);
+
+        // Show success toast for premium users
+        if (data.hasAccess) {
+          toast({
+            title: "Premium Access Verified! 🎉",
+            description: "All premium features are now unlocked and ready to use.",
+            duration: 4000,
+          });
+        }
+      } else {
+        console.log('⚠️ No data returned from access verification, setting default');
+        setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
+      }
+
+    } catch (error) {
+      console.error('🚨 Critical error in premium verification:', error);
+      // Fallback to regular subscription check
+      checkSubscription();
     }
   };
 
