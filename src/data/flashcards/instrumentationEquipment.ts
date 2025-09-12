@@ -193,5 +193,25 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Goelet Retractor\n(Hand-held Retractor)",
     explanation: "Goelet retractors are hand-held surgical instruments typically 6-7 inches (15-18 cm) in length, featuring a curved, spoon-shaped blade at each end with different sizes for versatility. The smooth, blunt edges are designed to safely retract and hold soft tissues without causing trauma. The ergonomic handle provides comfortable grip during prolonged procedures. These retractors are commonly used in general surgery, plastic surgery, and other procedures where gentle tissue retraction is needed. The double-ended design allows surgeons to choose the appropriate blade size for different anatomical areas and surgical requirements.",
     image: "/lovable-uploads/1a87ae38-8d0a-4bb0-a036-58b296d78feb.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Senn Retractor\n(Hand-held Retractor)",
+    explanation: "Senn retractors are double-ended hand-held instruments typically 6.5 inches (16.5 cm) in length, featuring a three-pronged rake end and a U-shaped blunt end. The rake end has sharp prongs for securing tissue, while the blunt end provides gentle tissue retraction without trauma. These versatile retractors are commonly used in general surgery, plastic surgery, and minor procedures where superficial tissue retraction is needed. The lightweight design and dual functionality make them essential for wound exposure and tissue manipulation during various surgical procedures."
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Army-Navy Retractor\n(Handheld Retractor)",
+    explanation: "Army-Navy retractors are handheld surgical instruments typically 8-9 inches (20-23 cm) in length, featuring right-angled blade ends of different sizes for versatility. One end has a larger blade while the other has a smaller blade, allowing surgeons to choose the appropriate size for tissue retraction. The smooth, blunt edges prevent tissue trauma while providing excellent exposure of the surgical field. These retractors are essential in general surgery, abdominal procedures, and any surgery requiring reliable tissue retraction and wound exposure."
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "DeBakey Forceps\n(Atraumatic Tissue Forceps)",
+    explanation: "DeBakey forceps are specialized atraumatic tissue forceps typically 6-12 inches (15-30 cm) in length, featuring longitudinal serrations or ridges on the inner surface of the jaws instead of teeth. This unique design provides excellent grip on delicate tissues without causing trauma or crushing. The fine tips and gentle grasping action make them ideal for handling blood vessels, nerves, and other fragile structures during cardiovascular, vascular, and microsurgery procedures. Named after renowned cardiovascular surgeon Michael DeBakey, these forceps are essential for precise tissue manipulation."
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Adson Tissue Forceps\n(Toothed Tissue Forceps)",
+    explanation: "Adson tissue forceps are fine surgical instruments typically 4.75 inches (12 cm) in length, featuring delicate tips with either teeth (1x2 teeth configuration) or smooth surfaces. The toothed version provides secure grip on tough tissues like skin and fascia, while the smooth version is used for more delicate tissues. These forceps have a spring mechanism and fine tips that allow for precise tissue handling during procedures requiring detailed work. They are commonly used in plastic surgery, neurosurgery, and other procedures where fine tissue manipulation is essential."
   }
 ];
