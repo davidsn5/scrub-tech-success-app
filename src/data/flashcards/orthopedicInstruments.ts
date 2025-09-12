@@ -51,6 +51,18 @@ export const orthopedicInstruments: FlashcardItem[] = [
   },
   {
     question: "Identify this orthopedic surgical instrument",
+    answer: "Leksell Rongeur\n(Neurosurgical Rongeur)",
+    explanation: "The Leksell rongeur is a precision neurosurgical instrument featuring delicate, curved cutting jaws designed for removing small pieces of bone and tissue in neurosurgical procedures. Named after Swedish neurosurgeon Lars Leksell, this rongeur is characterized by its fine, precise cutting action and excellent control for delicate tissue removal. The curved design allows for optimal access in confined surgical spaces, particularly useful in cranial procedures, spinal surgeries, and stereotactic procedures where precision and minimal tissue trauma are essential.",
+    image: "/lovable-uploads/leksell-rongeur.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Jansen Rongeur\n(Bone Cutting Forceps)",
+    explanation: "The Jansen rongeur is a specialized bone-cutting instrument featuring curved cutting jaws and spring-loaded handles designed for controlled bone removal in orthopedic and neurosurgical procedures. The instrument provides excellent leverage and cutting force while maintaining precision control. The curved design allows for effective bone removal in areas with limited access, making it particularly useful for spinal procedures, cranial surgeries, and other procedures requiring precise bone shaping and removal. The spring-loaded mechanism ensures consistent cutting pressure and reduces hand fatigue during extended procedures.",
+    image: "/lovable-uploads/jansen-rongeur.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
     answer: "Duck Bill Rongeur\n(Duck Billed Rongeur)",
     explanation: "The Duck Bill Rongeur is a specialized bone-cutting instrument featuring curved jaws that resemble a duck's bill, designed for cutting and removing bone and cartilage in confined spaces. The unique curved design allows for precise bone removal in areas with limited access, particularly useful in spinal procedures and joint surgeries. The serrated cutting edges provide excellent grip on bone tissue while the curved shape enables surgeons to work around corners and in deep surgical sites. Essential for laminectomies, discectomies, and other procedures requiring precise bone removal.",
     image: "/lovable-uploads/duck-bill-rongeur.png"
