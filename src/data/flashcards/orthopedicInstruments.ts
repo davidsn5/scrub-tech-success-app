@@ -114,5 +114,11 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Hohmann Retractor\n(Bone Lever)",
     explanation: "The Hohmann retractor is a specialized orthopedic retractor featuring a curved or angled blade designed for retracting muscles and soft tissues away from bone surfaces. Available in various angles and blade widths, these retractors provide excellent exposure of bony structures during hip, knee, and other joint surgeries. The smooth, curved design allows for atraumatic tissue retraction while maintaining clear visualization of the operative field. Essential for joint replacement and fracture repair procedures, providing superior bone exposure.",
     image: "/lovable-uploads/hohmann-retractor.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Duck Bill Rongeur\n(Duck Billed Rongeur)",
+    explanation: "The Duck Bill Rongeur is a specialized bone-cutting instrument featuring curved jaws that resemble a duck's bill, designed for cutting and removing bone and cartilage in confined spaces. The unique curved design allows for precise bone removal in areas with limited access, particularly useful in spinal procedures and joint surgeries. The serrated cutting edges provide excellent grip on bone tissue while the curved shape enables surgeons to work around corners and in deep surgical sites. Essential for laminectomies, discectomies, and other procedures requiring precise bone removal.",
+    image: "/lovable-uploads/duck-bill-rongeur.png"
   }
 ];
