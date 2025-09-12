@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Wrench } from 'lucide-react';
+import { ArrowLeft, Target, Scissors } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 
@@ -13,7 +13,7 @@ const InstrumentationFlashcards = () => {
       id: 'general-instruments',
       title: 'General Instruments',
       description: 'Basic surgical instruments used across multiple specialties',
-      icon: Wrench,
+      icon: Scissors,
       color: 'from-purple-500/80 to-purple-600/80',
       bgColor: 'from-purple-50/90 to-purple-100/90',
       borderColor: 'border-purple-200/60'
@@ -72,7 +72,7 @@ const InstrumentationFlashcards = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
               <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 shadow-lg flex-shrink-0 flex items-center justify-center">
-                <Wrench className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                <Scissors className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
                 <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-purple-600 leading-tight">
