@@ -499,11 +499,6 @@ const Index = () => {
                 <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Study Instruments
               </Button>
-              <div className="flex justify-center mt-2">
-                <Badge variant="outline" className="text-xs">
-                  Free Preview
-                </Badge>
-              </div>
             </Card>
           </div>
         </div>
