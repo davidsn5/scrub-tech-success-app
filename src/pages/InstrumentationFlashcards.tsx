@@ -85,7 +85,7 @@ const InstrumentationFlashcards = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-purple-600 leading-tight">
-                  Instrumentation Flashcards
+                  Instrumentation Review
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600 hidden sm:block">Master surgical instruments by category</p>
               </div>
