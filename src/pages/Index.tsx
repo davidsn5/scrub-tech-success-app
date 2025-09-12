@@ -132,7 +132,8 @@ const Index = () => {
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
-    handlePremiumFeatureClick(() => navigate(targetPath), featureName);
+    // Allow free preview without sign-in
+    handlePremiumFeatureClick(() => navigate(targetPath), featureName, true);
   };
 
   return (

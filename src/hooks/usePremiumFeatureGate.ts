@@ -19,8 +19,8 @@ export const usePremiumFeatureGate = () => {
     featureName?: string,
     bypassForFree: boolean = false
   ) => {
-    // If user is not logged in, redirect to auth
-    if (!user) {
+    // If user is not logged in but this isn't a free preview, require sign in
+    if (!user && !bypassForFree) {
       toast({
         title: "Sign In Required",
         description: "Please sign in to access this feature.",
