@@ -114,7 +114,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
               <Button 
                 onClick={onBack}
                 variant="ghost" 
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2 hover:bg-purple-100 hover:text-purple-700"
               >
                 <span>←</span>
                 <span>Back to Categories</span>
@@ -189,7 +189,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <RotateCcw className="h-4 w-4" />
                   <span>Try Again</span>
                 </Button>
-                <Button onClick={onBack} variant="outline">
+                <Button onClick={onBack} variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50">
                   Back to Categories
                 </Button>
               </div>
