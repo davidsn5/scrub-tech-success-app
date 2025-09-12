@@ -421,13 +421,15 @@ const Index = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Study Flashcards</h3>
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review key terms and concepts with interactive flashcards organized by category</p>
-              <Button 
-                onClick={() => handlePremiumFeatureAccess('/flashcards', 'Interactive Flashcards')}
-                className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
-                <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Browse Flashcards
-              </Button>
+              <Link to="/flashcards">
+                <Button 
+                  className="w-full bg-gradient-to-r from-indigo-500/90 to-indigo-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+                >
+                  <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                  Browse Flashcards
+                  <span className="text-xs opacity-90 ml-2">Free Preview</span>
+                </Button>
+              </Link>
             </Card>
 
             {/* Key Term Games */}
@@ -449,13 +451,14 @@ const Index = () => {
                 Interactive games to master medical terminology and surgical concepts
                 {!isPremium && <span className="block mt-1 text-amber-700 font-medium">Try limited games daily - upgrade for unlimited access!</span>}
               </p>
-              <Button 
-                onClick={() => handlePremiumFeatureAccess('/key-term-games', 'Review Games')}
-                className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
-                <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                {isPremium ? 'Play Games' : 'Try Free Preview'}
-              </Button>
+              <Link to="/key-term-games">
+                <Button 
+                  className="w-full bg-gradient-to-r from-teal-500/80 to-teal-600/80 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+                >
+                  <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                  {isPremium ? 'Play Games' : 'Try Free Preview'}
+                </Button>
+              </Link>
             </Card>
 
             {/* Missed Questions */}
@@ -470,13 +473,15 @@ const Index = () => {
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
               </div>
-              <Button 
-                onClick={() => handlePremiumFeatureAccess('/missed-questions', 'Missed Questions Review')}
-                className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
-                <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Review Missed Questions
-              </Button>
+              <Link to="/missed-questions">
+                <Button 
+                  className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
+                >
+                  <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                  Review Missed Questions
+                  <span className="text-xs opacity-90 ml-2">Free Preview</span>
+                </Button>
+              </Link>
             </Card>
 
             {/* Instrumentation Flashcards - Now always accessible */}
@@ -564,14 +569,16 @@ const Index = () => {
                 <span>Detailed Results</span>
               </div>
             </div>
-            <Button 
-              onClick={() => handlePremiumFeatureAccess('/exam-simulation', 'Full Exam Simulation')}
-              size="lg"
-              className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
-            >
-              <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
-              Start Exam Simulation
-            </Button>
+            <Link to="/exam-simulation">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-blue-500/90 to-indigo-500/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+              >
+                <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+                Start Exam Simulation
+                <span className="text-xs opacity-90 ml-2">Free Preview</span>
+              </Button>
+            </Link>
           </div>
         </Card>
         
