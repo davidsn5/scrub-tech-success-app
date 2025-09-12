@@ -97,5 +97,35 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Deaver Retractor\n(Deep Retractor)",
     explanation: "The Deaver retractor is a large, curved retractor typically 10-13 inches (25-33 cm) in length with a broad, curved blade. It features a deep curve that allows for excellent retraction of large organs and deep tissue structures. The wide blade surface provides maximum tissue contact and even pressure distribution, making it ideal for retracting liver, bowel, and other large organs during abdominal surgeries. Available in various blade widths (1-3 inches), Deaver retractors are essential for providing adequate exposure in major surgical procedures requiring deep access.",
     image: "/lovable-uploads/7fe5776f-8a3a-401c-bf59-ff98434738a6.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Harrington Retractor\n(Sweetheart Retractor)",
+    explanation: "The Harrington retractor, also known as a sweetheart retractor, is a heart-shaped or kidney-shaped retractor typically 8-10 inches (20-25 cm) in length. It features a curved, broad blade with smooth edges designed for gentle retraction of organs and soft tissues. The distinctive curved shape allows for excellent exposure while minimizing tissue trauma. Harrington retractors are commonly used in abdominal, thoracic, and cardiac surgeries where gentle, broad retraction is needed to provide optimal surgical field visualization.",
+    image: "/lovable-uploads/1f62a02b-4a3b-44fa-bbb5-a3c9211e8247.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Richardson-Eastman Retractor\n(Double-Ended Retractor)",
+    explanation: "The Richardson-Eastman retractor is a double-ended retractor typically 8-10 inches (20-25 cm) in length, featuring different sized curved blades on each end. This design provides versatility, allowing the surgeon to choose the appropriate blade size for different anatomical structures within the same procedure. The smooth, curved blades provide excellent tissue retraction while the double-ended design eliminates the need for multiple instruments. Commonly used in abdominal and pelvic surgeries where varying degrees of retraction are needed.",
+    image: "/lovable-uploads/b75bffa1-261c-42e7-ab23-a8788c2a4d20.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Kelly Retractor\n(Abdominal Retractor)",
+    explanation: "The Kelly retractor is a right-angled retractor typically 8-10 inches (20-25 cm) in length with a flat, rectangular blade positioned at a 90-degree angle to the handle. This design provides excellent exposure of deep surgical sites, particularly in abdominal procedures. The flat blade distributes pressure evenly across tissues while the right-angle configuration allows for optimal retraction without interfering with the surgeon's access to the operative field. Kelly retractors are essential instruments for maintaining clear visualization in deep cavity surgeries.",
+    image: "/lovable-uploads/3d80247c-83bc-4502-95d9-50ba6294a29a.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Allis Forceps\n(Tissue Grasping Forceps)",
+    explanation: "Allis forceps are traumatic tissue grasping instruments typically 6-10 inches (15-25 cm) in length. They feature distinctive serrated jaws with multiple interlocking teeth that provide secure grip on tough tissues, fascia, and organs that need firm manipulation. The ring handles allow for comfortable control and the ratcheting mechanism maintains constant pressure. Unlike atraumatic forceps, Allis forceps are designed to hold tissues that will be removed or where tissue crushing is acceptable. They are commonly used for grasping bowel, appendix, gallbladder, and other structures during surgical procedures.",
+    image: "/lovable-uploads/59102488-835e-4f30-a32e-18ea83bfed82.png"
+  },
+  {
+    question: "Identify this surgical instrument and its purpose",
+    answer: "Beaver Blade Handle\n(Microsurgery Handle)",
+    explanation: "The Beaver blade handle is a small, precision surgical handle typically 4-5 inches (10-13 cm) in length with a textured grip for enhanced control. It is specifically designed to hold Beaver blades, which are small, disposable surgical blades used for delicate and precise cutting in microsurgery, ophthalmic surgery, and plastic surgery procedures. The handle's compact size and lightweight design provide excellent maneuverability for fine surgical work. Beaver blades come in various shapes and sizes, making this handle system ideal for procedures requiring extreme precision and minimal tissue trauma.",
+    image: "/lovable-uploads/ae78fed8-55f9-4337-a4f4-d6d838565ed7.png"
   }
 ];
