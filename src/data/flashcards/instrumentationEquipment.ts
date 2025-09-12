@@ -67,5 +67,35 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "#3 Knife Handle\n(Scalpel Handle)",
     explanation: "The #3 knife handle is a standard surgical scalpel handle approximately 5 inches (13 cm) in length with a textured grip for secure handling. This handle is compatible with blade sizes #10, #11, #12, #13, and #15. The #3 handle is the most commonly used scalpel handle in surgery due to its versatile blade compatibility and comfortable ergonomic design. The numbered markings on the handle help identify the correct handle size for proper blade attachment.",
     image: "/lovable-uploads/a65b6129-9f75-4b8c-bfdb-26cc77272439.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Babcock Forceps\n(Tissue Forceps)",
+    explanation: "Babcock forceps are atraumatic tissue grasping instruments typically 6-9 inches (15-23 cm) in length. They feature distinctive fenestrated (windowed) jaws with smooth inner surfaces that provide secure yet gentle tissue handling without crushing or damaging delicate structures. The ring handles allow for comfortable grip and precise control. Babcock forceps are commonly used to grasp bowel, appendix, fallopian tubes, and other soft tissues during surgical procedures. Available in both short and long versions to accommodate different surgical approaches and depths.",
+    image: "/lovable-uploads/d1427bc2-7fa6-4486-bafd-3371c3c1debf.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Poole Suction\n(Suction Tip)",
+    explanation: "The Poole suction tip is a specialized suction device designed for efficient removal of large volumes of fluid and debris from the surgical field. It features multiple side holes that prevent tissue from being drawn into the suction, protecting organs and preventing blockage. The tip typically ranges from 8-12 inches (20-30 cm) in length and connects to standard suction tubing. The multiple perforations allow for continuous suction even when the main opening becomes temporarily blocked, making it ideal for procedures involving significant fluid accumulation or irrigation.",
+    image: "/lovable-uploads/71aebe58-86ef-4b39-9e7d-baa0b632768a.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Richardson Retractor\n(Self-Retaining)",
+    explanation: "The Richardson retractor is a double-ended, self-retaining retractor typically 8-10 inches (20-25 cm) in length. It features curved blades on both ends with a central handle for positioning and manipulation. The smooth, curved design allows for gentle tissue retraction while providing excellent exposure of the surgical field. Richardson retractors are commonly used in abdominal, thoracic, and other deep cavity surgeries where sustained tissue retraction is needed. The self-retaining design frees up the surgeon's hands for other tasks during the procedure.",
+    image: "/lovable-uploads/48979c37-dec0-4a3d-adf7-24850a63ddac.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Malleable Retractor\n(Ribbon Retractor)",
+    explanation: "The malleable (ribbon) retractor is a flexible, flat retractor typically 8-12 inches (20-30 cm) in length and varying widths. Made from soft, pliable metal, it can be bent and shaped to conform to anatomical contours and provide customized tissue retraction. The smooth, flat surface distributes pressure evenly across tissues, reducing trauma while maintaining excellent exposure. Malleable retractors are particularly useful in deep surgical sites where rigid retractors cannot provide adequate access, and they can be shaped to fit around organs and other structures.",
+    image: "/lovable-uploads/5f0977b2-6c33-42d3-b5a9-6d0eecf34acd.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Deaver Retractor\n(Deep Retractor)",
+    explanation: "The Deaver retractor is a large, curved retractor typically 10-13 inches (25-33 cm) in length with a broad, curved blade. It features a deep curve that allows for excellent retraction of large organs and deep tissue structures. The wide blade surface provides maximum tissue contact and even pressure distribution, making it ideal for retracting liver, bowel, and other large organs during abdominal surgeries. Available in various blade widths (1-3 inches), Deaver retractors are essential for providing adequate exposure in major surgical procedures requiring deep access.",
+    image: "/lovable-uploads/7fe5776f-8a3a-401c-bf59-ff98434738a6.png"
   }
 ];
