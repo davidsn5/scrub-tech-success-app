@@ -84,5 +84,17 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Bone Cutter (Large)",
     explanation: "Large bone cutters are heavy-duty instruments designed for cutting thick bones and performing major osteotomies. They provide maximum cutting power and are essential for procedures involving large bones like the femur or tibia.",
     image: "/lovable-uploads/bone-cutter.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Freer Elevator\n(Septal Elevator)",
+    explanation: "The Freer elevator is a double-ended periosteal elevator with a straight, sharp edge on one end and a curved edge on the other. Originally designed for nasal and septal surgery, it's also commonly used in orthopedic procedures for elevating periosteum from bone surfaces. The textured handle provides excellent grip and control, while the thin, sharp edges allow for precise tissue separation with minimal trauma.",
+    image: "/lovable-uploads/freer-elevator.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Key Elevator\n(Periosteal Elevator)",
+    explanation: "The Key elevator is a robust periosteal elevator featuring a wide, flat blade with a beveled edge designed for separating periosteum from bone surfaces during orthopedic procedures. The broad, angled blade provides excellent leverage for tissue elevation, while the sturdy construction allows for controlled force application. Commonly used in trauma surgery, joint procedures, and bone exposure where significant periosteal elevation is required.",
+    image: "/lovable-uploads/key-elevator.png"
   }
 ];
