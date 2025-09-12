@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors, User } from 'lucide-react';
+import { ArrowLeft, Target, Scissors, User, Bone } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
@@ -23,6 +23,15 @@ const InstrumentationFlashcards = () => {
       borderColor: 'border-blue-200/60'
     },
     {
+      id: 'orthopedic-instruments',
+      title: 'Orthopedic Instruments',
+      description: 'Specialized instruments for bone and joint procedures',
+      icon: Bone,
+      color: 'from-green-500/80 to-green-600/80',
+      bgColor: 'from-green-50/90 to-green-100/90',
+      borderColor: 'border-green-200/60'
+    },
+    {
       id: 'general-instrument-questions',
       title: 'General Instrument Question Review',
       description: 'Practice questions focusing on surgical instrument identification and usage',
@@ -33,12 +42,24 @@ const InstrumentationFlashcards = () => {
     }
   ];
 
-  if (selectedCategory === 'general-instruments') {
+  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
+    const bgGradient = selectedCategory === 'orthopedic-instruments' 
+      ? 'from-slate-50/95 via-green-50/90 to-green-100/85'
+      : 'from-slate-50/95 via-blue-50/90 to-blue-100/85';
+    const headerBg = selectedCategory === 'orthopedic-instruments' ? 'bg-green-50' : 'bg-blue-50';
+    const buttonColors = selectedCategory === 'orthopedic-instruments'
+      ? 'hover:bg-green-100 hover:text-green-700'
+      : 'hover:bg-blue-100 hover:text-blue-700';
+    const titleColor = selectedCategory === 'orthopedic-instruments' ? 'text-green-700' : 'text-blue-700';
+    const upgradeButtonColors = selectedCategory === 'orthopedic-instruments'
+      ? 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800'
+      : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800';
+
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-blue-100/85">
+      <div className={`min-h-screen bg-gradient-to-br ${bgGradient}`}>
         {/* Header */}
-        <div className="bg-blue-50 shadow-sm border-b">
+        <div className={`${headerBg} shadow-sm border-b`}>
           <div className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-4">
@@ -46,7 +67,7 @@ const InstrumentationFlashcards = () => {
                   onClick={() => setSelectedCategory(null)}
                   variant="ghost"
                   size="sm"
-                  className="flex items-center space-x-2 hover:bg-blue-100 hover:text-blue-700 min-h-[44px] px-3"
+                  className={`flex items-center space-x-2 ${buttonColors} min-h-[44px] px-3`}
                 >
                   <span>←</span>
                   <span className="hidden xs:inline">Back to Categories</span>
@@ -56,7 +77,7 @@ const InstrumentationFlashcards = () => {
               {!user && (
                 <Button 
                   onClick={() => navigate('/auth')}
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white flex items-center space-x-2"
+                  className={`${upgradeButtonColors} text-white flex items-center space-x-2`}
                 >
                   <User className="h-4 w-4" />
                   <span className="hidden sm:inline">Sign In/Upgrade</span>
@@ -65,7 +86,7 @@ const InstrumentationFlashcards = () => {
               )}
             </div>
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-blue-700">{category?.title} Flashcards</h1>
+              <h1 className={`text-2xl font-bold ${titleColor}`}>{category?.title} Flashcards</h1>
               <p className="text-sm text-gray-600 mt-1">{category?.description}</p>
             </div>
           </div>
@@ -129,7 +150,7 @@ const InstrumentationFlashcards = () => {
             Study surgical instruments and their uses. Each flashcard includes detailed explanations and proper identification techniques.
           </p>
           <p className="text-blue-700 font-bold text-sm sm:text-base">
-            Under Construction - More Categories Coming Soon
+            More Categories Available - Choose Your Specialty
           </p>
         </div>
 
