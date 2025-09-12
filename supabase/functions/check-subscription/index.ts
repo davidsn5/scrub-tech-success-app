@@ -41,11 +41,13 @@ serve(async (req) => {
     logStep("User authenticated", { userId: user.id, email: user.email });
 
     // Check if user is an admin or premium user first
-    const { data: existingSubscriber } = await supabaseClient
+    const { data: existingSubscriber, error: subError } = await supabaseClient
       .from("subscribers")
-      .select("status, subscribed, subscription_tier, subscription_end")
+      .select("status, subscribed, subscription_tier, subscription_end, updated_at")
       .eq("email", user.email)
-      .single();
+      .order("updated_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
     
     // If user is admin or premium, check expiration for non-lifetime users
     if (existingSubscriber?.status === 'admin' || existingSubscriber?.status === 'premium') {
