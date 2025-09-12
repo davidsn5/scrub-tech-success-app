@@ -107,9 +107,9 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+      <div className="bg-purple-50 shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-4">
               <Button 
                 onClick={onBack}
@@ -119,12 +119,6 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                 <span>←</span>
                 <span>Back to Categories</span>
               </Button>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">Instrument Identification Quiz</h1>
-                <p className="text-sm text-gray-600">
-                  Question {currentQuestionIndex + 1} of {totalQuestions}
-                </p>
-              </div>
             </div>
             <div className="flex flex-col items-end space-y-2">
               <div className="flex space-x-2">
@@ -151,6 +145,12 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                 Score: {score}/{totalQuestions}
               </Badge>
             </div>
+          </div>
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Instrument Identification Quiz</h1>
+            <p className="text-sm text-gray-600">
+              Question {currentQuestionIndex + 1} of {totalQuestions}
+            </p>
           </div>
         </div>
       </div>
