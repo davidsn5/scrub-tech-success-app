@@ -39,6 +39,12 @@ export const orthopedicInstruments: FlashcardItem[] = [
   },
   {
     question: "Identify this orthopedic surgical instrument",
+    answer: "Pituitary Rongeur\n(Neurosurgical Rongeur)",
+    explanation: "A pituitary rongeur is a specialized rongeur with an elongated shaft and small, delicate cutting jaws designed for removing tissue in confined spaces, particularly during neurosurgical and endoscopic procedures. The long, angled design allows access to deep surgical sites through small openings, such as during transsphenoidal pituitary surgery. The small, precise cutting jaws enable removal of soft tissue and small bone fragments with minimal trauma to surrounding structures. Essential for procedures requiring delicate tissue removal in narrow surgical corridors.",
+    image: "/lovable-uploads/pituitary-rongeur.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
     answer: "Duck Bill Rongeur\n(Duck Billed Rongeur)",
     explanation: "The Duck Bill Rongeur is a specialized bone-cutting instrument featuring curved jaws that resemble a duck's bill, designed for cutting and removing bone and cartilage in confined spaces. The unique curved design allows for precise bone removal in areas with limited access, particularly useful in spinal procedures and joint surgeries. The serrated cutting edges provide excellent grip on bone tissue while the curved shape enables surgeons to work around corners and in deep surgical sites. Essential for laminectomies, discectomies, and other procedures requiring precise bone removal.",
     image: "/lovable-uploads/duck-bill-rongeur.png"
