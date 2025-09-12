@@ -3,13 +3,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { instrumentIdentificationQuestions, Question } from '@/data/questions/instrumentIdentification';
-import { CheckCircle, XCircle, RotateCcw } from 'lucide-react';
+import { CheckCircle, XCircle, RotateCcw, Shuffle } from 'lucide-react';
 
 interface InstrumentQuestionsProps {
   onBack: () => void;
 }
 
 export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack }) => {
+  const [questions, setQuestions] = useState<Question[]>(instrumentIdentificationQuestions);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
@@ -21,8 +22,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     new Array(instrumentIdentificationQuestions.length).fill(null)
   );
 
-  const currentQuestion = instrumentIdentificationQuestions[currentQuestionIndex];
-  const totalQuestions = instrumentIdentificationQuestions.length;
+  const currentQuestion = questions[currentQuestionIndex];
+  const totalQuestions = questions.length;
   const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
   const allQuestionsAnswered = answeredQuestions.every(answered => answered);
 
@@ -74,8 +75,25 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     setSelectedAnswer(null);
     setShowResult(false);
     setScore(0);
-    setAnsweredQuestions(new Array(instrumentIdentificationQuestions.length).fill(false));
-    setUserAnswers(new Array(instrumentIdentificationQuestions.length).fill(null));
+    setAnsweredQuestions(new Array(questions.length).fill(false));
+    setUserAnswers(new Array(questions.length).fill(null));
+  };
+
+  const handleShuffle = () => {
+    // Fisher-Yates shuffle algorithm
+    const shuffledQuestions = [...instrumentIdentificationQuestions];
+    for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
+    }
+    
+    setQuestions(shuffledQuestions);
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setScore(0);
+    setAnsweredQuestions(new Array(shuffledQuestions.length).fill(false));
+    setUserAnswers(new Array(shuffledQuestions.length).fill(null));
   };
 
   const getScoreColor = () => {
@@ -112,15 +130,26 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
               <Badge variant="outline" className="text-sm">
                 Score: {score}/{totalQuestions}
               </Badge>
-              <Button 
-                onClick={handleRestart}
-                variant="outline"
-                size="sm"
-                className="flex items-center space-x-1"
-              >
-                <RotateCcw className="h-4 w-4" />
-                <span>Restart</span>
-              </Button>
+              <div className="flex space-x-2">
+                <Button 
+                  onClick={handleShuffle}
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center space-x-1"
+                >
+                  <Shuffle className="h-4 w-4" />
+                  <span className="hidden sm:inline">Shuffle</span>
+                </Button>
+                <Button 
+                  onClick={handleRestart}
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center space-x-1"
+                >
+                  <RotateCcw className="h-4 w-4" />
+                  <span className="hidden sm:inline">Restart</span>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -152,7 +181,11 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
             </CardHeader>
             <CardContent className="text-center space-y-4">
               <div className="flex justify-center space-x-4">
-                <Button onClick={handleRestart} className="flex items-center space-x-2">
+                <Button onClick={handleShuffle} className="flex items-center space-x-2">
+                  <Shuffle className="h-4 w-4" />
+                  <span>Shuffle & Retry</span>
+                </Button>
+                <Button onClick={handleRestart} variant="outline" className="flex items-center space-x-2">
                   <RotateCcw className="h-4 w-4" />
                   <span>Try Again</span>
                 </Button>
