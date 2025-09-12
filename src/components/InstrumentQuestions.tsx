@@ -217,7 +217,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900">Instrument Identification Quiz</h1>
+            <h1 className="text-2xl font-bold text-purple-700">Instrument Identification Quiz</h1>
             <p className="text-sm text-gray-600">
               Question {currentQuestionIndex + 1} of {totalQuestions}
             </p>
