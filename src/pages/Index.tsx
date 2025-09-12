@@ -117,14 +117,16 @@ const Index = () => {
   const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
     // Force refresh subscription status to ensure we have the latest data
     console.log('🔍 Checking premium access before navigation...');
-    await checkSubscription();
+    if (user) {
+      await checkSubscription();
+    }
     
-    // Check user authentication and premium status
+    // Check premium status and show appropriate message
     if (!user) {
-      // User not signed in - show auth prompt with upgrade option
+      // User not signed in - show preview access message
       toast({
-        title: "Sign In Required",
-        description: "Please sign in to access study materials. Free preview available after sign in.",
+        title: "Preview Access",
+        description: `Accessing ${featureName || 'this feature'} in preview mode. Sign in and upgrade for full access to all content.`,
         action: (
           <Button 
             size="sm" 
@@ -135,12 +137,8 @@ const Index = () => {
           </Button>
         ),
       });
-      return;
-    }
-
-    // User is authenticated - check premium status
-    if (!isSubscribed && !isAdmin) {
-      // User has free access - show preview limitation message
+    } else if (!isSubscribed && !isAdmin) {
+      // User signed in but not premium - show preview limitation message
       toast({
         title: "Preview Mode",
         description: `You're accessing ${featureName || 'this feature'} in preview mode. Upgrade for full access to all content.`,
@@ -154,12 +152,9 @@ const Index = () => {
           </Button>
         ),
       });
-      // Still allow navigation but with preview limitations
-      navigate(targetPath);
-      return;
     }
 
-    // Premium user - full access
+    // Always allow navigation regardless of status
     navigate(targetPath);
   };
 
