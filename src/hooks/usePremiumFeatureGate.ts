@@ -40,10 +40,10 @@ export const usePremiumFeatureGate = () => {
       action();
       // Verify in background to ensure subscription is still valid
       verifyPremiumAccess().then(result => {
-        if (!result.hasAccess) {
+        if (!result.hasAccess && result.verificationSource === 'stripe') {
           toast({
             title: "Subscription Status Changed",
-            description: "Your subscription status has changed. Please refresh the page or sign in again.",
+            description: "Your subscription status has changed. Please refresh the page.",
             variant: "destructive",
           });
         }
@@ -51,22 +51,11 @@ export const usePremiumFeatureGate = () => {
       return;
     }
 
-    // User doesn't have premium - verify with both Supabase and Stripe
-    toast({
-      title: "Verifying Access",
-      description: "Checking your subscription status with Supabase and Stripe...",
-      variant: "default",
-    });
-
+    // User doesn't have premium - verify with Stripe and show upgrade option
     const result = await verifyPremiumAccess();
     
     if (result.hasAccess) {
-      // User has premium access, proceed with action
-      toast({
-        title: "Access Verified!",
-        description: "Premium features are now unlocked. Enjoy full access!",
-        variant: "default",
-      });
+      // User actually has premium, proceed with action
       action();
     } else {
       // Show upgrade prompt

@@ -47,12 +47,11 @@ export const useStripeVerification = () => {
 
       // If verification shows user has access, refresh the local subscription state
       if (data.hasAccess) {
-        // Force refresh of subscription state in AuthContext
         await checkSubscription();
         
         toast({
           title: "Premium Access Verified",
-          description: `Your premium subscription has been verified through ${data.verificationSource}. All premium features are now unlocked!`,
+          description: "Your premium subscription has been verified through Stripe. All premium features are now unlocked!",
           variant: "default",
         });
       }

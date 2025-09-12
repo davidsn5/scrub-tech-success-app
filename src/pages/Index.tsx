@@ -491,14 +491,13 @@ const Index = () => {
               </div>
               <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">
                 Master surgical instruments with specialized flashcards covering tools, equipment, and their applications
-                <span className="block mt-1 text-blue-700 font-medium text-xs">Free preview available • Premium verification for full access</span>
               </p>
               <Button 
-                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Study Instruments')}
+                onClick={() => navigate('/instrumentation-flashcards')}
                 className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
               >
                 <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Access Study Instruments
+                Study Instruments
               </Button>
             </Card>
           </div>
