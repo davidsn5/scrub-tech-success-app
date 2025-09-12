@@ -102,5 +102,11 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Putti Rasp\n(Bone Rasp)",
     explanation: "The Putti rasp is a double-ended bone rasp featuring coarse, textured surfaces designed for shaping and smoothing bone during orthopedic procedures. Named after Italian orthopedic surgeon Vittorio Putti, this instrument is essential for bone preparation, particularly in joint replacement surgeries and fracture repairs. The textured surfaces allow for controlled bone removal and shaping, while the double-ended design provides versatility with different cutting patterns on each end. Commonly used in hip and knee arthroplasty procedures.",
     image: "/lovable-uploads/putti-rasp.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Bone Curette\n(Surgical Curette)",
+    explanation: "A bone curette is a spoon-shaped surgical instrument with a sharp, curved cutting edge designed for scraping and removing tissue, bone fragments, or infected material from bone surfaces. The rounded, scooped end allows for controlled tissue removal while minimizing damage to surrounding healthy tissue. Commonly used in orthopedic procedures for debridement, removal of bone cysts, infected tissue, or cartilage, and preparation of bone surfaces for grafting.",
+    image: "/lovable-uploads/bone-curette.png"
   }
 ];
