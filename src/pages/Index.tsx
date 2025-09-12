@@ -493,12 +493,19 @@ const Index = () => {
                 Master surgical instruments with specialized flashcards covering tools, equipment, and their applications
               </p>
               <Button 
-                onClick={() => navigate('/instrumentation-flashcards')}
+                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Instrumentation Review')}
                 className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
               >
                 <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 Study Instruments
               </Button>
+              {!isSubscribed && (
+                <div className="flex justify-center mt-2">
+                  <Badge variant="outline" className="text-xs">
+                    5 free items
+                  </Badge>
+                </div>
+              )}
             </Card>
           </div>
         </div>
