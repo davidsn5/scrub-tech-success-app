@@ -213,5 +213,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     question: "Identify this surgical instrument",
     answer: "Adson Tissue Forceps\n(Toothed Tissue Forceps)",
     explanation: "Adson tissue forceps are fine surgical instruments typically 4.75 inches (12 cm) in length, featuring delicate tips with either teeth (1x2 teeth configuration) or smooth surfaces. The toothed version provides secure grip on tough tissues like skin and fascia, while the smooth version is used for more delicate tissues. These forceps have a spring mechanism and fine tips that allow for precise tissue handling during procedures requiring detailed work. They are commonly used in plastic surgery, neurosurgery, and other procedures where fine tissue manipulation is essential."
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Yankauer Suction\n(Rigid Suction Tip)",
+    explanation: "Yankauer suction tips are rigid surgical suction devices typically 10-12 inches (25-30 cm) in length, featuring a curved, angled tip with multiple holes for effective fluid and debris removal. The large central opening and side holes prevent tissue from being drawn into the suction while maintaining strong suction capability. The ergonomic handle provides comfortable grip during prolonged procedures. These suction tips are essential in general surgery, ENT procedures, and any surgery requiring effective clearing of blood, irrigation fluid, and surgical debris from the operative field.",
+    image: "/lovable-uploads/96b445f5-b5c5-46b6-af48-c19a6184e9e4.png"
   }
 ];
