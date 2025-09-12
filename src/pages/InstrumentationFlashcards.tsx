@@ -35,25 +35,25 @@ const InstrumentationFlashcards = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-purple-50/90 to-purple-100/85">
         {/* Header */}
-        <div className="bg-gradient-to-r from-white/95 via-slate-50/90 to-purple-50/85 shadow-sm border-b border-slate-200/50 backdrop-blur-sm sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-3 sm:px-6 py-3 sm:py-6">
-            <div className="flex items-center justify-between space-x-2">
-              <Button
-                onClick={() => setSelectedCategory(null)}
-                variant="outline"
-                size="sm"
-                className="flex items-center space-x-1 shrink-0 min-h-[44px] px-3"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                <span className="hidden xs:inline">Back to Categories</span>
-                <span className="xs:hidden">Back</span>
-              </Button>
-              <div className="min-w-0 flex-1 pl-2">
-                <h1 className="text-lg sm:text-xl lg:text-2xl font-bold leading-tight text-purple-700">
-                  {category?.title} Flashcards
-                </h1>
-                <p className="text-xs sm:text-sm text-gray-600 mt-1 line-clamp-2">{category?.description}</p>
+        <div className="bg-purple-50 shadow-sm border-b">
+          <div className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center space-x-4">
+                <Button
+                  onClick={() => setSelectedCategory(null)}
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center space-x-2 hover:bg-purple-100 hover:text-purple-700 min-h-[44px] px-3"
+                >
+                  <span>←</span>
+                  <span className="hidden xs:inline">Back to Categories</span>
+                  <span className="xs:hidden">Back</span>
+                </Button>
               </div>
+            </div>
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-purple-700">{category?.title} Flashcards</h1>
+              <p className="text-sm text-gray-600 mt-1">{category?.description}</p>
             </div>
           </div>
         </div>
