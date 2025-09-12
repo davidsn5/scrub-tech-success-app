@@ -71,12 +71,8 @@ const InstrumentationFlashcards = () => {
         <div className="max-w-6xl mx-auto px-3 sm:px-6 py-3 sm:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-1">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl shadow-lg overflow-hidden flex-shrink-0">
-                <img 
-                  src="/lovable-uploads/a97d37e9-2975-4012-992a-008ee35274c1.png" 
-                  alt="Surgical Tech Review Logo" 
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 shadow-lg flex-shrink-0 flex items-center justify-center">
+                <Wrench className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
               </div>
               <div className="min-w-0 flex-1">
                 <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-purple-600 leading-tight">
