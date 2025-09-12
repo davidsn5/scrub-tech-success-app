@@ -288,27 +288,29 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
             <CardContent className="space-y-6">
               {/* Premium Upsell for Non-Premium Users */}
               {!hasPremiumAccess && (
-                <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-lg p-4">
+                <Card className="bg-gradient-to-br from-purple-50/80 to-purple-100/80 border-purple-200/50 p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-2 rounded-full">
-                        <Crown className="h-5 w-5 text-white" />
-                      </div>
+                      <Lock className="h-5 w-5 text-purple-600" />
                       <div>
-                        <h3 className="font-semibold text-purple-900">Unlock All 36 Questions</h3>
-                        <p className="text-sm text-purple-700">
-                          Get access to all instrument identification questions plus shuffle feature
+                        <p className="text-sm font-medium text-purple-800">
+                          Showing {freeQuestionLimit} of {instrumentIdentificationQuestions.length} questions
+                        </p>
+                        <p className="text-xs text-purple-700">
+                          Unlock all questions with Premium access
                         </p>
                       </div>
                     </div>
                     <Button 
                       onClick={handleUpgrade}
-                      className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white"
+                      size="sm"
+                      className="bg-gradient-to-r from-purple-600/90 to-purple-700/90 hover:from-purple-700/90 hover:to-purple-800/90 text-white"
                     >
-                      Upgrade Now
+                      <Crown className="h-4 w-4 mr-1" />
+                      Unlock
                     </Button>
                   </div>
-                </div>
+                </Card>
               )}
               {/* Instrument Image */}
               {currentQuestion.image && (
