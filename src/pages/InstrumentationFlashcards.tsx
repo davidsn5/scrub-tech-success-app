@@ -125,8 +125,11 @@ const InstrumentationFlashcards = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-3 sm:mb-4">
             Choose an Instrument Category
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-4">
             Study surgical instruments and their uses. Each flashcard includes detailed explanations and proper identification techniques.
+          </p>
+          <p className="text-slate-700 font-bold text-sm sm:text-base">
+            Under Construction - More Categories Coming Soon
           </p>
         </div>
 
