@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowLeft, Target, Scissors, User } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
+import { useAuth } from '@/contexts/AuthContext';
 
 const InstrumentationFlashcards = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const categories = [
@@ -50,6 +53,16 @@ const InstrumentationFlashcards = () => {
                   <span className="xs:hidden">Back</span>
                 </Button>
               </div>
+              {!user && (
+                <Button 
+                  onClick={() => navigate('/auth')}
+                  className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-2"
+                >
+                  <User className="h-4 w-4" />
+                  <span className="hidden sm:inline">Sign In/Upgrade</span>
+                  <span className="sm:hidden">Sign In</span>
+                </Button>
+              )}
             </div>
             <div className="text-center">
               <h1 className="text-2xl font-bold text-purple-700">{category?.title} Flashcards</h1>
