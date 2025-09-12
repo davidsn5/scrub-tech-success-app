@@ -181,5 +181,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Webster Needle Holder\n(Needle Driver)",
     explanation: "Webster needle holders are delicate needle driving instruments typically 5-6 inches (13-15 cm) in length, featuring fine, crosshatched tungsten carbide inserts in the jaws for secure needle grip. They have ring handles with a ratcheting mechanism that locks the needle in place during suturing. The fine tips and delicate construction make them ideal for precise suturing work, particularly in plastic surgery, ophthalmic surgery, and other procedures requiring fine sutures. The crosshatched surface prevents needle rotation while providing excellent control during suturing techniques.",
     image: "/lovable-uploads/2eb02db4-7cda-4821-a0b1-01d76b13d4ec.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Tonsil Schmidt Forceps\n(ENT Forceps)",
+    explanation: "Tonsil Schmidt forceps are specialized ENT instruments typically 7-8 inches (18-20 cm) in length, designed specifically for tonsillectomy procedures. They feature curved, serrated jaws with a secure gripping surface for grasping and manipulating tonsil tissue during removal. The ring handles provide excellent control and the curved design allows for optimal access to the tonsillar fossa. These forceps are essential for secure tissue handling during tonsil dissection and removal, providing surgeons with precise control while minimizing trauma to surrounding pharyngeal structures.",
+    image: "/lovable-uploads/f7f2cf01-808e-4209-a70c-9d2a068b847d.png"
   }
 ];
