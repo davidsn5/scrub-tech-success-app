@@ -53,6 +53,18 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
 
   const currentCard = currentFlashcards[currentIndex];
 
+  // Add safety check for currentCard
+  if (!currentCard) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold text-gray-600 mb-2">Loading flashcard...</h3>
+          <p className="text-gray-500">Please wait while we load the flashcard data.</p>
+        </div>
+      </div>
+    );
+  }
+
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % currentFlashcards.length);
     setShowAnswer(false);
