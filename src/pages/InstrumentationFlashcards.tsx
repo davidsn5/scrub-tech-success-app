@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { ArrowLeft, Target, Scissors } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
+import { InstrumentQuestions } from '@/components/InstrumentQuestions';
 
 const InstrumentationFlashcards = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -29,7 +30,7 @@ const InstrumentationFlashcards = () => {
     }
   ];
 
-  if (selectedCategory) {
+  if (selectedCategory === 'general-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-purple-50/90 to-purple-100/85">
@@ -71,6 +72,10 @@ const InstrumentationFlashcards = () => {
         </div>
       </div>
     );
+  }
+
+  if (selectedCategory === 'general-instrument-questions') {
+    return <InstrumentQuestions onBack={() => setSelectedCategory(null)} />;
   }
 
   return (

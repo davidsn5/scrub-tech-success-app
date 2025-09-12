@@ -1,0 +1,271 @@
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { instrumentIdentificationQuestions, Question } from '@/data/questions/instrumentIdentification';
+import { CheckCircle, XCircle, RotateCcw } from 'lucide-react';
+
+interface InstrumentQuestionsProps {
+  onBack: () => void;
+}
+
+export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack }) => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [showResult, setShowResult] = useState(false);
+  const [score, setScore] = useState(0);
+  const [answeredQuestions, setAnsweredQuestions] = useState<boolean[]>(
+    new Array(instrumentIdentificationQuestions.length).fill(false)
+  );
+  const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
+    new Array(instrumentIdentificationQuestions.length).fill(null)
+  );
+
+  const currentQuestion = instrumentIdentificationQuestions[currentQuestionIndex];
+  const totalQuestions = instrumentIdentificationQuestions.length;
+  const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
+  const allQuestionsAnswered = answeredQuestions.every(answered => answered);
+
+  const handleAnswerSelect = (answerIndex: number) => {
+    if (showResult) return;
+    setSelectedAnswer(answerIndex);
+  };
+
+  const handleSubmitAnswer = () => {
+    if (selectedAnswer === null) return;
+
+    const newAnsweredQuestions = [...answeredQuestions];
+    const newUserAnswers = [...userAnswers];
+    
+    newAnsweredQuestions[currentQuestionIndex] = true;
+    newUserAnswers[currentQuestionIndex] = selectedAnswer;
+    
+    setAnsweredQuestions(newAnsweredQuestions);
+    setUserAnswers(newUserAnswers);
+
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      setScore(prev => prev + 1);
+    }
+
+    setShowResult(true);
+  };
+
+  const handleNextQuestion = () => {
+    if (isLastQuestion) {
+      // Quiz completed
+      return;
+    }
+
+    setCurrentQuestionIndex(prev => prev + 1);
+    setSelectedAnswer(null);
+    setShowResult(false);
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(prev => prev - 1);
+      setSelectedAnswer(userAnswers[currentQuestionIndex - 1]);
+      setShowResult(answeredQuestions[currentQuestionIndex - 1]);
+    }
+  };
+
+  const handleRestart = () => {
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setScore(0);
+    setAnsweredQuestions(new Array(instrumentIdentificationQuestions.length).fill(false));
+    setUserAnswers(new Array(instrumentIdentificationQuestions.length).fill(null));
+  };
+
+  const getScoreColor = () => {
+    const percentage = (score / totalQuestions) * 100;
+    if (percentage >= 90) return "text-green-600";
+    if (percentage >= 80) return "text-blue-600";
+    if (percentage >= 70) return "text-yellow-600";
+    return "text-red-600";
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <Button 
+                onClick={onBack}
+                variant="ghost" 
+                className="flex items-center space-x-2"
+              >
+                <span>←</span>
+                <span>Back to Categories</span>
+              </Button>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">Instrument Identification Quiz</h1>
+                <p className="text-sm text-gray-600">
+                  Question {currentQuestionIndex + 1} of {totalQuestions}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Badge variant="outline" className="text-sm">
+                Score: {score}/{totalQuestions}
+              </Badge>
+              <Button 
+                onClick={handleRestart}
+                variant="outline"
+                size="sm"
+                className="flex items-center space-x-1"
+              >
+                <RotateCcw className="h-4 w-4" />
+                <span>Restart</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Progress Bar */}
+      <div className="max-w-4xl mx-auto px-4 py-2">
+        <div className="w-full bg-gray-200 rounded-full h-2">
+          <div 
+            className="bg-purple-600 h-2 rounded-full transition-all duration-300"
+            style={{ width: `${((currentQuestionIndex + 1) / totalQuestions) * 100}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {allQuestionsAnswered && currentQuestionIndex === totalQuestions - 1 && showResult ? (
+          // Final Results
+          <Card className="mb-8">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold">Quiz Complete!</CardTitle>
+              <div className={`text-6xl font-bold mt-4 ${getScoreColor()}`}>
+                {score}/{totalQuestions}
+              </div>
+              <p className="text-lg text-gray-600 mt-2">
+                {((score / totalQuestions) * 100).toFixed(1)}% Correct
+              </p>
+            </CardHeader>
+            <CardContent className="text-center space-y-4">
+              <div className="flex justify-center space-x-4">
+                <Button onClick={handleRestart} className="flex items-center space-x-2">
+                  <RotateCcw className="h-4 w-4" />
+                  <span>Try Again</span>
+                </Button>
+                <Button onClick={onBack} variant="outline">
+                  Back to Categories
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          // Question Card
+          <Card className="mb-8">
+            <CardHeader>
+              <div className="flex justify-between items-start">
+                <CardTitle className="text-xl font-semibold">
+                  {currentQuestion.question}
+                </CardTitle>
+                <Badge variant={answeredQuestions[currentQuestionIndex] ? "default" : "outline"}>
+                  {answeredQuestions[currentQuestionIndex] ? "Answered" : "Unanswered"}
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* Instrument Image */}
+              {currentQuestion.image && (
+                <div className="flex justify-center">
+                  <div className="bg-white p-4 rounded-lg shadow-md border">
+                    <img 
+                      src={currentQuestion.image} 
+                      alt="Surgical instrument"
+                      className="max-w-full h-64 object-contain"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Answer Choices */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {currentQuestion.choices.map((choice, index) => {
+                  const isSelected = selectedAnswer === index;
+                  const isCorrect = index === currentQuestion.correctAnswer;
+                  const isIncorrect = showResult && isSelected && !isCorrect;
+                  const shouldHighlight = showResult && isCorrect;
+
+                  return (
+                    <Button
+                      key={index}
+                      onClick={() => handleAnswerSelect(index)}
+                      variant={isSelected ? "default" : "outline"}
+                      className={`
+                        p-4 h-auto text-left justify-start relative
+                        ${shouldHighlight ? "bg-green-100 border-green-500 text-green-800" : ""}
+                        ${isIncorrect ? "bg-red-100 border-red-500 text-red-800" : ""}
+                        ${!showResult && isSelected ? "bg-purple-100 border-purple-500" : ""}
+                      `}
+                      disabled={showResult}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <span className="text-sm font-medium">{choice}</span>
+                        {showResult && isCorrect && (
+                          <CheckCircle className="h-5 w-5 text-green-600" />
+                        )}
+                        {showResult && isIncorrect && (
+                          <XCircle className="h-5 w-5 text-red-600" />
+                        )}
+                      </div>
+                    </Button>
+                  );
+                })}
+              </div>
+
+              {/* Explanation */}
+              {showResult && currentQuestion.explanation && (
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-900 mb-2">Explanation:</h4>
+                  <p className="text-blue-800 text-sm">{currentQuestion.explanation}</p>
+                </div>
+              )}
+
+              {/* Navigation Buttons */}
+              <div className="flex justify-between pt-4">
+                <Button
+                  onClick={handlePreviousQuestion}
+                  variant="outline"
+                  disabled={currentQuestionIndex === 0}
+                >
+                  Previous
+                </Button>
+                
+                <div className="flex space-x-2">
+                  {!showResult ? (
+                    <Button
+                      onClick={handleSubmitAnswer}
+                      disabled={selectedAnswer === null}
+                      className="bg-purple-600 hover:bg-purple-700"
+                    >
+                      Submit Answer
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={handleNextQuestion}
+                      disabled={isLastQuestion && allQuestionsAnswered}
+                      className="bg-purple-600 hover:bg-purple-700"
+                    >
+                      {isLastQuestion ? "View Results" : "Next Question"}
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+    </div>
+  );
+};
