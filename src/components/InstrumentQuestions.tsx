@@ -126,10 +126,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                 </p>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <Badge variant="outline" className="text-sm">
-                Score: {score}/{totalQuestions}
-              </Badge>
+            <div className="flex flex-col items-end space-y-2">
               <div className="flex space-x-2">
                 <Button 
                   onClick={handleShuffle}
@@ -150,6 +147,9 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <span className="hidden sm:inline">Restart</span>
                 </Button>
               </div>
+              <Badge variant="outline" className="text-sm">
+                Score: {score}/{totalQuestions}
+              </Badge>
             </div>
           </div>
         </div>
