@@ -48,13 +48,15 @@ const AppContent = () => {
         <Route path="/purchase/canceled" element={<PurchaseCanceled />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         
-        {/* Protected Routes - Require subscription */}
-        <Route path="/flashcards" element={<ProtectedRoute><Flashcards /></ProtectedRoute>} />
-        <Route path="/study/:category" element={<ProtectedRoute><StudyCategory /></ProtectedRoute>} />
-        <Route path="/intro-surgical-tech" element={<ProtectedRoute><IntroSurgicalTech /></ProtectedRoute>} />
-        <Route path="/principles-practice" element={<ProtectedRoute><PrinciplesPractice /></ProtectedRoute>} />
-        <Route path="/medical-terminology" element={<ProtectedRoute><MedicalTerminology /></ProtectedRoute>} />
+        {/* Study Routes - Free access for first 10 questions, premium for full access */}
+        <Route path="/flashcards" element={<Flashcards />} />
+        <Route path="/study/:category" element={<StudyCategory />} />
+        <Route path="/intro-surgical-tech" element={<IntroSurgicalTech />} />
+        <Route path="/principles-practice" element={<PrinciplesPractice />} />
+        <Route path="/medical-terminology" element={<MedicalTerminology />} />
         <Route path="/fire-quiz" element={<FireQuiz />} />
+        
+        {/* Protected Routes - Require subscription */}
         <Route path="/missed-questions" element={<ProtectedRoute><MissedQuestions /></ProtectedRoute>} />
         <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
