@@ -142,15 +142,15 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       {/* Free User Notice */}
       {!isPremium && originalFlashcards.length > limits.flashcardsPerCategory && (
         <div className="mb-4 sm:mb-6">
-          <Card className={`${useOrangeUnlock ? 'bg-gradient-to-br from-orange-50/80 to-orange-100/80 border-orange-200/50' : 'bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-200/50'} p-4`}>
+          <Card className="bg-gradient-to-br from-purple-50/80 to-purple-100/80 border-purple-200/50 p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Lock className={`h-5 w-5 ${useOrangeUnlock ? 'text-orange-600' : 'text-amber-600'}`} />
+                <Lock className="h-5 w-5 text-purple-600" />
                 <div>
-                  <p className={`text-sm font-medium ${useOrangeUnlock ? 'text-orange-800' : 'text-amber-800'}`}>
+                  <p className="text-sm font-medium text-purple-800">
                     Showing {limits.flashcardsPerCategory} of {originalFlashcards.length} flashcards
                   </p>
-                  <p className={`text-xs ${useOrangeUnlock ? 'text-orange-700' : 'text-amber-700'}`}>
+                  <p className="text-xs text-purple-700">
                     Unlock all flashcards with Premium access
                   </p>
                 </div>
