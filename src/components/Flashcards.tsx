@@ -17,9 +17,10 @@ interface FlashcardsProps {
     bgColor: string;
     borderColor: string;
   };
+  useOrangeUnlock?: boolean;
 }
 
-const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColors }: FlashcardsProps) => {
+const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColors, useOrangeUnlock = false }: FlashcardsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<any[]>([]);
@@ -141,15 +142,15 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       {/* Free User Notice */}
       {!isPremium && originalFlashcards.length > limits.flashcardsPerCategory && (
         <div className="mb-4 sm:mb-6">
-          <Card className="bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-200/50 p-4">
+          <Card className={`${useOrangeUnlock ? 'bg-gradient-to-br from-orange-50/80 to-orange-100/80 border-orange-200/50' : 'bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-200/50'} p-4`}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Lock className="h-5 w-5 text-amber-600" />
+                <Lock className={`h-5 w-5 ${useOrangeUnlock ? 'text-orange-600' : 'text-amber-600'}`} />
                 <div>
-                  <p className="text-sm font-medium text-amber-800">
+                  <p className={`text-sm font-medium ${useOrangeUnlock ? 'text-orange-800' : 'text-amber-800'}`}>
                     Showing {limits.flashcardsPerCategory} of {originalFlashcards.length} flashcards
                   </p>
-                  <p className="text-xs text-amber-700">
+                  <p className={`text-xs ${useOrangeUnlock ? 'text-orange-700' : 'text-amber-700'}`}>
                     Unlock all flashcards with Premium access
                   </p>
                 </div>
@@ -157,7 +158,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
               <Button 
                 onClick={handleUnlockPremium}
                 size="sm"
-                className="bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90 text-white"
+                className={`${useOrangeUnlock ? 'bg-gradient-to-r from-orange-500/90 to-orange-600/90 hover:from-orange-600/90 hover:to-orange-700/90' : 'bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90'} text-white`}
               >
                 <Crown className="h-4 w-4 mr-1" />
                 Unlock

@@ -76,6 +76,7 @@ const InstrumentationFlashcards = () => {
             category={selectedCategory}
             onAnswerCorrect={() => {}}
             onQuestionAttempt={() => {}}
+            useOrangeUnlock={true}
             categoryColors={{
               color: category?.color || 'from-purple-500/80 to-purple-600/80',
               bgColor: category?.bgColor || 'from-purple-50/90 to-purple-100/90',
