@@ -112,9 +112,9 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     <div className="max-w-4xl mx-auto px-3 sm:px-4">
       <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-2">
         <div className="flex items-center flex-wrap gap-2 sm:gap-4 min-w-0">
-          <h2 className={`text-lg sm:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-800'} shrink-0`}>Flashcards</h2>
+          <h2 className={`text-lg sm:text-2xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-700' : categoryColors?.color?.includes('purple') ? 'text-purple-700' : categoryColors?.color?.includes('orange') ? 'text-orange-700' : categoryColors?.color?.includes('teal') ? 'text-teal-700' : categoryColors?.color?.includes('green') ? 'text-green-700' : categoryColors?.color?.includes('yellow') ? 'text-yellow-700' : categoryColors?.color?.includes('indigo') ? 'text-indigo-700' : 'text-gray-800'} shrink-0`}>Flashcards</h2>
           <div className="flex flex-wrap items-center gap-2">
-            <div className={`${categoryColors?.bgColor || 'bg-blue-100'} ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-blue-800'} px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium`}>
+            <div className={`${categoryColors?.bgColor || 'bg-blue-100'} ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('yellow') ? 'text-yellow-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-blue-800'} px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium`}>
               {currentIndex + 1} of {currentFlashcards.length}
             </div>
             <div className="bg-green-100 text-green-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center space-x-1">
@@ -185,8 +185,8 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           <CardContent className="flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
             <div className="text-center w-full max-w-full">
               <div className="flex items-center justify-center mb-4">
-                <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
-                <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
+                <Eye className={`h-6 w-6 ${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('yellow') ? 'text-yellow-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} mr-2`} />
+                <span className={`${categoryColors?.color?.includes('blue') ? 'text-blue-600' : categoryColors?.color?.includes('purple') ? 'text-purple-600' : categoryColors?.color?.includes('orange') ? 'text-orange-600' : categoryColors?.color?.includes('teal') ? 'text-teal-600' : categoryColors?.color?.includes('green') ? 'text-green-600' : categoryColors?.color?.includes('yellow') ? 'text-yellow-600' : categoryColors?.color?.includes('indigo') ? 'text-indigo-600' : 'text-blue-600'} font-medium`}>Term</span>
               </div>
               
               {currentCard.image ? (
@@ -203,13 +203,13 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                   </div>
                 </div>
               ) : (
-                <h3 className={`text-base sm:text-lg lg:text-xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>
+                <h3 className={`text-base sm:text-lg lg:text-xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('yellow') ? 'text-yellow-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>
                   {currentCard.question}
                 </h3>
               )}
               
               {currentCard.image && (
-                <h3 className={`text-sm sm:text-base lg:text-lg font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>
+                <h3 className={`text-sm sm:text-base lg:text-lg font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('yellow') ? 'text-yellow-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>
                   {currentCard.question}
                 </h3>
               )}
@@ -228,7 +228,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
                       <EyeOff className="h-4 w-4 text-green-600 mr-2" />
                       <span className="text-green-600 font-medium text-sm">Answer</span>
                     </div>
-                    <h4 className={`text-sm sm:text-base lg:text-lg font-semibold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-2 text-center whitespace-pre-line break-words`}>
+                    <h4 className={`text-sm sm:text-base lg:text-lg font-semibold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('yellow') ? 'text-yellow-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-2 text-center whitespace-pre-line break-words`}>
                       {currentCard.answer}
                     </h4>
                     {currentCard.explanation && (

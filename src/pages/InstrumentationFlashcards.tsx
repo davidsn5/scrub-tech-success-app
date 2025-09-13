@@ -36,24 +36,24 @@ const InstrumentationFlashcards = () => {
       title: 'Ortho/Neuro Instruments',
       description: 'Specialized instruments for bone and joint procedures',
       icon: Bone,
-      color: 'from-green-500/80 to-green-600/80',
-      bgColor: 'from-green-50/90 to-green-100/90',
-      borderColor: 'border-green-200/60'
+      color: 'from-yellow-600/80 to-amber-600/80',
+      bgColor: 'from-yellow-50/90 to-amber-50/90',
+      borderColor: 'border-yellow-300/60'
     }
   ];
 
   if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     const bgGradient = selectedCategory === 'orthopedic-instruments' 
-      ? 'from-slate-50/95 via-green-50/90 to-green-100/85'
+      ? 'from-slate-50/95 via-yellow-50/90 to-amber-50/85'
       : 'from-slate-50/95 via-blue-50/90 to-blue-100/85';
-    const headerBg = selectedCategory === 'orthopedic-instruments' ? 'bg-green-50' : 'bg-blue-50';
+    const headerBg = selectedCategory === 'orthopedic-instruments' ? 'bg-yellow-50' : 'bg-blue-50';
     const buttonColors = selectedCategory === 'orthopedic-instruments'
-      ? 'hover:bg-green-100 hover:text-green-700'
+      ? 'hover:bg-yellow-100 hover:text-yellow-700'
       : 'hover:bg-blue-100 hover:text-blue-700';
-    const titleColor = selectedCategory === 'orthopedic-instruments' ? 'text-green-700' : 'text-blue-700';
+    const titleColor = selectedCategory === 'orthopedic-instruments' ? 'text-yellow-700' : 'text-blue-700';
     const upgradeButtonColors = selectedCategory === 'orthopedic-instruments'
-      ? 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800'
+      ? 'bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700'
       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800';
 
     return (
