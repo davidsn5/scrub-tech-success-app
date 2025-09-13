@@ -48,10 +48,12 @@ const VisualResources = () => {
                 alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
                 className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
               />
-              <h3 className="text-lg font-semibold text-foreground mt-4">Syringe Components</h3>
-              <p className="text-sm text-muted-foreground mt-2">
-                Essential parts of a medical syringe including hub, barrel, flange, plunger, and safety features.
-              </p>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Syringe Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Essential parts of a medical syringe including hub, barrel, flange, plunger, and safety features.
+                </p>
+              </div>
             </div>
 
             {/* Hypodermic Needle Diagram */}
@@ -61,10 +63,12 @@ const VisualResources = () => {
                 alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
                 className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
               />
-              <h3 className="text-lg font-semibold text-foreground mt-4">Needle Components</h3>
-              <p className="text-sm text-muted-foreground mt-2">
-                Detailed anatomy of hypodermic needles showing lumen, bevel, hub, shaft, and protective covering.
-              </p>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Needle Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Detailed anatomy of hypodermic needles showing lumen, bevel, hub, shaft, and protective covering.
+                </p>
+              </div>
             </div>
 
             {/* Medical Supplies Diagram */}
@@ -74,10 +78,12 @@ const VisualResources = () => {
                 alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
                 className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
               />
-              <h3 className="text-lg font-semibold text-foreground mt-4">Medical Supplies</h3>
-              <p className="text-sm text-muted-foreground mt-2">
-                Common medical supplies including vials, ampules, medication tubes, and antiseptic wipes.
-              </p>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Medical Supplies</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Common medical supplies including vials, ampules, medication tubes, and antiseptic wipes.
+                </p>
+              </div>
             </div>
 
             {/* Cysto Instruments Diagram */}
@@ -87,10 +93,12 @@ const VisualResources = () => {
                 alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
                 className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
               />
-              <h3 className="text-lg font-semibold text-foreground mt-4">Cysto Instruments</h3>
-              <p className="text-sm text-muted-foreground mt-2">
-                Specialized cystoscopy instruments for urological procedures including scopes, obturators, resectoscopes, and adapters.
-              </p>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Cysto Instruments</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Specialized cystoscopy instruments for urological procedures including scopes, obturators, resectoscopes, and adapters.
+                </p>
+              </div>
             </div>
           </div>
         </div>
