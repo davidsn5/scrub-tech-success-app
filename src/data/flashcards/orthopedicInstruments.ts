@@ -294,5 +294,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Intramedullary Pins",
     explanation: "Intramedullary Pins are orthopedic implants used for internal fixation of long bone fractures. These metal rods are inserted into the medullary cavity of bones to provide stable internal support during healing. The pins come in various sizes and materials, designed to match specific bone dimensions and patient requirements. They're commonly used in fractures of the femur, tibia, and humerus, providing excellent stability while allowing early mobilization and faster recovery compared to external fixation methods.",
     image: "/lovable-uploads/intramedullary-pins.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Screw Depth Gauge",
+    explanation: "The Screw Depth Gauge is a precision orthopedic instrument used to measure the depth of drilled holes and ensure proper screw length selection during bone fixation procedures. This graduated measuring device features a probe that is inserted into the prepared hole to determine the exact depth, preventing screw over-penetration or under-penetration. The instrument typically has measurement markings in millimeters and is essential for achieving optimal screw placement in fracture repair and implant procedures.",
+    image: "/lovable-uploads/screw-depth-gauge.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Universal Rod Bender",
+    explanation: "The Universal Rod Bender is a specialized orthopedic instrument used to contour and shape spinal rods during vertebral fusion procedures. This versatile tool allows surgeons to create precise bends and curves in metal rods to match the natural curvature of the spine. The instrument features adjustable bending arms and precise control mechanisms that prevent rod damage while creating accurate anatomical contours. It's essential for spinal instrumentation procedures requiring custom rod shaping.",
+    image: "/lovable-uploads/universal-rod-bender.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Cannulated Pin Cutter",
+    explanation: "The Cannulated Pin Cutter is a specialized orthopedic instrument designed to cut cannulated (hollow) pins and screws during surgical procedures. The instrument's unique design accommodates the hollow center of cannulated hardware, allowing for clean, precise cuts without damaging the pin's internal structure. This tool is essential for procedures involving temporary fixation with cannulated pins, where pins need to be cut to appropriate length or removed after healing.",
+    image: "/lovable-uploads/cannulated-pin-cutter.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Smith Peterson Osteotome",
+    explanation: "The Smith Peterson Osteotome is a specialized orthopedic instrument used for cutting and shaping bone during surgical procedures. This flat, chisel-like instrument features a sharp, beveled edge that allows surgeons to make precise bone cuts and remove bone segments. The instrument is commonly used in procedures requiring bone reshaping, such as osteotomies, bone grafting, and joint reconstruction. Its straight design and sharp edge make it ideal for creating clean, controlled bone cuts.",
+    image: "/lovable-uploads/smith-peterson-osteotome.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Langenbeck Periosteal Elevator",
+    explanation: "The Langenbeck Periosteal Elevator is a fundamental orthopedic instrument used to separate the periosteum (outer bone membrane) from the underlying bone surface. This instrument features a flat, curved blade with a sharp edge that allows surgeons to carefully lift and separate soft tissues from bone without causing damage. It's essential for procedures requiring bone exposure, such as fracture repair, bone grafting, and implant placement, where clean separation of periosteal tissues is crucial for surgical access.",
+    image: "/lovable-uploads/langenbeck-periosteal-elevator.png"
   }
 ];
