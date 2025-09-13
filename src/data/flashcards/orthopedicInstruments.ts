@@ -174,5 +174,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Hobbs Retractor\n(Nerve Root Retractor)",
     explanation: "The Hobbs retractor is a specialized curved retractor designed primarily for neurosurgical and spinal procedures, featuring a smooth, curved blade with a distinctive hook or curved end for gentle nerve root retraction. The instrument allows surgeons to safely retract and protect nerve roots during spinal surgeries while providing excellent visualization of the operative field. The curved design follows the natural anatomy of the spine and minimizes trauma to delicate neural structures. Essential for procedures such as discectomies, laminectomies, and spinal decompression surgeries where nerve protection is critical.",
     image: "/lovable-uploads/hobbs-retractor.png"
+  },
+  {
+    question: "Identify this neurosurgical instrument",
+    answer: "Cranial Perforator\n(Neurosurgical Drill Bits)",
+    explanation: "Cranial perforators are specialized neurosurgical drill bits designed for creating precise holes in the skull during craniotomy procedures. These cutting instruments feature sharp, spiral cutting edges that efficiently remove bone while minimizing heat generation and tissue trauma. Available in various sizes and cutting patterns, cranial perforators are essential for creating burr holes, bone flap preparation, and accessing intracranial structures. The golden-colored coating typically provides enhanced durability and reduced friction during drilling procedures.",
+    image: "/lovable-uploads/cranial-perforator.png"
+  },
+  {
+    question: "Identify this neurosurgical instrument",
+    answer: "Craniotome\n(Powered Cranial Saw)",
+    explanation: "A craniotome is a specialized powered neurosurgical instrument designed for cutting bone during craniotomy procedures. This precision tool features a protected cutting mechanism that prevents inadvertent penetration into brain tissue while efficiently cutting through skull bone. The instrument typically includes depth control features and safety mechanisms to protect underlying dura and neural structures. Essential for creating bone flaps during neurosurgical procedures, allowing surgeons to access intracranial pathology while maintaining the ability to replace the bone flap for reconstruction.",
+    image: "/lovable-uploads/craniotome.png"
+  },
+  {
+    question: "Identify this neurosurgical instrument",
+    answer: "#1 Penfield Dissector\n(Brain Spatula)",
+    explanation: "The #1 Penfield dissector is a delicate neurosurgical instrument featuring a small, rounded ball tip designed for gentle dissection and manipulation of brain tissue. Named after neurosurgeon Wilder Penfield, this instrument allows surgeons to separate neural tissues, identify anatomical structures, and provide gentle retraction without causing trauma to delicate brain parenchyma. The smooth, rounded end minimizes tissue damage while providing excellent tactile feedback. Essential for microsurgical procedures, tumor dissection, and exploring neural pathways during neurosurgical operations.",
+    image: "/lovable-uploads/penfield-1.png"
+  },
+  {
+    question: "Identify this neurosurgical instrument",
+    answer: "Taylor Spinal Retractor\n(Spinal Self-Retaining Retractor)",
+    explanation: "The Taylor spinal retractor is a specialized self-retaining retractor system designed for spinal neurosurgery procedures. This instrument features curved retractor blades that provide excellent exposure of spinal structures while maintaining constant retraction pressure through its self-retaining mechanism. The design allows for optimal visualization of the spine while keeping the surgeon's hands free for delicate neural manipulation. Essential for spinal decompressions, tumor removals, and complex spinal reconstruction procedures where sustained tissue retraction and clear surgical visualization are critical.",
+    image: "/lovable-uploads/taylor-spinal-retractor.png"
+  },
+  {
+    question: "Identify this neurosurgical instrument",
+    answer: "Charnley Retractor\n(Self-Retaining Surgical Retractor)",
+    explanation: "The Charnley retractor is a versatile self-retaining retractor system consisting of a rectangular frame with adjustable retractor blades and a chain mechanism for securing positioning. Named after orthopedic surgeon Sir John Charnley, this instrument provides excellent exposure and visualization during surgical procedures. The adjustable frame allows for customized retraction angles and depths, while the chain mechanism maintains consistent tension. Commonly used in orthopedic, spinal, and general surgical procedures where sustained, hands-free retraction of tissues is required for optimal surgical access.",
+    image: "/lovable-uploads/charnley-retractor.png"
   }
 ];
