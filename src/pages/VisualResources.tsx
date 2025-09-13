@@ -43,61 +43,61 @@ const VisualResources = () => {
           {/* Visual Resources Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Syringe Diagram */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+            <Card className="p-2 sm:p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-full h-80 bg-white rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
                   alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">Syringe Components</h3>
-              <p className="text-sm text-gray-600 mt-2 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mt-2 text-center">Syringe Components</h3>
+              <p className="text-sm text-gray-600 mt-1 text-center px-2">
                 Essential parts of a medical syringe including hub, barrel, flange, plunger, and safety features.
               </p>
             </Card>
 
             {/* Hypodermic Needle Diagram */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+            <Card className="p-2 sm:p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-full h-80 bg-white rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/needle-diagram-cropped-blue.png" 
                   alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">Needle Components</h3>
-              <p className="text-sm text-gray-600 mt-2 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mt-2 text-center">Needle Components</h3>
+              <p className="text-sm text-gray-600 mt-1 text-center px-2">
                 Detailed anatomy of hypodermic needles showing lumen, bevel, hub, shaft, and protective covering.
               </p>
             </Card>
 
             {/* Medical Supplies Diagram */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+            <Card className="p-2 sm:p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-full h-80 bg-white rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/supplies-diagram-cropped-blue.png" 
                   alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">Medical Supplies</h3>
-              <p className="text-sm text-gray-600 mt-2 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mt-2 text-center">Medical Supplies</h3>
+              <p className="text-sm text-gray-600 mt-1 text-center px-2">
                 Common medical supplies including vials, ampules, medication tubes, and antiseptic wipes.
               </p>
             </Card>
 
             {/* Cysto Instruments Diagram */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+            <Card className="p-2 sm:p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-full h-80 bg-white rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/cysto-diagram-cropped-blue.png" 
                   alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">Cysto Instruments</h3>
-              <p className="text-sm text-gray-600 mt-2 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mt-2 text-center">Cysto Instruments</h3>
+              <p className="text-sm text-gray-600 mt-1 text-center px-2">
                 Specialized cystoscopy instruments for urological procedures including scopes, obturators, resectoscopes, and adapters.
               </p>
             </Card>
