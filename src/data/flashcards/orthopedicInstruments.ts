@@ -432,5 +432,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Hex Ortho Screwdriver",
     explanation: "A hex ortho screwdriver is a specialized surgical instrument used for inserting and removing hexagonal-headed screws in orthopedic procedures. The instrument features a hexagonal tip that matches the socket configuration of orthopedic screws used in bone fixation. This tool is essential for securing plates, rods, and other orthopedic hardware to bone. The hex design provides superior torque transfer and reduces the risk of screw head stripping during insertion or removal.",
     image: "/lovable-uploads/hex-ortho-screwdriver.png"
+  },
+  {
+    question: "What is this bone cutting instrument?",
+    answer: "Stille Bone Chisel",
+    explanation: "A Stille bone chisel is a precision orthopedic instrument used for shaping, cutting, and contouring bone tissue. It features a sharp, flat blade with a beveled cutting edge that allows surgeons to make precise cuts and remove bone material with controlled force. The instrument is commonly used in orthopedic and neurosurgical procedures for bone grafting, osteotomies, and creating precise bone channels. The ergonomic handle design provides excellent control and leverage for accurate bone work.",
+    image: "/lovable-uploads/stille-bone-chisel.png"
+  },
+  {
+    question: "What are these hemostatic devices?",
+    answer: "Raney Clips",
+    explanation: "Raney clips are small, spring-loaded hemostatic devices used primarily in neurosurgery to control bleeding from scalp vessels during cranial procedures. These clips are applied to the edges of the scalp incision to compress blood vessels and provide hemostasis throughout the surgical procedure. They are made of plastic or metal and can be quickly applied and removed. The clips help maintain a bloodless surgical field, improving visualization and reducing the need for frequent electrocautery.",
+    image: "/lovable-uploads/raney-clips.png"
+  },
+  {
+    question: "What is this orthopedic striking instrument?",
+    answer: "Meade Ortho Mallet",
+    explanation: "The Meade orthopedic mallet is a specialized surgical hammer designed for driving chisels, osteotomes, and other cutting instruments during bone procedures. It features a weighted head that provides controlled impact force while minimizing vibration and shock to the surgeon's hand. The mallet is commonly used in orthopedic surgeries for bone cutting, shaping, and impacting prosthetic components. Its ergonomic design allows for precise control and reduces surgeon fatigue during lengthy procedures.",
+    image: "/lovable-uploads/meade-ortho-mallet.png"
+  },
+  {
+    question: "What is this spinal instrument?",
+    answer: "Kerrison Laminectomy Rongeur",
+    explanation: "The Kerrison laminectomy rongeur is a specialized neurosurgical instrument designed for removing bone and ligament during spinal procedures, particularly laminectomies. It features angled jaws with sharp cutting edges that can access tight spaces around the spinal column. The instrument allows surgeons to remove small pieces of bone (lamina) and ligamentum flavum with precision, creating space to decompress neural structures. Its unique design provides excellent control and visualization during delicate spinal decompression procedures.",
+    image: "/lovable-uploads/kerrison-laminectomy-rongeur.png"
+  },
+  {
+    question: "What is this surgical retractor?",
+    answer: "Alm Retractor",
+    explanation: "The Alm retractor is a self-retaining surgical instrument used to hold tissues apart and maintain surgical exposure during various procedures. It features adjustable arms with sharp or blunt prongs that can be positioned to retract different tissue types. The retractor's design allows surgeons to work with both hands free while maintaining optimal visualization of the surgical field. It is commonly used in orthopedic, general, and plastic surgery procedures where sustained tissue retraction is required.",
+    image: "/lovable-uploads/alm-retractor.png"
   }
 ];
