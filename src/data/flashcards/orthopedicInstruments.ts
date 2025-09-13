@@ -234,5 +234,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Zimmerman Bennett Retractor",
     explanation: "The Zimmerman Bennett Retractor is a specialized orthopedic instrument used for tissue retraction during spinal and other deep surgical procedures. Its unique paddle-shaped design with curved edges allows for effective retraction of soft tissues while minimizing trauma. The instrument's ergonomic handle provides comfortable grip during extended procedures, and its smooth surface prevents tissue adherence. It's particularly useful in procedures requiring gentle but firm tissue displacement to maintain surgical exposure.",
     image: "/lovable-uploads/zimmerman-bennett-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Hand Fixation Device",
+    explanation: "The Hand Fixation Device is a specialized orthopedic instrument designed to stabilize and position the hand during surgical procedures. Its unique design with multiple finger and thumb extensions allows for secure positioning of digits during delicate hand surgeries. The device provides stable fixation while maintaining accessibility to the surgical site, making it essential for procedures involving fracture repair, tendon reconstruction, or microsurgical interventions on the hand and fingers.",
+    image: "/lovable-uploads/hand-fixation-device.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Yasgaril Bayonet Scissors",
+    explanation: "The Yasgaril Bayonet Scissors are precision microsurgical instruments designed for delicate cutting tasks in neurosurgery and microsurgery. The bayonet design with angled blades allows surgeons to maintain clear visualization while making precise cuts in deep surgical fields. These scissors are commonly used in procedures requiring fine tissue manipulation, such as tumor resection, vascular procedures, and nerve repairs. The ergonomic design reduces hand fatigue during lengthy microsurgical procedures.",
+    image: "/lovable-uploads/yasgaril-bayonet-scissors.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Drill Guide",
+    explanation: "The Drill Guide is a precision orthopedic instrument used to ensure accurate drilling angles and depths during surgical procedures. This adjustable guide system allows surgeons to maintain consistent drill trajectories, particularly important in procedures requiring precise screw placement or bone preparation. The instrument features adjustable arms that can be positioned to guide drill bits at specific angles, ensuring optimal placement of implants and reducing the risk of misalignment during orthopedic reconstructions.",
+    image: "/lovable-uploads/drill-guide.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Aneurysm Clip Applier",
+    explanation: "The Aneurysm Clip Applier is a specialized neurosurgical instrument designed for the precise placement of clips on cerebral aneurysms and blood vessels. The instrument features a curved design that allows surgeons to reach deep anatomical structures while maintaining optimal visualization. The applier provides controlled pressure for secure clip placement while minimizing trauma to surrounding neural tissue. This instrument is essential for aneurysm repair procedures and vascular occlusion in neurosurgical interventions.",
+    image: "/lovable-uploads/aneurysm-clip-applier.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Jacobs Chuck",
+    explanation: "The Jacobs Chuck is a precision surgical instrument used to securely hold drill bits, pins, and other rotary instruments during orthopedic procedures. This chuck system consists of a keyed chuck and a chuck key, allowing for tight, secure gripping of various sized drill bits and surgical pins. The instrument ensures stable rotation and prevents slippage during drilling operations, making it essential for procedures requiring precise bone preparation, screw placement, or pin insertion in orthopedic surgery.",
+    image: "/lovable-uploads/jacobs-chuck.png"
   }
 ];
