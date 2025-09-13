@@ -264,5 +264,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Jacobs Chuck",
     explanation: "The Jacobs Chuck is a precision surgical instrument used to securely hold drill bits, pins, and other rotary instruments during orthopedic procedures. This chuck system consists of a keyed chuck and a chuck key, allowing for tight, secure gripping of various sized drill bits and surgical pins. The instrument ensures stable rotation and prevents slippage during drilling operations, making it essential for procedures requiring precise bone preparation, screw placement, or pin insertion in orthopedic surgery.",
     image: "/lovable-uploads/jacobs-chuck.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Plate Bender",
+    explanation: "The Plate Bender is a specialized orthopedic instrument used to contour and shape bone plates to match the anatomical curves of bones during fracture repair. This tool allows surgeons to precisely bend plates to achieve optimal fit against bone surfaces, ensuring proper alignment and stability. The instrument features adjustable bending arms and precise control mechanisms that prevent plate damage while creating accurate contours. It's essential for procedures requiring custom plate shaping in complex fracture repairs.",
+    image: "/lovable-uploads/plate-bender.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Bone Hook",
+    explanation: "The Bone Hook is a versatile orthopedic instrument used for grasping, manipulating, and retracting bone fragments during surgical procedures. Its curved, sharp-pointed design allows surgeons to securely hold bone pieces while maintaining precise control during fracture reduction and alignment. The instrument is particularly useful in procedures requiring delicate bone manipulation, such as fracture repair, osteotomies, and bone grafting, where maintaining fragment position is critical for successful healing.",
+    image: "/lovable-uploads/bone-hook.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Bone Awl",
+    explanation: "The Bone Awl is a pointed orthopedic instrument used for creating pilot holes, marking bone surfaces, and precise bone preparation during surgical procedures. Its sharp, tapered tip allows surgeons to penetrate bone with controlled force, making it ideal for starting screw holes, marking reference points, and creating small perforations. The instrument's ergonomic handle provides excellent control during delicate bone work, making it essential for procedures requiring precise bone preparation and marking.",
+    image: "/lovable-uploads/bone-awl.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Yasargil Tumor Grasping Forceps",
+    explanation: "The Yasargil Tumor Grasping Forceps are specialized neurosurgical instruments designed for delicate tumor removal and tissue manipulation during brain surgery. These precision forceps feature fine, serrated tips that provide secure grip on tumor tissue while minimizing damage to surrounding healthy brain tissue. The instrument's balanced design and precise action make it ideal for microsurgical procedures requiring careful tissue handling, such as tumor resection, biopsy procedures, and delicate neural tissue manipulation.",
+    image: "/lovable-uploads/yasargil-tumor-grasping-forceps.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Intramedullary Pins",
+    explanation: "Intramedullary Pins are orthopedic implants used for internal fixation of long bone fractures. These metal rods are inserted into the medullary cavity of bones to provide stable internal support during healing. The pins come in various sizes and materials, designed to match specific bone dimensions and patient requirements. They're commonly used in fractures of the femur, tibia, and humerus, providing excellent stability while allowing early mobilization and faster recovery compared to external fixation methods.",
+    image: "/lovable-uploads/intramedullary-pins.png"
   }
 ];
