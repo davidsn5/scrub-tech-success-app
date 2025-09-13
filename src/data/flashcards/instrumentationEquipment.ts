@@ -249,5 +249,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Kelly Clamp\n(Hemostat)",
     explanation: "The Kelly clamp is a curved hemostat typically 5.5-6.25 inches (14-16 cm) in length, featuring distinctive half serrations on the jaws. The half serrations extend only partway along the jaw length, with the tips remaining smooth for delicate tissue handling. This design provides secure clamping of blood vessels while minimizing tissue trauma. Kelly clamps have ring handles with a ratcheting mechanism and are available in both straight and curved varieties. They are essential instruments for controlling bleeding from medium-sized vessels and for general tissue manipulation during surgical procedures.",
     image: "/lovable-uploads/kelly-clamp.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Singley Forceps\n(Tissue Forceps)",
+    explanation: "Singley forceps are delicate tissue forceps typically 6-8 inches (15-20 cm) in length with long, slender jaws and smooth tips. These forceps are designed for precise handling of delicate tissues without causing trauma. The smooth, non-toothed jaws provide gentle grasping capability while the elongated design allows access to deep surgical sites. Singley forceps are commonly used in plastic surgery, microsurgery, and other procedures requiring careful tissue manipulation. The instrument features finger ring handles for precise control and is essential for suturing and handling of fragile anatomical structures.",
+    image: "/lovable-uploads/singley-forceps.png"
   }
 ];
