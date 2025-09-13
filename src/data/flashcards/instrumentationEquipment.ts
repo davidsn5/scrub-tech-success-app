@@ -237,5 +237,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Rake Retractor\n(Multi-Prong Retractor)",
     explanation: "A rake retractor is a multi-pronged retractor designed for retracting soft tissues and muscle during surgical procedures. It features multiple sharp prongs (typically 3-6) that provide secure tissue grip and excellent exposure of underlying structures. Available in various sizes and prong configurations, rake retractors are essential for maintaining clear surgical fields during various procedures including orthopedic surgeries, general surgery, and plastic surgery. The multiple contact points distribute pressure evenly while providing superior tissue control and exposure.",
     image: "/lovable-uploads/rake-retractor.png"
+  },
+  {
+    question: "Identify this surgical instrument and its compatible blade sizes",
+    answer: "#7 Knife Handle\n(Large Scalpel Handle)",
+    explanation: "The #7 knife handle is a large surgical scalpel handle approximately 6 inches (15 cm) in length with a textured grip for secure handling. This handle is compatible with larger blade sizes including #20, #21, #22, #23, and #24. The #7 handle is specifically designed for procedures requiring larger blades, such as making long incisions, amputations, and other surgeries where substantial cutting is needed. The longer, heavier design provides better control and leverage when using large surgical blades, making it essential for major surgical procedures.",
+    image: "/lovable-uploads/knife-handle-7.png"
   }
 ];
