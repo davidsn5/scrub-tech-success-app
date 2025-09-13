@@ -354,5 +354,17 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Love Nerve Root Retractor",
     explanation: "The Love Nerve Root Retractor is a delicate neurosurgical instrument specifically designed to gently retract and protect nerve roots during spinal procedures. This small, curved retractor allows surgeons to carefully move nerve tissue away from the surgical field without causing damage or compression. The instrument's smooth, rounded edges and precise curvature make it ideal for working in the confined spaces around spinal nerve roots, particularly during discectomy and laminectomy procedures.",
     image: "/lovable-uploads/love-nerve-root-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Woodson Dural Separator",
+    explanation: "The Woodson Dural Separator is a specialized neurosurgical instrument used to gently separate the dura mater (outer membrane covering the brain and spinal cord) from surrounding tissues. This delicate instrument features a thin, flat blade with smooth edges that allow surgeons to carefully dissect and separate dural tissues without causing tears or damage. The textured handle provides secure grip during precise manipulation, making it essential for neurosurgical procedures requiring careful dural exposure and protection.",
+    image: "/lovable-uploads/woodson-dural-separator.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Nerve Hook",
+    explanation: "The Nerve Hook is a specialized neurosurgical instrument designed to gently manipulate and retract nerve tissues during surgical procedures. This delicate instrument features a small, smooth hook at the tip that allows surgeons to carefully lift, move, or isolate nerve fibers without causing damage. The curved design and precise tip make it ideal for working in confined spaces around delicate neural structures, particularly useful in procedures involving nerve decompression, tumor removal, and spinal surgery.",
+    image: "/lovable-uploads/nerve-hook.png"
   }
 ];
