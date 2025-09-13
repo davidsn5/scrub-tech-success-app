@@ -46,7 +46,7 @@ const VisualResources = () => {
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
                 <img 
-                  src="/lovable-uploads/syringe-diagram-final.png" 
+                  src="/lovable-uploads/syringe-diagram-new.png" 
                   alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
