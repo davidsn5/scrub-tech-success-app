@@ -49,7 +49,7 @@ const VisualResources = () => {
                   alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
-                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
                   © SurgicalTechReview.com
                 </div>
               </div>
@@ -69,7 +69,7 @@ const VisualResources = () => {
                   alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
-                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
                   © SurgicalTechReview.com
                 </div>
               </div>
@@ -89,7 +89,7 @@ const VisualResources = () => {
                   alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
-                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
                   © SurgicalTechReview.com
                 </div>
               </div>
@@ -109,7 +109,7 @@ const VisualResources = () => {
                   alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
-                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
                   © SurgicalTechReview.com
                 </div>
               </div>
