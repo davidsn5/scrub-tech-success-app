@@ -89,18 +89,18 @@ const VisualResources = () => {
               </p>
             </Card>
 
-            {/* Laparoscopic Instruments Diagram */}
+            {/* Cysto Instruments Diagram */}
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
                 <img 
                   src="/lovable-uploads/laparoscopic-instruments-diagram.png" 
-                  alt="Laparoscopic Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
+                  alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">Laparoscopic Instruments</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">Cysto Instruments</h3>
               <p className="text-sm text-gray-600 mt-2 text-center">
-                Specialized surgical instruments for minimally invasive procedures including scopes, obturators, and adapters.
+                Specialized cystoscopy instruments for urological procedures including scopes, obturators, resectoscopes, and adapters.
               </p>
             </Card>
           </div>
