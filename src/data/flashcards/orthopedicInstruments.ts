@@ -144,5 +144,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Posterior-Inferior Retractor\n(Spinal Retractor)",
     explanation: "The Posterior-Inferior retractor is a specialized spinal retractor designed for retracting muscles and soft tissues during posterior spinal procedures. Features a curved blade with a loop handle for secure grip and control. The unique design allows for effective retraction of the posterior spinal muscles while providing excellent exposure of the vertebral column. Essential for spinal surgeries including laminectomies, discectomies, and spinal fusion procedures where clear visualization of posterior spinal elements is required.",
     image: "/lovable-uploads/posterior-inferior-retractor.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Bone Tamp\n(Bone Impactor)",
+    explanation: "A bone tamp is a specialized orthopedic instrument featuring a textured or cross-hatched working end designed for impacting and compacting bone grafts, cement, or other materials into bone defects. The textured surface provides excellent grip and control during impaction procedures while preventing slippage. Commonly used in joint replacement surgeries, spinal fusion procedures, and trauma repairs where precise bone graft placement and compaction is required. The ergonomic handle design allows for controlled force application during bone preparation and grafting procedures.",
+    image: "/lovable-uploads/bone-tamp.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Stille Leur Bone Rongeur\n(Bone Cutting Forceps)",
+    explanation: "The Stille Leur bone rongeur is a specialized bone-cutting instrument featuring curved, sharp cutting jaws with a spring-loaded mechanism designed for removing bone and cartilage in orthopedic and neurosurgical procedures. Named after Swedish surgeon Bengt Stille, this rongeur provides excellent cutting power and precision control for bone removal. The curved design allows for effective bone cutting in areas with limited access, while the spring-loaded handles reduce surgeon fatigue during extended procedures. Essential for spinal surgeries, joint procedures, and bone tumor removals.",
+    image: "/lovable-uploads/stille-leur-bone-rongeur.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Oscillating Saw Blade\n(Surgical Saw Blade)",
+    explanation: "An oscillating saw blade is a specialized cutting attachment designed for powered oscillating saws used in orthopedic surgery. The blade features measurement markings and cutting teeth optimized for precise bone cutting during procedures such as amputations, osteotomies, and joint replacements. The oscillating motion provides smooth, controlled cuts while minimizing heat generation and tissue trauma. Various blade designs are available for different applications, including straight cuts, curved cuts, and specialized procedures. Essential for achieving precise bone cuts with minimal collateral tissue damage.",
+    image: "/lovable-uploads/oscillating-saw-blade.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Wire Cutting Scissors\n(Orthopedic Wire Scissors)",
+    explanation: "Wire cutting scissors are specialized surgical scissors featuring strong, sharp blades designed specifically for cutting surgical wires, sutures, and small orthopedic hardware. The robust construction and angled cutting edges provide excellent leverage and cutting power for metallic materials. These scissors are essential for removing or trimming Kirschner wires, cerclage wires, and other orthopedic fixation devices. The precision cutting action prevents wire fragments and ensures clean cuts during hardware removal procedures, while the ergonomic design provides comfort during extended use.",
+    image: "/lovable-uploads/wire-cutting-scissors.png"
+  },
+  {
+    question: "Identify this orthopedic surgical instrument",
+    answer: "Hobbs Retractor\n(Nerve Root Retractor)",
+    explanation: "The Hobbs retractor is a specialized curved retractor designed primarily for neurosurgical and spinal procedures, featuring a smooth, curved blade with a distinctive hook or curved end for gentle nerve root retraction. The instrument allows surgeons to safely retract and protect nerve roots during spinal surgeries while providing excellent visualization of the operative field. The curved design follows the natural anatomy of the spine and minimizes trauma to delicate neural structures. Essential for procedures such as discectomies, laminectomies, and spinal decompression surgeries where nerve protection is critical.",
+    image: "/lovable-uploads/hobbs-retractor.png"
   }
 ];
