@@ -48,8 +48,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   // Update questions when subscription status changes
   useEffect(() => {
     const newAvailableQuestions = hasPremiumAccess 
-      ? instrumentIdentificationQuestions 
-      : instrumentIdentificationQuestions.slice(0, freeQuestionLimit);
+      ? allQuestions 
+      : allQuestions.slice(0, freeQuestionLimit);
     
     setQuestions(newAvailableQuestions);
     setAnsweredQuestions(new Array(newAvailableQuestions.length).fill(false));
@@ -61,7 +61,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
       setSelectedAnswer(null);
       setShowResult(false);
     }
-  }, [hasPremiumAccess, currentQuestionIndex]);
+  }, [hasPremiumAccess, category]);
 
   const currentQuestion = questions[currentQuestionIndex];
   const totalQuestions = questions.length;
@@ -131,7 +131,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     }
 
     // Fisher-Yates shuffle algorithm
-    const shuffledQuestions = [...instrumentIdentificationQuestions];
+    const shuffledQuestions = [...allQuestions];
     for (let i = shuffledQuestions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
@@ -267,12 +267,12 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <RotateCcw className="h-4 w-4" />
                   <span>Try Again</span>
                 </Button>
-                {!hasPremiumAccess && (
-                  <Button onClick={handleUpgrade} className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-2">
-                    <Crown className="h-4 w-4" />
-                    <span>Upgrade for All 36 Questions</span>
-                  </Button>
-                )}
+                  {!hasPremiumAccess && (
+                    <Button onClick={handleUpgrade} className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-2">
+                      <Crown className="h-4 w-4" />
+                      <span>{`Upgrade for All ${allQuestions.length} Questions`}</span>
+                    </Button>
+                  )}
                 <Button onClick={onBack} variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50">
                   Back to Categories
                 </Button>
@@ -301,7 +301,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                       <Lock className="h-5 w-5 text-purple-600" />
                       <div>
                         <p className="text-sm font-medium text-purple-800">
-                          Showing {freeQuestionLimit} of {instrumentIdentificationQuestions.length} questions
+                          Showing {freeQuestionLimit} of {allQuestions.length} questions
                         </p>
                         <p className="text-xs text-purple-700">
                           Unlock all questions with Premium access
