@@ -462,5 +462,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Alm Retractor",
     explanation: "The Alm retractor is a self-retaining surgical instrument used to hold tissues apart and maintain surgical exposure during various procedures. It features adjustable arms with sharp or blunt prongs that can be positioned to retract different tissue types. The retractor's design allows surgeons to work with both hands free while maintaining optimal visualization of the surgical field. It is commonly used in orthopedic, general, and plastic surgery procedures where sustained tissue retraction is required.",
     image: "/lovable-uploads/alm-retractor.png"
+  },
+  {
+    question: "What is this bone elevation instrument?",
+    answer: "Key Periosteal Elevator",
+    explanation: "The Key periosteal elevator is a specialized surgical instrument designed to lift and separate the periosteum from bone surfaces. It features a flat, curved blade with a sharp edge that allows surgeons to carefully dissect periosteal tissue while preserving the underlying bone structure. This instrument is commonly used in orthopedic, oral, and reconstructive surgeries where precise periosteal elevation is required for bone grafting, implant placement, or fracture repair procedures.",
+    image: "/lovable-uploads/key-periosteal-elevator.png"
+  },
+  {
+    question: "What are these surgical pliers?",
+    answer: "Needle-Nose Pliers",
+    explanation: "Needle-nose pliers are precision surgical instruments featuring long, narrow, pointed jaws that provide excellent grip and manipulation capabilities in confined spaces. They are used for grasping small objects, bending wire, manipulating sutures, and handling delicate hardware during surgical procedures. The pointed design allows access to areas where standard forceps cannot reach, making them valuable tools in orthopedic, plastic, and microsurgical procedures.",
+    image: "/lovable-uploads/needle-nose-pliers.png"
+  },
+  {
+    question: "What is this orthopedic cutting instrument?",
+    answer: "Large Bone Pin Cutter",
+    explanation: "The Large Bone Pin Cutter is a heavy-duty orthopedic instrument designed specifically for cutting large diameter pins, wires, and rods used in orthopedic fixation. It features robust cutting jaws with leverage handles that provide the mechanical advantage needed to cut through thick metal hardware. This instrument is essential during procedures involving the removal or adjustment of orthopedic implants, pins, and external fixation devices.",
+    image: "/lovable-uploads/large-bone-pin-cutter.png"
+  },
+  {
+    question: "What is this neurosurgical retractor?",
+    answer: "Cerebellar Retractor",
+    explanation: "The Cerebellar retractor is a specialized neurosurgical instrument designed for retracting and protecting the cerebellum during posterior fossa procedures. It features a curved, spatulated blade that conforms to the cerebellar surface, providing gentle retraction without causing tissue trauma. This instrument is essential for accessing the brainstem, fourth ventricle, and cerebellopontine angle while maintaining optimal visualization and protecting delicate neural structures.",
+    image: "/lovable-uploads/cerebellar-retractor.png"
+  },
+  {
+    question: "What is this spinal instrument?",
+    answer: "Cushing Intervertebral Disc Rongeur",
+    explanation: "The Cushing intervertebral disc rongeur is a specialized neurosurgical instrument designed for removing disc material during discectomy procedures. It features angled, cup-shaped jaws that can grasp and remove herniated or degenerated disc tissue with precision. The instrument's design allows surgeons to access the disc space through small incisions while maintaining control over tissue removal. It is essential for treating disc herniations and performing spinal decompression procedures.",
+    image: "/lovable-uploads/cushing-intervertebral-disc-rongeur.png"
   }
 ];
