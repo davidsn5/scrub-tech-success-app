@@ -225,5 +225,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Doyen Intestinal Clamp\n(Bowel Clamp)",
     explanation: "The Doyen intestinal clamp is a large, curved surgical clamp typically 8-10 inches (20-25 cm) in length, designed specifically for clamping bowel and other intestinal structures. It features broad, atraumatic jaws with longitudinal serrations that provide secure closure without crushing the bowel wall or damaging the intestinal mucosa. The curved design allows for easy application around bowel loops and provides excellent control during intestinal anastomosis, resection, and repair procedures. The clamp's gentle pressure prevents tissue necrosis while maintaining complete occlusion of the bowel lumen, making it essential for gastrointestinal surgery.",
     image: "/lovable-uploads/doyen-intestinal-clamp.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Groove Director\n(Surgical Guide)",
+    explanation: "The groove director is a specialized surgical instrument typically 6-8 inches (15-20 cm) in length, featuring a forked or split end with a central groove and a smooth, rounded handle. The grooved tip is designed to guide cutting instruments, particularly when making precise incisions along specific anatomical planes or when protecting underlying structures during surgical procedures. The groove provides a channel for scalpels or scissors to follow, ensuring accurate and controlled cuts. This instrument is commonly used in plastic surgery, neurosurgery, and other procedures requiring precise tissue division with protection of adjacent structures.",
+    image: "/lovable-uploads/groove-director.png"
   }
 ];
