@@ -402,5 +402,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Stille-Horsley Bone Cutting Forceps",
     explanation: "Stille-Horsley bone cutting forceps are heavy-duty orthopedic instruments designed for cutting and removing bone tissue. These forceps feature strong, sharp jaws with cutting edges that can effectively cut through bone, particularly in spinal and cranial procedures. They are commonly used in neurosurgery for craniotomies and laminectomies, where precise bone removal is required. The instrument provides excellent control and leverage for cutting bone while minimizing damage to surrounding soft tissues.",
     image: "/lovable-uploads/stille-horsley-bone-cutting-forceps.png"
+  },
+  {
+    question: "What is this bone elevator?",
+    answer: "Joseph Periosteal Elevator",
+    explanation: "The Joseph periosteal elevator is a surgical instrument used to lift and separate the periosteum (the membrane surrounding bone) from the underlying bone surface. It features a flat, curved blade that allows surgeons to carefully dissect and elevate soft tissues without damaging the bone. This instrument is commonly used in orthopedic and oral surgery procedures where access to bone surfaces is required while preserving the periosteal blood supply.",
+    image: "/lovable-uploads/joseph-periosteal-elevator.png"
+  },
+  {
+    question: "What is this surgical elevator?",
+    answer: "Chandler Elevator",
+    explanation: "The Chandler elevator is a specialized surgical instrument used for lifting and retracting tissues, particularly in orthopedic and spinal procedures. It features a curved, blunt-tipped blade that allows for gentle elevation of soft tissues from bone surfaces. The instrument is designed to provide excellent visibility and access to surgical sites while minimizing tissue trauma. It's commonly used in procedures requiring careful dissection around delicate structures.",
+    image: "/lovable-uploads/chandler-elevator.png"
+  },
+  {
+    question: "What are these neurosurgical forceps?",
+    answer: "Raney Clip Applying Forceps",
+    explanation: "Raney clip applying forceps are specialized neurosurgical instruments used to place hemostatic clips on blood vessels during cranial procedures. These forceps are designed to hold and apply small metal clips that provide hemostasis by occluding vessels. The instrument features precise jaws that can manipulate the clips accurately, ensuring proper placement for effective bleeding control during neurosurgical procedures, particularly scalp and dural vessel management.",
+    image: "/lovable-uploads/raney-clip-applying-forceps.png"
+  },
+  {
+    question: "What are these surgical retractors?",
+    answer: "Adson Beckman Retractors",
+    explanation: "Adson Beckman retractors are self-retaining surgical instruments used to hold tissues apart and maintain surgical exposure. These retractors feature multiple sharp or blunt prongs that can be adjusted to provide optimal retraction of various tissue types. They are commonly used in neurosurgery, spine surgery, and other procedures where sustained tissue retraction is needed. The self-retaining mechanism allows surgeons to work with both hands free while maintaining excellent visualization of the surgical field.",
+    image: "/lovable-uploads/adson-beckman-retractors.png"
+  },
+  {
+    question: "What is this orthopedic tool?",
+    answer: "Hex Ortho Screwdriver",
+    explanation: "A hex ortho screwdriver is a specialized surgical instrument used for inserting and removing hexagonal-headed screws in orthopedic procedures. The instrument features a hexagonal tip that matches the socket configuration of orthopedic screws used in bone fixation. This tool is essential for securing plates, rods, and other orthopedic hardware to bone. The hex design provides superior torque transfer and reduces the risk of screw head stripping during insertion or removal.",
+    image: "/lovable-uploads/hex-ortho-screwdriver.png"
   }
 ];
