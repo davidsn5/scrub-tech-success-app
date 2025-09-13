@@ -231,5 +231,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Groove Director\n(Surgical Guide)",
     explanation: "The groove director is a specialized surgical instrument typically 6-8 inches (15-20 cm) in length, featuring a forked or split end with a central groove and a smooth, rounded handle. The grooved tip is designed to guide cutting instruments, particularly when making precise incisions along specific anatomical planes or when protecting underlying structures during surgical procedures. The groove provides a channel for scalpels or scissors to follow, ensuring accurate and controlled cuts. This instrument is commonly used in plastic surgery, neurosurgery, and other procedures requiring precise tissue division with protection of adjacent structures.",
     image: "/lovable-uploads/groove-director.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Rake Retractor\n(Multi-Prong Retractor)",
+    explanation: "A rake retractor is a multi-pronged retractor designed for retracting soft tissues and muscle during surgical procedures. It features multiple sharp prongs (typically 3-6) that provide secure tissue grip and excellent exposure of underlying structures. Available in various sizes and prong configurations, rake retractors are essential for maintaining clear surgical fields during various procedures including orthopedic surgeries, general surgery, and plastic surgery. The multiple contact points distribute pressure evenly while providing superior tissue control and exposure.",
+    image: "/lovable-uploads/rake-retractor.png"
   }
 ];
