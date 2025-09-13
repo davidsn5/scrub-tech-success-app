@@ -488,27 +488,6 @@ const Index = () => {
               </Button>
             </Card>
 
-            {/* Missed Questions */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-lg">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 flex-shrink-0">
-                  <RotateCcw className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Missed Questions</h3>
-              </div>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Review and retry questions you've missed</p>
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
-                <span className="text-xs sm:text-sm text-gray-500">{progress.totalMissedQuestions} questions to review</span>
-              </div>
-              <Button 
-                onClick={() => handlePremiumFeatureAccess('/missed-questions', 'Missed Questions Review')}
-                className="w-full bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5"
-              >
-                <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Review Missed Questions
-              </Button>
-            </Card>
-
             {/* Instrumentation Flashcards - Now always accessible */}
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
               <div className="flex items-center justify-between mb-3 sm:mb-4">
@@ -594,6 +573,35 @@ const Index = () => {
             >
               <Award className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
               Start Exam Simulation
+            </Button>
+          </div>
+        </Card>
+
+        {/* Missed Questions */}
+        <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/90 via-cyan-50/80 to-cyan-100/70 backdrop-blur-sm border-cyan-200/50 shadow-xl mb-6 sm:mb-8">
+          <div className="text-center">
+            <div className="flex justify-center mb-3 sm:mb-4">
+              <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-r from-cyan-500/90 to-cyan-600/90">
+                <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">Missed Questions</h3>
+            <p className="text-gray-600 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+              Review and retry questions you've missed to improve your understanding
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
+              <div className="flex items-center space-x-2">
+                <RotateCcw className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span>{progress.totalMissedQuestions} questions to review</span>
+              </div>
+            </div>
+            <Button 
+              onClick={() => handlePremiumFeatureAccess('/missed-questions', 'Missed Questions Review')}
+              size="lg" 
+              className="bg-gradient-to-r from-cyan-500/90 to-cyan-600/90 hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+            >
+              <RotateCcw className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+              Review Missed Questions
             </Button>
           </div>
         </Card>
