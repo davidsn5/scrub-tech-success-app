@@ -46,7 +46,7 @@ const VisualResources = () => {
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
                 <img 
-                  src="/lovable-uploads/syringe-diagram-new.png" 
+                  src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
                   alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
@@ -61,7 +61,7 @@ const VisualResources = () => {
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
                 <img 
-                  src="/lovable-uploads/hypodermic-needle-diagram-resized.png" 
+                  src="/lovable-uploads/needle-diagram-cropped-blue.png" 
                   alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
@@ -76,7 +76,7 @@ const VisualResources = () => {
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
                 <img 
-                  src="/lovable-uploads/medical-supplies-diagram-resized.png" 
+                  src="/lovable-uploads/supplies-diagram-cropped-blue.png" 
                   alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
@@ -91,7 +91,7 @@ const VisualResources = () => {
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
                 <img 
-                  src="/lovable-uploads/cysto-instruments-diagram-resized.png" 
+                  src="/lovable-uploads/cysto-diagram-cropped-blue.png" 
                   alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
                   className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
