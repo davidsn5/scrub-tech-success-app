@@ -285,5 +285,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "O'Sullivan O'Connor Retractor\n(Self-Retaining Abdominal Retractor)",
     explanation: "The O'Sullivan O'Connor retractor is a specialized self-retaining retractor system designed primarily for gynecological and lower abdominal surgeries. This retractor features a circular or oval ring configuration with multiple adjustable blade attachments that provide circumferential retraction. The system is particularly effective for procedures requiring deep pelvic exposure, such as hysterectomies, cesarean sections, and other gynecological operations. The retractor's design allows for excellent visualization of deep anatomical structures while maintaining consistent retraction throughout the procedure. Named after its developers, this instrument has become a standard tool in obstetric and gynecological surgery.",
     image: "/lovable-uploads/osullivan-oconnor-retractor.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Crilewood Needle Driver\n(Needle Holder)",
+    explanation: "The Crilewood needle driver is a precision needle holder featuring tungsten carbide inserts in the jaws for superior grip and durability. These instruments are typically 6-8 inches (15-20 cm) in length with gold-colored finger rings for easy identification. The tungsten carbide inserts provide excellent needle control and prevent slippage during suturing, while also extending the instrument's lifespan. Crilewood needle drivers are designed with a locking mechanism that securely holds needles of various sizes and are commonly used in general surgery, plastic surgery, and other procedures requiring precise suturing. The ergonomic design reduces hand fatigue during extended suturing sessions.",
+    image: "/lovable-uploads/crilewood-needle-driver.png"
   }
 ];
