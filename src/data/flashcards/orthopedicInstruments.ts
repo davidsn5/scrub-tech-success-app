@@ -204,5 +204,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Charnley Retractor\n(Self-Retaining Surgical Retractor)",
     explanation: "The Charnley retractor is a versatile self-retaining retractor system consisting of a rectangular frame with adjustable retractor blades and a chain mechanism for securing positioning. Named after orthopedic surgeon Sir John Charnley, this instrument provides excellent exposure and visualization during surgical procedures. The adjustable frame allows for customized retraction angles and depths, while the chain mechanism maintains consistent tension. Commonly used in orthopedic, spinal, and general surgical procedures where sustained, hands-free retraction of tissues is required for optimal surgical access.",
     image: "/lovable-uploads/charnley-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Hurd Dissector-Pillar Retractor",
+    explanation: "The Hurd Dissector-Pillar Retractor is a dual-purpose orthopedic instrument used for tissue dissection and retraction during spinal procedures. Its flat, paddle-like end is used for dissecting tissue planes, while the handle provides ergonomic control. This instrument is particularly useful in posterior spinal approaches where gentle tissue separation and retraction are needed. The smooth surface prevents tissue trauma while maintaining adequate exposure of the surgical site.",
+    image: "/lovable-uploads/hurd-dissector-pillar-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Inge Lamina Retractor",
+    explanation: "The Inge Lamina Retractor is a specialized orthopedic instrument designed for spinal surgery, particularly laminectomy procedures. It features curved blades that conform to the anatomy of the vertebral lamina, providing optimal retraction of soft tissues and bone edges. The instrument's design allows for safe retraction of the dura mater and nerve roots while maintaining clear visualization of the spinal canal. Its spring-loaded mechanism provides consistent retraction pressure.",
+    image: "/lovable-uploads/inge-lamina-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Lambert Lehman Bone Holding Clamp",
+    explanation: "The Lambert Lehman Bone Holding Clamp is a specialized orthopedic instrument used to securely grasp and hold bone fragments during surgical procedures. It features serrated jaws that provide excellent grip on bone surfaces without causing excessive crushing. The clamp's ratcheting mechanism allows for controlled, sustained pressure while maintaining precise positioning. This instrument is commonly used in fracture repair, osteotomies, and other procedures requiring stable bone fixation during manipulation or drilling.",
+    image: "/lovable-uploads/lambert-lehman-bone-holding-clamp.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Cushing Cranial Rongeur",
+    explanation: "The Cushing Cranial Rongeur is a specialized neurosurgical instrument designed for precise bone removal in cranial procedures. It features sharp, curved jaws that can cut through bone with controlled pressure, allowing for careful removal of skull bone during craniotomies. The instrument's design provides excellent tactile feedback and precision, essential for delicate neurosurgical work where proximity to brain tissue requires utmost care. The smooth cutting action minimizes bone fragmentation.",
+    image: "/lovable-uploads/cushing-cranial-rongeur.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Zimmerman Bennett Retractor",
+    explanation: "The Zimmerman Bennett Retractor is a specialized orthopedic instrument used for tissue retraction during spinal and other deep surgical procedures. Its unique paddle-shaped design with curved edges allows for effective retraction of soft tissues while minimizing trauma. The instrument's ergonomic handle provides comfortable grip during extended procedures, and its smooth surface prevents tissue adherence. It's particularly useful in procedures requiring gentle but firm tissue displacement to maintain surgical exposure.",
+    image: "/lovable-uploads/zimmerman-bennett-retractor.png"
   }
 ];
