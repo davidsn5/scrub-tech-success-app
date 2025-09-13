@@ -475,5 +475,109 @@ export const instrumentIdentificationQuestions: Question[] = [
     correctAnswer: 1,
     explanation: "Gerald forceps are fine tissue forceps typically 7 inches (18 cm) in length with delicate teeth, commonly used in plastic surgery and microsurgery for precise tissue handling.",
     image: "/lovable-uploads/f2fb6d13-d957-4788-8263-4f172ee8646b.png"
+  },
+  {
+    id: 38,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "Curved Crile",
+      "Kelly Clamp",
+      "Kocher Clamp",
+      "Rochester Pean"
+    ],
+    correctAnswer: 1,
+    explanation: "Kelly clamps are curved hemostatic clamps typically 5.5-6.25 inches (14-16 cm) in length. They feature half serrations on the jaws and are commonly used for clamping blood vessels and tissue. The half serrations provide a secure grip while reducing tissue trauma compared to fully serrated instruments.",
+    image: "/lovable-uploads/kelly-clamp.png"
+  },
+  {
+    id: 39,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "Allis Forceps",
+      "Singley Forceps",
+      "Russian Forceps",
+      "DeBakey Forceps"
+    ],
+    correctAnswer: 1,
+    explanation: "Singley forceps are delicate tissue forceps typically 6-8 inches (15-20 cm) in length with long, slender jaws and smooth tips. These forceps are designed for precise handling of delicate tissues without causing trauma and are commonly used in plastic surgery and microsurgery.",
+    image: "/lovable-uploads/singley-forceps.png"
+  },
+  {
+    id: 40,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "Richardson Retractor",
+      "Parker Retractor",
+      "Army-Navy Retractor",
+      "Senn Retractor"
+    ],
+    correctAnswer: 1,
+    explanation: "The Parker retractor is a simple, curved hand-held retractor typically 6-8 inches (15-20 cm) in length with smooth, rounded ends. The gentle curve allows for effective tissue retraction while minimizing trauma to delicate structures.",
+    image: "/lovable-uploads/parker-retractor.png"
+  },
+  {
+    id: 41,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "S-Shaped Retractor",
+      "Hasson S-Shaped Retractor",
+      "Curved Richardson",
+      "Parker Retractor"
+    ],
+    correctAnswer: 1,
+    explanation: "The Hasson S-shaped retractor is a specialized hand-held retractor featuring a distinctive S-curve design that provides superior tissue retraction capabilities. Named after Dr. Harrith Hasson, these retractors are particularly useful in laparoscopic and minimally invasive procedures.",
+    image: "/lovable-uploads/hasson-s-shaped-retractor.png"
+  },
+  {
+    id: 42,
+    question: "Identify this surgical instrument system:",
+    choices: [
+      "Balfour Retractor",
+      "Bookwalter Retractor",
+      "O'Sullivan O'Connor Retractor",
+      "Finochietto Retractor"
+    ],
+    correctAnswer: 1,
+    explanation: "The Bookwalter retractor is a sophisticated self-retaining retractor system designed for major abdominal and thoracic surgeries. This system consists of a central ring that attaches to the operating table and multiple interchangeable retractor blades that can be positioned at various angles and depths.",
+    image: "/lovable-uploads/bookwalter-retractor.png"
+  },
+  {
+    id: 43,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "Weitlaner Retractor",
+      "Balfour Retractor",
+      "Gelpi Retractor",
+      "Bookwalter Retractor"
+    ],
+    correctAnswer: 1,
+    explanation: "The Balfour retractor is a self-retaining retractor specifically designed for abdominal surgeries. It features a central frame with adjustable lateral blades that can be positioned to provide optimal exposure of the operative field and is essential for procedures requiring prolonged abdominal exposure.",
+    image: "/lovable-uploads/balfour-retractor.png"
+  },
+  {
+    id: 44,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "Balfour Retractor",
+      "Bookwalter Retractor",
+      "O'Sullivan O'Connor Retractor",
+      "Weitlaner Retractor"
+    ],
+    correctAnswer: 2,
+    explanation: "The O'Sullivan O'Connor retractor is a specialized self-retaining retractor system designed primarily for gynecological and lower abdominal surgeries. This retractor features a circular or oval ring configuration with multiple adjustable blade attachments that provide circumferential retraction.",
+    image: "/lovable-uploads/osullivan-oconnor-retractor.png"
+  },
+  {
+    id: 45,
+    question: "Identify this surgical instrument:",
+    choices: [
+      "Mayo Hegar Needle Driver",
+      "Crilewood Needle Driver",
+      "Webster Needle Driver",
+      "Mathieu Needle Driver"
+    ],
+    correctAnswer: 1,
+    explanation: "The Crilewood needle driver is a precision needle holder featuring tungsten carbide inserts in the jaws for superior grip and durability. These instruments are typically 6-8 inches (15-20 cm) in length with gold-colored finger rings for easy identification and provide excellent needle control during suturing.",
+    image: "/lovable-uploads/crilewood-needle-driver.png"
   }
 ];
