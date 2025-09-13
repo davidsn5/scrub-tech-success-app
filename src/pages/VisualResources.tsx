@@ -43,11 +43,16 @@ const VisualResources = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Syringe Diagram */}
             <div className="text-center">
-              <img 
-                src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
-                alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
-                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
+                  alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-900 text-center">Syringe Components</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
@@ -58,11 +63,16 @@ const VisualResources = () => {
 
             {/* Hypodermic Needle Diagram */}
             <div className="text-center">
-              <img 
-                src="/lovable-uploads/needle-diagram-cropped-blue.png" 
-                alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
-                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/needle-diagram-cropped-blue.png" 
+                  alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-900 text-center">Needle Components</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
@@ -73,11 +83,16 @@ const VisualResources = () => {
 
             {/* Medical Supplies Diagram */}
             <div className="text-center">
-              <img 
-                src="/lovable-uploads/supplies-diagram-cropped-blue.png" 
-                alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
-                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/supplies-diagram-cropped-blue.png" 
+                  alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-900 text-center">Medical Supplies</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
@@ -88,11 +103,16 @@ const VisualResources = () => {
 
             {/* Cysto Instruments Diagram */}
             <div className="text-center">
-              <img 
-                src="/lovable-uploads/cysto-diagram-cropped-blue.png" 
-                alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
-                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/cysto-diagram-cropped-blue.png" 
+                  alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-2 right-2 text-xs text-white/40 font-medium bg-black/20 px-2 py-1 rounded">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-900 text-center">Cysto Instruments</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
