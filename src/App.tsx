@@ -30,6 +30,7 @@ import NotFound from "./pages/NotFound";
 import Preview from "./pages/Preview";
 import KeyTermGames from "./pages/KeyTermGames";
 import InstrumentationFlashcards from "./pages/InstrumentationFlashcards";
+import VisualResources from "./pages/VisualResources";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const AppContent = () => {
         <Route path="/preview" element={<Preview />} />
         <Route path="/key-term-games" element={<KeyTermGames />} />
         <Route path="/instrumentation-flashcards" element={<InstrumentationFlashcards />} />
+        <Route path="/visual-resources" element={<ProtectedRoute><VisualResources /></ProtectedRoute>} />
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
