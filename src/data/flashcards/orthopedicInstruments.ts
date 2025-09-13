@@ -372,5 +372,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Curette",
     explanation: "A Curette is a surgical instrument with a small, spoon-shaped or loop-shaped tip used for scraping or removing tissue from body cavities or surfaces. The instrument features a long handle for precise control and a curved working end that allows surgeons to effectively remove soft tissue, debris, or abnormal growths. Curettes are commonly used in orthopedic procedures for bone cleaning, in gynecological procedures for uterine tissue removal, and in various other surgical specialties for tissue debridement and cavity cleaning.",
     image: "/lovable-uploads/curette.png"
+  },
+  {
+    question: "What is this neurosurgical instrument?",
+    answer: "Aneurysm Clip",
+    explanation: "An aneurysm clip is a small, spring-loaded device used in neurosurgery to occlude cerebral aneurysms. The clip is placed across the neck of the aneurysm to prevent blood flow into the aneurysmal sac, thereby preventing rupture. These clips are made of titanium or other biocompatible materials and come in various sizes and configurations to accommodate different aneurysm anatomies. The application requires precise placement using specialized clip appliers under microscopic visualization.",
+    image: "/lovable-uploads/aneurysm-clip.png"
+  },
+  {
+    question: "What is this orthopedic measuring instrument?",
+    answer: "Zimmer Townley Femur Calipers",
+    explanation: "Zimmer Townley Femur Calipers are specialized measuring instruments used in orthopedic surgery, particularly during total hip arthroplasty procedures. These calipers are designed to accurately measure femoral dimensions, including the diameter and length of the femoral canal, to ensure proper sizing of femoral components. The instrument features precise graduations and is essential for achieving optimal fit and alignment of prosthetic components during hip replacement surgery.",
+    image: "/lovable-uploads/zimmer-townley-femur-calipers.png"
+  },
+  {
+    question: "What is this neurosurgical dissector?",
+    answer: "#3 Penfield Dissector",
+    explanation: "The #3 Penfield dissector is a delicate neurosurgical instrument used for blunt dissection and manipulation of neural tissue. It features a slightly curved, blunt tip that allows for gentle separation of tissues without causing trauma. This instrument is commonly used in cranial and spinal procedures for dissecting around nerves, blood vessels, and delicate brain tissue. The #3 designation refers to its specific tip configuration, which is wider and more robust than smaller numbered Penfield dissectors.",
+    image: "/lovable-uploads/penfield-3.png"
+  },
+  {
+    question: "What are these specialized scissors?",
+    answer: "Stevens Tenotomy Scissors",
+    explanation: "Stevens tenotomy scissors are delicate, sharp-pointed scissors specifically designed for cutting tendons and other fine tissues. They feature straight or curved blades with very sharp points that allow for precise dissection in tight spaces. These scissors are commonly used in ophthalmic surgery, plastic surgery, and other procedures requiring fine, precise cuts. The term 'tenotomy' refers to the surgical cutting of a tendon, which is the primary application for these specialized scissors.",
+    image: "/lovable-uploads/stevens-tenotomy-scissors.png"
+  },
+  {
+    question: "What is this bone cutting instrument?",
+    answer: "Stille-Horsley Bone Cutting Forceps",
+    explanation: "Stille-Horsley bone cutting forceps are heavy-duty orthopedic instruments designed for cutting and removing bone tissue. These forceps feature strong, sharp jaws with cutting edges that can effectively cut through bone, particularly in spinal and cranial procedures. They are commonly used in neurosurgery for craniotomies and laminectomies, where precise bone removal is required. The instrument provides excellent control and leverage for cutting bone while minimizing damage to surrounding soft tissues.",
+    image: "/lovable-uploads/stille-horsley-bone-cutting-forceps.png"
   }
 ];
