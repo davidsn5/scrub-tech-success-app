@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { instrumentIdentificationQuestions, Question } from '@/data/questions/instrumentIdentification';
+import { orthopedicInstrumentIdentificationQuestions } from '@/data/questions/orthopedicInstrumentIdentification';
 import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -10,9 +11,10 @@ import { useNavigate } from 'react-router-dom';
 
 interface InstrumentQuestionsProps {
   onBack: () => void;
+  category?: string;
 }
 
-export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack }) => {
+export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack, category = 'general-instrument-questions' }) => {
   const { subscription, createCheckoutSession, user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -21,10 +23,15 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   const hasPremiumAccess = subscription?.subscribed === true;
   const freeQuestionLimit = 5;
   
+  // Get questions based on category
+  const allQuestions = category === 'orthopedic-instrument-questions' 
+    ? orthopedicInstrumentIdentificationQuestions 
+    : instrumentIdentificationQuestions;
+  
   // Use limited questions for non-premium users
   const availableQuestions = hasPremiumAccess 
-    ? instrumentIdentificationQuestions 
-    : instrumentIdentificationQuestions.slice(0, freeQuestionLimit);
+    ? allQuestions 
+    : allQuestions.slice(0, freeQuestionLimit);
   
   const [questions, setQuestions] = useState<Question[]>(availableQuestions);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

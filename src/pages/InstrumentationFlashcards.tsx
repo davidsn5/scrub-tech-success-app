@@ -39,6 +39,15 @@ const InstrumentationFlashcards = () => {
       color: 'from-yellow-600/80 to-amber-600/80',
       bgColor: 'from-yellow-50/90 to-amber-50/90',
       borderColor: 'border-yellow-300/60'
+    },
+    {
+      id: 'orthopedic-instrument-questions',
+      title: 'Ortho/Neuro Instrument Questions',
+      description: 'Practice questions focusing on orthopedic and neurosurgical instrument identification',
+      icon: Target,
+      color: 'from-amber-500/80 to-orange-600/80',
+      bgColor: 'from-amber-50/90 to-orange-50/90',
+      borderColor: 'border-amber-200/60'
     }
   ];
 
@@ -109,8 +118,11 @@ const InstrumentationFlashcards = () => {
     );
   }
 
-  if (selectedCategory === 'general-instrument-questions') {
-    return <InstrumentQuestions onBack={() => setSelectedCategory(null)} />;
+  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions') {
+    return <InstrumentQuestions 
+      onBack={() => setSelectedCategory(null)} 
+      category={selectedCategory}
+    />;
   }
 
   return (
