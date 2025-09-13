@@ -324,5 +324,35 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Langenbeck Periosteal Elevator",
     explanation: "The Langenbeck Periosteal Elevator is a fundamental orthopedic instrument used to separate the periosteum (outer bone membrane) from the underlying bone surface. This instrument features a flat, curved blade with a sharp edge that allows surgeons to carefully lift and separate soft tissues from bone without causing damage. It's essential for procedures requiring bone exposure, such as fracture repair, bone grafting, and implant placement, where clean separation of periosteal tissues is crucial for surgical access.",
     image: "/lovable-uploads/langenbeck-periosteal-elevator.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Lewin Bone Clamp",
+    explanation: "The Lewin Bone Clamp is a specialized orthopedic instrument used to grasp and hold bone fragments during surgical procedures. This forceps-like instrument features strong, curved jaws with teeth or ridges that provide a secure grip on bone tissue without slipping. The instrument is essential for fracture reduction, bone positioning, and maintaining alignment during fixation procedures. Its robust construction allows surgeons to apply controlled pressure while manipulating bone fragments safely.",
+    image: "/lovable-uploads/lewin-bone-clamp.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Heiss Mastoid Retractor",
+    explanation: "The Heiss Mastoid Retractor is a specialized self-retaining retractor used primarily in ear, nose, and throat (ENT) and neurosurgical procedures involving the mastoid process. This instrument features adjustable arms that can be positioned to hold tissues away from the surgical site, providing optimal visualization and access to the mastoid bone and surrounding structures. Its design allows for stable, hands-free retraction during delicate procedures.",
+    image: "/lovable-uploads/heiss-mastoid-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Kern Bone Holding Clamps",
+    explanation: "Kern Bone Holding Clamps are robust orthopedic instruments designed to securely grasp and manipulate bone fragments during surgical procedures. These clamps feature strong, serrated jaws that provide excellent grip on bone tissue, allowing surgeons to reduce fractures, position bone segments, and maintain alignment during fixation. The instrument's design includes ratcheted handles that lock in position, providing sustained holding power without continuous manual pressure.",
+    image: "/lovable-uploads/kern-bone-holding-clamps.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Meyerding Retractor",
+    explanation: "The Meyerding Retractor is a specialized spinal retractor used to provide exposure during spinal surgery procedures. This instrument features a curved blade design that allows surgeons to retract soft tissues and muscles away from the vertebral column, providing clear visualization of the surgical site. The retractor is particularly useful in posterior spinal approaches and is designed to minimize tissue trauma while maintaining adequate surgical exposure.",
+    image: "/lovable-uploads/meyerding-retractor.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Love Nerve Root Retractor",
+    explanation: "The Love Nerve Root Retractor is a delicate neurosurgical instrument specifically designed to gently retract and protect nerve roots during spinal procedures. This small, curved retractor allows surgeons to carefully move nerve tissue away from the surgical field without causing damage or compression. The instrument's smooth, rounded edges and precise curvature make it ideal for working in the confined spaces around spinal nerve roots, particularly during discectomy and laminectomy procedures.",
+    image: "/lovable-uploads/love-nerve-root-retractor.png"
   }
 ];
