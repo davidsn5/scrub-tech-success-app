@@ -10,22 +10,20 @@ const VisualResources = () => {
       {/* Header */}
       <div className="bg-card/95 backdrop-blur-md shadow-card border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/">
-                <Button variant="outline" size="sm" className="hover:bg-slate-50">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
-                </Button>
-              </Link>
-              <div className="flex items-center space-x-3">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-orange-500/80 to-orange-600/80">
-                  <FileText className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl sm:text-3xl font-bold text-primary">Visual Resources</h1>
-                  <p className="text-muted-foreground">Educational diagrams and reference materials</p>
-                </div>
+          <div className="flex flex-col items-center space-y-4">
+            <Link to="/">
+              <Button variant="outline" size="sm" className="hover:bg-slate-50">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </Button>
+            </Link>
+            <div className="flex items-center space-x-3">
+              <div className="p-2 rounded-lg bg-gradient-to-r from-orange-500/80 to-orange-600/80">
+                <FileText className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center">
+                <h1 className="text-2xl sm:text-3xl font-bold text-primary">Visual Resources</h1>
+                <p className="text-muted-foreground">Educational diagrams and reference materials</p>
               </div>
             </div>
           </div>
