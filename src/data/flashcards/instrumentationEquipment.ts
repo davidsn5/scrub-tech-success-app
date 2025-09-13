@@ -267,5 +267,23 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Hasson S-Shaped Retractor\n(Curved Hand-held Retractor)",
     explanation: "The Hasson S-shaped retractor is a specialized hand-held retractor featuring a distinctive S-curve design that provides superior tissue retraction capabilities. These retractors are typically 8-10 inches (20-25 cm) in length with smooth, curved ends that conform to anatomical contours. The S-shaped configuration allows for effective retraction of tissues at multiple angles and depths, making them particularly useful in laparoscopic and minimally invasive procedures. Named after Dr. Harrith Hasson, these retractors provide excellent visualization while minimizing tissue trauma and are commonly used in abdominal and pelvic surgeries.",
     image: "/lovable-uploads/hasson-s-shaped-retractor.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Bookwalter Retractor\n(Self-Retaining Retractor System)",
+    explanation: "The Bookwalter retractor is a sophisticated self-retaining retractor system designed for major abdominal and thoracic surgeries. This system consists of a central ring that attaches to the operating table and multiple interchangeable retractor blades that can be positioned at various angles and depths. The system provides 360-degree retraction capability, allowing surgeons to maintain optimal exposure throughout lengthy procedures without requiring manual retraction. Bookwalter retractors are particularly valuable in complex abdominal surgeries, including bowel resections, major vascular procedures, and organ transplants, where consistent, reliable retraction is essential for surgical success.",
+    image: "/lovable-uploads/bookwalter-retractor.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Balfour Retractor\n(Self-Retaining Abdominal Retractor)",
+    explanation: "The Balfour retractor is a self-retaining retractor specifically designed for abdominal surgeries. It features a central frame with adjustable lateral blades that can be positioned to provide optimal exposure of the operative field. The retractor typically includes deep and shallow blade options to accommodate different tissue depths and surgical approaches. Balfour retractors are essential for procedures requiring prolonged abdominal exposure, such as bowel surgeries, appendectomies, and other intra-abdominal procedures. The self-retaining mechanism allows surgical team members to focus on the procedure rather than manual retraction, improving efficiency and reducing fatigue.",
+    image: "/lovable-uploads/balfour-retractor.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "O'Sullivan O'Connor Retractor\n(Self-Retaining Abdominal Retractor)",
+    explanation: "The O'Sullivan O'Connor retractor is a specialized self-retaining retractor system designed primarily for gynecological and lower abdominal surgeries. This retractor features a circular or oval ring configuration with multiple adjustable blade attachments that provide circumferential retraction. The system is particularly effective for procedures requiring deep pelvic exposure, such as hysterectomies, cesarean sections, and other gynecological operations. The retractor's design allows for excellent visualization of deep anatomical structures while maintaining consistent retraction throughout the procedure. Named after its developers, this instrument has become a standard tool in obstetric and gynecological surgery.",
+    image: "/lovable-uploads/osullivan-oconnor-retractor.png"
   }
 ];
