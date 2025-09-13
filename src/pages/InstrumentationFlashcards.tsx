@@ -150,7 +150,7 @@ const InstrumentationFlashcards = () => {
             Study surgical instruments and their uses. Each flashcard includes detailed explanations and proper identification techniques.
           </p>
           <p className="text-blue-700 font-bold text-sm sm:text-base">
-            More Categories Available - Choose Your Specialty
+            More Instrument Specialties Coming Under Construction 09/2025
           </p>
         </div>
 
