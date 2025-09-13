@@ -40,75 +40,58 @@ const VisualResources = () => {
             Interactive diagrams showing labeled components of essential medical equipment and supplies used in surgical settings.
           </p>
           
-          {/* Visual Resources Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Syringe Diagram */}
-            <Card className="p-0 bg-white backdrop-blur-sm border-gray-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-full h-80 bg-white rounded-t-lg overflow-hidden shadow-inner flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
-                  alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
-                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-3 sm:p-4 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border-orange-200/60 rounded-b-lg">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Syringe Components</h3>
-                <p className="text-sm text-gray-600 mt-1 text-center">
-                  Essential parts of a medical syringe including hub, barrel, flange, plunger, and safety features.
-                </p>
-              </div>
-            </Card>
+            <div className="text-center">
+              <img 
+                src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
+                alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+              />
+              <h3 className="text-lg font-semibold text-foreground mt-4">Syringe Components</h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Essential parts of a medical syringe including hub, barrel, flange, plunger, and safety features.
+              </p>
+            </div>
 
             {/* Hypodermic Needle Diagram */}
-            <Card className="p-0 bg-white backdrop-blur-sm border-gray-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-full h-80 bg-white rounded-t-lg overflow-hidden shadow-inner flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/needle-diagram-cropped-blue.png" 
-                  alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
-                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-3 sm:p-4 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border-orange-200/60 rounded-b-lg">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Needle Components</h3>
-                <p className="text-sm text-gray-600 mt-1 text-center">
-                  Detailed anatomy of hypodermic needles showing lumen, bevel, hub, shaft, and protective covering.
-                </p>
-              </div>
-            </Card>
+            <div className="text-center">
+              <img 
+                src="/lovable-uploads/needle-diagram-cropped-blue.png" 
+                alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+              />
+              <h3 className="text-lg font-semibold text-foreground mt-4">Needle Components</h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Detailed anatomy of hypodermic needles showing lumen, bevel, hub, shaft, and protective covering.
+              </p>
+            </div>
 
             {/* Medical Supplies Diagram */}
-            <Card className="p-0 bg-white backdrop-blur-sm border-gray-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-full h-80 bg-white rounded-t-lg overflow-hidden shadow-inner flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/supplies-diagram-cropped-blue.png" 
-                  alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
-                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-3 sm:p-4 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border-orange-200/60 rounded-b-lg">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Medical Supplies</h3>
-                <p className="text-sm text-gray-600 mt-1 text-center">
-                  Common medical supplies including vials, ampules, medication tubes, and antiseptic wipes.
-                </p>
-              </div>
-            </Card>
+            <div className="text-center">
+              <img 
+                src="/lovable-uploads/supplies-diagram-cropped-blue.png" 
+                alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+              />
+              <h3 className="text-lg font-semibold text-foreground mt-4">Medical Supplies</h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Common medical supplies including vials, ampules, medication tubes, and antiseptic wipes.
+              </p>
+            </div>
 
             {/* Cysto Instruments Diagram */}
-            <Card className="p-0 bg-white backdrop-blur-sm border-gray-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-full h-80 bg-white rounded-t-lg overflow-hidden shadow-inner flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/cysto-diagram-cropped-blue.png" 
-                  alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
-                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-3 sm:p-4 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border-orange-200/60 rounded-b-lg">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Cysto Instruments</h3>
-                <p className="text-sm text-gray-600 mt-1 text-center">
-                  Specialized cystoscopy instruments for urological procedures including scopes, obturators, resectoscopes, and adapters.
-                </p>
-              </div>
-            </Card>
+            <div className="text-center">
+              <img 
+                src="/lovable-uploads/cysto-diagram-cropped-blue.png" 
+                alt="Cystoscopy Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+              />
+              <h3 className="text-lg font-semibold text-foreground mt-4">Cysto Instruments</h3>
+              <p className="text-sm text-muted-foreground mt-2">
+                Specialized cystoscopy instruments for urological procedures including scopes, obturators, resectoscopes, and adapters.
+              </p>
+            </div>
           </div>
         </div>
 
