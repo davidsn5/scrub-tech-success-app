@@ -42,7 +42,7 @@ const VisualResources = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Syringe Diagram */}
-            <div className="text-center">
+            <div className="text-center mt-8">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/syringe-diagram-cropped-blue.png" 
