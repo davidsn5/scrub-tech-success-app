@@ -243,5 +243,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "#7 Knife Handle\n(Large Scalpel Handle)",
     explanation: "The #7 knife handle is a large surgical scalpel handle approximately 6 inches (15 cm) in length with a textured grip for secure handling. This handle is compatible with larger blade sizes including #20, #21, #22, #23, and #24. The #7 handle is specifically designed for procedures requiring larger blades, such as making long incisions, amputations, and other surgeries where substantial cutting is needed. The longer, heavier design provides better control and leverage when using large surgical blades, making it essential for major surgical procedures.",
     image: "/lovable-uploads/knife-handle-7.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Kelly Clamp\n(Hemostat)",
+    explanation: "The Kelly clamp is a curved hemostat typically 5.5-6.25 inches (14-16 cm) in length, featuring distinctive half serrations on the jaws. The half serrations extend only partway along the jaw length, with the tips remaining smooth for delicate tissue handling. This design provides secure clamping of blood vessels while minimizing tissue trauma. Kelly clamps have ring handles with a ratcheting mechanism and are available in both straight and curved varieties. They are essential instruments for controlling bleeding from medium-sized vessels and for general tissue manipulation during surgical procedures.",
+    image: "/lovable-uploads/kelly-clamp.png"
   }
 ];
