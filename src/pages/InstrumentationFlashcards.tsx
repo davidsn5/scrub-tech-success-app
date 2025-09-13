@@ -33,7 +33,7 @@ const InstrumentationFlashcards = () => {
     },
     {
       id: 'orthopedic-instruments',
-      title: 'Orthopedic Instruments',
+      title: 'Ortho/Neuro Instruments',
       description: 'Specialized instruments for bone and joint procedures',
       icon: Bone,
       color: 'from-green-500/80 to-green-600/80',
