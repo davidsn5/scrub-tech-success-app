@@ -10,262 +10,262 @@ export interface Question {
 export const orthopedicInstrumentIdentificationQuestions: Question[] = [
   {
     id: 1,
-    question: "Identify this neurosurgical instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Aneurysm Clip Applier",
-      "Aneurysm Clip",
-      "Hemostatic Clip",
-      "Vascular Clamp"
+      "Rake Retractor",
+      "Hohmann Retractor",
+      "Army-Navy Retractor",
+      "Volkmann Retractor"
     ],
-    correctAnswer: 1,
-    explanation: "An aneurysm clip is a small, spring-loaded device used in neurosurgery to occlude cerebral aneurysms. The clip is placed across the neck of the aneurysm to prevent blood flow into the aneurysmal sac, thereby preventing rupture. These clips are made of titanium or other biocompatible materials and come in various sizes and configurations to accommodate different aneurysm anatomies.",
-    image: "/lovable-uploads/aneurysm-clip.png"
+    correctAnswer: 0,
+    explanation: "A rake retractor is a multi-pronged retractor designed for retracting soft tissues and muscle during orthopedic procedures. It features multiple sharp prongs (typically 3-6) that provide secure tissue grip and excellent exposure of underlying bone structures.",
+    image: "/lovable-uploads/rake-retractor.png"
   },
   {
     id: 2,
-    question: "Identify this orthopedic measuring instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Bone Calipers",
-      "Zimmer Townley Femur Calipers", 
-      "Femoral Measuring Device",
-      "Hip Calipers"
+      "Weitlaner Retractor",
+      "Gelpi Retractor",
+      "Self-Retaining Retractor",
+      "Finochietto Retractor"
     ],
     correctAnswer: 1,
-    explanation: "Zimmer Townley Femur Calipers are specialized measuring instruments used in orthopedic surgery, particularly during total hip arthroplasty procedures. These calipers are designed to accurately measure femoral dimensions, including the diameter and length of the femoral canal, to ensure proper sizing of femoral components.",
-    image: "/lovable-uploads/zimmer-townley-femur-calipers.png"
+    explanation: "The Gelpi retractor is a self-retaining retractor featuring two curved arms with sharp hooks and a spring-loaded ratcheting mechanism. This design allows the retractor to maintain constant tension and hold tissues apart without manual assistance.",
+    image: "/lovable-uploads/gelpi-retractor.png"
   },
   {
     id: 3,
-    question: "Identify this neurosurgical dissector:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "#1 Penfield Dissector",
-      "#2 Penfield Dissector",
-      "#3 Penfield Dissector",
-      "#4 Penfield Dissector"
+      "Key Elevator",
+      "Freer Elevator",
+      "Cobb Elevator",
+      "Langenbeck Periosteal Elevator"
     ],
     correctAnswer: 2,
-    explanation: "The #3 Penfield dissector is a delicate neurosurgical instrument used for blunt dissection and manipulation of neural tissue. It features a slightly curved, blunt tip that allows for gentle separation of tissues without causing trauma. This instrument is commonly used in cranial and spinal procedures for dissecting around nerves, blood vessels, and delicate brain tissue.",
-    image: "/lovable-uploads/penfield-3.png"
+    explanation: "The Cobb elevator is a specialized periosteal elevator commonly used in spinal surgery and orthopedic procedures. It features a flat, curved blade designed for lifting and separating the periosteum from bone surfaces, particularly along the spine.",
+    image: "/lovable-uploads/cobb-elevator.png"
   },
   {
     id: 4,
-    question: "Identify these specialized scissors:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Iris Scissors",
-      "Stevens Tenotomy Scissors",
-      "Microsurgical Scissors",
-      "Vannas Scissors"
+      "Wire Cutter",
+      "Bone Cutter",
+      "Pin Cutter",
+      "Cable Cutter"
     ],
-    correctAnswer: 1,
-    explanation: "Stevens tenotomy scissors are delicate, sharp-pointed scissors specifically designed for cutting tendons and other fine tissues. They feature straight or curved blades with very sharp points that allow for precise dissection in tight spaces. These scissors are commonly used in ophthalmic surgery, plastic surgery, and other procedures requiring fine, precise cuts.",
-    image: "/lovable-uploads/stevens-tenotomy-scissors.png"
+    correctAnswer: 0,
+    explanation: "Orthopedic wire cutters are specialized cutting instruments designed for cutting surgical wires, pins, and small orthopedic hardware. They feature strong, sharp cutting jaws with leverage handles that provide powerful cutting force for metallic materials.",
+    image: "/lovable-uploads/wire-cutter.png"
   },
   {
     id: 5,
-    question: "Identify this bone cutting instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Bone Rongeur",
-      "Stille-Horsley Bone Cutting Forceps",
-      "Leksell Rongeur",
-      "Bone Biting Forceps"
+      "Gelpi Retractor",
+      "Weitlaner Retractor",
+      "Balfour Retractor",
+      "Richardson Retractor"
     ],
     correctAnswer: 1,
-    explanation: "Stille-Horsley bone cutting forceps are heavy-duty orthopedic instruments designed for cutting and removing bone tissue. These forceps feature strong, sharp jaws with cutting edges that can effectively cut through bone, particularly in spinal and cranial procedures. They are commonly used in neurosurgery for craniotomies and laminectomies.",
-    image: "/lovable-uploads/stille-horsley-bone-cutting-forceps.png"
+    explanation: "The Weitlaner retractor is a self-retaining retractor featuring multiple sharp prongs or teeth on curved arms with a ratcheting mechanism. It maintains tension and holds tissues apart without manual assistance, making it ideal for superficial orthopedic procedures.",
+    image: "/lovable-uploads/weitlaner-retractor.png"
   },
   {
     id: 6,
-    question: "Identify this bone elevation instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Freer Elevator",
-      "Joseph Periosteal Elevator",
-      "Langenbeck Periosteal Elevator",
-      "Cobb Elevator"
+      "Richardson Retractor",
+      "Hohmann Retractor",
+      "Deaver Retractor",
+      "Army-Navy Retractor"
     ],
     correctAnswer: 1,
-    explanation: "The Joseph periosteal elevator is a surgical instrument used to lift and separate the periosteum (the membrane surrounding bone) from the underlying bone surface. It features a flat, curved blade that allows surgeons to carefully dissect and elevate soft tissues without damaging the bone. This instrument is commonly used in orthopedic and oral surgery procedures.",
-    image: "/lovable-uploads/joseph-periosteal-elevator.png"
+    explanation: "The Hohmann retractor is a specialized orthopedic retractor featuring a curved or angled blade designed for retracting muscles and soft tissues away from bone surfaces. Available in various angles and blade widths, these retractors provide excellent exposure of bony structures during joint surgeries.",
+    image: "/lovable-uploads/hohmann-retractor.png"
   },
   {
     id: 7,
-    question: "Identify this surgical elevator:",
+    question: "Identify this neurosurgical instrument:",
     choices: [
-      "Freer Elevator",
-      "Chandler Elevator",
-      "Cobb Elevator",
-      "Key Elevator"
+      "Jansen Rongeur",
+      "Pituitary Rongeur",
+      "Leksell Rongeur",
+      "Kerrison Rongeur"
     ],
     correctAnswer: 1,
-    explanation: "The Chandler elevator is a specialized surgical instrument used for lifting and retracting tissues, particularly in orthopedic and spinal procedures. It features a curved, blunt-tipped blade that allows for gentle elevation of soft tissues from bone surfaces. The instrument is designed to provide excellent visibility and access to surgical sites.",
-    image: "/lovable-uploads/chandler-elevator.png"
+    explanation: "A pituitary rongeur is a specialized rongeur with an elongated shaft and small, delicate cutting jaws designed for removing tissue in confined spaces, particularly during neurosurgical and endoscopic procedures. The long, angled design allows access to deep surgical sites through small openings.",
+    image: "/lovable-uploads/pituitary-rongeur.png"
   },
   {
     id: 8,
-    question: "Identify these neurosurgical forceps:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Aneurysm Clip Applier",
-      "Raney Clip Applying Forceps",
-      "Hemostatic Forceps",
-      "Vascular Forceps"
+      "Jansen Rongeur",
+      "Ruskin Rongeur",
+      "Duck Bill Rongeur",
+      "Leksell Rongeur"
     ],
     correctAnswer: 1,
-    explanation: "Raney clip applying forceps are specialized neurosurgical instruments used to place hemostatic clips on blood vessels during cranial procedures. These forceps are designed to hold and apply small metal clips that provide hemostasis by occluding vessels. The instrument features precise jaws that can manipulate the clips accurately for effective bleeding control.",
-    image: "/lovable-uploads/raney-clip-applying-forceps.png"
+    explanation: "The Ruskin rongeur is a specialized bone-cutting instrument featuring curved, spring-loaded handles and sharp cutting jaws designed for removing bone and cartilage with precision. The curved design allows for excellent access to bone surfaces while the spring-loaded mechanism provides consistent cutting force.",
+    image: "/lovable-uploads/ruskin-rongeur.png"
   },
   {
     id: 9,
-    question: "Identify these surgical retractors:",
+    question: "Identify this neurosurgical instrument:",
     choices: [
-      "Self-Retaining Retractors",
-      "Adson Beckman Retractors",
-      "Weitlaner Retractors",
-      "Gelpi Retractors"
+      "Pituitary Rongeur",
+      "Leksell Rongeur",
+      "Cushing Rongeur",
+      "Jansen Rongeur"
     ],
     correctAnswer: 1,
-    explanation: "Adson Beckman retractors are self-retaining surgical instruments used to hold tissues apart and maintain surgical exposure. These retractors feature multiple sharp or blunt prongs that can be adjusted to provide optimal retraction of various tissue types. They are commonly used in neurosurgery, spine surgery, and other procedures where sustained tissue retraction is needed.",
-    image: "/lovable-uploads/adson-beckman-retractors.png"
+    explanation: "The Leksell rongeur is a precision neurosurgical instrument featuring delicate, curved cutting jaws designed for removing small pieces of bone and tissue in neurosurgical procedures. Named after Swedish neurosurgeon Lars Leksell, this rongeur is characterized by its fine, precise cutting action.",
+    image: "/lovable-uploads/leksell-rongeur.png"
   },
   {
     id: 10,
-    question: "Identify this orthopedic tool:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Phillips Screwdriver",
-      "Hex Ortho Screwdriver",
-      "Torx Screwdriver",
-      "Standard Screwdriver"
+      "Ruskin Rongeur",
+      "Jansen Rongeur",
+      "Leksell Rongeur",
+      "Duck Bill Rongeur"
     ],
     correctAnswer: 1,
-    explanation: "A hex ortho screwdriver is a specialized surgical instrument used for inserting and removing hexagonal-headed screws in orthopedic procedures. The instrument features a hexagonal tip that matches the socket configuration of orthopedic screws used in bone fixation. This tool is essential for securing plates, rods, and other orthopedic hardware to bone.",
-    image: "/lovable-uploads/hex-ortho-screwdriver.png"
+    explanation: "The Jansen rongeur is a specialized bone-cutting instrument featuring curved cutting jaws and spring-loaded handles designed for controlled bone removal in orthopedic and neurosurgical procedures. The instrument provides excellent leverage and cutting force while maintaining precision control.",
+    image: "/lovable-uploads/jansen-rongeur.png"
   },
   {
     id: 11,
-    question: "Identify this bone cutting instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Bone Chisel",
-      "Stille Bone Chisel",
-      "Osteotome",
-      "Bone Gouge"
+      "Jansen Rongeur",
+      "Duck Bill Rongeur",
+      "Ruskin Rongeur",
+      "Leksell Rongeur"
     ],
     correctAnswer: 1,
-    explanation: "A Stille bone chisel is a precision orthopedic instrument used for shaping, cutting, and contouring bone tissue. It features a sharp, flat blade with a beveled cutting edge that allows surgeons to make precise cuts and remove bone material with controlled force. The instrument is commonly used in orthopedic and neurosurgical procedures for bone grafting and osteotomies.",
-    image: "/lovable-uploads/stille-bone-chisel.png"
+    explanation: "The Duck Bill Rongeur is a specialized bone-cutting instrument featuring curved jaws that resemble a duck's bill, designed for cutting and removing bone and cartilage in confined spaces. The unique curved design allows for precise bone removal in areas with limited access.",
+    image: "/lovable-uploads/duck-bill-rongeur.png"
   },
   {
     id: 12,
-    question: "Identify these hemostatic devices:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Surgical Clips",
-      "Raney Clips",
-      "Aneurysm Clips",
-      "Hemostatic Clips"
+      "Freer Elevator",
+      "Key Elevator",
+      "Cobb Elevator",
+      "Langenbeck Periosteal Elevator"
     ],
-    correctAnswer: 1,
-    explanation: "Raney clips are small, spring-loaded hemostatic devices used primarily in neurosurgery to control bleeding from scalp vessels during cranial procedures. These clips are applied to the edges of the scalp incision to compress blood vessels and provide hemostasis throughout the surgical procedure. They help maintain a bloodless surgical field, improving visualization.",
-    image: "/lovable-uploads/raney-clips.png"
+    correctAnswer: 0,
+    explanation: "The Freer elevator is a double-ended periosteal elevator with a straight, sharp edge on one end and a curved edge on the other. Originally designed for nasal and septal surgery, it's also commonly used in orthopedic procedures for elevating periosteum from bone surfaces.",
+    image: "/lovable-uploads/freer-elevator.png"
   },
   {
     id: 13,
-    question: "Identify this orthopedic striking instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Bone Mallet",
-      "Meade Ortho Mallet",
-      "Surgical Hammer",
-      "Orthopedic Mallet"
+      "Freer Elevator",
+      "Key Elevator",
+      "Cobb Elevator",
+      "Joseph Periosteal Elevator"
     ],
     correctAnswer: 1,
-    explanation: "The Meade orthopedic mallet is a specialized surgical hammer designed for driving chisels, osteotomes, and other cutting instruments during bone procedures. It features a weighted head that provides controlled impact force while minimizing vibration and shock to the surgeon's hand. The mallet is commonly used in orthopedic surgeries for bone cutting and shaping.",
-    image: "/lovable-uploads/meade-ortho-mallet.png"
+    explanation: "The Key elevator is a robust periosteal elevator featuring a wide, flat blade with a beveled edge designed for separating periosteum from bone surfaces during orthopedic procedures. The broad, angled blade provides excellent leverage for tissue elevation.",
+    image: "/lovable-uploads/key-elevator.png"
   },
   {
     id: 14,
-    question: "Identify this spinal instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Laminectomy Rongeur",
-      "Kerrison Laminectomy Rongeur",
-      "Bone Rongeur",
-      "Spinal Rongeur"
+      "Bone Rasp",
+      "Putti Rasp",
+      "File",
+      "Bone Scraper"
     ],
     correctAnswer: 1,
-    explanation: "The Kerrison laminectomy rongeur is a specialized neurosurgical instrument designed for removing bone and ligament during spinal procedures, particularly laminectomies. It features angled jaws with sharp cutting edges that can access tight spaces around the spinal column. The instrument allows surgeons to remove small pieces of bone (lamina) and ligamentum flavum with precision.",
-    image: "/lovable-uploads/kerrison-laminectomy-rongeur.png"
+    explanation: "The Putti rasp is a double-ended bone rasp featuring coarse, textured surfaces designed for shaping and smoothing bone during orthopedic procedures. Named after Italian orthopedic surgeon Vittorio Putti, this instrument is essential for bone preparation, particularly in joint replacement surgeries.",
+    image: "/lovable-uploads/putti-rasp.png"
   },
   {
     id: 15,
-    question: "Identify this surgical retractor:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Self-Retaining Retractor",
-      "Alm Retractor",
-      "Weitlaner Retractor",
-      "Gelpi Retractor"
+      "Curette",
+      "Bone Curette",
+      "Scoop",
+      "Bone Scraper"
     ],
     correctAnswer: 1,
-    explanation: "The Alm retractor is a self-retaining surgical instrument used to hold tissues apart and maintain surgical exposure during various procedures. It features adjustable arms with sharp or blunt prongs that can be positioned to retract different tissue types. The retractor's design allows surgeons to work with both hands free while maintaining optimal visualization.",
-    image: "/lovable-uploads/alm-retractor.png"
+    explanation: "A bone curette is a spoon-shaped surgical instrument with a sharp, curved cutting edge designed for scraping and removing tissue, bone fragments, or infected material from bone surfaces. The rounded, scooped end allows for controlled tissue removal while minimizing damage to surrounding healthy tissue.",
+    image: "/lovable-uploads/bone-curette.png"
   },
   {
     id: 16,
-    question: "Identify this bone elevation instrument:",
+    question: "Identify this orthopedic surgical instrument:",
     choices: [
-      "Joseph Periosteal Elevator",
-      "Key Periosteal Elevator",
-      "Freer Elevator",
-      "Langenbeck Periosteal Elevator"
+      "Surgical Hammer",
+      "Bone Mallet",
+      "Orthopedic Mallet",
+      "Impact Tool"
     ],
     correctAnswer: 1,
-    explanation: "The Key periosteal elevator is a specialized surgical instrument designed to lift and separate the periosteum from bone surfaces. It features a flat, curved blade with a sharp edge that allows surgeons to carefully dissect periosteal tissue while preserving the underlying bone structure. This instrument is commonly used in orthopedic, oral, and reconstructive surgeries.",
-    image: "/lovable-uploads/key-periosteal-elevator.png"
+    explanation: "A bone mallet is a specialized surgical hammer with a heavy metal head and ergonomic handle designed for delivering controlled impact force during orthopedic procedures. The weighted head provides precise force transmission for driving chisels, osteotomes, and bone punches.",
+    image: "/lovable-uploads/bone-mallet.png"
   },
   {
     id: 17,
-    question: "Identify these surgical pliers:",
+    question: "Identify this surgical instrument:",
     choices: [
-      "Surgical Pliers",
-      "Needle-Nose Pliers",
-      "Wire Cutting Pliers",
-      "Hemostatic Pliers"
+      "#3 Knife Handle",
+      "Beaver Knife Handle",
+      "#4 Knife Handle",
+      "#7 Knife Handle"
     ],
     correctAnswer: 1,
-    explanation: "Needle-nose pliers are precision surgical instruments featuring long, narrow, pointed jaws that provide excellent grip and manipulation capabilities in confined spaces. They are used for grasping small objects, bending wire, manipulating sutures, and handling delicate hardware during surgical procedures. The pointed design allows access to areas where standard forceps cannot reach.",
-    image: "/lovable-uploads/needle-nose-pliers.png"
+    explanation: "The Beaver knife handle is a specialized surgical handle designed to accommodate small, precise surgical blades for delicate cutting procedures. Features a textured, non-slip grip and secure blade attachment mechanism for optimal control during fine dissection work.",
+    image: "/lovable-uploads/beaver-knife-handle.png"
   },
   {
     id: 18,
-    question: "Identify this orthopedic cutting instrument:",
+    question: "Identify this set of orthopedic surgical instruments:",
     choices: [
-      "Pin Cutter",
-      "Large Bone Pin Cutter",
-      "Wire Cutter",
-      "Rod Cutter"
+      "Osteotomes",
+      "Lambotte Osteotomes",
+      "Bone Chisels",
+      "Bone Cutting Tools"
     ],
     correctAnswer: 1,
-    explanation: "The Large Bone Pin Cutter is a heavy-duty orthopedic instrument designed specifically for cutting large diameter pins, wires, and rods used in orthopedic fixation. It features robust cutting jaws with leverage handles that provide the mechanical advantage needed to cut through thick metal hardware. This instrument is essential during procedures involving the removal or adjustment of orthopedic implants.",
-    image: "/lovable-uploads/large-bone-pin-cutter.png"
+    explanation: "Lambotte osteotomes are precision bone-cutting instruments featuring flat, beveled cutting edges in various widths. Named after Belgian surgeon Albin Lambotte, these osteotomes are designed for precise bone cutting, shaping, and contouring during orthopedic procedures.",
+    image: "/lovable-uploads/lambotte-osteotomes.png"
   },
   {
     id: 19,
-    question: "Identify this neurosurgical retractor:",
+    question: "Identify this surgical instrument:",
     choices: [
-      "Brain Retractor",
-      "Cerebellar Retractor",
-      "Cortical Retractor",
-      "Neural Retractor"
+      "#4 Knife Handle",
+      "#3 Knife Handle",
+      "#7 Knife Handle",
+      "Beaver Knife Handle"
     ],
     correctAnswer: 1,
-    explanation: "The Cerebellar retractor is a specialized neurosurgical instrument designed for retracting and protecting the cerebellum during posterior fossa procedures. It features a curved, spatulated blade that conforms to the cerebellar surface, providing gentle retraction without causing tissue trauma. This instrument is essential for accessing the brainstem, fourth ventricle, and cerebellopontine angle.",
-    image: "/lovable-uploads/cerebellar-retractor.png"
+    explanation: "The #3 knife handle is a standard surgical scalpel handle designed to accommodate #10, #11, #12, and #15 surgical blades. Features a textured, non-slip grip and secure blade attachment mechanism for optimal control during cutting procedures.",
+    image: "/lovable-uploads/knife-handle-3.png"
   },
   {
     id: 20,
-    question: "Identify this spinal instrument:",
+    question: "Identify this surgical instrument:",
     choices: [
-      "Disc Rongeur",
-      "Cushing Intervertebral Disc Rongeur",
-      "Kerrison Rongeur",
-      "Laminectomy Rongeur"
+      "Curved Retractor",
+      "Cobra Retractor",
+      "Snake Retractor",
+      "S-Shaped Retractor"
     ],
     correctAnswer: 1,
-    explanation: "The Cushing intervertebral disc rongeur is a specialized neurosurgical instrument designed for removing disc material during discectomy procedures. It features angled, cup-shaped jaws that can grasp and remove herniated or degenerated disc tissue with precision. The instrument's design allows surgeons to access the disc space through small incisions while maintaining control over tissue removal.",
-    image: "/lovable-uploads/cushing-intervertebral-disc-rongeur.png"
+    explanation: "The Cobra retractor is a curved, handheld retractor featuring a smooth, curved blade designed for retracting soft tissues and providing exposure during surgical procedures. The distinctive curved shape resembles a cobra's profile, hence the name.",
+    image: "/lovable-uploads/cobra-retractor.png"
   }
 ];
