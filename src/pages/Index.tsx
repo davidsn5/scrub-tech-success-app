@@ -528,6 +528,59 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Visual Resources Grid */}
+        <div className="mb-6 sm:mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            {/* Syringe Diagram */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+                <img 
+                  src="/lovable-uploads/syringe-diagram.png" 
+                  alt="Syringe Parts Diagram - Shows labeled components including Hub, Barrel, Flange, Plunger, Rubber Stopper, and Luer-Lock/Slip Tip"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mt-3 text-center">Syringe Components</h4>
+            </Card>
+
+            {/* Hypodermic Needle Diagram */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+                <img 
+                  src="/lovable-uploads/hypodermic-needle-diagram.png" 
+                  alt="Hypodermic Needle Parts Diagram - Shows labeled components including Lumen, Bevel, Hub, Shaft, and Plastic Sheath/Needle Protective Cover"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mt-3 text-center">Needle Components</h4>
+            </Card>
+
+            {/* Medical Supplies Diagram */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+                <img 
+                  src="/lovable-uploads/medical-supplies-diagram.png" 
+                  alt="Medical Supplies Diagram - Shows labeled Vial, Ampule, Medication Tube, and Alcohol Wipe components"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mt-3 text-center">Medical Supplies</h4>
+            </Card>
+
+            {/* Laparoscopic Instruments Diagram */}
+            <Card className="p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square w-full bg-white rounded-lg overflow-hidden shadow-inner">
+                <img 
+                  src="/lovable-uploads/laparoscopic-instruments-diagram.png" 
+                  alt="Laparoscopic Instruments Diagram - Shows labeled components including Obturator, Stop, Sheath, Biopsy Port, Stop Cock, Albarron Bridge, Ellik Adaptor, Resectoscope, and 12° Scope"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mt-3 text-center">Laparoscopic Instruments</h4>
+            </Card>
+          </div>
+        </div>
+
         {/* Fire Quiz */}
         <Card className="p-6 sm:p-8 bg-gradient-to-br from-white/90 via-red-50/80 to-orange-100/70 backdrop-blur-sm border-orange-200/50 shadow-xl mb-6 sm:mb-8">
           <div className="text-center">
