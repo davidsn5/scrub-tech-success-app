@@ -366,5 +366,11 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Nerve Hook",
     explanation: "The Nerve Hook is a specialized neurosurgical instrument designed to gently manipulate and retract nerve tissues during surgical procedures. This delicate instrument features a small, smooth hook at the tip that allows surgeons to carefully lift, move, or isolate nerve fibers without causing damage. The curved design and precise tip make it ideal for working in confined spaces around delicate neural structures, particularly useful in procedures involving nerve decompression, tumor removal, and spinal surgery.",
     image: "/lovable-uploads/nerve-hook.png"
+  },
+  {
+    question: "What surgical instrument is shown in this image?",
+    answer: "Curette",
+    explanation: "A Curette is a surgical instrument with a small, spoon-shaped or loop-shaped tip used for scraping or removing tissue from body cavities or surfaces. The instrument features a long handle for precise control and a curved working end that allows surgeons to effectively remove soft tissue, debris, or abnormal growths. Curettes are commonly used in orthopedic procedures for bone cleaning, in gynecological procedures for uterine tissue removal, and in various other surgical specialties for tissue debridement and cavity cleaning.",
+    image: "/lovable-uploads/curette.png"
   }
 ];
