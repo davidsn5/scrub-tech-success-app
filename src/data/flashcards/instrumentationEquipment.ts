@@ -219,5 +219,11 @@ export const instrumentationEquipment: FlashcardItem[] = [
     answer: "Yankauer Suction\n(Rigid Suction Tip)",
     explanation: "Yankauer suction tips are rigid surgical suction devices typically 10-12 inches (25-30 cm) in length, featuring a curved, angled tip with multiple holes for effective fluid and debris removal. The large central opening and side holes prevent tissue from being drawn into the suction while maintaining strong suction capability. The ergonomic handle provides comfortable grip during prolonged procedures. These suction tips are essential in general surgery, ENT procedures, and any surgery requiring effective clearing of blood, irrigation fluid, and surgical debris from the operative field.",
     image: "/lovable-uploads/96b445f5-b5c5-46b6-af48-c19a6184e9e4.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Doyen Intestinal Clamp\n(Bowel Clamp)",
+    explanation: "The Doyen intestinal clamp is a large, curved surgical clamp typically 8-10 inches (20-25 cm) in length, designed specifically for clamping bowel and other intestinal structures. It features broad, atraumatic jaws with longitudinal serrations that provide secure closure without crushing the bowel wall or damaging the intestinal mucosa. The curved design allows for easy application around bowel loops and provides excellent control during intestinal anastomosis, resection, and repair procedures. The clamp's gentle pressure prevents tissue necrosis while maintaining complete occlusion of the bowel lumen, making it essential for gastrointestinal surgery.",
+    image: "/lovable-uploads/doyen-intestinal-clamp.png"
   }
 ];
