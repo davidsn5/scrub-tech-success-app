@@ -191,11 +191,16 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
               
               {currentCard.image ? (
                 <div className="mb-3 sm:mb-4 flex justify-center">
-                  <img 
-                    src={currentCard.image} 
-                    alt="Surgical instrument" 
-                    className="max-w-full max-h-80 sm:max-h-[400px] object-contain rounded-lg shadow-md"
-                  />
+                  <div className="relative">
+                    <img 
+                      src={currentCard.image} 
+                      alt="Surgical instrument" 
+                      className="max-w-full max-h-80 sm:max-h-[400px] object-contain rounded-lg shadow-md"
+                    />
+                    <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                      © SurgicalTechReview.com
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <h3 className={`text-base sm:text-lg lg:text-xl font-bold ${categoryColors?.color?.includes('blue') ? 'text-blue-800' : categoryColors?.color?.includes('purple') ? 'text-purple-800' : categoryColors?.color?.includes('orange') ? 'text-orange-800' : categoryColors?.color?.includes('teal') ? 'text-teal-800' : categoryColors?.color?.includes('green') ? 'text-green-800' : categoryColors?.color?.includes('indigo') ? 'text-indigo-800' : 'text-gray-800'} mb-3 sm:mb-4 leading-relaxed text-center break-words`}>

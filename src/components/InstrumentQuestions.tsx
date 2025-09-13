@@ -315,12 +315,15 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
               {/* Instrument Image */}
               {currentQuestion.image && (
                 <div className="flex justify-center">
-                  <div className="bg-white p-4 rounded-lg shadow-md border">
+                  <div className="bg-white p-4 rounded-lg shadow-md border relative">
                     <img 
                       src={currentQuestion.image} 
                       alt="Surgical instrument"
                       className="max-w-full h-64 object-contain"
                     />
+                    <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                      © SurgicalTechReview.com
+                    </div>
                   </div>
                 </div>
               )}
