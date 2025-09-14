@@ -388,12 +388,20 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (!accessError && accessData?.hasAccess) {
         console.log('🚫 PREVENTING DUPLICATE PAYMENT - User already has premium access');
         
-        // User already has access, show confirmation and refresh their status
-        toast({
-          title: "You're Already Premium! 🎉",
-          description: "You already have premium access. No additional payment needed.",
-          duration: 6000,
-        });
+        // Check if we've already shown this toast recently
+        const lastShown = localStorage.getItem('duplicatePaymentToastShown');
+        const now = Date.now();
+        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+        
+        if (!lastShown || now - parseInt(lastShown) > oneHour) {
+          // User already has access, show confirmation and refresh their status
+          toast({
+            title: "You're Already Premium! 🎉",
+            description: "You already have premium access. No additional payment needed.",
+            duration: 6000,
+          });
+          localStorage.setItem('duplicatePaymentToastShown', now.toString());
+        }
         
         // Force refresh their subscription status to ensure UI is updated immediately
         await checkSubscription();
@@ -475,11 +483,20 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       if (!accessError && accessData?.hasAccess) {
         console.log('✅ User already has premium access');
-        toast({
-          title: "You're Already Premium! 🎉",
-          description: "You already have premium access to all features. Your subscription is active.",
-          duration: 5000,
-        });
+        
+        // Check if we've already shown this toast recently
+        const lastShown = localStorage.getItem('premiumAccessToastShown');
+        const now = Date.now();
+        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+        
+        if (!lastShown || now - parseInt(lastShown) > oneHour) {
+          toast({
+            title: "You're Already Premium! 🎉",
+            description: "You already have premium access to all features. Your subscription is active.",
+            duration: 5000,
+          });
+          localStorage.setItem('premiumAccessToastShown', now.toString());
+        }
         
         // Refresh their subscription status
         await checkSubscription();

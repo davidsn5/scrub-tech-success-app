@@ -141,10 +141,18 @@ const Index = () => {
     const hasPremium = await checkAccessBeforeUpgrade();
 
     if (hasPremium) {
-      toast({
-        title: "Premium Access",
-        description: `Enjoy full access to ${featureName || 'this feature'}.`,
-      });
+      // Check if we've already shown this toast recently  
+      const lastShown = localStorage.getItem('premiumFeatureToastShown');
+      const now = Date.now();
+      const thirtyMinutes = 30 * 60 * 1000; // 30 minutes in milliseconds
+      
+      if (!lastShown || now - parseInt(lastShown) > thirtyMinutes) {
+        toast({
+          title: "Premium Access",
+          description: `Enjoy full access to ${featureName || 'this feature'}.`,
+        });
+        localStorage.setItem('premiumFeatureToastShown', now.toString());
+      }
       navigate(targetPath);
       return;
     }
