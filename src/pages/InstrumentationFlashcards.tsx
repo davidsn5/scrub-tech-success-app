@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors, User, Bone, Heart } from 'lucide-react';
+import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
@@ -53,7 +53,7 @@ const InstrumentationFlashcards = () => {
       id: 'obgyn-instruments',
       title: 'OB/GYN/Urology/Rectal',
       description: 'Specialized instruments for obstetric, gynecologic, urologic, and rectal procedures',
-      icon: Heart,
+      icon: Stethoscope,
       color: 'from-pink-500/80 to-purple-600/80',
       bgColor: 'from-pink-50/90 to-purple-100/90',
       borderColor: 'border-pink-200/60'
