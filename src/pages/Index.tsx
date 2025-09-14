@@ -405,8 +405,8 @@ const Index = () => {
             Instrumentation Review
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {/* Spanning from left edge of first column to right edge of second column */}
-            <Card className="lg:col-span-2 p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg">
+            {/* Spanning from left edge of Intro to Surgical Technology to right edge of Medical Terminology */}
+            <Card className="lg:col-span-4 p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg">
               <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-orange-500/80 to-orange-600/80 flex-shrink-0">
