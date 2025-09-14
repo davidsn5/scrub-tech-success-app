@@ -171,15 +171,15 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     primaryGradient: 'from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800',
     accent: 'teal'
   } : {
-    bgGradient: 'from-purple-50 via-white to-purple-100',
-    headerBg: 'bg-purple-50',
-    buttonHover: 'hover:bg-purple-100 hover:text-purple-700',
-    titleColor: 'text-purple-700',
-    upgradeButton: 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800',
-    progressBar: 'bg-purple-600',
-    primaryButton: 'bg-purple-600 hover:bg-purple-700',
-    primaryGradient: 'from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800',
-    accent: 'purple'
+    bgGradient: 'from-blue-50 via-white to-blue-100',
+    headerBg: 'bg-blue-50',
+    buttonHover: 'hover:bg-blue-100 hover:text-blue-700',
+    titleColor: 'text-blue-700',
+    upgradeButton: 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800',
+    progressBar: 'bg-blue-600',
+    primaryButton: 'bg-blue-600 hover:bg-blue-700',
+    primaryGradient: 'from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800',
+    accent: 'blue'
   };
 
   return (

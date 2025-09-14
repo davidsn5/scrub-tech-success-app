@@ -27,9 +27,9 @@ const InstrumentationFlashcards = () => {
       title: 'General Instrument Question Review',
       description: 'Practice questions focusing on surgical instrument identification and usage',
       icon: Target,
-      color: 'from-purple-500/80 to-purple-600/80',
-      bgColor: 'from-purple-50/90 to-purple-100/90',
-      borderColor: 'border-purple-200/60'
+      color: 'from-blue-500/80 to-blue-600/80',
+      bgColor: 'from-blue-50/90 to-blue-100/90',
+      borderColor: 'border-blue-200/60'
     },
     {
       id: 'orthopedic-instruments',
