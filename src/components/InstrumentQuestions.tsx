@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { generalInstrumentsQuestions, Question } from '@/data/questions/generalInstruments';
 import { orthopedicInstrumentIdentificationQuestions } from '@/data/questions/orthopedicInstrumentIdentification';
 import { obgynInstrumentsQuestions } from '@/data/questions/obgynInstruments';
+import { plasticsInstrumentQuestions } from '@/data/questions/plasticsInstruments';
 import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -29,6 +30,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     ? orthopedicInstrumentIdentificationQuestions 
     : category === 'obgyn-instrument-questions'
     ? obgynInstrumentsQuestions
+    : category === 'plastics-instrument-questions'
+    ? plasticsInstrumentQuestions
     : generalInstrumentsQuestions;
   
   // Use limited questions for non-premium users
