@@ -353,46 +353,46 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 mt-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 mt-8">
         {/* Progress Tracker */}
-        <div className="mb-6 sm:mb-8">
-          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
+        <div className="mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
             Your Progress
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
-              <div className="flex items-center space-x-2 sm:space-x-3">
-                <Target className="h-6 w-6 sm:h-8 sm:w-8 text-accent flex-shrink-0" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <Target className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{getAccuracyPercentage()}%</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Accuracy Rate</p>
+                  <p className="text-sm sm:text-lg font-semibold text-foreground">{getAccuracyPercentage()}%</p>
+                  <p className="text-xs text-muted-foreground">Accuracy Rate</p>
                 </div>
               </div>
             </Card>
-            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
-              <div className="flex items-center space-x-2 sm:space-x-3">
-                <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-primary flex-shrink-0" />
+            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{progress.totalQuestionsAttempted}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Questions Completed</p>
+                  <p className="text-sm sm:text-lg font-semibold text-foreground">{progress.totalQuestionsAttempted}</p>
+                  <p className="text-xs text-muted-foreground">Questions Completed</p>
                 </div>
               </div>
             </Card>
-            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
-              <div className="flex items-center space-x-2 sm:space-x-3">
-                <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-secondary flex-shrink-0" />
+            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-secondary flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{progress.currentStreak}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Day Streak</p>
+                  <p className="text-sm sm:text-lg font-semibold text-foreground">{progress.currentStreak}</p>
+                  <p className="text-xs text-muted-foreground">Day Streak</p>
                 </div>
               </div>
             </Card>
-            <Card className="gradient-card shadow-card border-border/50 p-4 sm:p-6">
-              <div className="flex items-center space-x-2 sm:space-x-3">
-                <RotateCcw className="h-6 w-6 sm:h-8 sm:w-8 text-muted-foreground flex-shrink-0" />
+            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <RotateCcw className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-lg sm:text-2xl font-semibold text-foreground">{progress.totalMissedQuestions}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Missed Questions</p>
+                  <p className="text-sm sm:text-lg font-semibold text-foreground">{progress.totalMissedQuestions}</p>
+                  <p className="text-xs text-muted-foreground">Missed Questions</p>
                 </div>
               </div>
             </Card>
