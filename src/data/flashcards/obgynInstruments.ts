@@ -97,5 +97,35 @@ export const obgynInstruments: FlashcardItem[] = [
     answer: "Sims Uterine Sound",
     explanation: "Graduated uterine sound used to assess the depth and direction of the uterine cavity prior to procedures such as dilation or IUD placement.",
     image: "/lovable-uploads/sims-uterine-sound.png"
+  },
+  {
+    question: "What is this weighted speculum?",
+    answer: "Auvard Weighted Speculum",
+    explanation: "A self-retaining vaginal speculum with a heavy weight that uses gravity to maintain retraction of the posterior vaginal wall. The weight provides hands-free visualization during gynecological procedures and examinations.",
+    image: "/lovable-uploads/auvard-weighted-speculum.png"
+  },
+  {
+    question: "What are these curved forceps?",
+    answer: "Somer Uterine Elevating Forceps",
+    explanation: "Curved forceps designed to grasp and elevate the uterus during gynecological procedures. They provide controlled manipulation and positioning of the uterus for optimal surgical exposure and access.",
+    image: "/lovable-uploads/somer-uterine-elevating-forceps.png"
+  },
+  {
+    question: "What is this rectal speculum?",
+    answer: "Pratt Rectal Speculum",
+    explanation: "A bivalve speculum specifically designed for rectal and anal examinations. It features smooth, tapered blades that gently dilate the anal canal for visualization of the rectum and lower anal canal.",
+    image: "/lovable-uploads/pratt-rectal-speculum.png"
+  },
+  {
+    question: "What is this adjustable speculum?",
+    answer: "Breisky-Navratil Vaginal Speculum",
+    explanation: "An adjustable vaginal speculum with a locking mechanism that allows for precise control of blade separation. It provides excellent visualization and can be locked in position for extended procedures requiring sustained retraction.",
+    image: "/lovable-uploads/breisky-navratil-vaginal-speculum.png"
+  },
+  {
+    question: "What are these delicate grasping forceps?",
+    answer: "Hulka Tenaculum Forceps",
+    explanation: "Delicate tenaculum forceps with fine, curved tips designed for grasping and manipulating delicate gynecological tissues. They provide precise control and minimal tissue trauma during laparoscopic and open gynecological procedures.",
+    image: "/lovable-uploads/hulka-tenaculum-forceps.png"
   }
 ];
