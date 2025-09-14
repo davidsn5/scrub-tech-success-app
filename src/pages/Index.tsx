@@ -232,17 +232,17 @@ const Index = () => {
                       </Button>
                     </div>
                   ) : (
-                    <div className="space-y-1 gradient-card rounded-md p-1.5 border border-border/50 backdrop-blur-sm shadow-card">
-                      <div className="flex items-center justify-center space-x-1">
-                        <div className="w-1 h-1 bg-accent rounded-full animate-pulse"></div>
+                    <div className="space-y-0.5 gradient-card rounded-sm p-1 border border-border/50 backdrop-blur-sm shadow-card">
+                      <div className="flex items-center justify-center space-x-0.5">
+                        <div className="w-0.5 h-0.5 bg-accent rounded-full animate-pulse"></div>
                         <p className="text-xs text-slate-700 font-medium">{user.email}</p>
                       </div>
-                      <div className="flex flex-col space-y-1">
+                      <div className="flex flex-col space-y-0.5">
                         {isSubscribed && !isAdmin && (
                           <Link to="/account" className="w-full">
-                            <Button variant="outline" size="sm" className="w-full hover:bg-slate-50 h-6 px-2 text-xs">
-                              <Settings className="h-2 w-2 mr-1" />
-                              Manage Account
+                            <Button variant="outline" size="sm" className="w-full hover:bg-slate-50 h-5 px-1 text-xs">
+                              <Settings className="h-1.5 w-1.5 mr-0.5" />
+                              Account
                             </Button>
                           </Link>
                         )}
@@ -250,9 +250,9 @@ const Index = () => {
                           onClick={signOut} 
                           variant="outline" 
                           size="sm" 
-                          className="w-full hover:bg-red-50 hover:border-red-200 hover:text-red-600 h-6 px-2 text-xs"
+                          className="w-full hover:bg-red-50 hover:border-red-200 hover:text-red-600 h-5 px-1 text-xs"
                         >
-                          <LogOut className="h-2 w-2 mr-1" />
+                          <LogOut className="h-1.5 w-1.5 mr-0.5" />
                           Sign Out
                         </Button>
                       </div>
