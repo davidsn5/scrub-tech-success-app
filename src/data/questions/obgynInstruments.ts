@@ -202,5 +202,122 @@ export const obgynInstrumentsQuestions: Question[] = [
     correctAnswer: 1,
     explanation: "Graduated uterine sound used to assess the depth and direction of the uterine cavity prior to procedures such as dilation or IUD placement.",
     image: "/lovable-uploads/sims-uterine-sound.png"
+  },
+  {
+    id: 16,
+    question: "Identify this weighted speculum:",
+    choices: [
+      "Cusco Vaginal Speculum",
+      "Auvard Weighted Speculum",
+      "Kristeller Vaginal Speculum",
+      "Breisky-Navratil Vaginal Speculum"
+    ],
+    correctAnswer: 1,
+    explanation: "A self-retaining vaginal speculum with a heavy weight that uses gravity to maintain retraction of the posterior vaginal wall. The weight provides hands-free visualization during gynecological procedures and examinations.",
+    image: "/lovable-uploads/auvard-weighted-speculum.png"
+  },
+  {
+    id: 17,
+    question: "Identify these curved forceps:",
+    choices: [
+      "Heaney Ballantine Clamps",
+      "Somer Uterine Elevating Forceps",
+      "Rochester Carmalt Forceps",
+      "Kelly Clamps"
+    ],
+    correctAnswer: 1,
+    explanation: "Curved forceps designed to grasp and elevate the uterus during gynecological procedures. They provide controlled manipulation and positioning of the uterus for optimal surgical exposure and access.",
+    image: "/lovable-uploads/somer-uterine-elevating-forceps.png"
+  },
+  {
+    id: 18,
+    question: "Identify this rectal speculum:",
+    choices: [
+      "Cusco Vaginal Speculum",
+      "Pratt Rectal Speculum",
+      "Kristeller Vaginal Speculum",
+      "Doyen Lateral Speculum"
+    ],
+    correctAnswer: 1,
+    explanation: "A bivalve speculum specifically designed for rectal and anal examinations. It features smooth, tapered blades that gently dilate the anal canal for visualization of the rectum and lower anal canal.",
+    image: "/lovable-uploads/pratt-rectal-speculum.png"
+  },
+  {
+    id: 19,
+    question: "Identify this adjustable speculum:",
+    choices: [
+      "Cusco Vaginal Speculum",
+      "Breisky-Navratil Vaginal Speculum",
+      "Auvard Weighted Speculum",
+      "Kristeller Vaginal Speculum"
+    ],
+    correctAnswer: 1,
+    explanation: "An adjustable vaginal speculum with a locking mechanism that allows for precise control of blade separation. It provides excellent visualization and can be locked in position for extended procedures requiring sustained retraction.",
+    image: "/lovable-uploads/breisky-navratil-vaginal-speculum.png"
+  },
+  {
+    id: 20,
+    question: "Identify these delicate grasping forceps:",
+    choices: [
+      "Braun Tenaculum",
+      "Hulka Tenaculum Forceps",
+      "Allis Forceps",
+      "Babcock Forceps"
+    ],
+    correctAnswer: 1,
+    explanation: "Delicate tenaculum forceps with fine, curved tips designed for grasping and manipulating delicate gynecological tissues. They provide precise control and minimal tissue trauma during laparoscopic and open gynecological procedures.",
+    image: "/lovable-uploads/hulka-tenaculum-forceps.png"
+  },
+  {
+    id: 21,
+    question: "Identify these multi-tooth grasping forceps:",
+    choices: [
+      "Braun Tenaculum",
+      "Jacobs Vulsellum Forceps",
+      "Allis Forceps",
+      "Kocher Clamp"
+    ],
+    correctAnswer: 1,
+    explanation: "Heavy-duty forceps with multiple sharp teeth designed to securely grasp and hold the cervix or uterine tissue. The multiple teeth provide excellent grip and traction during gynecological procedures, particularly useful for cervical manipulation during hysterectomies.",
+    image: "/lovable-uploads/jacobs-vulsellum-forceps.png"
+  },
+  {
+    id: 22,
+    question: "Identify this specialized needle driver:",
+    choices: [
+      "Mayo-Hegar Needle Driver",
+      "Heaney Needle Driver",
+      "Crile-Wood Needle Driver",
+      "Olsen-Hegar Needle Driver"
+    ],
+    correctAnswer: 1,
+    explanation: "A long needle driver with curved jaws specifically designed for gynecological surgery. Features gold-plated finger rings for enhanced grip and is commonly used in deep pelvic procedures where precise suturing is required, such as during hysterectomies.",
+    image: "/lovable-uploads/heaney-needle-driver.png"
+  },
+  {
+    id: 23,
+    question: "Identify these long curved forceps:",
+    choices: [
+      "Rochester Carmalt Forceps",
+      "Bozeman Uterine Dressing Forceps",
+      "Heaney Ballantine Clamps",
+      "Kelly Clamps"
+    ],
+    correctAnswer: 1,
+    explanation: "Long, curved forceps designed for placing and removing packing or dressings in the uterine cavity and deep vaginal fornices. The extended length and curved design allow access to difficult-to-reach areas during gynecological procedures.",
+    image: "/lovable-uploads/bozeman-uterine-dressing-forceps.png"
+  },
+  {
+    id: 24,
+    question: "Identify this endocervical sampling instrument:",
+    choices: [
+      "Endocervical Curette",
+      "Kevorkian-Younge Endocervical Curette",
+      "Novak Curette",
+      "Randall Stone Curette"
+    ],
+    correctAnswer: 1,
+    explanation: "A specialized curette with a long, thin shaft and small cupped tip designed specifically for sampling endocervical tissue. Features a comfortable handle and is commonly used for obtaining tissue samples from the endocervical canal for pathological examination.",
+    image: "/lovable-uploads/kevorkian-younge-endocervical-curette.png"
   }
 ];
