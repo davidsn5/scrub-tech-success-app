@@ -55,11 +55,11 @@ All colors MUST be HSL.
     --shadow-lg: 0 10px 15px -3px hsl(25 43% 11% / 0.1), 0 4px 6px -2px hsl(25 43% 11% / 0.05);
     --shadow-xl: 0 20px 25px -5px hsl(25 43% 11% / 0.1), 0 10px 10px -5px hsl(25 43% 11% / 0.04);
 
-    /* Plastics section color - bright cyan #53EAFD */
-    --plastics: 185 96% 66%;
+    /* Plastics section color - bright cyan #3BB8DB */
+    --plastics: 194 69% 54%;
     --plastics-foreground: 0 0% 98%;
-    --plastics-light: 185 95% 80%;
-    --plastics-dark: 185 96% 56%;
+    --plastics-light: 194 69% 70%;
+    --plastics-dark: 194 69% 44%;
 
     /* Sidebar variables */
     --sidebar-background: 25 95% 53%;
@@ -109,10 +109,10 @@ All colors MUST be HSL.
     --gradient-card: linear-gradient(135deg, hsl(25 22% 12%), hsl(25 22% 15%));
 
     /* Plastics section color - dark mode */
-    --plastics: 185 96% 66%;
+    --plastics: 194 69% 54%;
     --plastics-foreground: 25 25% 8%;
-    --plastics-light: 185 95% 80%;
-    --plastics-dark: 185 96% 56%;
+    --plastics-light: 194 69% 70%;
+    --plastics-dark: 194 69% 44%;
 
     --sidebar-background: 25 25% 8%;
     --sidebar-foreground: 0 0% 95%;
