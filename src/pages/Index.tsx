@@ -322,10 +322,10 @@ const Index = () => {
               <div className="hidden sm:block space-y-2">
                 <Button 
                   onClick={() => navigate('/auth')} 
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-6"
+                  size="sm"
+                  className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-3"
                 >
-                  <User className="h-4 w-4 mr-2" />
+                  <User className="h-3 w-3 mr-1" />
                   Sign in/Upgrade
                 </Button>
                 <Button
