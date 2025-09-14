@@ -163,6 +163,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
 
   // Color scheme based on category
   const isOrthoNeuro = category === 'orthopedic-instrument-questions';
+  const isObgyn = category === 'obgyn-instrument-questions';
+  
   const colorScheme = isOrthoNeuro ? {
     bgGradient: 'from-teal-50 via-white to-teal-100',
     headerBg: 'bg-teal-50',
@@ -173,6 +175,16 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     primaryButton: 'bg-teal-600 hover:bg-teal-700',
     primaryGradient: 'from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800',
     accent: 'teal'
+  } : isObgyn ? {
+    bgGradient: 'from-pink-50 via-white to-purple-100',
+    headerBg: 'bg-pink-50',
+    buttonHover: 'hover:bg-pink-100 hover:text-pink-700',
+    titleColor: 'text-pink-700',
+    upgradeButton: 'bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-700 hover:to-purple-800',
+    progressBar: 'bg-pink-600',
+    primaryButton: 'bg-pink-600 hover:bg-pink-700',
+    primaryGradient: 'from-pink-600 to-purple-700 hover:from-pink-700 hover:to-purple-800',
+    accent: 'pink'
   } : {
     bgGradient: 'from-blue-50 via-white to-blue-100',
     headerBg: 'bg-blue-50',
