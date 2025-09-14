@@ -264,23 +264,23 @@ const Index = () => {
             
             {/* Desktop User Section */}
             {user && (
-              <div className="hidden sm:flex flex-col items-end space-y-3">
+              <div className="hidden sm:flex flex-col items-end space-y-1">
                 {/* Enhanced User Actions */}
-                <div className="flex flex-col items-end space-y-3 bg-white/60 rounded-xl p-4 border border-slate-200/50 backdrop-blur-sm shadow-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-slate-700 font-medium">{user.email}</span>
+                <div className="flex flex-col items-end space-y-1 bg-white/60 rounded-md p-1.5 border border-slate-200/50 backdrop-blur-sm shadow-sm">
+                  <div className="flex items-center space-x-1">
+                    <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-xs text-slate-700 font-medium">{user.email}</span>
                   </div>
                   
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-1">
                     {isSubscribed && !isAdmin && (
                       <Link to="/account">
                         <Button 
                           variant="outline" 
                           size="sm" 
-                          className="hover:bg-slate-50 hover:scale-105 transition-all duration-200"
+                          className="hover:bg-slate-50 hover:scale-105 transition-all duration-200 h-6 px-2 text-xs"
                         >
-                          <Settings className="h-4 w-4 mr-2" />
+                          <Settings className="h-2 w-2 mr-1" />
                           Account
                         </Button>
                       </Link>
@@ -292,36 +292,36 @@ const Index = () => {
                        onClick={signOut} 
                        variant="outline" 
                        size="sm"
-                       className="hover:bg-red-50 hover:border-red-200 hover:text-red-600 hover:scale-105 transition-all duration-200"
+                       className="hover:bg-red-50 hover:border-red-200 hover:text-red-600 hover:scale-105 transition-all duration-200 h-6 px-2 text-xs"
                      >
-                       <LogOut className="h-4 w-4 mr-2" />
+                       <LogOut className="h-2 w-2 mr-1" />
                        <span className="hidden lg:inline">Sign Out</span>
                      </Button>
                   </div>
                 </div>
                 
                 {/* Enhanced Subscription Status - Moved below account info */}
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-1">
                   {isAdmin ? (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 px-4 py-2 rounded-full border border-emerald-200/60 shadow-sm">
-                      <Shield className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Admin</span>
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 px-1.5 py-0.5 rounded-full border border-emerald-200/60 shadow-sm">
+                      <Shield className="h-2 w-2" />
+                      <span className="text-xs font-semibold">Admin</span>
                     </div>
                   ) : isSubscribed ? (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full border border-blue-200/60 shadow-sm">
-                      <Shield className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Premium</span>
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-1.5 py-0.5 rounded-full border border-blue-200/60 shadow-sm">
+                      <Shield className="h-2 w-2" />
+                      <span className="text-xs font-semibold">Premium</span>
+                      <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
                     </div>
                   ) : isTrialActive ? (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-4 py-2 rounded-full border border-amber-200/60 shadow-sm">
-                      <Clock className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Trial</span>
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-1.5 py-0.5 rounded-full border border-amber-200/60 shadow-sm">
+                      <Clock className="h-2 w-2" />
+                      <span className="text-xs font-semibold">Trial</span>
                     </div>
                   ) : (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 px-4 py-2 rounded-full border border-slate-200/60 shadow-sm">
-                      <User className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Free</span>
+                    <div className="flex items-center space-x-1 bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 px-1.5 py-0.5 rounded-full border border-slate-200/60 shadow-sm">
+                      <User className="h-2 w-2" />
+                      <span className="text-xs font-semibold">Free</span>
                     </div>
                   )}
                 </div>
