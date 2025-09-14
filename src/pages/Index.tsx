@@ -264,33 +264,7 @@ const Index = () => {
             
             {/* Desktop User Section */}
             {user && (
-              <div className="hidden sm:flex items-center space-x-4">
-                {/* Enhanced Subscription Status */}
-                <div className="flex items-center space-x-3">
-                  {isAdmin ? (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 px-4 py-2 rounded-full border border-emerald-200/60 shadow-sm">
-                      <Shield className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Admin</span>
-                    </div>
-                  ) : isSubscribed ? (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full border border-blue-200/60 shadow-sm">
-                      <Shield className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Premium</span>
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    </div>
-                  ) : isTrialActive ? (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-4 py-2 rounded-full border border-amber-200/60 shadow-sm">
-                      <Clock className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Trial</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center space-x-2 bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 px-4 py-2 rounded-full border border-slate-200/60 shadow-sm">
-                      <User className="h-4 w-4" />
-                      <span className="text-sm font-semibold">Free</span>
-                    </div>
-                  )}
-                </div>
-                
+              <div className="hidden sm:flex flex-col items-end space-y-3">
                 {/* Enhanced User Actions */}
                 <div className="flex flex-col items-end space-y-3 bg-white/60 rounded-xl p-4 border border-slate-200/50 backdrop-blur-sm shadow-sm">
                   <div className="flex items-center space-x-2">
@@ -324,6 +298,32 @@ const Index = () => {
                        <span className="hidden lg:inline">Sign Out</span>
                      </Button>
                   </div>
+                </div>
+                
+                {/* Enhanced Subscription Status - Moved below account info */}
+                <div className="flex items-center space-x-3">
+                  {isAdmin ? (
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 px-4 py-2 rounded-full border border-emerald-200/60 shadow-sm">
+                      <Shield className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Admin</span>
+                    </div>
+                  ) : isSubscribed ? (
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full border border-blue-200/60 shadow-sm">
+                      <Shield className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Premium</span>
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    </div>
+                  ) : isTrialActive ? (
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-4 py-2 rounded-full border border-amber-200/60 shadow-sm">
+                      <Clock className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Trial</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center space-x-2 bg-gradient-to-r from-slate-100 to-gray-100 text-slate-700 px-4 py-2 rounded-full border border-slate-200/60 shadow-sm">
+                      <User className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Free</span>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
