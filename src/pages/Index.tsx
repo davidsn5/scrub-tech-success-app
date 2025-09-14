@@ -202,12 +202,22 @@ const Index = () => {
                     1700+ Practice Questions • Interactive Flashcards • Review Games • Full Exam Simulation • Performance Analytics
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center sm:justify-start text-xs">
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium border border-accent/20">
-                      Premium Features Available
-                    </span>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-medium border border-secondary/20">
-                      Fire Quiz Always Free
-                    </span>
+                    <div className="flex gap-2 justify-center sm:justify-start sm:hidden">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium border border-accent/20">
+                        Premium Features Available
+                      </span>
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-medium border border-secondary/20">
+                        Fire Quiz Always Free
+                      </span>
+                    </div>
+                    <div className="hidden sm:flex flex-wrap gap-2 justify-start">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium border border-accent/20">
+                        Premium Features Available
+                      </span>
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-medium border border-secondary/20">
+                        Fire Quiz Always Free
+                      </span>
+                    </div>
                   </div>
                 </div>
                 
