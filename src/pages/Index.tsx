@@ -366,7 +366,7 @@ const Index = () => {
           <h2 className="text-sm sm:text-base font-semibold text-foreground mb-1 sm:mb-2">
             Your Progress
           </h2>
-          <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
+          <div className="grid grid-cols-4 gap-1 sm:gap-2">
             <Card className="gradient-card shadow-card border-border/50 p-1 sm:p-2">
               <div className="flex items-center space-x-1">
                 <Target className="h-3 w-3 text-accent flex-shrink-0" />
