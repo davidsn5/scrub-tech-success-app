@@ -70,11 +70,11 @@ All colors MUST be HSL.
     --background: 25 25% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 25 22% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 98%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 25 22% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 25 25% 15%;
 
     --primary: 25 91% 55%;
     --primary-foreground: 25 25% 8%;
