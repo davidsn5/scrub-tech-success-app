@@ -219,7 +219,7 @@ const InstrumentationFlashcards = () => {
                   </div>
                   <p className="text-gray-600 mb-4 sm:mb-4 flex-grow text-sm leading-relaxed line-clamp-3">{category.description}</p>
                   <Button className={`w-full bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity text-white text-sm sm:text-base py-3 sm:py-2.5 min-h-[44px] font-medium`}>
-                    {category.id === 'general-instrument-questions' ? 'Study Questions' : 'Study Flashcards'}
+                    {category.id.includes('-questions') ? 'Study Questions' : 'Study Flashcards'}
                   </Button>
                 </div>
               </Card>
