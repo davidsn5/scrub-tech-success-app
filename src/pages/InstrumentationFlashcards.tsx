@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope, Zap } from 'lucide-react';
+import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope, Activity } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
@@ -71,7 +71,7 @@ const InstrumentationFlashcards = () => {
       id: 'plastics-instruments',
       title: 'Plastics Instruments',
       description: 'Specialized instruments for plastic and reconstructive surgery procedures',
-      icon: Zap,
+      icon: Activity,
       color: 'from-plastics/80 to-plastics-dark/80',
       bgColor: 'from-plastics-light/20 to-plastics/10',
       borderColor: 'border-plastics/30'
