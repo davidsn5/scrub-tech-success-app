@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { instrumentIdentificationQuestions, Question } from '@/data/questions/instrumentIdentification';
+import { generalInstrumentsQuestions, Question } from '@/data/questions/generalInstruments';
 import { orthopedicInstrumentIdentificationQuestions } from '@/data/questions/orthopedicInstrumentIdentification';
+import { obgynInstrumentsQuestions } from '@/data/questions/obgynInstruments';
 import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -26,7 +27,9 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   // Get questions based on category
   const allQuestions = category === 'orthopedic-instrument-questions' 
     ? orthopedicInstrumentIdentificationQuestions 
-    : instrumentIdentificationQuestions;
+    : category === 'obgyn-instrument-questions'
+    ? obgynInstrumentsQuestions
+    : generalInstrumentsQuestions;
   
   // Use limited questions for non-premium users
   const availableQuestions = hasPremiumAccess 
