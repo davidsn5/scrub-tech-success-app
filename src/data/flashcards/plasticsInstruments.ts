@@ -42,5 +42,11 @@ export const plasticsInstruments: FlashcardItem[] = [
     answer: "Dermamesher Graft Expander",
     explanation: "The Dermamesher Graft Expander is a device that creates multiple perforations in skin grafts to increase their surface area coverage. This meshing technique allows the graft to expand and cover larger areas while promoting drainage.",
     image: "/lovable-uploads/dermamesher-graft-expander.png"
+  },
+  {
+    question: "What is this double-ended hook instrument called?",
+    answer: "Freer Double Skin Hooks",
+    explanation: "Freer Double Skin Hooks are specialized retraction instruments with hooks on both ends, used for gentle tissue retraction in plastic surgery procedures. They provide excellent control for lifting and positioning delicate skin and soft tissues.",
+    image: "/lovable-uploads/freer-double-skin-hooks.png"
   }
 ];
