@@ -26,6 +26,7 @@ import { obgynInstruments } from './flashcards/obgynInstruments';
 import { hemostasisWoundHealing } from './flashcards/hemostasisWoundHealing';
 import { surgicalProcedures } from './flashcards/surgicalProcedures';
 import { disinfectionSterilization } from './flashcards/disinfectionSterilization';
+import { plasticsInstruments } from './flashcards/plasticsInstruments';
 
 export const flashcardData: FlashcardData = {
   'medical-terminology': medicalTerminology,
@@ -43,5 +44,6 @@ export const flashcardData: FlashcardData = {
   'obgyn-instruments': obgynInstruments,
   'hemostasis-wound-healing': hemostasisWoundHealing,
   'surgical-procedures': surgicalProcedures,
-  'disinfection-sterilization': disinfectionSterilization
+  'disinfection-sterilization': disinfectionSterilization,
+  'plastics-instruments': plasticsInstruments
 };

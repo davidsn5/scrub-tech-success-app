@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope } from 'lucide-react';
+import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope, Sparkles } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
@@ -66,10 +66,28 @@ const InstrumentationFlashcards = () => {
       color: 'from-pink-500/80 to-purple-600/80',
       bgColor: 'from-pink-50/90 to-purple-100/90',
       borderColor: 'border-pink-200/60'
+    },
+    {
+      id: 'plastics-instruments',
+      title: 'Plastics Instruments',
+      description: 'Specialized instruments for plastic and reconstructive surgery procedures',
+      icon: Sparkles,
+      color: 'from-emerald-500/80 to-emerald-600/80',
+      bgColor: 'from-emerald-50/90 to-emerald-100/90',
+      borderColor: 'border-emerald-200/60'
+    },
+    {
+      id: 'plastics-instrument-questions',
+      title: 'Plastics Instrument Questions',
+      description: 'Practice questions focusing on plastic surgery instrument identification',
+      icon: Target,
+      color: 'from-emerald-500/80 to-emerald-600/80',
+      bgColor: 'from-emerald-50/90 to-emerald-100/90',
+      borderColor: 'border-emerald-200/60'
     }
   ];
 
-  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments') {
+  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments' || selectedCategory === 'plastics-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     const bgGradient = selectedCategory === 'orthopedic-instruments' 
       ? 'from-slate-50/95 via-teal-50/90 to-teal-100/85'
@@ -150,7 +168,7 @@ const InstrumentationFlashcards = () => {
     );
   }
 
-  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions') {
+  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions' || selectedCategory === 'plastics-instrument-questions') {
     return <InstrumentQuestions 
       onBack={() => setSelectedCategory(null)} 
       category={selectedCategory}
