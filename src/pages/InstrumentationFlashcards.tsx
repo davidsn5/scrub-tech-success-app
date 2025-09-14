@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors, User, Bone } from 'lucide-react';
+import { ArrowLeft, Target, Scissors, User, Bone, Heart } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
@@ -48,21 +48,53 @@ const InstrumentationFlashcards = () => {
       color: 'from-teal-500/80 to-teal-600/80',
       bgColor: 'from-teal-50/90 to-teal-100/90',
       borderColor: 'border-teal-200/60'
+    },
+    {
+      id: 'obgyn-instruments',
+      title: 'OB/GYN/Urology/Rectal',
+      description: 'Specialized instruments for obstetric, gynecologic, urologic, and rectal procedures',
+      icon: Heart,
+      color: 'from-pink-500/80 to-purple-600/80',
+      bgColor: 'from-pink-50/90 to-purple-100/90',
+      borderColor: 'border-pink-200/60'
+    },
+    {
+      id: 'obgyn-instrument-questions',
+      title: 'OB/GYN/Urology/Rectal Questions',
+      description: 'Practice questions focusing on OB/GYN, urology, and rectal instrument identification',
+      icon: Target,
+      color: 'from-pink-500/80 to-purple-600/80',
+      bgColor: 'from-pink-50/90 to-purple-100/90',
+      borderColor: 'border-pink-200/60'
     }
   ];
 
-  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments') {
+  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     const bgGradient = selectedCategory === 'orthopedic-instruments' 
       ? 'from-slate-50/95 via-teal-50/90 to-teal-100/85'
+      : selectedCategory === 'obgyn-instruments'
+      ? 'from-slate-50/95 via-pink-50/90 to-purple-100/85'
       : 'from-slate-50/95 via-blue-50/90 to-blue-100/85';
-    const headerBg = selectedCategory === 'orthopedic-instruments' ? 'bg-teal-50' : 'bg-blue-50';
+    const headerBg = selectedCategory === 'orthopedic-instruments' 
+      ? 'bg-teal-50' 
+      : selectedCategory === 'obgyn-instruments'
+      ? 'bg-pink-50'
+      : 'bg-blue-50';
     const buttonColors = selectedCategory === 'orthopedic-instruments'
       ? 'hover:bg-teal-100 hover:text-teal-700'
+      : selectedCategory === 'obgyn-instruments'
+      ? 'hover:bg-pink-100 hover:text-pink-700'
       : 'hover:bg-blue-100 hover:text-blue-700';
-    const titleColor = selectedCategory === 'orthopedic-instruments' ? 'text-teal-700' : 'text-blue-700';
+    const titleColor = selectedCategory === 'orthopedic-instruments' 
+      ? 'text-teal-700' 
+      : selectedCategory === 'obgyn-instruments'
+      ? 'text-pink-700'
+      : 'text-blue-700';
     const upgradeButtonColors = selectedCategory === 'orthopedic-instruments'
       ? 'bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800'
+      : selectedCategory === 'obgyn-instruments'
+      ? 'bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-700 hover:to-purple-800'
       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800';
 
     return (
@@ -118,7 +150,7 @@ const InstrumentationFlashcards = () => {
     );
   }
 
-  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions') {
+  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions') {
     return <InstrumentQuestions 
       onBack={() => setSelectedCategory(null)} 
       category={selectedCategory}
