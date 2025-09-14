@@ -10,110 +10,118 @@ export interface Question {
 export const plasticsInstrumentQuestions: Question[] = [
   {
     id: 1,
-    question: "Which forceps is specifically designed for microsurgical procedures in plastic surgery?",
+    question: "What is this circular instrument with serrated edges used for in plastic surgery?",
     choices: [
-      "Adson forceps",
-      "Castro-Viejo needle holder", 
-      "Brown-Adson forceps",
-      "Russian forceps"
+      "Freeman Areolar Cutter",
+      "Dermal Punch",
+      "Circular Retractor",
+      "Tissue Expander"
     ],
-    correctAnswer: 1,
-    explanation: "Castro-Viejo needle holders are specifically designed for microsurgery with fine tips and excellent precision control, essential for delicate suturing in plastic surgery procedures."
+    correctAnswer: 0,
+    explanation: "The Freeman Areolar Cutter is a specialized instrument used to create precise circular incisions around the areola during breast reconstruction and reduction procedures.",
+    image: "/lovable-uploads/freeman-areolar-cutter.png"
   },
   {
     id: 2,
-    question: "What is the primary advantage of using a skin hook in plastic surgery?",
+    question: "What type of scissors are these curved instruments designed for?",
     choices: [
-      "Provides strong retraction force",
-      "Can grasp multiple tissue layers",
-      "Offers atraumatic tissue retraction",
-      "Allows for electrocautery use"
+      "Metzenbaum Scissors",
+      "Joseph Scissors",
+      "Iris Scissors",
+      "Mayo Scissors"
     ],
-    correctAnswer: 2,
-    explanation: "Skin hooks provide atraumatic retraction by gently lifting skin edges, preserving tissue viability and preventing crush injuries that could compromise healing."
+    correctAnswer: 1,
+    explanation: "Joseph Scissors are curved scissors specifically designed for plastic and reconstructive surgery procedures, particularly useful in facial and nasal procedures.",
+    image: "/lovable-uploads/joseph-scissors.png"
   },
   {
     id: 3,
-    question: "Which instrument is essential for harvesting skin grafts of uniform thickness?",
+    question: "What are these thin, probe-like instruments with black handles used for?",
     choices: [
-      "Facelift scissors",
-      "Dermatome",
-      "Liposuction cannula",
-      "Tissue expander"
+      "Electrocautery Tips",
+      "Nerve Stimulators", 
+      "Liposuction Cannula",
+      "Injection Needles"
     ],
-    correctAnswer: 1,
-    explanation: "Dermatomes are specialized instruments that cut thin, uniform layers of skin for grafting procedures, ensuring consistent graft thickness for optimal healing."
+    correctAnswer: 2,
+    explanation: "Liposuction cannulas are hollow tubes used to suction out fat during liposuction procedures. They come in various sizes for different areas of the body.",
+    image: "/lovable-uploads/liposuction-cannula.png"
   },
   {
     id: 4,
-    question: "What type of forceps should be used when handling fat grafts to maintain cell viability?",
+    question: "What is this hook-shaped instrument called?",
     choices: [
-      "Toothed forceps",
-      "Electrocautery forceps",
-      "Smooth atraumatic forceps",
-      "Hemostatic forceps"
+      "Nerve Hook",
+      "Joseph Single Hooks",
+      "Skin Hook",
+      "Vessel Loop"
     ],
-    correctAnswer: 2,
-    explanation: "Smooth, atraumatic forceps prevent damage to delicate fat cells during transfer procedures, maintaining cell viability for successful fat grafting."
+    correctAnswer: 1,
+    explanation: "Joseph Single Hooks are delicate retraction instruments used in plastic surgery for gently lifting and retracting tissues, particularly in nasal and facial procedures.",
+    image: "/lovable-uploads/joseph-single-hooks.png"
   },
   {
     id: 5,
-    question: "Which instrument combines cutting and coagulation functions in plastic surgery?",
+    question: "What are these forceps with multiple holes designed for?",
     choices: [
-      "Metzenbaum scissors",
-      "Harmonic scalpel",
-      "Facelift scissors",
-      "Tenotomy scissors"
+      "Adson Forceps",
+      "Russian Forceps",
+      "Bishop Harmon Forceps",
+      "DeBakey Forceps"
     ],
-    correctAnswer: 1,
-    explanation: "Harmonic scalpels use ultrasonic energy to cut and seal blood vessels simultaneously, reducing bleeding and thermal damage to surrounding tissues."
+    correctAnswer: 2,
+    explanation: "Bishop Harmon Forceps are specialized tissue forceps with fenestrations (holes) that provide a secure grip while minimizing tissue trauma.",
+    image: "/lovable-uploads/bishop-harmon-forceps.png"
   },
   {
     id: 6,
-    question: "What is the primary function of a mammotome in breast procedures?",
+    question: "What is this yellow-handled retractor specifically designed for?",
     choices: [
-      "Breast implant insertion",
-      "Tissue expansion",
-      "Vacuum-assisted biopsy",
-      "Nipple reconstruction"
+      "Abdominal Retractor",
+      "Tebbetts Breast Retractor",
+      "Chest Wall Retractor", 
+      "Rib Spreader"
     ],
-    correctAnswer: 2,
-    explanation: "A mammotome uses vacuum suction and a rotating cutting device to obtain multiple tissue samples through a single insertion, minimizing scarring and patient discomfort."
+    correctAnswer: 1,
+    explanation: "The Tebbetts Breast Retractor is a specialized retractor designed for breast augmentation and reconstruction procedures, providing optimal exposure while protecting surrounding tissues.",
+    image: "/lovable-uploads/tebbetts-breast-retractor.png"
   },
   {
     id: 7,
-    question: "Which scissors type is preferred for fine dissection around nerves in plastic surgery?",
+    question: "What is this mechanical device used for in skin grafting procedures?",
     choices: [
-      "Mayo scissors",
-      "Bandage scissors",
-      "Metzenbaum scissors",
-      "Operating scissors"
+      "Skin Stapler",
+      "Dermamesher Graft Expander",
+      "Tissue Crimper",
+      "Skin Perforator"
     ],
-    correctAnswer: 2,
-    explanation: "Metzenbaum scissors have fine tips that allow for precise dissection around delicate structures like nerves and blood vessels without causing damage to surrounding tissues."
+    correctAnswer: 1,
+    explanation: "The Dermamesher Graft Expander creates multiple perforations in skin grafts to increase their surface area coverage, allowing the graft to expand and cover larger areas.",
+    image: "/lovable-uploads/dermamesher-graft-expander.png"
   },
   {
     id: 8,
-    question: "What is the purpose of tumescent solution in liposuction procedures?",
+    question: "What is this double-ended hook instrument called?",
     choices: [
-      "Skin marking",
-      "Local anesthesia and vasoconstriction", 
-      "Tissue expansion",
-      "Wound irrigation"
+      "Double Skin Hook",
+      "Freer Double Skin Hooks",
+      "Bilateral Retractor",
+      "Twin Hook Elevator"
     ],
     correctAnswer: 1,
-    explanation: "Tumescent solution contains lidocaine for anesthesia and epinephrine for vasoconstriction, reducing bleeding and providing pain control during liposuction."
+    explanation: "Freer Double Skin Hooks are specialized retraction instruments with hooks on both ends, used for gentle tissue retraction and positioning of delicate skin and soft tissues.",
+    image: "/lovable-uploads/freer-double-skin-hooks.png"
   },
   {
     id: 9,
-    question: "Which measuring instrument is crucial for ensuring symmetry in rhinoplasty?",
+    question: "Which instrument is specifically designed for creating circular incisions in breast procedures?",
     choices: [
-      "Blood pressure cuff",
-      "Pulse oximeter",
-      "Nasal measuring ruler or caliper",
-      "Tissue thickness gauge"
+      "Joseph Scissors",
+      "Freeman Areolar Cutter", 
+      "Bishop Harmon Forceps",
+      "Tebbetts Breast Retractor"
     ],
-    correctAnswer: 2,
-    explanation: "Nasal measuring instruments ensure precise symmetry and proportions during nasal reconstruction and cosmetic rhinoplasty procedures."
+    correctAnswer: 1,
+    explanation: "The Freeman Areolar Cutter is specifically designed to create precise circular incisions around the areola during breast reconstruction and reduction procedures."
   }
 ];
