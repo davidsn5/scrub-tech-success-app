@@ -12,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 
 const Index = () => {
@@ -303,15 +304,17 @@ const Index = () => {
                       </Link>
                     )}
                     
-                    <Button 
-                      onClick={signOut} 
-                      variant="outline" 
-                      size="sm"
-                      className="hover:bg-red-50 hover:border-red-200 hover:text-red-600 hover:scale-105 transition-all duration-200"
-                    >
-                      <LogOut className="h-4 w-4 mr-2" />
-                      <span className="hidden lg:inline">Sign Out</span>
-                    </Button>
+                     <ThemeToggle />
+                     
+                     <Button 
+                       onClick={signOut} 
+                       variant="outline" 
+                       size="sm"
+                       className="hover:bg-red-50 hover:border-red-200 hover:text-red-600 hover:scale-105 transition-all duration-200"
+                     >
+                       <LogOut className="h-4 w-4 mr-2" />
+                       <span className="hidden lg:inline">Sign Out</span>
+                     </Button>
                   </div>
                 </div>
               </div>
