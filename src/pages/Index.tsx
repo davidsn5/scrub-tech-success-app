@@ -399,6 +399,34 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Instrumentation Review Section */}
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
+            Instrumentation Review
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {/* Spanning from left edge of first column to right edge of second column */}
+            <Card className="lg:col-span-2 p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <div className="flex items-center space-x-2 sm:space-x-3">
+                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-orange-500/80 to-orange-600/80 flex-shrink-0">
+                    <Scissors className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Review</h3>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
+              <Button 
+                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Instrumentation Review')}
+                className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-orange-500/80 to-orange-600/80 hover:opacity-90"
+              >
+                <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                Study Instruments
+              </Button>
+            </Card>
+          </div>
+        </div>
+
         {/* Main Study Sections */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
@@ -445,9 +473,9 @@ const Index = () => {
           <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-slate-700/90 to-blue-700/90 bg-clip-text text-transparent mb-4 sm:mb-6">
             Review
           </h2>
-        
-          {/* 2x2 Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+         
+          {/* 1x3 Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Study Flashcards */}
             <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-indigo-50/80 to-indigo-100/70 backdrop-blur-sm border-indigo-200/50 shadow-lg">
               <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
@@ -491,26 +519,6 @@ const Index = () => {
               >
                 <Trophy className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                 {isPremium ? 'Play Games' : 'Try Free Preview'}
-              </Button>
-            </Card>
-
-            {/* Instrumentation Flashcards - Now always accessible */}
-            <Card className="p-4 sm:p-6 bg-gradient-to-br from-white/90 via-purple-50/80 to-purple-100/70 backdrop-blur-sm border-purple-200/50 shadow-lg">
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-r from-purple-500/90 to-purple-600/90 flex-shrink-0">
-                    <Scissors className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Instrumentation Review</h3>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">Master surgical instruments with specialized flashcards covering tools, equipment, and their applications</p>
-              <Button 
-                onClick={() => handlePremiumFeatureAccess('/instrumentation-flashcards', 'Instrumentation Review')}
-                className="w-full transition-opacity text-white text-xs sm:text-sm py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/90 to-purple-600/90 hover:opacity-90"
-              >
-                <Target className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                Study Instruments
               </Button>
             </Card>
 
