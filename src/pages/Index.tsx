@@ -12,7 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
-import { ThemeToggle } from '@/components/ThemeToggle';
+
 
 
 const Index = () => {
@@ -295,9 +295,6 @@ const Index = () => {
                         </Button>
                       </Link>
                     )}
-                    
-                     <ThemeToggle />
-                     
                      <Button 
                        onClick={signOut} 
                        variant="outline" 
