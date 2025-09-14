@@ -61,4 +61,41 @@ export const obgynInstruments: FlashcardItem[] = [
     explanation: "Curved metal instruments used for urethral dilation and exploration. They come in graduated sizes and are used to dilate urethral strictures, explore the urethra, or guide other instruments during urological procedures.",
     image: "/lovable-uploads/van-buren-urethral-sound.png"
   }
+,
+  {
+    question: "What is this instrument?",
+    answer: "Hanks Uterine Dilator",
+    explanation: "Double-ended graduated uterine dilator with rounded tips used to progressively dilate the cervical canal for gynecologic procedures.",
+    image: "/lovable-uploads/hanks-uterine-dilator.png"
+  },
+  {
+    question: "What is this speculum?",
+    answer: "Kristeller Vaginal Speculum",
+    explanation: "Adjustable bivalve vaginal speculum used to retract the vaginal walls and visualize the cervix during examinations and procedures.",
+    image: "/lovable-uploads/kristeller-vaginal-speculum.png"
+  },
+  {
+    question: "What are these electrosurgical loops?",
+    answer: "LLETZ Tungsten Loop Electrodes",
+    explanation: "Tungsten wire loop electrodes used with electrosurgical units to perform LEEP/LLETZ excision of the cervical transformation zone.",
+    image: "/lovable-uploads/lletz-tungsten-loop-electrodes.png"
+  },
+  {
+    question: "What are these scissors?",
+    answer: "Jorgenson Scissors",
+    explanation: "Heavily curved, angled scissors used in gynecologic surgery (e.g., hysterectomy) for cutting tissue near the cervix and uterine ligaments.",
+    image: "/lovable-uploads/jorgenson-scissors.png"
+  },
+  {
+    question: "What is this grasping instrument?",
+    answer: "Braun Tenaculum",
+    explanation: "Single- or double-tooth tenaculum used to grasp and provide traction on the cervix or uterine tissue during gynecologic procedures.",
+    image: "/lovable-uploads/braun-tenaculum.png"
+  },
+  {
+    question: "What is this measuring instrument?",
+    answer: "Sims Uterine Sound",
+    explanation: "Graduated uterine sound used to assess the depth and direction of the uterine cavity prior to procedures such as dilation or IUD placement.",
+    image: "/lovable-uploads/sims-uterine-sound.png"
+  }
 ];
