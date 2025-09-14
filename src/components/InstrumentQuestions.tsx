@@ -158,17 +158,41 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     return "text-red-600";
   };
 
+  // Color scheme based on category
+  const isOrthoNeuro = category === 'orthopedic-instrument-questions';
+  const colorScheme = isOrthoNeuro ? {
+    bgGradient: 'from-teal-50 via-white to-teal-100',
+    headerBg: 'bg-teal-50',
+    buttonHover: 'hover:bg-teal-100 hover:text-teal-700',
+    titleColor: 'text-teal-700',
+    upgradeButton: 'bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800',
+    progressBar: 'bg-teal-600',
+    primaryButton: 'bg-teal-600 hover:bg-teal-700',
+    primaryGradient: 'from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800',
+    accent: 'teal'
+  } : {
+    bgGradient: 'from-purple-50 via-white to-purple-100',
+    headerBg: 'bg-purple-50',
+    buttonHover: 'hover:bg-purple-100 hover:text-purple-700',
+    titleColor: 'text-purple-700',
+    upgradeButton: 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800',
+    progressBar: 'bg-purple-600',
+    primaryButton: 'bg-purple-600 hover:bg-purple-700',
+    primaryGradient: 'from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800',
+    accent: 'purple'
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100">
+    <div className={`min-h-screen bg-gradient-to-br ${colorScheme.bgGradient}`}>
       {/* Header */}
-      <div className="bg-purple-50 shadow-sm border-b">
+      <div className={`${colorScheme.headerBg} shadow-sm border-b`}>
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-4">
               <Button 
                 onClick={onBack}
                 variant="ghost" 
-                className="flex items-center space-x-2 hover:bg-purple-100 hover:text-purple-700"
+                className={`flex items-center space-x-2 ${colorScheme.buttonHover}`}
               >
                 <span>←</span>
                 <span>Back to Categories</span>
@@ -203,7 +227,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                 <Button 
                   onClick={() => navigate('/auth')}
                   size="sm"
-                  className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-1"
+                  className={`${colorScheme.upgradeButton} text-white flex items-center space-x-1`}
                 >
                   <User className="h-4 w-4" />
                   <span className="hidden sm:inline">Sign In/Up</span>
@@ -224,7 +248,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-purple-700">Instrument Identification Quiz</h1>
+            <h1 className={`text-2xl font-bold ${colorScheme.titleColor}`}>Instrument Identification Quiz</h1>
             <p className="text-sm text-gray-600">
               Question {currentQuestionIndex + 1} of {totalQuestions}
             </p>
@@ -236,7 +260,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
       <div className="max-w-4xl mx-auto px-4 py-2">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
-            className="bg-purple-600 h-2 rounded-full transition-all duration-300"
+            className={`${colorScheme.progressBar} h-2 rounded-full transition-all duration-300`}
             style={{ width: `${((currentQuestionIndex + 1) / totalQuestions) * 100}%` }}
           />
         </div>
@@ -268,12 +292,12 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   <span>Try Again</span>
                 </Button>
                   {!hasPremiumAccess && (
-                    <Button onClick={handleUpgrade} className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white flex items-center space-x-2">
+                    <Button onClick={handleUpgrade} className={`${colorScheme.primaryGradient} text-white flex items-center space-x-2`}>
                       <Crown className="h-4 w-4" />
                       <span>{`Upgrade for All ${allQuestions.length} Questions`}</span>
                     </Button>
                   )}
-                <Button onClick={onBack} variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50">
+                <Button onClick={onBack} variant="outline" className={`border-${colorScheme.accent}-200 text-${colorScheme.accent}-700 hover:bg-${colorScheme.accent}-50`}>
                   Back to Categories
                 </Button>
               </div>
@@ -284,7 +308,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
           <Card className="mb-8">
             <CardHeader>
               <div className="flex justify-between items-start">
-                <CardTitle className="text-xl font-semibold text-purple-700">
+                <CardTitle className={`text-xl font-semibold ${colorScheme.titleColor}`}>
                   {currentQuestion.question}
                 </CardTitle>
                 <Badge variant={answeredQuestions[currentQuestionIndex] ? "default" : "outline"}>
@@ -295,15 +319,15 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
             <CardContent className="space-y-6">
               {/* Premium Upsell for Non-Premium Users */}
               {!hasPremiumAccess && (
-                <Card className="bg-gradient-to-br from-purple-50/80 to-purple-100/80 border-purple-200/50 p-4">
+                <Card className={`bg-gradient-to-br from-${colorScheme.accent}-50/80 to-${colorScheme.accent}-100/80 border-${colorScheme.accent}-200/50 p-4`}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <Lock className="h-5 w-5 text-purple-600" />
+                      <Lock className={`h-5 w-5 text-${colorScheme.accent}-600`} />
                       <div>
-                        <p className="text-sm font-medium text-purple-800">
+                        <p className={`text-sm font-medium text-${colorScheme.accent}-800`}>
                           Showing {freeQuestionLimit} of {allQuestions.length} questions
                         </p>
-                        <p className="text-xs text-purple-700">
+                        <p className={`text-xs text-${colorScheme.accent}-700`}>
                           Unlock all questions with Premium access
                         </p>
                       </div>
@@ -311,7 +335,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                     <Button 
                       onClick={handleUpgrade}
                       size="sm"
-                      className="bg-gradient-to-r from-purple-600/90 to-purple-700/90 hover:from-purple-700/90 hover:to-purple-800/90 text-white"
+                      className={`bg-gradient-to-r from-${colorScheme.accent}-600/90 to-${colorScheme.accent}-700/90 hover:from-${colorScheme.accent}-700/90 hover:to-${colorScheme.accent}-800/90 text-white`}
                     >
                       <Crown className="h-4 w-4 mr-1" />
                       Unlock
@@ -352,7 +376,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                         p-4 h-auto text-left justify-start relative
                         ${shouldHighlight ? "bg-green-100 border-green-500 text-green-800" : ""}
                         ${isIncorrect ? "bg-red-100 border-red-500 text-red-800" : ""}
-                        ${!showResult && isSelected ? "bg-purple-100 border-purple-500" : ""}
+                        ${!showResult && isSelected ? `bg-${colorScheme.accent}-100 border-${colorScheme.accent}-500` : ""}
                       `}
                       disabled={showResult}
                     >
@@ -393,7 +417,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                     <Button
                       onClick={handleSubmitAnswer}
                       disabled={selectedAnswer === null}
-                      className="bg-purple-600 hover:bg-purple-700"
+                      className={colorScheme.primaryButton}
                     >
                       Submit Answer
                     </Button>
@@ -401,7 +425,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                     <Button
                       onClick={handleNextQuestion}
                       disabled={isLastQuestion && allQuestionsAnswered}
-                      className="bg-purple-600 hover:bg-purple-700"
+                      className={colorScheme.primaryButton}
                     >
                       {isLastQuestion ? "View Results" : "Next Question"}
                     </Button>
