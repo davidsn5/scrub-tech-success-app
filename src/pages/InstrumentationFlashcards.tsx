@@ -72,18 +72,18 @@ const InstrumentationFlashcards = () => {
       title: 'Plastics Instruments',
       description: 'Specialized instruments for plastic and reconstructive surgery procedures',
       icon: Sparkles,
-      color: 'from-emerald-500/80 to-emerald-600/80',
-      bgColor: 'from-emerald-50/90 to-emerald-100/90',
-      borderColor: 'border-emerald-200/60'
+      color: 'from-plastics/80 to-plastics-dark/80',
+      bgColor: 'from-plastics-light/20 to-plastics/10',
+      borderColor: 'border-plastics/30'
     },
     {
       id: 'plastics-instrument-questions',
       title: 'Plastics Instrument Questions',
       description: 'Practice questions focusing on plastic surgery instrument identification',
       icon: Target,
-      color: 'from-emerald-500/80 to-emerald-600/80',
-      bgColor: 'from-emerald-50/90 to-emerald-100/90',
-      borderColor: 'border-emerald-200/60'
+      color: 'from-plastics/80 to-plastics-dark/80',
+      bgColor: 'from-plastics-light/20 to-plastics/10',
+      borderColor: 'border-plastics/30'
     }
   ];
 
