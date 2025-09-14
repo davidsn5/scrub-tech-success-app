@@ -127,5 +127,29 @@ export const obgynInstruments: FlashcardItem[] = [
     answer: "Hulka Tenaculum Forceps",
     explanation: "Delicate tenaculum forceps with fine, curved tips designed for grasping and manipulating delicate gynecological tissues. They provide precise control and minimal tissue trauma during laparoscopic and open gynecological procedures.",
     image: "/lovable-uploads/hulka-tenaculum-forceps.png"
+  },
+  {
+    question: "What are these multi-tooth grasping forceps?",
+    answer: "Jacobs Vulsellum Forceps",
+    explanation: "Heavy-duty forceps with multiple sharp teeth designed to securely grasp and hold the cervix or uterine tissue. The multiple teeth provide excellent grip and traction during gynecological procedures, particularly useful for cervical manipulation during hysterectomies.",
+    image: "/lovable-uploads/jacobs-vulsellum-forceps.png"
+  },
+  {
+    question: "What is this specialized needle driver?",
+    answer: "Heaney Needle Driver",
+    explanation: "A long needle driver with curved jaws specifically designed for gynecological surgery. Features gold-plated finger rings for enhanced grip and is commonly used in deep pelvic procedures where precise suturing is required, such as during hysterectomies.",
+    image: "/lovable-uploads/heaney-needle-driver.png"
+  },
+  {
+    question: "What are these long curved forceps?",
+    answer: "Bozeman Uterine Dressing Forceps",
+    explanation: "Long, curved forceps designed for placing and removing packing or dressings in the uterine cavity and deep vaginal fornices. The extended length and curved design allow access to difficult-to-reach areas during gynecological procedures.",
+    image: "/lovable-uploads/bozeman-uterine-dressing-forceps.png"
+  },
+  {
+    question: "What is this endocervical sampling instrument?",
+    answer: "Kevorkian-Younge Endocervical Curette",
+    explanation: "A specialized curette with a long, thin shaft and small cupped tip designed specifically for sampling endocervical tissue. Features a comfortable handle and is commonly used for obtaining tissue samples from the endocervical canal for pathological examination.",
+    image: "/lovable-uploads/kevorkian-younge-endocervical-curette.png"
   }
 ];
