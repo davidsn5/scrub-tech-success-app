@@ -353,46 +353,46 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 mt-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 sm:py-3 mt-6">
         {/* Progress Tracker */}
-        <div className="mb-4 sm:mb-6">
-          <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
+        <div className="mb-3 sm:mb-4">
+          <h2 className="text-sm sm:text-base font-semibold text-foreground mb-1 sm:mb-2">
             Your Progress
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
-            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
-              <div className="flex items-center space-x-1 sm:space-x-2">
-                <Target className="h-4 w-4 sm:h-5 sm:w-5 text-accent flex-shrink-0" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2">
+            <Card className="gradient-card shadow-card border-border/50 p-1 sm:p-2">
+              <div className="flex items-center space-x-1">
+                <Target className="h-3 w-3 text-accent flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-sm sm:text-lg font-semibold text-foreground">{getAccuracyPercentage()}%</p>
-                  <p className="text-xs text-muted-foreground">Accuracy Rate</p>
+                  <p className="text-xs sm:text-sm font-semibold text-foreground">{getAccuracyPercentage()}%</p>
+                  <p className="text-xs text-muted-foreground">Accuracy</p>
                 </div>
               </div>
             </Card>
-            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
-              <div className="flex items-center space-x-1 sm:space-x-2">
-                <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+            <Card className="gradient-card shadow-card border-border/50 p-1 sm:p-2">
+              <div className="flex items-center space-x-1">
+                <Brain className="h-3 w-3 text-primary flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-sm sm:text-lg font-semibold text-foreground">{progress.totalQuestionsAttempted}</p>
-                  <p className="text-xs text-muted-foreground">Questions Completed</p>
+                  <p className="text-xs sm:text-sm font-semibold text-foreground">{progress.totalQuestionsAttempted}</p>
+                  <p className="text-xs text-muted-foreground">Complete</p>
                 </div>
               </div>
             </Card>
-            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
-              <div className="flex items-center space-x-1 sm:space-x-2">
-                <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-secondary flex-shrink-0" />
+            <Card className="gradient-card shadow-card border-border/50 p-1 sm:p-2">
+              <div className="flex items-center space-x-1">
+                <TrendingUp className="h-3 w-3 text-secondary flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-sm sm:text-lg font-semibold text-foreground">{progress.currentStreak}</p>
-                  <p className="text-xs text-muted-foreground">Day Streak</p>
+                  <p className="text-xs sm:text-sm font-semibold text-foreground">{progress.currentStreak}</p>
+                  <p className="text-xs text-muted-foreground">Streak</p>
                 </div>
               </div>
             </Card>
-            <Card className="gradient-card shadow-card border-border/50 p-2 sm:p-3">
-              <div className="flex items-center space-x-1 sm:space-x-2">
-                <RotateCcw className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+            <Card className="gradient-card shadow-card border-border/50 p-1 sm:p-2">
+              <div className="flex items-center space-x-1">
+                <RotateCcw className="h-3 w-3 text-muted-foreground flex-shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-sm sm:text-lg font-semibold text-foreground">{progress.totalMissedQuestions}</p>
-                  <p className="text-xs text-muted-foreground">Missed Questions</p>
+                  <p className="text-xs sm:text-sm font-semibold text-foreground">{progress.totalMissedQuestions}</p>
+                  <p className="text-xs text-muted-foreground">Missed</p>
                 </div>
               </div>
             </Card>
