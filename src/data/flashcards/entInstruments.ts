@@ -132,5 +132,35 @@ export const entInstruments: FlashcardItem[] = [
     answer: "Colver Tonsil Grasping Forceps",
     explanation: "Colver tonsil grasping forceps are used to grasp and manipulate tonsillar tissue during tonsillectomy procedures.",
     image: "/lovable-uploads/colver-tonsil-grasping-forceps.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Cottle Nasal Knife",
+    explanation: "The Cottle nasal knife is used for making precise incisions in nasal cartilage and soft tissue during rhinoplasty procedures.",
+    image: "/lovable-uploads/cottle-nasal-knife.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "House Myringotomy Knife",
+    explanation: "The House myringotomy knife is used to make small incisions in the tympanic membrane during ear procedures.",
+    image: "/lovable-uploads/house-myringotomy-knife.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Aufricht Nasal Rasp",
+    explanation: "The Aufricht nasal rasp is used to smooth and shape nasal bone during rhinoplasty procedures.",
+    image: "/lovable-uploads/aufricht-nasal-rasp.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Laryngeal Mirror",
+    explanation: "Laryngeal mirrors are used for indirect visualization of the larynx and vocal cords during examination.",
+    image: "/lovable-uploads/laryngeal-mirror.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Knight Nasal Scissors",
+    explanation: "Knight nasal scissors are used for cutting nasal tissue and cartilage during rhinoplasty and septoplasty procedures.",
+    image: "/lovable-uploads/knight-nasal-scissors.png"
   }
 ];
