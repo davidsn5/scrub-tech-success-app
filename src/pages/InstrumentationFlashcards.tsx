@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope, Syringe } from 'lucide-react';
+import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope, Syringe, Ear } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Flashcards from '@/components/Flashcards';
 import { InstrumentQuestions } from '@/components/InstrumentQuestions';
@@ -84,6 +84,24 @@ const InstrumentationFlashcards = () => {
       color: 'from-plastics/80 to-plastics-dark/80',
       bgColor: 'from-plastics-light/20 to-plastics/10',
       borderColor: 'border-plastics/30'
+    },
+    {
+      id: 'ent-instruments',
+      title: 'ENT Instruments',
+      description: 'Specialized instruments for ear, nose, and throat procedures',
+      icon: Ear,
+      color: 'from-orange-500/80 to-orange-600/80',
+      bgColor: 'from-orange-50/90 to-orange-100/90',
+      borderColor: 'border-orange-200/60'
+    },
+    {
+      id: 'ent-instrument-questions',
+      title: 'ENT Instrument Questions',
+      description: 'Practice questions focusing on ENT instrument identification',
+      icon: Target,
+      color: 'from-orange-500/80 to-orange-600/80',
+      bgColor: 'from-orange-50/90 to-orange-100/90',
+      borderColor: 'border-orange-200/60'
     }
   ];
 
