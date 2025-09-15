@@ -162,5 +162,23 @@ export const entInstruments: FlashcardItem[] = [
     answer: "Knight Nasal Scissors",
     explanation: "Knight nasal scissors are used for cutting nasal tissue and cartilage during rhinoplasty and septoplasty procedures.",
     image: "/lovable-uploads/knight-nasal-scissors.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Barnhill Adenoid Curette",
+    explanation: "The Barnhill adenoid curette is used for removing adenoid tissue during adenoidectomy procedures.",
+    image: "/lovable-uploads/barnhill-adenoid-curette.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Cushing Bayonet Dressing Forceps",
+    explanation: "Cushing bayonet dressing forceps are used for grasping and manipulating tissue during neurosurgical and ENT procedures.",
+    image: "/lovable-uploads/cushing-bayonet-dressing-forceps.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Cushing Bayonet Bipolar Forceps",
+    explanation: "Cushing bayonet bipolar forceps are used for precise hemostasis and tissue coagulation during microsurgical procedures.",
+    image: "/lovable-uploads/cushing-bayonet-bipolar-forceps.png"
   }
 ];
