@@ -215,7 +215,8 @@ export const instrumentationEquipment: FlashcardItem[] = [
   {
     question: "Identify this surgical instrument",
     answer: "Adson Tissue Forceps\n(Toothed Tissue Forceps)",
-    explanation: "Adson tissue forceps are fine surgical instruments typically 4.75 inches (12 cm) in length, featuring delicate tips with either teeth (1x2 teeth configuration) or smooth surfaces. The toothed version provides secure grip on tough tissues like skin and fascia, while the smooth version is used for more delicate tissues. These forceps have a spring mechanism and fine tips that allow for precise tissue handling during procedures requiring detailed work. They are commonly used in plastic surgery, neurosurgery, and other procedures where fine tissue manipulation is essential."
+    explanation: "Adson tissue forceps are fine surgical instruments typically 4.75 inches (12 cm) in length, featuring delicate tips with either teeth (1x2 teeth configuration) or smooth surfaces. The toothed version provides secure grip on tough tissues like skin and fascia, while the smooth version is used for more delicate tissues. These forceps have a spring mechanism and fine tips that allow for precise tissue handling during procedures requiring detailed work. They are commonly used in plastic surgery, neurosurgery, and other procedures where fine tissue manipulation is essential.",
+    image: "/lovable-uploads/adson-tissue-forceps.jpeg"
   },
   {
     question: "Identify this surgical instrument",
