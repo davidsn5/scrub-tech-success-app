@@ -45,7 +45,7 @@ export const generalInstrumentsQuestions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "The Halstead Mosquito is a small hemostat typically 5 inches (12.5 cm) in length. It features fine, delicate jaws with transverse serrations for clamping small blood vessels.",
-    image: "/lovable-uploads/771d9991-b6ef-46ed-a651-6652cf5ea8ca.png"
+    image: "/lovable-uploads/halstead-mosquito-clamp.png"
   },
   {
     id: 4,
@@ -84,7 +84,7 @@ export const generalInstrumentsQuestions: Question[] = [
     ],
     correctAnswer: 1,
     explanation: "The Curved Crile hemostat is a medium-sized surgical clamp typically 5.5-6.25 inches (14-16 cm) in length. It features a curved tip with transverse serrations.",
-    image: "/lovable-uploads/428c99f3-12db-4068-a414-4df52acb2740.png"
+    image: "/lovable-uploads/771d9991-b6ef-46ed-a651-6652cf5ea8ca.png"
   },
   {
     id: 7,
@@ -435,7 +435,7 @@ export const generalInstrumentsQuestions: Question[] = [
     ],
     correctAnswer: 0,
     explanation: "The Yankauer suction tip is a rigid suction device typically 10-12 inches (25-30 cm) in length with a curved tip and side opening, commonly used for suctioning oral secretions and large debris.",
-    image: "/lovable-uploads/c46ab3be-13fe-4691-8a96-99626ea686f1.png"
+    image: "/lovable-uploads/yankauer-suction.png"
   },
   {
     id: 34,
