@@ -209,7 +209,8 @@ export const instrumentationEquipment: FlashcardItem[] = [
   {
     question: "Identify this surgical instrument",
     answer: "DeBakey Forceps\n(Atraumatic Tissue Forceps)",
-    explanation: "DeBakey forceps are specialized atraumatic tissue forceps typically 6-12 inches (15-30 cm) in length, featuring longitudinal serrations or ridges on the inner surface of the jaws instead of teeth. This unique design provides excellent grip on delicate tissues without causing trauma or crushing. The fine tips and gentle grasping action make them ideal for handling blood vessels, nerves, and other fragile structures during cardiovascular, vascular, and microsurgery procedures. Named after renowned cardiovascular surgeon Michael DeBakey, these forceps are essential for precise tissue manipulation."
+    explanation: "DeBakey forceps are specialized atraumatic tissue forceps typically 6-12 inches (15-30 cm) in length, featuring longitudinal serrations or ridges on the inner surface of the jaws instead of teeth. This unique design provides excellent grip on delicate tissues without causing trauma or crushing. The fine tips and gentle grasping action make them ideal for handling blood vessels, nerves, and other fragile structures during cardiovascular, vascular, and microsurgery procedures. Named after renowned cardiovascular surgeon Michael DeBakey, these forceps are essential for precise tissue manipulation.",
+    image: "/lovable-uploads/debakey-forceps.jpeg"
   },
   {
     question: "Identify this surgical instrument",
