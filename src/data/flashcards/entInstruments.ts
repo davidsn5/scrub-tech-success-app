@@ -102,5 +102,35 @@ export const entInstruments: FlashcardItem[] = [
     answer: "Hartmann Alligator Forceps",
     explanation: "Hartmann alligator forceps are used for grasping and removing small tissue fragments and foreign objects during ENT procedures.",
     image: "/lovable-uploads/hartmann-alligator-forceps.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Iglesias Working Element",
+    explanation: "The Iglesias working element is part of a resectoscope system used for cutting and coagulating tissue during endoscopic procedures.",
+    image: "/lovable-uploads/iglesias-working-element.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Buck Ear Curette",
+    explanation: "Buck ear curettes are used for removing wax, debris, and small tissue from the ear canal during otological procedures.",
+    image: "/lovable-uploads/buck-ear-curette.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Hartmann Ear Speculum",
+    explanation: "The Hartmann ear speculum is used to open and visualize the ear canal during otological examinations and procedures.",
+    image: "/lovable-uploads/hartmann-ear-speculum.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Bruening Nasal Snare",
+    explanation: "The Bruening nasal snare is used for removing polyps and other growths from the nasal cavity during ENT procedures.",
+    image: "/lovable-uploads/bruening-nasal-snare.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Colver Tonsil Grasping Forceps",
+    explanation: "Colver tonsil grasping forceps are used to grasp and manipulate tonsillar tissue during tonsillectomy procedures.",
+    image: "/lovable-uploads/colver-tonsil-grasping-forceps.png"
   }
 ];
