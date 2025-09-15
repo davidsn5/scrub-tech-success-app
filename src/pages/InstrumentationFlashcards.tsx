@@ -196,7 +196,7 @@ const InstrumentationFlashcards = () => {
     );
   }
 
-  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions' || selectedCategory === 'plastics-instrument-questions') {
+  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions' || selectedCategory === 'plastics-instrument-questions' || selectedCategory === 'ent-instrument-questions') {
     return <InstrumentQuestions 
       onBack={() => setSelectedCategory(null)} 
       category={selectedCategory}
