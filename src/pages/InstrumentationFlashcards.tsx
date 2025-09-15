@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, Target, Scissors, User, Bone, Stethoscope, Syringe, Ear } from 'lucide-react';
@@ -11,6 +11,25 @@ const InstrumentationFlashcards = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Track page visit to Instrumentation Review
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: 'Instrumentation Review',
+        page_location: window.location.href,
+        custom_map: {
+          section: 'instrumentation_review'
+        }
+      });
+      
+      // Custom event for instrumentation review visits
+      window.gtag('event', 'instrumentation_review_visit', {
+        event_category: 'engagement',
+        event_label: 'instrumentation_review_page'
+      });
+    }
+  }, []);
 
   const categories = [
     {
