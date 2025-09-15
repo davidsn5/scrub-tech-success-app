@@ -197,7 +197,8 @@ export const instrumentationEquipment: FlashcardItem[] = [
   {
     question: "Identify this surgical instrument",
     answer: "Senn Retractor\n(Hand-held Retractor)",
-    explanation: "Senn retractors are double-ended hand-held instruments typically 6.5 inches (16.5 cm) in length, featuring a three-pronged rake end and a U-shaped blunt end. The rake end has sharp prongs for securing tissue, while the blunt end provides gentle tissue retraction without trauma. These versatile retractors are commonly used in general surgery, plastic surgery, and minor procedures where superficial tissue retraction is needed. The lightweight design and dual functionality make them essential for wound exposure and tissue manipulation during various surgical procedures."
+    explanation: "Senn retractors are double-ended hand-held instruments typically 6.5 inches (16.5 cm) in length, featuring a three-pronged rake end and a U-shaped blunt end. The rake end has sharp prongs for securing tissue, while the blunt end provides gentle tissue retraction without trauma. These versatile retractors are commonly used in general surgery, plastic surgery, and minor procedures where superficial tissue retraction is needed. The lightweight design and dual functionality make them essential for wound exposure and tissue manipulation during various surgical procedures.",
+    image: "/lovable-uploads/senn-retractor.jpeg"
   },
   {
     question: "Identify this surgical instrument",
