@@ -171,9 +171,9 @@ export const orthopedicInstruments: FlashcardItem[] = [
   },
   {
     question: "Identify this orthopedic surgical instrument",
-    answer: "Hobbs Retractor\n(Nerve Root Retractor)",
-    explanation: "The Hobbs retractor is a specialized curved retractor designed primarily for neurosurgical and spinal procedures, featuring a smooth, curved blade with a distinctive hook or curved end for gentle nerve root retraction. The instrument allows surgeons to safely retract and protect nerve roots during spinal surgeries while providing excellent visualization of the operative field. The curved design follows the natural anatomy of the spine and minimizes trauma to delicate neural structures. Essential for procedures such as discectomies, laminectomies, and spinal decompression surgeries where nerve protection is critical.",
-    image: "/lovable-uploads/hobbs-retractor.png"
+    answer: "Hibbs Retractor\n(Nerve Root Retractor)",
+    explanation: "The Hibbs retractor is a specialized curved retractor designed primarily for neurosurgical and spinal procedures, featuring a smooth, curved blade with a distinctive hook or curved end for gentle nerve root retraction. The instrument allows surgeons to safely retract and protect nerve roots during spinal surgeries while providing excellent visualization of the operative field. The curved design follows the natural anatomy of the spine and minimizes trauma to delicate neural structures. Essential for procedures such as discectomies, laminectomies, and spinal decompression surgeries where nerve protection is critical.",
+    image: "/lovable-uploads/hibbs-retractor.png"
   },
   {
     question: "Identify this neurosurgical instrument",
