@@ -6,6 +6,7 @@ import { generalInstrumentsQuestions, Question } from '@/data/questions/generalI
 import { orthopedicInstrumentIdentificationQuestions } from '@/data/questions/orthopedicInstrumentIdentification';
 import { obgynInstrumentsQuestions } from '@/data/questions/obgynInstruments';
 import { plasticsInstrumentQuestions } from '@/data/questions/plasticsInstruments';
+import { entInstrumentsQuestions } from '@/data/questions/entInstruments';
 import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -32,6 +33,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     ? obgynInstrumentsQuestions
     : category === 'plastics-instrument-questions'
     ? plasticsInstrumentQuestions
+    : category === 'ent-instrument-questions'
+    ? entInstrumentsQuestions
     : generalInstrumentsQuestions;
   
   // Use limited questions for non-premium users
@@ -168,6 +171,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   const isOrthoNeuro = category === 'orthopedic-instrument-questions';
   const isObgyn = category === 'obgyn-instrument-questions';
   const isPlastics = category === 'plastics-instrument-questions';
+  const isEnt = category === 'ent-instrument-questions';
   
   const colorScheme = isOrthoNeuro ? {
     bgGradient: 'from-teal-50 via-white to-teal-100',
@@ -199,6 +203,16 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     primaryButton: 'bg-plastics hover:bg-plastics-dark',
     primaryGradient: 'from-plastics to-plastics-dark hover:from-plastics-dark hover:to-plastics',
     accent: 'plastics'
+  } : isEnt ? {
+    bgGradient: 'from-orange-50 via-white to-amber-100',
+    headerBg: 'bg-orange-50',
+    buttonHover: 'hover:bg-orange-100 hover:text-orange-700',
+    titleColor: 'text-orange-700',
+    upgradeButton: 'bg-gradient-to-r from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800',
+    progressBar: 'bg-orange-600',
+    primaryButton: 'bg-orange-600 hover:bg-orange-700',
+    primaryGradient: 'from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800',
+    accent: 'orange'
   } : {
     bgGradient: 'from-blue-50 via-white to-blue-100',
     headerBg: 'bg-blue-50',
