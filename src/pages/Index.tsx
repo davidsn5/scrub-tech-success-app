@@ -407,7 +407,7 @@ const Index = () => {
         </div>
 
         {/* Instrumentation Review Section */}
-        <div className="mb-6 sm:mb-8">
+        <div className="mb-6 sm:mb-8 mt-8 sm:mt-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Spanning from left edge of Intro to Surgical Technology to right edge of Medical Terminology */}
             <Card className="sm:col-span-2 lg:col-span-4 p-4 sm:p-6 bg-gradient-to-br from-orange-50/90 to-orange-100/90 backdrop-blur-sm border-orange-200/60 shadow-lg">
