@@ -14,8 +14,8 @@ const InstrumentationFlashcards = () => {
 
   useEffect(() => {
     // Track page visit to Instrumentation Review
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'page_view', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
         page_title: 'Instrumentation Review',
         page_location: window.location.href,
         custom_map: {
@@ -24,7 +24,7 @@ const InstrumentationFlashcards = () => {
       });
       
       // Custom event for instrumentation review visits
-      window.gtag('event', 'instrumentation_review_visit', {
+      (window as any).gtag('event', 'instrumentation_review_visit', {
         event_category: 'engagement',
         event_label: 'instrumentation_review_page'
       });
