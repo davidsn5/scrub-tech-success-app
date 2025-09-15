@@ -34,8 +34,8 @@ export const instrumentationEquipment: FlashcardItem[] = [
   },
   {
     question: "Identify this surgical instrument",
-    answer: "Curved Crile\n(Hemostat)",
-    explanation: "The Curved Crile hemostat is a medium-sized surgical clamp typically 5.5-6.25 inches (14-16 cm) in length. It features a curved tip with transverse serrations for secure clamping of blood vessels and tissue. The curved design allows for better access around anatomical structures and improved visualization during surgical procedures. Crile hemostats are commonly used for controlling bleeding from medium-sized vessels and for general tissue manipulation during surgery.",
+    answer: "Rochester Pean\n(Hemostat)",
+    explanation: "The Rochester Pean hemostat is a medium-sized surgical clamp typically 5.5-6.25 inches (14-16 cm) in length. It features a curved tip with transverse serrations for secure clamping of blood vessels and tissue. The curved design allows for better access around anatomical structures and improved visualization during surgical procedures. Rochester Pean hemostats are commonly used for controlling bleeding from medium-sized vessels and for general tissue manipulation during surgery.",
     image: "/lovable-uploads/428c99f3-12db-4068-a414-4df52acb2740.png"
   },
   {
