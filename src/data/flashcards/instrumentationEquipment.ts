@@ -40,6 +40,12 @@ export const instrumentationEquipment: FlashcardItem[] = [
   },
   {
     question: "Identify this surgical instrument",
+    answer: "Halstead Mosquito\n(Hemostat)",
+    explanation: "The Halstead Mosquito hemostat is a small, delicate surgical clamp typically 5 inches (12.5 cm) in length. It features fine, curved jaws with transverse serrations designed for clamping small blood vessels and delicate tissues. The mosquito hemostat is particularly useful for controlling bleeding from small vessels, fine tissue manipulation, and precision work in delicate surgical areas. Its smaller size makes it ideal for pediatric surgery, plastic surgery, and other procedures requiring fine hemostasis.",
+    image: "/lovable-uploads/halstead-mosquito-clamp.png"
+  },
+  {
+    question: "Identify this surgical instrument",
     answer: "Kocher Clamp\n(Straight or Curved)",
     explanation: "The Kocher clamp is a heavy-duty surgical instrument available in both straight and curved versions, typically 6-8 inches (15-20 cm) in length. It features distinctive 1×2 teeth at the tip and transverse serrations for secure grasping. Kocher clamps are designed for clamping thick tissue, large blood vessels, and tough structures. The teeth provide excellent grip on fibrous tissue, making it ideal for controlling bleeding from major vessels and manipulating dense anatomical structures during surgery.",
     image: "/lovable-uploads/b83510c2-04ba-4fd2-8e9c-10039f51486d.png"
