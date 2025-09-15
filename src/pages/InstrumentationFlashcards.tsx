@@ -105,7 +105,7 @@ const InstrumentationFlashcards = () => {
     }
   ];
 
-  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments' || selectedCategory === 'plastics-instruments') {
+  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments' || selectedCategory === 'plastics-instruments' || selectedCategory === 'ent-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     const bgGradient = selectedCategory === 'orthopedic-instruments' 
       ? 'from-slate-50/95 via-teal-50/90 to-teal-100/85'
@@ -113,6 +113,8 @@ const InstrumentationFlashcards = () => {
       ? 'from-slate-50/95 via-pink-50/90 to-purple-100/85'
       : selectedCategory === 'plastics-instruments'
       ? 'from-slate-50/95 via-plastics-light/40 to-plastics/20'
+      : selectedCategory === 'ent-instruments'
+      ? 'from-slate-50/95 via-orange-50/90 to-orange-100/85'
       : 'from-slate-50/95 via-blue-50/90 to-blue-100/85';
     const headerBg = selectedCategory === 'orthopedic-instruments' 
       ? 'bg-teal-50' 
@@ -120,6 +122,8 @@ const InstrumentationFlashcards = () => {
       ? 'bg-pink-50'
       : selectedCategory === 'plastics-instruments'
       ? 'bg-plastics-light/30'
+      : selectedCategory === 'ent-instruments'
+      ? 'bg-orange-50'
       : 'bg-blue-50';
     const buttonColors = selectedCategory === 'orthopedic-instruments'
       ? 'hover:bg-teal-100 hover:text-teal-700'
@@ -127,13 +131,17 @@ const InstrumentationFlashcards = () => {
       ? 'hover:bg-pink-100 hover:text-pink-700'
       : selectedCategory === 'plastics-instruments'
       ? 'hover:bg-plastics-light/30 hover:text-plastics'
+      : selectedCategory === 'ent-instruments'
+      ? 'hover:bg-orange-100 hover:text-orange-700'
       : 'hover:bg-blue-100 hover:text-blue-700';
     const titleColor = selectedCategory === 'orthopedic-instruments' 
-      ? 'text-teal-700' 
+      ? 'text-teal-700'
       : selectedCategory === 'obgyn-instruments'
       ? 'text-pink-700'
       : selectedCategory === 'plastics-instruments'
       ? 'text-plastics'
+      : selectedCategory === 'ent-instruments'
+      ? 'text-orange-700'
       : 'text-blue-700';
     const upgradeButtonColors = selectedCategory === 'orthopedic-instruments'
       ? 'bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800'
@@ -141,6 +149,8 @@ const InstrumentationFlashcards = () => {
       ? 'bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-700 hover:to-purple-800'
       : selectedCategory === 'plastics-instruments'
       ? 'bg-gradient-to-r from-plastics to-plastics-dark hover:from-plastics-dark hover:to-plastics'
+      : selectedCategory === 'ent-instruments'
+      ? 'bg-gradient-to-r from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800'
       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800';
 
     return (
