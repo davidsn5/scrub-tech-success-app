@@ -42,5 +42,65 @@ export const entInstruments: FlashcardItem[] = [
     answer: "House Sickle Knife", 
     explanation: "The House sickle knife is used for making precise incisions in ear surgery, particularly during stapedectomy procedures.",
     image: "/lovable-uploads/house-sickle-knife.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Belucci Alligator Scissors",
+    explanation: "Belucci alligator scissors are used for cutting and dissecting tissue in ENT procedures, particularly in nasal and sinus surgeries.",
+    image: "/lovable-uploads/belucci-alligator-scissors.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Love Adson Periosteal Elevator",
+    explanation: "The Love Adson periosteal elevator is used to elevate and separate periosteum from bone during ENT surgical procedures.",
+    image: "/lovable-uploads/love-adson-periosteal-elevator.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Baron Suction Tip",
+    explanation: "The Baron suction tip is used for suctioning blood and debris during ENT procedures, providing clear visualization of the surgical field.",
+    image: "/lovable-uploads/baron-suction-tip.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Ballenger Swivel Knife",
+    explanation: "The Ballenger swivel knife is used for making precise incisions and dissecting tissue during septoplasty and rhinoplasty procedures.",
+    image: "/lovable-uploads/ballenger-swivel-knife.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Davis Meyer Tongue Dissector",
+    explanation: "The Davis Meyer tongue dissector is used to retract and dissect tongue tissue during oral and throat surgical procedures.",
+    image: "/lovable-uploads/davis-meyer-tongue-dissector.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Resectoscope Sheath and Obturator",
+    explanation: "The resectoscope sheath and obturator are used in endoscopic procedures for visualization and tissue removal in the urogenital tract.",
+    image: "/lovable-uploads/resectoscope-sheath-obturator.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Cottle Nasal Speculum",
+    explanation: "The Cottle nasal speculum is used to open and retract the nasal passages during rhinoplasty and septoplasty procedures.",
+    image: "/lovable-uploads/cottle-nasal-speculum.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Takahashi Nasal Forceps",
+    explanation: "Takahashi nasal forceps are used for grasping and manipulating tissue during nasal and sinus surgical procedures.",
+    image: "/lovable-uploads/takahashi-nasal-forceps.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Becker Septum Scissors",
+    explanation: "Becker septum scissors are used for cutting septal cartilage and tissue during septoplasty procedures.",
+    image: "/lovable-uploads/becker-septum-scissors.png"
+  },
+  {
+    question: "What is this ENT instrument?",
+    answer: "Hartmann Alligator Forceps",
+    explanation: "Hartmann alligator forceps are used for grasping and removing small tissue fragments and foreign objects during ENT procedures.",
+    image: "/lovable-uploads/hartmann-alligator-forceps.png"
   }
 ];
