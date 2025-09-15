@@ -492,5 +492,17 @@ export const orthopedicInstruments: FlashcardItem[] = [
     answer: "Cushing Intervertebral Disc Rongeur",
     explanation: "The Cushing intervertebral disc rongeur is a specialized neurosurgical instrument designed for removing disc material during discectomy procedures. It features angled, cup-shaped jaws that can grasp and remove herniated or degenerated disc tissue with precision. The instrument's design allows surgeons to access the disc space through small incisions while maintaining control over tissue removal. It is essential for treating disc herniations and performing spinal decompression procedures.",
     image: "/lovable-uploads/cushing-intervertebral-disc-rongeur.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Singley Forceps\n(Tissue Forceps)",
+    explanation: "Singley forceps are delicate tissue forceps typically 6-8 inches (15-20 cm) in length with long, slender jaws and smooth tips. These forceps are designed for precise handling of delicate tissues without causing trauma. The smooth, non-toothed jaws provide gentle grasping capability while the elongated design allows access to deep surgical sites. Singley forceps are commonly used in plastic surgery, microsurgery, and other procedures requiring careful tissue manipulation. The instrument features finger ring handles for precise control and is essential for suturing and handling of fragile anatomical structures.",
+    image: "/lovable-uploads/singley-forceps.png"
+  },
+  {
+    question: "Identify this surgical instrument",
+    answer: "Parker Retractor\n(Hand-held Retractor)",
+    explanation: "The Parker retractor is a simple, curved hand-held retractor typically 6-8 inches (15-20 cm) in length with smooth, rounded ends. These retractors feature a gentle curve that allows for effective tissue retraction while minimizing trauma to delicate structures. Parker retractors are commonly used in various surgical procedures to hold tissues away from the operative field, providing clear visualization for the surgeon. The smooth surface prevents tissue snagging and the ergonomic design allows for comfortable handling during extended procedures. They are particularly useful in superficial surgeries and procedures requiring gentle tissue manipulation.",
+    image: "/lovable-uploads/parker-retractor.png"
   }
 ];

@@ -256,18 +256,6 @@ export const instrumentationEquipment: FlashcardItem[] = [
   },
   {
     question: "Identify this surgical instrument",
-    answer: "Singley Forceps\n(Tissue Forceps)",
-    explanation: "Singley forceps are delicate tissue forceps typically 6-8 inches (15-20 cm) in length with long, slender jaws and smooth tips. These forceps are designed for precise handling of delicate tissues without causing trauma. The smooth, non-toothed jaws provide gentle grasping capability while the elongated design allows access to deep surgical sites. Singley forceps are commonly used in plastic surgery, microsurgery, and other procedures requiring careful tissue manipulation. The instrument features finger ring handles for precise control and is essential for suturing and handling of fragile anatomical structures.",
-    image: "/lovable-uploads/singley-forceps.png"
-  },
-  {
-    question: "Identify this surgical instrument",
-    answer: "Parker Retractor\n(Hand-held Retractor)",
-    explanation: "The Parker retractor is a simple, curved hand-held retractor typically 6-8 inches (15-20 cm) in length with smooth, rounded ends. These retractors feature a gentle curve that allows for effective tissue retraction while minimizing trauma to delicate structures. Parker retractors are commonly used in various surgical procedures to hold tissues away from the operative field, providing clear visualization for the surgeon. The smooth surface prevents tissue snagging and the ergonomic design allows for comfortable handling during extended procedures. They are particularly useful in superficial surgeries and procedures requiring gentle tissue manipulation.",
-    image: "/lovable-uploads/parker-retractor.png"
-  },
-  {
-    question: "Identify this surgical instrument",
     answer: "Hasson S-Shaped Retractor\n(Curved Hand-held Retractor)",
     explanation: "The Hasson S-shaped retractor is a specialized hand-held retractor featuring a distinctive S-curve design that provides superior tissue retraction capabilities. These retractors are typically 8-10 inches (20-25 cm) in length with smooth, curved ends that conform to anatomical contours. The S-shaped configuration allows for effective retraction of tissues at multiple angles and depths, making them particularly useful in laparoscopic and minimally invasive procedures. Named after Dr. Harrith Hasson, these retractors provide excellent visualization while minimizing tissue trauma and are commonly used in abdominal and pelvic surgeries.",
     image: "/lovable-uploads/hasson-s-shaped-retractor.png"
