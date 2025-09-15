@@ -184,7 +184,7 @@ export const instrumentationEquipment: FlashcardItem[] = [
   },
   {
     question: "Identify this surgical instrument",
-    answer: "Tonsil Schmidt Forceps\n(ENT Forceps)",
+    answer: "Tonsil Schmidt Forceps",
     explanation: "Tonsil Schmidt forceps are specialized ENT instruments typically 7-8 inches (18-20 cm) in length, designed specifically for tonsillectomy procedures. They feature curved, serrated jaws with a secure gripping surface for grasping and manipulating tonsil tissue during removal. The ring handles provide excellent control and the curved design allows for optimal access to the tonsillar fossa. These forceps are essential for secure tissue handling during tonsil dissection and removal, providing surgeons with precise control while minimizing trauma to surrounding pharyngeal structures.",
     image: "/lovable-uploads/f7f2cf01-808e-4209-a70c-9d2a068b847d.png"
   },
