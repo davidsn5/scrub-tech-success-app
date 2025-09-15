@@ -128,27 +128,6 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
             )}
           </div>
         </div>
-        <div className="flex items-center gap-2 flex-wrap">
-          <Button 
-            onClick={handleShuffle} 
-            variant="outline" 
-            size="sm" 
-            className={`flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm ${!isPremium ? 'opacity-50 cursor-not-allowed' : ''} relative`}
-            disabled={!isPremium}
-          >
-            <Shuffle className="h-4 w-4" />
-            <span>Shuffle</span>
-            {!isPremium && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Lock className="h-3 w-3 text-amber-500" />
-              </div>
-            )}
-          </Button>
-          <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
-            <RotateCcw className="h-4 w-4" />
-            <span>Reset</span>
-          </Button>
-        </div>
       </div>
 
       {/* Free User Notice */}
@@ -179,6 +158,33 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
           </Card>
         </div>
       )}
+
+      {/* Shuffle and Reset Controls */}
+      <div className="mb-4 sm:mb-6">
+        <Card className="bg-gradient-to-br from-gray-50/80 to-gray-100/80 border-gray-200/50 p-4">
+          <div className="flex items-center justify-center gap-4">
+            <Button 
+              onClick={handleShuffle} 
+              variant="outline" 
+              size="sm" 
+              className={`flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm ${!isPremium ? 'opacity-50 cursor-not-allowed' : ''} relative`}
+              disabled={!isPremium}
+            >
+              <Shuffle className="h-4 w-4" />
+              <span>Shuffle</span>
+              {!isPremium && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Lock className="h-3 w-3 text-amber-500" />
+                </div>
+              )}
+            </Button>
+            <Button onClick={handleReset} variant="outline" size="sm" className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm">
+              <RotateCcw className="h-4 w-4" />
+              <span>Reset</span>
+            </Button>
+          </div>
+        </Card>
+      </div>
 
       <div className="mb-6 sm:mb-8">
         <Card className={`w-full min-h-80 sm:min-h-96 bg-gradient-to-br ${categoryColors?.bgColor || 'from-white via-blue-50/50 to-indigo-100/30'} backdrop-blur-sm ${categoryColors?.borderColor || 'border-blue-200'} border-2 shadow-lg overflow-hidden`}>
