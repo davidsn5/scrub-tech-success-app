@@ -242,30 +242,6 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
               </Button>
             </div>
             <div className="flex flex-col items-end space-y-2">
-              <div className="flex space-x-2">
-                <Button 
-                  onClick={handleShuffle}
-                  variant="outline"
-                  size="sm"
-                  className={`flex items-center space-x-1 ${!hasPremiumAccess ? 'opacity-50' : ''}`}
-                  disabled={!hasPremiumAccess}
-                >
-                  {!hasPremiumAccess && <Lock className="h-3 w-3" />}
-                  <Shuffle className="h-4 w-4" />
-                  <span className="hidden sm:inline">
-                    {hasPremiumAccess ? 'Shuffle' : 'Shuffle'}
-                  </span>
-                </Button>
-                <Button 
-                  onClick={handleRestart}
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center space-x-1"
-                >
-                  <RotateCcw className="h-4 w-4" />
-                  <span className="hidden sm:inline">Restart</span>
-                </Button>
-              </div>
               {!user && (
                 <Button 
                   onClick={() => navigate('/auth')}
@@ -386,6 +362,36 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
                   </div>
                 </Card>
               )}
+
+              {/* Shuffle and Reset Controls */}
+              <Card className="bg-gradient-to-br from-gray-50/80 to-gray-100/80 border-gray-200/50 p-4">
+                <div className="flex items-center justify-center gap-4">
+                  <Button 
+                    onClick={handleShuffle}
+                    variant="outline"
+                    size="sm"
+                    className={`flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm ${!hasPremiumAccess ? 'opacity-50 cursor-not-allowed' : ''} relative`}
+                    disabled={!hasPremiumAccess}
+                  >
+                    <Shuffle className="h-4 w-4" />
+                    <span>Shuffle</span>
+                    {!hasPremiumAccess && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Lock className="h-3 w-3 text-amber-500" />
+                      </div>
+                    )}
+                  </Button>
+                  <Button 
+                    onClick={handleRestart}
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center space-x-1 sm:space-x-2 min-h-[44px] text-xs sm:text-sm"
+                  >
+                    <RotateCcw className="h-4 w-4" />
+                    <span>Restart</span>
+                  </Button>
+                </div>
+              </Card>
               {/* Instrument Image */}
               {currentQuestion.image && (
                 <div className="flex justify-center">
