@@ -203,7 +203,8 @@ export const instrumentationEquipment: FlashcardItem[] = [
   {
     question: "Identify this surgical instrument",
     answer: "Army-Navy Retractor\n(Handheld Retractor)",
-    explanation: "Army-Navy retractors are handheld surgical instruments typically 8-9 inches (20-23 cm) in length, featuring right-angled blade ends of different sizes for versatility. One end has a larger blade while the other has a smaller blade, allowing surgeons to choose the appropriate size for tissue retraction. The smooth, blunt edges prevent tissue trauma while providing excellent exposure of the surgical field. These retractors are essential in general surgery, abdominal procedures, and any surgery requiring reliable tissue retraction and wound exposure."
+    explanation: "Army-Navy retractors are handheld surgical instruments typically 8-9 inches (20-23 cm) in length, featuring right-angled blade ends of different sizes for versatility. One end has a larger blade while the other has a smaller blade, allowing surgeons to choose the appropriate size for tissue retraction. The smooth, blunt edges prevent tissue trauma while providing excellent exposure of the surgical field. These retractors are essential in general surgery, abdominal procedures, and any surgery requiring reliable tissue retraction and wound exposure.",
+    image: "/lovable-uploads/army-navy-retractor.jpeg"
   },
   {
     question: "Identify this surgical instrument",
