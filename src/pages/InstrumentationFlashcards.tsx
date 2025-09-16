@@ -121,10 +121,28 @@ const InstrumentationFlashcards = () => {
       color: 'from-orange-500/80 to-orange-600/80',
       bgColor: 'from-orange-50/90 to-orange-100/90',
       borderColor: 'border-orange-200/60'
+    },
+    {
+      id: 'cardiothoracic-instruments',
+      title: 'Cardiothoracic/Vascular Instruments',
+      description: 'Specialized instruments for cardiovascular and thoracic procedures',
+      icon: Stethoscope,
+      color: 'from-purple-900/80 to-purple-950/80',
+      bgColor: 'from-purple-50/90 to-purple-100/90',
+      borderColor: 'border-purple-200/60'
+    },
+    {
+      id: 'cardiothoracic-instrument-questions',
+      title: 'Cardiothoracic/Vascular Instrument Questions',
+      description: 'Practice questions focusing on cardiovascular and thoracic instrument identification',
+      icon: Target,
+      color: 'from-purple-900/80 to-purple-950/80',
+      bgColor: 'from-purple-50/90 to-purple-100/90',
+      borderColor: 'border-purple-200/60'
     }
   ];
 
-  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments' || selectedCategory === 'plastics-instruments' || selectedCategory === 'ent-instruments') {
+  if (selectedCategory === 'general-instruments' || selectedCategory === 'orthopedic-instruments' || selectedCategory === 'obgyn-instruments' || selectedCategory === 'plastics-instruments' || selectedCategory === 'ent-instruments' || selectedCategory === 'cardiothoracic-instruments') {
     const category = categories.find(cat => cat.id === selectedCategory);
     const bgGradient = selectedCategory === 'orthopedic-instruments' 
       ? 'from-slate-50/95 via-teal-50/90 to-teal-100/85'
@@ -225,7 +243,7 @@ const InstrumentationFlashcards = () => {
     );
   }
 
-  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions' || selectedCategory === 'plastics-instrument-questions' || selectedCategory === 'ent-instrument-questions') {
+  if (selectedCategory === 'general-instrument-questions' || selectedCategory === 'orthopedic-instrument-questions' || selectedCategory === 'obgyn-instrument-questions' || selectedCategory === 'plastics-instrument-questions' || selectedCategory === 'ent-instrument-questions' || selectedCategory === 'cardiothoracic-instrument-questions') {
     return <InstrumentQuestions 
       onBack={() => setSelectedCategory(null)} 
       category={selectedCategory}
