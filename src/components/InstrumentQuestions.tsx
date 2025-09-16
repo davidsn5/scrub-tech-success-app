@@ -35,6 +35,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     ? plasticsInstrumentQuestions
     : category === 'ent-instrument-questions'
     ? entInstrumentsQuestions
+    : category === 'cardiothoracic-instrument-questions'
+    ? [] // Will need to create cardiothoracic questions data
     : generalInstrumentsQuestions;
   
   // Use limited questions for non-premium users
@@ -172,6 +174,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   const isObgyn = category === 'obgyn-instrument-questions';
   const isPlastics = category === 'plastics-instrument-questions';
   const isEnt = category === 'ent-instrument-questions';
+  const isCardiothoracic = category === 'cardiothoracic-instrument-questions';
   
   const colorScheme = isOrthoNeuro ? {
     bgGradient: 'from-teal-50 via-white to-teal-100',
@@ -213,6 +216,16 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     primaryButton: 'bg-orange-600 hover:bg-orange-700',
     primaryGradient: 'from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800',
     accent: 'orange'
+  } : isCardiothoracic ? {
+    bgGradient: 'from-red-50 via-white to-red-100',
+    headerBg: 'bg-red-50',
+    buttonHover: 'hover:bg-red-100 hover:text-red-700',
+    titleColor: 'text-red-700',
+    upgradeButton: 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800',
+    progressBar: 'bg-red-600',
+    primaryButton: 'bg-red-600 hover:bg-red-700',
+    primaryGradient: 'from-red-600 to-red-700 hover:from-red-700 hover:to-red-800',
+    accent: 'red'
   } : {
     bgGradient: 'from-blue-50 via-white to-blue-100',
     headerBg: 'bg-blue-50',
