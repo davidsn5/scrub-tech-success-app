@@ -156,5 +156,35 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Debakeys Multipurpose Clamp",
     explanation: "A versatile vascular clamp suitable for various cardiovascular procedures. Features smooth, curved jaws that can be used for partial or complete vessel occlusion, providing excellent control during vascular anastomoses.",
     image: "/lovable-uploads/debakeys-multipurpose-clamp.png"
+  },
+  {
+    question: "What is this specialized cardiac retractor?",
+    answer: "Cooley Atrial Valve Retractor",
+    explanation: "A specialized retractor designed for cardiac valve procedures, providing excellent exposure of the atrial cavity and valve structures. Features multiple curved blades that allow for optimal visualization during valve repair or replacement.",
+    image: "/lovable-uploads/cooley-atrial-valve-retractor.png"
+  },
+  {
+    question: "What is this precision needle holder?",
+    answer: "Castroviejo Needle Holder",
+    explanation: "A delicate needle holder designed for microsurgical procedures and fine suturing. Features locking mechanisms and precise tips that provide excellent control for handling small needles during cardiovascular and ophthalmic procedures.",
+    image: "/lovable-uploads/castroviejo-needle-holder.png"
+  },
+  {
+    question: "What is this sternal closure instrument?",
+    answer: "Nayo-Haberisser Sternal Wire Twister",
+    explanation: "A specialized instrument for twisting and securing sternal wires during chest closure after cardiac surgery. Features ergonomic handles and precision tips that allow for proper wire tension and secure sternal approximation.",
+    image: "/lovable-uploads/nayo-haberisser-sternal-wire-twister.png"
+  },
+  {
+    question: "What is this peripheral vascular clamp?",
+    answer: "Dale Femoral-Popliteal Clamp",
+    explanation: "A specialized vascular clamp designed for femoral and popliteal artery procedures. Features angled jaws and atraumatic tips that provide secure vessel occlusion while minimizing damage to arterial walls during bypass procedures.",
+    image: "/lovable-uploads/dale-femoral-popliteal-clamp.png"
+  },
+  {
+    question: "What is this venous occlusion clamp?",
+    answer: "Satinsky Vena Cava Clamp",
+    explanation: "A specialized clamp designed for partial occlusion of the vena cava and other large venous structures. Features a unique angled design that allows for side-biting occlusion without complete vessel interruption.",
+    image: "/lovable-uploads/satinsky-vena-cava-clamp.png"
   }
 ];
