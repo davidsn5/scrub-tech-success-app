@@ -126,5 +126,35 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Dietrich Vascular Scissors",
     explanation: "Specialized vascular scissors with angled blades designed for precise cutting in confined spaces during cardiovascular procedures. Features sharp, fine tips that provide excellent control for delicate vascular work.",
     image: "/lovable-uploads/dietrich-vascular-scissors.png"
+  },
+  {
+    question: "What is this chest tube insertion instrument?",
+    answer: "Chest Tube Passer",
+    explanation: "A specialized instrument used for guiding and inserting chest tubes through the intercostal space. Features a curved tip that helps navigate around ribs and ensures proper placement of drainage tubes in the pleural cavity.",
+    image: "/lovable-uploads/chest-tube-passer.png"
+  },
+  {
+    question: "What is this tube clamping instrument?",
+    answer: "Tube Occluding Clamp",
+    explanation: "A specialized clamp designed to temporarily occlude tubes, drains, or catheters during surgical procedures. Features smooth jaws that provide secure closure without damaging the tube material.",
+    image: "/lovable-uploads/tube-occluding-clamp.png"
+  },
+  {
+    question: "What are these tissue grasping forceps?",
+    answer: "Collin-Duval Tissue Grasping Forceps",
+    explanation: "Heavy-duty tissue grasping forceps with strong, serrated jaws designed for secure handling of thick tissues and organs. Features a locking mechanism that maintains grip during tissue manipulation and resection.",
+    image: "/lovable-uploads/collin-duval-tissue-grasping-forceps.png"
+  },
+  {
+    question: "What is this specialized vascular clamp?",
+    answer: "Debakey Coarctation Clamp",
+    explanation: "A specialized vascular clamp designed for aortic coarctation repair and other major vessel procedures. Features angled jaws with atraumatic tips that provide secure occlusion while minimizing vessel wall damage.",
+    image: "/lovable-uploads/debakey-coarctation-clamp.png"
+  },
+  {
+    question: "What is this multipurpose vascular clamp?",
+    answer: "Debakeys Multipurpose Clamp",
+    explanation: "A versatile vascular clamp suitable for various cardiovascular procedures. Features smooth, curved jaws that can be used for partial or complete vessel occlusion, providing excellent control during vascular anastomoses.",
+    image: "/lovable-uploads/debakeys-multipurpose-clamp.png"
   }
 ];
