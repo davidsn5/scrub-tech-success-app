@@ -186,5 +186,23 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Satinsky Vena Cava Clamp",
     explanation: "A specialized clamp designed for partial occlusion of the vena cava and other large venous structures. Features a unique angled design that allows for side-biting occlusion without complete vessel interruption.",
     image: "/lovable-uploads/satinsky-vena-cava-clamp.png"
+  },
+  {
+    question: "What are these specialized vascular clamps?",
+    answer: "Fogarty Clamps",
+    explanation: "Specialized vascular clamps with inserts designed for atraumatic occlusion of blood vessels. Features soft, removable inserts that protect vessel walls from crushing injury during vascular procedures.",
+    image: "/lovable-uploads/fogarty-clamps.png"
+  },
+  {
+    question: "What is this pulmonary clamp?",
+    answer: "Sarot Bronchus Clamp",
+    explanation: "A specialized clamp designed for occluding bronchi and pulmonary vessels during thoracic procedures. Features angled jaws with serrated surfaces that provide secure grip on bronchial structures during lung resections.",
+    image: "/lovable-uploads/sarot-bronchus-clamp.png"
+  },
+  {
+    question: "What is this peripheral vascular clamp?",
+    answer: "Debakey Peripheral Clamp",
+    explanation: "A vascular clamp specifically designed for peripheral vessel procedures. Features curved, atraumatic jaws that provide gentle yet secure occlusion of arteries and veins in extremity vascular surgery.",
+    image: "/lovable-uploads/debakey-peripheral-clamp.png"
   }
 ];
