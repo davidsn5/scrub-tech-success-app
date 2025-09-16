@@ -28,6 +28,7 @@ import { surgicalProcedures } from './flashcards/surgicalProcedures';
 import { disinfectionSterilization } from './flashcards/disinfectionSterilization';
 import { plasticsInstruments } from './flashcards/plasticsInstruments';
 import { entInstruments } from './flashcards/entInstruments';
+import { cardiothoracicInstruments } from './flashcards/cardiothoracicInstruments';
 
 export const flashcardData: FlashcardData = {
   'medical-terminology': medicalTerminology,
@@ -47,5 +48,6 @@ export const flashcardData: FlashcardData = {
   'surgical-procedures': surgicalProcedures,
   'disinfection-sterilization': disinfectionSterilization,
   'plastics-instruments': plasticsInstruments,
-  'ent-instruments': entInstruments
+  'ent-instruments': entInstruments,
+  'cardiothoracic-instruments': cardiothoracicInstruments
 };
