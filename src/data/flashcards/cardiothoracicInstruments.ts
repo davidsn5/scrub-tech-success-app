@@ -96,5 +96,35 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Cushing Vein Retractor",
     explanation: "A specialized retractor designed for gentle retraction of veins and delicate vascular structures. Features a smooth, curved blade that provides excellent exposure while minimizing trauma to fragile vessel walls.",
     image: "/lovable-uploads/cushing-vein-retractor.png"
+  },
+  {
+    question: "What are these specialized vascular scissors?",
+    answer: "Potts Smith Vascular Scissors",
+    explanation: "Precision vascular scissors with fine, angled tips designed for delicate vessel anastomoses and vascular repairs. Features sharp, smooth cutting edges that provide clean incisions in blood vessels without crushing tissue.",
+    image: "/lovable-uploads/potts-smith-vascular-scissors.png"
+  },
+  {
+    question: "What is this thyroid retraction instrument?",
+    answer: "Green Thyroid Retractor",
+    explanation: "A specialized retractor designed for thyroid and neck surgery procedures. Features a unique shape that provides excellent exposure of the thyroid gland and surrounding structures while protecting the recurrent laryngeal nerve.",
+    image: "/lovable-uploads/green-thyroid-retractor.png"
+  },
+  {
+    question: "What is this rib preparation instrument?",
+    answer: "Matson Rib Stripper",
+    explanation: "A specialized instrument used for stripping periosteum from ribs during thoracic procedures. Features a curved working end with measurement markings that allows for precise periosteal elevation and rib preparation.",
+    image: "/lovable-uploads/matson-rib-stripper.png"
+  },
+  {
+    question: "What are these vascular dilation instruments?",
+    answer: "Garrett Vascular Dilator",
+    explanation: "A set of graduated dilators used for progressive dilation of blood vessels and vessel grafts. Features multiple sizes with smooth, tapered tips that allow for gentle, controlled expansion of vascular structures.",
+    image: "/lovable-uploads/garrett-vascular-dilator.png"
+  },
+  {
+    question: "What are these angled vascular scissors?",
+    answer: "Dietrich Vascular Scissors",
+    explanation: "Specialized vascular scissors with angled blades designed for precise cutting in confined spaces during cardiovascular procedures. Features sharp, fine tips that provide excellent control for delicate vascular work.",
+    image: "/lovable-uploads/dietrich-vascular-scissors.png"
   }
 ];
