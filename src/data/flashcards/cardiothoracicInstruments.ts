@@ -204,5 +204,11 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Debakey Peripheral Clamp",
     explanation: "A vascular clamp specifically designed for peripheral vessel procedures. Features curved, atraumatic jaws that provide gentle yet secure occlusion of arteries and veins in extremity vascular surgery.",
     image: "/lovable-uploads/debakey-peripheral-clamp.png"
+  },
+  {
+    question: "What are these delicate micro scissors?",
+    answer: "Scanlan Micro Scissors",
+    explanation: "Ultra-precise microsurgical scissors designed for delicate cardiovascular procedures. Features curved, fine blades with spring-loaded handles that provide exceptional control for cutting small vessels, sutures, and delicate tissues.",
+    image: "/lovable-uploads/scanlan-micro-scissors.png"
   }
 ];
