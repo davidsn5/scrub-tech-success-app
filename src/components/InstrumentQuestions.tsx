@@ -7,6 +7,7 @@ import { orthopedicInstrumentIdentificationQuestions } from '@/data/questions/or
 import { obgynInstrumentsQuestions } from '@/data/questions/obgynInstruments';
 import { plasticsInstrumentQuestions } from '@/data/questions/plasticsInstruments';
 import { entInstrumentsQuestions } from '@/data/questions/entInstruments';
+import { cardiothoracicInstrumentQuestions } from '@/data/questions/cardiothoracicInstruments';
 import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -36,7 +37,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     : category === 'ent-instrument-questions'
     ? entInstrumentsQuestions
     : category === 'cardiothoracic-instrument-questions'
-    ? [] // Will need to create cardiothoracic questions data
+    ? cardiothoracicInstrumentQuestions
     : generalInstrumentsQuestions;
   
   // Use limited questions for non-premium users
