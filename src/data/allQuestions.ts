@@ -12,13 +12,15 @@ import { introSurgicalTechQuestions } from './questions/introSurgicalTech';
 import { principlesPracticeQuestions } from './questions/principlesPractice';
 import { surgicalProceduresQuestions } from './questions/surgicalProcedures';
 import { medicalTerminologyQuestions } from './questions/medicalTerminology';
+import { cardiothoracicInstrumentQuestions } from './questions/cardiothoracicInstruments';
 
 // Add category information to each question and combine all questions
 export const allQuestions: Question[] = [
   ...introSurgicalTechQuestions.map(q => ({ ...q, category: 'Intro to Surgical Technology' })),
   ...principlesPracticeQuestions.map(q => ({ ...q, category: 'Principles and Practice of Surgical Technology' })),
   ...surgicalProceduresQuestions.map(q => ({ ...q, category: 'Surgical Procedures' })),
-  ...medicalTerminologyQuestions.map(q => ({ ...q, category: 'Medical Terminology' }))
+  ...medicalTerminologyQuestions.map(q => ({ ...q, category: 'Medical Terminology' })),
+  ...cardiothoracicInstrumentQuestions.map(q => ({ ...q, category: 'Cardiothoracic/Vascular Instruments' }))
 ];
 
 // Function to get random questions from all categories
@@ -51,5 +53,6 @@ export const categoryBreakdown = {
   'Principles and Practice of Surgical Technology': principlesPracticeQuestions.length,
   'Surgical Procedures': surgicalProceduresQuestions.length,
   'Medical Terminology': medicalTerminologyQuestions.length,
+  'Cardiothoracic/Vascular Instruments': cardiothoracicInstrumentQuestions.length,
   'Total': allQuestions.length
 };
