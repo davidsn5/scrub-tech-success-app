@@ -152,6 +152,8 @@ const InstrumentationFlashcards = () => {
       ? 'from-slate-50/95 via-plastics-light/40 to-plastics/20'
       : selectedCategory === 'ent-instruments'
       ? 'from-slate-50/95 via-orange-50/90 to-orange-100/85'
+      : selectedCategory === 'cardiothoracic-instruments'
+      ? 'from-slate-50/95 via-red-50/90 to-red-100/85'
       : 'from-slate-50/95 via-blue-50/90 to-blue-100/85';
     const headerBg = selectedCategory === 'orthopedic-instruments' 
       ? 'bg-teal-50' 
@@ -161,6 +163,8 @@ const InstrumentationFlashcards = () => {
       ? 'bg-plastics-light/30'
       : selectedCategory === 'ent-instruments'
       ? 'bg-orange-50'
+      : selectedCategory === 'cardiothoracic-instruments'
+      ? 'bg-red-50'
       : 'bg-blue-50';
     const buttonColors = selectedCategory === 'orthopedic-instruments'
       ? 'hover:bg-teal-100 hover:text-teal-700'
@@ -170,6 +174,8 @@ const InstrumentationFlashcards = () => {
       ? 'hover:bg-plastics-light/30 hover:text-plastics'
       : selectedCategory === 'ent-instruments'
       ? 'hover:bg-orange-100 hover:text-orange-700'
+      : selectedCategory === 'cardiothoracic-instruments'
+      ? 'hover:bg-red-100 hover:text-red-700'
       : 'hover:bg-blue-100 hover:text-blue-700';
     const titleColor = selectedCategory === 'orthopedic-instruments' 
       ? 'text-teal-700'
@@ -179,6 +185,8 @@ const InstrumentationFlashcards = () => {
       ? 'text-plastics'
       : selectedCategory === 'ent-instruments'
       ? 'text-orange-700'
+      : selectedCategory === 'cardiothoracic-instruments'
+      ? 'text-red-700'
       : 'text-blue-700';
     const upgradeButtonColors = selectedCategory === 'orthopedic-instruments'
       ? 'bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800'
@@ -188,6 +196,8 @@ const InstrumentationFlashcards = () => {
       ? 'bg-gradient-to-r from-plastics to-plastics-dark hover:from-plastics-dark hover:to-plastics'
       : selectedCategory === 'ent-instruments'
       ? 'bg-gradient-to-r from-orange-600 to-amber-700 hover:from-orange-700 hover:to-amber-800'
+      : selectedCategory === 'cardiothoracic-instruments'
+      ? 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800'
       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800';
 
     return (
