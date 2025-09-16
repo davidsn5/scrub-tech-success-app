@@ -80,18 +80,18 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
   const allQuestionsAnswered = answeredQuestions.every(answered => answered);
 
-  // Safety check - if no questions available, show loading state
+  // Safety check - if no questions available, show loading state (no colorScheme usage here to avoid early reference)
   if (!questions.length || !currentQuestion) {
     return (
-      <div className={`min-h-screen bg-gradient-to-br ${colorScheme.bgGradient} flex items-center justify-center`}>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center">
         <Card className="p-8 text-center">
           <CardHeader>
             <CardTitle>Loading Questions...</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              {allQuestions.length === 0 
-                ? "No questions available for this category." 
+              {allQuestions.length === 0
+                ? "No questions available for this category."
                 : "Please wait while we load your questions."}
             </p>
             <Button onClick={onBack} variant="outline" className="mt-4">
