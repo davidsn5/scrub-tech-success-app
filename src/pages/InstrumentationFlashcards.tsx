@@ -127,18 +127,18 @@ const InstrumentationFlashcards = () => {
       title: 'Cardiothoracic/Vascular Instruments',
       description: 'Specialized instruments for cardiovascular and thoracic procedures',
       icon: Stethoscope,
-      color: 'from-purple-900/80 to-purple-950/80',
-      bgColor: 'from-purple-50/90 to-purple-100/90',
-      borderColor: 'border-purple-200/60'
+      color: 'from-red-950/80 to-red-950/90',
+      bgColor: 'from-red-50/90 to-red-100/90',
+      borderColor: 'border-red-200/60'
     },
     {
       id: 'cardiothoracic-instrument-questions',
       title: 'Cardiothoracic/Vascular Instrument Questions',
       description: 'Practice questions focusing on cardiovascular and thoracic instrument identification',
       icon: Target,
-      color: 'from-purple-900/80 to-purple-950/80',
-      bgColor: 'from-purple-50/90 to-purple-100/90',
-      borderColor: 'border-purple-200/60'
+      color: 'from-red-950/80 to-red-950/90',
+      bgColor: 'from-red-50/90 to-red-100/90',
+      borderColor: 'border-red-200/60'
     }
   ];
 
