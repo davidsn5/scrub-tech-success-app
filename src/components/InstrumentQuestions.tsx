@@ -80,6 +80,29 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
   const allQuestionsAnswered = answeredQuestions.every(answered => answered);
 
+  // Safety check - if no questions available, show loading state
+  if (!questions.length || !currentQuestion) {
+    return (
+      <div className={`min-h-screen bg-gradient-to-br ${colorScheme.bgGradient} flex items-center justify-center`}>
+        <Card className="p-8 text-center">
+          <CardHeader>
+            <CardTitle>Loading Questions...</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              {allQuestions.length === 0 
+                ? "No questions available for this category." 
+                : "Please wait while we load your questions."}
+            </p>
+            <Button onClick={onBack} variant="outline" className="mt-4">
+              Back to Categories
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return;
     setSelectedAnswer(answerIndex);
@@ -238,6 +261,29 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     primaryGradient: 'from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800',
     accent: 'blue'
   };
+
+  // Safety check - if no questions available, show loading state
+  if (!questions.length || !currentQuestion) {
+    return (
+      <div className={`min-h-screen bg-gradient-to-br ${colorScheme.bgGradient} flex items-center justify-center`}>
+        <Card className="p-8 text-center">
+          <CardHeader>
+            <CardTitle>Loading Questions...</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              {allQuestions.length === 0 
+                ? "No questions available for this category." 
+                : "Please wait while we load your questions."}
+            </p>
+            <Button onClick={onBack} variant="outline" className="mt-4">
+              Back to Categories
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className={`min-h-screen bg-gradient-to-br ${colorScheme.bgGradient}`}>
