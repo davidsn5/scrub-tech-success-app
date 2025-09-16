@@ -133,15 +133,36 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
       {/* Free User Notice */}
       {!isPremium && originalFlashcards.length > limits.flashcardsPerCategory && (
         <div className="mb-4 sm:mb-6">
-          <Card className="bg-gradient-to-br from-blue-50/80 to-blue-100/80 border-blue-200/50 p-4">
+          <Card className={`bg-gradient-to-br ${categoryColors?.bgColor || 'from-blue-50/80 to-blue-100/80'} ${categoryColors?.borderColor || 'border-blue-200/50'} p-4`}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Lock className="h-5 w-5 text-blue-600" />
+                <Lock className={`h-5 w-5 ${
+                  categoryColors?.color?.includes('teal') ? 'text-teal-600' :
+                  categoryColors?.color?.includes('pink') || categoryColors?.color?.includes('purple') ? 'text-pink-600' :
+                  categoryColors?.color?.includes('plastics') ? 'text-plastics' :
+                  categoryColors?.color?.includes('orange') ? 'text-orange-600' :
+                  categoryColors?.color?.includes('red') ? 'text-red-600' :
+                  'text-blue-600'
+                }`} />
                 <div>
-                  <p className="text-sm font-medium text-blue-800">
+                  <p className={`text-sm font-medium ${
+                    categoryColors?.color?.includes('teal') ? 'text-teal-800' :
+                    categoryColors?.color?.includes('pink') || categoryColors?.color?.includes('purple') ? 'text-pink-800' :
+                    categoryColors?.color?.includes('plastics') ? 'text-plastics-dark' :
+                    categoryColors?.color?.includes('orange') ? 'text-orange-800' :
+                    categoryColors?.color?.includes('red') ? 'text-red-800' :
+                    'text-blue-800'
+                  }`}>
                     Showing {limits.flashcardsPerCategory} of {originalFlashcards.length} flashcards
                   </p>
-                  <p className="text-xs text-blue-700">
+                  <p className={`text-xs ${
+                    categoryColors?.color?.includes('teal') ? 'text-teal-700' :
+                    categoryColors?.color?.includes('pink') || categoryColors?.color?.includes('purple') ? 'text-pink-700' :
+                    categoryColors?.color?.includes('plastics') ? 'text-plastics' :
+                    categoryColors?.color?.includes('orange') ? 'text-orange-700' :
+                    categoryColors?.color?.includes('red') ? 'text-red-700' :
+                    'text-blue-700'
+                  }`}>
                     Unlock all flashcards with Premium access
                   </p>
                 </div>
@@ -149,7 +170,14 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
               <Button 
                 onClick={handleUnlockPremium}
                 size="sm"
-                className={`${useOrangeUnlock ? 'bg-gradient-to-r from-blue-700/90 to-blue-800/90 hover:from-blue-800/90 hover:to-blue-900/90' : 'bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90'} text-white`}
+                className={`${
+                  categoryColors?.color?.includes('teal') ? 'bg-gradient-to-r from-teal-600/90 to-teal-700/90 hover:from-teal-700/90 hover:to-teal-800/90' :
+                  categoryColors?.color?.includes('pink') || categoryColors?.color?.includes('purple') ? 'bg-gradient-to-r from-pink-600/90 to-purple-600/90 hover:from-pink-700/90 hover:to-purple-700/90' :
+                  categoryColors?.color?.includes('plastics') ? 'bg-gradient-to-r from-plastics/90 to-plastics-dark/90 hover:from-plastics-dark/90 hover:to-plastics/90' :
+                  categoryColors?.color?.includes('orange') ? 'bg-gradient-to-r from-orange-600/90 to-orange-700/90 hover:from-orange-700/90 hover:to-orange-800/90' :
+                  categoryColors?.color?.includes('red') ? 'bg-gradient-to-r from-red-600/90 to-red-700/90 hover:from-red-700/90 hover:to-red-800/90' :
+                  useOrangeUnlock ? 'bg-gradient-to-r from-blue-700/90 to-blue-800/90 hover:from-blue-800/90 hover:to-blue-900/90' : 'bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90'
+                } text-white`}
               >
                 <Crown className="h-4 w-4 mr-1" />
                 Unlock
