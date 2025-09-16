@@ -66,5 +66,35 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Doyen Rib Raspatory",
     explanation: "A specialized instrument used for scraping and smoothing rib surfaces during thoracic procedures. The curved working end allows for precise preparation of rib beds and removal of periosteum when needed.",
     image: "/lovable-uploads/doyen-rib-raspatory.png"
+  },
+  {
+    question: "What are these sternal retraction instruments?",
+    answer: "Cooley Sternal Retractors",
+    explanation: "Specialized sternal retractors designed for cardiac surgery access. Features self-retaining mechanisms with adjustable arms that provide optimal exposure of the mediastinum while maintaining sternotomy positioning throughout the procedure.",
+    image: "/lovable-uploads/cooley-sternal-retractors.png"
+  },
+  {
+    question: "What is this tunneling instrument?",
+    answer: "Bullet (Cone) Tip Tunneler",
+    explanation: "A specialized instrument with a tapered, bullet-shaped tip designed for creating tunnels through tissue planes. Commonly used in cardiovascular procedures for graft passage and vessel isolation with minimal tissue trauma.",
+    image: "/lovable-uploads/bullet-cone-tip-tunneler.png"
+  },
+  {
+    question: "What is this suction instrument?",
+    answer: "Cooley Sump Suction Tube",
+    explanation: "A specialized suction device with multiple openings designed for continuous drainage during cardiac procedures. Features a sump design that prevents tissue occlusion and maintains effective suction in the surgical field.",
+    image: "/lovable-uploads/cooley-sump-suction-tube.png"
+  },
+  {
+    question: "What are these toothed forceps?",
+    answer: "Gerald Forceps with Teeth",
+    explanation: "Precision forceps featuring fine teeth for secure tissue grasping during delicate cardiovascular procedures. The teeth provide excellent grip on tissue while minimizing crush injury to delicate vascular structures.",
+    image: "/lovable-uploads/gerald-forceps-with-teeth.png"
+  },
+  {
+    question: "What is this vascular retraction instrument?",
+    answer: "Cushing Vein Retractor",
+    explanation: "A specialized retractor designed for gentle retraction of veins and delicate vascular structures. Features a smooth, curved blade that provides excellent exposure while minimizing trauma to fragile vessel walls.",
+    image: "/lovable-uploads/cushing-vein-retractor.png"
   }
 ];
