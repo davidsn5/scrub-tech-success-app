@@ -36,5 +36,35 @@ export const cardiothoracicInstruments: FlashcardItem[] = [
     answer: "Sternal Retractor",
     explanation: "A specialized retractor used to maintain sternotomy exposure during cardiac surgery. Features adjustable arms that provide optimal surgical field visualization while maintaining hemostasis and protecting surrounding tissues.",
     image: "/lovable-uploads/sternal-retractor.png"
+  },
+  {
+    question: "What is this thoracic retraction instrument?",
+    answer: "Davidson Scapula Retractor",
+    explanation: "A specialized S-shaped retractor designed for retracting the scapula during thoracic procedures. Features a flat, broad blade that provides excellent exposure of the posterior chest wall and lung fields.",
+    image: "/lovable-uploads/davidson-scapula-retractor.png"
+  },
+  {
+    question: "What is this multi-pronged retractor?",
+    answer: "Allison Lung Retractor",
+    explanation: "A specialized lung retractor with multiple curved prongs designed to gently retract lung tissue during thoracic procedures. Provides excellent visualization while minimizing trauma to delicate pulmonary structures.",
+    image: "/lovable-uploads/allison-lung-retractor.png"
+  },
+  {
+    question: "What is this rib closure instrument?",
+    answer: "Bailey Rib Approximator",
+    explanation: "A specialized instrument used for approximating ribs during chest closure after thoracotomy. Features an adjustable mechanism that allows precise control of rib positioning and alignment for optimal healing.",
+    image: "/lovable-uploads/bailey-rib-approximator.png"
+  },
+  {
+    question: "What is this small vascular clamp?",
+    answer: "Debakey Bulldog Clamp",
+    explanation: "A small, atraumatic vascular clamp designed for temporary occlusion of small vessels and grafts. Features curved jaws with fine teeth that provide secure hemostasis without crushing delicate vascular structures.",
+    image: "/lovable-uploads/debakey-bulldog-clamp.png"
+  },
+  {
+    question: "What is this rib preparation instrument?",
+    answer: "Doyen Rib Raspatory",
+    explanation: "A specialized instrument used for scraping and smoothing rib surfaces during thoracic procedures. The curved working end allows for precise preparation of rib beds and removal of periosteum when needed.",
+    image: "/lovable-uploads/doyen-rib-raspatory.png"
   }
 ];
