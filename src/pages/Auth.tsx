@@ -130,7 +130,7 @@ const Auth = () => {
           <CardHeader className="text-center">
             <CardTitle>Welcome</CardTitle>
             <CardDescription>
-              Sign in to your account or create a new one to get started
+              Sign in if you already have premium access, or upgrade to get started
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -141,40 +141,52 @@ const Auth = () => {
               </TabsList>
               
               <TabsContent value="signin">
-                <form onSubmit={handleSignIn} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="signin-email">Email</Label>
-                    <Input
-                      id="signin-email"
-                      type="email"
-                      placeholder="your@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="signin-password">Password</Label>
-                    <Input
-                      id="signin-password"
-                      type="password"
-                      placeholder="Your password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-                  
-                  {error && (
-                    <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">
-                      {error}
+                <div className="space-y-4">
+                  <div className="bg-blue-50 p-4 rounded-md border border-blue-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Stethoscope className="h-4 w-4 text-blue-600" />
+                      <span className="font-medium text-sm text-blue-800">For Existing Premium Users Only</span>
                     </div>
-                  )}
+                    <p className="text-xs text-blue-700">
+                      This sign-in is for users who have already purchased premium access. If you haven't upgraded yet, use the "Upgrade Now" tab.
+                    </p>
+                  </div>
                   
-                  <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? 'Signing in...' : 'Sign In'}
-                  </Button>
-                </form>
+                  <form onSubmit={handleSignIn} className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="signin-email">Email</Label>
+                      <Input
+                        id="signin-email"
+                        type="email"
+                        placeholder="your@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="signin-password">Password</Label>
+                      <Input
+                        id="signin-password"
+                        type="password"
+                        placeholder="Your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+                    </div>
+                    
+                    {error && (
+                      <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">
+                        {error}
+                      </div>
+                    )}
+                    
+                    <Button type="submit" className="w-full" disabled={loading}>
+                      {loading ? 'Signing in...' : 'Sign In to Premium Account'}
+                    </Button>
+                  </form>
+                </div>
               </TabsContent>
               
               <TabsContent value="signup">
@@ -246,7 +258,7 @@ const Auth = () => {
                     </Button>
                     
                     <p className="text-xs text-muted-foreground text-center">
-                      By clicking upgrade, you'll be redirected to complete payment for $19.99.
+                      Your account will be created after successful payment of $19.99.
                     </p>
                   </form>
                 </div>
