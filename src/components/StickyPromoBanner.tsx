@@ -37,7 +37,7 @@ const StickyPromoBanner: React.FC = () => {
   };
 
   const handleUnlockPremium = () => {
-    createCheckoutSession();
+    navigate('/auth');
   };
 
   if (!isVisible) return null;

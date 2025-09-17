@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -23,6 +24,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = useState('signin');
   
   const { signIn, signUp, createCheckoutSession } = useAuth();
+  const navigate = useNavigate();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,19 +45,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
   const handleUpgradeNow = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setError('');
-    setSuccess('');
-    
-    // Directly open Stripe checkout without requiring account creation
-    try {
-      await createCheckoutSession();
-      onClose();
-    } catch (error) {
-      setError('Failed to open payment page. Please try again.');
-    }
-    
-    setLoading(false);
+    onClose();
+    navigate('/auth');
   };
 
   const handleSignUp = async (e: React.FormEvent) => {

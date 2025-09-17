@@ -182,7 +182,7 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
   };
 
   const handleUpgrade = () => {
-    createCheckoutSession();
+    navigate('/auth');
   };
 
   const getScoreColor = () => {
