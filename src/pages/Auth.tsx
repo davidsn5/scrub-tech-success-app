@@ -198,6 +198,7 @@ const Auth = () => {
                     </div>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Complete study materials for all categories</li>
+                      <li>• Full Access to Instrumentation Review</li>
                       <li>• Interactive flashcards and practice quizzes</li>
                       <li>• Full exam simulation</li>
                       <li>• Progress tracking and analytics</li>
