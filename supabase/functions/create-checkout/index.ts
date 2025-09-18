@@ -72,10 +72,7 @@ serve(async (req) => {
         {
           price_data: {
             currency: "usd",
-            product_data: { 
-              name: "12 Month Access - One Time",
-              description: "12 months of access to all surgical technologist study materials"
-            },
+            product: "prod_T4g3gpU6uAE4vC",
             unit_amount: 1999, // $19.99 in cents
           },
           quantity: 1,
