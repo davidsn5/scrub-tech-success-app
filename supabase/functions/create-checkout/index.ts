@@ -81,11 +81,6 @@ serve(async (req) => {
           quantity: 1,
         },
       ],
-      discounts: [
-        {
-          promotion_code: "promo_1S8VzeCh1hDPKrvkhZPmzPXR",
-        },
-      ],
       mode: "payment",
       success_url: `${origin}/purchase/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/purchase/canceled`,
