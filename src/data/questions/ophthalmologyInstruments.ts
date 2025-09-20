@@ -14,7 +14,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     choices: [
       "Castroviejo Corneal Scissors",
       "Iris Scissors", 
-      "Stevens Tenotomy Scissors",
+      "Westcott Scissors",
       "Knapp Strabismus Scissors"
     ],
     correctAnswer: 0,
@@ -25,10 +25,10 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     id: 2,
     question: "Identify this delicate ophthalmology instrument:",
     choices: [
-      "Nerve Hook",
+      "Von Graef Strabismus Hook",
       "Bonn Iris Hook",
-      "Joseph Single Hook",
-      "Freer Double Skin Hook"
+      "Castroviejo Hook",
+      "Desmarres Hook"
     ],
     correctAnswer: 1,
     explanation: "The Bonn Iris Hook is used to manipulate and retract the iris during cataract surgery and other intraocular procedures.",
@@ -41,7 +41,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
       "Barraquer Eye Speculum",
       "Alfonso Eye Speculum", 
       "Castroviejo Eye Speculum",
-      "Hartmann Ear Speculum"
+      "Desmarres Lid Retractor"
     ],
     correctAnswer: 1,
     explanation: "The Alfonso Eye Speculum is an eyelid retractor that holds the eyelids open during ophthalmic procedures while maintaining patient comfort.",
@@ -54,7 +54,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
       "Alfonso Eye Speculum",
       "Castroviejo Eye Speculum",
       "Barraquer Eye Speculum",
-      "Cusco Vaginal Speculum"
+      "Desmarres Lid Retractor"
     ],
     correctAnswer: 2,
     explanation: "The Barraquer Eye Speculum features adjustable arms and smooth edges to prevent trauma to delicate eyelid tissue during eye surgery.",
@@ -66,8 +66,8 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     choices: [
       "Bowman Lacrimal Probe",
       "Lacrimal Cannula",
-      "Van Buren Urethral Sound",
-      "Hegar Uterine Dilator"
+      "Iris Hook",
+      "Calipers"
     ],
     correctAnswer: 1,
     explanation: "The Lacrimal Cannula is used for irrigation and probing of the lacrimal system, essential for treating blocked tear ducts.",
@@ -77,10 +77,10 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     id: 6,
     question: "These delicate microsurgical forceps are:",
     choices: [
-      "Jeweler Forceps",
+      "Bonn Micro Iris Suture Forceps",
       "Colibri Tissue Forceps",
       "Castroviejo Suturing Forceps",
-      "Adson Tissue Forceps"
+      "Bechert-McPherson Tying Forceps"
     ],
     correctAnswer: 1,
     explanation: "Colibri Tissue Forceps are designed for handling fragile ophthalmic tissues with fine tips and serrated edges for secure tissue grasping.",
@@ -93,7 +93,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
       "Colibri Tissue Forceps",
       "Castroviejo Suturing Forceps",
       "Bechert-McPherson Tying Forceps",
-      "Bishop Harmon Forceps"
+      "Bonn Micro Iris Suture Forceps"
     ],
     correctAnswer: 1,
     explanation: "Castroviejo Suturing Forceps are specifically designed for ophthalmic suturing procedures with fine tips for handling delicate suture materials.",
@@ -106,7 +106,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
       "Castroviejo Corneal Scissors",
       "Knapp Strabismus Scissors",
       "Iris Scissors",
-      "Stevens Tenotomy Scissors"
+      "Westcott Scissors"
     ],
     correctAnswer: 2,
     explanation: "Iris Scissors are small, fine-pointed scissors designed for cutting iris tissue and other delicate intraocular structures.",
@@ -170,8 +170,8 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     choices: [
       "Lacrimal Cannula",
       "Bowman Lacrimal Probe",
-      "Van Buren Urethral Sound",
-      "Groove Director"
+      "Von Graef Strabismus Hook",
+      "Bonn Iris Hook"
     ],
     correctAnswer: 1,
     explanation: "Bowman Lacrimal Probes are used for exploring and dilating the lacrimal passages, essential for diagnosing tear duct obstructions.",
@@ -184,7 +184,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
       "Castroviejo Suturing Forceps",
       "Bonn Micro Iris Suture Forceps",
       "Colibri Tissue Forceps",
-      "Jeweler Forceps"
+      "Bechert-McPherson Tying Forceps"
     ],
     correctAnswer: 1,
     explanation: "Bonn Micro Iris Suture Forceps are designed for handling and manipulating sutures in iris procedures with fine, smooth tips.",
@@ -196,8 +196,8 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     choices: [
       "Castroviejo Needle Holder",
       "Barraquer Needle Holder",
-      "Heaney Needle Driver",
-      "Crile-Wood Needle Holder"
+      "Castroviejo Needle Holder-Delicate",
+      "Colibri Tissue Forceps"
     ],
     correctAnswer: 1,
     explanation: "The Barraquer Needle Holder is designed for ophthalmic microsurgery with a locking mechanism and precise grip for secure suture placement.",
@@ -210,7 +210,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
       "Barraquer Needle Holder",
       "Castroviejo Needle Holder-Delicate",
       "Castroviejo Needle Holder",
-      "Heaney Needle Driver"
+      "Castroviejo Suturing Forceps"
     ],
     correctAnswer: 1,
     explanation: "The Castroviejo Needle Holder-Delicate is designed for the most delicate microsurgical procedures with curved jaws and precise control.",
@@ -220,10 +220,10 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     id: 17,
     question: "This precision measuring instrument is:",
     choices: [
-      "Bone Calipers",
+      "Iris Scissors",
       "Castroviejo Calipers",
-      "Vernier Calipers",
-      "Bonn Calipers"
+      "Lacrimal Cannula",
+      "Wells Enucleation Spoon"
     ],
     correctAnswer: 1,
     explanation: "Castroviejo Calipers are used to measure distances and dimensions during ophthalmic surgery, essential for accurate placement of incisions.",
@@ -235,8 +235,8 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     choices: [
       "Bonn Iris Hook",
       "Von Graef Strabismus Hook",
-      "Nerve Hook",
-      "Joseph Single Hook"
+      "Lacrimal Cannula",
+      "Bowman Lacrimal Probe"
     ],
     correctAnswer: 1,
     explanation: "The Von Graef Strabismus Hook is used for manipulating extraocular muscles during strabismus surgery with a delicate curved tip for precise muscle positioning.",
