@@ -8,6 +8,7 @@ import { obgynInstrumentsQuestions } from '@/data/questions/obgynInstruments';
 import { plasticsInstrumentQuestions } from '@/data/questions/plasticsInstruments';
 import { entInstrumentsQuestions } from '@/data/questions/entInstruments';
 import { cardiothoracicInstrumentQuestions } from '@/data/questions/cardiothoracicInstruments';
+import { ophthalmologyInstrumentsQuestions } from '@/data/questions/ophthalmologyInstruments';
 import { CheckCircle, XCircle, RotateCcw, Shuffle, Lock, Crown, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -38,6 +39,8 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     ? entInstrumentsQuestions
     : category === 'cardiothoracic-instrument-questions'
     ? cardiothoracicInstrumentQuestions
+    : category === 'ophthalmology-instrument-questions'
+    ? ophthalmologyInstrumentsQuestions
     : generalInstrumentsQuestions;
   
   // Use limited questions for non-premium users
