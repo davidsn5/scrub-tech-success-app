@@ -120,6 +120,106 @@ const VisualResources = () => {
                 </p>
               </div>
             </div>
+
+            {/* Blade Components Diagram */}
+            <div className="text-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/blade-diagram.png" 
+                  alt="Blade Components Diagram - Shows labeled blade parts including Handle, Shank, and Tip"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Blade Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Basic anatomy of surgical blades showing handle, shank, and tip components.
+                </p>
+              </div>
+            </div>
+
+            {/* Scalpel Components Diagram */}
+            <div className="text-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/scalpel-diagram.png" 
+                  alt="Scalpel Components Diagram - Shows labeled parts including Shank, Shaft, Tip, Lockbox, and Grip Handle"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Scalpel Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Detailed scalpel anatomy including shank, shaft, tip, lockbox, and ergonomic grip handle.
+                </p>
+              </div>
+            </div>
+
+            {/* Probe Components Diagram */}
+            <div className="text-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/probe-diagram.png" 
+                  alt="Probe Components Diagram - Shows labeled parts including Handle, Shaft, and Tip"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Probe Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Surgical probe structure showing handle, shaft, and specialized tip for precise tissue manipulation.
+                </p>
+              </div>
+            </div>
+
+            {/* Forceps Components Diagram */}
+            <div className="text-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/forceps-diagram.png" 
+                  alt="Forceps Components Diagram - Shows labeled parts including Tip, Shaft, and Attachment"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Forceps Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Forceps anatomy featuring tip for grasping, shaft for control, and attachment mechanism.
+                </p>
+              </div>
+            </div>
+
+            {/* Scissors Components Diagram */}
+            <div className="text-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/scissors-diagram.png" 
+                  alt="Scissors Components Diagram - Shows labeled parts including Finger Ring, Ratchet, Jaws, Boxlock, Shank, and Tip"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
+                  © SurgicalTechReview.com
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Scissors Components</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">
+                  Complete scissors anatomy showing finger rings, ratchet, jaws, boxlock, shank, and cutting tip.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
