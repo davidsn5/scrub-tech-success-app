@@ -145,18 +145,18 @@ const InstrumentationFlashcards = () => {
       title: 'Ophthalmology Instruments',
       description: 'Specialized instruments for eye and vision procedures',
       icon: Eye,
-      color: 'from-emerald-500/80 to-emerald-600/80',
-      bgColor: 'from-emerald-50/90 to-emerald-100/90',
-      borderColor: 'border-emerald-200/60'
+      color: 'from-violet-500/80 to-violet-600/80',
+      bgColor: 'from-violet-50/90 to-violet-100/90',
+      borderColor: 'border-violet-200/60'
     },
     {
       id: 'ophthalmology-instrument-questions',
       title: 'Ophthalmology Instrument Questions',
       description: 'Practice questions focusing on ophthalmology instrument identification',
       icon: Target,
-      color: 'from-emerald-500/80 to-emerald-600/80',
-      bgColor: 'from-emerald-50/90 to-emerald-100/90',
-      borderColor: 'border-emerald-200/60'
+      color: 'from-violet-500/80 to-violet-600/80',
+      bgColor: 'from-violet-50/90 to-violet-100/90',
+      borderColor: 'border-violet-200/60'
     }
   ];
 
@@ -173,7 +173,7 @@ const InstrumentationFlashcards = () => {
       : selectedCategory === 'cardiothoracic-instruments'
       ? 'from-slate-50/95 via-red-50/90 to-red-100/85'
       : selectedCategory === 'ophthalmology-instruments'
-      ? 'from-slate-50/95 via-emerald-50/90 to-emerald-100/85'
+      ? 'from-slate-50/95 via-violet-50/90 to-violet-100/85'
       : 'from-slate-50/95 via-blue-50/90 to-blue-100/85';
     const headerBg = selectedCategory === 'orthopedic-instruments' 
       ? 'bg-teal-50' 
@@ -186,7 +186,7 @@ const InstrumentationFlashcards = () => {
       : selectedCategory === 'cardiothoracic-instruments'
       ? 'bg-red-50'
       : selectedCategory === 'ophthalmology-instruments'
-      ? 'bg-emerald-50'
+      ? 'bg-violet-50'
       : 'bg-blue-50';
     const buttonColors = selectedCategory === 'orthopedic-instruments'
       ? 'hover:bg-teal-100 hover:text-teal-700'
@@ -199,7 +199,7 @@ const InstrumentationFlashcards = () => {
       : selectedCategory === 'cardiothoracic-instruments'
       ? 'hover:bg-red-100 hover:text-red-700'
       : selectedCategory === 'ophthalmology-instruments'
-      ? 'hover:bg-emerald-100 hover:text-emerald-700'
+      ? 'hover:bg-violet-100 hover:text-violet-700'
       : 'hover:bg-blue-100 hover:text-blue-700';
     const titleColor = selectedCategory === 'orthopedic-instruments' 
       ? 'text-teal-700'
@@ -212,7 +212,7 @@ const InstrumentationFlashcards = () => {
       : selectedCategory === 'cardiothoracic-instruments'
       ? 'text-red-700'
       : selectedCategory === 'ophthalmology-instruments'
-      ? 'text-emerald-700'
+      ? 'text-violet-700'
       : 'text-blue-700';
     const upgradeButtonColors = selectedCategory === 'orthopedic-instruments'
       ? 'bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800'
@@ -225,7 +225,7 @@ const InstrumentationFlashcards = () => {
       : selectedCategory === 'cardiothoracic-instruments'
       ? 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800'
       : selectedCategory === 'ophthalmology-instruments'
-      ? 'bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800'
+      ? 'bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800'
       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800';
 
     return (
