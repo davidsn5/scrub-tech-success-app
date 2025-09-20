@@ -127,18 +127,18 @@ const InstrumentationFlashcards = () => {
       title: 'Ophthalmology Instruments',
       description: 'Specialized instruments for eye and vision procedures',
       icon: Eye,
-      color: 'from-violet-500/80 to-violet-600/80',
-      bgColor: 'from-violet-50/90 to-violet-100/90',
-      borderColor: 'border-violet-200/60'
+      color: 'from-purple-700/80 to-purple-800/80',
+      bgColor: 'from-purple-50/90 to-purple-100/90',
+      borderColor: 'border-purple-300/60'
     },
     {
       id: 'ophthalmology-instrument-questions',
       title: 'Ophthalmology Instrument Questions',
       description: 'Practice questions focusing on ophthalmology instrument identification',
       icon: Target,
-      color: 'from-violet-500/80 to-violet-600/80',
-      bgColor: 'from-violet-50/90 to-violet-100/90',
-      borderColor: 'border-violet-200/60'
+      color: 'from-purple-700/80 to-purple-800/80',
+      bgColor: 'from-purple-50/90 to-purple-100/90',
+      borderColor: 'border-purple-300/60'
     },
     {
       id: 'cardiothoracic-instruments',

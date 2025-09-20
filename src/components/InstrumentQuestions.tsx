@@ -255,15 +255,15 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     primaryGradient: 'from-red-600 to-red-700 hover:from-red-700 hover:to-red-800',
     accent: 'red'
   } : isOphthalmology ? {
-    bgGradient: 'from-violet-50 via-white to-violet-100',
-    headerBg: 'bg-violet-50',
-    buttonHover: 'hover:bg-violet-100 hover:text-violet-700',
-    titleColor: 'text-violet-700',
-    upgradeButton: 'bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800',
-    progressBar: 'bg-violet-600',
-    primaryButton: 'bg-violet-600 hover:bg-violet-700',
-    primaryGradient: 'from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800',
-    accent: 'violet'
+    bgGradient: 'from-purple-50 via-white to-purple-100',
+    headerBg: 'bg-purple-50',
+    buttonHover: 'hover:bg-purple-100 hover:text-purple-700',
+    titleColor: 'text-purple-700',
+    upgradeButton: 'bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-800 hover:to-purple-900',
+    progressBar: 'bg-purple-700',
+    primaryButton: 'bg-purple-700 hover:bg-purple-800',
+    primaryGradient: 'from-purple-700 to-purple-800 hover:from-purple-800 hover:to-purple-900',
+    accent: 'purple'
   } : {
     bgGradient: 'from-blue-50 via-white to-blue-100',
     headerBg: 'bg-blue-50',
