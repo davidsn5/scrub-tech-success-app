@@ -51,12 +51,6 @@ export const ophthalmologyInstruments: FlashcardItem[] = [
   },
   {
     question: "What is this ophthalmology instrument?",
-    answer: "Peck Rake Retractor",
-    explanation: "A multi-pronged retractor used to expose and retract tissues during ophthalmic procedures. Provides excellent visibility of the surgical field.",
-    image: "/lovable-uploads/peck-rake-retractor.png"
-  },
-  {
-    question: "What is this ophthalmology instrument?",
     answer: "Bechert-McPherson Tying Forceps",
     explanation: "Specialized forceps designed for tying knots and manipulating sutures in microsurgical procedures. Features angled tips for improved access in confined spaces.",
     image: "/lovable-uploads/bechert-mcpherson-tying-forceps.png"
@@ -84,18 +78,6 @@ export const ophthalmologyInstruments: FlashcardItem[] = [
     answer: "Bowman Lacrimal Probe",
     explanation: "Graduated probes used for exploring and dilating the lacrimal passages. Essential for diagnosing and treating tear duct obstructions and stenosis.",
     image: "/lovable-uploads/bowman-lacrimal-probe.png"
-  },
-  {
-    question: "What is this ophthalmology instrument?",
-    answer: "Jeweler Forceps",
-    explanation: "Ultra-fine precision forceps designed for delicate tissue manipulation in microsurgery. Features smooth tips for handling the most fragile ophthalmic structures.",
-    image: "/lovable-uploads/jeweler-forceps.png"
-  },
-  {
-    question: "What is this ophthalmology instrument?",
-    answer: "Serrefine Hemostatic Clamps",
-    explanation: "Small vascular clamps designed to temporarily occlude blood vessels during microsurgical procedures. Essential for maintaining hemostasis in delicate eye surgery.",
-    image: "/lovable-uploads/serrefine-hemostatic-clamps.png"
   },
   {
     question: "What is this ophthalmology instrument?",

@@ -114,19 +114,6 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
   },
   {
     id: 9,
-    question: "This multi-pronged retractor is a:",
-    choices: [
-      "Rake Retractor",
-      "Senn Retractor",
-      "Peck Rake Retractor",
-      "Weitlaner Retractor"
-    ],
-    correctAnswer: 2,
-    explanation: "The Peck Rake Retractor is used to expose and retract tissues during ophthalmic procedures, providing excellent visibility of the surgical field.",
-    image: "/lovable-uploads/peck-rake-retractor.png"
-  },
-  {
-    id: 10,
     question: "These angled forceps are:",
     choices: [
       "Castroviejo Suturing Forceps",
@@ -139,7 +126,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/bechert-mcpherson-tying-forceps.png"
   },
   {
-    id: 11,
+    id: 10,
     question: "These curved scissors are used for:",
     choices: [
       "Corneal procedures",
@@ -152,7 +139,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/knapp-strabismus-scissors.png"
   },
   {
-    id: 12,
+    id: 11,
     question: "This adjustable eyelid speculum is:",
     choices: [
       "Alfonso Eye Speculum",
@@ -165,7 +152,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/castroviejo-eye-speculum.png"
   },
   {
-    id: 13,
+    id: 12,
     question: "This curved spoon instrument is used for:",
     choices: [
       "Lens extraction",
@@ -178,7 +165,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/wells-enucleation-spoon.png"
   },
   {
-    id: 14,
+    id: 13,
     question: "These graduated probes are:",
     choices: [
       "Lacrimal Cannula",
@@ -191,33 +178,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/bowman-lacrimal-probe.png"
   },
   {
-    id: 15,
-    question: "These ultra-fine precision forceps are:",
-    choices: [
-      "Colibri Tissue Forceps",
-      "Jeweler Forceps",
-      "Castroviejo Suturing Forceps",
-      "Bechert-McPherson Tying Forceps"
-    ],
-    correctAnswer: 1,
-    explanation: "Jeweler Forceps are ultra-fine precision forceps designed for delicate tissue manipulation in microsurgery with smooth tips.",
-    image: "/lovable-uploads/jeweler-forceps.png"
-  },
-  {
-    id: 16,
-    question: "These small vascular clamps are:",
-    choices: [
-      "Halstead Mosquito Clamps",
-      "Serrefine Hemostatic Clamps",
-      "Kelly Clamps",
-      "DeBakey Bulldog Clamps"
-    ],
-    correctAnswer: 1,
-    explanation: "Serrefine Hemostatic Clamps are designed to temporarily occlude blood vessels during microsurgical procedures, essential for maintaining hemostasis.",
-    image: "/lovable-uploads/serrefine-hemostatic-clamps.png"
-  },
-  {
-    id: 17,
+    id: 14,
     question: "These specialized iris forceps are:",
     choices: [
       "Castroviejo Suturing Forceps",
@@ -230,7 +191,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/bonn-micro-iris-suture-forceps.png"
   },
   {
-    id: 18,
+    id: 15,
     question: "This specialized needle holder is:",
     choices: [
       "Castroviejo Needle Holder",
@@ -243,7 +204,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/barraquer-needle-holder.png"
   },
   {
-    id: 19,
+    id: 16,
     question: "This ultra-fine needle holder is:",
     choices: [
       "Barraquer Needle Holder",
@@ -256,7 +217,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/castroviejo-needle-holder-delicate.png"
   },
   {
-    id: 20,
+    id: 17,
     question: "This precision measuring instrument is:",
     choices: [
       "Bone Calipers",
@@ -269,7 +230,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/castroviejo-calipers.png"
   },
   {
-    id: 21,
+    id: 18,
     question: "This specialized hook instrument is:",
     choices: [
       "Bonn Iris Hook",
@@ -282,7 +243,7 @@ export const ophthalmologyInstrumentsQuestions: Question[] = [
     image: "/lovable-uploads/von-graef-strabismus-hook.png"
   },
   {
-    id: 22,
+    id: 19,
     question: "This eyelid retractor is:",
     choices: [
       "Castroviejo Eye Speculum",
