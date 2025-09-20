@@ -121,12 +121,12 @@ const VisualResources = () => {
               </div>
             </div>
 
-            {/* Blade Components Diagram */}
+            {/* Retractor Components Diagram */}
             <div className="text-center">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/blade-diagram.png" 
-                  alt="Blade Components Diagram - Shows labeled blade parts including Handle, Shank, and Tip"
+                  alt="Retractor Components Diagram - Shows labeled parts of surgical retractor for tissue retraction"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
                 <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
@@ -134,19 +134,19 @@ const VisualResources = () => {
                 </div>
               </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Blade Components</h3>
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Retractor Components</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
-                  Basic anatomy of surgical blades showing handle, shank, and tip components.
+                  Surgical retractor anatomy showing components used for holding tissues and organs away from the surgical site.
                 </p>
               </div>
             </div>
 
-            {/* Scalpel Components Diagram */}
+            {/* Micro Forceps Components Diagram */}
             <div className="text-center">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/scalpel-diagram.png" 
-                  alt="Scalpel Components Diagram - Shows labeled parts including Shank, Shaft, Tip, Lockbox, and Grip Handle"
+                  alt="Micro Forceps Components Diagram - Shows labeled parts of precision micro forceps"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
                 <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
@@ -154,9 +154,9 @@ const VisualResources = () => {
                 </div>
               </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Scalpel Components</h3>
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Micro Forceps Components</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
-                  Detailed scalpel anatomy including shank, shaft, tip, lockbox, and ergonomic grip handle.
+                  Precision micro forceps anatomy featuring fine tips and delicate construction for microsurgical procedures.
                 </p>
               </div>
             </div>
@@ -181,12 +181,12 @@ const VisualResources = () => {
               </div>
             </div>
 
-            {/* Forceps Components Diagram */}
+            {/* Bipolar Bovie Components Diagram */}
             <div className="text-center">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/forceps-diagram.png" 
-                  alt="Forceps Components Diagram - Shows labeled parts including Tip, Shaft, and Attachment"
+                  alt="Bipolar Bovie Components Diagram - Shows labeled parts of bipolar electrocautery forceps"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
                 <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
@@ -194,19 +194,19 @@ const VisualResources = () => {
                 </div>
               </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Forceps Components</h3>
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Bipolar Bovie Components</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
-                  Forceps anatomy featuring tip for grasping, shaft for control, and attachment mechanism.
+                  Bipolar electrocautery forceps anatomy featuring tips for coagulation and precise hemostasis control.
                 </p>
               </div>
             </div>
 
-            {/* Scissors Components Diagram */}
+            {/* Hemostat Components Diagram */}
             <div className="text-center">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/scissors-diagram.png" 
-                  alt="Scissors Components Diagram - Shows labeled parts including Finger Ring, Ratchet, Jaws, Boxlock, Shank, and Tip"
+                  alt="Hemostat Components Diagram - Shows labeled parts including Finger Ring, Ratchet, Jaws, Boxlock, and Shank"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
                 />
                 <div className="absolute bottom-1 right-1 text-[8px] text-white/30 font-light bg-black/15 px-1 py-0.5 rounded-sm">
@@ -214,9 +214,9 @@ const VisualResources = () => {
                 </div>
               </div>
               <div className="mt-4 p-3 bg-gradient-to-br from-orange-50/90 to-orange-100/90 border border-orange-200/60 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 text-center">Scissors Components</h3>
+                <h3 className="text-lg font-semibold text-gray-900 text-center">Hemostat Components</h3>
                 <p className="text-sm text-gray-600 mt-2 text-center">
-                  Complete scissors anatomy showing finger rings, ratchet, jaws, boxlock, shank, and cutting tip.
+                  Hemostat anatomy showing finger rings, ratchet mechanism, jaws, and components for blood vessel clamping.
                 </p>
               </div>
             </div>
