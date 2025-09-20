@@ -30,5 +30,35 @@ export const ophthalmologyInstruments: FlashcardItem[] = [
     answer: "Lacrimal Cannula",
     explanation: "A thin, blunt-tipped instrument used for irrigation and probing of the lacrimal system. Essential for treating blocked tear ducts and performing lacrimal procedures.",
     image: "/lovable-uploads/lacrimal-cannula.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Colibri Tissue Forceps",
+    explanation: "Delicate microsurgical forceps designed for handling fragile ophthalmic tissues. Features fine tips with serrated edges for secure tissue grasping during eye surgery.",
+    image: "/lovable-uploads/colibri-tissue-forceps.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Castroviejo Suturing Forceps",
+    explanation: "Precision forceps specifically designed for ophthalmic suturing procedures. Features fine tips and excellent grip for handling delicate suture materials in eye surgery.",
+    image: "/lovable-uploads/castroviejo-suturing-forceps.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Iris Scissors",
+    explanation: "Small, fine-pointed scissors designed for cutting iris tissue and other delicate intraocular structures. Essential for iridectomy and other iris procedures.",
+    image: "/lovable-uploads/iris-scissors.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Peck Rake Retractor",
+    explanation: "A multi-pronged retractor used to expose and retract tissues during ophthalmic procedures. Provides excellent visibility of the surgical field.",
+    image: "/lovable-uploads/peck-rake-retractor.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Bechert-McPherson Tying Forceps",
+    explanation: "Specialized forceps designed for tying knots and manipulating sutures in microsurgical procedures. Features angled tips for improved access in confined spaces.",
+    image: "/lovable-uploads/bechert-mcpherson-tying-forceps.png"
   }
 ];
