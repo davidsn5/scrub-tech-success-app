@@ -29,6 +29,7 @@ import { disinfectionSterilization } from './flashcards/disinfectionSterilizatio
 import { plasticsInstruments } from './flashcards/plasticsInstruments';
 import { entInstruments } from './flashcards/entInstruments';
 import { cardiothoracicInstruments } from './flashcards/cardiothoracicInstruments';
+import { ophthalmologyInstruments } from './flashcards/ophthalmologyInstruments';
 
 export const flashcardData: FlashcardData = {
   'medical-terminology': medicalTerminology,
@@ -49,5 +50,6 @@ export const flashcardData: FlashcardData = {
   'disinfection-sterilization': disinfectionSterilization,
   'plastics-instruments': plasticsInstruments,
   'ent-instruments': entInstruments,
-  'cardiothoracic-instruments': cardiothoracicInstruments
+  'cardiothoracic-instruments': cardiothoracicInstruments,
+  'ophthalmology-instruments': ophthalmologyInstruments
 };
