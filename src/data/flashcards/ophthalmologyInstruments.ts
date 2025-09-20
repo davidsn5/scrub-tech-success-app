@@ -60,5 +60,35 @@ export const ophthalmologyInstruments: FlashcardItem[] = [
     answer: "Bechert-McPherson Tying Forceps",
     explanation: "Specialized forceps designed for tying knots and manipulating sutures in microsurgical procedures. Features angled tips for improved access in confined spaces.",
     image: "/lovable-uploads/bechert-mcpherson-tying-forceps.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Knapp Strabismus Scissors",
+    explanation: "Curved scissors specifically designed for extraocular muscle surgery. Used in strabismus procedures to cut and adjust eye muscles for proper alignment.",
+    image: "/lovable-uploads/knapp-strabismus-scissors.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Castroviejo Eye Speculum",
+    explanation: "Adjustable eyelid speculum designed for microsurgical procedures. Features smooth, curved blades that gently retract eyelids while providing excellent surgical exposure.",
+    image: "/lovable-uploads/castroviejo-eye-speculum.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Wells Enucleation Spoon",
+    explanation: "Specialized instrument used for enucleation procedures to remove the eyeball. The curved spoon design allows for safe dissection around the eye during orbital surgery.",
+    image: "/lovable-uploads/wells-enucleation-spoon.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Bowman Lacrimal Probe",
+    explanation: "Graduated probes used for exploring and dilating the lacrimal passages. Essential for diagnosing and treating tear duct obstructions and stenosis.",
+    image: "/lovable-uploads/bowman-lacrimal-probe.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Jeweler Forceps",
+    explanation: "Ultra-fine precision forceps designed for delicate tissue manipulation in microsurgery. Features smooth tips for handling the most fragile ophthalmic structures.",
+    image: "/lovable-uploads/jeweler-forceps.png"
   }
 ];
