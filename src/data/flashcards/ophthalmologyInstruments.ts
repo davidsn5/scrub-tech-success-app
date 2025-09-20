@@ -90,5 +90,35 @@ export const ophthalmologyInstruments: FlashcardItem[] = [
     answer: "Jeweler Forceps",
     explanation: "Ultra-fine precision forceps designed for delicate tissue manipulation in microsurgery. Features smooth tips for handling the most fragile ophthalmic structures.",
     image: "/lovable-uploads/jeweler-forceps.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Serrefine Hemostatic Clamps",
+    explanation: "Small vascular clamps designed to temporarily occlude blood vessels during microsurgical procedures. Essential for maintaining hemostasis in delicate eye surgery.",
+    image: "/lovable-uploads/serrefine-hemostatic-clamps.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Bonn Micro Iris Suture Forceps",
+    explanation: "Precision forceps specifically designed for handling and manipulating sutures in iris procedures. Features fine, smooth tips for delicate suture work.",
+    image: "/lovable-uploads/bonn-micro-iris-suture-forceps.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Barraquer Needle Holder",
+    explanation: "Specialized needle holder designed for ophthalmic microsurgery. Features a locking mechanism and precise grip for secure suture placement in eye procedures.",
+    image: "/lovable-uploads/barraquer-needle-holder.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Castroviejo Needle Holder-Delicate",
+    explanation: "Ultra-fine needle holder designed for the most delicate microsurgical procedures. Features curved jaws and precise control for corneal and conjunctival suturing.",
+    image: "/lovable-uploads/castroviejo-needle-holder-delicate.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Castroviejo Calipers",
+    explanation: "Precision measuring instrument used to measure distances and dimensions during ophthalmic surgery. Essential for accurate placement of incisions and sutures.",
+    image: "/lovable-uploads/castroviejo-calipers.png"
   }
 ];
