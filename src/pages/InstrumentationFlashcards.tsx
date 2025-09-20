@@ -123,24 +123,6 @@ const InstrumentationFlashcards = () => {
       borderColor: 'border-orange-200/60'
     },
     {
-      id: 'cardiothoracic-instruments',
-      title: 'Cardiothoracic/Vascular Instruments',
-      description: 'Specialized instruments for cardiovascular and thoracic procedures',
-      icon: Stethoscope,
-      color: 'from-red-800/80 to-red-900/90',
-      bgColor: 'from-red-50/90 to-red-100/90',
-      borderColor: 'border-red-300/60'
-    },
-    {
-      id: 'cardiothoracic-instrument-questions',
-      title: 'Cardiothoracic/Vascular Instrument Questions',
-      description: 'Practice questions focusing on cardiovascular and thoracic instrument identification',
-      icon: Target,
-      color: 'from-red-800/80 to-red-900/90',
-      bgColor: 'from-red-50/90 to-red-100/90',
-      borderColor: 'border-red-300/60'
-    },
-    {
       id: 'ophthalmology-instruments',
       title: 'Ophthalmology Instruments',
       description: 'Specialized instruments for eye and vision procedures',
@@ -157,6 +139,24 @@ const InstrumentationFlashcards = () => {
       color: 'from-violet-500/80 to-violet-600/80',
       bgColor: 'from-violet-50/90 to-violet-100/90',
       borderColor: 'border-violet-200/60'
+    },
+    {
+      id: 'cardiothoracic-instruments',
+      title: 'Cardiothoracic/Vascular Instruments',
+      description: 'Specialized instruments for cardiovascular and thoracic procedures',
+      icon: Stethoscope,
+      color: 'from-red-800/80 to-red-900/90',
+      bgColor: 'from-red-50/90 to-red-100/90',
+      borderColor: 'border-red-300/60'
+    },
+    {
+      id: 'cardiothoracic-instrument-questions',
+      title: 'Cardiothoracic/Vascular Instrument Questions',
+      description: 'Practice questions focusing on cardiovascular and thoracic instrument identification',
+      icon: Target,
+      color: 'from-red-800/80 to-red-900/90',
+      bgColor: 'from-red-50/90 to-red-100/90',
+      borderColor: 'border-red-300/60'
     }
   ];
 
