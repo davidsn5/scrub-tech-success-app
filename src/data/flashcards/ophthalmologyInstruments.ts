@@ -120,5 +120,17 @@ export const ophthalmologyInstruments: FlashcardItem[] = [
     answer: "Castroviejo Calipers",
     explanation: "Precision measuring instrument used to measure distances and dimensions during ophthalmic surgery. Essential for accurate placement of incisions and sutures.",
     image: "/lovable-uploads/castroviejo-calipers.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Von Graef Strabismus Hook",
+    explanation: "Specialized hook instrument used for manipulating extraocular muscles during strabismus surgery. Features a delicate curved tip for precise muscle positioning and adjustment.",
+    image: "/lovable-uploads/von-graef-strabismus-hook.png"
+  },
+  {
+    question: "What is this ophthalmology instrument?",
+    answer: "Desmarres Lid Retractor",
+    explanation: "Eyelid retractor designed to hold and position the eyelid during ophthalmic procedures. Features a curved blade that conforms to the eyelid anatomy for secure retraction.",
+    image: "/lovable-uploads/desmarres-lid-retractor.png"
   }
 ];
