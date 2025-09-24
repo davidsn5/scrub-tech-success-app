@@ -43,27 +43,34 @@ export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack
     ? ophthalmologyInstrumentsQuestions
     : generalInstrumentsQuestions;
   
-  // Use limited questions for non-premium users
-  const availableQuestions = hasPremiumAccess 
-    ? allQuestions 
-    : allQuestions.slice(0, freeQuestionLimit);
+  // Use limited questions for non-premium users, randomized for premium users
+  const getInitialQuestions = () => {
+    if (hasPremiumAccess) {
+      // Shuffle questions for premium users
+      const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
+      return shuffled;
+    } else {
+      // Use first questions for free users
+      return allQuestions.slice(0, freeQuestionLimit);
+    }
+  };
   
-  const [questions, setQuestions] = useState<Question[]>(availableQuestions);
+  const [questions, setQuestions] = useState<Question[]>(getInitialQuestions());
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [answeredQuestions, setAnsweredQuestions] = useState<boolean[]>(
-    new Array(availableQuestions.length).fill(false)
+    new Array(getInitialQuestions().length).fill(false)
   );
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
-    new Array(availableQuestions.length).fill(null)
+    new Array(getInitialQuestions().length).fill(null)
   );
 
   // Update questions when subscription status changes
   useEffect(() => {
     const newAvailableQuestions = hasPremiumAccess 
-      ? allQuestions 
+      ? [...allQuestions].sort(() => Math.random() - 0.5) // Shuffle for premium users
       : allQuestions.slice(0, freeQuestionLimit);
     
     setQuestions(newAvailableQuestions);
