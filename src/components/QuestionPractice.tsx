@@ -48,8 +48,14 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   // Initialize shuffled questions on component mount
   useEffect(() => {
     console.log(`Total questions loaded for ${categoryName}:`, questions.length);
-    setShuffledQuestions([...questions]);
-  }, [questions, categoryName]);
+    // Automatically randomize questions for premium users
+    if (hasShuffleAccess) {
+      const shuffled = [...questions].sort(() => Math.random() - 0.5);
+      setShuffledQuestions(shuffled);
+    } else {
+      setShuffledQuestions([...questions]);
+    }
+  }, [questions, categoryName, hasShuffleAccess]);
 
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
   const isCorrect = selectedAnswer === currentQuestion?.correctAnswer;
