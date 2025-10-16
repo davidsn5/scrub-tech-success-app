@@ -68,6 +68,39 @@ export type Database = {
         }
         Relationships: []
       }
+      flashcard_sessions: {
+        Row: {
+          cards_reviewed: number | null
+          category: string
+          created_at: string
+          duration_seconds: number | null
+          ended_at: string | null
+          id: string
+          started_at: string
+          user_id: string
+        }
+        Insert: {
+          cards_reviewed?: number | null
+          category: string
+          created_at?: string
+          duration_seconds?: number | null
+          ended_at?: string | null
+          id?: string
+          started_at?: string
+          user_id: string
+        }
+        Update: {
+          cards_reviewed?: number | null
+          category?: string
+          created_at?: string
+          duration_seconds?: number | null
+          ended_at?: string | null
+          id?: string
+          started_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, RotateCcw, Eye, EyeOff, Shuffle, CheckCircle
 import { flashcardData } from '@/data/flashcardData';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
 import { useNavigate } from 'react-router-dom';
+import { useFlashcardSession } from '@/hooks/useFlashcardSession';
 
 interface FlashcardsProps {
   category: string;
@@ -27,6 +28,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
   const [reviewedCards, setReviewedCards] = useState<Set<number>>(new Set());
   const { isPremium, limits } = useFreeAccessGate();
   const navigate = useNavigate();
+  const { incrementCardsReviewed } = useFlashcardSession(category);
 
   const originalFlashcards = flashcardData[category] || [];
   // Limit free users to the specified number of flashcards from the hook
@@ -79,6 +81,7 @@ const Flashcards = ({ category, onAnswerCorrect, onQuestionAttempt, categoryColo
     setShowAnswer(!showAnswer);
     if (!showAnswer) {
       setReviewedCards(prev => new Set([...prev, currentIndex]));
+      incrementCardsReviewed();
     }
     if (onQuestionAttempt) {
       onQuestionAttempt();
