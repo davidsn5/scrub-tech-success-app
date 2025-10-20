@@ -2757,7 +2757,7 @@ export const principlesPracticeQuestions: Question[] = [
     id: 466,
     question: "The Semi-Fowler's position places the upper body at what approximate angle?",
     choices: ["45°", "60°", "85°", "30°"],
-    correctAnswer: 2
+    correctAnswer: 3
   },
   {
     id: 467,
