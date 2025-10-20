@@ -4339,13 +4339,13 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 779,
     question: "An autoimmune disease that causes joint inflammation and stiffness is:",
     choices: ["Osteoarthritis", "Rheumatoid arthritis", "Osteomyelitis", "Chondroma"],
-    correctAnswer: 3
+    correctAnswer: 1
   },
   {
     id: 780,
     question: "Which diagnostic test records electrical activity of muscle?",
     choices: ["MRI", "Arthrogram", "CT scan", "Electromyography"],
-    correctAnswer: 1
+    correctAnswer: 3
   },
   {
     id: 781,
@@ -4363,7 +4363,7 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 783,
     question: "A fracture where the bone breaks into several pieces is called:",
     choices: ["Displaced", "Comminuted", "Oblique", "Transverse"],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 784,
@@ -4447,25 +4447,25 @@ export const surgicalProceduresQuestions: Question[] = [
     id: 797,
     question: "A genetic disorder causing brittle bones is:",
     choices: ["Osteomyelitis", "Osteomalacia", "Osteogenesis imperfecta", "Osteoarthritis"],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 798,
     question: "Which of the following is a metabolic disease causing soft bones?",
     choices: ["Osteoporosis", "Osteomalacia", "Osteonecrosis", "Osteoarthritis"],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 799,
     question: "A compartment syndrome results in:",
     choices: ["Bone infection", "Increased pressure in fascial compartments", "Loss of calcium", "Bone necrosis"],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 800,
     question: "What table provides skeletal traction for fractures?",
     choices: ["Fracture table", "Jackson table", "Andrews table", "Alvarado table"],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
     id: 801,
