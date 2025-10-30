@@ -8,66 +8,57 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Check, Loader2 } from 'lucide-react';
-import { useDespiaPurchase, PRODUCT_IDS } from '@/hooks/useDespiaPurchase';
+import { useDespiaPurchase, PRODUCT_ID } from '@/hooks/useDespiaPurchase';
 import { useAuth } from '@/contexts/AuthContext';
+
+// Extend Window interface for purchase callback
+declare global {
+  interface Window {
+    pendingPurchaseCallback?: () => void;
+  }
+}
 
 interface PurchaseModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-const plans = [
-  {
-    id: PRODUCT_IDS.MONTHLY,
-    name: 'Monthly',
-    price: '$9.99',
-    period: '/month',
-    features: [
-      'Unlimited practice questions',
-      'Full exam simulations',
-      'All flashcard sets',
-      'Key term games',
-      'Progress tracking',
-      'Cancel anytime'
-    ]
-  },
-  {
-    id: PRODUCT_IDS.YEARLY,
-    name: 'Yearly',
-    price: '$79.99',
-    period: '/year',
-    badge: 'Best Value',
-    features: [
-      'Everything in Monthly',
-      'Save 33% vs monthly',
-      'Priority support',
-      'Early access to new features'
-    ]
-  },
-  {
-    id: PRODUCT_IDS.LIFETIME,
-    name: 'Lifetime',
-    price: '$199.99',
-    period: 'one-time',
-    features: [
-      'Everything in Yearly',
-      'Lifetime access',
-      'All future updates',
-      'No recurring payments'
-    ]
-  }
-];
+const plan = {
+  id: PRODUCT_ID,
+  name: 'Premium Access',
+  price: '$9.99',
+  period: '/month',
+  features: [
+    'Unlimited practice questions',
+    'Full exam simulations',
+    'All flashcard sets',
+    'Key term games',
+    'Progress tracking',
+    'Visual resources access',
+    'Study mode with all categories',
+    'Track missed questions',
+    'Cancel anytime'
+  ]
+};
 
 export const PurchaseModal: React.FC<PurchaseModalProps> = ({ open, onOpenChange }) => {
-  const { initiatePurchase, isPurchasing } = useDespiaPurchase();
-  const { checkSubscription } = useAuth();
+  const { initiatePurchase, isPurchasing, handlePurchaseSuccess } = useDespiaPurchase();
 
   const handlePurchase = async (productId: string) => {
+    // Set up callback for when iapSuccess is triggered
+    window.pendingPurchaseCallback = () => {
+      handlePurchaseSuccess(() => {
+        onOpenChange(false);
+      });
+    };
+
     await initiatePurchase({
       productId,
       onSuccess: () => {
-        checkSubscription();
         onOpenChange(false);
+      },
+      onError: () => {
+        window.pendingPurchaseCallback = undefined;
       }
     });
   };
@@ -82,51 +73,40 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ open, onOpenChange
           </DialogDescription>
         </DialogHeader>
 
-        <div className="grid md:grid-cols-3 gap-4 mt-6">
-          {plans.map((plan) => (
-            <div
-              key={plan.id}
-              className="relative border rounded-lg p-6 hover:border-primary transition-colors"
-            >
-              {plan.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                  {plan.badge}
-                </div>
-              )}
-              
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-4">
-                  <span className="text-3xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
-                </div>
+        <div className="max-w-md mx-auto mt-6">
+          <div className="relative border rounded-lg p-6 hover:border-primary transition-colors">
+            <div className="text-center mb-6">
+              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+              <div className="mb-4">
+                <span className="text-3xl font-bold">{plan.price}</span>
+                <span className="text-muted-foreground">{plan.period}</span>
               </div>
-
-              <ul className="space-y-3 mb-6">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                className="w-full"
-                onClick={() => handlePurchase(plan.id)}
-                disabled={isPurchasing}
-              >
-                {isPurchasing ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Processing...
-                  </>
-                ) : (
-                  'Subscribe Now'
-                )}
-              </Button>
             </div>
-          ))}
+
+            <ul className="space-y-3 mb-6">
+              {plan.features.map((feature, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Button
+              className="w-full"
+              onClick={() => handlePurchase(plan.id)}
+              disabled={isPurchasing}
+            >
+              {isPurchasing ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Processing...
+                </>
+              ) : (
+                'Subscribe Now'
+              )}
+            </Button>
+          </div>
         </div>
 
         <p className="text-xs text-center text-muted-foreground mt-6">
