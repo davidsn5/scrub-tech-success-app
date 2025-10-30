@@ -12,6 +12,8 @@ import { useToast } from '@/hooks/use-toast';
 import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
+import { PurchaseModal } from '@/components/PurchaseModal';
+import AuthModal from '@/components/AuthModal';
 
 
 
@@ -23,6 +25,8 @@ const Index = () => {
   const { toast } = useToast();
   const [isResetting, setIsResetting] = useState(false);
   const [showForgotPassword, setShowForgotPassword] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showPurchaseModal, setShowPurchaseModal] = useState(false);
 
   if (loading || progressLoading) {
     return (
@@ -109,7 +113,16 @@ const Index = () => {
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
-    // Simply navigate - no payment required
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
+    
+    if (!subscription?.subscribed) {
+      setShowPurchaseModal(true);
+      return;
+    }
+    
     navigate(targetPath);
   };
   return (
@@ -721,11 +734,16 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Modals */}
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+      <PurchaseModal open={showPurchaseModal} onOpenChange={setShowPurchaseModal} />
+      
       {/* Forgot Password Dialog */}
       <ForgotPasswordDialog 
         isOpen={showForgotPassword} 
         onClose={() => setShowForgotPassword(false)} 
       />
+      <AddToHomeScreen />
     </div>
   );
 };

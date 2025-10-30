@@ -23,6 +23,7 @@ interface AuthContextType {
   signInWithApple: () => Promise<{ error?: any }>;
   signOut: () => Promise<void>;
   checkSubscription: () => Promise<void>;
+  triggerPurchase: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -268,11 +269,41 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const checkSubscription = async () => {
-    // Always grant access - no subscription needed
-    setSubscription({ 
-      subscribed: true, 
-      subscription_tier: 'premium', 
-      status: 'active' 
+    if (!user) {
+      setSubscription(null);
+      return;
+    }
+
+    try {
+      // Check RevenueCat subscription status via edge function
+      const { data, error } = await supabase.functions.invoke('check-revenuecat-subscription', {
+        body: { user_id: user.id }
+      });
+
+      if (error) {
+        console.error('Error checking subscription:', error);
+        setSubscription({ subscribed: false });
+        return;
+      }
+
+      setSubscription({
+        subscribed: data?.subscribed || false,
+        subscription_tier: data?.subscription_tier,
+        subscription_end: data?.subscription_end,
+        status: data?.status
+      });
+    } catch (error) {
+      console.error('Error checking subscription:', error);
+      setSubscription({ subscribed: false });
+    }
+  };
+
+  const triggerPurchase = () => {
+    // This will be called from components to trigger purchase flow
+    // The actual purchase logic is in useDespiaPurchase hook
+    toast({
+      title: "Ready to Upgrade",
+      description: "Select a subscription plan to continue",
     });
   };
 
@@ -290,6 +321,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     signInWithApple,
     signOut,
     checkSubscription,
+    triggerPurchase,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
