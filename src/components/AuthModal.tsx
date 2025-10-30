@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Label } from '@/components/ui/label';
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog';
-import { Shield, X } from 'lucide-react';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -23,8 +21,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const [success, setSuccess] = useState('');
   const [activeTab, setActiveTab] = useState('signin');
   
-  const { signIn, signUp, createCheckoutSession } = useAuth();
-  const navigate = useNavigate();
+  const { signIn, signUp } = useAuth();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,13 +39,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     setLoading(false);
   };
 
-
-  const handleUpgradeNow = async (e: React.FormEvent) => {
-    e.preventDefault();
-    onClose();
-    navigate('/auth');
-  };
-
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -63,7 +53,6 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     }
 
     try {
-      // First create the account
       const { error: signUpError } = await signUp(email, password);
       
       if (signUpError) {
@@ -72,7 +61,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         return;
       }
       
-      setSuccess('Account created! Signing you in and opening payment...');
+      setSuccess('Account created successfully!');
       
       // Sign in the user immediately after successful signup
       const { error: signInError } = await signIn(email, password);
@@ -83,17 +72,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         return;
       }
       
-      // Wait a moment for auth state to update, then trigger checkout
-      setTimeout(async () => {
-        try {
-          await createCheckoutSession();
-          onClose();
-        } catch (checkoutError) {
-          setError('Account created but payment page failed to open. Please try the upgrade button.');
-        }
-        setLoading(false);
-      }, 1500);
-      
+      onClose();
     } catch (error) {
       setError('Failed to create account. Please try again.');
       setLoading(false);
@@ -137,7 +116,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="signin">Sign In</TabsTrigger>
-              <TabsTrigger value="signup">Upgrade Now</TabsTrigger>
+              <TabsTrigger value="signup">Sign Up</TabsTrigger>
             </TabsList>
             
             <TabsContent value="signin">
@@ -178,96 +157,59 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             </TabsContent>
             
             <TabsContent value="signup">
-              <div className="space-y-4">
-                <div className="bg-primary/10 p-4 rounded-md border border-primary/20">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Shield className="h-4 w-4 text-primary" />
-                    <span className="font-medium text-sm">12 Months of Premium Access for a One Time Fee of $19.99</span>
-                  </div>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Complete study materials for all categories</li>
-                    <li>• Interactive flashcards and practice quizzes</li>
-                    <li>• Full exam simulation</li>
-                    <li>• Progress tracking and analytics</li>
-                  </ul>
-                  
-                  {/* Quick Upgrade Button */}
-                  <div className="mt-4">
-                    <Button 
-                      onClick={handleUpgradeNow}
-                      className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white"
-                      disabled={loading}
-                    >
-                      {loading ? 'Opening payment...' : 'Upgrade Now - $19.99'}
-                    </Button>
-                     <p className="text-xs text-muted-foreground text-center mt-2">
-                       One-time payment for 12 months of access. Create account after payment.
-                     </p>
-                  </div>
+              <form onSubmit={handleSignUp} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="signup-email">Email</Label>
+                  <Input
+                    id="signup-email"
+                    type="email"
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-password">Password</Label>
+                  <Input
+                    id="signup-password"
+                    type="password"
+                    placeholder="Create a password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    minLength={6}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="confirm-password">Confirm Password</Label>
+                  <Input
+                    id="confirm-password"
+                    type="password"
+                    placeholder="Confirm your password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                    minLength={6}
+                  />
                 </div>
                 
-                <div className="text-center">
-                  <span className="text-sm text-muted-foreground">Or create an account first:</span>
-                </div>
+                {error && (
+                  <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">
+                    {error}
+                  </div>
+                )}
                 
-                <form onSubmit={handleSignUp} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-email">Email</Label>
-                    <Input
-                      id="signup-email"
-                      type="email"
-                      placeholder="your@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
+                {success && (
+                  <div className="text-sm text-green-600 bg-green-50 p-3 rounded-md">
+                    {success}
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-password">Password</Label>
-                    <Input
-                      id="signup-password"
-                      type="password"
-                      placeholder="Create a password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                      minLength={6}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="confirm-password">Confirm Password</Label>
-                    <Input
-                      id="confirm-password"
-                      type="password"
-                      placeholder="Confirm your password"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      required
-                      minLength={6}
-                    />
-                  </div>
-                  
-                  {error && (
-                    <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">
-                      {error}
-                    </div>
-                  )}
-                  
-                  {success && (
-                    <div className="text-sm text-green-600 bg-green-50 p-3 rounded-md">
-                      {success}
-                    </div>
-                  )}
-                  
-                  <Button type="submit" className="w-full" disabled={loading}>
-                     {loading ? 'Creating account...' : 'Create Account & Upgrade'}
-                  </Button>
-                  
-                  <p className="text-xs text-muted-foreground text-center">
-                    By signing up, you'll be redirected to complete payment for $19.99.
-                  </p>
-                </form>
-              </div>
+                )}
+                
+                <Button type="submit" className="w-full" disabled={loading}>
+                  {loading ? 'Creating account...' : 'Create Account'}
+                </Button>
+              </form>
             </TabsContent>
           </Tabs>
         </div>

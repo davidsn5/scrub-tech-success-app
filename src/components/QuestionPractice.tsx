@@ -34,7 +34,6 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
 }) => {
   const { recordQuestionAttempt } = useUserProgress();
   const navigate = useNavigate();
-  const { createCheckoutSession, checkAccessBeforeUpgrade } = useAuth();
   const { canAccessQuestion, isPremium } = useFreeAccessGate();
   const { subscription } = useAuth();
   const hasShuffleAccess = isFireQuiz || isPremium || subscription?.status === 'admin' || subscription?.status === 'premium';
@@ -62,11 +61,8 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   const isQuestionBlocked = !isPremium && !canAccessQuestion(currentQuestionIndex);
 
   const handleUnlockPremium = async () => {
-    // Check if user already has access before redirecting
-    const alreadyHasAccess = await checkAccessBeforeUpgrade();
-    if (!alreadyHasAccess) {
-      navigate('/auth');
-    }
+    // Navigate to home - no payment required
+    navigate('/');
   };
 
   const shuffleQuestions = () => {

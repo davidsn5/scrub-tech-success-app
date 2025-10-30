@@ -16,7 +16,7 @@ import { FlagGate } from '@/components/FlagGate';
 
 
 const Index = () => {
-  const { user, subscription, loading, signOut, createCheckoutSession, openCustomerPortal, checkAccessBeforeUpgrade, checkSubscription } = useAuth();
+  const { user, subscription, loading, signOut, checkSubscription } = useAuth();
   const { progress, loading: progressLoading, getAccuracyPercentage, resetProgress } = useUserProgress();
   const { isPremium } = useGamePreviewGate();
   const navigate = useNavigate();
@@ -108,70 +108,8 @@ const Index = () => {
     }
   };
 
-  
-
-  const handleUnlockPremium = async () => {
-    // Directly trigger Stripe checkout
-    await createCheckoutSession();
-  };
-
   const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
-    console.log('🔍 Checking premium access before navigation...');
-
-    // If not signed in, allow preview and encourage sign in
-    if (!user) {
-      toast({
-        title: "Preview Access",
-        description: `Accessing ${featureName || 'this feature'} in preview mode. Sign in and upgrade for full access to all content.`,
-        action: (
-          <Button 
-            size="sm" 
-            onClick={() => navigate('/auth')}
-            className="bg-primary text-white"
-          >
-            Sign In
-          </Button>
-        ),
-      });
-      navigate(targetPath);
-      return;
-    }
-
-    // Authenticated users: verify premium in real-time to avoid stale state
-    const hasPremium = await checkAccessBeforeUpgrade();
-
-    if (hasPremium) {
-      // Check if we've already shown this toast recently  
-      const lastShown = localStorage.getItem('premiumFeatureToastShown');
-      const now = Date.now();
-      const thirtyMinutes = 30 * 60 * 1000; // 30 minutes in milliseconds
-      
-      if (!lastShown || now - parseInt(lastShown) > thirtyMinutes) {
-        toast({
-          title: "Premium Access",
-          description: `Enjoy full access to ${featureName || 'this feature'}.`,
-        });
-        localStorage.setItem('premiumFeatureToastShown', now.toString());
-      }
-      navigate(targetPath);
-      return;
-    }
-
-    // Not premium: show preview notice but still navigate
-    toast({
-      title: "Preview Mode",
-      description: `You're accessing ${featureName || 'this feature'} in preview mode. Upgrade for full access to all content.`,
-      action: (
-        <Button 
-          size="sm" 
-          onClick={() => navigate('/auth')}
-          className="bg-primary text-white"
-        >
-          Upgrade
-        </Button>
-      ),
-    });
-
+    // Simply navigate - no payment required
     navigate(targetPath);
   };
   return (

@@ -23,9 +23,6 @@ interface AuthContextType {
   signInWithApple: () => Promise<{ error?: any }>;
   signOut: () => Promise<void>;
   checkSubscription: () => Promise<void>;
-  createCheckoutSession: () => Promise<void>;
-  checkAccessBeforeUpgrade: () => Promise<boolean>;
-  openCustomerPortal: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -271,245 +268,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const checkSubscription = async () => {
-    // Don't check subscription if no user is authenticated
-    if (!user || !session) {
-      console.log('No user or session, skipping subscription check');
-      return;
-    }
-    
-    try {
-      console.log('🔍 Starting comprehensive payment verification for:', user.email);
-      console.log('📧 User details:', { userId: user.id, email: user.email });
-      console.log('🔑 Session token exists:', !!session.access_token);
-      
-      // Use the comprehensive get-user-access function that cross-checks Stripe and Supabase
-      const { data, error } = await supabase.functions.invoke('get-user-access', {
-        headers: {
-          Authorization: `Bearer ${session.access_token}`
-        }
-      });
-
-      console.log('🎯 Access verification response:', { data, error });
-
-      if (error) {
-        console.error('❌ Access verification error:', error);
-        console.error('❌ Error details:', JSON.stringify(error, null, 2));
-        // On error, preserve existing subscription state or default to trial
-        if (!subscription) {
-          setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
-        }
-        return;
-      }
-
-      if (data) {
-        const subscriptionStatus = {
-          subscribed: data.hasAccess,
-          subscription_tier: data.subscriptionTier,
-          status: data.accessType,
-          subscription_end: data.subscriptionEnd,
-          verificationSource: data.verificationSource
-        };
-        
-        console.log(
-          data.hasAccess 
-            ? `✅ ACCESS GRANTED - Source: ${data.verificationSource}` 
-            : `❌ ACCESS DENIED - Status: ${data.accessType}`,
-          subscriptionStatus
-        );
-        
-        setSubscription(subscriptionStatus);
-
-        // Log additional verification details for debugging
-        if (data.stripeVerification) {
-          console.log('💳 Stripe verification details:', data.stripeVerification);
-        }
-        console.log('🗄️ Database status:', {
-          status: data.databaseStatus,
-          subscribed: data.databaseSubscribed
-        });
-      } else {
-        console.log('⚠️ No data returned from access verification, setting default');
-        setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
-      }
-
-    } catch (error) {
-      console.error('🚨 Critical error in subscription check:', error);
-      // Don't immediately remove access on network errors - preserve existing state
-      if (!subscription) {
-        setSubscription({ subscribed: false, subscription_tier: 'premium', status: 'trial' });
-      }
-    }
+    // Always grant access - no subscription needed
+    setSubscription({ 
+      subscribed: true, 
+      subscription_tier: 'premium', 
+      status: 'active' 
+    });
   };
 
-  const createCheckoutSession = async () => {
-    try {
-      console.log('🔍 Starting checkout session...');
-      
-      // Check if user is authenticated
-      if (!session?.access_token) {
-        console.log('🚧 User not authenticated - proceeding with guest checkout');
-        // Proceed with guest checkout - no authentication required
-        const { data, error } = await supabase.functions.invoke('create-checkout');
-        if (error) {
-          console.error('Supabase function error:', error);
-          throw error;
-        }
-        if (data?.url) {
-          console.log('Checkout URL received:', data.url);
-          
-          // Force popup window for all devices including mobile and iPad
-          const popup = window.open(
-            data.url, 
-            'stripe-checkout',
-            'width=800,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
-          );
-          
-          if (!popup) {
-            console.log('Popup blocked, falling back to redirect');
-            window.location.href = data.url;
-          } else {
-            console.log('Stripe checkout popup opened successfully');
-          }
-        } else {
-          console.error('No checkout URL received from function');
-        }
-        return;
-      }
-      
-      // First, check if user is already a paid subscriber
-      const { data: accessData, error: accessError } = await supabase.functions.invoke('get-user-access', {
-        headers: {
-          Authorization: `Bearer ${session.access_token}`
-        }
-      });
-
-      console.log('💳 Access check result:', { accessData, accessError });
-
-      if (!accessError && accessData?.hasAccess) {
-        console.log('🚫 PREVENTING DUPLICATE PAYMENT - User already has premium access');
-        
-        // Check if we've already shown this toast recently
-        const lastShown = localStorage.getItem('duplicatePaymentToastShown');
-        const now = Date.now();
-        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
-        
-        if (!lastShown || now - parseInt(lastShown) > oneHour) {
-          // User already has access, show confirmation and refresh their status
-          toast({
-            title: "You're Already Premium! 🎉",
-            description: "You already have premium access. No additional payment needed.",
-            duration: 6000,
-          });
-          localStorage.setItem('duplicatePaymentToastShown', now.toString());
-        }
-        
-        // Force refresh their subscription status to ensure UI is updated immediately
-        await checkSubscription();
-        
-        // Double-check after a moment to ensure state is properly updated
-        setTimeout(async () => {
-          await checkSubscription();
-        }, 1000);
-        
-        return; // CRITICAL: Stop here to prevent duplicate charging
-      }
-
-      console.log('💰 User needs premium access - proceeding with checkout');
-
-      // User doesn't have access, proceed with normal checkout
-      console.log('Creating checkout session...');
-      const { data, error } = await supabase.functions.invoke('create-checkout');
-      if (error) {
-        console.error('Supabase function error:', error);
-        throw error;
-      }
-      if (data?.url) {
-        console.log('Checkout URL received:', data.url);
-        
-        // Force popup window for all devices including mobile and iPad
-        const popup = window.open(
-          data.url, 
-          'stripe-checkout',
-          'width=800,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
-        );
-        
-        if (!popup) {
-          console.log('Popup blocked, falling back to redirect');
-          window.location.href = data.url;
-        } else {
-          console.log('Stripe checkout popup opened successfully');
-        }
-      } else {
-        console.error('No checkout URL received from function');
-      }
-    } catch (error) {
-      console.error('Error with checkout process:', error);
-      toast({
-        title: "Checkout Error",
-        description: error instanceof Error ? error.message : "Failed to start checkout process",
-        variant: "destructive",
-      });
-    }
-  };
-
-  const openCustomerPortal = async () => {
-    try {
-      const { data, error } = await supabase.functions.invoke('customer-portal');
-      if (error) throw error;
-      if (data?.url) {
-        // Check if mobile device to avoid popup blockers
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (isMobile) {
-          window.location.href = data.url;
-        } else {
-          window.open(data.url, '_blank');
-        }
-      }
-    } catch (error) {
-      console.error('Error opening customer portal:', error);
-    }
-  };
-
-  // Helper function to check access before upgrade attempts
-  const checkAccessBeforeUpgrade = async (): Promise<boolean> => {
-    try {
-      console.log('🔍 Checking if user already has premium access...');
-      
-      const { data: accessData, error: accessError } = await supabase.functions.invoke('get-user-access', {
-        headers: {
-          Authorization: `Bearer ${session?.access_token}`
-        }
-      });
-
-      if (!accessError && accessData?.hasAccess) {
-        console.log('✅ User already has premium access');
-        
-        // Check if we've already shown this toast recently
-        const lastShown = localStorage.getItem('premiumAccessToastShown');
-        const now = Date.now();
-        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
-        
-        if (!lastShown || now - parseInt(lastShown) > oneHour) {
-          toast({
-            title: "You're Already Premium! 🎉",
-            description: "You already have premium access to all features. Your subscription is active.",
-            duration: 5000,
-          });
-          localStorage.setItem('premiumAccessToastShown', now.toString());
-        }
-        
-        // Refresh their subscription status
-        await checkSubscription();
-        return true; // User already has access
-      }
-      
-      console.log('❌ User needs premium access');
-      return false; // User needs to upgrade
-    } catch (error) {
-      console.error('Error checking access:', error);
-      return false; // On error, assume they need to upgrade
-    }
-  };
 
   const value = {
     user,
@@ -524,9 +290,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     signInWithApple,
     signOut,
     checkSubscription,
-    createCheckoutSession,
-    checkAccessBeforeUpgrade,
-    openCustomerPortal,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -15,7 +15,6 @@ const ExamSimulation = () => {
   const [examQuestions, setExamQuestions] = useState<any[]>([]);
   const navigate = useNavigate();
   const { isPremium } = useFreeAccessGate();
-  const { createCheckoutSession } = useAuth();
 
   const startExam = () => {
     if (!isPremium) {
@@ -28,7 +27,8 @@ const ExamSimulation = () => {
   };
 
   const handleUnlockPremium = async () => {
-    await createCheckoutSession();
+    // Navigate to home - no payment required
+    navigate('/');
   };
 
   const handleMissedQuestion = (question: any) => {

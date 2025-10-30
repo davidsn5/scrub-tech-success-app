@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 
 const AccountManagement = () => {
-  const { user, subscription, openCustomerPortal, createCheckoutSession, signOut, loading } = useAuth();
+  const { user, signOut, loading } = useAuth();
 
   // Show loading state while authentication is being restored
   if (loading) {
@@ -23,18 +23,14 @@ const AccountManagement = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85 flex items-center justify-center">
         <Card className="p-8 text-center">
-          <p className="text-gray-600 mb-4">Please sign in to access account management.</p>
-          <Link to="/auth">
-            <Button>Sign In</Button>
+          <p className="text-gray-600 mb-4">Please sign in to access your account.</p>
+          <Link to="/">
+            <Button>Return Home</Button>
           </Link>
         </Card>
       </div>
     );
   }
-
-  const isSubscribed = subscription?.subscribed;
-  const isAdmin = subscription?.status === 'admin';
-  const isTrialActive = subscription?.status === 'trial';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-100/85">
@@ -81,30 +77,12 @@ const AccountManagement = () => {
               <div>
                 <label className="text-sm font-medium text-gray-700">Account Status</label>
                 <div className="mt-1">
-                  {isAdmin ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200 w-fit">
-                      <Shield className="h-3 w-3" />
-                      <span className="text-xs font-medium">Admin Account</span>
-                    </div>
-                  ) : isSubscribed ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200 w-fit">
-                      <Shield className="h-3 w-3" />
-                      <span className="text-xs font-medium">Premium Subscriber</span>
-                    </div>
-                  ) : isTrialActive ? (
-                    <div className="flex items-center space-x-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-3 py-1 rounded-full border border-amber-200 w-fit">
-                      <Clock className="h-3 w-3" />
-                      <span className="text-xs font-medium">Trial Active</span>
-                    </div>
-                  ) : null}
+                  <div className="flex items-center space-x-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-3 py-1 rounded-full border border-green-200 w-fit">
+                    <Shield className="h-3 w-3" />
+                    <span className="text-xs font-medium">Active</span>
+                  </div>
                 </div>
               </div>
-              {(isSubscribed || isTrialActive) && subscription?.subscription_end && (
-                <div>
-                  <label className="text-sm font-medium text-gray-700">Subscription Renews</label>
-                  <p className="text-gray-900 mt-1">{new Date(subscription.subscription_end).toLocaleDateString()}</p>
-                </div>
-              )}
             </div>
           </Card>
 

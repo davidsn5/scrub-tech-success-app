@@ -13,7 +13,6 @@ import { useAuth } from '@/contexts/AuthContext';
 
 const KeyTermGames = () => {
   const { isPremium, canPlayGame, getGamePreviewMessage } = useGamePreviewGate();
-  const { createCheckoutSession } = useAuth();
 
   return (
     <div className="min-h-screen gradient-background">
@@ -82,13 +81,9 @@ const KeyTermGames = () => {
                   <p className="text-xs text-muted-foreground">{getGamePreviewMessage('wordScramble')}</p>
                 </div>
               </div>
-              <Button 
-                onClick={createCheckoutSession}
-                className="bg-gradient-to-r from-amber-500/90 to-orange-500/90 hover:opacity-90"
-              >
-                <Crown className="h-4 w-4 mr-2" />
-                Upgrade for Unlimited Games
-              </Button>
+              <p className="text-sm text-muted-foreground text-center">
+                All games are available for free!
+              </p>
             </CardContent>
           </Card>
         )}
@@ -130,11 +125,7 @@ const KeyTermGames = () => {
                   <Card className="p-8 text-center bg-gradient-to-r from-slate-50/90 to-gray-50/90 border-slate-200/60">
                     <Trophy className="h-12 w-12 text-slate-400 mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-slate-700 mb-2">Daily Limit Reached</h3>
-                    <p className="text-slate-600 mb-4">You've used all your free Term Matching games for today.</p>
-                    <Button onClick={createCheckoutSession} className="bg-gradient-to-r from-primary to-primary/90">
-                      <Crown className="h-4 w-4 mr-2" />
-                      Upgrade for Unlimited Access
-                    </Button>
+                    <p className="text-slate-600 mb-4">You've used all your free Term Matching games for today. Come back tomorrow for more!</p>
                   </Card>
                 )}
               </TabsContent>
@@ -146,11 +137,7 @@ const KeyTermGames = () => {
                   <Card className="p-8 text-center bg-gradient-to-r from-slate-50/90 to-gray-50/90 border-slate-200/60">
                     <Trophy className="h-12 w-12 text-slate-400 mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-slate-700 mb-2">Daily Limit Reached</h3>
-                    <p className="text-slate-600 mb-4">You've used all your free Speed Quiz games for today.</p>
-                    <Button onClick={createCheckoutSession} className="bg-gradient-to-r from-primary to-primary/90">
-                      <Crown className="h-4 w-4 mr-2" />
-                      Upgrade for Unlimited Access
-                    </Button>
+                    <p className="text-slate-600 mb-4">You've used all your free Speed Quiz games for today. Come back tomorrow for more!</p>
                   </Card>
                 )}
               </TabsContent>
@@ -162,11 +149,7 @@ const KeyTermGames = () => {
                   <Card className="p-8 text-center bg-gradient-to-r from-slate-50/90 to-gray-50/90 border-slate-200/60">
                     <Trophy className="h-12 w-12 text-slate-400 mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-slate-700 mb-2">Daily Limit Reached</h3>
-                    <p className="text-slate-600 mb-4">You've used all your free Word Scramble games for today.</p>
-                    <Button onClick={createCheckoutSession} className="bg-gradient-to-r from-primary to-primary/90">
-                      <Crown className="h-4 w-4 mr-2" />
-                      Upgrade for Unlimited Access
-                    </Button>
+                    <p className="text-slate-600 mb-4">You've used all your free Word Scramble games for today. Come back tomorrow for more!</p>
                   </Card>
                 )}
               </TabsContent>

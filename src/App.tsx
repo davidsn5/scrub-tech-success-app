@@ -10,7 +10,6 @@ import { FeatureFlagsProvider } from "@/contexts/FeatureFlagsContext";
 import AuthModal from "@/components/AuthModal";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
-import Auth from "./pages/Auth";
 import StudyCategory from "./pages/StudyCategory";
 import Flashcards from "./pages/Flashcards";
 import IntroSurgicalTech from "./pages/IntroSurgicalTech";
@@ -22,9 +21,6 @@ import ExamSimulation from "./pages/ExamSimulation";
 import AccountManagement from "./pages/AccountManagement";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CopyrightNotice from "./pages/CopyrightNotice";
-import PurchaseSuccess from "./pages/PurchaseSuccess";
-import PurchaseCanceled from "./pages/PurchaseCanceled";
-import AdminPaymentConfirm from "./pages/AdminPaymentConfirm";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 import Preview from "./pages/Preview";
@@ -42,11 +38,8 @@ const AppContent = () => {
     <>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/auth" element={<Auth />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/copyright-notice" element={<CopyrightNotice />} />
-        <Route path="/purchase/success" element={<PurchaseSuccess />} />
-        <Route path="/purchase/canceled" element={<PurchaseCanceled />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         
         {/* Protected Routes - Require subscription */}
@@ -59,7 +52,6 @@ const AppContent = () => {
         <Route path="/missed-questions" element={<ProtectedRoute><MissedQuestions /></ProtectedRoute>} />
         <Route path="/exam-simulation" element={<ProtectedRoute><ExamSimulation /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><AccountManagement /></ProtectedRoute>} />
-        <Route path="/admin/payment-confirm" element={<AdminPaymentConfirm />} />
         <Route path="/preview" element={<Preview />} />
         <Route path="/key-term-games" element={<KeyTermGames />} />
         <Route path="/instrumentation-flashcards" element={<InstrumentationFlashcards />} />

@@ -20,7 +20,7 @@ interface InstrumentQuestionsProps {
 }
 
 export const InstrumentQuestions: React.FC<InstrumentQuestionsProps> = ({ onBack, category = 'general-instrument-questions' }) => {
-  const { subscription, createCheckoutSession, user } = useAuth();
+  const { subscription, user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
   
