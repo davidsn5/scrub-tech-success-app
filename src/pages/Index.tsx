@@ -13,6 +13,7 @@ import ForgotPasswordDialog from '@/components/ForgotPasswordDialog';
 import { useGamePreviewGate } from '@/hooks/useGamePreviewGate';
 import { FlagGate } from '@/components/FlagGate';
 import { PurchaseModal } from '@/components/PurchaseModal';
+import { SubscribeAndSignUpModal } from '@/components/SubscribeAndSignUpModal';
 import AuthModal from '@/components/AuthModal';
 
 
@@ -27,6 +28,7 @@ const Index = () => {
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showPurchaseModal, setShowPurchaseModal] = useState(false);
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
 
   if (loading || progressLoading) {
     return (
@@ -113,13 +115,9 @@ const Index = () => {
   };
 
   const handlePremiumFeatureAccess = async (targetPath: string, featureName?: string) => {
-    if (!user) {
-      setShowAuthModal(true);
-      return;
-    }
-    
-    if (!subscription?.subscribed) {
-      setShowPurchaseModal(true);
+    // If not subscribed (whether logged in or not), show combined subscribe modal
+    if (!isSubscribed && !isAdmin && !isTrialActive) {
+      setShowSubscribeModal(true);
       return;
     }
     
@@ -659,7 +657,7 @@ const Index = () => {
                 </div>
 
                 <Button 
-                  onClick={() => navigate('/auth')}
+                  onClick={() => setShowSubscribeModal(true)}
                   size="lg" 
                   className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 text-white px-8 py-3 text-lg font-semibold"
                 >
@@ -737,6 +735,7 @@ const Index = () => {
       {/* Modals */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
       <PurchaseModal open={showPurchaseModal} onOpenChange={setShowPurchaseModal} />
+      <SubscribeAndSignUpModal open={showSubscribeModal} onOpenChange={setShowSubscribeModal} />
       
       {/* Forgot Password Dialog */}
       <ForgotPasswordDialog 
