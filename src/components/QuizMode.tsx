@@ -8,6 +8,9 @@ import { useUserProgress } from '@/hooks/useUserProgress';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useEngagementTracking } from '@/hooks/useEngagementTracking';
+import { EngagementPaywall } from '@/components/EngagementPaywall';
+import { SubscribeAndSignUpModal } from '@/components/SubscribeAndSignUpModal';
 
 interface QuizModeProps {
   category: string;
@@ -533,6 +536,7 @@ const QuizMode: React.FC<QuizModeProps> = ({
   const { recordQuestionAttempt } = useUserProgress();
   const navigate = useNavigate();
   const { canAccessQuiz, incrementDailyQuizCount, getRemainingQuizzes, isPremium } = useFreeAccessGate();
+  const { trackQuizCompletion, getEngagementTrigger } = useEngagementTracking();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
@@ -542,6 +546,9 @@ const QuizMode: React.FC<QuizModeProps> = ({
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof quizData[keyof typeof quizData]>([]);
   const [isShuffled, setIsShuffled] = useState(false);
+  const [showEngagementPaywall, setShowEngagementPaywall] = useState(false);
+  const [engagementMessage, setEngagementMessage] = useState('');
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
 
   const originalQuestions = quizData[category as keyof typeof quizData] || [];
 
@@ -637,11 +644,24 @@ const QuizMode: React.FC<QuizModeProps> = ({
       setTimeLeft(30);
       setIsActive(true);
     } else {
+      const percentage = Math.round((score / questions.length) * 100);
+      
+      // Track quiz completion with engagement tracking
+      trackQuizCompletion(percentage);
+      
       setQuizCompleted(true);
       setIsActive(false);
+      
       // Increment daily quiz count for free users when completing a quiz
       if (!isPremium) {
         incrementDailyQuizCount();
+      }
+
+      // Check if we should trigger engagement paywall
+      const trigger = getEngagementTrigger();
+      if (trigger.shouldTrigger && !isPremium) {
+        setEngagementMessage(trigger.message);
+        setShowEngagementPaywall(true);
       }
     }
   };
@@ -666,9 +686,26 @@ const QuizMode: React.FC<QuizModeProps> = ({
 
   if (!questions.length) {
     return (
-      <div className="text-center py-12">
-        <p className="text-gray-600">No quiz questions available for this category yet.</p>
-      </div>
+      <>
+        <EngagementPaywall
+          open={showEngagementPaywall}
+          onOpenChange={setShowEngagementPaywall}
+          triggerMessage={engagementMessage}
+          onUpgrade={() => {
+            setShowEngagementPaywall(false);
+            setShowSubscribeModal(true);
+          }}
+        />
+        
+        <SubscribeAndSignUpModal
+          open={showSubscribeModal}
+          onOpenChange={setShowSubscribeModal}
+        />
+        
+        <div className="text-center py-12">
+          <p className="text-gray-600">No quiz questions available for this category yet.</p>
+        </div>
+      </>
     );
   }
 
@@ -676,7 +713,23 @@ const QuizMode: React.FC<QuizModeProps> = ({
   if (isQuizBlocked) {
     const remainingQuizzes = getRemainingQuizzes();
     return (
-      <div className="text-center py-12 space-y-6">
+      <>
+        <EngagementPaywall
+          open={showEngagementPaywall}
+          onOpenChange={setShowEngagementPaywall}
+          triggerMessage={engagementMessage}
+          onUpgrade={() => {
+            setShowEngagementPaywall(false);
+            setShowSubscribeModal(true);
+          }}
+        />
+        
+        <SubscribeAndSignUpModal
+          open={showSubscribeModal}
+          onOpenChange={setShowSubscribeModal}
+        />
+        
+        <div className="text-center py-12 space-y-6">
         <Lock className="h-16 w-16 text-gray-400 mx-auto" />
         <h2 className="text-2xl font-bold text-gray-900">Daily Quiz Limit Reached</h2>
         <div className="space-y-2">
@@ -693,13 +746,30 @@ const QuizMode: React.FC<QuizModeProps> = ({
           Upgrade Now
         </Button>
       </div>
+      </>
     );
   }
 
   if (quizCompleted) {
     const percentage = Math.round((score / questions.length) * 100);
     return (
-      <div className="text-center space-y-6">
+      <>
+        <EngagementPaywall
+          open={showEngagementPaywall}
+          onOpenChange={setShowEngagementPaywall}
+          triggerMessage={engagementMessage}
+          onUpgrade={() => {
+            setShowEngagementPaywall(false);
+            setShowSubscribeModal(true);
+          }}
+        />
+        
+        <SubscribeAndSignUpModal
+          open={showSubscribeModal}
+          onOpenChange={setShowSubscribeModal}
+        />
+        
+        <div className="text-center space-y-6">
         <div className="flex justify-center">
           <Award className="h-16 w-16 text-yellow-500" />
         </div>
@@ -723,13 +793,30 @@ const QuizMode: React.FC<QuizModeProps> = ({
           </Button>
         </div>
       </div>
+      </>
     );
   }
 
   if (!currentQuestion) return null;
 
   return (
-    <div className="space-y-6">
+    <>
+      <EngagementPaywall
+        open={showEngagementPaywall}
+        onOpenChange={setShowEngagementPaywall}
+        triggerMessage={engagementMessage}
+        onUpgrade={() => {
+          setShowEngagementPaywall(false);
+          setShowSubscribeModal(true);
+        }}
+      />
+      
+      <SubscribeAndSignUpModal
+        open={showSubscribeModal}
+        onOpenChange={setShowSubscribeModal}
+      />
+      
+      <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Badge variant="secondary">
@@ -849,7 +936,8 @@ const QuizMode: React.FC<QuizModeProps> = ({
           )}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

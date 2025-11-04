@@ -8,6 +8,9 @@ import { Question } from '@/data/questions/introSurgicalTech';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import { useFreeAccessGate } from '@/hooks/useFreeAccessGate';
 import { useAuth } from '@/contexts/AuthContext';
+import { useEngagementTracking } from '@/hooks/useEngagementTracking';
+import { EngagementPaywall } from '@/components/EngagementPaywall';
+import { SubscribeAndSignUpModal } from '@/components/SubscribeAndSignUpModal';
 
 interface QuestionPracticeProps {
   questions: Question[];
@@ -36,6 +39,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   const navigate = useNavigate();
   const { canAccessQuestion, isPremium } = useFreeAccessGate();
   const { subscription } = useAuth();
+  const { trackCorrectAnswer, trackIncorrectAnswer, getEngagementTrigger } = useEngagementTracking();
   const hasShuffleAccess = isFireQuiz || isPremium || subscription?.status === 'admin' || subscription?.status === 'premium';
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -43,6 +47,9 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [isComplete, setIsComplete] = useState(false);
+  const [showEngagementPaywall, setShowEngagementPaywall] = useState(false);
+  const [engagementMessage, setEngagementMessage] = useState('');
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
 
   // Initialize shuffled questions on component mount
   useEffect(() => {
@@ -92,6 +99,13 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
     };
     setScore(newScore);
 
+    // Track engagement
+    if (isCorrect) {
+      trackCorrectAnswer();
+    } else {
+      trackIncorrectAnswer();
+    }
+
     // Record the question attempt in the database
     await recordQuestionAttempt(
       `${categorySlug}-${currentQuestionIndex}`, 
@@ -102,6 +116,13 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
     // Track missed questions
     if (!isCorrect && onMissedQuestion) {
       onMissedQuestion(currentQuestion);
+    }
+
+    // Check if we should trigger engagement paywall
+    const trigger = getEngagementTrigger();
+    if (trigger.shouldTrigger && !isPremium) {
+      setEngagementMessage(trigger.message);
+      setShowEngagementPaywall(true);
     }
   };
 
@@ -256,7 +277,23 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
   }
 
   return (
-    <div className="space-y-6">
+    <>
+      <EngagementPaywall
+        open={showEngagementPaywall}
+        onOpenChange={setShowEngagementPaywall}
+        triggerMessage={engagementMessage}
+        onUpgrade={() => {
+          setShowEngagementPaywall(false);
+          setShowSubscribeModal(true);
+        }}
+      />
+      
+      <SubscribeAndSignUpModal
+        open={showSubscribeModal}
+        onOpenChange={setShowSubscribeModal}
+      />
+
+      <div className="space-y-6">
       {/* Back to Home Button - Only show for missed questions */}
       {showBackToHome && (
         <div className="flex justify-start">
@@ -427,6 +464,7 @@ const QuestionPractice: React.FC<QuestionPracticeProps> = ({
         </div>
       </Card>
     </div>
+    </>
   );
 };
 
